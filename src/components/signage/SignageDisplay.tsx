@@ -135,14 +135,10 @@ type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram
 interface Scene {
   type: SceneType;
   duration: number;
+  reelIndex?: number;
 }
 // Vidéos YouTube café (changer les IDs si besoin)
 const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
-interface Scene {
-  type: SceneType;
-  duration: number;
-  reelIndex?: number;
-}
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
   { type: "youtube", duration: 22000 },
