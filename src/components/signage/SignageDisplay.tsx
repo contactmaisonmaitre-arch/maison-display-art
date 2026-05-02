@@ -162,8 +162,7 @@ const PaperGrain = () => (
 
 // ============ Sub-components ============
 
-const LeftPanel = ({ now, weather }: { now: Date; weather: WeatherData | null }) => {
-  const w = weather?.current;
+const LeftPanel = ({ now }: { now: Date }) => {
   return (
     <aside
       className="relative flex h-full flex-col text-linen"
