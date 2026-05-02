@@ -404,18 +404,97 @@ const YouTubeScene = ({ active }: { active: boolean }) => {
   );
 };
 
-const SceneRenderer = ({ scene, weather, active }: { scene: Scene; weather: WeatherData | null; active: boolean }) => {
+const TeaScene = ({ now }: { now: Date }) => {
+  const saint = getSaintDuJour(now);
+  return (
+    <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #B0C4A0, #507040, #182A10)" }}>
+      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(229,221,208,0.05) 35%, rgba(229,221,208,0.97) 100%)" }} />
+      <div className="relative flex h-full flex-col justify-end px-20 pb-32" style={{ animation: "mm-slide-up 1.2s ease-out 0.4s both" }}>
+        <div className="flex items-center gap-4">
+          <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+            Salon de Thé · Thés des Maîtres
+          </div>
+        </div>
+        <h2 className="mt-6 font-serif-display leading-[1.05]" style={{ fontSize: 72, color: "hsl(var(--ink))" }}>
+          <span className="font-semibold">Notre marque,</span>{" "}
+          <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>nos cuvées.</span>
+        </h2>
+        <p className="mt-6 max-w-[820px] font-serif-display italic" style={{ fontSize: 22, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+          Une collection exclusive de thés d'exception. En boutique et sur maisonmaitre.com.
+        </p>
+        <div
+          className="mt-8 inline-flex items-center gap-5 rounded-sm px-7 py-5 self-start"
+          style={{ backgroundColor: "rgba(46,36,25,0.92)", color: "hsl(var(--linen))" }}
+        >
+          <div style={{ fontSize: 36 }}>✦</div>
+          <div>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
+              Fête du jour
+            </div>
+            <div className="mt-1 font-serif-display italic" style={{ fontSize: 32, fontWeight: 300 }}>
+              Bonne fête {saint}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const ProductsScene = () => (
+  <div className="absolute inset-0 px-16 py-14" style={{ backgroundColor: "hsl(var(--cream))" }}>
+    <div className="flex items-center gap-4">
+      <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+      <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+        À découvrir · maisonmaitre.com
+      </div>
+    </div>
+    <h2 className="mt-4 font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--ink))" }}>
+      <span className="font-semibold">Nos coups de cœur</span>{" "}
+      <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
+    </h2>
+    <div className="mt-10 grid grid-cols-3 gap-6" style={{ height: 460 }}>
+      {PRODUCTS_TO_TRY.map((p) => (
+        <div
+          key={p.name}
+          className="flex flex-col justify-between rounded-sm p-7"
+          style={{ backgroundColor: "rgba(46,36,25,0.06)", border: "1px solid rgba(46,36,25,0.12)" }}
+        >
+          <div>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              {p.cat}
+            </div>
+            <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 26, color: "hsl(var(--espresso))" }}>
+              {p.name}
+            </div>
+          </div>
+          <div className="mt-4 font-serif-display italic" style={{ fontSize: 18, color: "hsl(var(--taupe))" }}>
+            {p.note}
+          </div>
+        </div>
+      ))}
+    </div>
+    <div className="mt-6 font-sans-ui uppercase text-center" style={{ fontSize: 12, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+      Commande en ligne · maisonmaitre.com
+    </div>
+  </div>
+);
+
+const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
     case "café":
       return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
     case "youtube":
       return <YouTubeScene active={active} />;
+    case "produits":
+      return <ProductsScene />;
     case "vin":
       return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":
-      return <TextSlide bg="linear-gradient(135deg, #B0C4A0, #507040, #182A10)" tag="Thés des Maîtres" titleStart="Notre marque," titleItalic="nos cuvées." body="Une collection exclusive de thés d'exception. En boutique et sur maisonmaitre.com." />;
+      return <TeaScene now={now} />;
     case "épicerie":
       return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
     case "instagram":
