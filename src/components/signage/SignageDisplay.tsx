@@ -369,10 +369,47 @@ const InstagramScene = () => {
   );
 };
 
-const SceneRenderer = ({ scene, weather }: { scene: Scene; weather: WeatherData | null }) => {
+const YouTubeScene = ({ active }: { active: boolean }) => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    if (active) setIdx((i) => (i + 1) % YOUTUBE_COFFEE_IDS.length);
+  }, [active]);
+  const videoId = YOUTUBE_COFFEE_IDS[idx];
+  const src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&playsinline=1&rel=0&showinfo=0`;
+  return (
+    <div className="absolute inset-0" style={{ backgroundColor: "#000" }}>
+      {active && (
+        <iframe
+          title="Café — vidéo"
+          src={src}
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{ width: "100%", height: "100%", border: 0, pointerEvents: "none" }}
+          allow="autoplay; encrypted-media"
+        />
+      )}
+      <div className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 25%, transparent 60%, rgba(0,0,0,0.7) 100%)" }} />
+      <div className="absolute left-16 top-14 flex items-center gap-4">
+        <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+          L'Art du Café · En images
+        </div>
+      </div>
+      <div className="absolute bottom-32 left-16 right-16">
+        <h2 className="font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--linen))" }}>
+          <span className="font-semibold">Le geste,</span>{" "}
+          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>la matière, l'instant.</span>
+        </h2>
+      </div>
+    </div>
+  );
+};
+
+const SceneRenderer = ({ scene, weather, active }: { scene: Scene; weather: WeatherData | null; active: boolean }) => {
   switch (scene.type) {
     case "café":
       return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
+    case "youtube":
+      return <YouTubeScene active={active} />;
     case "vin":
       return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
     case "weather":
