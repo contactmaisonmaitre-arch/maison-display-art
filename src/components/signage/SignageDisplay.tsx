@@ -146,7 +146,7 @@ const SCENES: Scene[] = [
   { type: "weather", duration: 9000 },
   { type: "thé", duration: 12000 },
   { type: "épicerie", duration: 10000 },
-  { type: "instagram", duration: 12000 },
+  { type: "instagram", duration: 28000 },
   { type: "chatperche", duration: 10000 },
 ];
 
