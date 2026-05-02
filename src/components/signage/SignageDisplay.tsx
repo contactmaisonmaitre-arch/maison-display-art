@@ -131,7 +131,7 @@ const PRODUCTS_TO_TRY = [
 
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube" | "produits";
 interface Scene {
   type: SceneType;
   duration: number;
@@ -141,9 +141,10 @@ const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
   { type: "youtube", duration: 22000 },
+  { type: "produits", duration: 14000 },
   { type: "vin", duration: 10000 },
-  { type: "weather", duration: 8000 },
-  { type: "thé", duration: 10000 },
+  { type: "weather", duration: 9000 },
+  { type: "thé", duration: 12000 },
   { type: "épicerie", duration: 10000 },
   { type: "instagram", duration: 12000 },
   { type: "chatperche", duration: 10000 },
