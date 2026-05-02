@@ -146,7 +146,7 @@ const SCENES: Scene[] = [
   { type: "weather", duration: 9000 },
   { type: "thé", duration: 12000 },
   { type: "épicerie", duration: 10000 },
-  { type: "instagram", duration: 12000 },
+  { type: "instagram", duration: 28000 },
   { type: "chatperche", duration: 10000 },
 ];
 
@@ -333,37 +333,91 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-const InstagramScene = () => {
-  const cells = [
-    { e: "☕", g: "linear-gradient(135deg,#C4A882,#7A5030)" },
-    { e: "🍵", g: "linear-gradient(135deg,#B0C4A0,#507040)" },
-    { e: "🍷", g: "linear-gradient(135deg,#C0A8B0,#704050)" },
-    { e: "🧁", g: "linear-gradient(135deg,#D0C080,#907030)" },
-    { e: "🫖", g: "linear-gradient(135deg,#A0A8C0,#405070)" },
-    { e: "🌿", g: "linear-gradient(135deg,#B8C8A0,#688060)" },
-  ];
+// Reels Instagram @maison_maitre — défilement automatique
+const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
+
+const InstagramScene = ({ active }: { active: boolean }) => {
+  const [idx, setIdx] = useState(0);
+
+  // À chaque activation de la scène, on passe au reel suivant
+  useEffect(() => {
+    if (active) setIdx((i) => (i + 1) % INSTAGRAM_REELS.length);
+  }, [active]);
+
+  const reelId = INSTAGRAM_REELS[idx];
+  const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/`;
+
   return (
-    <div className="absolute inset-0 px-16 py-14" style={{ backgroundColor: "hsl(var(--cream))" }}>
-      <div className="flex items-center gap-5">
-        <div
-          className="flex items-center justify-center rounded-full font-serif-display text-linen"
-          style={{ width: 76, height: 76, fontSize: 36, background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--wine)))" }}
-        >
-          M
-        </div>
+    <div className="absolute inset-0 flex" style={{ backgroundColor: "hsl(var(--cream))" }}>
+      {/* Colonne gauche : header @maison_maitre */}
+      <div className="flex w-[520px] flex-col justify-between px-14 py-14">
         <div>
-          <div className="font-serif-display" style={{ fontSize: 32, color: "hsl(var(--espresso))" }}>@maisonmaitre</div>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
-            Dole · Jura · France
+          <div className="flex items-center gap-5">
+            <div
+              className="flex items-center justify-center rounded-full font-serif-display text-linen"
+              style={{ width: 84, height: 84, fontSize: 40, background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--wine)))" }}
+            >
+              M
+            </div>
+            <div>
+              <div className="font-serif-display" style={{ fontSize: 36, color: "hsl(var(--espresso))" }}>@maison_maitre</div>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
+                Dole · Jura · France
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 flex items-center gap-4">
+            <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+            <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+              En ce moment
+            </div>
+          </div>
+          <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--ink))" }}>
+            <span className="font-semibold">L'instant</span>{" "}
+            <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>partagé.</span>
+          </h2>
+          <p className="mt-5 font-serif-display italic" style={{ fontSize: 20, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+            Suivez-nous au quotidien — coulisses, dégustations, nouveautés en boutique.
+          </p>
+        </div>
+
+        <div>
+          <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+          </div>
+          <div className="mt-2 flex gap-2">
+            {INSTAGRAM_REELS.map((_, i) => (
+              <div
+                key={i}
+                className="rounded-full transition-all"
+                style={{ height: 4, width: i === idx ? 40 : 16, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(106,97,87,0.3)" }}
+              />
+            ))}
           </div>
         </div>
       </div>
-      <div className="mt-10 grid grid-cols-3 grid-rows-2 gap-5" style={{ height: 540 }}>
-        {cells.map((c, i) => (
-          <div key={i} className="flex items-center justify-center rounded-md" style={{ background: c.g, fontSize: 84 }}>
-            {c.e}
-          </div>
-        ))}
+
+      {/* Colonne droite : reel Instagram */}
+      <div className="relative flex flex-1 items-center justify-center" style={{ backgroundColor: "#1A160F" }}>
+        {active && (
+          <iframe
+            key={reelId}
+            title={`Reel ${reelId}`}
+            src={src}
+            className="border-0"
+            style={{
+              width: 540,
+              height: 880,
+              backgroundColor: "#1A160F",
+              borderRadius: 8,
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
+            }}
+            allow="autoplay; encrypted-media; fullscreen"
+            scrolling="no"
+            allowTransparency
+          />
+        )}
       </div>
     </div>
   );
@@ -498,7 +552,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "épicerie":
       return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
     case "instagram":
-      return <InstagramScene />;
+      return <InstagramScene active={active} />;
     case "chatperche":
       return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
   }
