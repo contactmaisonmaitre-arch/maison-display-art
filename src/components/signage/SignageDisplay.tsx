@@ -336,17 +336,11 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — défilement automatique
+// Reels Instagram @maison_maitre — un reel par scène
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 
-const InstagramScene = ({ active }: { active: boolean }) => {
-  const [idx, setIdx] = useState(0);
-
-  // À chaque activation de la scène, on passe au reel suivant
-  useEffect(() => {
-    if (active) setIdx((i) => (i + 1) % INSTAGRAM_REELS.length);
-  }, [active]);
-
+const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
+  const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/`;
 
