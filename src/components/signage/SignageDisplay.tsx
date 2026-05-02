@@ -668,21 +668,49 @@ const SignageDisplay = () => {
     return () => clearInterval(id);
   }, []);
 
+  type FitMode = "fit" | "cover" | "100";
+  const [mode, setMode] = useState<FitMode>(() => (localStorage.getItem("mm-fit") as FitMode) || "fit");
   const [scale, setScale] = useState(1);
+  const [showCtrl, setShowCtrl] = useState(false);
+
   useEffect(() => {
-    const fit = () => {
-      const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
-      setScale(s);
+    const compute = () => {
+      const sx = window.innerWidth / 1920;
+      const sy = window.innerHeight / 1080;
+      if (mode === "fit") setScale(Math.min(sx, sy));
+      else if (mode === "cover") setScale(Math.max(sx, sy));
+      else setScale(1);
     };
-    fit();
-    window.addEventListener("resize", fit);
-    return () => window.removeEventListener("resize", fit);
+    compute();
+    window.addEventListener("resize", compute);
+    return () => window.removeEventListener("resize", compute);
+  }, [mode]);
+
+  useEffect(() => {
+    localStorage.setItem("mm-fit", mode);
+  }, [mode]);
+
+  // Show controls on mouse move, hide after 3s
+  useEffect(() => {
+    let t: number | undefined;
+    const onMove = () => {
+      setShowCtrl(true);
+      window.clearTimeout(t);
+      t = window.setTimeout(() => setShowCtrl(false), 3000);
+    };
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("touchstart", onMove);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("touchstart", onMove);
+      window.clearTimeout(t);
+    };
   }, []);
 
   return (
     <div
       className="fixed inset-0 overflow-hidden bg-ink flex items-center justify-center"
-      style={{ cursor: "none" }}
+      style={{ cursor: showCtrl ? "default" : "none" }}
     >
       <div
         className="relative flex overflow-hidden bg-ink"
@@ -697,6 +725,40 @@ const SignageDisplay = () => {
         <LeftPanel now={now} />
         <CenterPanel weather={weather} now={now} />
         <RightPanel />
+      </div>
+
+      {/* Mode d'affichage — visible au survol */}
+      <div
+        className="fixed top-4 right-4 z-[9999] flex gap-1 rounded-full p-1 transition-opacity duration-500"
+        style={{
+          opacity: showCtrl ? 1 : 0,
+          backgroundColor: "rgba(26,22,15,0.92)",
+          border: "1px solid rgba(184,150,90,0.4)",
+          fontFamily: "Jost, sans-serif",
+        }}
+      >
+        {(
+          [
+            { k: "fit", label: "Adapter", desc: "Aucun contenu coupé" },
+            { k: "cover", label: "Remplir", desc: "Pleine surface, peut couper" },
+            { k: "100", label: "100 %", desc: "Taille réelle 1920×1080" },
+          ] as { k: FitMode; label: string; desc: string }[]
+        ).map((o) => (
+          <button
+            key={o.k}
+            onClick={() => setMode(o.k)}
+            title={o.desc}
+            className="rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition-colors"
+            style={{
+              backgroundColor: mode === o.k ? "hsl(var(--gold))" : "transparent",
+              color: mode === o.k ? "#1A160F" : "rgba(242,237,228,0.8)",
+              cursor: "pointer",
+              border: "none",
+            }}
+          >
+            {o.label}
+          </button>
+        ))}
       </div>
     </div>
   );
