@@ -135,18 +135,21 @@ type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram
 interface Scene {
   type: SceneType;
   duration: number;
+  reelIndex?: number;
 }
 // Vidéos YouTube café (changer les IDs si besoin)
 const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
   { type: "youtube", duration: 22000 },
+  { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 14000 },
   { type: "vin", duration: 10000 },
+  { type: "instagram", duration: 30000, reelIndex: 1 },
   { type: "weather", duration: 9000 },
   { type: "thé", duration: 12000 },
+  { type: "instagram", duration: 30000, reelIndex: 2 },
   { type: "épicerie", duration: 10000 },
-  { type: "instagram", duration: 28000 },
   { type: "chatperche", duration: 10000 },
 ];
 
@@ -333,17 +336,11 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — défilement automatique
+// Reels Instagram @maison_maitre — un reel par scène
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 
-const InstagramScene = ({ active }: { active: boolean }) => {
-  const [idx, setIdx] = useState(0);
-
-  // À chaque activation de la scène, on passe au reel suivant
-  useEffect(() => {
-    if (active) setIdx((i) => (i + 1) % INSTAGRAM_REELS.length);
-  }, [active]);
-
+const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
+  const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/`;
 
@@ -552,7 +549,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "épicerie":
       return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
     case "instagram":
-      return <InstagramScene active={active} />;
+      return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
     case "chatperche":
       return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
   }
