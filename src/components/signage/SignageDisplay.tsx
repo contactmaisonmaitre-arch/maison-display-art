@@ -197,69 +197,31 @@ const LeftPanel = ({ now, weather }: { now: Date; weather: WeatherData | null })
         </div>
       </div>
 
-      {/* Weather */}
+      {/* Fête du jour */}
       <div className="relative px-7 py-6" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.3em", color: "rgba(242,237,228,0.4)" }}>
-          📍 Dole · Jura · France
+        <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.32em", color: "rgba(242,237,228,0.4)" }}>
+          ✦ Fête du jour
         </div>
-        {w ? (
-          <>
-            <div className="mt-4 flex items-end gap-3">
-              <div style={{ fontSize: 56, lineHeight: 1 }}>{wmo(w.weather_code).emoji}</div>
-              <div className="font-serif-display leading-none text-linen" style={{ fontSize: 62, fontWeight: 300 }}>
-                {Math.round(w.temperature_2m)}°
-              </div>
-            </div>
-            <div className="mt-1 font-sans-ui" style={{ fontSize: 11, color: "rgba(242,237,228,0.5)" }}>
-              ressenti {Math.round(w.apparent_temperature)}°
-            </div>
-            <div className="mt-2 font-serif-display italic" style={{ fontSize: 15, color: "rgba(242,237,228,0.7)" }}>
-              {wmo(w.weather_code).label}
-            </div>
-            <div className="mt-4 grid grid-cols-2 gap-3">
-              <Stat label="Humidité" value={`${Math.round(w.relative_humidity_2m)}%`} />
-              <Stat label="Vent km/h" value={`${Math.round(w.wind_speed_10m)}`} />
-              <Stat label="UV" value={`${Math.round(w.uv_index ?? 0)}`} />
-              <Stat label="Pluie mm" value={`${(w.precipitation ?? 0).toFixed(1)}`} />
-            </div>
-            {weather?.daily && (
-              <div className="mt-5 flex justify-between gap-1">
-                {weather.daily.time.slice(1, 5).map((iso, i) => {
-                  const d = new Date(iso);
-                  const code = weather.daily.weather_code[i + 1];
-                  return (
-                    <div key={iso} className="flex flex-col items-center" style={{ minWidth: 56 }}>
-                      <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.18em", color: "rgba(242,237,228,0.45)" }}>
-                        {DAYS_FR_SHORT[d.getDay()]}
-                      </div>
-                      <div className="my-1" style={{ fontSize: 20 }}>{wmo(code).emoji}</div>
-                      <div className="font-serif-display text-linen" style={{ fontSize: 13 }}>
-                        {Math.round(weather.daily.temperature_2m_max[i + 1])}°
-                        <span style={{ opacity: 0.4 }}> {Math.round(weather.daily.temperature_2m_min[i + 1])}°</span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-          </>
-        ) : (
-          <div className="mt-6 font-serif-display italic" style={{ color: "rgba(242,237,228,0.4)" }}>chargement…</div>
-        )}
+        <div className="mt-3 font-serif-display italic text-linen" style={{ fontSize: 30, fontWeight: 300, lineHeight: 1.1 }}>
+          {getSaintDuJour(now)}
+        </div>
+        <div className="mt-2 font-sans-ui" style={{ fontSize: 12, color: "rgba(242,237,228,0.45)" }}>
+          Bonne fête à toutes et tous !
+        </div>
       </div>
 
       {/* Daily selection */}
       <div className="relative flex flex-1 flex-col justify-center px-7 py-6">
-        <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.32em", color: "rgba(242,237,228,0.22)" }}>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.32)" }}>
           Sélection du jour
         </div>
-        <div className="mt-5 space-y-4">
+        <div className="mt-6 space-y-5">
           {DAILY.map((d) => (
             <div key={d.tag}>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.28em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.28em", color: "hsl(var(--gold))" }}>
                 {d.tag}
               </div>
-              <div className="mt-1 font-serif-display italic leading-snug" style={{ fontSize: 16, color: "rgba(242,237,228,0.85)" }}>
+              <div className="mt-1 font-serif-display italic leading-snug" style={{ fontSize: 19, color: "rgba(242,237,228,0.92)" }}>
                 {d.name}
               </div>
             </div>
