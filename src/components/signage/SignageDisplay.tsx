@@ -633,14 +633,36 @@ const SignageDisplay = () => {
     return () => clearInterval(id);
   }, []);
 
+  const [scale, setScale] = useState(1);
+  useEffect(() => {
+    const fit = () => {
+      const s = Math.min(window.innerWidth / 1920, window.innerHeight / 1080);
+      setScale(s);
+    };
+    fit();
+    window.addEventListener("resize", fit);
+    return () => window.removeEventListener("resize", fit);
+  }, []);
+
   return (
     <div
-      className="relative flex overflow-hidden bg-ink"
-      style={{ width: 1920, height: 1080, cursor: "none" }}
+      className="fixed inset-0 overflow-hidden bg-ink flex items-center justify-center"
+      style={{ cursor: "none" }}
     >
-      <LeftPanel now={now} weather={weather} />
-      <CenterPanel weather={weather} />
-      <RightPanel />
+      <div
+        className="relative flex overflow-hidden bg-ink"
+        style={{
+          width: 1920,
+          height: 1080,
+          transform: `scale(${scale})`,
+          transformOrigin: "center center",
+          flexShrink: 0,
+        }}
+      >
+        <LeftPanel now={now} weather={weather} />
+        <CenterPanel weather={weather} />
+        <RightPanel />
+      </div>
     </div>
   );
 };
