@@ -93,13 +93,16 @@ const TICKER = [
 ];
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube";
 interface Scene {
   type: SceneType;
   duration: number;
 }
+// Vidéos YouTube café (changer les IDs si besoin)
+const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
+  { type: "youtube", duration: 22000 },
   { type: "vin", duration: 10000 },
   { type: "weather", duration: 8000 },
   { type: "thé", duration: 10000 },
