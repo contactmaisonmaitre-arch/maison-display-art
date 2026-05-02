@@ -558,37 +558,8 @@ const BottomTicker = () => {
 // ============ Right panel — News ============
 
 const RightPanel = () => {
-  const [news, setNews] = useState<NewsItem[]>([]);
-
-  useEffect(() => {
-    const fetchAll = async () => {
-      const all: NewsItem[] = [];
-      await Promise.all(
-        NEWS_FEEDS.map(async (feed) => {
-          try {
-            const res = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(feed.url)}`);
-            const data = await res.json();
-            const xml = new DOMParser().parseFromString(data.contents, "text/xml");
-            const items = Array.from(xml.querySelectorAll("item")).slice(0, 10);
-            for (const it of items) {
-              const title = it.querySelector("title")?.textContent?.trim() ?? "";
-              const pub = it.querySelector("pubDate")?.textContent?.trim() ?? "";
-              if (title) all.push({ source: feed.source, title, pubDate: pub ? Date.parse(pub) : Date.now() });
-            }
-          } catch (e) {
-            console.warn("news feed fail", feed.source, e);
-          }
-        })
-      );
-      all.sort((a, b) => b.pubDate - a.pubDate);
-      setNews(all);
-    };
-    fetchAll();
-    const id = setInterval(fetchAll, 25 * 60 * 1000);
-    return () => clearInterval(id);
-  }, []);
-
-  const doubled = useMemo(() => [...news, ...news], [news]);
+  const items = POSITIVE_ANECDOTES;
+  const doubled = useMemo(() => [...items, ...items], [items]);
 
   return (
     <aside
@@ -598,44 +569,29 @@ const RightPanel = () => {
       <PaperGrain />
       <div className="relative flex items-end justify-between px-6 pb-5 pt-7" style={{ borderBottom: "1px solid rgba(106,97,87,0.18)" }}>
         <div>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
-            En direct
+          <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+            Le saviez-vous
           </div>
-          <h2 className="mt-1 font-serif-display" style={{ fontSize: 26, fontWeight: 300, color: "hsl(var(--espresso))" }}>
-            Actualités
+          <h2 className="mt-1 font-serif-display" style={{ fontSize: 30, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+            Anecdotes
           </h2>
         </div>
-        <div
-          className="rounded-full px-3 py-1 font-sans-ui"
-          style={{ fontSize: 10, letterSpacing: "0.18em", backgroundColor: "rgba(46,36,25,0.08)", color: "hsl(var(--taupe))" }}
-        >
-          {news.length} articles
-        </div>
+        <div style={{ fontSize: 28 }}>✦</div>
       </div>
 
       <div className="relative flex-1 overflow-hidden">
-        {news.length > 0 ? (
-          <div style={{ animation: "mm-news-scroll 90s linear infinite" }}>
-            {doubled.map((n, i) => (
-              <div key={i} className="px-6 py-4" style={{ borderBottom: "1px solid rgba(106,97,87,0.12)" }}>
-                <div className="font-sans-ui uppercase" style={{ fontSize: 9, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
-                  {n.source}
-                </div>
-                <div className="mt-2 font-serif-display italic leading-snug" style={{ fontSize: 14, color: "hsl(var(--taupe))" }}>
-                  {n.title}
-                </div>
-                <div className="mt-2 font-sans-ui" style={{ fontSize: 9, letterSpacing: "0.22em", color: "hsl(var(--mink))" }}>
-                  {timeAgo(n.pubDate)}
-                </div>
+        <div style={{ animation: "mm-news-scroll 120s linear infinite" }}>
+          {doubled.map((n, i) => (
+            <div key={i} className="px-6 py-6" style={{ borderBottom: "1px solid rgba(106,97,87,0.12)" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+                {n.source}
               </div>
-            ))}
-          </div>
-        ) : (
-          <div className="px-6 py-8 font-serif-display italic" style={{ color: "hsl(var(--mink))" }}>
-            Chargement des actualités…
-          </div>
-        )}
-        {/* fade overlays */}
+              <div className="mt-3 font-serif-display italic leading-snug" style={{ fontSize: 19, color: "hsl(var(--espresso))", lineHeight: 1.45 }}>
+                {n.title}
+              </div>
+            </div>
+          ))}
+        </div>
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32" style={{ background: "linear-gradient(to bottom, transparent, #E5DDD0)" }} />
         <div className="pointer-events-none absolute inset-x-0 top-0 h-10" style={{ background: "linear-gradient(to top, transparent, #E5DDD0)" }} />
       </div>
