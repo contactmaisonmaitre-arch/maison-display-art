@@ -614,7 +614,7 @@ const SignageDisplay = () => {
           flexShrink: 0,
         }}
       >
-        <LeftPanel now={now} weather={weather} />
+        <LeftPanel now={now} />
         <CenterPanel weather={weather} />
         <RightPanel />
       </div>
