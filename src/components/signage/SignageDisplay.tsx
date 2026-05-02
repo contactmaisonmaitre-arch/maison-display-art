@@ -447,7 +447,7 @@ const CenterPanel = ({ weather }: { weather: WeatherData | null }) => {
           className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
           style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? "auto" : "none" }}
         >
-          <SceneRenderer scene={scene} weather={weather} />
+          <SceneRenderer scene={scene} weather={weather} active={i === index} />
         </div>
       ))}
 
