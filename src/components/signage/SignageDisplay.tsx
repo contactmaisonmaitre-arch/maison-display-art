@@ -49,36 +49,33 @@ interface WeatherData {
 interface NewsItem {
   source: string;
   title: string;
-  pubDate: number;
 }
 
-const NEWS_FEEDS = [
-  { source: "Le Monde", url: "https://www.lemonde.fr/rss/une.xml" },
-  { source: "France Info", url: "https://www.francetvinfo.fr/titres.rss" },
-  { source: "Le Figaro", url: "https://www.lefigaro.fr/rss/figaro_actualites.xml" },
-];
-
-const DAYS_FR = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
-const DAYS_FR_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
-const MONTHS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
-
-const formatDateLong = (d: Date) => `${DAYS_FR[d.getDay()]} ${d.getDate()} ${MONTHS_FR[d.getMonth()]} ${d.getFullYear()}`;
-const pad = (n: number) => n.toString().padStart(2, "0");
-const timeAgo = (ts: number) => {
-  const diff = Math.max(0, Date.now() - ts);
-  const m = Math.floor(diff / 60000);
-  if (m < 60) return `Il y a ${m} min`;
-  const h = Math.floor(m / 60);
-  if (h < 24) return `Il y a ${h}h`;
-  return `Il y a ${Math.floor(h / 24)}j`;
-};
-
-// ============ Daily selection ============
-const DAILY = [
-  { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
-  { tag: "Thé", name: "Darjeeling First Flush · Thé des Maîtres 2025" },
-  { tag: "Vin", name: "Kundrat & Fils — Mâcon-Villages nature" },
-  { tag: "Four", name: "Brownie noisette & fleur de sel" },
+// Anecdotes positives & "le saviez-vous" — café, thé, vin, gourmandise
+const POSITIVE_ANECDOTES: NewsItem[] = [
+  { source: "Le saviez-vous", title: "Le café est la deuxième boisson la plus consommée au monde, juste après l'eau." },
+  { source: "Anecdote", title: "Une légende raconte qu'un berger éthiopien découvrit le café en voyant ses chèvres danser après en avoir mangé les baies." },
+  { source: "Bon à savoir", title: "Le thé vert matcha contient jusqu'à 137 fois plus d'antioxydants qu'un thé vert classique infusé." },
+  { source: "Tradition", title: "Au Japon, la cérémonie du thé peut durer jusqu'à 4 heures et célèbre l'instant présent." },
+  { source: "Le saviez-vous", title: "Le Jura produit le célèbre vin jaune, élevé sous voile pendant 6 ans et 3 mois minimum." },
+  { source: "Anecdote", title: "Beethoven comptait précisément 60 grains de café pour préparer chacune de ses tasses." },
+  { source: "Histoire", title: "Le premier café d'Europe ouvrit ses portes à Venise en 1645 — un lieu de débats et d'idées." },
+  { source: "Curiosité", title: "Les arômes du vin proviennent de plus de 800 composés volatils différents." },
+  { source: "Bien-être", title: "Boire un café modérément réduit le risque de maladies cardiovasculaires selon plusieurs études." },
+  { source: "Inspiration", title: "Le mot \"espresso\" signifie \"exprimé\" en italien — un café réalisé à la demande." },
+  { source: "Le saviez-vous", title: "Il faut environ 100 grains de café pour préparer une tasse d'espresso parfait." },
+  { source: "Tradition", title: "En Éthiopie, la cérémonie du café est un rituel de partage qui peut durer plusieurs heures." },
+  { source: "Anecdote", title: "Le thé Earl Grey doit son nom au comte Charles Grey, Premier ministre britannique au XIXe siècle." },
+  { source: "Terroir", title: "Le Jura abrite cinq cépages emblématiques : Savagnin, Chardonnay, Trousseau, Poulsard et Pinot Noir." },
+  { source: "Curiosité", title: "Une tasse de thé blanc renferme moins de caféine qu'une tasse de café — idéal en fin de journée." },
+  { source: "Bon à savoir", title: "Le rooibos, originaire d'Afrique du Sud, ne contient ni théine ni caféine — parfait pour le soir." },
+  { source: "Histoire", title: "Le chocolat fut consommé sous forme de boisson amère pendant près de 3000 ans avant d'être sucré." },
+  { source: "Anecdote", title: "Bach a composé une cantate dédiée au café — la \"Kaffeekantate\" — en 1735." },
+  { source: "Le saviez-vous", title: "Plus un café est torréfié foncé, moins il contient de caféine." },
+  { source: "Inspiration", title: "Le mot \"barista\" vient de l'italien et désignait à l'origine simplement le serveur d'un bar." },
+  { source: "Tradition", title: "Au Royaume-Uni, l'afternoon tea fut inventé en 1840 par Anna, duchesse de Bedford." },
+  { source: "Curiosité", title: "Le café Geisha d'Éthiopie peut atteindre des prix records — jusqu'à 10 000 € le kilo." },
+  { source: "Bien-être", title: "L'odeur du café fraîchement moulu suffit à stimuler la vigilance et l'humeur." },
 ];
 
 const TICKER = [
@@ -91,6 +88,17 @@ const TICKER = [
   "Vin · Kundrat & Fils — Mâcon-Villages nature",
   "Boutique en ligne · maisonmaitre.com",
 ];
+
+// Produits coup de cœur de maisonmaitre.com
+const PRODUCTS_TO_TRY = [
+  { cat: "Café", name: "Éthiopie Yirgacheffe Heirloom Nature", note: "Jasmin · Pêche · Miel" },
+  { cat: "Café", name: "Colombie Huila Bourbon Rose Nature", note: "Cerise noire · Framboise · Cacao" },
+  { cat: "Thé noir", name: "Banquet des Tsars", note: "Bergamote & agrumes" },
+  { cat: "Thé vert", name: "Le Chat Heureux", note: "Notre incontournable" },
+  { cat: "Infusion", name: "Délice des Vergers", note: "Framboise · Hibiscus" },
+  { cat: "Rooibos", name: "Splendeur d'Abyssinie", note: "Moka · Chocolat blanc" },
+];
+
 
 // ============ Scenes ============
 type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube";
