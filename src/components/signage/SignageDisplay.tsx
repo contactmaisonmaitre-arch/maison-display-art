@@ -506,7 +506,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
 
 // ============ Center panel ============
 
-const CenterPanel = ({ weather }: { weather: WeatherData | null }) => {
+const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date }) => {
   const [index, setIndex] = useState(0);
   const [progressKey, setProgressKey] = useState(0);
 
@@ -526,7 +526,7 @@ const CenterPanel = ({ weather }: { weather: WeatherData | null }) => {
           className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
           style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? "auto" : "none" }}
         >
-          <SceneRenderer scene={scene} weather={weather} active={i === index} />
+          <SceneRenderer scene={scene} weather={weather} active={i === index} now={now} />
         </div>
       ))}
 
@@ -695,7 +695,7 @@ const SignageDisplay = () => {
         }}
       >
         <LeftPanel now={now} />
-        <CenterPanel weather={weather} />
+        <CenterPanel weather={weather} now={now} />
         <RightPanel />
       </div>
     </div>
