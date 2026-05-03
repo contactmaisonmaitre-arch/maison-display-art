@@ -60,6 +60,20 @@ const DAYS_FR_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const MONTHS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const formatDateLong = (d: Date) => `${DAYS_FR[d.getDay()]} ${d.getDate()} ${MONTHS_FR[d.getMonth()]} ${d.getFullYear()}`;
 const pad = (n: number) => n.toString().padStart(2, "0");
+const safeGetStorage = (key: string) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+const safeSetStorage = (key: string, value: string) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Certains navigateurs TV bloquent localStorage : on continue sans faire planter l'écran.
+  }
+};
 
 const DAILY = [
   { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
@@ -205,21 +219,21 @@ interface Scene {
   newsOffset?: number;
 }
 const SCENES: Scene[] = [
-  { type: "café", duration: 10000 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 0 },
-  { type: "instagram", duration: 30000, reelIndex: 0 },
+  { type: "café", duration: 13000 },
+  { type: "weather", duration: 12000 },
+  { type: "instagram", duration: 24000, reelIndex: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
-  { type: "produits", duration: 14000 },
-  { type: "vin", duration: 10000 },
-  { type: "instagram", duration: 30000, reelIndex: 1 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 1 },
-  { type: "weather", duration: 9000 },
-  { type: "thé", duration: 12000 },
-  { type: "instagram", duration: 30000, reelIndex: 2 },
+  { type: "produits", duration: 17000 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
+  { type: "vin", duration: 13000 },
+  { type: "instagram", duration: 24000, reelIndex: 1 },
+  { type: "thé", duration: 13000 },
+  { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 2 },
-  { type: "épicerie", duration: 10000 },
-  { type: "chatperche", duration: 10000 },
+  { type: "instagram", duration: 24000, reelIndex: 2 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
+  { type: "épicerie", duration: 13000 },
+  { type: "chatperche", duration: 13000 },
 ];
 
 // ============ Paper grain SVG ============
