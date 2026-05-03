@@ -892,7 +892,7 @@ const SignageDisplay = () => {
   }, []);
 
   type FitMode = "fit" | "cover" | "100";
-  const [mode, setMode] = useState<FitMode>(() => (localStorage.getItem("mm-fit") as FitMode) || "fit");
+  const [mode, setMode] = useState<FitMode>(() => (safeGetStorage("mm-fit") as FitMode) || "fit");
   const [scale, setScale] = useState(1);
   const [showCtrl, setShowCtrl] = useState(false);
 
@@ -910,7 +910,7 @@ const SignageDisplay = () => {
   }, [mode]);
 
   useEffect(() => {
-    localStorage.setItem("mm-fit", mode);
+    safeSetStorage("mm-fit", mode);
   }, [mode]);
 
   // Show controls on mouse move, hide after 3s
@@ -945,9 +945,8 @@ const SignageDisplay = () => {
           flexShrink: 0,
         }}
       >
-        <LeftPanel now={now} />
+        <FixedTopBar now={now} />
         <CenterPanel weather={weather} now={now} />
-        <RightPanel />
       </div>
 
       {/* Mode d'affichage — visible au survol */}
