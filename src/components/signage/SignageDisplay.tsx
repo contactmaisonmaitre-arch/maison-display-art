@@ -123,29 +123,28 @@ const POSITIVE_ANECDOTES: NewsItem[] = [
 ];
 
 const TICKER = [
-  "Café · Éthiopie Yirgacheffe — fruité, floral, notes d'agrumes",
-  "Vin · René Bouvier — Bourgogne rouge nature",
-  "Thé des Maîtres · Darjeeling First Flush — récolte 2025",
+  "Café des Maitre · Moka Sidamo — en grain, en boutique",
+  "Vin nature · Marcel Lapierre — Morgon",
+  "Thé des Maitre · Darjeeling First Flush — récolte 2025",
   "Matcha · Kumiko Matcha — cérémonie & barista",
-  "Four · Brownie noisette & fleur de sel — fait maison",
-  "Vin · Marcel Lapierre — Morgon, gamay nature",
-  "Vin · Jean Foillard — Beaujolais, Morgon Côte du Py",
-  "Vin · Domaine Overnoy-Houillon — Pupillin, Jura",
-  "Vin · Yvon Métras — Fleurie L'Ultime",
+  "Sapidité · Brownie noisette & fleur de sel — fait maison",
+  "Vin nature · Jean Foillard — Morgon Côte du Py",
+  "Vin nature · Domaine Overnoy-Houillon — Pupillin, Jura",
+  "Vin nature · Yvon Métras — Fleurie L'Ultime",
   "Boutique en ligne · maisonmaitre.com",
 ];
 
-// Produits réels — extraits de maisonmaitre.com (images depuis le CDN Shopify, copiées dans /public/products)
+// Produits réels — extraits de maisonmaitre.com (prix au 100g pour les thés/infusions)
 const PRODUCTS_TO_TRY = [
-  { cat: "Café d'Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 €",        img: "/products/cafe-ethiopie.png" },
-  { cat: "Café de Colombie", name: "Huila Bourbon Rose",       note: "Cerise noire · Framboise · Cacao · 16 €",img: "/products/cafe-colombie-bourbon.png" },
-  { cat: "Café de Colombie", name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 €",img: "/products/cafe-colombie-castillo.gif" },
-  { cat: "Thé noir",         name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 €",          img: "/products/the-tsars.png" },
-  { cat: "Thé vert",         name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 €",          img: "/products/the-chat.png" },
-  { cat: "Infusion",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 93,50 €/kg",      img: "/products/infusion-vergers.png" },
-  { cat: "Thé noir floral",  name: "Eden Floral",              note: "Rose & Pivoine · 100g",                  img: "/products/eden-floral.png" },
-  { cat: "Thé caramel",      name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 €",          img: "/products/douceur-salee.png" },
-  { cat: "Boutique",         name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",           img: "/products/mug-emaille.png" },
+  { cat: "Café des Maitre · Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 € / 100g",        img: "/products/cafe-ethiopie.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Bourbon Rose",       note: "Cerise · Framboise · Cacao · 16 € / 100g",      img: "/products/cafe-colombie-bourbon.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 € / 100g",img: "/products/cafe-colombie-castillo.gif" },
+  { cat: "Thé des Maitre · Noir",       name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 € / 100g",          img: "/products/the-tsars.png" },
+  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 € / 100g",          img: "/products/the-chat.png" },
+  { cat: "Infusion des Maitre",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 9,35 € / 100g",          img: "/products/infusion-vergers.png" },
+  { cat: "Thé des Maitre · Floral",     name: "Eden Floral",              note: "Rose & Pivoine · 11,50 € / 100g",               img: "/products/eden-floral.png" },
+  { cat: "Thé des Maitre · Caramel",    name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 € / 100g",          img: "/products/douceur-salee.png" },
+  { cat: "Boutique",                    name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",                  img: "/products/mug-emaille.png" },
 ];
 
 
