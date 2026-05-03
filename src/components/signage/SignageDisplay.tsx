@@ -687,8 +687,10 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
   switch (scene.type) {
     case "café":
       return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
-    case "youtube":
-      return <YouTubeScene active={active} />;
+    case "anecdote":
+      return <AnecdoteScene anecdoteIndex={scene.anecdoteIndex ?? 0} />;
+    case "goodnews":
+      return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
       return <ProductsScene />;
     case "vin":
