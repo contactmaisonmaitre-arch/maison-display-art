@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // ============ Types & constants ============
 
@@ -430,37 +430,34 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — un reel par scène
+// Reels Instagram @maison_maitre — séquences JPG pour éviter les bugs de décodage vidéo des TV.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
+const REELS_PATH = "/reels-tv";
+const REEL_FRAME_COUNTS: Record<string, number> = {
+  DXtn06bIgtd: 24,
+  DXjAgNRirlr: 14,
+  DXPVGNDioOU: 24,
+};
+
+const reelFrame = (reelId: string, frame: number) => {
+  const count = REEL_FRAME_COUNTS[reelId] ?? 1;
+  const n = ((frame % count) + 1).toString().padStart(2, "0");
+  return `${REELS_PATH}/frames/${reelId}-${n}.jpg`;
+};
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [ready, setReady] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [frame, setFrame] = useState(0);
 
-  // Force play attempts (TV browsers can ignore autoplay otherwise)
   useEffect(() => {
-    if (!active) return;
-    setReady(false);
-    setFailed(false);
-    const v = videoRef.current;
-    if (!v) return;
-    let cancelled = false;
-    const tryPlay = () => {
-      if (cancelled || !v) return;
-      const p = v.play();
-      if (p && typeof p.catch === "function") {
-        p.catch(() => {
-          // retry shortly
-          setTimeout(tryPlay, 600);
-        });
-      }
-    };
-    // small delay so the element is in the DOM
-    const t = setTimeout(tryPlay, 100);
-    return () => { cancelled = true; clearTimeout(t); };
+    if (!active) {
+      setFrame(0);
+      return;
+    }
+    setFrame(0);
+    const t = window.setInterval(() => setFrame((f) => f + 1), 850);
+    return () => window.clearInterval(t);
   }, [active, reelId]);
 
   return (
@@ -469,7 +466,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       style={{
         backgroundColor: "hsl(var(--ink))",
         // Poster as background so we never see pure black, even if the video stalls
-        backgroundImage: `url(/reels/${reelId}.jpg)`,
+        backgroundImage: `url(${REELS_PATH}/${reelId}.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -493,48 +490,13 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       </div>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <video
-          ref={videoRef}
-          key={reelId}
-          src={`/reels/${reelId}.mp4`}
-          poster={`/reels/${reelId}.jpg`}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onCanPlay={() => setReady(true)}
-          onPlaying={() => setReady(true)}
-          onError={() => setFailed(true)}
-          style={{
-            height: "96%",
-            maxHeight: "820px",
-            width: "auto",
-            maxWidth: "100%",
-            objectFit: "contain",
-            borderRadius: 10,
-            boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
-            backgroundColor: "#000",
-            // Fallback poster shown by the <video> element while loading
-          }}
+        <img
+          key={`${reelId}-${frame}`}
+          src={reelFrame(reelId, frame)}
+          alt="Publication Instagram Maison Maître"
+          className="h-[96%] w-full object-contain"
+          style={{ borderRadius: 10, boxShadow: "0 30px 80px rgba(0,0,0,0.5)" }}
         />
-        {/* Loading hint (only briefly) */}
-        {!ready && !failed && (
-          <div
-            className="pointer-events-none absolute font-sans-ui uppercase"
-            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
-          >
-            Chargement…
-          </div>
-        )}
-        {failed && (
-          <div
-            className="pointer-events-none absolute font-sans-ui uppercase"
-            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
-          >
-            @maison_maitre · Instagram
-          </div>
-        )}
       </div>
     </div>
   );
