@@ -490,36 +490,105 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   );
 };
 
-const YouTubeScene = ({ active }: { active: boolean }) => {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    if (active) setIdx((i) => (i + 1) % YOUTUBE_COFFEE_IDS.length);
-  }, [active]);
-  const videoId = YOUTUBE_COFFEE_IDS[idx];
-  const src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&playsinline=1&rel=0&showinfo=0`;
+// ============ Anecdote café (plein écran TV) ============
+const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
+  const a = COFFEE_ANECDOTES[anecdoteIndex % COFFEE_ANECDOTES.length];
   return (
-    <div className="absolute inset-0" style={{ backgroundColor: "#000" }}>
-      {active && (
-        <iframe
-          title="Café — vidéo"
-          src={src}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{ width: "100%", height: "100%", border: 0, pointerEvents: "none" }}
-          allow="autoplay; encrypted-media"
-        />
-      )}
-      <div className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 25%, transparent 60%, rgba(0,0,0,0.7) 100%)" }} />
-      <div className="absolute left-16 top-14 flex items-center gap-4">
-        <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-          L'Art du Café · En images
+    <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #3A2418 0%, #1F1209 60%, #0E0805 100%)" }}>
+      {/* halo doré */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          top: "-20%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)",
+        }}
+      />
+      <div
+        className="relative flex h-full flex-col justify-center px-24"
+        style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}
+      >
+        <div className="flex items-center gap-5">
+          <div style={{ fontSize: 56 }}>☕</div>
+          <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+            {a.tag} · L'art du café
+          </div>
+        </div>
+        <h2
+          className="mt-10 font-serif-display leading-[1.02]"
+          style={{ fontSize: 110, fontWeight: 600, color: "hsl(var(--linen))" }}
+        >
+          {a.title}
+        </h2>
+        <p
+          className="mt-10 max-w-[1300px] font-serif-display italic"
+          style={{ fontSize: 38, lineHeight: 1.4, color: "rgba(242,237,228,0.78)" }}
+        >
+          {a.body}
+        </p>
+        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.42em", color: "rgba(184,150,90,0.6)" }}>
+          Maison Maître · Le café autrement
         </div>
       </div>
-      <div className="absolute bottom-32 left-16 right-16">
-        <h2 className="font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--linen))" }}>
-          <span className="font-semibold">Le geste,</span>{" "}
-          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>la matière, l'instant.</span>
-        </h2>
+    </div>
+  );
+};
+
+// ============ 3 actualités positives du jour ============
+const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
+  const items = [0, 1, 2].map(
+    (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + i) % GOOD_NEWS_OF_THE_DAY.length]
+  );
+  return (
+    <div className="absolute inset-0 px-20 py-16" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
+      <div className="flex items-center gap-5">
+        <div style={{ fontSize: 44 }}>✦</div>
+        <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          Trois bonnes nouvelles du jour
+        </div>
+      </div>
+      <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 80, color: "hsl(var(--ink))" }}>
+        <span className="font-semibold">Le monde va</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>aussi bien.</span>
+      </h2>
+
+      <div className="mt-12 grid grid-cols-3 gap-8" style={{ height: 540 }}>
+        {items.map((n, i) => (
+          <div
+            key={i}
+            className="flex flex-col rounded-sm p-8"
+            style={{
+              backgroundColor: "rgba(46,36,25,0.05)",
+              border: "1px solid rgba(46,36,25,0.15)",
+              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
+            }}
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex items-center justify-center font-serif-display"
+                style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "hsl(var(--gold))", color: "hsl(var(--ink))", fontSize: 22, fontWeight: 600 }}
+              >
+                {i + 1}
+              </div>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+                {n.tag}
+              </div>
+            </div>
+            <h3
+              className="mt-7 font-serif-display leading-[1.1]"
+              style={{ fontSize: 36, fontWeight: 600, color: "hsl(var(--espresso))" }}
+            >
+              {n.title}
+            </h3>
+            <p
+              className="mt-5 font-serif-display italic"
+              style={{ fontSize: 20, lineHeight: 1.5, color: "hsl(var(--taupe))" }}
+            >
+              {n.body}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
