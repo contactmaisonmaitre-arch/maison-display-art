@@ -730,7 +730,8 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
       Commande en ligne · maisonmaitre.com
     </div>
   </div>
-);
+  );
+};
 
 const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
