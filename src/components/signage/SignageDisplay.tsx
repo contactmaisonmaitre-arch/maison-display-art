@@ -458,27 +458,18 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge les MP4 des Reels une seule fois (cache navigateur)
-const reelBlobCache: Record<string, string> = {};
-const reelLoadingPromises: Record<string, Promise<string>> = {};
-const preloadReel = (reelId: string): Promise<string> => {
-  if (reelBlobCache[reelId]) return Promise.resolve(reelBlobCache[reelId]);
-  if (reelLoadingPromises[reelId]) return reelLoadingPromises[reelId];
-  const p = fetch(`${REELS_PATH}/${reelId}.mp4`)
-    .then((r) => r.blob())
-    .then((b) => {
-      const url = URL.createObjectURL(b);
-      reelBlobCache[reelId] = url;
-      return url;
-    })
-    .catch(() => `${REELS_PATH}/${reelId}.mp4`);
-  reelLoadingPromises[reelId] = p;
-  return p;
+// Précharge les médias légers et garde un fallback animé WebP si la TV refuse le MP4.
+const preloadReelAssets = (reelId: string) => {
+  if (typeof window === "undefined") return;
+  [`${REELS_PATH}/${reelId}.jpg`, `${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.mp4`].forEach((href) => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = href.endsWith(".mp4") ? "video" : "image";
+    link.href = href;
+    document.head.appendChild(link);
+  });
 };
-// Précharge tous les reels au démarrage du module
-if (typeof window !== "undefined") {
-  INSTAGRAM_REELS.forEach((id) => preloadReel(id));
-}
+if (typeof window !== "undefined") INSTAGRAM_REELS.forEach(preloadReelAssets);
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
