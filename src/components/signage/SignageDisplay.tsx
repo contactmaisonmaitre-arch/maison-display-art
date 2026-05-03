@@ -239,6 +239,7 @@ const SCENES: Scene[] = [
   { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
+  { type: "review", duration: 20000 },
   { type: "chatperche", duration: 13000 },
 ];
 
