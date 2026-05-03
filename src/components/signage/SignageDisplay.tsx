@@ -436,7 +436,7 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — vidéos MP4 silencieuses, optimisées TV.
+// Reels Instagram @maison_maitre — images animées, plus compatibles avec les navigateurs TV que les MP4.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
 
@@ -458,13 +458,13 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge les médias légers et garde un fallback animé WebP si la TV refuse le MP4.
+// Précharge uniquement les formats image : certaines TV affichent un écran noir au lieu de lire les MP4.
 const preloadReelAssets = (reelId: string) => {
   if (typeof window === "undefined") return;
-  [`${REELS_PATH}/${reelId}.jpg`, `${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.mp4`].forEach((href) => {
+  [`${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.gif`, `${REELS_PATH}/${reelId}.jpg`].forEach((href) => {
     const link = document.createElement("link");
     link.rel = "preload";
-    link.as = href.endsWith(".mp4") ? "video" : "image";
+    link.as = "image";
     link.href = href;
     document.head.appendChild(link);
   });
@@ -475,26 +475,13 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
-  const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
-  const [loaded, setLoaded] = useState<boolean>(false);
-  const [videoFailed, setVideoFailed] = useState<boolean>(false);
   const [fallbackSrc, setFallbackSrc] = useState<string>(`${REELS_PATH}/${reelId}.webp`);
 
   useEffect(() => {
-    setLoaded(false);
-    setVideoFailed(false);
     setFallbackSrc(`${REELS_PATH}/${reelId}.webp`);
+    preloadReelAssets(reelId);
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
-
-  useEffect(() => {
-    if (active && vidEl && !videoFailed) {
-      try {
-        vidEl.currentTime = 0;
-        vidEl.play().catch(() => setVideoFailed(true));
-      } catch {}
-    }
-  }, [active, vidEl, videoFailed, reelId]);
 
   return (
     <div
@@ -522,36 +509,14 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
               background: "#000",
             }}
           >
-            {!videoFailed && (
-              <video
-                ref={setVidEl}
-                key={reelId}
-                poster={`${REELS_PATH}/${reelId}.jpg`}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                onLoadedMetadata={() => setLoaded(true)}
-                onLoadedData={() => setLoaded(true)}
-                onCanPlay={() => setLoaded(true)}
-                onError={() => setVideoFailed(true)}
-                className="h-full w-full"
-                style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
-              >
-                <source src={`${REELS_PATH}/${reelId}.mp4`} type='video/mp4; codecs="avc1.42E01E"' />
-              </video>
-            )}
-            {/* Poster image affichée tant que la vidéo n'est pas prête */}
-            {(!loaded || videoFailed) && (
-              <img
-                src={videoFailed ? fallbackSrc : `${REELS_PATH}/${reelId}.jpg`}
-                alt=""
-                className="absolute inset-0 h-full w-full"
-                onError={() => setFallbackSrc(`${REELS_PATH}/${reelId}.gif`)}
-                style={{ objectFit: "cover" }}
-              />
-            )}
+            <img
+              key={fallbackSrc}
+              src={fallbackSrc}
+              alt=""
+              className="h-full w-full"
+              onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
 
