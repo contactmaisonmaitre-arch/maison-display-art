@@ -759,54 +759,132 @@ const FIVE_STAR_REVIEWS: { name: string; text: string }[] = [
   { name: "Élise B.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
 ];
 
+// Logo Google "G" officiel multicolore
+const GoogleG = ({ size = 56 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden>
+    <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+    <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+    <path fill="#FBBC05" d="M11.69 28.18c-.44-1.32-.69-2.73-.69-4.18s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+    <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+  </svg>
+);
+
 const ReviewScene = () => {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 3500);
+    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 4500);
     return () => clearInterval(t);
   }, []);
   const r = FIVE_STAR_REVIEWS[idx];
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(REVIEW_URL)}`;
-  return (
-    <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
-      <div className="flex items-center gap-5">
-        <div style={{ fontSize: 54 }}>★</div>
-        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-          Votre avis compte
-        </div>
-      </div>
-      <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
-        <span className="font-semibold">Laissez-nous</span>{" "}
-        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>5 étoiles.</span>
-      </h2>
+  // QR code Google avec couleurs et logo intégré (api goqr personnalisable)
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=8&qzone=2&color=1A160F&bgcolor=FFFFFF&ecc=H&data=${encodeURIComponent(REVIEW_URL)}`;
 
-      <div className="mt-10 grid gap-12" style={{ gridTemplateColumns: "auto 1fr", height: 600 }}>
-        {/* QR */}
-        <div className="flex flex-col items-center justify-center rounded-sm p-8" style={{ backgroundColor: "hsl(var(--linen))", border: "2px solid hsl(var(--gold))" }}>
-          <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460 }} />
-          <div className="mt-5 font-sans-ui uppercase text-center" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--espresso))" }}>
-            Scannez pour<br/>laisser un avis
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "linear-gradient(135deg, #1A160F 0%, #2E2419 60%, #1A160F 100%)" }}>
+      {/* halos colorés Google */}
+      <div className="pointer-events-none absolute" style={{ top: "-20%", left: "-10%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(66,133,244,0.18) 0%, transparent 65%)" }} />
+      <div className="pointer-events-none absolute" style={{ bottom: "-25%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(234,67,53,0.14) 0%, transparent 65%)" }} />
+      <div className="pointer-events-none absolute" style={{ top: "30%", right: "20%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(251,188,5,0.12) 0%, transparent 65%)" }} />
+
+      <div className="relative h-full px-24 pb-24 pt-36 flex flex-col">
+        {/* Header */}
+        <div className="flex items-center gap-5">
+          <GoogleG size={56} />
+          <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
+            Votre avis sur Google
           </div>
         </div>
-        {/* Reviews */}
-        <div className="flex flex-col rounded-sm p-10" style={{ backgroundColor: "rgba(46,36,25,0.05)", border: "1px solid rgba(46,36,25,0.15)" }}>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-            Derniers avis ★★★★★
-          </div>
-          <div key={idx} className="mt-6 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.7s ease-out both" }}>
-            <div style={{ fontSize: 54, color: "#E8B548", letterSpacing: 6 }}>★★★★★</div>
-            <p className="mt-6 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.3, color: "hsl(var(--espresso))" }}>
-              « {r.text} »
-            </p>
-            <div className="mt-6 font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--taupe))" }}>
-              — {r.name}
+
+        <h2 className="mt-7 font-serif-display leading-[0.98]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
+          <span className="font-semibold">Partagez votre</span>{" "}
+          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>expérience.</span>
+        </h2>
+
+        <div className="mt-12 grid flex-1 gap-16" style={{ gridTemplateColumns: "auto 1fr" }}>
+          {/* QR card façon carte téléphone */}
+          <div
+            className="flex flex-col items-center justify-center"
+            style={{
+              padding: 32,
+              borderRadius: 32,
+              background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,90,0.5)",
+              animation: "mm-slide-up 1s ease-out 0.3s both",
+            }}
+          >
+            <div className="relative" style={{ padding: 18, background: "#fff", borderRadius: 18 }}>
+              <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460, display: "block" }} />
+              {/* Logo G au centre */}
+              <div
+                className="absolute"
+                style={{
+                  top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+                  width: 96, height: 96, borderRadius: 20, background: "#fff",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+                }}
+              >
+                <GoogleG size={64} />
+              </div>
+            </div>
+            <div className="mt-6 font-serif-display text-center" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
+              Scannez pour <em className="font-light" style={{ color: "hsl(var(--wine))" }}>nous noter</em>
+            </div>
+            <div className="mt-2 font-sans-ui uppercase text-center" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+              ★★★★★ · Google Maps
             </div>
           </div>
-          <div className="mt-4 flex gap-2">
-            {FIVE_STAR_REVIEWS.map((_, i) => (
-              <div key={i} style={{ width: 28, height: 4, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(46,36,25,0.15)" }} />
-            ))}
+
+          {/* Reviews */}
+          <div
+            className="flex flex-col"
+            style={{
+              padding: 44,
+              borderRadius: 28,
+              background: "rgba(242,237,228,0.06)",
+              border: "1px solid rgba(184,150,90,0.25)",
+              backdropFilter: "blur(2px)",
+            }}
+          >
+            <div className="flex items-center justify-between">
+              <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+                Derniers avis 5 étoiles
+              </div>
+              <div className="font-serif-display flex items-baseline gap-3" style={{ color: "hsl(var(--linen))" }}>
+                <span style={{ fontSize: 64, fontWeight: 300 }}>5,0</span>
+                <span style={{ fontSize: 22, color: "#E8B548", letterSpacing: 4 }}>★★★★★</span>
+              </div>
+            </div>
+
+            <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
+              <div style={{ fontSize: 42, color: "#E8B548", letterSpacing: 8 }}>★★★★★</div>
+              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.32, color: "hsl(var(--linen))" }}>
+                « {r.text} »
+              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <div
+                  className="flex items-center justify-center font-serif-display"
+                  style={{
+                    width: 56, height: 56, borderRadius: "50%",
+                    background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-lt)))",
+                    color: "#1A160F", fontSize: 26, fontWeight: 600,
+                  }}
+                >
+                  {r.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-serif-display" style={{ fontSize: 26, color: "hsl(var(--linen))" }}>{r.name}</div>
+                  <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.5)" }}>Avis vérifié Google</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 flex gap-2">
+              {FIVE_STAR_REVIEWS.map((_, i) => (
+                <div key={i} style={{ flex: 1, height: 3, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(242,237,228,0.15)", transition: "background-color 0.4s" }} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
