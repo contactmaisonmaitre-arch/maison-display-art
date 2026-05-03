@@ -132,25 +132,92 @@ const PRODUCTS_TO_TRY = [
 ];
 
 
+// ============ Anecdotes café (grand format TV) ============
+const COFFEE_ANECDOTES = [
+  { tag: "Le saviez-vous", title: "Une légende éthiopienne", body: "Un berger nommé Kaldi remarqua que ses chèvres dansaient après avoir mangé certaines baies rouges. Il venait, sans le savoir, de découvrir le café." },
+  { tag: "Histoire", title: "Le premier café d'Europe", body: "Ouvert à Venise en 1645, il devint un haut lieu de débats, d'idées et de rencontres. Aujourd'hui encore, le café rassemble." },
+  { tag: "Bach & le café", title: "La Kaffeekantate, 1735", body: "Jean-Sébastien Bach a composé une cantate entière dédiée au café — une déclaration d'amour musicale à la boisson noire." },
+  { tag: "Beethoven", title: "Soixante grains, pas un de plus", body: "Le compositeur comptait précisément 60 grains de café pour préparer chacune de ses tasses. La précision, déjà, faisait l'art." },
+  { tag: "Géographie", title: "La ceinture du café", body: "Le café ne pousse qu'entre les tropiques du Cancer et du Capricorne — une fine bande où l'altitude, la pluie et le soleil s'accordent." },
+  { tag: "Torréfaction", title: "Plus c'est foncé…", body: "Contrairement à l'idée reçue, plus un café est torréfié foncé, moins il contient de caféine. La chaleur en détruit une partie." },
+  { tag: "Espresso", title: "100 grains pour une tasse", body: "Il faut environ cent grains de café pour préparer un espresso parfait — concentration, finesse et 25 secondes d'extraction." },
+  { tag: "Éthiopie", title: "La cérémonie du café", body: "Au pays d'origine, le café se partage en trois services rituels — un moment de paix, de paroles et de transmission qui peut durer des heures." },
+  { tag: "Bien-être", title: "Une boisson amie du cœur", body: "Consommé avec mesure, le café est associé à un risque réduit de maladies cardiovasculaires selon plusieurs études internationales." },
+  { tag: "Geisha", title: "Le café le plus rare du monde", body: "La variété Geisha, cultivée en Éthiopie puis au Panama, peut atteindre 10 000 € le kilo — pour ses notes florales d'exception." },
+];
+
+// 3 actualités positives du jour (curaté maison, à actualiser)
+const GOOD_NEWS_OF_THE_DAY = [
+  {
+    title: "L'ozone se reconstitue plus vite que prévu",
+    body: "Selon l'ONU, la couche d'ozone est en bonne voie de retrouver ses niveaux de 1980 d'ici 2040 — preuve qu'une action mondiale concertée peut fonctionner.",
+    tag: "Planète",
+  },
+  {
+    title: "Le tigre du Bengale repart à la hausse",
+    body: "L'Inde recense aujourd'hui plus de 3 600 tigres sauvages, contre à peine 1 400 il y a quinze ans. Une victoire pour la conservation.",
+    tag: "Biodiversité",
+  },
+  {
+    title: "Les énergies renouvelables battent un record",
+    body: "Pour la première fois, plus de 30 % de l'électricité mondiale provient désormais de sources renouvelables — solaire et éolien en tête.",
+    tag: "Énergie",
+  },
+  {
+    title: "Une avancée majeure contre Alzheimer",
+    body: "De nouveaux traitements ralentissent significativement la progression de la maladie chez les patients diagnostiqués tôt.",
+    tag: "Santé",
+  },
+  {
+    title: "Le loup revient dans les Alpes françaises",
+    body: "Après des décennies d'absence, plus de 1 100 loups parcourent à nouveau les massifs — un signe de reconquête écologique.",
+    tag: "Faune",
+  },
+  {
+    title: "Lecture en hausse chez les jeunes",
+    body: "Selon le CNL, 81 % des 7-19 ans déclarent lire pour le plaisir — un chiffre en progression continue depuis cinq ans.",
+    tag: "Culture",
+  },
+  {
+    title: "Record de dons aux Restos du Cœur",
+    body: "La générosité des Français ne faiblit pas — la collecte annuelle a permis de servir plus de 170 millions de repas l'an dernier.",
+    tag: "Solidarité",
+  },
+  {
+    title: "Le Jura, terre de champions",
+    body: "La région compte un nombre record de domaines viticoles primés cette saison — le Savagnin et le vin jaune brillent à l'international.",
+    tag: "Local",
+  },
+  {
+    title: "La forêt française continue de s'étendre",
+    body: "Avec 17 millions d'hectares, la forêt couvre désormais près d'un tiers du territoire — sa surface a doublé en deux siècles.",
+    tag: "Nature",
+  },
+];
+
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube" | "produits";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews";
 interface Scene {
   type: SceneType;
   duration: number;
   reelIndex?: number;
+  anecdoteIndex?: number;
+  newsOffset?: number;
 }
-// Vidéos YouTube café (changer les IDs si besoin)
-const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
-  { type: "youtube", duration: 22000 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 0 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
+  { type: "goodnews", duration: 18000, newsOffset: 0 },
   { type: "produits", duration: 14000 },
   { type: "vin", duration: 10000 },
   { type: "instagram", duration: 30000, reelIndex: 1 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 1 },
   { type: "weather", duration: 9000 },
   { type: "thé", duration: 12000 },
   { type: "instagram", duration: 30000, reelIndex: 2 },
+  { type: "goodnews", duration: 18000, newsOffset: 3 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 2 },
   { type: "épicerie", duration: 10000 },
   { type: "chatperche", duration: 10000 },
 ];
