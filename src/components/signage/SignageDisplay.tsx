@@ -434,27 +434,48 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — GIF animés (compatibles toutes TVs et mobiles, pas de décodage vidéo).
+// Reels Instagram @maison_maitre — vidéos MP4 silencieuses, optimisées TV.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
+
+// Vrai logo Instagram (caméra) en SVG, gradient officiel
+const InstagramLogo = ({ size = 72 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden>
+    <defs>
+      <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#FED576" />
+        <stop offset="26%" stopColor="#F47133" />
+        <stop offset="61%" stopColor="#BC3081" />
+        <stop offset="100%" stopColor="#4F5BD5" />
+      </linearGradient>
+    </defs>
+    <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#ig-grad)" />
+    <rect x="12" y="12" width="40" height="40" rx="11" fill="none" stroke="#fff" strokeWidth="3.2" />
+    <circle cx="32" cy="32" r="9" fill="none" stroke="#fff" strokeWidth="3.2" />
+    <circle cx="46" cy="18" r="2.8" fill="#fff" />
+  </svg>
+);
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  // Force le rechargement du GIF (donc replay depuis le début) à chaque activation
-  const [nonce, setNonce] = useState(0);
-  useEffect(() => {
-    if (active) setNonce((n) => n + 1);
-  }, [active, reelId]);
+  const videoRef = useState<HTMLVideoElement | null>(null);
+  const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
 
-  const gifSrc = `${REELS_PATH}/${reelId}.gif?n=${nonce}`;
+  useEffect(() => {
+    if (active && vidEl) {
+      try {
+        vidEl.currentTime = 0;
+        vidEl.play().catch(() => {});
+      } catch {}
+    }
+  }, [active, vidEl, reelId]);
 
   return (
     <div
       className="absolute inset-0"
       style={{ background: "linear-gradient(135deg, #1A0F08 0%, #0A0604 60%, #050302 100%)" }}
     >
-      {/* halo doré décoratif */}
       <div
         className="pointer-events-none absolute"
         style={{
@@ -464,31 +485,37 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       />
 
       <div className="relative grid h-full grid-cols-2 gap-12 px-20 pb-24 pt-32">
-        {/* Colonne gauche : le Reel */}
+        {/* Reel à gauche, en vrai cadre 9:16 façon téléphone */}
         <div className="flex items-center justify-center">
           <div
             className="relative overflow-hidden"
             style={{
               aspectRatio: "9 / 16",
-              height: "92%",
-              borderRadius: 18,
-              boxShadow: "0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(184,150,90,0.25)",
+              height: "94%",
+              borderRadius: 28,
+              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(184,150,90,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(184,150,90,0.4)",
               background: "#000",
             }}
           >
-            <img
-              key={`${reelId}-${nonce}`}
-              src={gifSrc}
-              alt="Publication Instagram Maison Maître"
-              className="h-full w-full object-cover"
+            <video
+              ref={setVidEl}
+              key={reelId}
+              src={`${REELS_PATH}/${reelId}.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="h-full w-full"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
 
-        {/* Colonne droite : invitation à suivre */}
+        {/* Branding à droite */}
         <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
-          <div className="flex items-center gap-4">
-            <div style={{ width: 70, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="flex items-center gap-5">
+            <InstagramLogo size={64} />
             <div className="font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
               Suivez-nous
             </div>
@@ -496,42 +523,31 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 
           <h2
             className="font-serif-display"
-            style={{ fontSize: 96, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 28, letterSpacing: "0.02em" }}
+            style={{ fontSize: 104, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.02em" }}
           >
-            MAISON
+            <span className="font-semibold">Maison</span>
             <br />
-            <em style={{ color: "hsl(var(--gold-lt))" }}>MAÎTRE</em>
+            <em className="font-light" style={{ color: "hsl(var(--gold-lt))" }}>Maitre</em>
           </h2>
 
           <div
-            className="font-serif-display"
-            style={{ fontSize: 56, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.01em" }}
+            className="font-serif-display flex items-center gap-4"
+            style={{ fontSize: 52, color: "hsl(var(--linen))", marginTop: 36, letterSpacing: "0.01em" }}
           >
+            <InstagramLogo size={52} />
             @maison_maitre
           </div>
 
           <p
             className="font-sans-ui"
-            style={{ fontSize: 26, lineHeight: 1.45, color: "hsl(var(--linen) / 0.82)", marginTop: 28, maxWidth: 640 }}
+            style={{ fontSize: 26, lineHeight: 1.45, color: "rgba(242,237,228,0.82)", marginTop: 32, maxWidth: 640 }}
           >
-            Retrouvez nos cafés d'exception, nos thés rares et nos vignerons
-            nature au quotidien sur Instagram.
+            Cafés des Maitre, Thés des Maitre, vignerons nature et belles
+            adresses — toute notre actualité au quotidien.
           </p>
 
-          <div className="mt-12 flex items-center gap-4">
-            <div
-              className="flex items-center justify-center rounded-2xl"
-              style={{
-                width: 78, height: 78,
-                background: "linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)",
-                fontSize: 38,
-              }}
-            >
-              📷
-            </div>
-            <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
-              Instagram · Reel {idx + 1} / {INSTAGRAM_REELS.length}
-            </div>
+          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(184,150,90,0.7)" }}>
+            Reel {idx + 1} / {INSTAGRAM_REELS.length}
           </div>
         </div>
       </div>
