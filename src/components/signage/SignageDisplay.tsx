@@ -162,6 +162,29 @@ const COFFEE_ANECDOTES = [
   { tag: "Geisha", title: "Le café le plus rare du monde", body: "La variété Geisha, cultivée en Éthiopie puis au Panama, peut atteindre 10 000 € le kilo — pour ses notes florales d'exception." },
   { tag: "En boutique", title: "Repartez avec le café que vous buvez", body: "Vous savez qu'ici vous pouvez repartir avec le café que vous buvez, en grain ? En ce moment dans nos silos : le Moka Sidamo, fruité et floral." },
   { tag: "Le saviez-vous", title: "Café en grain, fraîcheur préservée", body: "Un café moulu perd 60 % de ses arômes en moins de 15 minutes. C'est pour cela que nous vous proposons nos cafés en grain, à moudre au moment de l'extraction." },
+  // === Tendances & actualités des coffee shops dans le monde ===
+  { tag: "Melbourne", title: "La capitale mondiale du flat white", body: "À Melbourne, la culture café est si forte que Starbucks y a fermé presque toutes ses boutiques — les torréfacteurs locaux comme Proud Mary et Market Lane dominent la scène mondiale." },
+  { tag: "Tokyo", title: "Le slow coffee japonais", body: "Chez Blue Bottle ou Koffee Mameya à Tokyo, chaque tasse est préparée en filtre lent — jusqu'à 6 minutes d'extraction pour révéler la pureté du grain." },
+  { tag: "Oslo", title: "La torréfaction nordique", body: "Tim Wendelboe à Oslo a inventé la torréfaction « light Scandinavian » : très claire, fruitée, presque thé — une révolution qui inspire toute la 3ᵉ vague." },
+  { tag: "Séoul", title: "Le café-cathédrale coréen", body: "À Séoul, des coffee shops géants comme Onion ou Fritz Coffee mêlent architecture brutaliste, pâtisseries d'art et grains d'origine — le café devient expérience." },
+  { tag: "Copenhague", title: "La Coffee Collective", body: "Pionniers du commerce direct, ils achètent leur café au même fermier depuis plus de 15 ans — un modèle imité dans toute l'Europe." },
+  { tag: "Tendance 2026", title: "L'essor du café fermenté", body: "Les fermentations anaérobies et carboniques transforment le café : notes de fruits exotiques, de vin, de whisky — une révolution qui vient de Colombie et du Costa Rica." },
+  { tag: "New York", title: "La renaissance du filtre", body: "À Brooklyn, des adresses comme Sey Coffee ou Devoción placent le filtre au centre — le grain de spécialité y est servi comme un grand cru." },
+  { tag: "Berlin", title: "The Barn, l'exigence allemande", body: "Ralf Rüller a imposé une vision puriste : pas de lait sur les filtres, des origines tracées au village près. Berlin est devenue une capitale mondiale du café." },
+  { tag: "Tendance", title: "Le retour du café grec & turc", body: "Préparé à l'eau chaude dans le cezve, sans filtre, le café turc connaît un renouveau — il est même classé au patrimoine immatériel de l'UNESCO depuis 2013." },
+  { tag: "Café & climat", title: "L'arabica menacé", body: "D'ici 2050, la moitié des terres à café arabica pourrait disparaître. C'est pourquoi de nouveaux hybrides résistants émergent au Salvador et au Kenya." },
+  { tag: "Ouverture", title: "Le café comme langage commun", body: "Du Yémen à Melbourne, du Brésil à Dole — partout dans le monde, le café réunit. Une tasse, c'est mille ans d'histoire et 70 pays producteurs." },
+  { tag: "Sapidité", title: "La 4ᵉ vague est arrivée", body: "Après la qualité (3ᵉ vague), la 4ᵉ vague mise sur la science : profilage du grain, contrôle de l'eau, extraction mesurée au millième. Le café devient discipline d'orfèvre." },
+  { tag: "Producteur·rice", title: "Café & parité", body: "Au Rwanda et au Burundi, les coopératives 100 % féminines comme Hingakawa produisent certains des meilleurs cafés d'Afrique de l'Est — à découvrir absolument." },
+];
+
+// ============ Programmes TV qualité — ce soir ============
+const TV_TONIGHT = [
+  { channel: "Arte",          slot: "20h55", title: "Cinéma d'auteur ou documentaire géopolitique", note: "La référence culture en Europe — toujours un grand sujet à 20h55." },
+  { channel: "France 5",      slot: "20h55", title: "C dans l'air · La grande librairie · Documentaires",       note: "Le savoir au quotidien — débats de fond et lectures." },
+  { channel: "France Culture", slot: "21h00", title: "Toute une vie · LSD, la série documentaire (radio)",       note: "À écouter en fond — la radio de la pensée." },
+  { channel: "Mezzo",         slot: "21h00", title: "Concerts classiques, opéras et jazz",                       note: "Pour une soirée musique exigeante — du Bach au jazz contemporain." },
+  { channel: "LCP / Public Sénat", slot: "20h30", title: "Débats parlementaires & docs politiques",              note: "Comprendre la fabrique de la loi — sans bruit ni cirque." },
 ];
 
 // 3 actualités positives du jour (curaté maison, à actualiser)
@@ -214,7 +237,7 @@ const GOOD_NEWS_OF_THE_DAY = [
 ];
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review" | "tv";
 interface Scene {
   type: SceneType;
   duration: number;
@@ -223,25 +246,43 @@ interface Scene {
   newsOffset?: number;
   productOffset?: number;
 }
+
+// Utilitaire : ordre aléatoire stable pour cette session/page
+const shuffled = <T,>(arr: T[]): T[] => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
+// Index aléatoires d'anecdotes café (renouvelés à chaque rafraîchissement)
+const ANECDOTE_ORDER = shuffled(COFFEE_ANECDOTES.map((_, i) => i));
+const NEWS_OFFSETS = shuffled(GOOD_NEWS_OF_THE_DAY.map((_, i) => i)).slice(0, 3);
+
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 17000, productOffset: 0 },
-  { type: "goodnews", duration: 18000, newsOffset: 0 },
-  { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
+  { type: "goodnews", duration: 18000, newsOffset: NEWS_OFFSETS[0] ?? 0 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[0] ?? 0 },
   { type: "vin", duration: 13000 },
+  { type: "tv", duration: 18000 },
   { type: "instagram", duration: 30000, reelIndex: 1 },
   { type: "review", duration: 38000 },
   { type: "produits", duration: 17000, productOffset: 3 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[1] ?? 1 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
-  { type: "goodnews", duration: 18000, newsOffset: 3 },
+  { type: "goodnews", duration: 18000, newsOffset: NEWS_OFFSETS[1] ?? 3 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[2] ?? 2 },
   { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 2 },
   { type: "produits", duration: 17000, productOffset: 6 },
-  { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[3] ?? 3 },
   { type: "épicerie", duration: 13000 },
   { type: "chatperche", duration: 13000 },
 ];
@@ -930,8 +971,67 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
       return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
     case "review":
       return <ReviewScene />;
+    case "tv":
+      return <TvTonightScene />;
   }
 };
+
+// ============ Ce soir à la TV — recommandations qualité ============
+const TvTonightScene = () => (
+  <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #1A1410 0%, #2E2419 60%, #0E0805 100%)" }}>
+    <div
+      className="pointer-events-none absolute"
+      style={{ top: "-15%", left: "-10%", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 65%)" }}
+    />
+    <div className="relative">
+      <div className="flex items-center gap-5">
+        <div style={{ fontSize: 54 }}>📺</div>
+        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          Ce soir à la télé · Notre sélection
+        </div>
+      </div>
+      <h2 className="mt-8 font-serif-display leading-[1]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
+        <span className="font-semibold">Cinq chaînes</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour bien finir la journée.</span>
+      </h2>
+      <p className="mt-6 max-w-[1200px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
+        Loin du bruit, voici ce qui vaut la peine d'être regardé — culture, débats, musique, idées.
+      </p>
+
+      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 460 }}>
+        {TV_TONIGHT.map((p, i) => (
+          <div
+            key={p.channel}
+            className="flex flex-col rounded-sm p-7"
+            style={{
+              backgroundColor: "rgba(242,237,228,0.06)",
+              border: "1px solid rgba(184,150,90,0.25)",
+              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
+            }}
+          >
+            <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
+              {p.slot}
+            </div>
+            <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 38, fontWeight: 600, color: "hsl(var(--linen))" }}>
+              {p.channel}
+            </div>
+            <div className="mt-5 font-serif-display" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.88)" }}>
+              {p.title}
+            </div>
+            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(184,150,90,0.75)", lineHeight: 1.3 }}>
+              {p.note}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
+        Maison Maitre · Le bon goût, jusqu'au canapé
+      </div>
+    </div>
+  </div>
+);
 
 // ============ Center panel ============
 
