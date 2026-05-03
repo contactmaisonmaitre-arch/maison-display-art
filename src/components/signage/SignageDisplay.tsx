@@ -478,10 +478,12 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
   const [loaded, setLoaded] = useState<boolean>(false);
   const [videoFailed, setVideoFailed] = useState<boolean>(false);
+  const [fallbackSrc, setFallbackSrc] = useState<string>(`${REELS_PATH}/${reelId}.webp`);
 
   useEffect(() => {
     setLoaded(false);
     setVideoFailed(false);
+    setFallbackSrc(`${REELS_PATH}/${reelId}.webp`);
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
@@ -543,9 +545,10 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             {/* Poster image affichée tant que la vidéo n'est pas prête */}
             {(!loaded || videoFailed) && (
               <img
-                src={videoFailed ? `${REELS_PATH}/${reelId}.webp` : `${REELS_PATH}/${reelId}.jpg`}
+                src={videoFailed ? fallbackSrc : `${REELS_PATH}/${reelId}.jpg`}
                 alt=""
                 className="absolute inset-0 h-full w-full"
+                onError={() => setFallbackSrc(`${REELS_PATH}/${reelId}.gif`)}
                 style={{ objectFit: "cover" }}
               />
             )}
