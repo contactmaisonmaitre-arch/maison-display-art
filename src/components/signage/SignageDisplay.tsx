@@ -708,7 +708,7 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
   }, [index]);
 
   return (
-    <main className="relative flex-1 overflow-hidden" style={{ animation: "mm-fade-in 1.2s ease-out both" }}>
+    <main className="relative h-full w-full overflow-hidden" style={{ animation: "mm-fade-in 1.2s ease-out both" }}>
       {SCENES.map((scene, i) => (
         <div
           key={i}
@@ -736,11 +736,8 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
         ))}
       </div>
 
-      {/* Bottom ticker belt */}
-      <BottomTicker />
-
-      {/* Progress bar above ticker */}
-      <div className="absolute left-0 right-0 z-20" style={{ bottom: 100, height: 2, backgroundColor: "rgba(0,0,0,0.08)" }}>
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 4, backgroundColor: "rgba(0,0,0,0.08)" }}>
         <div
           key={progressKey}
           className="h-full origin-left"
@@ -753,6 +750,43 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
     </main>
   );
 };
+
+const FixedTopBar = ({ now }: { now: Date }) => (
+  <div
+    className="absolute left-0 right-0 top-0 z-30 flex items-center justify-between px-16"
+    style={{ height: 118, backgroundColor: "rgba(242,237,228,0.94)", borderBottom: "1px solid rgba(46,36,25,0.14)" }}
+  >
+    <div className="flex items-center gap-8">
+      <div>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+          Boutique · Dole, Jura
+        </div>
+        <div className="font-serif-display leading-none" style={{ fontSize: 46, color: "hsl(var(--espresso))" }}>
+          <span className="font-semibold">Maison </span>
+          <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>Maitre</span>
+        </div>
+      </div>
+      <div style={{ width: 1, height: 64, backgroundColor: "rgba(46,36,25,0.16)" }} />
+      <div>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
+          Fête du jour
+        </div>
+        <div className="font-serif-display italic leading-none" style={{ fontSize: 38, color: "hsl(var(--espresso))" }}>
+          {getSaintDuJour(now)}
+        </div>
+      </div>
+    </div>
+    <div className="text-right">
+      <div className="font-serif-display leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+        {pad(now.getHours())}:{pad(now.getMinutes())}
+        <span style={{ fontSize: 42, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+      </div>
+      <div className="mt-2 font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.26em", color: "hsl(var(--gold))" }}>
+        {formatDateLong(now)}
+      </div>
+    </div>
+  </div>
+);
 
 // ============ Bottom ticker ============
 
