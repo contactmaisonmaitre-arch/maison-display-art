@@ -430,8 +430,9 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — un reel par scène
+// Reels Instagram @maison_maitre — versions réencodées 16:9 plus fiables pour les navigateurs TV
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
+const REELS_PATH = "/reels-tv";
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
@@ -440,13 +441,19 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const [ready, setReady] = useState(false);
   const [failed, setFailed] = useState(false);
 
-  // Force play attempts (TV browsers can ignore autoplay otherwise)
+  // Force play attempts (TV browsers can ignore autoplay otherwise) and stop hidden videos.
   useEffect(() => {
-    if (!active) return;
+    const v = videoRef.current;
+    if (!active) {
+      v?.pause();
+      setReady(false);
+      setFailed(false);
+      return;
+    }
+
+    if (!v) return;
     setReady(false);
     setFailed(false);
-    const v = videoRef.current;
-    if (!v) return;
     let cancelled = false;
     const tryPlay = () => {
       if (cancelled || !v) return;
@@ -469,7 +476,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       style={{
         backgroundColor: "hsl(var(--ink))",
         // Poster as background so we never see pure black, even if the video stalls
-        backgroundImage: `url(/reels/${reelId}.jpg)`,
+        backgroundImage: `url(${REELS_PATH}/${reelId}.jpg)`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -493,31 +500,30 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       </div>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <video
-          ref={videoRef}
-          key={reelId}
-          src={`/reels/${reelId}.mp4`}
-          poster={`/reels/${reelId}.jpg`}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onCanPlay={() => setReady(true)}
-          onPlaying={() => setReady(true)}
-          onError={() => setFailed(true)}
-          style={{
-            height: "96%",
-            maxHeight: "820px",
-            width: "auto",
-            maxWidth: "100%",
-            objectFit: "contain",
-            borderRadius: 10,
-            boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
-            backgroundColor: "#000",
-            // Fallback poster shown by the <video> element while loading
-          }}
-        />
+        {active && (
+          <video
+            ref={videoRef}
+            key={reelId}
+            src={`${REELS_PATH}/${reelId}.mp4`}
+            poster={`${REELS_PATH}/${reelId}.jpg`}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            onCanPlay={() => setReady(true)}
+            onPlaying={() => setReady(true)}
+            onError={() => setFailed(true)}
+            style={{
+              height: "96%",
+              width: "100%",
+              objectFit: "contain",
+              borderRadius: 10,
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
+              backgroundColor: "transparent",
+            }}
+          />
+        )}
         {/* Loading hint (only briefly) */}
         {!ready && !failed && (
           <div
