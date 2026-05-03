@@ -535,17 +535,27 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             <video
               ref={setVidEl}
               key={reelId}
-              src={`${REELS_PATH}/${reelId}.mp4`}
+              src={videoSrc || undefined}
+              poster={`${REELS_PATH}/${reelId}.jpg`}
               autoPlay
               loop
               muted
               playsInline
               preload="auto"
+              onLoadedData={() => setLoaded(true)}
+              onCanPlay={() => setLoaded(true)}
               className="h-full w-full"
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
             />
-          </div>
-        </div>
+            {/* Poster image affichée tant que la vidéo n'est pas prête */}
+            {!loaded && (
+              <img
+                src={`${REELS_PATH}/${reelId}.jpg`}
+                alt=""
+                className="absolute inset-0 h-full w-full"
+                style={{ objectFit: "cover" }}
+              />
+            )}
 
         {/* Branding à droite */}
         <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
