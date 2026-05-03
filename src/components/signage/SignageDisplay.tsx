@@ -340,23 +340,23 @@ const TextSlide = ({
   <div className="absolute inset-0" style={{ background: bg }}>
     <div
       className="absolute inset-0"
-      style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(229,221,208,0.05) 35%, rgba(229,221,208,0.97) 100%)" }}
+      style={{ background: "linear-gradient(90deg, rgba(26,22,15,0.12) 0%, rgba(242,237,228,0.92) 58%, rgba(242,237,228,0.98) 100%)" }}
     />
     <div
-      className="relative flex h-full flex-col justify-end px-20 pb-32"
-      style={{ animation: "mm-slide-up 1.2s ease-out 0.4s both" }}
+      className="relative flex h-full flex-col justify-center px-28 pb-24 pt-40"
+      style={{ animation: "mm-slide-up 1.2s ease-out 0.25s both" }}
     >
-      <div className="flex items-center gap-4">
-        <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+      <div className="flex items-center gap-6">
+        <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
           {tag}
         </div>
       </div>
-      <h2 className="mt-6 font-serif-display leading-[1.05]" style={{ fontSize: 68, color: "hsl(var(--ink))" }}>
+      <h2 className="mt-10 max-w-[1380px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
         <span className="font-semibold">{titleStart} </span>
         <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>{titleItalic}</span>
       </h2>
-      <p className="mt-6 max-w-[820px] font-serif-display italic" style={{ fontSize: 19, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+      <p className="mt-10 max-w-[1180px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
         {body}
       </p>
     </div>
@@ -364,23 +364,30 @@ const TextSlide = ({
 );
 
 const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
-  if (!weather) return <div className="absolute inset-0" style={{ backgroundColor: "hsl(var(--cream))" }} />;
+  if (!weather) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>Météo · Dole, Jura</div>
+        <div className="mt-8 font-serif-display italic" style={{ fontSize: 86, color: "hsl(var(--espresso))" }}>Chargement de la météo…</div>
+      </div>
+    );
+  }
   const w = weather.current;
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
-      <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.42em", color: "hsl(var(--mink))" }}>
+    <div className="absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
+      <div className="font-sans-ui uppercase" style={{ fontSize: 22, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
         Météo · Dole, Jura
       </div>
-      <div className="mt-6 flex items-center gap-8">
-        <div style={{ fontSize: 110 }}>{wmo(w.weather_code).emoji}</div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 152, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+      <div className="mt-10 flex items-center gap-12">
+        <div style={{ fontSize: 176 }}>{wmo(w.weather_code).emoji}</div>
+        <div className="font-serif-display leading-none" style={{ fontSize: 260, fontWeight: 300, color: "hsl(var(--espresso))" }}>
           {Math.round(w.temperature_2m)}°
         </div>
       </div>
-      <div className="mt-2 font-serif-display italic" style={{ fontSize: 30, color: "hsl(var(--taupe))" }}>
+      <div className="mt-2 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
         {wmo(w.weather_code).label}
       </div>
-      <div className="mt-10 flex gap-16">
+      <div className="mt-14 flex gap-24">
         {[
           { l: "Humidité", v: `${Math.round(w.relative_humidity_2m)}%` },
           { l: "Vent km/h", v: `${Math.round(w.wind_speed_10m)}` },
@@ -388,26 +395,26 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
           { l: "Indice UV", v: `${Math.round(w.uv_index ?? 0)}` },
         ].map((s) => (
           <div key={s.l} className="text-center">
-            <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
               {s.l}
             </div>
-            <div className="mt-1 font-serif-display" style={{ fontSize: 36, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+            <div className="mt-2 font-serif-display" style={{ fontSize: 58, fontWeight: 300, color: "hsl(var(--espresso))" }}>
               {s.v}
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-12 flex gap-10">
+      <div className="mt-16 flex gap-16">
         {weather.daily.time.slice(1, 5).map((iso, i) => {
           const d = new Date(iso);
           const code = weather.daily.weather_code[i + 1];
           return (
             <div key={iso} className="flex flex-col items-center">
-              <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.24em", color: "hsl(var(--mink))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.24em", color: "hsl(var(--mink))" }}>
                 {DAYS_FR_SHORT[d.getDay()]}
               </div>
-              <div className="my-2" style={{ fontSize: 32 }}>{wmo(code).emoji}</div>
-              <div className="font-serif-display" style={{ fontSize: 18, color: "hsl(var(--espresso))" }}>
+              <div className="my-3" style={{ fontSize: 48 }}>{wmo(code).emoji}</div>
+              <div className="font-serif-display" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
                 {Math.round(weather.daily.temperature_2m_max[i + 1])}°
                 <span style={{ color: "hsl(var(--mink))" }}> {Math.round(weather.daily.temperature_2m_min[i + 1])}°</span>
               </div>
