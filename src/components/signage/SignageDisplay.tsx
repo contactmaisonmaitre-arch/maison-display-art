@@ -1,8 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import productCafeEthiopie from "@/assets/product-cafe-ethiopie.jpg";
-import productTheTsars from "@/assets/product-the-tsars.jpg";
-import productTheChat from "@/assets/product-the-chat.jpg";
-import productInfusionVergers from "@/assets/product-infusion-vergers.jpg";
 
 // ============ Types & constants ============
 
@@ -137,12 +133,17 @@ const TICKER = [
   "Boutique en ligne · maisonmaitre.com",
 ];
 
-// Produits coup de cœur de maisonmaitre.com — uniquement ceux avec photo
+// Produits réels — extraits de maisonmaitre.com (images depuis le CDN Shopify, copiées dans /public/products)
 const PRODUCTS_TO_TRY = [
-  { cat: "Café", name: "Éthiopie Yirgacheffe", note: "Jasmin · Pêche · Miel", img: productCafeEthiopie },
-  { cat: "Thé noir", name: "Banquet des Tsars", note: "Bergamote & agrumes", img: productTheTsars },
-  { cat: "Thé vert", name: "Le Chat Heureux", note: "Notre incontournable", img: productTheChat },
-  { cat: "Infusion", name: "Délice des Vergers", note: "Framboise · Hibiscus", img: productInfusionVergers },
+  { cat: "Café d'Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 €",        img: "/products/cafe-ethiopie.png" },
+  { cat: "Café de Colombie", name: "Huila Bourbon Rose",       note: "Cerise noire · Framboise · Cacao · 16 €",img: "/products/cafe-colombie-bourbon.png" },
+  { cat: "Café de Colombie", name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 €",img: "/products/cafe-colombie-castillo.gif" },
+  { cat: "Thé noir",         name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 €",          img: "/products/the-tsars.png" },
+  { cat: "Thé vert",         name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 €",          img: "/products/the-chat.png" },
+  { cat: "Infusion",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 93,50 €/kg",      img: "/products/infusion-vergers.png" },
+  { cat: "Thé noir floral",  name: "Eden Floral",              note: "Rose & Pivoine · 100g",                  img: "/products/eden-floral.png" },
+  { cat: "Thé caramel",      name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 €",          img: "/products/douceur-salee.png" },
+  { cat: "Boutique",         name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",           img: "/products/mug-emaille.png" },
 ];
 
 
@@ -217,20 +218,23 @@ interface Scene {
   reelIndex?: number;
   anecdoteIndex?: number;
   newsOffset?: number;
+  productOffset?: number;
 }
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "instagram", duration: 24000, reelIndex: 0 },
+  { type: "produits", duration: 17000, productOffset: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
-  { type: "produits", duration: 17000 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
   { type: "vin", duration: 13000 },
   { type: "instagram", duration: 24000, reelIndex: 1 },
+  { type: "produits", duration: 17000, productOffset: 3 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
   { type: "instagram", duration: 24000, reelIndex: 2 },
+  { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
   { type: "chatperche", duration: 13000 },
@@ -678,7 +682,10 @@ const TeaScene = ({ now }: { now: Date }) => {
   );
 };
 
-const ProductsScene = () => (
+const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
+  const total = PRODUCTS_TO_TRY.length;
+  const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
+  return (
   <div className="absolute inset-0 px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
     <div className="flex items-center gap-6">
       <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
@@ -690,33 +697,32 @@ const ProductsScene = () => (
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-10 grid grid-cols-4 gap-7" style={{ height: 560 }}>
-      {PRODUCTS_TO_TRY.map((p) => (
+    <div className="mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
+      {items.map((p) => (
         <div
           key={p.name}
           className="flex flex-col overflow-hidden rounded-sm"
-          style={{ backgroundColor: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.12)" }}
+          style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(46,36,25,0.12)", boxShadow: "0 14px 40px rgba(46,36,25,0.10)" }}
         >
-          <div className="relative w-full overflow-hidden" style={{ height: 330, backgroundColor: "rgba(46,36,25,0.08)" }}>
+          <div className="relative w-full overflow-hidden" style={{ height: 460, backgroundColor: "#FAF6EE" }}>
             <img
               src={p.img}
               alt={p.name}
               loading="lazy"
-              width={768}
-              height={768}
-              className="h-full w-full object-cover"
+              className="h-full w-full"
+              style={{ objectFit: "contain", padding: 18 }}
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-6">
+          <div className="flex flex-1 flex-col justify-between p-7">
             <div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
-              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 34, color: "hsl(var(--espresso))" }}>
+              <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 42, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
             </div>
-            <div className="mt-3 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
+            <div className="mt-4 font-serif-display italic" style={{ fontSize: 28, color: "hsl(var(--taupe))" }}>
               {p.note}
             </div>
           </div>
@@ -727,7 +733,8 @@ const ProductsScene = () => (
       Commande en ligne · maisonmaitre.com
     </div>
   </div>
-);
+  );
+};
 
 const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
@@ -738,7 +745,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "goodnews":
       return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
-      return <ProductsScene />;
+      return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
       return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
     case "weather":
