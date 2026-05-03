@@ -74,7 +74,7 @@ const safeSetStorage = (key: string, value: string) => {
 const DAILY = [
   { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
   { tag: "Thé", name: "Darjeeling First Flush · Thé des Maîtres 2025" },
-  { tag: "Vin", name: "Kundrat & Fils — Mâcon-Villages nature" },
+  { tag: "Vin", name: "Domaine Marcel Lapierre — Morgon nature" },
   { tag: "Four", name: "Brownie noisette & fleur de sel" },
 ];
 
@@ -128,8 +128,10 @@ const TICKER = [
   "Thé des Maîtres · Darjeeling First Flush — récolte 2025",
   "Matcha · Kumiko Matcha — cérémonie & barista",
   "Four · Brownie noisette & fleur de sel — fait maison",
-  "Vin · Domaine des Carlines — Côtes du Jura, Savagnin ouillé",
-  "Vin · Kundrat & Fils — Mâcon-Villages nature",
+  "Vin · Marcel Lapierre — Morgon, gamay nature",
+  "Vin · Jean Foillard — Beaujolais, Morgon Côte du Py",
+  "Vin · Domaine Overnoy-Houillon — Pupillin, Jura",
+  "Vin · Yvon Métras — Fleurie L'Ultime",
   "Boutique en ligne · maisonmaitre.com",
 ];
 
@@ -223,17 +225,17 @@ interface Scene {
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
-  { type: "instagram", duration: 24000, reelIndex: 0 },
+  { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 17000, productOffset: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
   { type: "vin", duration: 13000 },
-  { type: "instagram", duration: 24000, reelIndex: 1 },
+  { type: "instagram", duration: 30000, reelIndex: 1 },
   { type: "produits", duration: 17000, productOffset: 3 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
-  { type: "instagram", duration: 24000, reelIndex: 2 },
+  { type: "instagram", duration: 30000, reelIndex: 2 },
   { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
@@ -430,85 +432,106 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — séquences JPG pour éviter les bugs de décodage vidéo des TV.
+// Reels Instagram @maison_maitre — GIF animés (compatibles toutes TVs et mobiles, pas de décodage vidéo).
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
-const REEL_FRAME_COUNTS: Record<string, number> = {
-  DXtn06bIgtd: 1494,
-  DXjAgNRirlr: 173,
-  DXPVGNDioOU: 1282,
-};
-const REEL_FPS = 12;
-
-const reelFrame = (reelId: string, frame: number) => {
-  const count = REEL_FRAME_COUNTS[reelId] ?? 1;
-  const n = ((frame % count) + 1).toString().padStart(3, "0");
-  return `${REELS_PATH}/frames/${reelId}-${n}.jpg`;
-};
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const [frame, setFrame] = useState(0);
-
-  // Précharge agressive des prochaines images pour éviter les saccades sur TV
+  // Force le rechargement du GIF (donc replay depuis le début) à chaque activation
+  const [nonce, setNonce] = useState(0);
   useEffect(() => {
-    if (!active) return;
-    const count = REEL_FRAME_COUNTS[reelId] ?? 1;
-    const ahead = Math.min(count, 36);
-    for (let i = 0; i < ahead; i++) {
-      const img = new Image();
-      img.src = reelFrame(reelId, frame + i);
-    }
-  }, [active, reelId, frame]);
-
-  useEffect(() => {
-    if (!active) {
-      setFrame(0);
-      return;
-    }
-    setFrame(0);
-    const t = window.setInterval(() => setFrame((f) => f + 1), Math.round(1000 / REEL_FPS));
-    return () => window.clearInterval(t);
+    if (active) setNonce((n) => n + 1);
   }, [active, reelId]);
+
+  const gifSrc = `${REELS_PATH}/${reelId}.gif?n=${nonce}`;
 
   return (
     <div
-      className="absolute inset-0 flex items-center justify-center px-28 pb-24 pt-36"
-      style={{
-        backgroundColor: "hsl(var(--ink))",
-        // Poster as background so we never see pure black, even if the video stalls
-        backgroundImage: `url(${REELS_PATH}/${reelId}.jpg)`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className="absolute inset-0"
+      style={{ background: "linear-gradient(135deg, #1A0F08 0%, #0A0604 60%, #050302 100%)" }}
     >
-      {/* dark veil over background poster */}
-      <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,8,6,0.78)", backdropFilter: "blur(14px)" }} />
+      {/* halo doré décoratif */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 65%)",
+        }}
+      />
 
-      <div className="absolute left-20 top-36 z-10 flex items-center gap-5">
-        <div
-          className="flex items-center justify-center rounded-full font-serif-display text-linen"
-          style={{ width: 86, height: 86, fontSize: 42, background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--wine)))" }}
-        >
-          M
-        </div>
-        <div>
-          <div className="font-serif-display" style={{ fontSize: 46, color: "hsl(var(--linen))" }}>@maison_maitre</div>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
-            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+      <div className="relative grid h-full grid-cols-2 gap-12 px-20 pb-24 pt-32">
+        {/* Colonne gauche : le Reel */}
+        <div className="flex items-center justify-center">
+          <div
+            className="relative overflow-hidden"
+            style={{
+              aspectRatio: "9 / 16",
+              height: "92%",
+              borderRadius: 18,
+              boxShadow: "0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(184,150,90,0.25)",
+              background: "#000",
+            }}
+          >
+            <img
+              key={`${reelId}-${nonce}`}
+              src={gifSrc}
+              alt="Publication Instagram Maison Maître"
+              className="h-full w-full object-cover"
+            />
           </div>
         </div>
-      </div>
 
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
-        <img
-          key={`${reelId}-${frame}`}
-          src={reelFrame(reelId, frame)}
-          alt="Publication Instagram Maison Maître"
-          className="h-[96%] w-full object-contain"
-          style={{ borderRadius: 10, boxShadow: "0 30px 80px rgba(0,0,0,0.5)" }}
-        />
+        {/* Colonne droite : invitation à suivre */}
+        <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
+          <div className="flex items-center gap-4">
+            <div style={{ width: 70, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+            <div className="font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+              Suivez-nous
+            </div>
+          </div>
+
+          <h2
+            className="font-serif-display"
+            style={{ fontSize: 96, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 28, letterSpacing: "0.02em" }}
+          >
+            MAISON
+            <br />
+            <em style={{ color: "hsl(var(--gold-lt))" }}>MAÎTRE</em>
+          </h2>
+
+          <div
+            className="font-serif-display"
+            style={{ fontSize: 56, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.01em" }}
+          >
+            @maison_maitre
+          </div>
+
+          <p
+            className="font-sans-ui"
+            style={{ fontSize: 26, lineHeight: 1.45, color: "hsl(var(--linen) / 0.82)", marginTop: 28, maxWidth: 640 }}
+          >
+            Retrouvez nos cafés d'exception, nos thés rares et nos vignerons
+            nature au quotidien sur Instagram.
+          </p>
+
+          <div className="mt-12 flex items-center gap-4">
+            <div
+              className="flex items-center justify-center rounded-2xl"
+              style={{
+                width: 78, height: 78,
+                background: "linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)",
+                fontSize: 38,
+              }}
+            >
+              📷
+            </div>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
+              Instagram · Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -721,7 +744,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "produits":
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
-      return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
+      return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés — Marcel Lapierre, Jean Foillard, Overnoy-Houillon, Yvon Métras." />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":
