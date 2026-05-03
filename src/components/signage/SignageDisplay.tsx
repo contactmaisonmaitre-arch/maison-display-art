@@ -745,7 +745,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "goodnews":
       return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
-      return <ProductsScene />;
+      return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
       return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
     case "weather":
