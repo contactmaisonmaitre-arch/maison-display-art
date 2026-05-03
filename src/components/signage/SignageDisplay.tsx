@@ -591,7 +591,7 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
           {a.body}
         </p>
         <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 17, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
-          Maison Maître · Le café autrement
+          Maison Maitre · Le café autrement
         </div>
       </div>
     </div>
@@ -667,7 +667,7 @@ const TeaScene = ({ now }: { now: Date }) => {
         <div className="flex items-center gap-6">
           <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
           <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-            Salon de Thé · Thés des Maîtres
+            Salon de Thé · Thés des Maitre
           </div>
         </div>
         <h2 className="mt-10 max-w-[1320px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
@@ -755,7 +755,7 @@ const FIVE_STAR_REVIEWS: { name: string; text: string }[] = [
   { name: "Camille D.", text: "Une adresse rare. Café d'exception, accueil chaleureux, sélection de vins natures pointue. On revient à coup sûr." },
   { name: "Thomas L.", text: "Le meilleur café de la ville, sans hésiter. L'équipe est passionnée et de bon conseil. Une vraie maison." },
   { name: "Sophie M.", text: "Un lieu magnifique, des produits d'épicerie fine triés sur le volet. Mon arrêt préféré du quartier." },
-  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maître mérite ses 5 étoiles." },
+  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maitre mérite ses 5 étoiles." },
   { name: "Élise B.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
 ];
 
