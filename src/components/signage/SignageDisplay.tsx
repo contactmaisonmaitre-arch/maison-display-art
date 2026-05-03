@@ -583,31 +583,31 @@ const TeaScene = ({ now }: { now: Date }) => {
   const saint = getSaintDuJour(now);
   return (
     <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #B0C4A0, #507040, #182A10)" }}>
-      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(229,221,208,0.05) 35%, rgba(229,221,208,0.97) 100%)" }} />
-      <div className="relative flex h-full flex-col justify-end px-20 pb-32" style={{ animation: "mm-slide-up 1.2s ease-out 0.4s both" }}>
-        <div className="flex items-center gap-4">
-          <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-          <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+      <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(24,42,16,0.04) 0%, rgba(242,237,228,0.9) 58%, rgba(242,237,228,0.98) 100%)" }} />
+      <div className="relative flex h-full flex-col justify-center px-28 pb-24 pt-40" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
+        <div className="flex items-center gap-6">
+          <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
             Salon de Thé · Thés des Maîtres
           </div>
         </div>
-        <h2 className="mt-6 font-serif-display leading-[1.05]" style={{ fontSize: 72, color: "hsl(var(--ink))" }}>
+        <h2 className="mt-10 max-w-[1320px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
           <span className="font-semibold">Notre marque,</span>{" "}
           <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>nos cuvées.</span>
         </h2>
-        <p className="mt-6 max-w-[820px] font-serif-display italic" style={{ fontSize: 22, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+        <p className="mt-10 max-w-[1120px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
           Une collection exclusive de thés d'exception. En boutique et sur maisonmaitre.com.
         </p>
         <div
-          className="mt-8 inline-flex items-center gap-5 rounded-sm px-7 py-5 self-start"
+          className="mt-12 inline-flex items-center gap-6 rounded-sm px-9 py-7 self-start"
           style={{ backgroundColor: "rgba(46,36,25,0.92)", color: "hsl(var(--linen))" }}
         >
-          <div style={{ fontSize: 36 }}>✦</div>
+          <div style={{ fontSize: 48 }}>✦</div>
           <div>
-            <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
               Fête du jour
             </div>
-            <div className="mt-1 font-serif-display italic" style={{ fontSize: 32, fontWeight: 300 }}>
+            <div className="mt-2 font-serif-display italic" style={{ fontSize: 48, fontWeight: 300 }}>
               Bonne fête {saint}
             </div>
           </div>
@@ -618,25 +618,25 @@ const TeaScene = ({ now }: { now: Date }) => {
 };
 
 const ProductsScene = () => (
-  <div className="absolute inset-0 px-16 py-14" style={{ backgroundColor: "hsl(var(--cream))" }}>
-    <div className="flex items-center gap-4">
-      <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-      <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+  <div className="absolute inset-0 px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
+    <div className="flex items-center gap-6">
+      <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+      <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
         À découvrir · maisonmaitre.com
       </div>
     </div>
-    <h2 className="mt-4 font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--ink))" }}>
+    <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 94, color: "hsl(var(--ink))" }}>
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-8 grid grid-cols-4 gap-6" style={{ height: 520 }}>
+    <div className="mt-10 grid grid-cols-4 gap-7" style={{ height: 560 }}>
       {PRODUCTS_TO_TRY.map((p) => (
         <div
           key={p.name}
           className="flex flex-col overflow-hidden rounded-sm"
           style={{ backgroundColor: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.12)" }}
         >
-          <div className="relative w-full overflow-hidden" style={{ height: 300, backgroundColor: "rgba(46,36,25,0.08)" }}>
+          <div className="relative w-full overflow-hidden" style={{ height: 330, backgroundColor: "rgba(46,36,25,0.08)" }}>
             <img
               src={p.img}
               alt={p.name}
@@ -646,23 +646,23 @@ const ProductsScene = () => (
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-5">
+          <div className="flex flex-1 flex-col justify-between p-6">
             <div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
-              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 22, color: "hsl(var(--espresso))" }}>
+              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 34, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
             </div>
-            <div className="mt-3 font-serif-display italic" style={{ fontSize: 16, color: "hsl(var(--taupe))" }}>
+            <div className="mt-3 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
               {p.note}
             </div>
           </div>
         </div>
       ))}
     </div>
-    <div className="mt-6 font-sans-ui uppercase text-center" style={{ fontSize: 12, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+    <div className="mt-7 font-sans-ui uppercase text-center" style={{ fontSize: 17, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
       Commande en ligne · maisonmaitre.com
     </div>
   </div>
