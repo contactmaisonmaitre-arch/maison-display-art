@@ -74,7 +74,7 @@ const safeSetStorage = (key: string, value: string) => {
 const DAILY = [
   { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
   { tag: "Thé", name: "Darjeeling First Flush · Thé des Maîtres 2025" },
-  { tag: "Vin", name: "Kundrat & Fils — Mâcon-Villages nature" },
+  { tag: "Vin", name: "Domaine Marcel Lapierre — Morgon nature" },
   { tag: "Four", name: "Brownie noisette & fleur de sel" },
 ];
 
@@ -128,8 +128,10 @@ const TICKER = [
   "Thé des Maîtres · Darjeeling First Flush — récolte 2025",
   "Matcha · Kumiko Matcha — cérémonie & barista",
   "Four · Brownie noisette & fleur de sel — fait maison",
-  "Vin · Domaine des Carlines — Côtes du Jura, Savagnin ouillé",
-  "Vin · Kundrat & Fils — Mâcon-Villages nature",
+  "Vin · Marcel Lapierre — Morgon, gamay nature",
+  "Vin · Jean Foillard — Beaujolais, Morgon Côte du Py",
+  "Vin · Domaine Overnoy-Houillon — Pupillin, Jura",
+  "Vin · Yvon Métras — Fleurie L'Ultime",
   "Boutique en ligne · maisonmaitre.com",
 ];
 
@@ -721,7 +723,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "produits":
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
-      return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés, biodynamie — René Bouvier, Domaine des Carlines, Kundrat & Fils." />;
+      return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés — Marcel Lapierre, Jean Foillard, Overnoy-Houillon, Yvon Métras." />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":
