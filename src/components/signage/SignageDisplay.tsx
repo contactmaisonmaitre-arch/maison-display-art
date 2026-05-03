@@ -397,24 +397,25 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
         </div>
       </div>
 
-      {/* Colonne droite : reel Instagram */}
+      {/* Colonne droite : reel vidéo */}
       <div className="relative flex flex-1 items-center justify-center" style={{ backgroundColor: "#1A160F" }}>
         {active && (
-          <iframe
+          <video
             key={reelId}
-            title={`Reel ${reelId}`}
-            src={src}
-            className="border-0"
+            src={`/reels/${reelId}.mp4`}
+            autoPlay
+            muted
+            loop
+            playsInline
             style={{
-              width: 540,
-              height: 880,
-              backgroundColor: "#1A160F",
+              height: "100%",
+              maxHeight: "100%",
+              width: "auto",
+              maxWidth: "100%",
+              objectFit: "contain",
               borderRadius: 8,
               boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
             }}
-            allow="autoplay; encrypted-media; fullscreen"
-            scrolling="no"
-            allowTransparency
           />
         )}
       </div>
