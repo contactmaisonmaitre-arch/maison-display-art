@@ -132,25 +132,92 @@ const PRODUCTS_TO_TRY = [
 ];
 
 
+// ============ Anecdotes café (grand format TV) ============
+const COFFEE_ANECDOTES = [
+  { tag: "Le saviez-vous", title: "Une légende éthiopienne", body: "Un berger nommé Kaldi remarqua que ses chèvres dansaient après avoir mangé certaines baies rouges. Il venait, sans le savoir, de découvrir le café." },
+  { tag: "Histoire", title: "Le premier café d'Europe", body: "Ouvert à Venise en 1645, il devint un haut lieu de débats, d'idées et de rencontres. Aujourd'hui encore, le café rassemble." },
+  { tag: "Bach & le café", title: "La Kaffeekantate, 1735", body: "Jean-Sébastien Bach a composé une cantate entière dédiée au café — une déclaration d'amour musicale à la boisson noire." },
+  { tag: "Beethoven", title: "Soixante grains, pas un de plus", body: "Le compositeur comptait précisément 60 grains de café pour préparer chacune de ses tasses. La précision, déjà, faisait l'art." },
+  { tag: "Géographie", title: "La ceinture du café", body: "Le café ne pousse qu'entre les tropiques du Cancer et du Capricorne — une fine bande où l'altitude, la pluie et le soleil s'accordent." },
+  { tag: "Torréfaction", title: "Plus c'est foncé…", body: "Contrairement à l'idée reçue, plus un café est torréfié foncé, moins il contient de caféine. La chaleur en détruit une partie." },
+  { tag: "Espresso", title: "100 grains pour une tasse", body: "Il faut environ cent grains de café pour préparer un espresso parfait — concentration, finesse et 25 secondes d'extraction." },
+  { tag: "Éthiopie", title: "La cérémonie du café", body: "Au pays d'origine, le café se partage en trois services rituels — un moment de paix, de paroles et de transmission qui peut durer des heures." },
+  { tag: "Bien-être", title: "Une boisson amie du cœur", body: "Consommé avec mesure, le café est associé à un risque réduit de maladies cardiovasculaires selon plusieurs études internationales." },
+  { tag: "Geisha", title: "Le café le plus rare du monde", body: "La variété Geisha, cultivée en Éthiopie puis au Panama, peut atteindre 10 000 € le kilo — pour ses notes florales d'exception." },
+];
+
+// 3 actualités positives du jour (curaté maison, à actualiser)
+const GOOD_NEWS_OF_THE_DAY = [
+  {
+    title: "L'ozone se reconstitue plus vite que prévu",
+    body: "Selon l'ONU, la couche d'ozone est en bonne voie de retrouver ses niveaux de 1980 d'ici 2040 — preuve qu'une action mondiale concertée peut fonctionner.",
+    tag: "Planète",
+  },
+  {
+    title: "Le tigre du Bengale repart à la hausse",
+    body: "L'Inde recense aujourd'hui plus de 3 600 tigres sauvages, contre à peine 1 400 il y a quinze ans. Une victoire pour la conservation.",
+    tag: "Biodiversité",
+  },
+  {
+    title: "Les énergies renouvelables battent un record",
+    body: "Pour la première fois, plus de 30 % de l'électricité mondiale provient désormais de sources renouvelables — solaire et éolien en tête.",
+    tag: "Énergie",
+  },
+  {
+    title: "Une avancée majeure contre Alzheimer",
+    body: "De nouveaux traitements ralentissent significativement la progression de la maladie chez les patients diagnostiqués tôt.",
+    tag: "Santé",
+  },
+  {
+    title: "Le loup revient dans les Alpes françaises",
+    body: "Après des décennies d'absence, plus de 1 100 loups parcourent à nouveau les massifs — un signe de reconquête écologique.",
+    tag: "Faune",
+  },
+  {
+    title: "Lecture en hausse chez les jeunes",
+    body: "Selon le CNL, 81 % des 7-19 ans déclarent lire pour le plaisir — un chiffre en progression continue depuis cinq ans.",
+    tag: "Culture",
+  },
+  {
+    title: "Record de dons aux Restos du Cœur",
+    body: "La générosité des Français ne faiblit pas — la collecte annuelle a permis de servir plus de 170 millions de repas l'an dernier.",
+    tag: "Solidarité",
+  },
+  {
+    title: "Le Jura, terre de champions",
+    body: "La région compte un nombre record de domaines viticoles primés cette saison — le Savagnin et le vin jaune brillent à l'international.",
+    tag: "Local",
+  },
+  {
+    title: "La forêt française continue de s'étendre",
+    body: "Avec 17 millions d'hectares, la forêt couvre désormais près d'un tiers du territoire — sa surface a doublé en deux siècles.",
+    tag: "Nature",
+  },
+];
+
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "youtube" | "produits";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews";
 interface Scene {
   type: SceneType;
   duration: number;
   reelIndex?: number;
+  anecdoteIndex?: number;
+  newsOffset?: number;
 }
-// Vidéos YouTube café (changer les IDs si besoin)
-const YOUTUBE_COFFEE_IDS = ["1oB1oDrDkHM", "j6VlPHxnjCo", "BZNUo7orS3k"];
 const SCENES: Scene[] = [
   { type: "café", duration: 10000 },
-  { type: "youtube", duration: 22000 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 0 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
+  { type: "goodnews", duration: 18000, newsOffset: 0 },
   { type: "produits", duration: 14000 },
   { type: "vin", duration: 10000 },
   { type: "instagram", duration: 30000, reelIndex: 1 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 1 },
   { type: "weather", duration: 9000 },
   { type: "thé", duration: 12000 },
   { type: "instagram", duration: 30000, reelIndex: 2 },
+  { type: "goodnews", duration: 18000, newsOffset: 3 },
+  { type: "anecdote", duration: 14000, anecdoteIndex: 2 },
   { type: "épicerie", duration: 10000 },
   { type: "chatperche", duration: 10000 },
 ];
@@ -423,36 +490,105 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   );
 };
 
-const YouTubeScene = ({ active }: { active: boolean }) => {
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {
-    if (active) setIdx((i) => (i + 1) % YOUTUBE_COFFEE_IDS.length);
-  }, [active]);
-  const videoId = YOUTUBE_COFFEE_IDS[idx];
-  const src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}&modestbranding=1&playsinline=1&rel=0&showinfo=0`;
+// ============ Anecdote café (plein écran TV) ============
+const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
+  const a = COFFEE_ANECDOTES[anecdoteIndex % COFFEE_ANECDOTES.length];
   return (
-    <div className="absolute inset-0" style={{ backgroundColor: "#000" }}>
-      {active && (
-        <iframe
-          title="Café — vidéo"
-          src={src}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          style={{ width: "100%", height: "100%", border: 0, pointerEvents: "none" }}
-          allow="autoplay; encrypted-media"
-        />
-      )}
-      <div className="pointer-events-none absolute inset-0" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, transparent 25%, transparent 60%, rgba(0,0,0,0.7) 100%)" }} />
-      <div className="absolute left-16 top-14 flex items-center gap-4">
-        <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-          L'Art du Café · En images
+    <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #3A2418 0%, #1F1209 60%, #0E0805 100%)" }}>
+      {/* halo doré */}
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          top: "-20%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)",
+        }}
+      />
+      <div
+        className="relative flex h-full flex-col justify-center px-24"
+        style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}
+      >
+        <div className="flex items-center gap-5">
+          <div style={{ fontSize: 56 }}>☕</div>
+          <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+            {a.tag} · L'art du café
+          </div>
+        </div>
+        <h2
+          className="mt-10 font-serif-display leading-[1.02]"
+          style={{ fontSize: 110, fontWeight: 600, color: "hsl(var(--linen))" }}
+        >
+          {a.title}
+        </h2>
+        <p
+          className="mt-10 max-w-[1300px] font-serif-display italic"
+          style={{ fontSize: 38, lineHeight: 1.4, color: "rgba(242,237,228,0.78)" }}
+        >
+          {a.body}
+        </p>
+        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.42em", color: "rgba(184,150,90,0.6)" }}>
+          Maison Maître · Le café autrement
         </div>
       </div>
-      <div className="absolute bottom-32 left-16 right-16">
-        <h2 className="font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--linen))" }}>
-          <span className="font-semibold">Le geste,</span>{" "}
-          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>la matière, l'instant.</span>
-        </h2>
+    </div>
+  );
+};
+
+// ============ 3 actualités positives du jour ============
+const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
+  const items = [0, 1, 2].map(
+    (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + i) % GOOD_NEWS_OF_THE_DAY.length]
+  );
+  return (
+    <div className="absolute inset-0 px-20 py-16" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
+      <div className="flex items-center gap-5">
+        <div style={{ fontSize: 44 }}>✦</div>
+        <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          Trois bonnes nouvelles du jour
+        </div>
+      </div>
+      <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 80, color: "hsl(var(--ink))" }}>
+        <span className="font-semibold">Le monde va</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>aussi bien.</span>
+      </h2>
+
+      <div className="mt-12 grid grid-cols-3 gap-8" style={{ height: 540 }}>
+        {items.map((n, i) => (
+          <div
+            key={i}
+            className="flex flex-col rounded-sm p-8"
+            style={{
+              backgroundColor: "rgba(46,36,25,0.05)",
+              border: "1px solid rgba(46,36,25,0.15)",
+              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
+            }}
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex items-center justify-center font-serif-display"
+                style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "hsl(var(--gold))", color: "hsl(var(--ink))", fontSize: 22, fontWeight: 600 }}
+              >
+                {i + 1}
+              </div>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+                {n.tag}
+              </div>
+            </div>
+            <h3
+              className="mt-7 font-serif-display leading-[1.1]"
+              style={{ fontSize: 36, fontWeight: 600, color: "hsl(var(--espresso))" }}
+            >
+              {n.title}
+            </h3>
+            <p
+              className="mt-5 font-serif-display italic"
+              style={{ fontSize: 20, lineHeight: 1.5, color: "hsl(var(--taupe))" }}
+            >
+              {n.body}
+            </p>
+          </div>
+        ))}
       </div>
     </div>
   );
@@ -551,8 +687,10 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
   switch (scene.type) {
     case "café":
       return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
-    case "youtube":
-      return <YouTubeScene active={active} />;
+    case "anecdote":
+      return <AnecdoteScene anecdoteIndex={scene.anecdoteIndex ?? 0} />;
+    case "goodnews":
+      return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
       return <ProductsScene />;
     case "vin":
