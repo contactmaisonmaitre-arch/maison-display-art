@@ -60,6 +60,20 @@ const DAYS_FR_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const MONTHS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
 const formatDateLong = (d: Date) => `${DAYS_FR[d.getDay()]} ${d.getDate()} ${MONTHS_FR[d.getMonth()]} ${d.getFullYear()}`;
 const pad = (n: number) => n.toString().padStart(2, "0");
+const safeGetStorage = (key: string) => {
+  try {
+    return window.localStorage.getItem(key);
+  } catch {
+    return null;
+  }
+};
+const safeSetStorage = (key: string, value: string) => {
+  try {
+    window.localStorage.setItem(key, value);
+  } catch {
+    // Certains navigateurs TV bloquent localStorage : on continue sans faire planter l'écran.
+  }
+};
 
 const DAILY = [
   { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
@@ -205,21 +219,21 @@ interface Scene {
   newsOffset?: number;
 }
 const SCENES: Scene[] = [
-  { type: "café", duration: 10000 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 0 },
-  { type: "instagram", duration: 30000, reelIndex: 0 },
+  { type: "café", duration: 13000 },
+  { type: "weather", duration: 12000 },
+  { type: "instagram", duration: 24000, reelIndex: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
-  { type: "produits", duration: 14000 },
-  { type: "vin", duration: 10000 },
-  { type: "instagram", duration: 30000, reelIndex: 1 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 1 },
-  { type: "weather", duration: 9000 },
-  { type: "thé", duration: 12000 },
-  { type: "instagram", duration: 30000, reelIndex: 2 },
+  { type: "produits", duration: 17000 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
+  { type: "vin", duration: 13000 },
+  { type: "instagram", duration: 24000, reelIndex: 1 },
+  { type: "thé", duration: 13000 },
+  { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
-  { type: "anecdote", duration: 14000, anecdoteIndex: 2 },
-  { type: "épicerie", duration: 10000 },
-  { type: "chatperche", duration: 10000 },
+  { type: "instagram", duration: 24000, reelIndex: 2 },
+  { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
+  { type: "épicerie", duration: 13000 },
+  { type: "chatperche", duration: 13000 },
 ];
 
 // ============ Paper grain SVG ============
@@ -326,23 +340,23 @@ const TextSlide = ({
   <div className="absolute inset-0" style={{ background: bg }}>
     <div
       className="absolute inset-0"
-      style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(229,221,208,0.05) 35%, rgba(229,221,208,0.97) 100%)" }}
+      style={{ background: "linear-gradient(90deg, rgba(26,22,15,0.12) 0%, rgba(242,237,228,0.92) 58%, rgba(242,237,228,0.98) 100%)" }}
     />
     <div
-      className="relative flex h-full flex-col justify-end px-20 pb-32"
-      style={{ animation: "mm-slide-up 1.2s ease-out 0.4s both" }}
+      className="relative flex h-full flex-col justify-center px-28 pb-24 pt-40"
+      style={{ animation: "mm-slide-up 1.2s ease-out 0.25s both" }}
     >
-      <div className="flex items-center gap-4">
-        <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+      <div className="flex items-center gap-6">
+        <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
           {tag}
         </div>
       </div>
-      <h2 className="mt-6 font-serif-display leading-[1.05]" style={{ fontSize: 68, color: "hsl(var(--ink))" }}>
+      <h2 className="mt-10 max-w-[1380px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
         <span className="font-semibold">{titleStart} </span>
         <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>{titleItalic}</span>
       </h2>
-      <p className="mt-6 max-w-[820px] font-serif-display italic" style={{ fontSize: 19, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+      <p className="mt-10 max-w-[1180px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
         {body}
       </p>
     </div>
@@ -350,23 +364,30 @@ const TextSlide = ({
 );
 
 const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
-  if (!weather) return <div className="absolute inset-0" style={{ backgroundColor: "hsl(var(--cream))" }} />;
+  if (!weather) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>Météo · Dole, Jura</div>
+        <div className="mt-8 font-serif-display italic" style={{ fontSize: 86, color: "hsl(var(--espresso))" }}>Chargement de la météo…</div>
+      </div>
+    );
+  }
   const w = weather.current;
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
-      <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.42em", color: "hsl(var(--mink))" }}>
+    <div className="absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
+      <div className="font-sans-ui uppercase" style={{ fontSize: 22, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
         Météo · Dole, Jura
       </div>
-      <div className="mt-6 flex items-center gap-8">
-        <div style={{ fontSize: 110 }}>{wmo(w.weather_code).emoji}</div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 152, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+      <div className="mt-10 flex items-center gap-12">
+        <div style={{ fontSize: 176 }}>{wmo(w.weather_code).emoji}</div>
+        <div className="font-serif-display leading-none" style={{ fontSize: 260, fontWeight: 300, color: "hsl(var(--espresso))" }}>
           {Math.round(w.temperature_2m)}°
         </div>
       </div>
-      <div className="mt-2 font-serif-display italic" style={{ fontSize: 30, color: "hsl(var(--taupe))" }}>
+      <div className="mt-2 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
         {wmo(w.weather_code).label}
       </div>
-      <div className="mt-10 flex gap-16">
+      <div className="mt-14 flex gap-24">
         {[
           { l: "Humidité", v: `${Math.round(w.relative_humidity_2m)}%` },
           { l: "Vent km/h", v: `${Math.round(w.wind_speed_10m)}` },
@@ -374,26 +395,26 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
           { l: "Indice UV", v: `${Math.round(w.uv_index ?? 0)}` },
         ].map((s) => (
           <div key={s.l} className="text-center">
-            <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
               {s.l}
             </div>
-            <div className="mt-1 font-serif-display" style={{ fontSize: 36, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+            <div className="mt-2 font-serif-display" style={{ fontSize: 58, fontWeight: 300, color: "hsl(var(--espresso))" }}>
               {s.v}
             </div>
           </div>
         ))}
       </div>
-      <div className="mt-12 flex gap-10">
+      <div className="mt-16 flex gap-16">
         {weather.daily.time.slice(1, 5).map((iso, i) => {
           const d = new Date(iso);
           const code = weather.daily.weather_code[i + 1];
           return (
             <div key={iso} className="flex flex-col items-center">
-              <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.24em", color: "hsl(var(--mink))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.24em", color: "hsl(var(--mink))" }}>
                 {DAYS_FR_SHORT[d.getDay()]}
               </div>
-              <div className="my-2" style={{ fontSize: 32 }}>{wmo(code).emoji}</div>
-              <div className="font-serif-display" style={{ fontSize: 18, color: "hsl(var(--espresso))" }}>
+              <div className="my-3" style={{ fontSize: 48 }}>{wmo(code).emoji}</div>
+              <div className="font-serif-display" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
                 {Math.round(weather.daily.temperature_2m_max[i + 1])}°
                 <span style={{ color: "hsl(var(--mink))" }}> {Math.round(weather.daily.temperature_2m_min[i + 1])}°</span>
               </div>
@@ -411,61 +432,24 @@ const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/?autoplay=1&muted=1`;
 
   return (
-    <div className="absolute inset-0 flex" style={{ backgroundColor: "hsl(var(--cream))" }}>
-      {/* Colonne gauche : header @maison_maitre */}
-      <div className="flex w-[520px] flex-col justify-between px-14 py-14">
-        <div>
-          <div className="flex items-center gap-5">
-            <div
-              className="flex items-center justify-center rounded-full font-serif-display text-linen"
-              style={{ width: 84, height: 84, fontSize: 40, background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--wine)))" }}
-            >
-              M
-            </div>
-            <div>
-              <div className="font-serif-display" style={{ fontSize: 36, color: "hsl(var(--espresso))" }}>@maison_maitre</div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
-                Dole · Jura · France
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-12 flex items-center gap-4">
-            <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-            <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-              En ce moment
-            </div>
-          </div>
-          <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--ink))" }}>
-            <span className="font-semibold">L'instant</span>{" "}
-            <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>partagé.</span>
-          </h2>
-          <p className="mt-5 font-serif-display italic" style={{ fontSize: 20, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
-            Suivez-nous au quotidien — coulisses, dégustations, nouveautés en boutique.
-          </p>
+    <div className="absolute inset-0 flex items-center justify-center px-28 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--ink))" }}>
+      <div className="absolute left-20 top-36 z-10 flex items-center gap-5">
+        <div
+          className="flex items-center justify-center rounded-full font-serif-display text-linen"
+          style={{ width: 86, height: 86, fontSize: 42, background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--wine)))" }}
+        >
+          M
         </div>
-
         <div>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+          <div className="font-serif-display" style={{ fontSize: 46, color: "hsl(var(--linen))" }}>@maison_maitre</div>
+          <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
             Reel {idx + 1} / {INSTAGRAM_REELS.length}
-          </div>
-          <div className="mt-2 flex gap-2">
-            {INSTAGRAM_REELS.map((_, i) => (
-              <div
-                key={i}
-                className="rounded-full transition-all"
-                style={{ height: 4, width: i === idx ? 40 : 16, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(106,97,87,0.3)" }}
-              />
-            ))}
           </div>
         </div>
       </div>
-
-      {/* Colonne droite : reel vidéo */}
-      <div className="relative flex flex-1 items-center justify-center" style={{ backgroundColor: "#1A160F" }}>
+      <div className="relative flex h-full w-full items-center justify-center">
         {active && (
           <video
             key={reelId}
@@ -474,13 +458,14 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             muted
             loop
             playsInline
+            preload="auto"
             style={{
-              height: "100%",
-              maxHeight: "100%",
+              height: "96%",
+              maxHeight: "820px",
               width: "auto",
               maxWidth: "100%",
               objectFit: "contain",
-              borderRadius: 8,
+              borderRadius: 10,
               boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
             }}
           />
@@ -504,29 +489,29 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
         }}
       />
       <div
-        className="relative flex h-full flex-col justify-center px-24"
+        className="relative flex h-full flex-col justify-center px-28 pb-24 pt-36"
         style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}
       >
         <div className="flex items-center gap-5">
-          <div style={{ fontSize: 56 }}>☕</div>
-          <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-          <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          <div style={{ fontSize: 70 }}>☕</div>
+          <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
             {a.tag} · L'art du café
           </div>
         </div>
         <h2
           className="mt-10 font-serif-display leading-[1.02]"
-          style={{ fontSize: 110, fontWeight: 600, color: "hsl(var(--linen))" }}
+          style={{ fontSize: 132, fontWeight: 600, color: "hsl(var(--linen))" }}
         >
           {a.title}
         </h2>
         <p
-          className="mt-10 max-w-[1300px] font-serif-display italic"
-          style={{ fontSize: 38, lineHeight: 1.4, color: "rgba(242,237,228,0.78)" }}
+          className="mt-10 max-w-[1360px] font-serif-display italic"
+          style={{ fontSize: 48, lineHeight: 1.3, color: "rgba(242,237,228,0.82)" }}
         >
           {a.body}
         </p>
-        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.42em", color: "rgba(184,150,90,0.6)" }}>
+        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 17, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
           Maison Maître · Le café autrement
         </div>
       </div>
@@ -540,24 +525,24 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
     (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + i) % GOOD_NEWS_OF_THE_DAY.length]
   );
   return (
-    <div className="absolute inset-0 px-20 py-16" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
+    <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
       <div className="flex items-center gap-5">
-        <div style={{ fontSize: 44 }}>✦</div>
-        <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+        <div style={{ fontSize: 54 }}>✦</div>
+        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
           Trois bonnes nouvelles du jour
         </div>
       </div>
-      <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 80, color: "hsl(var(--ink))" }}>
+      <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
         <span className="font-semibold">Le monde va</span>{" "}
         <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>aussi bien.</span>
       </h2>
 
-      <div className="mt-12 grid grid-cols-3 gap-8" style={{ height: 540 }}>
+      <div className="mt-12 grid grid-cols-3 gap-9" style={{ height: 545 }}>
         {items.map((n, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-sm p-8"
+            className="flex flex-col rounded-sm p-9"
             style={{
               backgroundColor: "rgba(46,36,25,0.05)",
               border: "1px solid rgba(46,36,25,0.15)",
@@ -571,19 +556,19 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
               >
                 {i + 1}
               </div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
                 {n.tag}
               </div>
             </div>
             <h3
               className="mt-7 font-serif-display leading-[1.1]"
-              style={{ fontSize: 36, fontWeight: 600, color: "hsl(var(--espresso))" }}
+              style={{ fontSize: 44, fontWeight: 600, color: "hsl(var(--espresso))" }}
             >
               {n.title}
             </h3>
             <p
               className="mt-5 font-serif-display italic"
-              style={{ fontSize: 20, lineHeight: 1.5, color: "hsl(var(--taupe))" }}
+              style={{ fontSize: 27, lineHeight: 1.35, color: "hsl(var(--taupe))" }}
             >
               {n.body}
             </p>
@@ -598,31 +583,31 @@ const TeaScene = ({ now }: { now: Date }) => {
   const saint = getSaintDuJour(now);
   return (
     <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #B0C4A0, #507040, #182A10)" }}>
-      <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(229,221,208,0.05) 35%, rgba(229,221,208,0.97) 100%)" }} />
-      <div className="relative flex h-full flex-col justify-end px-20 pb-32" style={{ animation: "mm-slide-up 1.2s ease-out 0.4s both" }}>
-        <div className="flex items-center gap-4">
-          <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-          <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+      <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(24,42,16,0.04) 0%, rgba(242,237,228,0.9) 58%, rgba(242,237,228,0.98) 100%)" }} />
+      <div className="relative flex h-full flex-col justify-center px-28 pb-24 pt-40" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
+        <div className="flex items-center gap-6">
+          <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
             Salon de Thé · Thés des Maîtres
           </div>
         </div>
-        <h2 className="mt-6 font-serif-display leading-[1.05]" style={{ fontSize: 72, color: "hsl(var(--ink))" }}>
+        <h2 className="mt-10 max-w-[1320px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
           <span className="font-semibold">Notre marque,</span>{" "}
           <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>nos cuvées.</span>
         </h2>
-        <p className="mt-6 max-w-[820px] font-serif-display italic" style={{ fontSize: 22, color: "hsl(var(--mink))", lineHeight: 1.5 }}>
+        <p className="mt-10 max-w-[1120px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
           Une collection exclusive de thés d'exception. En boutique et sur maisonmaitre.com.
         </p>
         <div
-          className="mt-8 inline-flex items-center gap-5 rounded-sm px-7 py-5 self-start"
+          className="mt-12 inline-flex items-center gap-6 rounded-sm px-9 py-7 self-start"
           style={{ backgroundColor: "rgba(46,36,25,0.92)", color: "hsl(var(--linen))" }}
         >
-          <div style={{ fontSize: 36 }}>✦</div>
+          <div style={{ fontSize: 48 }}>✦</div>
           <div>
-            <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
+            <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
               Fête du jour
             </div>
-            <div className="mt-1 font-serif-display italic" style={{ fontSize: 32, fontWeight: 300 }}>
+            <div className="mt-2 font-serif-display italic" style={{ fontSize: 48, fontWeight: 300 }}>
               Bonne fête {saint}
             </div>
           </div>
@@ -633,25 +618,25 @@ const TeaScene = ({ now }: { now: Date }) => {
 };
 
 const ProductsScene = () => (
-  <div className="absolute inset-0 px-16 py-14" style={{ backgroundColor: "hsl(var(--cream))" }}>
-    <div className="flex items-center gap-4">
-      <div style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-      <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+  <div className="absolute inset-0 px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
+    <div className="flex items-center gap-6">
+      <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+      <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
         À découvrir · maisonmaitre.com
       </div>
     </div>
-    <h2 className="mt-4 font-serif-display leading-[1.05]" style={{ fontSize: 56, color: "hsl(var(--ink))" }}>
+    <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 94, color: "hsl(var(--ink))" }}>
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-8 grid grid-cols-4 gap-6" style={{ height: 520 }}>
+    <div className="mt-10 grid grid-cols-4 gap-7" style={{ height: 560 }}>
       {PRODUCTS_TO_TRY.map((p) => (
         <div
           key={p.name}
           className="flex flex-col overflow-hidden rounded-sm"
           style={{ backgroundColor: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.12)" }}
         >
-          <div className="relative w-full overflow-hidden" style={{ height: 300, backgroundColor: "rgba(46,36,25,0.08)" }}>
+          <div className="relative w-full overflow-hidden" style={{ height: 330, backgroundColor: "rgba(46,36,25,0.08)" }}>
             <img
               src={p.img}
               alt={p.name}
@@ -661,23 +646,23 @@ const ProductsScene = () => (
               className="h-full w-full object-cover"
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-5">
+          <div className="flex flex-1 flex-col justify-between p-6">
             <div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
-              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 22, color: "hsl(var(--espresso))" }}>
+              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 34, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
             </div>
-            <div className="mt-3 font-serif-display italic" style={{ fontSize: 16, color: "hsl(var(--taupe))" }}>
+            <div className="mt-3 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
               {p.note}
             </div>
           </div>
         </div>
       ))}
     </div>
-    <div className="mt-6 font-sans-ui uppercase text-center" style={{ fontSize: 12, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+    <div className="mt-7 font-sans-ui uppercase text-center" style={{ fontSize: 17, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
       Commande en ligne · maisonmaitre.com
     </div>
   </div>
@@ -723,7 +708,7 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
   }, [index]);
 
   return (
-    <main className="relative flex-1 overflow-hidden" style={{ animation: "mm-fade-in 1.2s ease-out both" }}>
+    <main className="relative h-full w-full overflow-hidden" style={{ animation: "mm-fade-in 1.2s ease-out both" }}>
       {SCENES.map((scene, i) => (
         <div
           key={i}
@@ -751,11 +736,8 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
         ))}
       </div>
 
-      {/* Bottom ticker belt */}
-      <BottomTicker />
-
-      {/* Progress bar above ticker */}
-      <div className="absolute left-0 right-0 z-20" style={{ bottom: 100, height: 2, backgroundColor: "rgba(0,0,0,0.08)" }}>
+      {/* Progress bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 4, backgroundColor: "rgba(0,0,0,0.08)" }}>
         <div
           key={progressKey}
           className="h-full origin-left"
@@ -768,6 +750,43 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
     </main>
   );
 };
+
+const FixedTopBar = ({ now }: { now: Date }) => (
+  <div
+    className="absolute left-0 right-0 top-0 z-30 flex items-center justify-between px-16"
+    style={{ height: 118, backgroundColor: "rgba(242,237,228,0.94)", borderBottom: "1px solid rgba(46,36,25,0.14)" }}
+  >
+    <div className="flex items-center gap-8">
+      <div>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+          Boutique · Dole, Jura
+        </div>
+        <div className="font-serif-display leading-none" style={{ fontSize: 46, color: "hsl(var(--espresso))" }}>
+          <span className="font-semibold">Maison </span>
+          <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>Maitre</span>
+        </div>
+      </div>
+      <div style={{ width: 1, height: 64, backgroundColor: "rgba(46,36,25,0.16)" }} />
+      <div>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
+          Fête du jour
+        </div>
+        <div className="font-serif-display italic leading-none" style={{ fontSize: 38, color: "hsl(var(--espresso))" }}>
+          {getSaintDuJour(now)}
+        </div>
+      </div>
+    </div>
+    <div className="text-right">
+      <div className="font-serif-display leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+        {pad(now.getHours())}:{pad(now.getMinutes())}
+        <span style={{ fontSize: 42, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+      </div>
+      <div className="mt-2 font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.26em", color: "hsl(var(--gold))" }}>
+        {formatDateLong(now)}
+      </div>
+    </div>
+  </div>
+);
 
 // ============ Bottom ticker ============
 
@@ -873,7 +892,7 @@ const SignageDisplay = () => {
   }, []);
 
   type FitMode = "fit" | "cover" | "100";
-  const [mode, setMode] = useState<FitMode>(() => (localStorage.getItem("mm-fit") as FitMode) || "fit");
+  const [mode, setMode] = useState<FitMode>(() => (safeGetStorage("mm-fit") as FitMode) || "fit");
   const [scale, setScale] = useState(1);
   const [showCtrl, setShowCtrl] = useState(false);
 
@@ -891,7 +910,7 @@ const SignageDisplay = () => {
   }, [mode]);
 
   useEffect(() => {
-    localStorage.setItem("mm-fit", mode);
+    safeSetStorage("mm-fit", mode);
   }, [mode]);
 
   // Show controls on mouse move, hide after 3s
@@ -926,9 +945,8 @@ const SignageDisplay = () => {
           flexShrink: 0,
         }}
       >
-        <LeftPanel now={now} />
+        <FixedTopBar now={now} />
         <CenterPanel weather={weather} now={now} />
-        <RightPanel />
       </div>
 
       {/* Mode d'affichage — visible au survol */}
