@@ -1,8 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import productCafeEthiopie from "@/assets/product-cafe-ethiopie.jpg";
-import productTheTsars from "@/assets/product-the-tsars.jpg";
-import productTheChat from "@/assets/product-the-chat.jpg";
-import productInfusionVergers from "@/assets/product-infusion-vergers.jpg";
 
 // ============ Types & constants ============
 
