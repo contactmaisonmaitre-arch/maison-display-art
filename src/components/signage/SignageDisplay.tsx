@@ -226,21 +226,23 @@ interface Scene {
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
+  { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 17000, productOffset: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
   { type: "vin", duration: 13000 },
   { type: "instagram", duration: 30000, reelIndex: 1 },
+  { type: "review", duration: 38000 },
   { type: "produits", duration: 17000, productOffset: 3 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
+  { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 2 },
   { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
-  { type: "review", duration: 20000 },
   { type: "chatperche", duration: 13000 },
 ];
 
@@ -456,55 +458,43 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge les MP4 des Reels une seule fois (cache navigateur)
-const reelBlobCache: Record<string, string> = {};
-const reelLoadingPromises: Record<string, Promise<string>> = {};
-const preloadReel = (reelId: string): Promise<string> => {
-  if (reelBlobCache[reelId]) return Promise.resolve(reelBlobCache[reelId]);
-  if (reelLoadingPromises[reelId]) return reelLoadingPromises[reelId];
-  const p = fetch(`${REELS_PATH}/${reelId}.mp4`)
-    .then((r) => r.blob())
-    .then((b) => {
-      const url = URL.createObjectURL(b);
-      reelBlobCache[reelId] = url;
-      return url;
-    })
-    .catch(() => `${REELS_PATH}/${reelId}.mp4`);
-  reelLoadingPromises[reelId] = p;
-  return p;
+// Précharge les médias légers et garde un fallback animé WebP si la TV refuse le MP4.
+const preloadReelAssets = (reelId: string) => {
+  if (typeof window === "undefined") return;
+  [`${REELS_PATH}/${reelId}.jpg`, `${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.mp4`].forEach((href) => {
+    const link = document.createElement("link");
+    link.rel = "preload";
+    link.as = href.endsWith(".mp4") ? "video" : "image";
+    link.href = href;
+    document.head.appendChild(link);
+  });
 };
-// Précharge tous les reels au démarrage du module
-if (typeof window !== "undefined") {
-  INSTAGRAM_REELS.forEach((id) => preloadReel(id));
-}
+if (typeof window !== "undefined") INSTAGRAM_REELS.forEach(preloadReelAssets);
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
   const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
-  const [videoSrc, setVideoSrc] = useState<string>(reelBlobCache[reelId] || "");
   const [loaded, setLoaded] = useState<boolean>(false);
+  const [videoFailed, setVideoFailed] = useState<boolean>(false);
+  const [fallbackSrc, setFallbackSrc] = useState<string>(`${REELS_PATH}/${reelId}.webp`);
 
   useEffect(() => {
-    let cancelled = false;
     setLoaded(false);
-    preloadReel(reelId).then((url) => {
-      if (!cancelled) setVideoSrc(url);
-    });
-    // précharge aussi le suivant
-    preloadReel(nextId);
-    return () => { cancelled = true; };
+    setVideoFailed(false);
+    setFallbackSrc(`${REELS_PATH}/${reelId}.webp`);
+    preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
   useEffect(() => {
-    if (active && vidEl && videoSrc) {
+    if (active && vidEl && !videoFailed) {
       try {
         vidEl.currentTime = 0;
-        vidEl.play().catch(() => {});
+        vidEl.play().catch(() => setVideoFailed(true));
       } catch {}
     }
-  }, [active, vidEl, videoSrc, reelId]);
+  }, [active, vidEl, videoFailed, reelId]);
 
   return (
     <div
@@ -532,27 +522,33 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
               background: "#000",
             }}
           >
-            <video
-              ref={setVidEl}
-              key={reelId}
-              src={videoSrc || undefined}
-              poster={`${REELS_PATH}/${reelId}.jpg`}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              onLoadedData={() => setLoaded(true)}
-              onCanPlay={() => setLoaded(true)}
-              className="h-full w-full"
-              style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
-            />
+            {!videoFailed && (
+              <video
+                ref={setVidEl}
+                key={reelId}
+                poster={`${REELS_PATH}/${reelId}.jpg`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onLoadedMetadata={() => setLoaded(true)}
+                onLoadedData={() => setLoaded(true)}
+                onCanPlay={() => setLoaded(true)}
+                onError={() => setVideoFailed(true)}
+                className="h-full w-full"
+                style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
+              >
+                <source src={`${REELS_PATH}/${reelId}.mp4`} type='video/mp4; codecs="avc1.42E01E"' />
+              </video>
+            )}
             {/* Poster image affichée tant que la vidéo n'est pas prête */}
-            {!loaded && (
+            {(!loaded || videoFailed) && (
               <img
-                src={`${REELS_PATH}/${reelId}.jpg`}
+                src={videoFailed ? fallbackSrc : `${REELS_PATH}/${reelId}.jpg`}
                 alt=""
                 className="absolute inset-0 h-full w-full"
+                onError={() => setFallbackSrc(`${REELS_PATH}/${reelId}.gif`)}
                 style={{ objectFit: "cover" }}
               />
             )}
