@@ -556,6 +556,8 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
                 style={{ objectFit: "cover" }}
               />
             )}
+          </div>
+        </div>
 
         {/* Branding à droite */}
         <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
