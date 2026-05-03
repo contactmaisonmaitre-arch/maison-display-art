@@ -72,10 +72,10 @@ const safeSetStorage = (key: string, value: string) => {
 };
 
 const DAILY = [
-  { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
-  { tag: "Thé", name: "Darjeeling First Flush · Thé des Maîtres 2025" },
-  { tag: "Vin", name: "Domaine Marcel Lapierre — Morgon nature" },
-  { tag: "Four", name: "Brownie noisette & fleur de sel" },
+  { tag: "Café des Maitre", name: "Moka Sidamo — fruité, floral, notes d'agrumes" },
+  { tag: "Thé des Maitre", name: "Darjeeling First Flush — récolte 2025" },
+  { tag: "Vin nature", name: "Domaine Marcel Lapierre — Morgon" },
+  { tag: "Sapidité", name: "Brownie noisette & fleur de sel" },
 ];
 
 // Fête du jour (saint patron)
@@ -123,29 +123,28 @@ const POSITIVE_ANECDOTES: NewsItem[] = [
 ];
 
 const TICKER = [
-  "Café · Éthiopie Yirgacheffe — fruité, floral, notes d'agrumes",
-  "Vin · René Bouvier — Bourgogne rouge nature",
-  "Thé des Maîtres · Darjeeling First Flush — récolte 2025",
+  "Café des Maitre · Moka Sidamo — en grain, en boutique",
+  "Vin nature · Marcel Lapierre — Morgon",
+  "Thé des Maitre · Darjeeling First Flush — récolte 2025",
   "Matcha · Kumiko Matcha — cérémonie & barista",
-  "Four · Brownie noisette & fleur de sel — fait maison",
-  "Vin · Marcel Lapierre — Morgon, gamay nature",
-  "Vin · Jean Foillard — Beaujolais, Morgon Côte du Py",
-  "Vin · Domaine Overnoy-Houillon — Pupillin, Jura",
-  "Vin · Yvon Métras — Fleurie L'Ultime",
+  "Sapidité · Brownie noisette & fleur de sel — fait maison",
+  "Vin nature · Jean Foillard — Morgon Côte du Py",
+  "Vin nature · Domaine Overnoy-Houillon — Pupillin, Jura",
+  "Vin nature · Yvon Métras — Fleurie L'Ultime",
   "Boutique en ligne · maisonmaitre.com",
 ];
 
-// Produits réels — extraits de maisonmaitre.com (images depuis le CDN Shopify, copiées dans /public/products)
+// Produits réels — extraits de maisonmaitre.com (prix au 100g pour les thés/infusions)
 const PRODUCTS_TO_TRY = [
-  { cat: "Café d'Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 €",        img: "/products/cafe-ethiopie.png" },
-  { cat: "Café de Colombie", name: "Huila Bourbon Rose",       note: "Cerise noire · Framboise · Cacao · 16 €",img: "/products/cafe-colombie-bourbon.png" },
-  { cat: "Café de Colombie", name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 €",img: "/products/cafe-colombie-castillo.gif" },
-  { cat: "Thé noir",         name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 €",          img: "/products/the-tsars.png" },
-  { cat: "Thé vert",         name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 €",          img: "/products/the-chat.png" },
-  { cat: "Infusion",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 93,50 €/kg",      img: "/products/infusion-vergers.png" },
-  { cat: "Thé noir floral",  name: "Eden Floral",              note: "Rose & Pivoine · 100g",                  img: "/products/eden-floral.png" },
-  { cat: "Thé caramel",      name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 €",          img: "/products/douceur-salee.png" },
-  { cat: "Boutique",         name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",           img: "/products/mug-emaille.png" },
+  { cat: "Café des Maitre · Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 € / 100g",        img: "/products/cafe-ethiopie.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Bourbon Rose",       note: "Cerise · Framboise · Cacao · 16 € / 100g",      img: "/products/cafe-colombie-bourbon.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 € / 100g",img: "/products/cafe-colombie-castillo.gif" },
+  { cat: "Thé des Maitre · Noir",       name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 € / 100g",          img: "/products/the-tsars.png" },
+  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 € / 100g",          img: "/products/the-chat.png" },
+  { cat: "Infusion des Maitre",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 9,35 € / 100g",          img: "/products/infusion-vergers.png" },
+  { cat: "Thé des Maitre · Floral",     name: "Eden Floral",              note: "Rose & Pivoine · 11,50 € / 100g",               img: "/products/eden-floral.png" },
+  { cat: "Thé des Maitre · Caramel",    name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 € / 100g",          img: "/products/douceur-salee.png" },
+  { cat: "Boutique",                    name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",                  img: "/products/mug-emaille.png" },
 ];
 
 
@@ -161,6 +160,8 @@ const COFFEE_ANECDOTES = [
   { tag: "Éthiopie", title: "La cérémonie du café", body: "Au pays d'origine, le café se partage en trois services rituels — un moment de paix, de paroles et de transmission qui peut durer des heures." },
   { tag: "Bien-être", title: "Une boisson amie du cœur", body: "Consommé avec mesure, le café est associé à un risque réduit de maladies cardiovasculaires selon plusieurs études internationales." },
   { tag: "Geisha", title: "Le café le plus rare du monde", body: "La variété Geisha, cultivée en Éthiopie puis au Panama, peut atteindre 10 000 € le kilo — pour ses notes florales d'exception." },
+  { tag: "En boutique", title: "Repartez avec le café que vous buvez", body: "Vous savez qu'ici vous pouvez repartir avec le café que vous buvez, en grain ? En ce moment dans nos silos : le Moka Sidamo, fruité et floral." },
+  { tag: "Le saviez-vous", title: "Café en grain, fraîcheur préservée", body: "Un café moulu perd 60 % de ses arômes en moins de 15 minutes. C'est pour cela que nous vous proposons nos cafés en grain, à moudre au moment de l'extraction." },
 ];
 
 // 3 actualités positives du jour (curaté maison, à actualiser)
@@ -433,27 +434,47 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — GIF animés (compatibles toutes TVs et mobiles, pas de décodage vidéo).
+// Reels Instagram @maison_maitre — vidéos MP4 silencieuses, optimisées TV.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
+
+// Vrai logo Instagram (caméra) en SVG, gradient officiel
+const InstagramLogo = ({ size = 72 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden>
+    <defs>
+      <linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stopColor="#FED576" />
+        <stop offset="26%" stopColor="#F47133" />
+        <stop offset="61%" stopColor="#BC3081" />
+        <stop offset="100%" stopColor="#4F5BD5" />
+      </linearGradient>
+    </defs>
+    <rect x="2" y="2" width="60" height="60" rx="16" fill="url(#ig-grad)" />
+    <rect x="12" y="12" width="40" height="40" rx="11" fill="none" stroke="#fff" strokeWidth="3.2" />
+    <circle cx="32" cy="32" r="9" fill="none" stroke="#fff" strokeWidth="3.2" />
+    <circle cx="46" cy="18" r="2.8" fill="#fff" />
+  </svg>
+);
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  // Force le rechargement du GIF (donc replay depuis le début) à chaque activation
-  const [nonce, setNonce] = useState(0);
-  useEffect(() => {
-    if (active) setNonce((n) => n + 1);
-  }, [active, reelId]);
+  const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
 
-  const gifSrc = `${REELS_PATH}/${reelId}.gif?n=${nonce}`;
+  useEffect(() => {
+    if (active && vidEl) {
+      try {
+        vidEl.currentTime = 0;
+        vidEl.play().catch(() => {});
+      } catch {}
+    }
+  }, [active, vidEl, reelId]);
 
   return (
     <div
       className="absolute inset-0"
       style={{ background: "linear-gradient(135deg, #1A0F08 0%, #0A0604 60%, #050302 100%)" }}
     >
-      {/* halo doré décoratif */}
       <div
         className="pointer-events-none absolute"
         style={{
@@ -463,31 +484,37 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       />
 
       <div className="relative grid h-full grid-cols-2 gap-12 px-20 pb-24 pt-32">
-        {/* Colonne gauche : le Reel */}
+        {/* Reel à gauche, en vrai cadre 9:16 façon téléphone */}
         <div className="flex items-center justify-center">
           <div
             className="relative overflow-hidden"
             style={{
               aspectRatio: "9 / 16",
-              height: "92%",
-              borderRadius: 18,
-              boxShadow: "0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(184,150,90,0.25)",
+              height: "94%",
+              borderRadius: 28,
+              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(184,150,90,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(184,150,90,0.4)",
               background: "#000",
             }}
           >
-            <img
-              key={`${reelId}-${nonce}`}
-              src={gifSrc}
-              alt="Publication Instagram Maison Maître"
-              className="h-full w-full object-cover"
+            <video
+              ref={setVidEl}
+              key={reelId}
+              src={`${REELS_PATH}/${reelId}.mp4`}
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              className="h-full w-full"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </div>
 
-        {/* Colonne droite : invitation à suivre */}
+        {/* Branding à droite */}
         <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
-          <div className="flex items-center gap-4">
-            <div style={{ width: 70, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="flex items-center gap-5">
+            <InstagramLogo size={64} />
             <div className="font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
               Suivez-nous
             </div>
@@ -495,42 +522,31 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 
           <h2
             className="font-serif-display"
-            style={{ fontSize: 96, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 28, letterSpacing: "0.02em" }}
+            style={{ fontSize: 104, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.02em" }}
           >
-            MAISON
+            <span className="font-semibold">Maison</span>
             <br />
-            <em style={{ color: "hsl(var(--gold-lt))" }}>MAÎTRE</em>
+            <em className="font-light" style={{ color: "hsl(var(--gold-lt))" }}>Maitre</em>
           </h2>
 
           <div
-            className="font-serif-display"
-            style={{ fontSize: 56, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.01em" }}
+            className="font-serif-display flex items-center gap-4"
+            style={{ fontSize: 52, color: "hsl(var(--linen))", marginTop: 36, letterSpacing: "0.01em" }}
           >
+            <InstagramLogo size={52} />
             @maison_maitre
           </div>
 
           <p
             className="font-sans-ui"
-            style={{ fontSize: 26, lineHeight: 1.45, color: "hsl(var(--linen) / 0.82)", marginTop: 28, maxWidth: 640 }}
+            style={{ fontSize: 26, lineHeight: 1.45, color: "rgba(242,237,228,0.82)", marginTop: 32, maxWidth: 640 }}
           >
-            Retrouvez nos cafés d'exception, nos thés rares et nos vignerons
-            nature au quotidien sur Instagram.
+            Cafés des Maitre, Thés des Maitre, vignerons nature et belles
+            adresses — toute notre actualité au quotidien.
           </p>
 
-          <div className="mt-12 flex items-center gap-4">
-            <div
-              className="flex items-center justify-center rounded-2xl"
-              style={{
-                width: 78, height: 78,
-                background: "linear-gradient(135deg, #f9ce34 0%, #ee2a7b 50%, #6228d7 100%)",
-                fontSize: 38,
-              }}
-            >
-              📷
-            </div>
-            <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
-              Instagram · Reel {idx + 1} / {INSTAGRAM_REELS.length}
-            </div>
+          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(184,150,90,0.7)" }}>
+            Reel {idx + 1} / {INSTAGRAM_REELS.length}
           </div>
         </div>
       </div>
@@ -575,7 +591,7 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
           {a.body}
         </p>
         <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 17, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
-          Maison Maître · Le café autrement
+          Maison Maitre · Le café autrement
         </div>
       </div>
     </div>
@@ -651,7 +667,7 @@ const TeaScene = ({ now }: { now: Date }) => {
         <div className="flex items-center gap-6">
           <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
           <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-            Salon de Thé · Thés des Maîtres
+            Salon de Thé · Thés des Maitre
           </div>
         </div>
         <h2 className="mt-10 max-w-[1320px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
@@ -739,58 +755,136 @@ const FIVE_STAR_REVIEWS: { name: string; text: string }[] = [
   { name: "Camille D.", text: "Une adresse rare. Café d'exception, accueil chaleureux, sélection de vins natures pointue. On revient à coup sûr." },
   { name: "Thomas L.", text: "Le meilleur café de la ville, sans hésiter. L'équipe est passionnée et de bon conseil. Une vraie maison." },
   { name: "Sophie M.", text: "Un lieu magnifique, des produits d'épicerie fine triés sur le volet. Mon arrêt préféré du quartier." },
-  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maître mérite ses 5 étoiles." },
+  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maitre mérite ses 5 étoiles." },
   { name: "Élise B.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
 ];
+
+// Logo Google "G" officiel multicolore
+const GoogleG = ({ size = 56 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden>
+    <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+    <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+    <path fill="#FBBC05" d="M11.69 28.18c-.44-1.32-.69-2.73-.69-4.18s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+    <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+  </svg>
+);
 
 const ReviewScene = () => {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 3500);
+    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 4500);
     return () => clearInterval(t);
   }, []);
   const r = FIVE_STAR_REVIEWS[idx];
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(REVIEW_URL)}`;
-  return (
-    <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
-      <div className="flex items-center gap-5">
-        <div style={{ fontSize: 54 }}>★</div>
-        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-          Votre avis compte
-        </div>
-      </div>
-      <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
-        <span className="font-semibold">Laissez-nous</span>{" "}
-        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>5 étoiles.</span>
-      </h2>
+  // QR code Google avec couleurs et logo intégré (api goqr personnalisable)
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=8&qzone=2&color=1A160F&bgcolor=FFFFFF&ecc=H&data=${encodeURIComponent(REVIEW_URL)}`;
 
-      <div className="mt-10 grid gap-12" style={{ gridTemplateColumns: "auto 1fr", height: 600 }}>
-        {/* QR */}
-        <div className="flex flex-col items-center justify-center rounded-sm p-8" style={{ backgroundColor: "hsl(var(--linen))", border: "2px solid hsl(var(--gold))" }}>
-          <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460 }} />
-          <div className="mt-5 font-sans-ui uppercase text-center" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--espresso))" }}>
-            Scannez pour<br/>laisser un avis
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "linear-gradient(135deg, #1A160F 0%, #2E2419 60%, #1A160F 100%)" }}>
+      {/* halos colorés Google */}
+      <div className="pointer-events-none absolute" style={{ top: "-20%", left: "-10%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(66,133,244,0.18) 0%, transparent 65%)" }} />
+      <div className="pointer-events-none absolute" style={{ bottom: "-25%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(234,67,53,0.14) 0%, transparent 65%)" }} />
+      <div className="pointer-events-none absolute" style={{ top: "30%", right: "20%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle, rgba(251,188,5,0.12) 0%, transparent 65%)" }} />
+
+      <div className="relative h-full px-24 pb-24 pt-36 flex flex-col">
+        {/* Header */}
+        <div className="flex items-center gap-5">
+          <GoogleG size={56} />
+          <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
+            Votre avis sur Google
           </div>
         </div>
-        {/* Reviews */}
-        <div className="flex flex-col rounded-sm p-10" style={{ backgroundColor: "rgba(46,36,25,0.05)", border: "1px solid rgba(46,36,25,0.15)" }}>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-            Derniers avis ★★★★★
-          </div>
-          <div key={idx} className="mt-6 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.7s ease-out both" }}>
-            <div style={{ fontSize: 54, color: "#E8B548", letterSpacing: 6 }}>★★★★★</div>
-            <p className="mt-6 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.3, color: "hsl(var(--espresso))" }}>
-              « {r.text} »
-            </p>
-            <div className="mt-6 font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--taupe))" }}>
-              — {r.name}
+
+        <h2 className="mt-7 font-serif-display leading-[0.98]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
+          <span className="font-semibold">Partagez votre</span>{" "}
+          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>expérience.</span>
+        </h2>
+
+        <div className="mt-12 grid flex-1 gap-16" style={{ gridTemplateColumns: "auto 1fr" }}>
+          {/* QR card façon carte téléphone */}
+          <div
+            className="flex flex-col items-center justify-center"
+            style={{
+              padding: 32,
+              borderRadius: 32,
+              background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,90,0.5)",
+              animation: "mm-slide-up 1s ease-out 0.3s both",
+            }}
+          >
+            <div className="relative" style={{ padding: 18, background: "#fff", borderRadius: 18 }}>
+              <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460, display: "block" }} />
+              {/* Logo G au centre */}
+              <div
+                className="absolute"
+                style={{
+                  top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+                  width: 96, height: 96, borderRadius: 20, background: "#fff",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  boxShadow: "0 6px 18px rgba(0,0,0,0.15)",
+                }}
+              >
+                <GoogleG size={64} />
+              </div>
+            </div>
+            <div className="mt-6 font-serif-display text-center" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
+              Scannez pour <em className="font-light" style={{ color: "hsl(var(--wine))" }}>nous noter</em>
+            </div>
+            <div className="mt-2 font-sans-ui uppercase text-center" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+              ★★★★★ · Google Maps
             </div>
           </div>
-          <div className="mt-4 flex gap-2">
-            {FIVE_STAR_REVIEWS.map((_, i) => (
-              <div key={i} style={{ width: 28, height: 4, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(46,36,25,0.15)" }} />
-            ))}
+
+          {/* Reviews */}
+          <div
+            className="flex flex-col"
+            style={{
+              padding: 44,
+              borderRadius: 28,
+              background: "rgba(242,237,228,0.06)",
+              border: "1px solid rgba(184,150,90,0.25)",
+              backdropFilter: "blur(2px)",
+            }}
+          >
+            <div className="flex items-center justify-between">
+              <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+                Derniers avis 5 étoiles
+              </div>
+              <div className="font-serif-display flex items-baseline gap-3" style={{ color: "hsl(var(--linen))" }}>
+                <span style={{ fontSize: 64, fontWeight: 300 }}>5,0</span>
+                <span style={{ fontSize: 22, color: "#E8B548", letterSpacing: 4 }}>★★★★★</span>
+              </div>
+            </div>
+
+            <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
+              <div style={{ fontSize: 42, color: "#E8B548", letterSpacing: 8 }}>★★★★★</div>
+              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.32, color: "hsl(var(--linen))" }}>
+                « {r.text} »
+              </p>
+              <div className="mt-8 flex items-center gap-4">
+                <div
+                  className="flex items-center justify-center font-serif-display"
+                  style={{
+                    width: 56, height: 56, borderRadius: "50%",
+                    background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-lt)))",
+                    color: "#1A160F", fontSize: 26, fontWeight: 600,
+                  }}
+                >
+                  {r.name.charAt(0)}
+                </div>
+                <div>
+                  <div className="font-serif-display" style={{ fontSize: 26, color: "hsl(var(--linen))" }}>{r.name}</div>
+                  <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.5)" }}>Avis vérifié Google</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 flex gap-2">
+              {FIVE_STAR_REVIEWS.map((_, i) => (
+                <div key={i} style={{ flex: 1, height: 3, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(242,237,228,0.15)", transition: "background-color 0.4s" }} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
