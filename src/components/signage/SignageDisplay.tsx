@@ -218,20 +218,23 @@ interface Scene {
   reelIndex?: number;
   anecdoteIndex?: number;
   newsOffset?: number;
+  productOffset?: number;
 }
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "instagram", duration: 24000, reelIndex: 0 },
+  { type: "produits", duration: 17000, productOffset: 0 },
   { type: "goodnews", duration: 18000, newsOffset: 0 },
-  { type: "produits", duration: 17000 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 0 },
   { type: "vin", duration: 13000 },
   { type: "instagram", duration: 24000, reelIndex: 1 },
+  { type: "produits", duration: 17000, productOffset: 3 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
   { type: "goodnews", duration: 18000, newsOffset: 3 },
   { type: "instagram", duration: 24000, reelIndex: 2 },
+  { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
   { type: "chatperche", duration: 13000 },
