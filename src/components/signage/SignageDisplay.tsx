@@ -436,7 +436,7 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — vidéos MP4 silencieuses, optimisées TV.
+// Reels Instagram @maison_maitre — images animées, plus compatibles avec les navigateurs TV que les MP4.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
 
@@ -458,13 +458,13 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge les médias légers et garde un fallback animé WebP si la TV refuse le MP4.
+// Précharge uniquement les formats image : certaines TV affichent un écran noir au lieu de lire les MP4.
 const preloadReelAssets = (reelId: string) => {
   if (typeof window === "undefined") return;
-  [`${REELS_PATH}/${reelId}.jpg`, `${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.mp4`].forEach((href) => {
+  [`${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.gif`, `${REELS_PATH}/${reelId}.jpg`].forEach((href) => {
     const link = document.createElement("link");
     link.rel = "preload";
-    link.as = href.endsWith(".mp4") ? "video" : "image";
+    link.as = "image";
     link.href = href;
     document.head.appendChild(link);
   });
@@ -475,26 +475,13 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
-  const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
-  const [loaded, setLoaded] = useState<boolean>(false);
-  const [videoFailed, setVideoFailed] = useState<boolean>(false);
   const [fallbackSrc, setFallbackSrc] = useState<string>(`${REELS_PATH}/${reelId}.webp`);
 
   useEffect(() => {
-    setLoaded(false);
-    setVideoFailed(false);
     setFallbackSrc(`${REELS_PATH}/${reelId}.webp`);
+    preloadReelAssets(reelId);
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
-
-  useEffect(() => {
-    if (active && vidEl && !videoFailed) {
-      try {
-        vidEl.currentTime = 0;
-        vidEl.play().catch(() => setVideoFailed(true));
-      } catch {}
-    }
-  }, [active, vidEl, videoFailed, reelId]);
 
   return (
     <div
@@ -522,36 +509,14 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
               background: "#000",
             }}
           >
-            {!videoFailed && (
-              <video
-                ref={setVidEl}
-                key={reelId}
-                poster={`${REELS_PATH}/${reelId}.jpg`}
-                autoPlay
-                loop
-                muted
-                playsInline
-                preload="metadata"
-                onLoadedMetadata={() => setLoaded(true)}
-                onLoadedData={() => setLoaded(true)}
-                onCanPlay={() => setLoaded(true)}
-                onError={() => setVideoFailed(true)}
-                className="h-full w-full"
-                style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
-              >
-                <source src={`${REELS_PATH}/${reelId}.mp4`} type='video/mp4; codecs="avc1.42E01E"' />
-              </video>
-            )}
-            {/* Poster image affichée tant que la vidéo n'est pas prête */}
-            {(!loaded || videoFailed) && (
-              <img
-                src={videoFailed ? fallbackSrc : `${REELS_PATH}/${reelId}.jpg`}
-                alt=""
-                className="absolute inset-0 h-full w-full"
-                onError={() => setFallbackSrc(`${REELS_PATH}/${reelId}.gif`)}
-                style={{ objectFit: "cover" }}
-              />
-            )}
+            <img
+              key={fallbackSrc}
+              src={fallbackSrc}
+              alt=""
+              className="h-full w-full"
+              onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
 
@@ -796,11 +761,16 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
 
 const REVIEW_URL = "https://maps.app.goo.gl/SBPvWavn536mCHmt9";
 const FIVE_STAR_REVIEWS: { name: string; text: string }[] = [
-  { name: "Camille D.", text: "Une adresse rare. Café d'exception, accueil chaleureux, sélection de vins natures pointue. On revient à coup sûr." },
-  { name: "Thomas L.", text: "Le meilleur café de la ville, sans hésiter. L'équipe est passionnée et de bon conseil. Une vraie maison." },
+  { name: "Camille D.", text: "Une adresse rare. Café d'exception, accueil chaleureux, sélection de vins nature pointue. On revient à coup sûr." },
+  { name: "Nicolas B.", text: "Le meilleur café de Dole, sans hésiter. L'équipe connaît ses produits et prend vraiment le temps de conseiller." },
   { name: "Sophie M.", text: "Un lieu magnifique, des produits d'épicerie fine triés sur le volet. Mon arrêt préféré du quartier." },
-  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maitre mérite ses 5 étoiles." },
-  { name: "Élise B.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
+  { name: "Julien P.", text: "Service impeccable, ambiance élégante, et des thés à tomber. Maison Maitre mérite largement ses 5 étoiles." },
+  { name: "Élise R.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
+  { name: "Marion L.", text: "On sent une vraie passion derrière chaque conseil. Le Moka Sidamo est superbe, fruité et très bien torréfié." },
+  { name: "Hugo V.", text: "Très belle sélection de vins nature et de gourmandises. L'accueil est simple, précis et toujours souriant." },
+  { name: "Claire T.", text: "Je repars souvent avec le café que je viens de boire sur place. Belle boutique, bons produits, équipe adorable." },
+  { name: "Mathieu G.", text: "Adresse incontournable pour offrir du thé ou découvrir un vrai bon café. Le lieu a beaucoup de charme." },
+  { name: "Anaïs C.", text: "Excellent moment chez Maison Maitre : café parfait, conseils généreux, et une atmosphère très chaleureuse." },
 ];
 
 // Logo Google "G" officiel multicolore
