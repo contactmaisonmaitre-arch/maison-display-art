@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 // ============ Types & constants ============
 
@@ -430,44 +430,34 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   );
 };
 
-// Reels Instagram @maison_maitre — versions réencodées 16:9 plus fiables pour les navigateurs TV
+// Reels Instagram @maison_maitre — séquences JPG pour éviter les bugs de décodage vidéo des TV.
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
+const REEL_FRAME_COUNTS: Record<string, number> = {
+  DXtn06bIgtd: 24,
+  DXjAgNRirlr: 14,
+  DXPVGNDioOU: 24,
+};
+
+const reelFrame = (reelId: string, frame: number) => {
+  const count = REEL_FRAME_COUNTS[reelId] ?? 1;
+  const n = ((frame % count) + 1).toString().padStart(2, "0");
+  return `${REELS_PATH}/frames/${reelId}-${n}.jpg`;
+};
 
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [ready, setReady] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [frame, setFrame] = useState(0);
 
-  // Force play attempts (TV browsers can ignore autoplay otherwise) and stop hidden videos.
   useEffect(() => {
-    const v = videoRef.current;
     if (!active) {
-      v?.pause();
-      setReady(false);
-      setFailed(false);
+      setFrame(0);
       return;
     }
-
-    if (!v) return;
-    setReady(false);
-    setFailed(false);
-    let cancelled = false;
-    const tryPlay = () => {
-      if (cancelled || !v) return;
-      const p = v.play();
-      if (p && typeof p.catch === "function") {
-        p.catch(() => {
-          // retry shortly
-          setTimeout(tryPlay, 600);
-        });
-      }
-    };
-    // small delay so the element is in the DOM
-    const t = setTimeout(tryPlay, 100);
-    return () => { cancelled = true; clearTimeout(t); };
+    setFrame(0);
+    const t = window.setInterval(() => setFrame((f) => f + 1), 850);
+    return () => window.clearInterval(t);
   }, [active, reelId]);
 
   return (
@@ -500,47 +490,13 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
       </div>
 
       <div className="relative z-10 flex h-full w-full items-center justify-center">
-        {active && (
-          <video
-            ref={videoRef}
-            key={reelId}
-            src={`${REELS_PATH}/${reelId}.mp4`}
-            poster={`${REELS_PATH}/${reelId}.jpg`}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            onCanPlay={() => setReady(true)}
-            onPlaying={() => setReady(true)}
-            onError={() => setFailed(true)}
-            style={{
-              height: "96%",
-              width: "100%",
-              objectFit: "contain",
-              borderRadius: 10,
-              boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
-              backgroundColor: "transparent",
-            }}
-          />
-        )}
-        {/* Loading hint (only briefly) */}
-        {!ready && !failed && (
-          <div
-            className="pointer-events-none absolute font-sans-ui uppercase"
-            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
-          >
-            Chargement…
-          </div>
-        )}
-        {failed && (
-          <div
-            className="pointer-events-none absolute font-sans-ui uppercase"
-            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
-          >
-            @maison_maitre · Instagram
-          </div>
-        )}
+        <img
+          key={`${reelId}-${frame}`}
+          src={reelFrame(reelId, frame)}
+          alt="Publication Instagram Maison Maître"
+          className="h-[96%] w-full object-contain"
+          style={{ borderRadius: 10, boxShadow: "0 30px 80px rgba(0,0,0,0.5)" }}
+        />
       </div>
     </div>
   );
