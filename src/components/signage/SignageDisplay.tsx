@@ -476,28 +476,23 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const reelId = INSTAGRAM_REELS[idx];
   const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
   const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
-  const [videoSrc, setVideoSrc] = useState<string>(reelBlobCache[reelId] || "");
   const [loaded, setLoaded] = useState<boolean>(false);
+  const [videoFailed, setVideoFailed] = useState<boolean>(false);
 
   useEffect(() => {
-    let cancelled = false;
     setLoaded(false);
-    preloadReel(reelId).then((url) => {
-      if (!cancelled) setVideoSrc(url);
-    });
-    // précharge aussi le suivant
-    preloadReel(nextId);
-    return () => { cancelled = true; };
+    setVideoFailed(false);
+    preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
   useEffect(() => {
-    if (active && vidEl && videoSrc) {
+    if (active && vidEl && !videoFailed) {
       try {
         vidEl.currentTime = 0;
-        vidEl.play().catch(() => {});
+        vidEl.play().catch(() => setVideoFailed(true));
       } catch {}
     }
-  }, [active, vidEl, videoSrc, reelId]);
+  }, [active, vidEl, videoFailed, reelId]);
 
   return (
     <div
@@ -525,25 +520,30 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
               background: "#000",
             }}
           >
-            <video
-              ref={setVidEl}
-              key={reelId}
-              src={videoSrc || undefined}
-              poster={`${REELS_PATH}/${reelId}.jpg`}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              onLoadedData={() => setLoaded(true)}
-              onCanPlay={() => setLoaded(true)}
-              className="h-full w-full"
-              style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
-            />
+            {!videoFailed && (
+              <video
+                ref={setVidEl}
+                key={reelId}
+                poster={`${REELS_PATH}/${reelId}.jpg`}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+                onLoadedMetadata={() => setLoaded(true)}
+                onLoadedData={() => setLoaded(true)}
+                onCanPlay={() => setLoaded(true)}
+                onError={() => setVideoFailed(true)}
+                className="h-full w-full"
+                style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
+              >
+                <source src={`${REELS_PATH}/${reelId}.mp4`} type='video/mp4; codecs="avc1.42E01E"' />
+              </video>
+            )}
             {/* Poster image affichée tant que la vidéo n'est pas prête */}
-            {!loaded && (
+            {(!loaded || videoFailed) && (
               <img
-                src={`${REELS_PATH}/${reelId}.jpg`}
+                src={videoFailed ? `${REELS_PATH}/${reelId}.webp` : `${REELS_PATH}/${reelId}.jpg`}
                 alt=""
                 className="absolute inset-0 h-full w-full"
                 style={{ objectFit: "cover" }}
