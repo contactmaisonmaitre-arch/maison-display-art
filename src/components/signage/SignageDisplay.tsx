@@ -459,7 +459,6 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const videoRef = useState<HTMLVideoElement | null>(null);
   const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
 
   useEffect(() => {
