@@ -160,6 +160,8 @@ const COFFEE_ANECDOTES = [
   { tag: "Éthiopie", title: "La cérémonie du café", body: "Au pays d'origine, le café se partage en trois services rituels — un moment de paix, de paroles et de transmission qui peut durer des heures." },
   { tag: "Bien-être", title: "Une boisson amie du cœur", body: "Consommé avec mesure, le café est associé à un risque réduit de maladies cardiovasculaires selon plusieurs études internationales." },
   { tag: "Geisha", title: "Le café le plus rare du monde", body: "La variété Geisha, cultivée en Éthiopie puis au Panama, peut atteindre 10 000 € le kilo — pour ses notes florales d'exception." },
+  { tag: "En boutique", title: "Repartez avec le café que vous buvez", body: "Vous savez qu'ici vous pouvez repartir avec le café que vous buvez, en grain ? En ce moment dans nos silos : le Moka Sidamo, fruité et floral." },
+  { tag: "Le saviez-vous", title: "Café en grain, fraîcheur préservée", body: "Un café moulu perd 60 % de ses arômes en moins de 15 minutes. C'est pour cela que nous vous proposons nos cafés en grain, à moudre au moment de l'extraction." },
 ];
 
 // 3 actualités positives du jour (curaté maison, à actualiser)
