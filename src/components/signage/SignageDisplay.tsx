@@ -1,4 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import productCafeEthiopie from "@/assets/product-cafe-ethiopie.jpg";
+import productTheTsars from "@/assets/product-the-tsars.jpg";
+import productTheChat from "@/assets/product-the-chat.jpg";
+import productInfusionVergers from "@/assets/product-infusion-vergers.jpg";
 
 // ============ Types & constants ============
 
@@ -119,14 +123,12 @@ const TICKER = [
   "Boutique en ligne · maisonmaitre.com",
 ];
 
-// Produits coup de cœur de maisonmaitre.com
+// Produits coup de cœur de maisonmaitre.com — uniquement ceux avec photo
 const PRODUCTS_TO_TRY = [
-  { cat: "Café", name: "Éthiopie Yirgacheffe Heirloom Nature", note: "Jasmin · Pêche · Miel" },
-  { cat: "Café", name: "Colombie Huila Bourbon Rose Nature", note: "Cerise noire · Framboise · Cacao" },
-  { cat: "Thé noir", name: "Banquet des Tsars", note: "Bergamote & agrumes" },
-  { cat: "Thé vert", name: "Le Chat Heureux", note: "Notre incontournable" },
-  { cat: "Infusion", name: "Délice des Vergers", note: "Framboise · Hibiscus" },
-  { cat: "Rooibos", name: "Splendeur d'Abyssinie", note: "Moka · Chocolat blanc" },
+  { cat: "Café", name: "Éthiopie Yirgacheffe", note: "Jasmin · Pêche · Miel", img: productCafeEthiopie },
+  { cat: "Thé noir", name: "Banquet des Tsars", note: "Bergamote & agrumes", img: productTheTsars },
+  { cat: "Thé vert", name: "Le Chat Heureux", note: "Notre incontournable", img: productTheChat },
+  { cat: "Infusion", name: "Délice des Vergers", note: "Framboise · Hibiscus", img: productInfusionVergers },
 ];
 
 
@@ -342,7 +344,7 @@ const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
-  const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/`;
+  const src = `https://www.instagram.com/reel/${reelId}/embed/captioned/?autoplay=1&muted=1`;
 
   return (
     <div className="absolute inset-0 flex" style={{ backgroundColor: "hsl(var(--cream))" }}>
@@ -505,23 +507,35 @@ const ProductsScene = () => (
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-10 grid grid-cols-3 gap-6" style={{ height: 460 }}>
+    <div className="mt-8 grid grid-cols-4 gap-6" style={{ height: 520 }}>
       {PRODUCTS_TO_TRY.map((p) => (
         <div
           key={p.name}
-          className="flex flex-col justify-between rounded-sm p-7"
-          style={{ backgroundColor: "rgba(46,36,25,0.06)", border: "1px solid rgba(46,36,25,0.12)" }}
+          className="flex flex-col overflow-hidden rounded-sm"
+          style={{ backgroundColor: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.12)" }}
         >
-          <div>
-            <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
-              {p.cat}
-            </div>
-            <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 26, color: "hsl(var(--espresso))" }}>
-              {p.name}
-            </div>
+          <div className="relative w-full overflow-hidden" style={{ height: 300, backgroundColor: "rgba(46,36,25,0.08)" }}>
+            <img
+              src={p.img}
+              alt={p.name}
+              loading="lazy"
+              width={768}
+              height={768}
+              className="h-full w-full object-cover"
+            />
           </div>
-          <div className="mt-4 font-serif-display italic" style={{ fontSize: 18, color: "hsl(var(--taupe))" }}>
-            {p.note}
+          <div className="flex flex-1 flex-col justify-between p-5">
+            <div>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+                {p.cat}
+              </div>
+              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 22, color: "hsl(var(--espresso))" }}>
+                {p.name}
+              </div>
+            </div>
+            <div className="mt-3 font-serif-display italic" style={{ fontSize: 16, color: "hsl(var(--taupe))" }}>
+              {p.note}
+            </div>
           </div>
         </div>
       ))}
