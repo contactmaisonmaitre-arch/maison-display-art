@@ -691,33 +691,32 @@ const ProductsScene = () => (
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-10 grid grid-cols-4 gap-7" style={{ height: 560 }}>
-      {PRODUCTS_TO_TRY.map((p) => (
+    <div className="mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
+      {PRODUCTS_TO_TRY.slice(0, 3).map((p) => (
         <div
           key={p.name}
           className="flex flex-col overflow-hidden rounded-sm"
-          style={{ backgroundColor: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.12)" }}
+          style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(46,36,25,0.12)", boxShadow: "0 14px 40px rgba(46,36,25,0.10)" }}
         >
-          <div className="relative w-full overflow-hidden" style={{ height: 330, backgroundColor: "rgba(46,36,25,0.08)" }}>
+          <div className="relative w-full overflow-hidden" style={{ height: 460, backgroundColor: "#FAF6EE" }}>
             <img
               src={p.img}
               alt={p.name}
               loading="lazy"
-              width={768}
-              height={768}
-              className="h-full w-full object-cover"
+              className="h-full w-full"
+              style={{ objectFit: "contain", padding: 18 }}
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-6">
+          <div className="flex flex-1 flex-col justify-between p-7">
             <div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
-              <div className="mt-2 font-serif-display leading-tight" style={{ fontSize: 34, color: "hsl(var(--espresso))" }}>
+              <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 42, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
             </div>
-            <div className="mt-3 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
+            <div className="mt-4 font-serif-display italic" style={{ fontSize: 28, color: "hsl(var(--taupe))" }}>
               {p.note}
             </div>
           </div>
