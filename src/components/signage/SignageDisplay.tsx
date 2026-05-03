@@ -72,10 +72,10 @@ const safeSetStorage = (key: string, value: string) => {
 };
 
 const DAILY = [
-  { tag: "Café", name: "Éthiopie Yirgacheffe — fruité, floral, agrumes" },
-  { tag: "Thé", name: "Darjeeling First Flush · Thé des Maîtres 2025" },
-  { tag: "Vin", name: "Domaine Marcel Lapierre — Morgon nature" },
-  { tag: "Four", name: "Brownie noisette & fleur de sel" },
+  { tag: "Café des Maitre", name: "Moka Sidamo — fruité, floral, notes d'agrumes" },
+  { tag: "Thé des Maitre", name: "Darjeeling First Flush — récolte 2025" },
+  { tag: "Vin nature", name: "Domaine Marcel Lapierre — Morgon" },
+  { tag: "Sapidité", name: "Brownie noisette & fleur de sel" },
 ];
 
 // Fête du jour (saint patron)
