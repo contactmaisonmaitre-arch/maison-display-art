@@ -971,8 +971,67 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
       return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
     case "review":
       return <ReviewScene />;
+    case "tv":
+      return <TvTonightScene />;
   }
 };
+
+// ============ Ce soir à la TV — recommandations qualité ============
+const TvTonightScene = () => (
+  <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #1A1410 0%, #2E2419 60%, #0E0805 100%)" }}>
+    <div
+      className="pointer-events-none absolute"
+      style={{ top: "-15%", left: "-10%", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 65%)" }}
+    />
+    <div className="relative">
+      <div className="flex items-center gap-5">
+        <div style={{ fontSize: 54 }}>📺</div>
+        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          Ce soir à la télé · Notre sélection
+        </div>
+      </div>
+      <h2 className="mt-8 font-serif-display leading-[1]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
+        <span className="font-semibold">Cinq chaînes</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour bien finir la journée.</span>
+      </h2>
+      <p className="mt-6 max-w-[1200px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
+        Loin du bruit, voici ce qui vaut la peine d'être regardé — culture, débats, musique, idées.
+      </p>
+
+      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 460 }}>
+        {TV_TONIGHT.map((p, i) => (
+          <div
+            key={p.channel}
+            className="flex flex-col rounded-sm p-7"
+            style={{
+              backgroundColor: "rgba(242,237,228,0.06)",
+              border: "1px solid rgba(184,150,90,0.25)",
+              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
+            }}
+          >
+            <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
+              {p.slot}
+            </div>
+            <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 38, fontWeight: 600, color: "hsl(var(--linen))" }}>
+              {p.channel}
+            </div>
+            <div className="mt-5 font-serif-display" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.88)" }}>
+              {p.title}
+            </div>
+            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(184,150,90,0.75)", lineHeight: 1.3 }}>
+              {p.note}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
+        Maison Maitre · Le bon goût, jusqu'au canapé
+      </div>
+    </div>
+  </div>
+);
 
 // ============ Center panel ============
 
