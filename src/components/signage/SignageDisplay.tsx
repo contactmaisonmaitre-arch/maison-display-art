@@ -434,14 +434,15 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
 const REEL_FRAME_COUNTS: Record<string, number> = {
-  DXtn06bIgtd: 24,
-  DXjAgNRirlr: 14,
-  DXPVGNDioOU: 24,
+  DXtn06bIgtd: 1494,
+  DXjAgNRirlr: 173,
+  DXPVGNDioOU: 1282,
 };
+const REEL_FPS = 12;
 
 const reelFrame = (reelId: string, frame: number) => {
   const count = REEL_FRAME_COUNTS[reelId] ?? 1;
-  const n = ((frame % count) + 1).toString().padStart(2, "0");
+  const n = ((frame % count) + 1).toString().padStart(3, "0");
   return `${REELS_PATH}/frames/${reelId}-${n}.jpg`;
 };
 
@@ -450,13 +451,24 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
   const reelId = INSTAGRAM_REELS[idx];
   const [frame, setFrame] = useState(0);
 
+  // Précharge agressive des prochaines images pour éviter les saccades sur TV
+  useEffect(() => {
+    if (!active) return;
+    const count = REEL_FRAME_COUNTS[reelId] ?? 1;
+    const ahead = Math.min(count, 36);
+    for (let i = 0; i < ahead; i++) {
+      const img = new Image();
+      img.src = reelFrame(reelId, frame + i);
+    }
+  }, [active, reelId, frame]);
+
   useEffect(() => {
     if (!active) {
       setFrame(0);
       return;
     }
     setFrame(0);
-    const t = window.setInterval(() => setFrame((f) => f + 1), 850);
+    const t = window.setInterval(() => setFrame((f) => f + 1), Math.round(1000 / REEL_FPS));
     return () => window.clearInterval(t);
   }, [active, reelId]);
 
