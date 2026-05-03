@@ -489,29 +489,29 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
         }}
       />
       <div
-        className="relative flex h-full flex-col justify-center px-24"
+        className="relative flex h-full flex-col justify-center px-28 pb-24 pt-36"
         style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}
       >
         <div className="flex items-center gap-5">
-          <div style={{ fontSize: 56 }}>☕</div>
-          <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-          <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          <div style={{ fontSize: 70 }}>☕</div>
+          <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+          <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
             {a.tag} · L'art du café
           </div>
         </div>
         <h2
           className="mt-10 font-serif-display leading-[1.02]"
-          style={{ fontSize: 110, fontWeight: 600, color: "hsl(var(--linen))" }}
+          style={{ fontSize: 132, fontWeight: 600, color: "hsl(var(--linen))" }}
         >
           {a.title}
         </h2>
         <p
-          className="mt-10 max-w-[1300px] font-serif-display italic"
-          style={{ fontSize: 38, lineHeight: 1.4, color: "rgba(242,237,228,0.78)" }}
+          className="mt-10 max-w-[1360px] font-serif-display italic"
+          style={{ fontSize: 48, lineHeight: 1.3, color: "rgba(242,237,228,0.82)" }}
         >
           {a.body}
         </p>
-        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.42em", color: "rgba(184,150,90,0.6)" }}>
+        <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 17, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
           Maison Maître · Le café autrement
         </div>
       </div>
@@ -525,24 +525,24 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
     (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + i) % GOOD_NEWS_OF_THE_DAY.length]
   );
   return (
-    <div className="absolute inset-0 px-20 py-16" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
+    <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
       <div className="flex items-center gap-5">
-        <div style={{ fontSize: 44 }}>✦</div>
-        <div style={{ width: 72, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+        <div style={{ fontSize: 54 }}>✦</div>
+        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
           Trois bonnes nouvelles du jour
         </div>
       </div>
-      <h2 className="mt-5 font-serif-display leading-[1.05]" style={{ fontSize: 80, color: "hsl(var(--ink))" }}>
+      <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
         <span className="font-semibold">Le monde va</span>{" "}
         <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>aussi bien.</span>
       </h2>
 
-      <div className="mt-12 grid grid-cols-3 gap-8" style={{ height: 540 }}>
+      <div className="mt-12 grid grid-cols-3 gap-9" style={{ height: 545 }}>
         {items.map((n, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-sm p-8"
+            className="flex flex-col rounded-sm p-9"
             style={{
               backgroundColor: "rgba(46,36,25,0.05)",
               border: "1px solid rgba(46,36,25,0.15)",
@@ -556,19 +556,19 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
               >
                 {i + 1}
               </div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+              <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
                 {n.tag}
               </div>
             </div>
             <h3
               className="mt-7 font-serif-display leading-[1.1]"
-              style={{ fontSize: 36, fontWeight: 600, color: "hsl(var(--espresso))" }}
+              style={{ fontSize: 44, fontWeight: 600, color: "hsl(var(--espresso))" }}
             >
               {n.title}
             </h3>
             <p
               className="mt-5 font-serif-display italic"
-              style={{ fontSize: 20, lineHeight: 1.5, color: "hsl(var(--taupe))" }}
+              style={{ fontSize: 27, lineHeight: 1.35, color: "hsl(var(--taupe))" }}
             >
               {n.body}
             </p>
