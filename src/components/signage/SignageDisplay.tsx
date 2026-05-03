@@ -133,12 +133,17 @@ const TICKER = [
   "Boutique en ligne · maisonmaitre.com",
 ];
 
-// Produits coup de cœur de maisonmaitre.com — uniquement ceux avec photo
+// Produits réels — extraits de maisonmaitre.com (images depuis le CDN Shopify, copiées dans /public/products)
 const PRODUCTS_TO_TRY = [
-  { cat: "Café", name: "Éthiopie Yirgacheffe", note: "Jasmin · Pêche · Miel", img: productCafeEthiopie },
-  { cat: "Thé noir", name: "Banquet des Tsars", note: "Bergamote & agrumes", img: productTheTsars },
-  { cat: "Thé vert", name: "Le Chat Heureux", note: "Notre incontournable", img: productTheChat },
-  { cat: "Infusion", name: "Délice des Vergers", note: "Framboise · Hibiscus", img: productInfusionVergers },
+  { cat: "Café d'Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 €",        img: "/products/cafe-ethiopie.png" },
+  { cat: "Café de Colombie", name: "Huila Bourbon Rose",       note: "Cerise noire · Framboise · Cacao · 16 €",img: "/products/cafe-colombie-bourbon.png" },
+  { cat: "Café de Colombie", name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 €",img: "/products/cafe-colombie-castillo.gif" },
+  { cat: "Thé noir",         name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 €",          img: "/products/the-tsars.png" },
+  { cat: "Thé vert",         name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 €",          img: "/products/the-chat.png" },
+  { cat: "Infusion",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 93,50 €/kg",      img: "/products/infusion-vergers.png" },
+  { cat: "Thé noir floral",  name: "Eden Floral",              note: "Rose & Pivoine · 100g",                  img: "/products/eden-floral.png" },
+  { cat: "Thé caramel",      name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 €",          img: "/products/douceur-salee.png" },
+  { cat: "Boutique",         name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",           img: "/products/mug-emaille.png" },
 ];
 
 
