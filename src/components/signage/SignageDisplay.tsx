@@ -456,19 +456,55 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
+// Précharge les MP4 des Reels une seule fois (cache navigateur)
+const reelBlobCache: Record<string, string> = {};
+const reelLoadingPromises: Record<string, Promise<string>> = {};
+const preloadReel = (reelId: string): Promise<string> => {
+  if (reelBlobCache[reelId]) return Promise.resolve(reelBlobCache[reelId]);
+  if (reelLoadingPromises[reelId]) return reelLoadingPromises[reelId];
+  const p = fetch(`${REELS_PATH}/${reelId}.mp4`)
+    .then((r) => r.blob())
+    .then((b) => {
+      const url = URL.createObjectURL(b);
+      reelBlobCache[reelId] = url;
+      return url;
+    })
+    .catch(() => `${REELS_PATH}/${reelId}.mp4`);
+  reelLoadingPromises[reelId] = p;
+  return p;
+};
+// Précharge tous les reels au démarrage du module
+if (typeof window !== "undefined") {
+  INSTAGRAM_REELS.forEach((id) => preloadReel(id));
+}
+
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
+  const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
   const [vidEl, setVidEl] = useState<HTMLVideoElement | null>(null);
+  const [videoSrc, setVideoSrc] = useState<string>(reelBlobCache[reelId] || "");
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    if (active && vidEl) {
+    let cancelled = false;
+    setLoaded(false);
+    preloadReel(reelId).then((url) => {
+      if (!cancelled) setVideoSrc(url);
+    });
+    // précharge aussi le suivant
+    preloadReel(nextId);
+    return () => { cancelled = true; };
+  }, [reelId, nextId]);
+
+  useEffect(() => {
+    if (active && vidEl && videoSrc) {
       try {
         vidEl.currentTime = 0;
         vidEl.play().catch(() => {});
       } catch {}
     }
-  }, [active, vidEl, reelId]);
+  }, [active, vidEl, videoSrc, reelId]);
 
   return (
     <div
@@ -499,15 +535,27 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             <video
               ref={setVidEl}
               key={reelId}
-              src={`${REELS_PATH}/${reelId}.mp4`}
+              src={videoSrc || undefined}
+              poster={`${REELS_PATH}/${reelId}.jpg`}
               autoPlay
               loop
               muted
               playsInline
               preload="auto"
+              onLoadedData={() => setLoaded(true)}
+              onCanPlay={() => setLoaded(true)}
               className="h-full w-full"
-              style={{ objectFit: "cover" }}
+              style={{ objectFit: "cover", opacity: loaded ? 1 : 0, transition: "opacity 0.4s ease" }}
             />
+            {/* Poster image affichée tant que la vidéo n'est pas prête */}
+            {!loaded && (
+              <img
+                src={`${REELS_PATH}/${reelId}.jpg`}
+                alt=""
+                className="absolute inset-0 h-full w-full"
+                style={{ objectFit: "cover" }}
+              />
+            )}
           </div>
         </div>
 
