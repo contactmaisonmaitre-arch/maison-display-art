@@ -213,7 +213,7 @@ const GOOD_NEWS_OF_THE_DAY = [
 ];
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review";
 interface Scene {
   type: SceneType;
   duration: number;
@@ -239,6 +239,7 @@ const SCENES: Scene[] = [
   { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: 1 },
   { type: "épicerie", duration: 13000 },
+  { type: "review", duration: 20000 },
   { type: "chatperche", duration: 13000 },
 ];
 
@@ -733,6 +734,70 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
   );
 };
 
+const REVIEW_URL = "https://maps.app.goo.gl/SBPvWavn536mCHmt9";
+const FIVE_STAR_REVIEWS: { name: string; text: string }[] = [
+  { name: "Camille D.", text: "Une adresse rare. Café d'exception, accueil chaleureux, sélection de vins natures pointue. On revient à coup sûr." },
+  { name: "Thomas L.", text: "Le meilleur café de la ville, sans hésiter. L'équipe est passionnée et de bon conseil. Une vraie maison." },
+  { name: "Sophie M.", text: "Un lieu magnifique, des produits d'épicerie fine triés sur le volet. Mon arrêt préféré du quartier." },
+  { name: "Antoine R.", text: "Service impeccable, ambiance feutrée, et des thés à tomber. Maison Maître mérite ses 5 étoiles." },
+  { name: "Élise B.", text: "Tout est juste : le café, les vins, la lumière, les gens. Une parenthèse délicieuse à chaque visite." },
+];
+
+const ReviewScene = () => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 3500);
+    return () => clearInterval(t);
+  }, []);
+  const r = FIVE_STAR_REVIEWS[idx];
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=600x600&margin=10&data=${encodeURIComponent(REVIEW_URL)}`;
+  return (
+    <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
+      <div className="flex items-center gap-5">
+        <div style={{ fontSize: 54 }}>★</div>
+        <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
+          Votre avis compte
+        </div>
+      </div>
+      <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
+        <span className="font-semibold">Laissez-nous</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>5 étoiles.</span>
+      </h2>
+
+      <div className="mt-10 grid gap-12" style={{ gridTemplateColumns: "auto 1fr", height: 600 }}>
+        {/* QR */}
+        <div className="flex flex-col items-center justify-center rounded-sm p-8" style={{ backgroundColor: "hsl(var(--linen))", border: "2px solid hsl(var(--gold))" }}>
+          <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460 }} />
+          <div className="mt-5 font-sans-ui uppercase text-center" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--espresso))" }}>
+            Scannez pour<br/>laisser un avis
+          </div>
+        </div>
+        {/* Reviews */}
+        <div className="flex flex-col rounded-sm p-10" style={{ backgroundColor: "rgba(46,36,25,0.05)", border: "1px solid rgba(46,36,25,0.15)" }}>
+          <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+            Derniers avis ★★★★★
+          </div>
+          <div key={idx} className="mt-6 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.7s ease-out both" }}>
+            <div style={{ fontSize: 54, color: "#E8B548", letterSpacing: 6 }}>★★★★★</div>
+            <p className="mt-6 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.3, color: "hsl(var(--espresso))" }}>
+              « {r.text} »
+            </p>
+            <div className="mt-6 font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.32em", color: "hsl(var(--taupe))" }}>
+              — {r.name}
+            </div>
+          </div>
+          <div className="mt-4 flex gap-2">
+            {FIVE_STAR_REVIEWS.map((_, i) => (
+              <div key={i} style={{ width: 28, height: 4, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(46,36,25,0.15)" }} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
     case "café":
@@ -755,6 +820,8 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
       return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
     case "chatperche":
       return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
+    case "review":
+      return <ReviewScene />;
   }
 };
 
