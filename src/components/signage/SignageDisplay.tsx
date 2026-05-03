@@ -432,9 +432,47 @@ const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [ready, setReady] = useState(false);
+  const [failed, setFailed] = useState(false);
+
+  // Force play attempts (TV browsers can ignore autoplay otherwise)
+  useEffect(() => {
+    if (!active) return;
+    setReady(false);
+    setFailed(false);
+    const v = videoRef.current;
+    if (!v) return;
+    let cancelled = false;
+    const tryPlay = () => {
+      if (cancelled || !v) return;
+      const p = v.play();
+      if (p && typeof p.catch === "function") {
+        p.catch(() => {
+          // retry shortly
+          setTimeout(tryPlay, 600);
+        });
+      }
+    };
+    // small delay so the element is in the DOM
+    const t = setTimeout(tryPlay, 100);
+    return () => { cancelled = true; clearTimeout(t); };
+  }, [active, reelId]);
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center px-28 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--ink))" }}>
+    <div
+      className="absolute inset-0 flex items-center justify-center px-28 pb-24 pt-36"
+      style={{
+        backgroundColor: "hsl(var(--ink))",
+        // Poster as background so we never see pure black, even if the video stalls
+        backgroundImage: `url(/reels/${reelId}.jpg)`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* dark veil over background poster */}
+      <div className="absolute inset-0" style={{ backgroundColor: "rgba(10,8,6,0.78)", backdropFilter: "blur(14px)" }} />
+
       <div className="absolute left-20 top-36 z-10 flex items-center gap-5">
         <div
           className="flex items-center justify-center rounded-full font-serif-display text-linen"
@@ -449,26 +487,49 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
           </div>
         </div>
       </div>
-      <div className="relative flex h-full w-full items-center justify-center">
-        {active && (
-          <video
-            key={reelId}
-            src={`/reels/${reelId}.mp4`}
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="auto"
-            style={{
-              height: "96%",
-              maxHeight: "820px",
-              width: "auto",
-              maxWidth: "100%",
-              objectFit: "contain",
-              borderRadius: 10,
-              boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
-            }}
-          />
+
+      <div className="relative z-10 flex h-full w-full items-center justify-center">
+        <video
+          ref={videoRef}
+          key={reelId}
+          src={`/reels/${reelId}.mp4`}
+          poster={`/reels/${reelId}.jpg`}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onCanPlay={() => setReady(true)}
+          onPlaying={() => setReady(true)}
+          onError={() => setFailed(true)}
+          style={{
+            height: "96%",
+            maxHeight: "820px",
+            width: "auto",
+            maxWidth: "100%",
+            objectFit: "contain",
+            borderRadius: 10,
+            boxShadow: "0 30px 80px rgba(0,0,0,0.5)",
+            backgroundColor: "#000",
+            // Fallback poster shown by the <video> element while loading
+          }}
+        />
+        {/* Loading hint (only briefly) */}
+        {!ready && !failed && (
+          <div
+            className="pointer-events-none absolute font-sans-ui uppercase"
+            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
+          >
+            Chargement…
+          </div>
+        )}
+        {failed && (
+          <div
+            className="pointer-events-none absolute font-sans-ui uppercase"
+            style={{ bottom: 40, fontSize: 16, letterSpacing: "0.32em", color: "rgba(242,237,228,0.6)" }}
+          >
+            @maison_maitre · Instagram
+          </div>
         )}
       </div>
     </div>
