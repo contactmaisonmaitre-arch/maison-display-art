@@ -679,7 +679,10 @@ const TeaScene = ({ now }: { now: Date }) => {
   );
 };
 
-const ProductsScene = () => (
+const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
+  const total = PRODUCTS_TO_TRY.length;
+  const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
+  return (
   <div className="absolute inset-0 px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
     <div className="flex items-center gap-6">
       <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
@@ -692,7 +695,7 @@ const ProductsScene = () => (
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
     <div className="mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
-      {PRODUCTS_TO_TRY.slice(0, 3).map((p) => (
+      {items.map((p) => (
         <div
           key={p.name}
           className="flex flex-col overflow-hidden rounded-sm"
