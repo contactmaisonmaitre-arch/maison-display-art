@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-// Reels Instagram @maison_maitre — images animées, plus compatibles avec les navigateurs TV que les MP4.
+// Reels Instagram @maison_maitre
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
 
@@ -22,57 +22,98 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge uniquement les formats image : certaines TV affichent un écran noir au lieu de lire les MP4.
+// Précharge la vidéo et le poster pour minimiser le flash entre reels
 const preloadReelAssets = (reelId: string) => {
   if (typeof window === "undefined") return;
-  [`${REELS_PATH}/${reelId}.webp`, `${REELS_PATH}/${reelId}.gif`, `${REELS_PATH}/${reelId}.jpg`].forEach((href) => {
+  const links: { href: string; as: string; type?: string }[] = [
+    { href: `${REELS_PATH}/${reelId}.mp4`, as: "video", type: "video/mp4" },
+    { href: `${REELS_PATH}/${reelId}.jpg`, as: "image" },
+  ];
+  for (const { href, as, type } of links) {
     const link = document.createElement("link");
     link.rel = "preload";
-    link.as = "image";
+    link.as = as;
+    if (type) link.type = type;
     link.href = href;
     document.head.appendChild(link);
-  });
+  }
 };
 if (typeof window !== "undefined") INSTAGRAM_REELS.forEach(preloadReelAssets);
+
+type FallbackStage = "video" | "webp" | "gif" | "jpg";
 
 export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const idx = reelIndex % INSTAGRAM_REELS.length;
   const reelId = INSTAGRAM_REELS[idx];
   const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
-  const [fallbackSrc, setFallbackSrc] = useState<string>(`${REELS_PATH}/${reelId}.webp`);
 
+  const [stage, setStage] = useState<FallbackStage>("video");
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  // Reset à chaque changement de reel + précharge le suivant
   useEffect(() => {
-    setFallbackSrc(`${REELS_PATH}/${reelId}.webp`);
+    setStage("video");
     preloadReelAssets(reelId);
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
-  // Cette prop est conservée pour permettre des optimisations futures (lazy mount, autoplay).
-  void active;
+  // Pause la vidéo quand la scène devient inactive (économise CPU/GPU sur TV)
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (active) {
+      const p = v.play();
+      if (p && typeof p.catch === "function") p.catch(() => setStage("webp"));
+    } else {
+      v.pause();
+    }
+  }, [active, stage]);
+
+  const fallbackTo = (next: FallbackStage) => setStage(next);
+
+  // Source d'image fallback selon l'étape
+  const fallbackSrc =
+    stage === "webp"
+      ? `${REELS_PATH}/${reelId}.webp`
+      : stage === "gif"
+        ? `${REELS_PATH}/${reelId}.gif`
+        : `${REELS_PATH}/${reelId}.jpg`;
 
   return (
     <div
       className="absolute inset-0 overflow-hidden"
-      style={{ background: "#000" }}
+      style={{
+        background:
+          "radial-gradient(ellipse at center, #14110C 0%, #050505 70%)",
+      }}
     >
-      {/* Backdrop flouté avec la même image — pour habiller les bandes latérales */}
-      <img
-        aria-hidden
-        src={fallbackSrc}
-        alt=""
-        className="absolute inset-0 h-full w-full"
+      {/* halos doux pour habiller le fond */}
+      <div
+        className="pointer-events-none absolute"
         style={{
-          objectFit: "cover",
-          filter: "blur(48px) brightness(0.45) saturate(1.2)",
-          transform: "scale(1.15)",
+          top: "-20%",
+          left: "-10%",
+          width: 700,
+          height: 700,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 65%)",
         }}
       />
       <div
-        className="pointer-events-none absolute inset-0"
-        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%)" }}
+        className="pointer-events-none absolute"
+        style={{
+          bottom: "-25%",
+          right: "-10%",
+          width: 800,
+          height: 800,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(116,42,82,0.10) 0%, transparent 65%)",
+        }}
       />
 
-      {/* Reel plein écran, ratio 9:16 conservé, jamais coupé */}
+      {/* Cadre central — portrait 9:16, jamais coupé */}
       <div
         className="absolute inset-0 flex items-center justify-center"
         style={{ animation: "mm-fade-in 0.8s ease-out both" }}
@@ -81,23 +122,55 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           className="relative overflow-hidden"
           style={{
             aspectRatio: "9 / 16",
-            height: "96%",
-            maxWidth: "96%",
-            borderRadius: 24,
-            boxShadow: "0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.35)",
+            height: "92%",
+            maxWidth: "92%",
+            borderRadius: 28,
+            boxShadow:
+              "0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.45), 0 0 0 4px rgba(201,168,76,0.10)",
             background: "#000",
           }}
         >
-          <img
-            key={fallbackSrc}
-            src={fallbackSrc}
-            alt=""
-            className="h-full w-full"
-            onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
-            style={{ objectFit: "contain", background: "#000" }}
-          />
+          {stage === "video" ? (
+            <video
+              ref={videoRef}
+              key={reelId}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              poster={`${REELS_PATH}/${reelId}.jpg`}
+              onError={() => fallbackTo("webp")}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                background: "#000",
+                display: "block",
+              }}
+            >
+              <source src={`${REELS_PATH}/${reelId}.mp4`} type="video/mp4" />
+            </video>
+          ) : (
+            <img
+              key={`${reelId}-${stage}`}
+              src={fallbackSrc}
+              alt=""
+              onError={() => {
+                if (stage === "webp") fallbackTo("gif");
+                else if (stage === "gif") fallbackTo("jpg");
+              }}
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                background: "#000",
+                display: "block",
+              }}
+            />
+          )}
 
-          {/* Compteur REEL X/3 — top right */}
+          {/* Compteur Reel X/N — top right */}
           <div
             className="absolute top-6 right-6 font-sans-ui uppercase"
             style={{
@@ -106,32 +179,43 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
               color: "rgba(201,168,76,0.95)",
               padding: "8px 14px",
               border: "1px solid rgba(201,168,76,0.45)",
-              borderRadius: 2,
-              background: "rgba(0,0,0,0.4)",
+              borderRadius: 999,
+              background: "rgba(0,0,0,0.45)",
               backdropFilter: "blur(8px)",
             }}
           >
             Reel {idx + 1} / {INSTAGRAM_REELS.length}
           </div>
 
-          {/* Overlay bas — logo Instagram + handle + thème + CTA */}
+          {/* Overlay bas — handle + CTA */}
           <div
-            className="absolute left-0 right-0 bottom-0 flex items-center gap-5 px-8 pb-8 pt-24"
+            className="absolute left-0 right-0 bottom-0 flex items-center gap-5 px-8 pb-8 pt-28"
             style={{
-              background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.9) 100%)",
+              background:
+                "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.92) 100%)",
             }}
           >
-            <InstagramLogo size={44} />
+            <InstagramLogo size={48} />
             <div className="flex flex-col">
               <div
                 className="font-serif-display"
-                style={{ fontSize: 32, lineHeight: 1, color: "#fff", letterSpacing: "0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+                style={{
+                  fontSize: 34,
+                  lineHeight: 1,
+                  color: "#fff",
+                  letterSpacing: "0.01em",
+                  textShadow: "0 2px 12px rgba(0,0,0,0.7)",
+                }}
               >
                 @maison_maitre
               </div>
               <div
                 className="font-sans-ui uppercase mt-2"
-                style={{ fontSize: 11, letterSpacing: "0.3em", color: "rgba(201,168,76,0.9)" }}
+                style={{
+                  fontSize: 11,
+                  letterSpacing: "0.32em",
+                  color: "rgba(201,168,76,0.92)",
+                }}
               >
                 Cafés · Thés · Vins nature
               </div>
@@ -140,12 +224,13 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
               className="ml-auto font-sans-ui uppercase"
               style={{
                 fontSize: 13,
-                letterSpacing: "0.28em",
+                letterSpacing: "0.3em",
                 color: "hsl(var(--gold))",
                 padding: "14px 26px",
                 border: "1.5px solid hsl(var(--gold))",
                 borderRadius: 2,
-                background: "rgba(0,0,0,0.35)",
+                background: "rgba(0,0,0,0.4)",
+                whiteSpace: "nowrap",
               }}
             >
               Suivez-nous
