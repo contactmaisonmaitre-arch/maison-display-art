@@ -783,36 +783,52 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
   const total = PRODUCTS_TO_TRY.length;
   const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
   return (
-  <div className="absolute inset-0 px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
-    <div className="flex items-center gap-6">
-      <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
-      <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+  <div className="mm-cream absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
+    <div
+      className="pointer-events-none absolute"
+      style={{ top: "-25%", right: "-15%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.20) 0%, transparent 65%)", animation: "mm-glow 12s ease-in-out infinite" }}
+    />
+    <div className="relative flex items-center gap-6">
+      <div style={{ width: 88, height: 2, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
+      <div className="mm-eyebrow" style={{ fontSize: 20, color: "hsl(var(--gold))" }}>
         À découvrir · maisonmaitre.com
       </div>
     </div>
-    <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 94, color: "hsl(var(--ink))" }}>
+    <h2 className="relative mt-6 font-serif-display leading-[1]" style={{ fontSize: 100, color: "hsl(var(--ink))" }}>
       <span className="font-semibold">Nos coups de cœur</span>{" "}
       <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
     </h2>
-    <div className="mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
-      {items.map((p) => (
+    <div className="relative mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
+      {items.map((p, i) => (
         <div
           key={p.name}
-          className="flex flex-col overflow-hidden rounded-sm"
-          style={{ backgroundColor: "#FFFFFF", border: "1px solid rgba(46,36,25,0.12)", boxShadow: "0 14px 40px rgba(46,36,25,0.10)" }}
+          className="group relative flex flex-col overflow-hidden rounded-2xl"
+          style={{
+            background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
+            border: "1px solid rgba(184,150,90,0.25)",
+            boxShadow: "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
+            animation: `mm-slide-up 0.9s ease-out ${0.15 + i * 0.12}s both`,
+          }}
         >
-          <div className="relative w-full overflow-hidden" style={{ height: 460, backgroundColor: "#FAF6EE" }}>
+          <div className="absolute top-5 left-5 mm-eyebrow z-10" style={{ fontSize: 11, color: "hsl(var(--gold))", background: "rgba(255,255,255,0.85)", padding: "6px 12px", borderRadius: 999, border: "1px solid rgba(184,150,90,0.3)" }}>
+            0{i + 1}
+          </div>
+          <div className="relative w-full overflow-hidden" style={{ height: 460, background: "radial-gradient(circle at 50% 40%, #FFFDF7 0%, #F2EADA 100%)" }}>
+            <div
+              className="pointer-events-none absolute inset-0"
+              style={{ background: "radial-gradient(circle at 50% 80%, rgba(46,36,25,0.18) 0%, transparent 55%)" }}
+            />
             <img
               src={p.img}
               alt={p.name}
               loading="lazy"
               className="h-full w-full"
-              style={{ objectFit: "contain", padding: 18 }}
+              style={{ objectFit: "contain", padding: 22, filter: "drop-shadow(0 18px 30px rgba(46,36,25,0.25))" }}
             />
           </div>
-          <div className="flex flex-1 flex-col justify-between p-7">
+          <div className="flex flex-1 flex-col justify-between p-8">
             <div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
+              <div className="mm-eyebrow" style={{ fontSize: 14, color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
               <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 42, color: "hsl(var(--espresso))" }}>
@@ -826,7 +842,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
         </div>
       ))}
     </div>
-    <div className="mt-7 font-sans-ui uppercase text-center" style={{ fontSize: 17, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
+    <div className="relative mt-7 mm-eyebrow text-center" style={{ fontSize: 17, color: "hsl(var(--mink))" }}>
       Commande en ligne · maisonmaitre.com
     </div>
   </div>
