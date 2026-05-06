@@ -2,6 +2,7 @@ import { memo } from "react";
 import type { Scene, WeatherData } from "@/types/signage";
 import { TextSlide } from "./TextSlide";
 import { WeatherScene } from "./WeatherScene";
+import { WineScene } from "./WineScene";
 import { TeaScene } from "./TeaScene";
 import { InstagramScene } from "./InstagramScene";
 import { AnecdoteScene } from "./AnecdoteScene";
@@ -30,7 +31,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
     case "produits":
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
-      return <TextSlide bg="linear-gradient(135deg, #C0A8B0, #704050, #2A1020)" tag="Vins Naturels" titleStart="Le vin comme" titleItalic="il devrait être." body="Vignerons engagés — Marcel Lapierre, Jean Foillard, Overnoy-Houillon, Yvon Métras." />;
+      return <WineScene />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":

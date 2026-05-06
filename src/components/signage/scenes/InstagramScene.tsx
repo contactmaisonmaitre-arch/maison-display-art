@@ -57,17 +57,24 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
-  // Pause la vidéo quand la scène devient inactive (économise CPU/GPU sur TV)
+  // Pause la vidéo quand la scène devient inactive (économise CPU/GPU sur TV).
+  // Si la vidéo ne démarre pas en 2,5 s, on bascule sur le webp animé : protège
+  // contre les TV qui ne savent pas décoder le mp4 mais ne lèvent pas d'erreur.
   useEffect(() => {
+    if (stage !== "video") return;
     const v = videoRef.current;
     if (!v) return;
-    if (active) {
-      const p = v.play();
-      if (p && typeof p.catch === "function") p.catch(() => setStage("webp"));
-    } else {
+    if (!active) {
       v.pause();
+      return;
     }
-  }, [active, stage]);
+    const p = v.play();
+    if (p && typeof p.catch === "function") p.catch(() => setStage("webp"));
+    const watchdog = window.setTimeout(() => {
+      if (v.paused || v.currentTime < 0.05) setStage("webp");
+    }, 2500);
+    return () => window.clearTimeout(watchdog);
+  }, [active, stage, reelId]);
 
   const fallbackTo = (next: FallbackStage) => setStage(next);
 

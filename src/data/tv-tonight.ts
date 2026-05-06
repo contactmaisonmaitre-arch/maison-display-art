@@ -9,6 +9,8 @@ export interface TvProgram {
   pick: string;
 }
 
+// Sélection éditoriale Maison Maître — café, vin nature, terroir, gastronomie.
+// La scène TV en pioche 5 au hasard à chaque démarrage du display.
 export const TV_TONIGHT: TvProgram[] = [
   {
     channel: "Arte",
@@ -48,6 +50,62 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DÉBAT",
     title: "Agriculture naturelle : les pionniers",
     note: "Agriculteurs qui abandonnent les pesticides : cafés, vignes, maraîchers bio engagés.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "Arte",
+    slot: "22h25",
+    kind: "DOCUMENTAIRE",
+    title: "À l'ombre des caféiers",
+    note: "Plongée chez les coopératives 100 % féminines du Burundi et du Rwanda — café d'Afrique de l'Est, parité, terroir d'altitude.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "France 3",
+    slot: "20h55",
+    kind: "DOCUMENTAIRE",
+    title: "Jura, le vignoble qui ne ressemble à aucun autre",
+    note: "Savagnin, vin jaune, ouillé / non ouillé : tout ce qu'il faut savoir du plus singulier des vignobles français.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "France 5",
+    slot: "21h00",
+    kind: "SÉRIE",
+    title: "L'art du fromage",
+    note: "Le Comté AOP, le Mont d'Or, le Morbier — voyage dans les tommes du Massif jurassien et leur affinage.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "Arte",
+    slot: "21h45",
+    kind: "DOCUMENTAIRE",
+    title: "Tokyo, capitale du slow coffee",
+    note: "Filtre lent, Kissaten, baristas obsédés par 0,1 g — la scène café japonaise, la plus exigeante du monde.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "France Inter",
+    slot: "20h00",
+    kind: "ÉMISSION",
+    title: "On va déguster",
+    note: "François-Régis Gaudry et son équipe — chaque dimanche, deux heures sur la cuisine, le vin, le café et leurs artisans.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "Arte",
+    slot: "23h05",
+    kind: "DOCUMENTAIRE",
+    title: "Ferments oubliés",
+    note: "Kombucha, kéfir, miso, vinaigres vivants — la révolution silencieuse du goût qui bouleverse cuisine et boisson.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "TV5 Monde",
+    slot: "20h30",
+    kind: "DOCUMENTAIRE",
+    title: "Les routes du thé",
+    note: "Du Yunnan aux jardins de Darjeeling — comment le thé voyage et change selon les terroirs et les mains qui le préparent.",
     pick: "Recommandé par Maison Maître",
   },
 ];
