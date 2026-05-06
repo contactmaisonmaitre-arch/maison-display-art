@@ -1302,6 +1302,109 @@ const ReviewScene = () => {
   );
 };
 
+// ============ Dole · Le saviez-vous ? ============
+const DOLE_FACTS: { emoji: string; title: string; body: string }[] = [
+  { emoji: "🏰", title: "Capitale historique", body: "Dole fut la capitale de la Franche-Comté pendant plus de 3 siècles, avant que Besançon ne lui ravisse ce titre en 1676." },
+  { emoji: "⚗️", title: "Louis Pasteur est né ici", body: "Le père de la pasteurisation et des vaccins modernes est né à Dole le 27 décembre 1822. Sa maison natale est aujourd'hui un musée." },
+  { emoji: "🛤️", title: "Le Canal du Rhône au Rhin", body: "Dole est traversée par le canal du Rhône au Rhin, inauguré en 1833, qui reliait Strasbourg à la Méditerranée via le Doubs." },
+  { emoji: "🦅", title: "Ville d'Art et d'Histoire", body: "Avec ses ruelles médiévales, ses hôtels particuliers du XVIe siècle et sa collégiale Notre-Dame, Dole est classée Ville d'Art et d'Histoire." },
+  { emoji: "🍷", title: "Aux portes du vignoble jurassien", body: "À 20 minutes des premières vignes du Jura, Dole est la porte d'entrée naturelle vers les vins nature, savagnin et vin jaune." },
+  { emoji: "☕", title: "Une culture du café qui renaît", body: "Maison Maître a fait de Dole une adresse de référence du café de spécialité en Bourgogne-Franche-Comté." },
+  { emoji: "🌊", title: "Le Doubs, rivière emblématique", body: "La rivière Doubs longe la vieille ville de Dole, offrant des promenades le long des berges et un paysage unique au cœur de la cité." },
+  { emoji: "🧀", title: "Terre de comté", body: "La région autour de Dole est une des zones de production du Comté AOP, le fromage le plus vendu de France avec 70 000 tonnes/an." },
+  { emoji: "🎭", title: "Une ville vivante", body: "Dole accueille chaque année festivals, marchés nocturnes et événements culturels dans ses espaces patrimoniaux uniques." },
+  { emoji: "📍", title: "Carrefour de la France", body: "Idéalement située entre Paris (2h TGV), Lyon (1h), Berne (1h30) et Genève (1h45), Dole est un carrefour stratégique de l'Est français." },
+];
+
+const DoleScene = () => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdx((i) => (i + 1) % DOLE_FACTS.length), 20000);
+    return () => clearInterval(id);
+  }, []);
+  const f = DOLE_FACTS[idx];
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          top: "-20%", left: "-10%", width: 800, height: 800, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          bottom: "-25%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(116,42,62,0.14) 0%, transparent 65%)",
+        }}
+      />
+
+      <div className="relative flex h-full flex-col items-center justify-center px-20 text-center">
+        <div
+          className="font-sans-ui uppercase"
+          style={{ fontSize: 11, letterSpacing: "0.3em", color: "#C9A84C" }}
+        >
+          Dole · Le saviez-vous ?
+        </div>
+
+        <div
+          key={idx}
+          className="flex flex-col items-center"
+          style={{ animation: "mm-fade-in 0.6s ease-out both", marginTop: 28 }}
+        >
+          <div style={{ fontSize: 96, lineHeight: 1 }}>{f.emoji}</div>
+          <h2
+            className="font-serif-display italic"
+            style={{ fontSize: "2.8rem", color: "#C9A84C", marginTop: 28, lineHeight: 1.1, letterSpacing: "-0.01em" }}
+          >
+            {f.title}
+          </h2>
+          <p
+            className="mt-8 font-sans-ui"
+            style={{ fontSize: "1.1rem", color: "#F5F0E8", maxWidth: "42rem", opacity: 0.8, lineHeight: 1.55 }}
+          >
+            {f.body}
+          </p>
+        </div>
+
+        {/* Indicateur de progression */}
+        <div className="mt-12 flex gap-1.5">
+          {DOLE_FACTS.map((_, i) => (
+            <div
+              key={i}
+              style={{
+                width: i === idx ? 24 : 6,
+                height: 3,
+                borderRadius: 2,
+                background: i === idx ? "#C9A84C" : "rgba(201,168,76,0.25)",
+                transition: "all 0.4s",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Signature Maison Maître */}
+        <div
+          className="font-serif-display italic"
+          style={{
+            position: "absolute",
+            bottom: 32,
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            fontSize: 13,
+            color: "#C9A84C",
+            opacity: 0.6,
+          }}
+        >
+          Maison Maître · Café de spécialité à Dole
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
     case "café":
