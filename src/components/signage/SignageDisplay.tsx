@@ -847,6 +847,22 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
           Maison Maitre · Le café autrement
         </div>
       </div>
+      <div
+        className="font-sans-ui uppercase"
+        style={{
+          position: "absolute",
+          bottom: 32,
+          left: 0,
+          right: 0,
+          textAlign: "center",
+          fontSize: 11,
+          letterSpacing: "0.2em",
+          color: "#C9A84C",
+          opacity: 0.65,
+        }}
+      >
+        Maison Maître · La référence du café de spécialité à Dole
+      </div>
     </div>
   );
 };
