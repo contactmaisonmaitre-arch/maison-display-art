@@ -581,17 +581,24 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
       </div>
       <div className="relative mt-12 mm-glass-light flex gap-12 rounded-2xl px-12 py-7" style={{ animation: "mm-slide-up 1s ease-out 0.4s both" }}>
         {[
-          { l: "Humidité", v: `${Math.round(w.relative_humidity_2m)}%` },
-          { l: "Vent km/h", v: `${Math.round(w.wind_speed_10m)}` },
-          { l: "Ressenti", v: `${Math.round(w.apparent_temperature)}°` },
-          { l: "Indice UV", v: `${Math.round(w.uv_index ?? 0)}` },
+          { l: "Humidité", v: Math.round(w.relative_humidity_2m), u: "%" },
+          { l: "Vent", v: Math.round(w.wind_speed_10m), u: "km/h" },
+          { l: "Ressenti", v: Math.round(w.apparent_temperature), u: "°" },
+          { l: "Indice UV", v: Math.round(w.uv_index ?? 0), u: "" },
         ].map((s, i, arr) => (
           <div key={s.l} className="flex items-center gap-12">
             <div className="text-center">
               <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--mink))" }}>{s.l}</div>
-              <div className="mt-2 font-serif-display" style={{ fontSize: 56, fontWeight: 300, color: "hsl(var(--espresso))" }}>{s.v}</div>
+              <div className="mt-2 font-serif-display tabular-nums leading-none" style={{ color: "hsl(var(--espresso))" }}>
+                <span style={{ fontSize: 88, fontWeight: 300, letterSpacing: "-0.02em" }}>{s.v}</span>
+                {s.u && (
+                  <span className="font-sans-ui" style={{ fontSize: 22, fontWeight: 400, color: "hsl(var(--gold))", marginLeft: 6, letterSpacing: "0.05em" }}>
+                    {s.u}
+                  </span>
+                )}
+              </div>
             </div>
-            {i < arr.length - 1 && <div style={{ width: 1, height: 70, background: "rgba(46,36,25,0.15)" }} />}
+            {i < arr.length - 1 && <div style={{ width: 1, height: 90, background: "rgba(46,36,25,0.15)" }} />}
           </div>
         ))}
       </div>
