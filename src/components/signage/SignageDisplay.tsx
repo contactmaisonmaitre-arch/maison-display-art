@@ -436,6 +436,23 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
     );
   }
   const w = weather.current;
+  const targetTemp = Math.round(w.temperature_2m);
+  const [displayTemp, setDisplayTemp] = useState(0);
+  useEffect(() => {
+    const start = performance.now();
+    const dur = 1400;
+    const from = 0;
+    const to = targetTemp;
+    let raf = 0;
+    const tick = (t: number) => {
+      const p = Math.min(1, (t - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDisplayTemp(Math.round(from + (to - from) * eased));
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [targetTemp]);
   return (
     <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
@@ -449,11 +466,24 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
       </div>
       <div className="relative mt-8 flex items-center gap-12" style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}>
         <div style={{ fontSize: 196, filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.25))" }}>{wmo(w.weather_code).emoji}</div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 280, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.04em" }}>
-          {Math.round(w.temperature_2m)}°
+        <div className="relative font-serif-display leading-none tabular-nums" style={{ fontSize: 360, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
+          {displayTemp}
+          <span
+            className="font-serif-display italic"
+            style={{
+              position: "absolute",
+              top: 24,
+              right: -64,
+              fontSize: 110,
+              fontWeight: 300,
+              color: "hsl(var(--copper))",
+            }}
+          >
+            °
+          </span>
         </div>
       </div>
-      <div className="relative mt-2 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
+      <div className="relative mt-6 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
         {wmo(w.weather_code).label}
       </div>
       <div className="relative mt-12 mm-glass-light flex gap-12 rounded-2xl px-12 py-7" style={{ animation: "mm-slide-up 1s ease-out 0.4s both" }}>
