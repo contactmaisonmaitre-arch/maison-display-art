@@ -1128,16 +1128,16 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
         ))}
       </div>
 
-      {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 4, background: "rgba(0,0,0,0.12)" }}>
+      {/* Bordure basse — 1px gradient or */}
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 1, background: "rgba(201,168,76,0.10)" }}>
         <div
           key={progressKey}
           className="h-full origin-left"
           style={{
-            background: "linear-gradient(90deg, hsl(var(--gold-lt)), hsl(var(--gold)), hsl(var(--gold-lt)))",
+            background: "linear-gradient(90deg, transparent 0%, hsl(var(--gold-lt)) 20%, hsl(var(--gold)) 50%, hsl(var(--gold-lt)) 80%, transparent 100%)",
             backgroundSize: "200% 100%",
             animation: `mm-progress ${SCENES[index].duration}ms linear forwards, mm-shimmer 3s linear infinite`,
-            boxShadow: "0 0 12px hsl(var(--gold) / 0.6)",
+            boxShadow: "0 0 14px hsl(var(--gold) / 0.7)",
           }}
         />
       </div>
