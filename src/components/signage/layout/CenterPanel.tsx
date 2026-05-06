@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import type { WeatherData } from "@/types/signage";
 import { SCENES } from "@/data/scenes";
 import { SceneRenderer } from "@/components/signage/scenes/SceneRenderer";
@@ -6,10 +6,9 @@ import { PaperGrain } from "./PaperGrain";
 
 interface CenterPanelProps {
   weather: WeatherData | null;
-  now: Date;
 }
 
-export const CenterPanel = ({ weather, now }: CenterPanelProps) => {
+export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
   const [index, setIndex] = useState(0);
   const [progressKey, setProgressKey] = useState(0);
 
@@ -36,7 +35,7 @@ export const CenterPanel = ({ weather, now }: CenterPanelProps) => {
               pointerEvents: active ? "auto" : "none",
             }}
           >
-            <SceneRenderer scene={scene} weather={weather} active={active} now={now} />
+            <SceneRenderer scene={scene} weather={weather} active={active} />
           </div>
         );
       })}
@@ -76,4 +75,5 @@ export const CenterPanel = ({ weather, now }: CenterPanelProps) => {
       </div>
     </main>
   );
-};
+});
+CenterPanel.displayName = "CenterPanel";

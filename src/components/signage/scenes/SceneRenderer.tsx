@@ -1,3 +1,4 @@
+import { memo } from "react";
 import type { Scene, WeatherData } from "@/types/signage";
 import { TextSlide } from "./TextSlide";
 import { WeatherScene } from "./WeatherScene";
@@ -15,10 +16,9 @@ interface SceneRendererProps {
   scene: Scene;
   weather: WeatherData | null;
   active: boolean;
-  now: Date;
 }
 
-export const SceneRenderer = ({ scene, weather, active, now }: SceneRendererProps) => {
+export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProps) => {
   switch (scene.type) {
     case "café":
       return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
@@ -33,7 +33,7 @@ export const SceneRenderer = ({ scene, weather, active, now }: SceneRendererProp
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":
-      return <TeaScene now={now} />;
+      return <TeaScene />;
     case "épicerie":
       return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
     case "instagram":
@@ -47,4 +47,5 @@ export const SceneRenderer = ({ scene, weather, active, now }: SceneRendererProp
     case "dole":
       return <DoleScene />;
   }
-};
+});
+SceneRenderer.displayName = "SceneRenderer";

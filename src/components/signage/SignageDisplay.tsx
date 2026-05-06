@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useNow } from "@/hooks/useNow";
 import { useWeather } from "@/hooks/useWeather";
 import { useFitMode, type FitMode } from "@/hooks/useFitMode";
 import { FixedTopBar } from "./layout/FixedTopBar";
@@ -12,7 +11,6 @@ const FIT_OPTIONS: { k: FitMode; label: string; desc: string }[] = [
 ];
 
 const SignageDisplay = () => {
-  const now = useNow();
   const weather = useWeather();
   const { mode, setMode, scale } = useFitMode();
   const [showCtrl, setShowCtrl] = useState(false);
@@ -50,8 +48,8 @@ const SignageDisplay = () => {
           background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)",
         }}
       >
-        <FixedTopBar now={now} />
-        <CenterPanel weather={weather} now={now} />
+        <FixedTopBar />
+        <CenterPanel weather={weather} />
       </div>
 
       {/* Mode d'affichage — visible au survol */}

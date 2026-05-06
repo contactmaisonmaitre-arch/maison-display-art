@@ -1,7 +1,10 @@
+import { memo } from "react";
 import { getSaintDuJour } from "@/data/saints";
+import { useToday } from "@/hooks/useToday";
 
-export const TeaScene = ({ now }: { now: Date }) => {
-  const saint = getSaintDuJour(now);
+export const TeaScene = memo(() => {
+  const today = useToday();
+  const saint = getSaintDuJour(today);
   return (
     <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, #B0C4A0, #507040, #182A10)" }}>
       <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(24,42,16,0.04) 0%, rgba(242,237,228,0.9) 58%, rgba(242,237,228,0.98) 100%)" }} />
@@ -36,4 +39,5 @@ export const TeaScene = ({ now }: { now: Date }) => {
       </div>
     </div>
   );
-};
+});
+TeaScene.displayName = "TeaScene";
