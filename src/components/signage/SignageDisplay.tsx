@@ -591,9 +591,9 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             className="font-serif-display"
             style={{ fontSize: 104, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.02em" }}
           >
-            <span className="font-semibold">Maison</span>
+            <span className="font-sans-ui font-light tracking-wide" style={{ fontSize: 78, letterSpacing: "0.04em" }}>Maison</span>
             <br />
-            <em className="font-light" style={{ color: "hsl(var(--gold-lt))" }}>Maitre</em>
+            <em className="font-serif-display italic" style={{ color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</em>
           </h2>
 
           <div
