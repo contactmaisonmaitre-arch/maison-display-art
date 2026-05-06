@@ -820,7 +820,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
         {items.map((p, i) => (
           <div
             key={p.name}
-            className="relative grid overflow-hidden rounded-2xl"
+            className="mm-noise relative grid overflow-hidden rounded-2xl"
             style={{
               gridTemplateColumns: "300px 1fr",
               background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
