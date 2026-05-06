@@ -767,7 +767,7 @@ const TeaScene = ({ now }: { now: Date }) => {
           <div style={{ fontSize: 48 }}>✦</div>
           <div>
             <div className="font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "hsl(var(--gold-lt))" }}>
-              Fête du jour
+              ◆ Fête du jour
             </div>
             <div className="mt-2 font-serif-display italic" style={{ fontSize: 48, fontWeight: 300 }}>
               Bonne fête {saint}
