@@ -55,6 +55,9 @@
     font-feature-settings: "liga", "dlig", "kern";
   }
   .font-serif-classic { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
+  .mm-body { font-family: 'Playfair Display', 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; letter-spacing: -0.005em; }
+  /* Tout texte italique sur Playfair passe en weight 400 (léger) */
+  .font-serif-display.italic, .font-serif-display em, .font-serif-display i { font-weight: 400; }
   .font-sans-ui { font-family: 'Jost', sans-serif; }
   .font-mono-ui { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
   .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.3em; font-weight: 400; }
