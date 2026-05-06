@@ -815,11 +815,11 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
 
 // ============ 3 actualités positives du jour ============
 const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
-  const [rotation, setRotation] = React.useState(0);
-  const [lastUpdated, setLastUpdated] = React.useState<Date>(() => new Date());
-  const [, setTick] = React.useState(0);
+  const [rotation, setRotation] = useState(0);
+  const [lastUpdated, setLastUpdated] = useState<Date>(() => new Date());
+  const [, setTick] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const refresh = setInterval(() => {
       setRotation((r) => r + 3);
       setLastUpdated(new Date());
