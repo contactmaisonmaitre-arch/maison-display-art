@@ -435,47 +435,54 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   }
   const w = weather.current;
   return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36" style={{ backgroundColor: "hsl(var(--cream))" }}>
-      <div className="font-sans-ui uppercase" style={{ fontSize: 22, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
-        Météo · Dole, Jura
+    <div className="mm-cream absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
+      <div
+        className="pointer-events-none absolute"
+        style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
+      />
+      <div className="relative flex items-center gap-5" style={{ animation: "mm-slide-up 1s ease-out both" }}>
+        <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
+        <div className="mm-eyebrow" style={{ fontSize: 22, color: "hsl(var(--gold))" }}>Météo · Dole, Jura</div>
+        <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, hsl(var(--gold)), transparent)" }} />
       </div>
-      <div className="mt-10 flex items-center gap-12">
-        <div style={{ fontSize: 176 }}>{wmo(w.weather_code).emoji}</div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 260, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+      <div className="relative mt-8 flex items-center gap-12" style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}>
+        <div style={{ fontSize: 196, filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.25))" }}>{wmo(w.weather_code).emoji}</div>
+        <div className="font-serif-display leading-none" style={{ fontSize: 280, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.04em" }}>
           {Math.round(w.temperature_2m)}°
         </div>
       </div>
-      <div className="mt-2 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
+      <div className="relative mt-2 font-serif-display italic" style={{ fontSize: 62, color: "hsl(var(--taupe))" }}>
         {wmo(w.weather_code).label}
       </div>
-      <div className="mt-14 flex gap-24">
+      <div className="relative mt-12 mm-glass-light flex gap-12 rounded-2xl px-12 py-7" style={{ animation: "mm-slide-up 1s ease-out 0.4s both" }}>
         {[
           { l: "Humidité", v: `${Math.round(w.relative_humidity_2m)}%` },
           { l: "Vent km/h", v: `${Math.round(w.wind_speed_10m)}` },
           { l: "Ressenti", v: `${Math.round(w.apparent_temperature)}°` },
           { l: "Indice UV", v: `${Math.round(w.uv_index ?? 0)}` },
-        ].map((s) => (
-          <div key={s.l} className="text-center">
-            <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
-              {s.l}
+        ].map((s, i, arr) => (
+          <div key={s.l} className="flex items-center gap-12">
+            <div className="text-center">
+              <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--mink))" }}>{s.l}</div>
+              <div className="mt-2 font-serif-display" style={{ fontSize: 56, fontWeight: 300, color: "hsl(var(--espresso))" }}>{s.v}</div>
             </div>
-            <div className="mt-2 font-serif-display" style={{ fontSize: 58, fontWeight: 300, color: "hsl(var(--espresso))" }}>
-              {s.v}
-            </div>
+            {i < arr.length - 1 && <div style={{ width: 1, height: 70, background: "rgba(46,36,25,0.15)" }} />}
           </div>
         ))}
       </div>
-      <div className="mt-16 flex gap-16">
+      <div className="relative mt-12 flex gap-10" style={{ animation: "mm-slide-up 1s ease-out 0.55s both" }}>
         {weather.daily.time.slice(1, 5).map((iso, i) => {
           const d = new Date(iso);
           const code = weather.daily.weather_code[i + 1];
           return (
-            <div key={iso} className="flex flex-col items-center">
-              <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.24em", color: "hsl(var(--mink))" }}>
-                {DAYS_FR_SHORT[d.getDay()]}
-              </div>
-              <div className="my-3" style={{ fontSize: 48 }}>{wmo(code).emoji}</div>
-              <div className="font-serif-display" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
+            <div
+              key={iso}
+              className="flex flex-col items-center rounded-xl px-8 py-5"
+              style={{ background: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.08)" }}
+            >
+              <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--gold))" }}>{DAYS_FR_SHORT[d.getDay()]}</div>
+              <div className="my-3" style={{ fontSize: 52 }}>{wmo(code).emoji}</div>
+              <div className="font-serif-display" style={{ fontSize: 32, color: "hsl(var(--espresso))" }}>
                 {Math.round(weather.daily.temperature_2m_max[i + 1])}°
                 <span style={{ color: "hsl(var(--mink))" }}> {Math.round(weather.daily.temperature_2m_min[i + 1])}°</span>
               </div>
