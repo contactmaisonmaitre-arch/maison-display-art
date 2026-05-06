@@ -42,19 +42,60 @@
 
 @layer base {
   * { @apply border-border; }
-  html, body, #root { margin: 0; padding: 0; background: #1A160F; }
-  body { font-family: 'Jost', sans-serif; }
+  html, body, #root { margin: 0; padding: 0; background: #0B0805; }
+  body { font-family: 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
 }
 
 @layer utilities {
   .font-serif-display { font-family: 'Cormorant Garamond', serif; }
   .font-sans-ui { font-family: 'Jost', sans-serif; }
+  .mm-eyebrow { font-family: 'Jost', sans-serif; text-transform: uppercase; letter-spacing: 0.42em; font-weight: 500; }
+  .mm-glass-dark {
+    background: linear-gradient(135deg, rgba(46,36,25,0.55) 0%, rgba(20,15,10,0.65) 100%);
+    border: 1px solid rgba(184,150,90,0.22);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .mm-glass-light {
+    background: linear-gradient(135deg, rgba(255,253,248,0.78) 0%, rgba(244,238,226,0.66) 100%);
+    border: 1px solid rgba(46,36,25,0.10);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  .mm-vignette::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%);
+  }
+  .mm-noir { background: radial-gradient(ellipse at 30% 0%, #2A1F14 0%, #14100A 45%, #0A0704 100%); }
+  .mm-noir-warm { background: radial-gradient(ellipse at 70% 100%, #3A2618 0%, #1C130C 50%, #0A0604 100%); }
+  .mm-cream { background: radial-gradient(ellipse at 30% 0%, #FBF7EE 0%, #F0E9DA 60%, #E2D8C4 100%); }
 }
 
 @keyframes mm-fade-in { from { opacity: 0; } to { opacity: 1; } }
-@keyframes mm-slide-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes mm-slide-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes mm-slide-left { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes mm-slide-right { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
 @keyframes mm-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @keyframes mm-news-scroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 @keyframes mm-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes mm-shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes mm-glow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.06); }
+}
+@keyframes mm-pan {
+  0% { transform: scale(1.06) translateX(-1.5%); }
+  50% { transform: scale(1.1) translateX(1.5%); }
+  100% { transform: scale(1.06) translateX(-1.5%); }
+}
+@keyframes mm-orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes mm-letter-rise {
+  from { opacity: 0; transform: translateY(40px); letter-spacing: 0.2em; }
+  to { opacity: 1; transform: translateY(0); letter-spacing: normal; }
+}
