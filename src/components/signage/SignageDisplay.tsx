@@ -987,7 +987,7 @@ const ReviewScene = () => {
               </div>
             </div>
 
-            <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
+            <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-review-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both" }}>
               <GoldStars size={42} gap={8} />
               <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
                 « {r.text} »
