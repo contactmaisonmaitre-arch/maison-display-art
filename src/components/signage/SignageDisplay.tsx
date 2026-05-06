@@ -270,13 +270,57 @@ const COFFEE_ANECDOTES = [
 ];
 
 // ============ Programmes TV qualité — ce soir ============
-const TV_TONIGHT = [
-  { channel: "Arte",          slot: "20h55", title: "Cinéma d'auteur ou documentaire géopolitique", note: "La référence culture en Europe — toujours un grand sujet à 20h55." },
-  { channel: "France 5",      slot: "20h55", title: "C dans l'air · La grande librairie · Documentaires",       note: "Le savoir au quotidien — débats de fond et lectures." },
-  { channel: "France Culture", slot: "21h00", title: "Toute une vie · LSD, la série documentaire (radio)",       note: "À écouter en fond — la radio de la pensée." },
-  { channel: "Mezzo",         slot: "21h00", title: "Concerts classiques, opéras et jazz",                       note: "Pour une soirée musique exigeante — du Bach au jazz contemporain." },
-  { channel: "LCP / Public Sénat", slot: "20h30", title: "Débats parlementaires & docs politiques",              note: "Comprendre la fabrique de la loi — sans bruit ni cirque." },
+type TvKind = "DOCUMENTAIRE" | "SÉRIE" | "ÉMISSION" | "CONCERT" | "DÉBAT";
+const TV_TONIGHT: { channel: string; slot: string; kind: TvKind; title: string; note: string; pick: string }[] = [
+  {
+    channel: "Arte",
+    slot: "20h55",
+    kind: "DOCUMENTAIRE",
+    title: "Le café, voyage au bout d'une tasse",
+    note: "Des plantations éthiopiennes aux torréfacteurs européens — l'odyssée du café de spécialité. Aussi sur arte.tv.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "France 5",
+    slot: "20h55",
+    kind: "SÉRIE",
+    title: "Vignerons sans règles ni compromis",
+    note: "Enquête en 3 épisodes sur le mouvement mondial du vin nature : terroirs vivants, biodynamie, vignerons rebelles.",
+    pick: "Notre coup de cœur de la semaine",
+  },
+  {
+    channel: "France Culture",
+    slot: "21h00",
+    kind: "ÉMISSION",
+    title: "Le Goût du monde",
+    note: "Radio-documentaire sur la culture du café au Yémen et en Éthiopie — entre patrimoine et modernité. Disponible en podcast.",
+    pick: "À écouter en fond de soirée",
+  },
+  {
+    channel: "Mezzo",
+    slot: "21h00",
+    kind: "CONCERT",
+    title: "Live dans les caves de Bourgogne & du Jura",
+    note: "Soirée de concerts enregistrés chez des vignerons naturels — musique improvisée et dégustation, une ambiance unique.",
+    pick: "Pour prolonger le verre",
+  },
+  {
+    channel: "Public Sénat",
+    slot: "20h30",
+    kind: "DÉBAT",
+    title: "Agriculture naturelle : les pionniers",
+    note: "Débat et reportages auprès des paysans qui abandonnent les pesticides — cafés, vignes, maraîchers engagés.",
+    pick: "Sélection éditoriale Maison Maître",
+  },
 ];
+
+const TV_KIND_COLORS: Record<TvKind, { bg: string; fg: string; border: string }> = {
+  DOCUMENTAIRE: { bg: "rgba(201,168,76,0.18)",  fg: "hsl(var(--gold-lt))", border: "rgba(201,168,76,0.55)" },
+  "SÉRIE":      { bg: "rgba(116,42,62,0.32)",   fg: "#E8B4C0",             border: "rgba(116,42,62,0.7)"  },
+  "ÉMISSION":   { bg: "rgba(155,120,80,0.22)",  fg: "#E8C9A0",             border: "rgba(155,120,80,0.6)" },
+  CONCERT:      { bg: "rgba(80,112,64,0.28)",   fg: "#C8DDB0",             border: "rgba(80,112,64,0.65)" },
+  "DÉBAT":      { bg: "rgba(180,90,55,0.24)",   fg: "#F0BC9A",             border: "rgba(180,90,55,0.6)"  },
+};
 
 // 3 actualités positives du jour (curaté maison, à actualiser)
 const GOOD_NEWS_OF_THE_DAY = [
@@ -1289,46 +1333,70 @@ const TvTonightScene = () => (
         <div style={{ fontSize: 54 }}>📺</div>
         <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
         <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-          Ce soir à la télé · Notre sélection
+          Café de spécialité & vin nature · Ce soir
         </div>
       </div>
       <h2 className="mt-8 font-serif-display leading-[1]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
-        <span className="font-semibold">Cinq chaînes</span>{" "}
-        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour bien finir la journée.</span>
+        <span className="font-semibold">Cinq programmes</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour les esprits curieux.</span>
       </h2>
-      <p className="mt-6 max-w-[1200px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
-        Loin du bruit, voici ce qui vaut la peine d'être regardé — culture, débats, musique, idées.
+      <p className="mt-6 max-w-[1240px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
+        Notre sélection éditoriale permanente — autour du café d'exception et du vin vivant.
       </p>
 
-      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 460 }}>
-        {TV_TONIGHT.map((p, i) => (
-          <div
-            key={p.channel}
-            className="flex flex-col rounded-sm p-7"
-            style={{
-              backgroundColor: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(201,168,76,0.25)",
-              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
-            }}
-          >
-            <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
-              {p.slot}
+      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 540 }}>
+        {TV_TONIGHT.map((p, i) => {
+          const c = TV_KIND_COLORS[p.kind];
+          return (
+            <div
+              key={p.channel}
+              className="flex flex-col rounded-sm p-7"
+              style={{
+                backgroundColor: "rgba(242,237,228,0.06)",
+                border: "1px solid rgba(201,168,76,0.25)",
+                animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
+              }}
+            >
+              <div className="flex items-center justify-between gap-2">
+                <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
+                  {p.slot}
+                </div>
+                <div
+                  className="font-sans-ui uppercase rounded-sm px-2 py-1"
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: "0.22em",
+                    backgroundColor: c.bg,
+                    color: c.fg,
+                    border: `1px solid ${c.border}`,
+                  }}
+                >
+                  {p.kind}
+                </div>
+              </div>
+              <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 34, fontWeight: 600, color: "hsl(var(--linen))" }}>
+                {p.channel}
+              </div>
+              <div className="mt-2" style={{ width: 36, height: 1, backgroundColor: "hsl(var(--gold) / 0.6)" }} />
+              <div className="mt-4 font-serif-display italic" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.95)", fontWeight: 400 }}>
+                {p.title}
+              </div>
+              <div className="mt-4 font-serif-display" style={{ fontSize: 17, lineHeight: 1.35, color: "rgba(242,237,228,0.72)" }}>
+                {p.note}
+              </div>
+              <div
+                className="font-serif-display italic"
+                style={{ fontSize: 16, color: "rgba(201,168,76,0.85)", lineHeight: 1.3, borderTop: "1px solid rgba(201,168,76,0.2)", marginTop: "auto", paddingTop: 16 }}
+              >
+                ✦ <span style={{ marginLeft: 4 }}>{p.pick}</span>
+              </div>
             </div>
-            <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 38, fontWeight: 600, color: "hsl(var(--linen))" }}>
-              {p.channel}
-            </div>
-            <div className="mt-5 font-serif-display" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.88)" }}>
-              {p.title}
-            </div>
-            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(201,168,76,0.75)", lineHeight: 1.3 }}>
-              {p.note}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(201,168,76,0.7)" }}>
-        Maison Maitre · Le bon goût, jusqu'au canapé
+        Maison Maitre · Le bon goût, du grain au verre
       </div>
     </div>
   </div>
