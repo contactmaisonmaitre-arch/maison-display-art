@@ -556,7 +556,9 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
         <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, hsl(var(--gold)), transparent)" }} />
       </div>
       <div className="relative mt-8 flex items-center gap-12" style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}>
-        <div style={{ fontSize: 196, filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.25))" }}>{wmo(w.weather_code).emoji}</div>
+        <div style={{ filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.18))" }}>
+          <WeatherIcon code={w.weather_code} size={240} />
+        </div>
         <div className="relative font-serif-display leading-none tabular-nums" style={{ fontSize: 360, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
           {displayTemp}
           <span
