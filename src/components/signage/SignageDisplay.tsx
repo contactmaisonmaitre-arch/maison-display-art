@@ -337,7 +337,7 @@ const LeftPanel = ({ now }: { now: Date }) => {
       {/* Fête du jour */}
       <div className="relative px-7 py-6" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
         <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.32em", color: "rgba(242,237,228,0.4)" }}>
-          ✦ Fête du jour
+          ◆ Fête du jour
         </div>
         <div className="mt-3 font-serif-display italic text-linen" style={{ fontSize: 30, fontWeight: 300, lineHeight: 1.1 }}>
           {getSaintDuJour(now)}
@@ -1171,7 +1171,7 @@ const FixedTopBar = ({ now }: { now: Date }) => (
       <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, rgba(46,36,25,0.25), transparent)" }} />
       <div>
         <div className="mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--mink))" }}>
-          ✦ Fête du jour
+          ◆ Fête du jour
         </div>
         <div className="font-serif-display italic leading-none" style={{ fontSize: 38, color: "hsl(var(--espresso))" }}>
           {getSaintDuJour(now)}
