@@ -1171,10 +1171,6 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </div>
       </div>
       <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, hsl(var(--gold) / 0.55), transparent)" }} />
-      </div>
-      <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, hsl(var(--gold) / 0.55), transparent)" }} />
-      <div className="hidden">{/* spacer */}</div>
-      <div style={{ display: "none" }} />
       <div>
         <div className="mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--mink))" }}>
           ◆ Fête du jour
