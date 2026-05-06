@@ -388,26 +388,36 @@ const Stat = ({ label, value }: { label: string; value: string }) => (
 const TextSlide = ({
   bg, tag, titleStart, titleItalic, body,
 }: { bg: string; tag: string; titleStart: string; titleItalic: string; body: string }) => (
-  <div className="absolute inset-0" style={{ background: bg }}>
+  <div className="absolute inset-0 overflow-hidden" style={{ background: bg }}>
+    <div className="absolute inset-0" style={{ background: bg, animation: "mm-pan 22s ease-in-out infinite", filter: "blur(2px)" }} />
     <div
       className="absolute inset-0"
-      style={{ background: "linear-gradient(90deg, rgba(26,22,15,0.12) 0%, rgba(242,237,228,0.92) 58%, rgba(242,237,228,0.98) 100%)" }}
+      style={{ background: "linear-gradient(105deg, rgba(10,7,4,0.55) 0%, rgba(10,7,4,0.15) 35%, rgba(251,247,238,0.92) 62%, rgba(251,247,238,0.99) 100%)" }}
     />
     <div
-      className="relative flex h-full flex-col justify-center px-28 pb-24 pt-40"
+      className="pointer-events-none absolute"
+      style={{
+        top: "-25%", left: "-15%", width: 760, height: 760, borderRadius: "50%",
+        background: "radial-gradient(circle, rgba(184,150,90,0.28) 0%, transparent 65%)",
+        animation: "mm-glow 9s ease-in-out infinite",
+      }}
+    />
+    <div
+      className="relative flex h-full flex-col justify-center px-28 pb-28 pt-40"
       style={{ animation: "mm-slide-up 1.2s ease-out 0.25s both" }}
     >
       <div className="flex items-center gap-6">
-        <div style={{ width: 88, height: 2, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+        <div style={{ width: 88, height: 2, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
+        <div className="mm-eyebrow" style={{ fontSize: 20, color: "hsl(var(--gold))" }}>
           {tag}
         </div>
       </div>
-      <h2 className="mt-10 max-w-[1380px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
-        <span className="font-semibold">{titleStart} </span>
-        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>{titleItalic}</span>
+      <h2 className="mt-10 max-w-[1380px] font-serif-display leading-[0.94]" style={{ fontSize: 134, color: "hsl(var(--ink))" }}>
+        <span className="font-semibold" style={{ animation: "mm-letter-rise 1s ease-out 0.4s both", display: "inline-block" }}>{titleStart} </span>
+        <span className="italic font-light" style={{ color: "hsl(var(--wine))", animation: "mm-letter-rise 1s ease-out 0.7s both", display: "inline-block" }}>{titleItalic}</span>
       </h2>
-      <p className="mt-10 max-w-[1180px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
+      <div className="mt-8" style={{ width: 140, height: 1, background: "linear-gradient(90deg, hsl(var(--wine)), transparent)" }} />
+      <p className="mt-8 max-w-[1180px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
         {body}
       </p>
     </div>
