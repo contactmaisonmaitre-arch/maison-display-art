@@ -34,6 +34,7 @@ export default {
         ink: "hsl(var(--ink))",
         gold: { DEFAULT: "hsl(var(--gold))", lt: "hsl(var(--gold-lt))" },
         wine: "hsl(var(--wine))",
+        copper: "hsl(var(--copper))",
         sage: "hsl(var(--sage))",
       },
       borderRadius: { lg: "var(--radius)", md: "calc(var(--radius) - 2px)", sm: "calc(var(--radius) - 4px)" },
