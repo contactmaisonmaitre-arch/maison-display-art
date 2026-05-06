@@ -398,7 +398,7 @@ const TextSlide = ({
       className="pointer-events-none absolute"
       style={{
         top: "-25%", left: "-15%", width: 760, height: 760, borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(184,150,90,0.28) 0%, transparent 65%)",
+        background: "radial-gradient(circle, rgba(201,168,76,0.28) 0%, transparent 65%)",
         animation: "mm-glow 9s ease-in-out infinite",
       }}
     />
@@ -438,7 +438,7 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
     <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
         className="pointer-events-none absolute"
-        style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
+        style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
       />
       <div className="relative flex items-center gap-5" style={{ animation: "mm-slide-up 1s ease-out both" }}>
         <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
@@ -550,7 +550,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
         className="pointer-events-none absolute"
         style={{
           top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
         }}
       />
 
@@ -563,7 +563,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
               aspectRatio: "9 / 16",
               height: "94%",
               borderRadius: 28,
-              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(184,150,90,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(184,150,90,0.4)",
+              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(201,168,76,0.4)",
               background: "#000",
             }}
           >
@@ -612,7 +612,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             adresses — toute notre actualité au quotidien.
           </p>
 
-          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(184,150,90,0.7)" }}>
+          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(201,168,76,0.7)" }}>
             Reel {idx + 1} / {INSTAGRAM_REELS.length}
           </div>
         </div>
@@ -630,7 +630,7 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
         className="pointer-events-none absolute"
         style={{
           top: "-20%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(184,150,90,0.28) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(201,168,76,0.28) 0%, transparent 65%)",
           animation: "mm-glow 11s ease-in-out infinite",
         }}
       />
@@ -645,7 +645,7 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
       {/* Giant editorial coffee glyph */}
       <div
         className="pointer-events-none absolute font-serif-display italic select-none"
-        style={{ right: -60, bottom: -120, fontSize: 720, color: "rgba(184,150,90,0.06)", lineHeight: 1 }}
+        style={{ right: -60, bottom: -120, fontSize: 720, color: "rgba(201,168,76,0.06)", lineHeight: 1 }}
       >
         ☕
       </div>
@@ -673,7 +673,7 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
         >
           {a.body}
         </p>
-        <div className="mt-12 mm-eyebrow" style={{ fontSize: 17, color: "rgba(184,150,90,0.7)" }}>
+        <div className="mt-12 mm-eyebrow" style={{ fontSize: 17, color: "rgba(201,168,76,0.7)" }}>
           Maison Maitre · Le café autrement
         </div>
       </div>
@@ -786,7 +786,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
   <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
     <div
       className="pointer-events-none absolute"
-      style={{ top: "-25%", right: "-15%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.20) 0%, transparent 65%)", animation: "mm-glow 12s ease-in-out infinite" }}
+      style={{ top: "-25%", right: "-15%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,168,76,0.20) 0%, transparent 65%)", animation: "mm-glow 12s ease-in-out infinite" }}
     />
     <div className="relative flex items-center gap-6">
       <div style={{ width: 88, height: 2, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
@@ -805,12 +805,12 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
           className="group relative flex flex-col overflow-hidden rounded-2xl"
           style={{
             background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
-            border: "1px solid rgba(184,150,90,0.25)",
+            border: "1px solid rgba(201,168,76,0.25)",
             boxShadow: "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
             animation: `mm-slide-up 0.9s ease-out ${0.15 + i * 0.12}s both`,
           }}
         >
-          <div className="absolute top-5 left-5 mm-eyebrow z-10" style={{ fontSize: 11, color: "hsl(var(--gold))", background: "rgba(255,255,255,0.85)", padding: "6px 12px", borderRadius: 999, border: "1px solid rgba(184,150,90,0.3)" }}>
+          <div className="absolute top-5 left-5 mm-eyebrow z-10" style={{ fontSize: 11, color: "hsl(var(--gold))", background: "rgba(255,255,255,0.85)", padding: "6px 12px", borderRadius: 999, border: "1px solid rgba(201,168,76,0.3)" }}>
             0{i + 1}
           </div>
           <div className="relative w-full overflow-hidden" style={{ height: 460, background: "radial-gradient(circle at 50% 40%, #FFFDF7 0%, #F2EADA 100%)" }}>
@@ -913,7 +913,7 @@ const ReviewScene = () => {
               padding: 32,
               borderRadius: 32,
               background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%)",
-              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(184,150,90,0.5)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.5)",
               animation: "mm-slide-up 1s ease-out 0.3s both",
             }}
           >
@@ -947,7 +947,7 @@ const ReviewScene = () => {
               padding: 44,
               borderRadius: 28,
               background: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(184,150,90,0.25)",
+              border: "1px solid rgba(201,168,76,0.25)",
               backdropFilter: "blur(2px)",
             }}
           >
@@ -1030,7 +1030,7 @@ const TvTonightScene = () => (
   <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #1A1410 0%, #2E2419 60%, #0E0805 100%)" }}>
     <div
       className="pointer-events-none absolute"
-      style={{ top: "-15%", left: "-10%", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.18) 0%, transparent 65%)" }}
+      style={{ top: "-15%", left: "-10%", width: 800, height: 800, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)" }}
     />
     <div className="relative">
       <div className="flex items-center gap-5">
@@ -1055,7 +1055,7 @@ const TvTonightScene = () => (
             className="flex flex-col rounded-sm p-7"
             style={{
               backgroundColor: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(184,150,90,0.25)",
+              border: "1px solid rgba(201,168,76,0.25)",
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
             }}
           >
@@ -1068,14 +1068,14 @@ const TvTonightScene = () => (
             <div className="mt-5 font-serif-display" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.88)" }}>
               {p.title}
             </div>
-            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(184,150,90,0.75)", lineHeight: 1.3 }}>
+            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(201,168,76,0.75)", lineHeight: 1.3 }}>
               {p.note}
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(184,150,90,0.7)" }}>
+      <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(201,168,76,0.7)" }}>
         Maison Maitre · Le bon goût, jusqu'au canapé
       </div>
     </div>
@@ -1151,7 +1151,7 @@ const FixedTopBar = ({ now }: { now: Date }) => (
     style={{
       height: 118,
       background: "linear-gradient(180deg, rgba(251,247,238,0.96) 0%, rgba(244,238,226,0.92) 100%)",
-      borderBottom: "1px solid rgba(184,150,90,0.32)",
+      borderBottom: "1px solid rgba(201,168,76,0.32)",
       boxShadow: "0 1px 0 rgba(255,255,255,0.5) inset, 0 18px 40px -20px rgba(46,36,25,0.25)",
       backdropFilter: "blur(12px)",
     }}
@@ -1213,7 +1213,7 @@ const BottomTicker = () => {
     <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center overflow-hidden" style={{ height: 100, backgroundColor: "#1A160F" }}>
       <div
         className="flex h-full shrink-0 items-center px-7 font-sans-ui uppercase"
-        style={{ fontSize: 9, letterSpacing: "0.36em", color: "hsl(var(--gold))", borderRight: "1px solid rgba(184,150,90,0.25)" }}
+        style={{ fontSize: 9, letterSpacing: "0.36em", color: "hsl(var(--gold))", borderRight: "1px solid rgba(201,168,76,0.25)" }}
       >
         La sélection
       </div>
@@ -1372,7 +1372,7 @@ const SignageDisplay = () => {
         style={{
           opacity: showCtrl ? 1 : 0,
           backgroundColor: "rgba(26,22,15,0.92)",
-          border: "1px solid rgba(184,150,90,0.4)",
+          border: "1px solid rgba(201,168,76,0.4)",
           fontFamily: "Jost, sans-serif",
         }}
       >
