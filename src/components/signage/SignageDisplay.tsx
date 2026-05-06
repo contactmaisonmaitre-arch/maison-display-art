@@ -414,9 +414,9 @@ const TextSlide = ({
       </div>
       <h2 className="mt-10 max-w-[1380px] font-serif-display leading-[0.94]" style={{ fontSize: 134, color: "hsl(var(--ink))" }}>
         <span className="font-semibold" style={{ animation: "mm-letter-rise 1s ease-out 0.4s both", display: "inline-block" }}>{titleStart} </span>
-        <span className="italic font-light" style={{ color: "hsl(var(--wine))", animation: "mm-letter-rise 1s ease-out 0.7s both", display: "inline-block" }}>{titleItalic}</span>
+        <span className="italic font-light" style={{ color: "hsl(var(--copper))", animation: "mm-letter-rise 1s ease-out 0.7s both", display: "inline-block" }}>{titleItalic}</span>
       </h2>
-      <div className="mt-8" style={{ width: 140, height: 1, background: "linear-gradient(90deg, hsl(var(--wine)), transparent)" }} />
+      <div className="mt-8" style={{ width: 140, height: 1, background: "linear-gradient(90deg, hsl(var(--copper)), transparent)" }} />
       <p className="mt-8 max-w-[1180px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
         {body}
       </p>
@@ -697,7 +697,7 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
       </div>
       <h2 className="mt-6 font-serif-display leading-[1]" style={{ fontSize: 106, color: "hsl(var(--ink))" }}>
         <span className="font-semibold">Le monde va</span>{" "}
-        <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>aussi bien.</span>
+        <span className="italic font-light" style={{ color: "hsl(var(--copper))" }}>aussi bien.</span>
       </h2>
 
       <div className="mt-12 grid grid-cols-3 gap-9" style={{ height: 545 }}>
@@ -755,7 +755,7 @@ const TeaScene = ({ now }: { now: Date }) => {
         </div>
         <h2 className="mt-10 max-w-[1320px] font-serif-display leading-[0.96]" style={{ fontSize: 126, color: "hsl(var(--ink))" }}>
           <span className="font-semibold">Notre marque,</span>{" "}
-          <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>nos cuvées.</span>
+          <span className="italic font-light" style={{ color: "hsl(var(--copper))" }}>nos cuvées.</span>
         </h2>
         <p className="mt-10 max-w-[1120px] font-serif-display italic" style={{ fontSize: 42, color: "hsl(var(--taupe))", lineHeight: 1.28 }}>
           Une collection exclusive de thés d'exception. En boutique et sur maisonmaitre.com.
@@ -796,7 +796,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
     </div>
     <h2 className="relative mt-6 font-serif-display leading-[1]" style={{ fontSize: 100, color: "hsl(var(--ink))" }}>
       <span className="font-semibold">Nos coups de cœur</span>{" "}
-      <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>à tester.</span>
+      <span className="italic font-light" style={{ color: "hsl(var(--copper))" }}>à tester.</span>
     </h2>
     <div className="relative mt-10 grid grid-cols-3 gap-8" style={{ height: 720 }}>
       {items.map((p, i) => (
@@ -933,7 +933,7 @@ const ReviewScene = () => {
               </div>
             </div>
             <div className="mt-6 font-serif-display text-center" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
-              Scannez pour <em className="font-light" style={{ color: "hsl(var(--wine))" }}>nous noter</em>
+              Scannez pour <em className="font-light" style={{ color: "hsl(var(--copper))" }}>nous noter</em>
             </div>
             <div className="mt-2 font-sans-ui uppercase text-center" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
               ★★★★★ · Google Maps
@@ -1165,7 +1165,7 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </div>
         <div className="font-serif-display leading-none" style={{ fontSize: 48, color: "hsl(var(--espresso))" }}>
           <span className="font-semibold">Maison </span>
-          <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>Maitre</span>
+          <span className="italic font-light" style={{ color: "hsl(var(--copper))" }}>Maitre</span>
         </div>
       </div>
       <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, rgba(46,36,25,0.25), transparent)" }} />
