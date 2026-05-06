@@ -57,7 +57,7 @@
   .font-serif-classic { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
   .font-sans-ui { font-family: 'Jost', sans-serif; }
   .font-mono-ui { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
-  .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.32em; font-weight: 400; }
+  .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.3em; font-weight: 400; }
   .mm-glass-dark {
     background: linear-gradient(135deg, rgba(46,36,25,0.45) 0%, rgba(20,15,10,0.55) 100%);
     border: 1px solid rgba(201,168,76,0.22);
