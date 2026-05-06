@@ -720,77 +720,68 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 
   return (
     <div
-      className="absolute inset-0"
-      style={{ background: "linear-gradient(135deg, #1A0F08 0%, #0A0604 60%, #050302 100%)" }}
+      className="absolute inset-0 overflow-hidden"
+      style={{ background: "#000" }}
     >
-      <div
-        className="pointer-events-none absolute"
+      {/* Backdrop flouté avec la même image — pour habiller les bandes latérales */}
+      <img
+        aria-hidden
+        src={fallbackSrc}
+        alt=""
+        className="absolute inset-0 h-full w-full"
         style={{
-          top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
+          objectFit: "cover",
+          filter: "blur(48px) brightness(0.45) saturate(1.2)",
+          transform: "scale(1.15)",
         }}
       />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%)" }}
+      />
 
-      <div className="relative grid h-full grid-cols-2 gap-12 px-20 pb-24 pt-32">
-        {/* Reel à gauche, en vrai cadre 9:16 façon téléphone */}
-        <div className="flex items-center justify-center">
+      {/* Reel plein écran, ratio 9:16 conservé, jamais coupé */}
+      <div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ animation: "mm-fade-in 0.8s ease-out both" }}
+      >
+        <div
+          className="relative overflow-hidden"
+          style={{
+            aspectRatio: "9 / 16",
+            height: "96%",
+            maxWidth: "96%",
+            borderRadius: 24,
+            boxShadow: "0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.35)",
+            background: "#000",
+          }}
+        >
+          <img
+            key={fallbackSrc}
+            src={fallbackSrc}
+            alt=""
+            className="h-full w-full"
+            onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
+            style={{ objectFit: "contain", background: "#000" }}
+          />
+
+          {/* Overlay bas — logo Instagram + handle */}
           <div
-            className="relative overflow-hidden"
+            className="absolute left-0 right-0 bottom-0 flex items-center gap-4 px-8 pb-8 pt-24"
             style={{
-              aspectRatio: "9 / 16",
-              height: "94%",
-              borderRadius: 28,
-              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(201,168,76,0.4)",
-              background: "#000",
+              background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 100%)",
             }}
           >
-            <img
-              key={fallbackSrc}
-              src={fallbackSrc}
-              alt=""
-              className="h-full w-full"
-              onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        </div>
-
-        {/* Branding à droite */}
-        <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
-          <div className="flex items-center gap-5">
-            <InstagramLogo size={64} />
-            <div className="font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-              Suivez-nous
+            <InstagramLogo size={44} />
+            <div
+              className="font-serif-display"
+              style={{ fontSize: 34, color: "#fff", letterSpacing: "0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+            >
+              @maison_maitre
             </div>
-          </div>
-
-          <h2
-            className="font-serif-display"
-            style={{ fontSize: 104, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.02em" }}
-          >
-            <span className="font-sans-ui font-light tracking-wide" style={{ fontSize: 78, letterSpacing: "0.04em" }}>Maison</span>
-            <br />
-            <em className="font-serif-display italic" style={{ color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</em>
-          </h2>
-
-          <div
-            className="font-serif-display flex items-center gap-4"
-            style={{ fontSize: 52, color: "hsl(var(--linen))", marginTop: 36, letterSpacing: "0.01em" }}
-          >
-            <InstagramLogo size={52} />
-            @maison_maitre
-          </div>
-
-          <p
-            className="font-sans-ui"
-            style={{ fontSize: 26, lineHeight: 1.45, color: "rgba(242,237,228,0.82)", marginTop: 32, maxWidth: 640 }}
-          >
-            Cafés des Maitre, Thés des Maitre, vignerons nature et belles
-            adresses — toute notre actualité au quotidien.
-          </p>
-
-          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(201,168,76,0.7)" }}>
-            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            <div className="ml-auto font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.32em", color: "rgba(201,168,76,0.85)" }}>
+              Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            </div>
           </div>
         </div>
       </div>
