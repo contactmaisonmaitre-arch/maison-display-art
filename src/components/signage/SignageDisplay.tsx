@@ -947,10 +947,9 @@ const ReviewScene = () => {
             className="flex flex-col"
             style={{
               padding: 44,
-              borderRadius: 28,
-              background: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(201,168,76,0.25)",
-              backdropFilter: "blur(2px)",
+              borderRadius: 4,
+              background: "#1A1510",
+              borderLeft: "4px solid hsl(var(--gold))",
             }}
           >
             <div className="flex items-center justify-between">
@@ -965,23 +964,29 @@ const ReviewScene = () => {
 
             <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
               <div style={{ fontSize: 42, color: "#E8B548", letterSpacing: 8 }}>★★★★★</div>
-              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 40, lineHeight: 1.32, color: "hsl(var(--linen))" }}>
+              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
                 « {r.text} »
               </p>
               <div className="mt-8 flex items-center gap-4">
                 <div
                   className="flex items-center justify-center font-serif-display"
                   style={{
-                    width: 56, height: 56, borderRadius: "50%",
+                    width: 64, height: 64, borderRadius: "50%",
                     background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-lt)))",
-                    color: "#1A160F", fontSize: 26, fontWeight: 600,
+                    color: "#1A160F", fontSize: 28, fontWeight: 600,
+                    boxShadow: "0 0 0 2px rgba(201,168,76,0.3)",
                   }}
                 >
                   {r.name.charAt(0)}
                 </div>
-                <div>
+                <div className="flex-1">
                   <div className="font-serif-display" style={{ fontSize: 26, color: "hsl(var(--linen))" }}>{r.name}</div>
-                  <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.5)" }}>Avis vérifié Google</div>
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="inline-flex items-center justify-center" style={{ width: 16, height: 16, borderRadius: "50%", background: "#4285F4" }}>
+                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                    </span>
+                    <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.65)" }}>Avis vérifié · Google</span>
+                  </div>
                 </div>
               </div>
             </div>
