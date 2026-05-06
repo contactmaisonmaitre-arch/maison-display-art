@@ -1333,46 +1333,70 @@ const TvTonightScene = () => (
         <div style={{ fontSize: 54 }}>📺</div>
         <div style={{ width: 96, height: 2, backgroundColor: "hsl(var(--gold))" }} />
         <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-          Ce soir à la télé · Notre sélection
+          Café de spécialité & vin nature · Ce soir
         </div>
       </div>
       <h2 className="mt-8 font-serif-display leading-[1]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
-        <span className="font-semibold">Cinq chaînes</span>{" "}
-        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour bien finir la journée.</span>
+        <span className="font-semibold">Cinq programmes</span>{" "}
+        <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>pour les esprits curieux.</span>
       </h2>
-      <p className="mt-6 max-w-[1200px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
-        Loin du bruit, voici ce qui vaut la peine d'être regardé — culture, débats, musique, idées.
+      <p className="mt-6 max-w-[1240px] font-serif-display italic" style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}>
+        Notre sélection éditoriale permanente — autour du café d'exception et du vin vivant.
       </p>
 
-      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 460 }}>
-        {TV_TONIGHT.map((p, i) => (
-          <div
-            key={p.channel}
-            className="flex flex-col rounded-sm p-7"
-            style={{
-              backgroundColor: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(201,168,76,0.25)",
-              animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
-            }}
-          >
-            <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
-              {p.slot}
+      <div className="mt-12 grid grid-cols-5 gap-6" style={{ height: 540 }}>
+        {TV_TONIGHT.map((p, i) => {
+          const c = TV_KIND_COLORS[p.kind];
+          return (
+            <div
+              key={p.channel}
+              className="flex flex-col rounded-sm p-7"
+              style={{
+                backgroundColor: "rgba(242,237,228,0.06)",
+                border: "1px solid rgba(201,168,76,0.25)",
+                animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
+              }}
+            >
+              <div className="flex items-center justify-between gap-2">
+                <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.32em", color: "hsl(var(--gold))" }}>
+                  {p.slot}
+                </div>
+                <div
+                  className="font-sans-ui uppercase rounded-sm px-2 py-1"
+                  style={{
+                    fontSize: 10,
+                    letterSpacing: "0.22em",
+                    backgroundColor: c.bg,
+                    color: c.fg,
+                    border: `1px solid ${c.border}`,
+                  }}
+                >
+                  {p.kind}
+                </div>
+              </div>
+              <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 34, fontWeight: 600, color: "hsl(var(--linen))" }}>
+                {p.channel}
+              </div>
+              <div className="mt-2" style={{ width: 36, height: 1, backgroundColor: "hsl(var(--gold) / 0.6)" }} />
+              <div className="mt-4 font-serif-display italic" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.95)", fontWeight: 400 }}>
+                {p.title}
+              </div>
+              <div className="mt-4 font-serif-display" style={{ fontSize: 17, lineHeight: 1.35, color: "rgba(242,237,228,0.72)" }}>
+                {p.note}
+              </div>
+              <div
+                className="font-serif-display italic"
+                style={{ fontSize: 16, color: "rgba(201,168,76,0.85)", lineHeight: 1.3, borderTop: "1px solid rgba(201,168,76,0.2)", marginTop: "auto", paddingTop: 16 }}
+              >
+                ✦ <span style={{ marginLeft: 4 }}>{p.pick}</span>
+              </div>
             </div>
-            <div className="mt-4 font-serif-display leading-tight" style={{ fontSize: 38, fontWeight: 600, color: "hsl(var(--linen))" }}>
-              {p.channel}
-            </div>
-            <div className="mt-5 font-serif-display" style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.88)" }}>
-              {p.title}
-            </div>
-            <div className="mt-auto pt-5 font-serif-display italic" style={{ fontSize: 18, color: "rgba(201,168,76,0.75)", lineHeight: 1.3 }}>
-              {p.note}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <div className="mt-10 font-sans-ui uppercase text-center" style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(201,168,76,0.7)" }}>
-        Maison Maitre · Le bon goût, jusqu'au canapé
+        Maison Maitre · Le bon goût, du grain au verre
       </div>
     </div>
   </div>
