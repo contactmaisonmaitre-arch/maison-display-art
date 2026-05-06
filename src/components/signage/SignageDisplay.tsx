@@ -851,10 +851,26 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
                 style={{ background: "radial-gradient(circle at 50% 85%, rgba(0,0,0,0.45) 0%, transparent 60%)" }}
               />
             </div>
-            <div className="relative flex flex-col justify-center p-8">
-              <div className="absolute top-5 right-6 font-serif-display italic" style={{ fontSize: 30, color: "hsl(var(--gold))", opacity: 0.55 }}>
+            <div className="relative flex flex-col justify-center p-8 overflow-hidden">
+              {/* Numéro géant en filigrane */}
+              <div
+                aria-hidden
+                className="pointer-events-none absolute font-serif-display italic select-none"
+                style={{
+                  right: -18,
+                  bottom: -48,
+                  fontSize: 280,
+                  lineHeight: 1,
+                  fontWeight: 300,
+                  letterSpacing: "-0.05em",
+                  color: "transparent",
+                  WebkitTextStroke: "1.5px rgba(201,168,76,0.28)",
+                  zIndex: 0,
+                }}
+              >
                 0{i + 1}
               </div>
+              <div className="relative" style={{ zIndex: 1 }}></div>
               <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
