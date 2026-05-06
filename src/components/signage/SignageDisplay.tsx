@@ -313,9 +313,9 @@ const LeftPanel = ({ now }: { now: Date }) => {
         <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.38em", color: "rgba(242,237,228,0.3)" }}>
           Boutique
         </div>
-        <div className="mt-3 font-serif-display leading-none" style={{ fontSize: 42 }}>
-          <span className="font-semibold text-linen">Maison </span>
-          <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>Maitre</span>
+        <div className="mt-3 leading-none flex items-baseline gap-2" style={{ fontSize: 42 }}>
+          <span className="font-sans-ui font-light tracking-wide text-linen" style={{ fontSize: 30, letterSpacing: "0.04em" }}>Maison</span>
+          <span className="font-serif-display italic" style={{ color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</span>
         </div>
         <div className="my-3" style={{ width: 36, height: 1, backgroundColor: "hsl(var(--gold))" }} />
         <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.2em", color: "rgba(242,237,228,0.2)" }}>
