@@ -1115,24 +1115,29 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
         {SCENES.map((_, i) => (
           <div
             key={i}
-            className="rounded-full transition-all duration-500"
+            className="rounded-full transition-all duration-700 ease-out"
             style={{
               width: 6,
-              height: i === index ? 24 : 6,
-              backgroundColor: i === index ? "hsl(var(--gold))" : "rgba(106,97,87,0.35)",
+              height: i === index ? 28 : 6,
+              background: i === index
+                ? "linear-gradient(180deg, hsl(var(--gold-lt)), hsl(var(--gold)))"
+                : "rgba(106,97,87,0.3)",
+              boxShadow: i === index ? "0 0 12px hsl(var(--gold) / 0.7)" : "none",
             }}
           />
         ))}
       </div>
 
       {/* Progress bar */}
-      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 4, backgroundColor: "rgba(0,0,0,0.08)" }}>
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 4, background: "rgba(0,0,0,0.12)" }}>
         <div
           key={progressKey}
           className="h-full origin-left"
           style={{
-            backgroundColor: "hsl(var(--gold))",
-            animation: `mm-progress ${SCENES[index].duration}ms linear forwards`,
+            background: "linear-gradient(90deg, hsl(var(--gold-lt)), hsl(var(--gold)), hsl(var(--gold-lt)))",
+            backgroundSize: "200% 100%",
+            animation: `mm-progress ${SCENES[index].duration}ms linear forwards, mm-shimmer 3s linear infinite`,
+            boxShadow: "0 0 12px hsl(var(--gold) / 0.6)",
           }}
         />
       </div>
