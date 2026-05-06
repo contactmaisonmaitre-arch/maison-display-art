@@ -736,33 +736,47 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
         {items.map((n, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-sm p-9"
+            className="relative flex flex-col overflow-hidden rounded-sm p-9"
             style={{
               backgroundColor: "rgba(46,36,25,0.05)",
               border: "1px solid rgba(46,36,25,0.15)",
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
             }}
           >
-            <div className="flex items-center gap-3">
-              <div
-                className="flex items-center justify-center font-serif-display"
-                style={{ width: 44, height: 44, borderRadius: "50%", backgroundColor: "hsl(var(--gold))", color: "hsl(var(--ink))", fontSize: 22, fontWeight: 600 }}
-              >
-                {i + 1}
-              </div>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 14, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-                {n.tag}
-              </div>
+            {/* Numéro géant doré en filigrane */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute font-serif-display select-none"
+              style={{
+                top: -42,
+                left: -10,
+                fontSize: 220,
+                lineHeight: 1,
+                fontWeight: 600,
+                letterSpacing: "-0.05em",
+                background: "linear-gradient(180deg, hsl(var(--gold)) 0%, hsl(var(--copper)) 100%)",
+                WebkitBackgroundClip: "text",
+                backgroundClip: "text",
+                color: "transparent",
+                opacity: 0.18,
+              }}
+            >
+              0{i + 1}
+            </div>
+
+            <div className="relative font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
+              {n.tag}
             </div>
             <h3
-              className="mt-7 font-serif-display leading-[1.1]"
-              style={{ fontSize: 44, fontWeight: 600, color: "hsl(var(--espresso))" }}
+              className="relative mt-6 font-serif-display leading-[1.05]"
+              style={{ fontSize: 52, fontWeight: 600, color: "hsl(var(--espresso))", letterSpacing: "-0.01em" }}
             >
               {n.title}
             </h3>
+            <div className="relative mt-5" style={{ width: 48, height: 1, backgroundColor: "hsl(var(--gold))" }} />
             <p
-              className="mt-5 font-serif-display italic"
-              style={{ fontSize: 27, lineHeight: 1.35, color: "hsl(var(--taupe))" }}
+              className="relative mt-5 font-serif-display italic"
+              style={{ fontSize: 26, lineHeight: 1.4, color: "hsl(var(--taupe))", fontWeight: 300 }}
             >
               {n.body}
             </p>
