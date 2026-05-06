@@ -740,6 +740,10 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
             style={{
               backgroundColor: "rgba(46,36,25,0.05)",
               border: "1px solid rgba(46,36,25,0.15)",
+              borderTop: "3px solid transparent",
+              backgroundImage: "linear-gradient(rgba(46,36,25,0.05), rgba(46,36,25,0.05)), linear-gradient(90deg, hsl(var(--copper)) 0%, hsl(var(--gold)) 50%, hsl(var(--gold-lt)) 100%)",
+              backgroundOrigin: "border-box",
+              backgroundClip: "padding-box, border-box",
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
             }}
           >
