@@ -870,7 +870,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
               >
                 0{i + 1}
               </div>
-              <div className="relative" style={{ zIndex: 1 }}></div>
+              
               <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--gold))" }}>
                 {p.cat}
               </div>
