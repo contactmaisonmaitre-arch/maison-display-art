@@ -11,7 +11,7 @@
     --mink: 35 12% 55%;
     --taupe: 30 9% 38%;
     --espresso: 28 36% 14%;
-    --ink: 38 30% 8%;
+    --ink: 0 0% 9%;
     --gold: 36 38% 54%;
     --gold-lt: 35 50% 64%;
     --wine: 350 50% 28%;
@@ -42,7 +42,7 @@
 
 @layer base {
   * { @apply border-border; }
-  html, body, #root { margin: 0; padding: 0; background: #0B0805; }
+  html, body, #root { margin: 0; padding: 0; background: #161616; }
   body { font-family: 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
 }
 
