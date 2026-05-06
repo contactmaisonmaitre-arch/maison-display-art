@@ -142,10 +142,6 @@
 
 @keyframes mm-fade-in { from { opacity: 0; } to { opacity: 1; } }
 @keyframes mm-slide-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
-@keyframes mm-slide-left { from { opacity: 0; transform: translateX(-30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes mm-slide-right { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes mm-ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes mm-news-scroll { from { transform: translateY(0); } to { transform: translateY(-50%); } }
 @keyframes mm-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
 @keyframes mm-shimmer {
   0% { background-position: -200% 0; }
@@ -159,10 +155,6 @@
   0% { transform: scale(1.06) translateX(-1.5%); }
   50% { transform: scale(1.1) translateX(1.5%); }
   100% { transform: scale(1.06) translateX(-1.5%); }
-}
-@keyframes mm-orbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 @keyframes mm-letter-rise {
   from { opacity: 0; transform: translateY(40px); letter-spacing: 0.2em; }

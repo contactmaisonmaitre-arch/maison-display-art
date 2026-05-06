@@ -30,9 +30,13 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
             className="absolute inset-0"
             style={{
               opacity: active ? 1 : 0,
-              transform: active ? "translateY(0)" : "translateY(20px)",
-              transition: "opacity 800ms ease, transform 800ms ease",
+              transform: active
+                ? "translateY(0) scale(1)"
+                : "translateY(14px) scale(0.985)",
+              transition:
+                "opacity 1000ms cubic-bezier(0.22, 1, 0.36, 1), transform 1000ms cubic-bezier(0.22, 1, 0.36, 1)",
               pointerEvents: active ? "auto" : "none",
+              willChange: active ? "opacity, transform" : "auto",
             }}
           >
             <SceneRenderer scene={scene} weather={weather} active={active} />
@@ -60,8 +64,8 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
         ))}
       </div>
 
-      {/* Bordure basse — 1px gradient or */}
-      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 1, background: "rgba(201,168,76,0.10)" }}>
+      {/* Bordure basse — barre de progression dorée plus lisible */}
+      <div className="absolute bottom-0 left-0 right-0 z-20" style={{ height: 3, background: "rgba(201,168,76,0.10)" }}>
         <div
           key={progressKey}
           className="h-full origin-left"
@@ -69,7 +73,7 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
             background: "linear-gradient(90deg, transparent 0%, hsl(var(--gold-lt)) 20%, hsl(var(--gold)) 50%, hsl(var(--gold-lt)) 80%, transparent 100%)",
             backgroundSize: "200% 100%",
             animation: `mm-progress ${SCENES[index].duration}ms linear forwards, mm-shimmer 3s linear infinite`,
-            boxShadow: "0 0 14px hsl(var(--gold) / 0.7)",
+            boxShadow: "0 0 18px hsl(var(--gold) / 0.85), 0 0 6px hsl(var(--gold-lt) / 0.6)",
           }}
         />
       </div>
