@@ -861,8 +861,14 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
               <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 40, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
-              <div className="mt-4 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
-                {p.note}
+              <div className="mt-4 font-serif-display italic" style={{ fontSize: 22, color: "hsl(var(--taupe))" }}>
+                {p.notes}
+              </div>
+              <div className="mt-5 flex items-center gap-3">
+                <div style={{ width: 28, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+                <div className="font-sans-ui tabular-nums" style={{ fontSize: 22, fontWeight: 500, color: "hsl(var(--gold))", letterSpacing: "0.02em" }}>
+                  {p.price}
+                </div>
               </div>
             </div>
           </div>
