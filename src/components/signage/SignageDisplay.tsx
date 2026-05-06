@@ -767,8 +767,9 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
             <div className="relative font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
               {n.tag}
             </div>
+            <div className="relative mt-5" style={{ height: 1, background: "linear-gradient(90deg, hsl(var(--gold)) 0%, hsl(var(--gold) / 0.4) 60%, transparent 100%)" }} />
             <h3
-              className="relative mt-6 font-serif-display leading-[1.05]"
+              className="relative mt-5 font-serif-display leading-[1.05]"
               style={{ fontSize: 52, fontWeight: 600, color: "hsl(var(--espresso))", letterSpacing: "-0.01em" }}
             >
               {n.title}
