@@ -1143,22 +1143,30 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
 const FixedTopBar = ({ now }: { now: Date }) => (
   <div
     className="absolute left-0 right-0 top-0 z-30 flex items-center justify-between px-16"
-    style={{ height: 118, backgroundColor: "rgba(242,237,228,0.94)", borderBottom: "1px solid rgba(46,36,25,0.14)" }}
+    style={{
+      height: 118,
+      background: "linear-gradient(180deg, rgba(251,247,238,0.96) 0%, rgba(244,238,226,0.92) 100%)",
+      borderBottom: "1px solid rgba(184,150,90,0.32)",
+      boxShadow: "0 1px 0 rgba(255,255,255,0.5) inset, 0 18px 40px -20px rgba(46,36,25,0.25)",
+      backdropFilter: "blur(12px)",
+    }}
   >
+    {/* gold underline accent */}
+    <div className="absolute bottom-0 left-0 right-0" style={{ height: 1, background: "linear-gradient(90deg, transparent, hsl(var(--gold)) 30%, hsl(var(--gold)) 70%, transparent)" }} />
     <div className="flex items-center gap-8">
       <div>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
+        <div className="mm-eyebrow" style={{ fontSize: 12, color: "hsl(var(--gold))" }}>
           Boutique · Dole, Jura
         </div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 46, color: "hsl(var(--espresso))" }}>
+        <div className="font-serif-display leading-none" style={{ fontSize: 48, color: "hsl(var(--espresso))" }}>
           <span className="font-semibold">Maison </span>
           <span className="italic font-light" style={{ color: "hsl(var(--wine))" }}>Maitre</span>
         </div>
       </div>
-      <div style={{ width: 1, height: 64, backgroundColor: "rgba(46,36,25,0.16)" }} />
+      <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, rgba(46,36,25,0.25), transparent)" }} />
       <div>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.3em", color: "hsl(var(--mink))" }}>
-          Fête du jour
+        <div className="mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--mink))" }}>
+          ✦ Fête du jour
         </div>
         <div className="font-serif-display italic leading-none" style={{ fontSize: 38, color: "hsl(var(--espresso))" }}>
           {getSaintDuJour(now)}
@@ -1166,11 +1174,11 @@ const FixedTopBar = ({ now }: { now: Date }) => (
       </div>
     </div>
     <div className="text-right">
-      <div className="font-serif-display leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))" }}>
+      <div className="font-serif-display leading-none tabular-nums" style={{ fontSize: 78, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.02em" }}>
         {pad(now.getHours())}:{pad(now.getMinutes())}
         <span style={{ fontSize: 42, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
       </div>
-      <div className="mt-2 font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.26em", color: "hsl(var(--gold))" }}>
+      <div className="mt-2 mm-eyebrow" style={{ fontSize: 12, color: "hsl(var(--gold))" }}>
         {formatDateLong(now)}
       </div>
     </div>
