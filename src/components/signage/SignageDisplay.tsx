@@ -1001,8 +1001,11 @@ const TeaScene = ({ now }: { now: Date }) => {
 };
 
 const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
-  const total = PRODUCTS_TO_TRY.length;
-  const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
+  const featured = PRODUCTS_TO_TRY.find((p) => p.featured);
+  const others = PRODUCTS_TO_TRY.filter((p) => !p.featured);
+  const total = others.length;
+  const rest = Array.from({ length: 2 }, (_, i) => others[(productOffset + i) % total]);
+  const items = featured ? [featured, ...rest] : Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % PRODUCTS_TO_TRY.length]);
   return (
   <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-20 pt-32 overflow-hidden">
     <div
