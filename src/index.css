@@ -48,8 +48,13 @@
 }
 
 @layer utilities {
-  .font-serif-display { font-family: 'Instrument Serif', 'Cormorant Garamond', serif; font-weight: 400; }
-  .font-serif-classic { font-family: 'Cormorant Garamond', serif; }
+  .font-serif-display {
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    font-weight: 500;
+    letter-spacing: -0.035em;
+    font-feature-settings: "liga", "dlig", "kern";
+  }
+  .font-serif-classic { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
   .font-sans-ui { font-family: 'Jost', sans-serif; }
   .font-mono-ui { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
   .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.32em; font-weight: 400; }
