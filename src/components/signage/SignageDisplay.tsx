@@ -875,6 +875,31 @@ const GoogleG = ({ size = 56 }: { size?: number }) => (
   </svg>
 );
 
+const GoldStar = ({ size = 24 }: { size?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden>
+    <defs>
+      <linearGradient id={`gs-${size}`} x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stopColor="#F0CB6E" />
+        <stop offset="55%" stopColor="#C9A84C" />
+        <stop offset="100%" stopColor="#8C6F2A" />
+      </linearGradient>
+    </defs>
+    <path
+      d="M12 2.6l2.78 5.96 6.55.78-4.84 4.5 1.31 6.46L12 17.1l-5.8 3.2 1.31-6.46-4.84-4.5 6.55-.78L12 2.6z"
+      fill={`url(#gs-${size})`}
+      stroke="#7A5C1F"
+      strokeWidth="0.5"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+const GoldStars = ({ size = 24, gap = 4, count = 5 }: { size?: number; gap?: number; count?: number }) => (
+  <span style={{ display: "inline-flex", gap, alignItems: "center" }}>
+    {Array.from({ length: count }).map((_, i) => <GoldStar key={i} size={size} />)}
+  </span>
+);
+
 const ReviewScene = () => {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
@@ -958,12 +983,12 @@ const ReviewScene = () => {
               </div>
               <div className="font-serif-display flex items-baseline gap-3" style={{ color: "hsl(var(--linen))" }}>
                 <span style={{ fontSize: 64, fontWeight: 300 }}>5,0</span>
-                <span style={{ fontSize: 22, color: "#E8B548", letterSpacing: 4 }}>★★★★★</span>
+                <GoldStars size={22} gap={4} />
               </div>
             </div>
 
             <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
-              <div style={{ fontSize: 42, color: "#E8B548", letterSpacing: 8 }}>★★★★★</div>
+              <GoldStars size={42} gap={8} />
               <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
                 « {r.text} »
               </p>
