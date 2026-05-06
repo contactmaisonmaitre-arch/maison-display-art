@@ -226,12 +226,13 @@ const TICKER = [
 ];
 
 // Produits réels — extraits de maisonmaitre.com (prix au 100g pour les thés/infusions)
-const PRODUCTS_TO_TRY = [
+// Le Chat Heureux est en vedette : toujours en première position (featured: true)
+const PRODUCTS_TO_TRY: { cat: string; name: string; notes: string; price: string; img: string; featured?: boolean }[] = [
+  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          notes: "Notre incontournable",         price: "9,50 € / 100g",  img: "/products/the-chat.png", featured: true },
   { cat: "Café des Maitre · Éthiopie",  name: "Yirgacheffe Heirloom",     notes: "Jasmin · Pêche · Miel",        price: "14,50 € / 100g", img: "/products/cafe-ethiopie.png" },
   { cat: "Café des Maitre · Colombie",  name: "Huila Bourbon Rose",       notes: "Cerise · Framboise · Cacao",   price: "16 € / 100g",    img: "/products/cafe-colombie-bourbon.png" },
   { cat: "Café des Maitre · Colombie",  name: "Huila Castillo Semi-Lavé", notes: "Chocolat · Noisette · Caramel",price: "14,50 € / 100g", img: "/products/cafe-colombie-castillo.gif" },
   { cat: "Thé des Maitre · Noir",       name: "Banquet des Tsars",        notes: "Bergamote & agrumes",          price: "10,90 € / 100g", img: "/products/the-tsars.png" },
-  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          notes: "Notre incontournable",         price: "9,50 € / 100g",  img: "/products/the-chat.png" },
   { cat: "Infusion des Maitre",         name: "Délice des Vergers",       notes: "Framboise · Hibiscus",         price: "9,35 € / 100g",  img: "/products/infusion-vergers.png" },
   { cat: "Thé des Maitre · Floral",     name: "Eden Floral",              notes: "Rose & Pivoine",               price: "11,50 € / 100g", img: "/products/eden-floral.png" },
   { cat: "Thé des Maitre · Caramel",    name: "Douceur Salée",            notes: "Caramel beurre salé",          price: "12,25 € / 100g", img: "/products/douceur-salee.png" },
@@ -372,7 +373,7 @@ const GOOD_NEWS_OF_THE_DAY = [
 ];
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review" | "tv";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review" | "tv" | "dole";
 interface Scene {
   type: SceneType;
   duration: number;
@@ -399,6 +400,7 @@ const NEWS_OFFSETS = shuffled(GOOD_NEWS_OF_THE_DAY.map((_, i) => i)).slice(0, 3)
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
+  { type: "dole", duration: 20000 },
   { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 17000, productOffset: 0 },
@@ -412,6 +414,7 @@ const SCENES: Scene[] = [
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[1] ?? 1 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
+  { type: "dole", duration: 20000 },
   { type: "goodnews", duration: 18000, newsOffset: NEWS_OFFSETS[1] ?? 3 },
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[2] ?? 2 },
   { type: "review", duration: 38000 },
@@ -719,77 +722,68 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 
   return (
     <div
-      className="absolute inset-0"
-      style={{ background: "linear-gradient(135deg, #1A0F08 0%, #0A0604 60%, #050302 100%)" }}
+      className="absolute inset-0 overflow-hidden"
+      style={{ background: "#000" }}
     >
-      <div
-        className="pointer-events-none absolute"
+      {/* Backdrop flouté avec la même image — pour habiller les bandes latérales */}
+      <img
+        aria-hidden
+        src={fallbackSrc}
+        alt=""
+        className="absolute inset-0 h-full w-full"
         style={{
-          top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
+          objectFit: "cover",
+          filter: "blur(48px) brightness(0.45) saturate(1.2)",
+          transform: "scale(1.15)",
         }}
       />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{ background: "radial-gradient(ellipse at center, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%)" }}
+      />
 
-      <div className="relative grid h-full grid-cols-2 gap-12 px-20 pb-24 pt-32">
-        {/* Reel à gauche, en vrai cadre 9:16 façon téléphone */}
-        <div className="flex items-center justify-center">
+      {/* Reel plein écran, ratio 9:16 conservé, jamais coupé */}
+      <div
+        className="absolute inset-0 flex items-center justify-center"
+        style={{ animation: "mm-fade-in 0.8s ease-out both" }}
+      >
+        <div
+          className="relative overflow-hidden"
+          style={{
+            aspectRatio: "9 / 16",
+            height: "96%",
+            maxWidth: "96%",
+            borderRadius: 24,
+            boxShadow: "0 40px 100px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.35)",
+            background: "#000",
+          }}
+        >
+          <img
+            key={fallbackSrc}
+            src={fallbackSrc}
+            alt=""
+            className="h-full w-full"
+            onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
+            style={{ objectFit: "contain", background: "#000" }}
+          />
+
+          {/* Overlay bas — logo Instagram + handle */}
           <div
-            className="relative overflow-hidden"
+            className="absolute left-0 right-0 bottom-0 flex items-center gap-4 px-8 pb-8 pt-24"
             style={{
-              aspectRatio: "9 / 16",
-              height: "94%",
-              borderRadius: 28,
-              boxShadow: "0 40px 100px rgba(0,0,0,0.6), 0 0 0 1px rgba(201,168,76,0.3), 0 0 0 8px #1a1410, 0 0 0 9px rgba(201,168,76,0.4)",
-              background: "#000",
+              background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 100%)",
             }}
           >
-            <img
-              key={fallbackSrc}
-              src={fallbackSrc}
-              alt=""
-              className="h-full w-full"
-              onError={() => setFallbackSrc((src) => src.endsWith(".webp") ? `${REELS_PATH}/${reelId}.gif` : `${REELS_PATH}/${reelId}.jpg`)}
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        </div>
-
-        {/* Branding à droite */}
-        <div className="flex flex-col justify-center" style={{ animation: "mm-slide-up 1.2s ease-out 0.3s both" }}>
-          <div className="flex items-center gap-5">
-            <InstagramLogo size={64} />
-            <div className="font-sans-ui uppercase" style={{ fontSize: 18, letterSpacing: "0.4em", color: "hsl(var(--gold))" }}>
-              Suivez-nous
+            <InstagramLogo size={44} />
+            <div
+              className="font-serif-display"
+              style={{ fontSize: 34, color: "#fff", letterSpacing: "0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+            >
+              @maison_maitre
             </div>
-          </div>
-
-          <h2
-            className="font-serif-display"
-            style={{ fontSize: 104, lineHeight: 1, color: "hsl(var(--linen))", marginTop: 32, letterSpacing: "0.02em" }}
-          >
-            <span className="font-sans-ui font-light tracking-wide" style={{ fontSize: 78, letterSpacing: "0.04em" }}>Maison</span>
-            <br />
-            <em className="font-serif-display italic" style={{ color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</em>
-          </h2>
-
-          <div
-            className="font-serif-display flex items-center gap-4"
-            style={{ fontSize: 52, color: "hsl(var(--linen))", marginTop: 36, letterSpacing: "0.01em" }}
-          >
-            <InstagramLogo size={52} />
-            @maison_maitre
-          </div>
-
-          <p
-            className="font-sans-ui"
-            style={{ fontSize: 26, lineHeight: 1.45, color: "rgba(242,237,228,0.82)", marginTop: 32, maxWidth: 640 }}
-          >
-            Cafés des Maitre, Thés des Maitre, vignerons nature et belles
-            adresses — toute notre actualité au quotidien.
-          </p>
-
-          <div className="mt-12 font-sans-ui uppercase" style={{ fontSize: 16, letterSpacing: "0.32em", color: "rgba(201,168,76,0.7)" }}>
-            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            <div className="ml-auto font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.32em", color: "rgba(201,168,76,0.85)" }}>
+              Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            </div>
           </div>
         </div>
       </div>
@@ -1000,8 +994,11 @@ const TeaScene = ({ now }: { now: Date }) => {
 };
 
 const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
-  const total = PRODUCTS_TO_TRY.length;
-  const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
+  const featured = PRODUCTS_TO_TRY.find((p) => p.featured);
+  const others = PRODUCTS_TO_TRY.filter((p) => !p.featured);
+  const total = others.length;
+  const rest = Array.from({ length: 2 }, (_, i) => others[(productOffset + i) % total]);
+  const items = featured ? [featured, ...rest] : Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % PRODUCTS_TO_TRY.length]);
   return (
   <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-20 pt-32 overflow-hidden">
     <div
@@ -1042,12 +1039,29 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
             style={{
               gridTemplateColumns: "300px 1fr",
               background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
-              border: "1px solid rgba(201,168,76,0.25)",
-              boxShadow: "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
+              border: p.featured ? "1.5px solid hsl(var(--gold))" : "1px solid rgba(201,168,76,0.25)",
+              boxShadow: p.featured
+                ? "0 30px 60px -20px rgba(46,36,25,0.35), 0 0 0 1px rgba(255,255,255,0.6) inset, 0 0 0 3px rgba(201,168,76,0.18)"
+                : "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
             }}
           >
-            <div className="relative w-full overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1A1510 0%, #0D0B08 100%)" }}>
+            {p.featured && (
+              <div
+                className="font-sans-ui uppercase absolute z-10"
+                style={{
+                  top: 14, right: 14,
+                  background: "linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-lt)) 100%)",
+                  color: "hsl(var(--ink))",
+                  fontSize: 12, letterSpacing: "0.18em", fontWeight: 600,
+                  padding: "7px 14px", borderRadius: 999,
+                  boxShadow: "0 8px 18px -6px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+                }}
+              >
+                ★ Coup de cœur
+              </div>
+            )}
+            <div className="relative w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F8F2E4 0%, #EFE4CC 100%)" }}>
               <img
                 src={p.img}
                 alt={p.name}
@@ -1056,17 +1070,13 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
                 style={{
                   objectFit: "contain",
                   padding: 18,
-                  filter: "grayscale(1) contrast(1.05) brightness(0.95) drop-shadow(0 14px 24px rgba(0,0,0,0.45))",
+                  filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))",
                 }}
               />
-              {/* Overlay doré subtil */}
+              {/* Overlay doré subtil — préserve les vraies couleurs du produit */}
               <div
                 className="pointer-events-none absolute inset-0"
-                style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.22) 0%, transparent 55%, rgba(201,168,76,0.12) 100%)", mixBlendMode: "overlay" }}
-              />
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{ background: "radial-gradient(circle at 50% 85%, rgba(0,0,0,0.45) 0%, transparent 60%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.10) 0%, transparent 60%)" }}
               />
             </div>
             <div className="relative flex flex-col justify-center p-8 overflow-hidden">
@@ -1292,6 +1302,109 @@ const ReviewScene = () => {
   );
 };
 
+// ============ Dole · Le saviez-vous ? ============
+const DOLE_FACTS: { emoji: string; title: string; body: string }[] = [
+  { emoji: "🏰", title: "Capitale historique", body: "Dole fut la capitale de la Franche-Comté pendant plus de 3 siècles, avant que Besançon ne lui ravisse ce titre en 1676." },
+  { emoji: "⚗️", title: "Louis Pasteur est né ici", body: "Le père de la pasteurisation et des vaccins modernes est né à Dole le 27 décembre 1822. Sa maison natale est aujourd'hui un musée." },
+  { emoji: "🛤️", title: "Le Canal du Rhône au Rhin", body: "Dole est traversée par le canal du Rhône au Rhin, inauguré en 1833, qui reliait Strasbourg à la Méditerranée via le Doubs." },
+  { emoji: "🦅", title: "Ville d'Art et d'Histoire", body: "Avec ses ruelles médiévales, ses hôtels particuliers du XVIe siècle et sa collégiale Notre-Dame, Dole est classée Ville d'Art et d'Histoire." },
+  { emoji: "🍷", title: "Aux portes du vignoble jurassien", body: "À 20 minutes des premières vignes du Jura, Dole est la porte d'entrée naturelle vers les vins nature, savagnin et vin jaune." },
+  { emoji: "☕", title: "Une culture du café qui renaît", body: "Maison Maître a fait de Dole une adresse de référence du café de spécialité en Bourgogne-Franche-Comté." },
+  { emoji: "🌊", title: "Le Doubs, rivière emblématique", body: "La rivière Doubs longe la vieille ville de Dole, offrant des promenades le long des berges et un paysage unique au cœur de la cité." },
+  { emoji: "🧀", title: "Terre de comté", body: "La région autour de Dole est une des zones de production du Comté AOP, le fromage le plus vendu de France avec 70 000 tonnes/an." },
+  { emoji: "🎭", title: "Une ville vivante", body: "Dole accueille chaque année festivals, marchés nocturnes et événements culturels dans ses espaces patrimoniaux uniques." },
+  { emoji: "📍", title: "Carrefour de la France", body: "Idéalement située entre Paris (2h TGV), Lyon (1h), Berne (1h30) et Genève (1h45), Dole est un carrefour stratégique de l'Est français." },
+];
+
+const DoleScene = () => {
+  const [idx, setIdx] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setIdx((i) => (i + 1) % DOLE_FACTS.length), 20000);
+    return () => clearInterval(id);
+  }, []);
+  const f = DOLE_FACTS[idx];
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          top: "-20%", left: "-10%", width: 800, height: 800, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
+        }}
+      />
+      <div
+        className="pointer-events-none absolute"
+        style={{
+          bottom: "-25%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(116,42,62,0.14) 0%, transparent 65%)",
+        }}
+      />
+
+      <div className="relative flex h-full flex-col items-center justify-center px-20 text-center">
+        <div
+          className="font-sans-ui uppercase"
+          style={{ fontSize: 11, letterSpacing: "0.3em", color: "#C9A84C" }}
+        >
+          Dole · Le saviez-vous ?
+        </div>
+
+        <div
+          key={idx}
+          className="flex flex-col items-center"
+          style={{ animation: "mm-fade-in 0.6s ease-out both", marginTop: 28 }}
+        >
+          <div style={{ fontSize: 96, lineHeight: 1 }}>{f.emoji}</div>
+          <h2
+            className="font-serif-display italic"
+            style={{ fontSize: "2.8rem", color: "#C9A84C", marginTop: 28, lineHeight: 1.1, letterSpacing: "-0.01em" }}
+          >
+            {f.title}
+          </h2>
+          <p
+            className="mt-8 font-sans-ui"
+            style={{ fontSize: "1.1rem", color: "#F5F0E8", maxWidth: "42rem", opacity: 0.8, lineHeight: 1.55 }}
+          >
+            {f.body}
+          </p>
+        </div>
+
+        {/* Indicateur de progression */}
+        <div className="mt-12 flex gap-1.5">
+          {DOLE_FACTS.map((_, i) => (
+            <div
+              key={i}
+              style={{
+                width: i === idx ? 24 : 6,
+                height: 3,
+                borderRadius: 2,
+                background: i === idx ? "#C9A84C" : "rgba(201,168,76,0.25)",
+                transition: "all 0.4s",
+              }}
+            />
+          ))}
+        </div>
+
+        {/* Signature Maison Maître */}
+        <div
+          className="font-serif-display italic"
+          style={{
+            position: "absolute",
+            bottom: 32,
+            left: 0,
+            right: 0,
+            textAlign: "center",
+            fontSize: 13,
+            color: "#C9A84C",
+            opacity: 0.6,
+          }}
+        >
+          Maison Maître · Café de spécialité à Dole
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather: WeatherData | null; active: boolean; now: Date }) => {
   switch (scene.type) {
     case "café":
@@ -1318,6 +1431,8 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
       return <ReviewScene />;
     case "tv":
       return <TvTonightScene />;
+    case "dole":
+      return <DoleScene />;
   }
 };
 
