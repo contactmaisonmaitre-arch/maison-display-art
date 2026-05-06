@@ -1325,15 +1325,23 @@ const CenterPanel = ({ weather, now }: { weather: WeatherData | null; now: Date 
 
   return (
     <main className="relative h-full w-full overflow-hidden" style={{ animation: "mm-fade-in 1.2s ease-out both" }}>
-      {SCENES.map((scene, i) => (
-        <div
-          key={i}
-          className="absolute inset-0 transition-opacity duration-[1600ms] ease-in-out"
-          style={{ opacity: i === index ? 1 : 0, pointerEvents: i === index ? "auto" : "none" }}
-        >
-          <SceneRenderer scene={scene} weather={weather} active={i === index} now={now} />
-        </div>
-      ))}
+      {SCENES.map((scene, i) => {
+        const active = i === index;
+        return (
+          <div
+            key={i}
+            className="absolute inset-0"
+            style={{
+              opacity: active ? 1 : 0,
+              transform: active ? "translateY(0)" : "translateY(20px)",
+              transition: "opacity 800ms ease, transform 800ms ease",
+              pointerEvents: active ? "auto" : "none",
+            }}
+          >
+            <SceneRenderer scene={scene} weather={weather} active={active} now={now} />
+          </div>
+        );
+      })}
 
       <PaperGrain />
 
