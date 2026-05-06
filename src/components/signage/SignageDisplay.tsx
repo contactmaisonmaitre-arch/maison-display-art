@@ -373,7 +373,7 @@ const GOOD_NEWS_OF_THE_DAY = [
 ];
 
 // ============ Scenes ============
-type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review" | "tv";
+type SceneType = "café" | "vin" | "weather" | "thé" | "épicerie" | "instagram" | "chatperche" | "produits" | "anecdote" | "goodnews" | "review" | "tv" | "dole";
 interface Scene {
   type: SceneType;
   duration: number;
