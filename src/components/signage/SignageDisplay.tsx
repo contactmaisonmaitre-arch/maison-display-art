@@ -136,15 +136,15 @@ const TICKER = [
 
 // Produits réels — extraits de maisonmaitre.com (prix au 100g pour les thés/infusions)
 const PRODUCTS_TO_TRY = [
-  { cat: "Café des Maitre · Éthiopie",  name: "Yirgacheffe Heirloom",     note: "Jasmin · Pêche · Miel · 14,50 € / 100g",        img: "/products/cafe-ethiopie.png" },
-  { cat: "Café des Maitre · Colombie",  name: "Huila Bourbon Rose",       note: "Cerise · Framboise · Cacao · 16 € / 100g",      img: "/products/cafe-colombie-bourbon.png" },
-  { cat: "Café des Maitre · Colombie",  name: "Huila Castillo Semi-Lavé", note: "Chocolat · Noisette · Caramel · 14,50 € / 100g",img: "/products/cafe-colombie-castillo.gif" },
-  { cat: "Thé des Maitre · Noir",       name: "Banquet des Tsars",        note: "Bergamote & agrumes · 10,90 € / 100g",          img: "/products/the-tsars.png" },
-  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          note: "Notre incontournable · 9,50 € / 100g",          img: "/products/the-chat.png" },
-  { cat: "Infusion des Maitre",         name: "Délice des Vergers",       note: "Framboise · Hibiscus · 9,35 € / 100g",          img: "/products/infusion-vergers.png" },
-  { cat: "Thé des Maitre · Floral",     name: "Eden Floral",              note: "Rose & Pivoine · 11,50 € / 100g",               img: "/products/eden-floral.png" },
-  { cat: "Thé des Maitre · Caramel",    name: "Douceur Salée",            note: "Caramel beurre salé · 12,25 € / 100g",          img: "/products/douceur-salee.png" },
-  { cat: "Boutique",                    name: "Mug Émaillé",              note: "« Buvez un bon café » · 20 €",                  img: "/products/mug-emaille.png" },
+  { cat: "Café des Maitre · Éthiopie",  name: "Yirgacheffe Heirloom",     notes: "Jasmin · Pêche · Miel",        price: "14,50 € / 100g", img: "/products/cafe-ethiopie.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Bourbon Rose",       notes: "Cerise · Framboise · Cacao",   price: "16 € / 100g",    img: "/products/cafe-colombie-bourbon.png" },
+  { cat: "Café des Maitre · Colombie",  name: "Huila Castillo Semi-Lavé", notes: "Chocolat · Noisette · Caramel",price: "14,50 € / 100g", img: "/products/cafe-colombie-castillo.gif" },
+  { cat: "Thé des Maitre · Noir",       name: "Banquet des Tsars",        notes: "Bergamote & agrumes",          price: "10,90 € / 100g", img: "/products/the-tsars.png" },
+  { cat: "Thé des Maitre · Vert",       name: "Le Chat Heureux",          notes: "Notre incontournable",         price: "9,50 € / 100g",  img: "/products/the-chat.png" },
+  { cat: "Infusion des Maitre",         name: "Délice des Vergers",       notes: "Framboise · Hibiscus",         price: "9,35 € / 100g",  img: "/products/infusion-vergers.png" },
+  { cat: "Thé des Maitre · Floral",     name: "Eden Floral",              notes: "Rose & Pivoine",               price: "11,50 € / 100g", img: "/products/eden-floral.png" },
+  { cat: "Thé des Maitre · Caramel",    name: "Douceur Salée",            notes: "Caramel beurre salé",          price: "12,25 € / 100g", img: "/products/douceur-salee.png" },
+  { cat: "Boutique",                    name: "Mug Émaillé",              notes: "« Buvez un bon café »",        price: "20 €",           img: "/products/mug-emaille.png" },
 ];
 
 
@@ -861,8 +861,14 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
               <div className="mt-3 font-serif-display leading-tight" style={{ fontSize: 40, color: "hsl(var(--espresso))" }}>
                 {p.name}
               </div>
-              <div className="mt-4 font-serif-display italic" style={{ fontSize: 24, color: "hsl(var(--taupe))" }}>
-                {p.note}
+              <div className="mt-4 font-serif-display italic" style={{ fontSize: 22, color: "hsl(var(--taupe))" }}>
+                {p.notes}
+              </div>
+              <div className="mt-5 flex items-center gap-3">
+                <div style={{ width: 28, height: 1, backgroundColor: "hsl(var(--gold))" }} />
+                <div className="font-sans-ui tabular-nums" style={{ fontSize: 22, fontWeight: 500, color: "hsl(var(--gold))", letterSpacing: "0.02em" }}>
+                  {p.price}
+                </div>
               </div>
             </div>
           </div>
