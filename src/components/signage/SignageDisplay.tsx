@@ -435,7 +435,7 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   }
   const w = weather.current;
   return (
-    <div className="mm-cream absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
+    <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
         className="pointer-events-none absolute"
         style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
@@ -625,7 +625,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
   const a = COFFEE_ANECDOTES[anecdoteIndex % COFFEE_ANECDOTES.length];
   return (
-    <div className="mm-noir-warm absolute inset-0 overflow-hidden">
+    <div className="mm-noir-warm mm-grid absolute inset-0 overflow-hidden">
       <div
         className="pointer-events-none absolute"
         style={{
@@ -783,7 +783,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
   const total = PRODUCTS_TO_TRY.length;
   const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
   return (
-  <div className="mm-cream absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
+  <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
     <div
       className="pointer-events-none absolute"
       style={{ top: "-25%", right: "-15%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.20) 0%, transparent 65%)", animation: "mm-glow 12s ease-in-out infinite" }}
