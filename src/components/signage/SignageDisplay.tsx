@@ -815,9 +815,28 @@ const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
 
 // ============ 3 actualités positives du jour ============
 const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
+  const [rotation, setRotation] = useState(0);
+  const [lastUpdated, setLastUpdated] = useState<Date>(() => new Date());
+  const [, setTick] = useState(0);
+
+  useEffect(() => {
+    const refresh = setInterval(() => {
+      setRotation((r) => r + 3);
+      setLastUpdated(new Date());
+    }, 5 * 60 * 1000);
+    const tick = setInterval(() => setTick((t) => t + 1), 30 * 1000);
+    return () => {
+      clearInterval(refresh);
+      clearInterval(tick);
+    };
+  }, []);
+
   const items = [0, 1, 2].map(
-    (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + i) % GOOD_NEWS_OF_THE_DAY.length]
+    (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + rotation + i) % GOOD_NEWS_OF_THE_DAY.length]
   );
+  const minutesAgo = Math.max(0, Math.floor((Date.now() - lastUpdated.getTime()) / 60000));
+  const updatedLabel =
+    minutesAgo < 1 ? "Mis à jour à l'instant" : `Mis à jour il y a ${minutesAgo} min`;
   return (
     <div className="absolute inset-0 px-28 pb-24 pt-36" style={{ background: "linear-gradient(135deg, #F2EDE4 0%, #E5DDD0 100%)" }}>
       <div className="flex items-center gap-5">
@@ -887,6 +906,12 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
             </p>
           </div>
         ))}
+      </div>
+      <div
+        className="absolute bottom-6 right-10 font-sans-ui uppercase"
+        style={{ fontSize: 11, letterSpacing: "0.32em", color: "hsl(var(--taupe) / 0.7)" }}
+      >
+        ◦ {updatedLabel}
       </div>
     </div>
   );
