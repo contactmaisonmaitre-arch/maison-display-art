@@ -1163,9 +1163,9 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         <div className="mm-eyebrow" style={{ fontSize: 12, color: "hsl(var(--gold))" }}>
           Boutique · Dole, Jura
         </div>
-        <div className="font-serif-display leading-none" style={{ fontSize: 48, color: "hsl(var(--espresso))" }}>
-          <span className="font-semibold">Maison </span>
-          <span className="italic font-light" style={{ color: "hsl(var(--copper))" }}>Maitre</span>
+        <div className="leading-none flex items-baseline gap-3" style={{ color: "hsl(var(--espresso))" }}>
+          <span className="font-sans-ui font-light tracking-wide" style={{ fontSize: 38, letterSpacing: "0.04em" }}>Maison</span>
+          <span className="font-serif-display italic" style={{ fontSize: 48, color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</span>
         </div>
       </div>
       <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, rgba(46,36,25,0.25), transparent)" }} />
