@@ -28,6 +28,97 @@ const WMO: Record<WeatherCode, { emoji: string; label: string }> = {
 };
 const wmo = (c: number) => WMO[c] ?? { emoji: "🌡️", label: "—" };
 
+type WIconKind = "sun" | "partly" | "cloud" | "fog" | "drizzle" | "rain" | "snow" | "storm";
+const wmoKind = (c: number): WIconKind => {
+  if (c === 0) return "sun";
+  if (c === 1 || c === 2) return "partly";
+  if (c === 3) return "cloud";
+  if (c === 45 || c === 48) return "fog";
+  if (c >= 51 && c <= 55) return "drizzle";
+  if ((c >= 61 && c <= 65) || (c >= 80 && c <= 81)) return "rain";
+  if (c >= 71 && c <= 77) return "snow";
+  if (c === 82 || (c >= 95 && c <= 99)) return "storm";
+  return "cloud";
+};
+
+const WeatherIcon = ({ code, size = 220, color = "hsl(var(--espresso))", accent = "hsl(var(--gold))" }: { code: number; size?: number; color?: string; accent?: string }) => {
+  const kind = wmoKind(code);
+  const s = size;
+  const sw = Math.max(2, s * 0.018);
+  const common = { fill: "none", stroke: color, strokeWidth: sw, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  return (
+    <svg width={s} height={s} viewBox="0 0 100 100" aria-hidden>
+      {kind === "sun" && (
+        <g {...common} stroke={accent}>
+          <circle cx="50" cy="50" r="18" />
+          {Array.from({ length: 8 }).map((_, i) => {
+            const a = (i * Math.PI) / 4;
+            const x1 = 50 + Math.cos(a) * 28, y1 = 50 + Math.sin(a) * 28;
+            const x2 = 50 + Math.cos(a) * 40, y2 = 50 + Math.sin(a) * 40;
+            return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} />;
+          })}
+        </g>
+      )}
+      {kind === "partly" && (
+        <g {...common}>
+          <g stroke={accent}>
+            <circle cx="38" cy="40" r="13" />
+            {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => {
+              const a = (i * Math.PI) / 4;
+              return <line key={i} x1={38 + Math.cos(a) * 19} y1={40 + Math.sin(a) * 19} x2={38 + Math.cos(a) * 27} y2={40 + Math.sin(a) * 27} />;
+            })}
+          </g>
+          <path d="M30 70 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H34 q-12 0 -12 -10 z" />
+        </g>
+      )}
+      {kind === "cloud" && (
+        <path {...common} d="M22 68 q0 -16 16 -16 q4 -12 18 -12 q16 0 18 16 q12 0 12 12 q0 12 -14 12 H30 q-14 0 -14 -12 z" />
+      )}
+      {kind === "fog" && (
+        <g {...common}>
+          <path d="M22 56 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H26 q-12 0 -12 -10 z" />
+          <line x1="18" y1="78" x2="82" y2="78" />
+          <line x1="26" y1="88" x2="74" y2="88" />
+        </g>
+      )}
+      {kind === "drizzle" && (
+        <g {...common}>
+          <path d="M22 54 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H26 q-12 0 -12 -10 z" />
+          <line x1="36" y1="76" x2="32" y2="86" stroke={accent} />
+          <line x1="52" y1="76" x2="48" y2="86" stroke={accent} />
+          <line x1="68" y1="76" x2="64" y2="86" stroke={accent} />
+        </g>
+      )}
+      {kind === "rain" && (
+        <g {...common}>
+          <path d="M22 54 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H26 q-12 0 -12 -10 z" />
+          <line x1="34" y1="74" x2="28" y2="92" stroke={accent} />
+          <line x1="50" y1="74" x2="44" y2="92" stroke={accent} />
+          <line x1="66" y1="74" x2="60" y2="92" stroke={accent} />
+        </g>
+      )}
+      {kind === "snow" && (
+        <g {...common}>
+          <path d="M22 54 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H26 q-12 0 -12 -10 z" />
+          {[34, 50, 66].map((x) => (
+            <g key={x} stroke={accent}>
+              <line x1={x} y1="78" x2={x} y2="92" />
+              <line x1={x - 5} y1="81" x2={x + 5} y2="89" />
+              <line x1={x - 5} y1="89" x2={x + 5} y2="81" />
+            </g>
+          ))}
+        </g>
+      )}
+      {kind === "storm" && (
+        <g {...common}>
+          <path d="M22 54 q0 -14 14 -14 q4 -10 16 -10 q14 0 16 14 q10 0 10 10 q0 10 -12 10 H26 q-12 0 -12 -10 z" />
+          <path d="M50 70 L42 86 L52 86 L46 96" stroke={accent} fill="none" />
+        </g>
+      )}
+    </svg>
+  );
+};
+
 interface WeatherData {
   current: {
     temperature_2m: number;
@@ -465,7 +556,9 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
         <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, hsl(var(--gold)), transparent)" }} />
       </div>
       <div className="relative mt-8 flex items-center gap-12" style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}>
-        <div style={{ fontSize: 196, filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.25))" }}>{wmo(w.weather_code).emoji}</div>
+        <div style={{ filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.18))" }}>
+          <WeatherIcon code={w.weather_code} size={240} />
+        </div>
         <div className="relative font-serif-display leading-none tabular-nums" style={{ fontSize: 360, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
           {displayTemp}
           <span
