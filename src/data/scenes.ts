@@ -41,5 +41,6 @@ export const SCENES: Scene[] = [
   { type: "produits", duration: 17000, productOffset: 6 },
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[3] ?? 3 },
   { type: "épicerie", duration: 13000 },
-  { type: "chatperche", duration: 13000 },
+  { type: "chatperche-intro", duration: 15000 },
+  { type: "chatperche-program", duration: 15000 },
 ];

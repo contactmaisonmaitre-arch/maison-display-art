@@ -10,7 +10,8 @@ import { ProductsScene } from "./ProductsScene";
 import { ReviewScene } from "./ReviewScene";
 import { DoleScene } from "./DoleScene";
 import { TvTonightScene } from "./TvTonightScene";
-import { ChatPercheScene } from "./ChatPercheScene";
+import { ChatPercheIntroScene } from "./ChatPercheIntroScene";
+import { ChatPercheProgramScene } from "./ChatPercheProgramScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -38,8 +39,10 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
     case "instagram":
       return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
-    case "chatperche":
-      return <ChatPercheScene />;
+    case "chatperche-intro":
+      return <ChatPercheIntroScene />;
+    case "chatperche-program":
+      return <ChatPercheProgramScene />;
     case "review":
       return <ReviewScene />;
     case "tv":
