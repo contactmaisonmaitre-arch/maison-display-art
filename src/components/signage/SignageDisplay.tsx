@@ -1478,7 +1478,7 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
     case "instagram":
       return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
     case "chatperche":
-      return <TextSlide bg="linear-gradient(135deg, #A0A8C0, #405070, #101828)" tag="Chat Perché Gourmand · Été 2026" titleStart="Le rendez-vous" titleItalic="de l'été." body="Retrouvez-nous sur La Visitation. Dégustation, découverte, plaisirs partagés." />;
+      return <ChatPercheScene />;
     case "review":
       return <ReviewScene />;
     case "tv":
