@@ -767,22 +767,58 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
             style={{ objectFit: "contain", background: "#000" }}
           />
 
-          {/* Overlay bas — logo Instagram + handle */}
+          {/* Compteur REEL X/3 — top right */}
           <div
-            className="absolute left-0 right-0 bottom-0 flex items-center gap-4 px-8 pb-8 pt-24"
+            className="absolute top-6 right-6 font-sans-ui uppercase"
             style={{
-              background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.85) 100%)",
+              fontSize: 12,
+              letterSpacing: "0.32em",
+              color: "rgba(201,168,76,0.95)",
+              padding: "8px 14px",
+              border: "1px solid rgba(201,168,76,0.45)",
+              borderRadius: 2,
+              background: "rgba(0,0,0,0.4)",
+              backdropFilter: "blur(8px)",
+            }}
+          >
+            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+          </div>
+
+          {/* Overlay bas — logo Instagram + handle + thème + CTA */}
+          <div
+            className="absolute left-0 right-0 bottom-0 flex items-center gap-5 px-8 pb-8 pt-24"
+            style={{
+              background: "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.9) 100%)",
             }}
           >
             <InstagramLogo size={44} />
-            <div
-              className="font-serif-display"
-              style={{ fontSize: 34, color: "#fff", letterSpacing: "0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
-            >
-              @maison_maitre
+            <div className="flex flex-col">
+              <div
+                className="font-serif-display"
+                style={{ fontSize: 32, lineHeight: 1, color: "#fff", letterSpacing: "0.01em", textShadow: "0 2px 12px rgba(0,0,0,0.6)" }}
+              >
+                @maison_maitre
+              </div>
+              <div
+                className="font-sans-ui uppercase mt-2"
+                style={{ fontSize: 11, letterSpacing: "0.3em", color: "rgba(201,168,76,0.9)" }}
+              >
+                Cafés · Thés · Vins nature
+              </div>
             </div>
-            <div className="ml-auto font-sans-ui uppercase" style={{ fontSize: 12, letterSpacing: "0.32em", color: "rgba(201,168,76,0.85)" }}>
-              Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            <div
+              className="ml-auto font-sans-ui uppercase"
+              style={{
+                fontSize: 13,
+                letterSpacing: "0.28em",
+                color: "hsl(var(--gold))",
+                padding: "14px 26px",
+                border: "1.5px solid hsl(var(--gold))",
+                borderRadius: 2,
+                background: "rgba(0,0,0,0.35)",
+              }}
+            >
+              Suivez-nous
             </div>
           </div>
         </div>
