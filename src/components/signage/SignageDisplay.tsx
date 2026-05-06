@@ -414,6 +414,7 @@ const SCENES: Scene[] = [
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[1] ?? 1 },
   { type: "thé", duration: 13000 },
   { type: "weather", duration: 12000 },
+  { type: "dole", duration: 20000 },
   { type: "goodnews", duration: 18000, newsOffset: NEWS_OFFSETS[1] ?? 3 },
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[2] ?? 2 },
   { type: "review", duration: 38000 },
