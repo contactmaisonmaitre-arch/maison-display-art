@@ -47,28 +47,62 @@
 }
 
 @layer utilities {
-  .font-serif-display { font-family: 'Cormorant Garamond', serif; }
+  .font-serif-display { font-family: 'Instrument Serif', 'Cormorant Garamond', serif; font-weight: 400; }
+  .font-serif-classic { font-family: 'Cormorant Garamond', serif; }
   .font-sans-ui { font-family: 'Jost', sans-serif; }
-  .mm-eyebrow { font-family: 'Jost', sans-serif; text-transform: uppercase; letter-spacing: 0.42em; font-weight: 500; }
+  .font-mono-ui { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
+  .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.32em; font-weight: 400; }
   .mm-glass-dark {
-    background: linear-gradient(135deg, rgba(46,36,25,0.55) 0%, rgba(20,15,10,0.65) 100%);
+    background: linear-gradient(135deg, rgba(46,36,25,0.45) 0%, rgba(20,15,10,0.55) 100%);
     border: 1px solid rgba(184,150,90,0.22);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
   .mm-glass-light {
     background: linear-gradient(135deg, rgba(255,253,248,0.78) 0%, rgba(244,238,226,0.66) 100%);
     border: 1px solid rgba(46,36,25,0.10);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
   .mm-vignette::after {
     content: ""; position: absolute; inset: 0; pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 55%, rgba(0,0,0,0.45) 100%);
   }
-  .mm-noir { background: radial-gradient(ellipse at 30% 0%, #2A1F14 0%, #14100A 45%, #0A0704 100%); }
-  .mm-noir-warm { background: radial-gradient(ellipse at 70% 100%, #3A2618 0%, #1C130C 50%, #0A0604 100%); }
-  .mm-cream { background: radial-gradient(ellipse at 30% 0%, #FBF7EE 0%, #F0E9DA 60%, #E2D8C4 100%); }
+  /* Modern mesh gradients */
+  .mm-noir {
+    background:
+      radial-gradient(ellipse 80% 60% at 20% 10%, rgba(212,165,103,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 70% 60% at 90% 90%, rgba(116,42,62,0.20) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, #1A130D 0%, #0A0704 100%);
+  }
+  .mm-noir-warm {
+    background:
+      radial-gradient(ellipse 70% 60% at 80% 0%, rgba(212,165,103,0.22) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 0% 100%, rgba(116,42,62,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse at 50% 50%, #1F140C 0%, #0A0604 100%);
+  }
+  .mm-cream {
+    background:
+      radial-gradient(ellipse 60% 50% at 90% 10%, rgba(212,165,103,0.18) 0%, transparent 55%),
+      radial-gradient(ellipse 50% 40% at 10% 90%, rgba(116,42,62,0.10) 0%, transparent 55%),
+      linear-gradient(135deg, #FBF7EE 0%, #F2EADA 100%);
+  }
+  /* Subtle dotted grid */
+  .mm-grid::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(184,150,90,0.10) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .mm-grid-light::before {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background-image: radial-gradient(rgba(46,36,25,0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  }
+  .mm-divider-gold {
+    background: linear-gradient(90deg, transparent, hsl(var(--gold)) 30%, hsl(var(--gold)) 70%, transparent);
+  }
 }
 
 @keyframes mm-fade-in { from { opacity: 0; } to { opacity: 1; } }

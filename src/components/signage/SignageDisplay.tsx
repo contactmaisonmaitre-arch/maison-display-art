@@ -435,7 +435,7 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
   }
   const w = weather.current;
   return (
-    <div className="mm-cream absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
+    <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
         className="pointer-events-none absolute"
         style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
@@ -625,7 +625,7 @@ const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?
 const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number }) => {
   const a = COFFEE_ANECDOTES[anecdoteIndex % COFFEE_ANECDOTES.length];
   return (
-    <div className="mm-noir-warm absolute inset-0 overflow-hidden">
+    <div className="mm-noir-warm mm-grid absolute inset-0 overflow-hidden">
       <div
         className="pointer-events-none absolute"
         style={{
@@ -783,7 +783,7 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
   const total = PRODUCTS_TO_TRY.length;
   const items = Array.from({ length: 3 }, (_, i) => PRODUCTS_TO_TRY[(productOffset + i) % total]);
   return (
-  <div className="mm-cream absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
+  <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-24 pt-36 overflow-hidden">
     <div
       className="pointer-events-none absolute"
       style={{ top: "-25%", right: "-15%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(184,150,90,0.20) 0%, transparent 65%)", animation: "mm-glow 12s ease-in-out infinite" }}
@@ -1178,13 +1178,28 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </div>
       </div>
     </div>
-    <div className="text-right">
-      <div className="font-serif-display leading-none tabular-nums" style={{ fontSize: 78, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.02em" }}>
-        {pad(now.getHours())}:{pad(now.getMinutes())}
-        <span style={{ fontSize: 42, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+    <div className="flex items-center gap-6">
+      {/* Live pill */}
+      <div
+        className="flex items-center gap-2 rounded-full px-4 py-2"
+        style={{ background: "rgba(46,36,25,0.06)", border: "1px solid rgba(46,36,25,0.12)" }}
+      >
+        <span
+          className="rounded-full"
+          style={{ width: 8, height: 8, background: "#16a34a", boxShadow: "0 0 10px #16a34a", animation: "mm-glow 1.6s ease-in-out infinite" }}
+        />
+        <span className="font-mono-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.32em", color: "hsl(var(--espresso))" }}>
+          En direct
+        </span>
       </div>
-      <div className="mt-2 mm-eyebrow" style={{ fontSize: 12, color: "hsl(var(--gold))" }}>
-        {formatDateLong(now)}
+      <div className="text-right">
+        <div className="font-mono-ui leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.04em" }}>
+          {pad(now.getHours())}:{pad(now.getMinutes())}
+          <span style={{ fontSize: 38, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+        </div>
+        <div className="mt-2 mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--gold))" }}>
+          {formatDateLong(now)}
+        </div>
       </div>
     </div>
   </div>
