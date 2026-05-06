@@ -1431,6 +1431,8 @@ const SceneRenderer = ({ scene, weather, active, now }: { scene: Scene; weather:
       return <ReviewScene />;
     case "tv":
       return <TvTonightScene />;
+    case "dole":
+      return <DoleScene />;
   }
 };
 
