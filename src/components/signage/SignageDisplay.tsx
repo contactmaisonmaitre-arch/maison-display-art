@@ -1354,17 +1354,18 @@ const SignageDisplay = () => {
 
   return (
     <div
-      className="fixed inset-0 overflow-hidden bg-ink flex items-center justify-center"
-      style={{ cursor: showCtrl ? "default" : "none" }}
+      className="fixed inset-0 overflow-hidden flex items-center justify-center"
+      style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)" }}
     >
       <div
-        className="relative flex overflow-hidden bg-ink"
+        className="relative flex overflow-hidden"
         style={{
           width: 1920,
           height: 1080,
           transform: `scale(${scale})`,
           transformOrigin: "center center",
           flexShrink: 0,
+          background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)",
         }}
       >
         <FixedTopBar now={now} />
