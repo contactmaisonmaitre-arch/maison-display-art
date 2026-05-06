@@ -991,7 +991,7 @@ const ReviewScene = () => {
 
           {/* Reviews */}
           <div
-            className="flex flex-col"
+            className="mm-noise flex flex-col"
             style={{
               padding: 44,
               borderRadius: 4,
