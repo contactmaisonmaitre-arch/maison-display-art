@@ -902,8 +902,8 @@ const ReviewScene = () => {
           </div>
         </div>
 
-        <h2 className="mt-7 font-serif-display leading-[0.98]" style={{ fontSize: 110, color: "hsl(var(--linen))" }}>
-          <span className="font-semibold">Partagez votre</span>{" "}
+        <h2 className="mt-7 font-serif-display leading-[0.95]" style={{ fontSize: "8vw", color: "hsl(var(--linen))" }}>
+          <span className="font-light">Partagez votre</span>{" "}
           <span className="italic font-light" style={{ color: "hsl(var(--gold-lt))" }}>expérience.</span>
         </h2>
 
