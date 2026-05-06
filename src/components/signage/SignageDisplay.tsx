@@ -1046,12 +1046,29 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
             style={{
               gridTemplateColumns: "300px 1fr",
               background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
-              border: "1px solid rgba(201,168,76,0.25)",
-              boxShadow: "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
+              border: p.featured ? "1.5px solid hsl(var(--gold))" : "1px solid rgba(201,168,76,0.25)",
+              boxShadow: p.featured
+                ? "0 30px 60px -20px rgba(46,36,25,0.35), 0 0 0 1px rgba(255,255,255,0.6) inset, 0 0 0 3px rgba(201,168,76,0.18)"
+                : "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
             }}
           >
-            <div className="relative w-full overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1A1510 0%, #0D0B08 100%)" }}>
+            {p.featured && (
+              <div
+                className="font-sans-ui uppercase absolute z-10"
+                style={{
+                  top: 14, right: 14,
+                  background: "linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-lt)) 100%)",
+                  color: "hsl(var(--ink))",
+                  fontSize: 12, letterSpacing: "0.18em", fontWeight: 600,
+                  padding: "7px 14px", borderRadius: 999,
+                  boxShadow: "0 8px 18px -6px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+                }}
+              >
+                ★ Coup de cœur
+              </div>
+            )}
+            <div className="relative w-full overflow-hidden" style={{ background: "linear-gradient(180deg, #F8F2E4 0%, #EFE4CC 100%)" }}>
               <img
                 src={p.img}
                 alt={p.name}
@@ -1060,17 +1077,13 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
                 style={{
                   objectFit: "contain",
                   padding: 18,
-                  filter: "grayscale(1) contrast(1.05) brightness(0.95) drop-shadow(0 14px 24px rgba(0,0,0,0.45))",
+                  filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))",
                 }}
               />
-              {/* Overlay doré subtil */}
+              {/* Overlay doré subtil — préserve les vraies couleurs du produit */}
               <div
                 className="pointer-events-none absolute inset-0"
-                style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.22) 0%, transparent 55%, rgba(201,168,76,0.12) 100%)", mixBlendMode: "overlay" }}
-              />
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{ background: "radial-gradient(circle at 50% 85%, rgba(0,0,0,0.45) 0%, transparent 60%)" }}
+                style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.10) 0%, transparent 60%)" }}
               />
             </div>
             <div className="relative flex flex-col justify-center p-8 overflow-hidden">
