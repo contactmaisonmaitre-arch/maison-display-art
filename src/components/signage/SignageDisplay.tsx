@@ -1587,7 +1587,7 @@ const SignageDisplay = () => {
 
   return (
     <div
-      className="fixed inset-0 overflow-hidden flex items-center justify-center"
+      className="mm-grain-global fixed inset-0 overflow-hidden flex items-center justify-center"
       style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)" }}
     >
       <div
