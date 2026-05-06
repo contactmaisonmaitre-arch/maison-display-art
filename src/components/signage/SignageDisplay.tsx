@@ -919,7 +919,7 @@ const ReviewScene = () => {
               animation: "mm-slide-up 1s ease-out 0.3s both",
             }}
           >
-            <div className="relative" style={{ padding: 18, background: "#fff", borderRadius: 18 }}>
+            <div className="relative" style={{ padding: 18, background: "#fff", borderRadius: 18, border: "1px solid hsl(var(--gold))" }}>
               <img src={qrUrl} alt="QR avis Google" style={{ width: 460, height: 460, display: "block" }} />
               {/* Logo G au centre */}
               <div
@@ -934,11 +934,11 @@ const ReviewScene = () => {
                 <GoogleG size={64} />
               </div>
             </div>
-            <div className="mt-6 font-serif-display text-center" style={{ fontSize: 30, color: "hsl(var(--espresso))" }}>
-              Scannez pour <em className="font-light" style={{ color: "hsl(var(--copper))" }}>nous noter</em>
+            <div className="mt-5 font-sans-ui uppercase text-center" style={{ fontSize: 12, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>
+              ◆ Scannez pour nous noter ◆
             </div>
-            <div className="mt-2 font-sans-ui uppercase text-center" style={{ fontSize: 13, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
-              ★★★★★ · Google Maps
+            <div className="mt-2 font-serif-display italic text-center" style={{ fontSize: 22, color: "hsl(var(--espresso))" }}>
+              Votre avis compte
             </div>
           </div>
 
