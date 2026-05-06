@@ -42,7 +42,7 @@
 
 @layer base {
   * { @apply border-border; }
-  html, body, #root { margin: 0; padding: 0; background: #0B0805; }
+  html, body, #root { margin: 0; padding: 0; background: #161616; }
   body { font-family: 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
 }
 
