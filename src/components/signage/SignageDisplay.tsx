@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 // ============ Types & constants ============
 
@@ -137,11 +137,6 @@ interface WeatherData {
   };
 }
 
-interface NewsItem {
-  source: string;
-  title: string;
-}
-
 const DAYS_FR = ["Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi"];
 const DAYS_FR_SHORT = ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"];
 const MONTHS_FR = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre"];
@@ -162,13 +157,6 @@ const safeSetStorage = (key: string, value: string) => {
   }
 };
 
-const DAILY = [
-  { tag: "Café des Maitre", name: "Moka Sidamo — fruité, floral, notes d'agrumes" },
-  { tag: "Thé des Maitre", name: "Darjeeling First Flush — récolte 2025" },
-  { tag: "Vin nature", name: "Domaine Marcel Lapierre — Morgon" },
-  { tag: "Sapidité", name: "Brownie noisette & fleur de sel" },
-];
-
 // Fête du jour (saint patron)
 const SAINTS_DU_JOUR: Record<string, string> = {
   "01-01": "Marie", "01-02": "Basile", "01-03": "Geneviève", "01-04": "Odilon", "01-05": "Édouard", "01-06": "Mélaine", "01-07": "Raymond", "01-08": "Lucien", "01-09": "Alix", "01-10": "Guillaume", "01-11": "Paulin", "01-12": "Tatiana", "01-13": "Yvette", "01-14": "Nina", "01-15": "Rémi", "01-16": "Marcel", "01-17": "Roseline", "01-18": "Prisca", "01-19": "Marius", "01-20": "Sébastien", "01-21": "Agnès", "01-22": "Vincent", "01-23": "Barnard", "01-24": "François de Sales", "01-25": "Conv. Saint Paul", "01-26": "Paule", "01-27": "Angèle", "01-28": "Thomas d'Aquin", "01-29": "Gildas", "01-30": "Martine", "01-31": "Marcelle",
@@ -185,45 +173,6 @@ const SAINTS_DU_JOUR: Record<string, string> = {
   "12-01": "Florence", "12-02": "Viviane", "12-03": "François-Xavier", "12-04": "Barbara", "12-05": "Gérald", "12-06": "Nicolas", "12-07": "Ambroise", "12-08": "Imm. Conception", "12-09": "Pierre Fourier", "12-10": "Romaric", "12-11": "Daniel", "12-12": "Jeanne F. de Chantal", "12-13": "Lucie", "12-14": "Odile", "12-15": "Ninon", "12-16": "Alice", "12-17": "Gaël", "12-18": "Gatien", "12-19": "Urbain", "12-20": "Théophile", "12-21": "Pierre Canisius", "12-22": "Françoise-Xavière", "12-23": "Armand", "12-24": "Adèle", "12-25": "Noël", "12-26": "Étienne", "12-27": "Jean", "12-28": "Saints Innocents", "12-29": "David", "12-30": "Roger", "12-31": "Sylvestre",
 };
 const getSaintDuJour = (d: Date) => SAINTS_DU_JOUR[`${pad(d.getMonth() + 1)}-${pad(d.getDate())}`] ?? "—";
-
-// Anecdotes positives & "le saviez-vous" — café, thé, vin, gourmandise
-const POSITIVE_ANECDOTES: NewsItem[] = [
-  { source: "Le saviez-vous", title: "Le café est la deuxième boisson la plus consommée au monde, juste après l'eau." },
-  { source: "Anecdote", title: "Une légende raconte qu'un berger éthiopien découvrit le café en voyant ses chèvres danser après en avoir mangé les baies." },
-  { source: "Bon à savoir", title: "Le thé vert matcha contient jusqu'à 137 fois plus d'antioxydants qu'un thé vert classique infusé." },
-  { source: "Tradition", title: "Au Japon, la cérémonie du thé peut durer jusqu'à 4 heures et célèbre l'instant présent." },
-  { source: "Le saviez-vous", title: "Le Jura produit le célèbre vin jaune, élevé sous voile pendant 6 ans et 3 mois minimum." },
-  { source: "Anecdote", title: "Beethoven comptait précisément 60 grains de café pour préparer chacune de ses tasses." },
-  { source: "Histoire", title: "Le premier café d'Europe ouvrit ses portes à Venise en 1645 — un lieu de débats et d'idées." },
-  { source: "Curiosité", title: "Les arômes du vin proviennent de plus de 800 composés volatils différents." },
-  { source: "Bien-être", title: "Boire un café modérément réduit le risque de maladies cardiovasculaires selon plusieurs études." },
-  { source: "Inspiration", title: "Le mot \"espresso\" signifie \"exprimé\" en italien — un café réalisé à la demande." },
-  { source: "Le saviez-vous", title: "Il faut environ 100 grains de café pour préparer une tasse d'espresso parfait." },
-  { source: "Tradition", title: "En Éthiopie, la cérémonie du café est un rituel de partage qui peut durer plusieurs heures." },
-  { source: "Anecdote", title: "Le thé Earl Grey doit son nom au comte Charles Grey, Premier ministre britannique au XIXe siècle." },
-  { source: "Terroir", title: "Le Jura abrite cinq cépages emblématiques : Savagnin, Chardonnay, Trousseau, Poulsard et Pinot Noir." },
-  { source: "Curiosité", title: "Une tasse de thé blanc renferme moins de caféine qu'une tasse de café — idéal en fin de journée." },
-  { source: "Bon à savoir", title: "Le rooibos, originaire d'Afrique du Sud, ne contient ni théine ni caféine — parfait pour le soir." },
-  { source: "Histoire", title: "Le chocolat fut consommé sous forme de boisson amère pendant près de 3000 ans avant d'être sucré." },
-  { source: "Anecdote", title: "Bach a composé une cantate dédiée au café — la \"Kaffeekantate\" — en 1735." },
-  { source: "Le saviez-vous", title: "Plus un café est torréfié foncé, moins il contient de caféine." },
-  { source: "Inspiration", title: "Le mot \"barista\" vient de l'italien et désignait à l'origine simplement le serveur d'un bar." },
-  { source: "Tradition", title: "Au Royaume-Uni, l'afternoon tea fut inventé en 1840 par Anna, duchesse de Bedford." },
-  { source: "Curiosité", title: "Le café Geisha d'Éthiopie peut atteindre des prix records — jusqu'à 10 000 € le kilo." },
-  { source: "Bien-être", title: "L'odeur du café fraîchement moulu suffit à stimuler la vigilance et l'humeur." },
-];
-
-const TICKER = [
-  "Café des Maitre · Moka Sidamo — en grain, en boutique",
-  "Vin nature · Marcel Lapierre — Morgon",
-  "Thé des Maitre · Darjeeling First Flush — récolte 2025",
-  "Matcha · Kumiko Matcha — cérémonie & barista",
-  "Sapidité · Brownie noisette & fleur de sel — fait maison",
-  "Vin nature · Jean Foillard — Morgon Côte du Py",
-  "Vin nature · Domaine Overnoy-Houillon — Pupillin, Jura",
-  "Vin nature · Yvon Métras — Fleurie L'Ultime",
-  "Boutique en ligne · maisonmaitre.com",
-];
 
 // Produits réels — extraits de maisonmaitre.com (prix au 100g pour les thés/infusions)
 // Le Chat Heureux est en vedette : toujours en première position (featured: true)
@@ -491,93 +440,6 @@ const PaperGrain = () => (
   </svg>
 );
 
-// ============ Sub-components ============
-
-const LeftPanel = ({ now }: { now: Date }) => {
-  return (
-    <aside
-      className="relative flex h-full flex-col text-linen"
-      style={{ width: 370, backgroundColor: "#2E2419", animation: "mm-slide-left 1s ease-out both" }}
-    >
-      <PaperGrain />
-
-      {/* Logo */}
-      <div className="relative px-7 pb-6 pt-7" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.38em", color: "rgba(242,237,228,0.3)" }}>
-          Boutique
-        </div>
-        <div className="mt-3 leading-none flex items-baseline gap-2" style={{ fontSize: 42 }}>
-          <span className="font-sans-ui font-light tracking-wide text-linen" style={{ fontSize: 30, letterSpacing: "0.04em" }}>Maison</span>
-          <span className="font-serif-display italic" style={{ color: "hsl(var(--gold))", fontWeight: 500 }}>Maitre</span>
-        </div>
-        <div className="my-3" style={{ width: 36, height: 1, backgroundColor: "hsl(var(--gold))" }} />
-        <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.2em", color: "rgba(242,237,228,0.2)" }}>
-          Café · Thé · Vin · Épicerie — Dole, Jura
-        </div>
-      </div>
-
-      {/* Clock */}
-      <div className="relative px-7 py-6" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
-        <div className="font-mono-ui leading-none text-linen tabular-nums" style={{ fontSize: 80, fontWeight: 300, letterSpacing: "-0.05em" }}>
-          {pad(now.getHours())}:{pad(now.getMinutes())}
-          <sup className="font-mono-ui tabular-nums" style={{ fontSize: 22, color: "hsl(var(--gold))", marginLeft: 6, top: "-1.6em", verticalAlign: "super", letterSpacing: "0.05em" }}>
-            {pad(now.getSeconds())}
-          </sup>
-        </div>
-        <div className="mt-3 font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.22em", color: "hsl(var(--gold))", opacity: 0.7 }}>
-          {formatDateLong(now)}
-        </div>
-      </div>
-
-      {/* Fête du jour */}
-      <div className="relative px-7 py-6" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 10, letterSpacing: "0.32em", color: "rgba(242,237,228,0.4)" }}>
-          ◆ Fête du jour
-        </div>
-        <div className="mt-3 font-serif-display italic text-linen" style={{ fontSize: 30, fontWeight: 300, lineHeight: 1.1 }}>
-          {getSaintDuJour(now)}
-        </div>
-        <div className="mt-2 font-sans-ui" style={{ fontSize: 12, color: "rgba(242,237,228,0.45)" }}>
-          Bonne fête à toutes et tous !
-        </div>
-      </div>
-
-      {/* Daily selection */}
-      <div className="relative flex flex-1 flex-col justify-center px-7 py-6">
-        <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.32)" }}>
-          Sélection du jour
-        </div>
-        <div className="mt-6 space-y-5">
-          {DAILY.map((d) => (
-            <div key={d.tag}>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.28em", color: "hsl(var(--gold))" }}>
-                {d.tag}
-              </div>
-              <div className="mt-1 font-serif-display italic leading-snug" style={{ fontSize: 19, color: "rgba(242,237,228,0.92)" }}>
-                {d.name}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Footer */}
-      <div className="relative px-7 pb-5 pt-3 font-sans-ui" style={{ fontSize: 10, color: "rgba(242,237,228,0.18)", letterSpacing: "0.18em" }}>
-        @maisonmaitre · maisonmaitre.com
-      </div>
-    </aside>
-  );
-};
-
-const Stat = ({ label, value }: { label: string; value: string }) => (
-  <div>
-    <div className="font-sans-ui uppercase" style={{ fontSize: 8.5, letterSpacing: "0.24em", color: "rgba(242,237,228,0.4)" }}>
-      {label}
-    </div>
-    <div className="font-serif-display text-linen" style={{ fontSize: 22, fontWeight: 300 }}>{value}</div>
-  </div>
-);
-
 // ============ Scene content ============
 
 const TextSlide = ({
@@ -620,18 +482,10 @@ const TextSlide = ({
 );
 
 const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
-  if (!weather) {
-    return (
-      <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
-        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>Météo · Dole, Jura</div>
-        <div className="mt-8 font-serif-display italic" style={{ fontSize: 86, color: "hsl(var(--espresso))" }}>Chargement de la météo…</div>
-      </div>
-    );
-  }
-  const w = weather.current;
-  const targetTemp = Math.round(w.temperature_2m);
+  const targetTemp = weather ? Math.round(weather.current.temperature_2m) : 0;
   const [displayTemp, setDisplayTemp] = useState(0);
   useEffect(() => {
+    if (!weather) return;
     const start = performance.now();
     const dur = 1400;
     const from = 0;
@@ -645,7 +499,17 @@ const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, [targetTemp]);
+  }, [targetTemp, weather]);
+
+  if (!weather) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center" style={{ backgroundColor: "hsl(var(--cream))" }}>
+        <div className="font-sans-ui uppercase" style={{ fontSize: 20, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}>Météo · Dole, Jura</div>
+        <div className="mt-8 font-serif-display italic" style={{ fontSize: 86, color: "hsl(var(--espresso))" }}>Chargement de la météo…</div>
+      </div>
+    );
+  }
+  const w = weather.current;
   return (
     <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
@@ -1744,11 +1608,13 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </span>
       </div>
       <div className="text-right">
-        <div className="font-mono-ui leading-none tabular-nums" style={{ fontSize: 84, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
-          {pad(now.getHours())}:{pad(now.getMinutes())}
-          <sup className="font-mono-ui tabular-nums" style={{ fontSize: 22, color: "hsl(var(--gold))", marginLeft: 6, top: "-1.7em", verticalAlign: "super", letterSpacing: "0.05em" }}>
+        <div className="font-mono-ui leading-none tabular-nums flex items-start justify-end" style={{ color: "hsl(var(--espresso))" }}>
+          <span style={{ fontSize: 84, fontWeight: 300, letterSpacing: "-0.05em" }}>
+            {pad(now.getHours())}:{pad(now.getMinutes())}
+          </span>
+          <span className="font-mono-ui tabular-nums" style={{ fontSize: 26, color: "hsl(var(--gold))", marginLeft: 8, marginTop: 4, letterSpacing: "0.05em" }}>
             {pad(now.getSeconds())}
-          </sup>
+          </span>
         </div>
         <div className="mt-2 mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--gold))" }}>
           {formatDateLong(now)}
@@ -1757,81 +1623,6 @@ const FixedTopBar = ({ now }: { now: Date }) => (
     </div>
   </div>
 );
-
-// ============ Bottom ticker ============
-
-const BottomTicker = () => {
-  const items = [...TICKER, ...TICKER];
-  return (
-    <div className="absolute bottom-0 left-0 right-0 z-10 flex items-center overflow-hidden" style={{ height: 100, backgroundColor: "#1A160F" }}>
-      <div
-        className="flex h-full shrink-0 items-center px-7 font-sans-ui uppercase"
-        style={{ fontSize: 9, letterSpacing: "0.36em", color: "hsl(var(--gold))", borderRight: "1px solid rgba(201,168,76,0.25)" }}
-      >
-        La sélection
-      </div>
-      <div className="relative flex-1 overflow-hidden">
-        <div className="flex whitespace-nowrap" style={{ animation: "mm-ticker 60s linear infinite", width: "max-content" }}>
-          {items.map((t, i) => (
-            <div key={i} className="flex items-center">
-              <div
-                className="px-8 font-serif-display italic"
-                style={{ fontSize: 18, color: "rgba(242,237,228,0.6)" }}
-              >
-                {t}
-              </div>
-              <div className="rounded-full" style={{ width: 4, height: 4, backgroundColor: "hsl(var(--gold))" }} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// ============ Right panel — News ============
-
-const RightPanel = () => {
-  const items = POSITIVE_ANECDOTES;
-  const doubled = useMemo(() => [...items, ...items], [items]);
-
-  return (
-    <aside
-      className="relative flex h-full flex-col overflow-hidden"
-      style={{ width: 340, backgroundColor: "#E5DDD0", animation: "mm-slide-right 1s ease-out both" }}
-    >
-      <PaperGrain />
-      <div className="relative flex items-end justify-between px-6 pb-5 pt-7" style={{ borderBottom: "1px solid rgba(106,97,87,0.18)" }}>
-        <div>
-          <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.36em", color: "hsl(var(--mink))" }}>
-            Le saviez-vous
-          </div>
-          <h2 className="mt-1 font-serif-display" style={{ fontSize: 30, fontWeight: 300, color: "hsl(var(--espresso))" }}>
-            Anecdotes
-          </h2>
-        </div>
-        <div style={{ fontSize: 28 }}>✦</div>
-      </div>
-
-      <div className="relative flex-1 overflow-hidden">
-        <div style={{ animation: "mm-news-scroll 120s linear infinite" }}>
-          {doubled.map((n, i) => (
-            <div key={i} className="px-6 py-6" style={{ borderBottom: "1px solid rgba(106,97,87,0.12)" }}>
-              <div className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "hsl(var(--gold))" }}>
-                {n.source}
-              </div>
-              <div className="mt-3 font-serif-display italic leading-snug" style={{ fontSize: 19, color: "hsl(var(--espresso))", lineHeight: 1.45 }}>
-                {n.title}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32" style={{ background: "linear-gradient(to bottom, transparent, #E5DDD0)" }} />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-10" style={{ background: "linear-gradient(to top, transparent, #E5DDD0)" }} />
-      </div>
-    </aside>
-  );
-};
 
 // ============ Main ============
 
