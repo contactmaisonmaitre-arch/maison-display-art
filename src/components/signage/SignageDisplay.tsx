@@ -1195,9 +1195,11 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </span>
       </div>
       <div className="text-right">
-        <div className="font-mono-ui leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.04em" }}>
+        <div className="font-mono-ui leading-none tabular-nums" style={{ fontSize: 84, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
           {pad(now.getHours())}:{pad(now.getMinutes())}
-          <span style={{ fontSize: 38, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+          <sup className="font-mono-ui tabular-nums" style={{ fontSize: 22, color: "hsl(var(--gold))", marginLeft: 6, top: "-1.7em", verticalAlign: "super", letterSpacing: "0.05em" }}>
+            {pad(now.getSeconds())}
+          </sup>
         </div>
         <div className="mt-2 mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--gold))" }}>
           {formatDateLong(now)}
