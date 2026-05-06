@@ -907,6 +907,12 @@ const GoodNewsScene = ({ newsOffset = 0 }: { newsOffset?: number }) => {
           </div>
         ))}
       </div>
+      <div
+        className="absolute bottom-6 right-10 font-sans-ui uppercase"
+        style={{ fontSize: 11, letterSpacing: "0.32em", color: "hsl(var(--taupe) / 0.7)" }}
+      >
+        ◦ {updatedLabel}
+      </div>
     </div>
   );
 };
