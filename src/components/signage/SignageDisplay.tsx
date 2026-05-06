@@ -270,13 +270,57 @@ const COFFEE_ANECDOTES = [
 ];
 
 // ============ Programmes TV qualité — ce soir ============
-const TV_TONIGHT = [
-  { channel: "Arte",          slot: "20h55", title: "Cinéma d'auteur ou documentaire géopolitique", note: "La référence culture en Europe — toujours un grand sujet à 20h55." },
-  { channel: "France 5",      slot: "20h55", title: "C dans l'air · La grande librairie · Documentaires",       note: "Le savoir au quotidien — débats de fond et lectures." },
-  { channel: "France Culture", slot: "21h00", title: "Toute une vie · LSD, la série documentaire (radio)",       note: "À écouter en fond — la radio de la pensée." },
-  { channel: "Mezzo",         slot: "21h00", title: "Concerts classiques, opéras et jazz",                       note: "Pour une soirée musique exigeante — du Bach au jazz contemporain." },
-  { channel: "LCP / Public Sénat", slot: "20h30", title: "Débats parlementaires & docs politiques",              note: "Comprendre la fabrique de la loi — sans bruit ni cirque." },
+type TvKind = "DOCUMENTAIRE" | "SÉRIE" | "ÉMISSION" | "CONCERT" | "DÉBAT";
+const TV_TONIGHT: { channel: string; slot: string; kind: TvKind; title: string; note: string; pick: string }[] = [
+  {
+    channel: "Arte",
+    slot: "20h55",
+    kind: "DOCUMENTAIRE",
+    title: "Le café, voyage au bout d'une tasse",
+    note: "Des plantations éthiopiennes aux torréfacteurs européens — l'odyssée du café de spécialité. Aussi sur arte.tv.",
+    pick: "Recommandé par Maison Maître",
+  },
+  {
+    channel: "France 5",
+    slot: "20h55",
+    kind: "SÉRIE",
+    title: "Vignerons sans règles ni compromis",
+    note: "Enquête en 3 épisodes sur le mouvement mondial du vin nature : terroirs vivants, biodynamie, vignerons rebelles.",
+    pick: "Notre coup de cœur de la semaine",
+  },
+  {
+    channel: "France Culture",
+    slot: "21h00",
+    kind: "ÉMISSION",
+    title: "Le Goût du monde",
+    note: "Radio-documentaire sur la culture du café au Yémen et en Éthiopie — entre patrimoine et modernité. Disponible en podcast.",
+    pick: "À écouter en fond de soirée",
+  },
+  {
+    channel: "Mezzo",
+    slot: "21h00",
+    kind: "CONCERT",
+    title: "Live dans les caves de Bourgogne & du Jura",
+    note: "Soirée de concerts enregistrés chez des vignerons naturels — musique improvisée et dégustation, une ambiance unique.",
+    pick: "Pour prolonger le verre",
+  },
+  {
+    channel: "Public Sénat",
+    slot: "20h30",
+    kind: "DÉBAT",
+    title: "Agriculture naturelle : les pionniers",
+    note: "Débat et reportages auprès des paysans qui abandonnent les pesticides — cafés, vignes, maraîchers engagés.",
+    pick: "Sélection éditoriale Maison Maître",
+  },
 ];
+
+const TV_KIND_COLORS: Record<TvKind, { bg: string; fg: string; border: string }> = {
+  DOCUMENTAIRE: { bg: "rgba(201,168,76,0.18)",  fg: "hsl(var(--gold-lt))", border: "rgba(201,168,76,0.55)" },
+  "SÉRIE":      { bg: "rgba(116,42,62,0.32)",   fg: "#E8B4C0",             border: "rgba(116,42,62,0.7)"  },
+  "ÉMISSION":   { bg: "rgba(155,120,80,0.22)",  fg: "#E8C9A0",             border: "rgba(155,120,80,0.6)" },
+  CONCERT:      { bg: "rgba(80,112,64,0.28)",   fg: "#C8DDB0",             border: "rgba(80,112,64,0.65)" },
+  "DÉBAT":      { bg: "rgba(180,90,55,0.24)",   fg: "#F0BC9A",             border: "rgba(180,90,55,0.6)"  },
+};
 
 // 3 actualités positives du jour (curaté maison, à actualiser)
 const GOOD_NEWS_OF_THE_DAY = [
