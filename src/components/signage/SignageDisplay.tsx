@@ -400,6 +400,7 @@ const NEWS_OFFSETS = shuffled(GOOD_NEWS_OF_THE_DAY.map((_, i) => i)).slice(0, 3)
 const SCENES: Scene[] = [
   { type: "café", duration: 13000 },
   { type: "weather", duration: 12000 },
+  { type: "dole", duration: 20000 },
   { type: "review", duration: 38000 },
   { type: "instagram", duration: 30000, reelIndex: 0 },
   { type: "produits", duration: 17000, productOffset: 0 },
