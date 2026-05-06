@@ -829,17 +829,26 @@ const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
               animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`,
             }}
           >
-            <div className="relative w-full overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #FFFDF7 0%, #F2EADA 100%)" }}>
-              <div
-                className="pointer-events-none absolute inset-0"
-                style={{ background: "radial-gradient(circle at 50% 80%, rgba(46,36,25,0.18) 0%, transparent 55%)" }}
-              />
+            <div className="relative w-full overflow-hidden" style={{ background: "radial-gradient(circle at 50% 40%, #1A1510 0%, #0D0B08 100%)" }}>
               <img
                 src={p.img}
                 alt={p.name}
                 loading="lazy"
                 className="h-full w-full"
-                style={{ objectFit: "contain", padding: 18, filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))" }}
+                style={{
+                  objectFit: "contain",
+                  padding: 18,
+                  filter: "grayscale(1) contrast(1.05) brightness(0.95) drop-shadow(0 14px 24px rgba(0,0,0,0.45))",
+                }}
+              />
+              {/* Overlay doré subtil */}
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.22) 0%, transparent 55%, rgba(201,168,76,0.12) 100%)", mixBlendMode: "overlay" }}
+              />
+              <div
+                className="pointer-events-none absolute inset-0"
+                style={{ background: "radial-gradient(circle at 50% 85%, rgba(0,0,0,0.45) 0%, transparent 60%)" }}
               />
             </div>
             <div className="relative flex flex-col justify-center p-8">
