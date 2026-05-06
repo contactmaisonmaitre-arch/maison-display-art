@@ -325,9 +325,11 @@ const LeftPanel = ({ now }: { now: Date }) => {
 
       {/* Clock */}
       <div className="relative px-7 py-6" style={{ borderBottom: "1px solid rgba(242,237,228,0.08)" }}>
-        <div className="font-serif-display leading-none text-linen" style={{ fontSize: 76, fontWeight: 300 }}>
+        <div className="font-mono-ui leading-none text-linen tabular-nums" style={{ fontSize: 80, fontWeight: 300, letterSpacing: "-0.05em" }}>
           {pad(now.getHours())}:{pad(now.getMinutes())}
-          <span className="text-[44px]" style={{ opacity: 0.35 }}>:{pad(now.getSeconds())}</span>
+          <sup className="font-mono-ui tabular-nums" style={{ fontSize: 22, color: "hsl(var(--gold))", marginLeft: 6, top: "-1.6em", verticalAlign: "super", letterSpacing: "0.05em" }}>
+            {pad(now.getSeconds())}
+          </sup>
         </div>
         <div className="mt-3 font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.22em", color: "hsl(var(--gold))", opacity: 0.7 }}>
           {formatDateLong(now)}
@@ -1193,9 +1195,11 @@ const FixedTopBar = ({ now }: { now: Date }) => (
         </span>
       </div>
       <div className="text-right">
-        <div className="font-mono-ui leading-none" style={{ fontSize: 76, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.04em" }}>
+        <div className="font-mono-ui leading-none tabular-nums" style={{ fontSize: 84, fontWeight: 300, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
           {pad(now.getHours())}:{pad(now.getMinutes())}
-          <span style={{ fontSize: 38, color: "hsl(var(--mink))" }}>:{pad(now.getSeconds())}</span>
+          <sup className="font-mono-ui tabular-nums" style={{ fontSize: 22, color: "hsl(var(--gold))", marginLeft: 6, top: "-1.7em", verticalAlign: "super", letterSpacing: "0.05em" }}>
+            {pad(now.getSeconds())}
+          </sup>
         </div>
         <div className="mt-2 mm-eyebrow" style={{ fontSize: 11, color: "hsl(var(--gold))" }}>
           {formatDateLong(now)}
