@@ -958,12 +958,12 @@ const ReviewScene = () => {
               </div>
               <div className="font-serif-display flex items-baseline gap-3" style={{ color: "hsl(var(--linen))" }}>
                 <span style={{ fontSize: 64, fontWeight: 300 }}>5,0</span>
-                <span style={{ fontSize: 22, color: "#E8B548", letterSpacing: 4 }}>★★★★★</span>
+                <GoldStars size={22} gap={4} />
               </div>
             </div>
 
             <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-slide-up 0.6s ease-out both" }}>
-              <div style={{ fontSize: 42, color: "#E8B548", letterSpacing: 8 }}>★★★★★</div>
+              <GoldStars size={42} gap={8} />
               <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
                 « {r.text} »
               </p>
