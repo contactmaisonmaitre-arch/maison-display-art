@@ -28,7 +28,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return (
         <TextSlide
           bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)"
-          bgImage="/scenes/cafe.jpg"
+          bgImage="/scenes/cafe.webp"
           tag="Café de Spécialité"
           titleStart="Origine, terroir,"
           titleItalic="précision."
@@ -53,7 +53,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return (
         <TextSlide
           bg="linear-gradient(135deg, #D0C080, #907030, #382810)"
-          bgImage="/scenes/epicerie.jpg"
+          bgImage="/scenes/epicerie.webp"
           tag="Épicerie Fine"
           titleStart="Bien manger,"
           titleItalic="bien choisir."

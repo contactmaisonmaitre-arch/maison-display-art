@@ -5,7 +5,7 @@ export const MatchaScene = () => (
     <div
       className="absolute inset-0"
       style={{
-        backgroundImage: "url(/scenes/matcha.jpg)",
+        backgroundImage: "url(/scenes/matcha.webp)",
         backgroundSize: "cover",
         backgroundPosition: "center",
         animation: "mm-cave-kenburns 18s ease-out forwards",

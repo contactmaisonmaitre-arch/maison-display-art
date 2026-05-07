@@ -3,12 +3,12 @@ import { useEffect, useState } from "react";
 // Dépose tes photos dans /public/cave/ avec ces noms — la scène utilise
 // uniquement celles qui existent (les autres sont silencieusement ignorées).
 const CANDIDATE_PHOTOS = [
-  "/cave/cave-1.jpg",
-  "/cave/cave-2.jpg",
-  "/cave/cave-3.jpg",
-  "/cave/cave-4.jpg",
-  "/cave/cave-5.jpg",
-  "/cave/cave-6.jpg",
+  "/cave/cave-1.webp",
+  "/cave/cave-2.webp",
+  "/cave/cave-3.webp",
+  "/cave/cave-4.webp",
+  "/cave/cave-5.webp",
+  "/cave/cave-6.webp",
 ];
 
 const SLIDE_MS = 4500; // une photo toutes les 4,5 secondes
