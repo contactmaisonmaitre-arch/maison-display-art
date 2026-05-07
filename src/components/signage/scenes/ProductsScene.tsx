@@ -46,11 +46,19 @@ const ProductImage = ({ p }: { p: Product }) => {
       loading="lazy"
       onError={() => setFailed(true)}
       className="h-full w-full"
-      style={{
-        objectFit: "contain",
-        padding: 18,
-        filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))",
-      }}
+      style={
+        p.bleed
+          ? {
+              objectFit: "cover",
+              objectPosition: "center",
+              display: "block",
+            }
+          : {
+              objectFit: "contain",
+              padding: 18,
+              filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))",
+            }
+      }
     />
   );
 };
@@ -90,13 +98,19 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
     )}
     <div
       className="relative w-full overflow-hidden"
-      style={{ background: "linear-gradient(180deg, #F8F2E4 0%, #EFE4CC 100%)" }}
+      style={{
+        background: p.bleed
+          ? "transparent"
+          : "linear-gradient(180deg, #F8F2E4 0%, #EFE4CC 100%)",
+      }}
     >
       <ProductImage p={p} />
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.10) 0%, transparent 60%)" }}
-      />
+      {!p.bleed && (
+        <div
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.10) 0%, transparent 60%)" }}
+        />
+      )}
     </div>
     <div className="relative flex flex-col justify-center p-8 overflow-hidden">
       <div

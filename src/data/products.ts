@@ -7,6 +7,12 @@ export interface Product {
   price: string;
   img: string;
   featured?: FeaturedKind;
+  /**
+   * Si true, l'image remplit toute la zone visuelle de la tuile (objectFit: cover),
+   * sans padding ni dégradé doré par-dessus — pour un packshot qui a déjà son
+   * propre décor de fond (ex. l'Altiplano sur fond rayé vert/blanc).
+   */
+  bleed?: boolean;
 }
 
 // Produits réels — extraits de maisonmaitre.com
@@ -28,6 +34,7 @@ export const PRODUCTS_TO_TRY: Product[] = [
     price: "10,50 € / 250g",
     img: "/products/cafe-altiplano.png",
     featured: "coffee",
+    bleed: true,
   },
   {
     cat: "Café des Maitre · Éthiopie",
