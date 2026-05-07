@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
 const REELS_PATH = "/reels-tv";
 
-// Vrai logo Instagram (caméra) en SVG, gradient officiel
+// Logo Instagram (caméra) en SVG, gradient officiel
 const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 64 64" aria-hidden>
     <defs>
@@ -22,7 +22,6 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-// Précharge la vidéo et le poster pour minimiser le flash entre reels
 const preloadReelAssets = (reelId: string) => {
   if (typeof window === "undefined") return;
   const links: { href: string; as: string; type?: string }[] = [
@@ -50,16 +49,13 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
   const [stage, setStage] = useState<FallbackStage>("video");
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
-  // Reset à chaque changement de reel + précharge le suivant
   useEffect(() => {
     setStage("video");
     preloadReelAssets(reelId);
     preloadReelAssets(nextId);
   }, [reelId, nextId]);
 
-  // Pause la vidéo quand la scène devient inactive (économise CPU/GPU sur TV).
-  // Si la vidéo ne démarre pas en 2,5 s, on bascule sur le webp animé : protège
-  // contre les TV qui ne savent pas décoder le mp4 mais ne lèvent pas d'erreur.
+  // Watchdog : si la vidéo ne démarre pas en 2,5 s, fallback webp animé.
   useEffect(() => {
     if (stage !== "video") return;
     const v = videoRef.current;
@@ -78,7 +74,6 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
 
   const fallbackTo = (next: FallbackStage) => setStage(next);
 
-  // Source d'image fallback selon l'étape
   const fallbackSrc =
     stage === "webp"
       ? `${REELS_PATH}/${reelId}.webp`
@@ -94,7 +89,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           "radial-gradient(ellipse at center, #14110C 0%, #050505 70%)",
       }}
     >
-      {/* halos doux pour habiller le fond */}
+      {/* halos doux */}
       <div
         className="pointer-events-none absolute"
         style={{
@@ -116,22 +111,26 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           height: 800,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(116,42,82,0.10) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(228,64,95,0.10) 0%, transparent 65%)",
         }}
       />
 
-      {/* Cadre central — portrait 9:16, jamais coupé */}
+      {/* Layout côte à côte : reel à gauche, panneau Suivez-nous à droite */}
       <div
-        className="absolute inset-0 flex items-center justify-center"
-        style={{ animation: "mm-fade-in 0.8s ease-out both" }}
+        className="relative h-full grid items-center px-16 pb-10 pt-32 gap-14"
+        style={{
+          gridTemplateColumns: "1.55fr 1fr",
+          animation: "mm-fade-in 0.8s ease-out both",
+        }}
       >
+        {/* Cadre vidéo 16:9 */}
         <div
           className="relative overflow-hidden"
           style={{
-            aspectRatio: "9 / 16",
-            height: "92%",
-            maxWidth: "92%",
-            borderRadius: 28,
+            aspectRatio: "16 / 9",
+            width: "100%",
+            maxHeight: "100%",
+            borderRadius: 24,
             boxShadow:
               "0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.45), 0 0 0 4px rgba(201,168,76,0.10)",
             background: "#000",
@@ -179,7 +178,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
 
           {/* Compteur Reel X/N — top right */}
           <div
-            className="absolute top-6 right-6 font-sans-ui uppercase"
+            className="absolute top-5 right-5 font-sans-ui uppercase"
             style={{
               fontSize: 12,
               letterSpacing: "0.32em",
@@ -193,57 +192,88 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           >
             Reel {idx + 1} / {INSTAGRAM_REELS.length}
           </div>
+        </div>
 
-          {/* Overlay bas — handle + CTA */}
+        {/* Panneau "Suivez-nous" — Instagram XXL */}
+        <aside
+          className="relative h-full flex flex-col justify-center"
+          style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}
+        >
+          {/* Logo IG géant */}
+          <div style={{ filter: "drop-shadow(0 20px 60px rgba(247,113,51,0.35))" }}>
+            <InstagramLogo size={148} />
+          </div>
+
           <div
-            className="absolute left-0 right-0 bottom-0 flex items-center gap-5 px-8 pb-8 pt-28"
+            className="mt-8 mm-eyebrow"
+            style={{ fontSize: 16, letterSpacing: "0.42em", color: "hsl(var(--gold))" }}
+          >
+            Sur Instagram
+          </div>
+
+          <div
+            className="mt-3 font-serif-display"
             style={{
-              background:
-                "linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.92) 100%)",
+              fontSize: 92,
+              lineHeight: 0.95,
+              color: "#fff",
+              letterSpacing: "-0.01em",
             }}
           >
-            <InstagramLogo size={48} />
-            <div className="flex flex-col">
-              <div
-                className="font-serif-display"
-                style={{
-                  fontSize: 34,
-                  lineHeight: 1,
-                  color: "#fff",
-                  letterSpacing: "0.01em",
-                  textShadow: "0 2px 12px rgba(0,0,0,0.7)",
-                }}
-              >
-                @maison_maitre
-              </div>
-              <div
-                className="font-sans-ui uppercase mt-2"
-                style={{
-                  fontSize: 11,
-                  letterSpacing: "0.32em",
-                  color: "rgba(201,168,76,0.92)",
-                }}
-              >
-                Cafés · Thés · Vins nature
-              </div>
-            </div>
-            <div
-              className="ml-auto font-sans-ui uppercase"
-              style={{
-                fontSize: 13,
-                letterSpacing: "0.3em",
-                color: "hsl(var(--gold))",
-                padding: "14px 26px",
-                border: "1.5px solid hsl(var(--gold))",
-                borderRadius: 2,
-                background: "rgba(0,0,0,0.4)",
-                whiteSpace: "nowrap",
-              }}
-            >
-              Suivez-nous
-            </div>
+            <span className="font-light">@</span>
+            <span className="font-semibold italic">maison_maitre</span>
           </div>
-        </div>
+
+          <div
+            className="mt-7"
+            style={{
+              width: 120,
+              height: 1,
+              background: "linear-gradient(90deg, hsl(var(--gold)), transparent)",
+            }}
+          />
+
+          <div
+            className="mt-7 font-serif-display italic"
+            style={{
+              fontSize: 30,
+              lineHeight: 1.35,
+              color: "rgba(245,239,226,0.82)",
+              maxWidth: 540,
+            }}
+          >
+            Cafés, thés, vins nature — la vie de la Maison à Dole, en image.
+          </div>
+
+          <div
+            className="mt-12 inline-flex self-start items-center gap-5 font-sans-ui uppercase"
+            style={{
+              fontSize: 18,
+              letterSpacing: "0.36em",
+              color: "#0A0A0A",
+              background:
+                "linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-lt)) 100%)",
+              padding: "20px 36px",
+              borderRadius: 4,
+              fontWeight: 600,
+              boxShadow:
+                "0 18px 40px -10px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+            }}
+          >
+            ★ Suivez-nous
+          </div>
+
+          <div
+            className="mt-8 font-sans-ui uppercase"
+            style={{
+              fontSize: 12,
+              letterSpacing: "0.42em",
+              color: "rgba(201,168,76,0.65)",
+            }}
+          >
+            instagram.com / maison_maitre
+          </div>
+        </aside>
       </div>
     </div>
   );

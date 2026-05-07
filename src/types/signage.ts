@@ -19,6 +19,7 @@ export interface WeatherData {
 export type SceneType =
   | "café"
   | "vin"
+  | "winemap"
   | "weather"
   | "thé"
   | "épicerie"

@@ -3,6 +3,7 @@ import type { Scene, WeatherData } from "@/types/signage";
 import { TextSlide } from "./TextSlide";
 import { WeatherScene } from "./WeatherScene";
 import { WineScene } from "./WineScene";
+import { WineMapScene } from "./WineMapScene";
 import { TeaScene } from "./TeaScene";
 import { InstagramScene } from "./InstagramScene";
 import { AnecdoteScene } from "./AnecdoteScene";
@@ -32,6 +33,8 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
     case "vin":
       return <WineScene />;
+    case "winemap":
+      return <WineMapScene />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "thé":

@@ -26,6 +26,7 @@ export const SCENES: Scene[] = [
   { type: "goodnews", duration: 18000, newsOffset: NEWS_OFFSETS[0] ?? 0 },
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[0] ?? 0 },
   { type: "vin", duration: 13000 },
+  { type: "winemap", duration: 45000 },
   { type: "tv", duration: 18000 },
   { type: "instagram", duration: 30000, reelIndex: 1 },
   { type: "review", duration: 38000 },
