@@ -120,7 +120,7 @@ export const WineScene = () => {
             className="mm-eyebrow"
             style={{ fontSize: 20, color: "hsl(var(--gold))" }}
           >
-            Vins Naturels · La cave de Maison Maître
+            Vins Naturels · La cave de Maison Maitre
           </div>
         </div>
 

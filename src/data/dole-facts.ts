@@ -10,7 +10,7 @@ export const DOLE_FACTS: DoleFact[] = [
   { emoji: "🛤️", title: "Le Canal du Rhône au Rhin", body: "Dole est traversée par le canal du Rhône au Rhin, inauguré en 1833, qui reliait Strasbourg à la Méditerranée via le Doubs." },
   { emoji: "🦅", title: "Ville d'Art et d'Histoire", body: "Avec ses ruelles médiévales, ses hôtels particuliers du XVIe siècle et sa collégiale Notre-Dame, Dole est classée Ville d'Art et d'Histoire." },
   { emoji: "🍷", title: "Aux portes du vignoble jurassien", body: "À 20 minutes des premières vignes du Jura, Dole est la porte d'entrée naturelle vers les vins nature, savagnin et vin jaune." },
-  { emoji: "☕", title: "Une culture du café qui renaît", body: "Maison Maître a fait de Dole une adresse de référence du café de spécialité en Bourgogne-Franche-Comté." },
+  { emoji: "☕", title: "Une culture du café qui renaît", body: "Maison Maitre a fait de Dole une adresse de référence du café de spécialité en Bourgogne-Franche-Comté." },
   { emoji: "🌊", title: "Le Doubs, rivière emblématique", body: "La rivière Doubs longe la vieille ville de Dole, offrant des promenades le long des berges et un paysage unique au cœur de la cité." },
   { emoji: "🧀", title: "Terre de comté", body: "La région autour de Dole est une des zones de production du Comté AOP, le fromage le plus vendu de France avec 70 000 tonnes/an." },
   { emoji: "🎭", title: "Une ville vivante", body: "Dole accueille chaque année festivals, marchés nocturnes et événements culturels dans ses espaces patrimoniaux uniques." },

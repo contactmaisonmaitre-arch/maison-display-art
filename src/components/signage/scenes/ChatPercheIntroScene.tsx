@@ -50,7 +50,7 @@ export const ChatPercheIntroScene = () => (
             letterSpacing: "0.42em",
           }}
         >
-          Événement · Maison Maître soutient
+          Événement · Maison Maitre soutient
         </div>
 
         <h1

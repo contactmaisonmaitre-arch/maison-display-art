@@ -17,7 +17,7 @@ export interface WineRegion {
 }
 
 // Régions ordonnées du nord au sud, principalement orientées vin nature.
-// Le Jura est mis en premier — c'est le terroir de Maison Maître.
+// Le Jura est mis en premier — c'est le terroir de Maison Maitre.
 export const WINE_REGIONS: WineRegion[] = [
   {
     id: "jura",

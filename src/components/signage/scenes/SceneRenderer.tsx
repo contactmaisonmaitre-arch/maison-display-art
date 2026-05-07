@@ -5,6 +5,7 @@ import { WeatherScene } from "./WeatherScene";
 import { WineScene } from "./WineScene";
 import { WineMapScene } from "./WineMapScene";
 import { TeaScene } from "./TeaScene";
+import { MatchaScene } from "./MatchaScene";
 import { InstagramScene } from "./InstagramScene";
 import { AnecdoteScene } from "./AnecdoteScene";
 import { GoodNewsScene } from "./GoodNewsScene";
@@ -24,7 +25,16 @@ interface SceneRendererProps {
 export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProps) => {
   switch (scene.type) {
     case "café":
-      return <TextSlide bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)" tag="Café de Spécialité" titleStart="Origine, terroir," titleItalic="précision." body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin." />;
+      return (
+        <TextSlide
+          bg="linear-gradient(135deg, #C4A882, #7A5030, #3A1A08)"
+          bgImage="/scenes/cafe.jpg"
+          tag="Café de Spécialité"
+          titleStart="Origine, terroir,"
+          titleItalic="précision."
+          body="Des cafés sélectionnés parmi les meilleurs producteurs du monde — torréfiés artisanalement, extraits avec soin."
+        />
+      );
     case "anecdote":
       return <AnecdoteScene anecdoteIndex={scene.anecdoteIndex ?? 0} />;
     case "goodnews":
@@ -40,7 +50,18 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
     case "thé":
       return <TeaScene />;
     case "épicerie":
-      return <TextSlide bg="linear-gradient(135deg, #D0C080, #907030, #382810)" tag="Épicerie Fine" titleStart="Bien manger," titleItalic="bien choisir." body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence." />;
+      return (
+        <TextSlide
+          bg="linear-gradient(135deg, #D0C080, #907030, #382810)"
+          bgImage="/scenes/epicerie.jpg"
+          tag="Épicerie Fine"
+          titleStart="Bien manger,"
+          titleItalic="bien choisir."
+          body="Conserves artisanales, chocolats, condiments — sélectionnés avec la même exigence."
+        />
+      );
+    case "matcha":
+      return <MatchaScene />;
     case "instagram":
       return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
     case "chatperche-intro":

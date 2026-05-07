@@ -166,7 +166,7 @@ export const WineMapScene = () => {
               color: "rgba(201,168,76,0.6)",
             }}
           >
-            <span>Maison Maître · Sélection vin nature</span>
+            <span>Maison Maitre · Sélection vin nature</span>
             <span style={{ color: "hsl(var(--gold))" }}>
               {String(idx + 1).padStart(2, "0")} / {WINE_REGIONS.length}
             </span>

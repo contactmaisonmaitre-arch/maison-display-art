@@ -195,7 +195,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
                 borderTop: "1px solid rgba(201,168,76,0.18)",
               }}
             >
-              <span>Maison Maître · Veille</span>
+              <span>Maison Maitre · Veille</span>
               <span style={{ color: "hsl(var(--gold))" }}>
                 {String(((newsOffset + tick + i) % TOTAL) + 1).padStart(2, "0")} / {TOTAL}
               </span>

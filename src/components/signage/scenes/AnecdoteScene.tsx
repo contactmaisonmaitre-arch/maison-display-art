@@ -69,7 +69,7 @@ export const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number })
           opacity: 0.65,
         }}
       >
-        Maison Maître · La référence du café de spécialité à Dole
+        Maison Maitre · La référence du café de spécialité à Dole
       </div>
     </div>
   );

@@ -22,6 +22,7 @@ export type SceneType =
   | "winemap"
   | "weather"
   | "thé"
+  | "matcha"
   | "épicerie"
   | "instagram"
   | "chatperche-intro"

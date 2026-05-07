@@ -9,7 +9,7 @@ export interface TvProgram {
   pick: string;
 }
 
-// Sélection éditoriale Maison Maître — café, vin nature, terroir, gastronomie.
+// Sélection éditoriale Maison Maitre — café, vin nature, terroir, gastronomie.
 // La scène TV en pioche 5 au hasard à chaque démarrage du display.
 export const TV_TONIGHT: TvProgram[] = [
   {
@@ -18,7 +18,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "Le café, voyage au bout d'une tasse",
     note: "Origines du café de spécialité, des plantations éthiopiennes aux torréfacteurs européens. Aussi sur arte.tv.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "France 5",
@@ -26,7 +26,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "SÉRIE",
     title: "Vin, sans sulfites ni compromis",
     note: "Vignerons rebelles, terroirs vivants, biodynamie. Série en 3 épisodes sur le vin nature mondial.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "France Culture",
@@ -34,7 +34,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "ÉMISSION",
     title: "Le Goût du monde",
     note: "Culture du café au Yémen et en Éthiopie, entre patrimoine et modernité. Rediffusable en podcast.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "Mezzo",
@@ -42,7 +42,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "CONCERT",
     title: "Live dans les caves naturelles",
     note: "Concerts dans des caves de vignerons naturels en Bourgogne et Jura. Musique improvisée & dégustation.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "Public Sénat",
@@ -50,7 +50,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DÉBAT",
     title: "Agriculture naturelle : les pionniers",
     note: "Agriculteurs qui abandonnent les pesticides : cafés, vignes, maraîchers bio engagés.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "Arte",
@@ -58,7 +58,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "À l'ombre des caféiers",
     note: "Plongée chez les coopératives 100 % féminines du Burundi et du Rwanda — café d'Afrique de l'Est, parité, terroir d'altitude.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "France 3",
@@ -66,7 +66,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "Jura, le vignoble qui ne ressemble à aucun autre",
     note: "Savagnin, vin jaune, ouillé / non ouillé : tout ce qu'il faut savoir du plus singulier des vignobles français.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "France 5",
@@ -74,7 +74,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "SÉRIE",
     title: "L'art du fromage",
     note: "Le Comté AOP, le Mont d'Or, le Morbier — voyage dans les tommes du Massif jurassien et leur affinage.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "Arte",
@@ -82,7 +82,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "Tokyo, capitale du slow coffee",
     note: "Filtre lent, Kissaten, baristas obsédés par 0,1 g — la scène café japonaise, la plus exigeante du monde.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "France Inter",
@@ -90,7 +90,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "ÉMISSION",
     title: "On va déguster",
     note: "François-Régis Gaudry et son équipe — chaque dimanche, deux heures sur la cuisine, le vin, le café et leurs artisans.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "Arte",
@@ -98,7 +98,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "Ferments oubliés",
     note: "Kombucha, kéfir, miso, vinaigres vivants — la révolution silencieuse du goût qui bouleverse cuisine et boisson.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
   {
     channel: "TV5 Monde",
@@ -106,7 +106,7 @@ export const TV_TONIGHT: TvProgram[] = [
     kind: "DOCUMENTAIRE",
     title: "Les routes du thé",
     note: "Du Yunnan aux jardins de Darjeeling — comment le thé voyage et change selon les terroirs et les mains qui le préparent.",
-    pick: "Recommandé par Maison Maître",
+    pick: "Recommandé par Maison Maitre",
   },
 ];
 

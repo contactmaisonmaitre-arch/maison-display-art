@@ -69,7 +69,7 @@ export const DoleScene = () => {
           ))}
         </div>
 
-        {/* Signature Maison Maître */}
+        {/* Signature Maison Maitre */}
         <div
           className="font-serif-display italic"
           style={{
@@ -83,7 +83,7 @@ export const DoleScene = () => {
             opacity: 0.6,
           }}
         >
-          Maison Maître · Café de spécialité à Dole
+          Maison Maitre · Café de spécialité à Dole
         </div>
       </div>
     </div>
