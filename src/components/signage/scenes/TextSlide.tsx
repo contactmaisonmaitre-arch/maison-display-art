@@ -33,17 +33,9 @@ export const TextSlide = ({
         }}
       />
     )}
-    {/* Pan animation du fond gradient — uniquement si pas d'image (sinon redondant) */}
-    {!bgImage && (
-      <div
-        className="absolute inset-0"
-        style={{
-          background: bg,
-          animation: "mm-pan 22s ease-in-out infinite",
-          filter: "blur(2px)",
-        }}
-      />
-    )}
+    {/* Note : on a retiré la couche dupliquée animée mm-pan + filter:blur(2px).
+        C'était joli mais GPU-heavy sur les TV (filter blur en continu). Le
+        gradient de base + halo doré suffisent largement. */}
 
     {/* Voile de lecture — plus opaque côté gauche pour le texte, plus transparent côté droit */}
     <div

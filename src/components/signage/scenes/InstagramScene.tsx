@@ -176,7 +176,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             />
           )}
 
-          {/* Compteur Reel X/N — top right */}
+          {/* Compteur Reel X/N — top right (pas de backdrop-filter, perf TV) */}
           <div
             className="absolute top-5 right-5 font-sans-ui uppercase"
             style={{
@@ -186,8 +186,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
               padding: "8px 14px",
               border: "1px solid rgba(201,168,76,0.45)",
               borderRadius: 999,
-              background: "rgba(0,0,0,0.45)",
-              backdropFilter: "blur(8px)",
+              background: "rgba(0,0,0,0.7)",
             }}
           >
             Reel {idx + 1} / {INSTAGRAM_REELS.length}

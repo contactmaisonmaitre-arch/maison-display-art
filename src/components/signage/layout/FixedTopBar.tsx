@@ -10,10 +10,11 @@ export const FixedTopBar = memo(() => {
       className="absolute left-0 right-0 top-0 z-30 flex items-center justify-between px-16"
       style={{
         height: 118,
-        background: "linear-gradient(180deg, rgba(251,247,238,0.96) 0%, rgba(244,238,226,0.92) 100%)",
+        // Pas de backdrop-filter : très lourd sur les navigateurs TV. On compense avec
+        // un fond opaque (0.96 → 1) qui rend visuellement quasi-équivalent.
+        background: "linear-gradient(180deg, rgba(251,247,238,1) 0%, rgba(244,238,226,1) 100%)",
         borderBottom: "1px solid rgba(201,168,76,0.32)",
         boxShadow: "0 1px 0 rgba(255,255,255,0.5) inset, 0 18px 40px -20px rgba(46,36,25,0.25)",
-        backdropFilter: "blur(12px)",
       }}
     >
       {/* gold underline accent */}

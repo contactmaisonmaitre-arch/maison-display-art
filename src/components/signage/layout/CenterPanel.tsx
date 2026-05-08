@@ -2,7 +2,6 @@ import { memo, useEffect, useState } from "react";
 import type { WeatherData } from "@/types/signage";
 import { SCENES } from "@/data/scenes";
 import { SceneRenderer } from "@/components/signage/scenes/SceneRenderer";
-import { PaperGrain } from "./PaperGrain";
 
 interface CenterPanelProps {
   weather: WeatherData | null;
@@ -59,14 +58,18 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
               transition: `opacity ${TRANSITION_MS}ms cubic-bezier(0.22, 1, 0.36, 1), transform ${TRANSITION_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
               pointerEvents: active ? "auto" : "none",
               willChange: active ? "opacity, transform" : "auto",
+              // Cf. mm-paused dans index.css : sur les scènes inactives (la "next"
+              // pré-montée et la "previous" en fade out), on stoppe les animations
+              // CSS infinite (halos mm-glow, ken-burns, mm-pan…) pour ne pas
+              // facturer le GPU sur ce qui n'est pas visible.
+              animationPlayState: active ? "running" : "paused",
             }}
+            data-scene-active={active ? "true" : "false"}
           >
             <SceneRenderer scene={SCENES[i]} weather={weather} active={active} />
           </div>
         );
       })}
-
-      <PaperGrain />
 
       {/* Pager dots — restent affichés pour toutes les scènes (pas de coût React) */}
       <div className="absolute right-5 top-1/2 z-10 flex -translate-y-1/2 flex-col gap-3">
