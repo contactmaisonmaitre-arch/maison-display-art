@@ -1,53 +1,122 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { DOLE_FACTS } from "@/data/dole-facts";
+
+const ROTATION_MS = 20000;
+
+// Décale le pool de faits chaque jour : aujourd'hui le fait #N est l'ouverture,
+// demain c'est #N+1, etc. Comme ça les passants quotidiens ne voient pas
+// toujours les mêmes premiers faits dans le même ordre.
+const dayOffset = (d: Date = new Date()) => {
+  // Nombre de jours écoulés depuis le 1er janvier 2024 (date arbitraire stable)
+  const epoch = new Date(2024, 0, 1).getTime();
+  const today = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
+  return Math.floor((today - epoch) / 86400000);
+};
 
 export const DoleScene = () => {
   const [idx, setIdx] = useState(0);
+
+  // L'offset est calculé une fois au mount — la scène est de courte durée
+  // et le display est rebooté tous les jours, donc pas besoin de recalculer.
+  const offset = useMemo(() => dayOffset(), []);
+
   useEffect(() => {
-    const id = setInterval(() => setIdx((i) => (i + 1) % DOLE_FACTS.length), 20000);
+    const id = setInterval(
+      () => setIdx((i) => (i + 1) % DOLE_FACTS.length),
+      ROTATION_MS
+    );
     return () => clearInterval(id);
   }, []);
-  const f = DOLE_FACTS[idx];
+
+  const f = DOLE_FACTS[(offset + idx) % DOLE_FACTS.length];
+
   return (
     <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
       <div
         className="pointer-events-none absolute"
         style={{
-          top: "-20%", left: "-10%", width: 800, height: 800, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
+          top: "-20%",
+          left: "-10%",
+          width: 800,
+          height: 800,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
         }}
       />
       <div
         className="pointer-events-none absolute"
         style={{
-          bottom: "-25%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(116,42,62,0.14) 0%, transparent 65%)",
+          bottom: "-25%",
+          right: "-15%",
+          width: 900,
+          height: 900,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle, rgba(116,42,62,0.14) 0%, transparent 65%)",
         }}
       />
 
-      <div className="relative flex h-full flex-col items-center justify-center px-20 text-center">
+      <div className="relative flex h-full flex-col items-center justify-center px-24 text-center">
         <div
-          className="font-sans-ui uppercase"
-          style={{ fontSize: 11, letterSpacing: "0.3em", color: "#C9A84C" }}
+          className="mm-eyebrow"
+          style={{
+            fontSize: 18,
+            letterSpacing: "0.42em",
+            color: "hsl(var(--gold))",
+          }}
         >
           Dole · Le saviez-vous ?
         </div>
 
         <div
-          key={idx}
+          key={`${offset}-${idx}`}
           className="flex flex-col items-center"
-          style={{ animation: "mm-fade-in 0.6s ease-out both", marginTop: 28 }}
+          style={{
+            animation: "mm-fade-in 0.6s ease-out both",
+            marginTop: 36,
+          }}
         >
-          <div style={{ fontSize: 96, lineHeight: 1 }}>{f.emoji}</div>
+          {/* Emoji XXL */}
+          <div style={{ fontSize: 200, lineHeight: 1 }}>{f.emoji}</div>
+
+          {/* Titre — passe de 2.8rem à un ~6rem responsive (≈ 96-110px) */}
           <h2
-            className="font-serif-display italic"
-            style={{ fontSize: "2.8rem", color: "#C9A84C", marginTop: 28, lineHeight: 1.1, letterSpacing: "-0.01em" }}
+            className="font-serif-display italic mt-10"
+            style={{
+              fontSize: "clamp(80px, 6.4vw, 120px)",
+              color: "hsl(var(--gold))",
+              lineHeight: 1.05,
+              letterSpacing: "-0.01em",
+              maxWidth: "1500px",
+              textShadow: "0 4px 30px rgba(0,0,0,0.55)",
+            }}
           >
             {f.title}
           </h2>
+
+          {/* Petit séparateur or */}
+          <div
+            className="mt-8"
+            style={{
+              width: 140,
+              height: 1,
+              background:
+                "linear-gradient(90deg, transparent, hsl(var(--gold)), transparent)",
+            }}
+          />
+
+          {/* Body — passe de 1.1rem à ~1.8rem (≈ 30px) */}
           <p
-            className="mt-8 font-sans-ui"
-            style={{ fontSize: "1.1rem", color: "#F5F0E8", maxWidth: "42rem", opacity: 0.8, lineHeight: 1.55 }}
+            className="mt-8 font-serif-display"
+            style={{
+              fontSize: "clamp(26px, 1.9vw, 36px)",
+              color: "#F5F0E8",
+              maxWidth: "1280px",
+              opacity: 0.92,
+              lineHeight: 1.45,
+              fontWeight: 300,
+            }}
           >
             {f.body}
           </p>
@@ -59,11 +128,12 @@ export const DoleScene = () => {
             <div
               key={i}
               style={{
-                width: i === idx ? 24 : 6,
-                height: 3,
+                width: i === idx ? 32 : 8,
+                height: 4,
                 borderRadius: 2,
-                background: i === idx ? "#C9A84C" : "rgba(201,168,76,0.25)",
-                transition: "all 0.4s",
+                background:
+                  i === idx ? "hsl(var(--gold))" : "rgba(201,168,76,0.25)",
+                transition: "all 0.5s",
               }}
             />
           ))}
@@ -74,13 +144,14 @@ export const DoleScene = () => {
           className="font-serif-display italic"
           style={{
             position: "absolute",
-            bottom: 32,
+            bottom: 40,
             left: 0,
             right: 0,
             textAlign: "center",
-            fontSize: 13,
-            color: "#C9A84C",
-            opacity: 0.6,
+            fontSize: 16,
+            color: "hsl(var(--gold))",
+            opacity: 0.65,
+            letterSpacing: "0.02em",
           }}
         >
           Maison Maitre · Café de spécialité à Dole
