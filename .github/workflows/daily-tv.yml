@@ -1,11 +1,9 @@
-name: Refresh TF1 schedule daily
+name: Refresh TV schedule daily (5 channels)
 
-# Toutes les nuits à 4h05 UTC (≈ 6h05 heure Paris en été, 5h05 en hiver).
-# La grille TF1 est généralement publiée la veille au soir.
+# Tous les jours à 4h05 UTC (≈ 6h05 heure Paris en été).
 on:
   schedule:
     - cron: "5 4 * * *"
-  # Permet de déclencher à la main depuis l'onglet Actions de GitHub.
   workflow_dispatch:
 
 permissions:
@@ -23,18 +21,18 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Fetch TF1 schedule
-        run: node scripts/fetch-tf1.mjs
+      - name: Fetch TV prime-time (TF1, France 2, France 5, Arte, M6)
+        run: node scripts/fetch-tv-tonight.mjs
 
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if [[ -n "$(git status --porcelain public/data/tf1.json)" ]]; then
-            git add public/data/tf1.json
-            git commit -m "data: refresh TF1 schedule ($(date -u +'%Y-%m-%d'))"
+          if [[ -n "$(git status --porcelain public/data/tv-tonight.json)" ]]; then
+            git add public/data/tv-tonight.json
+            git commit -m "data: refresh TV schedule ($(date -u +'%Y-%m-%d'))"
             git push
-            echo "TF1 schedule updated."
+            echo "TV schedule updated."
           else
             echo "No change."
           fi
