@@ -1,0 +1,110 @@
+{
+  "channel": "TF1",
+  "source": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
+  "fetchedAt": "2026-06-09T10:07:38.198Z",
+  "primeTime": [
+    {
+      "id": "TvProgram_1566898022",
+      "start": "19h10",
+      "title": "Demain nous appartient",
+      "subtitle": "Episode 2222",
+      "format": "Série TV",
+      "duration": "45min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903348",
+      "start": "19h55",
+      "title": "Météo",
+      "format": "Autre",
+      "duration": "5min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903349",
+      "start": "20h00",
+      "title": "JT 20h",
+      "format": "Autre",
+      "duration": "45min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903350",
+      "start": "20h45",
+      "title": "My Million",
+      "format": "Autre",
+      "duration": "5min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903351",
+      "start": "20h50",
+      "title": "Petits plats en équilibre",
+      "format": "Culture Infos",
+      "duration": "10min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903352",
+      "start": "21h00",
+      "title": "Météo",
+      "format": "Autre",
+      "duration": "10min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903353",
+      "start": "21h10",
+      "title": "Koh-Lanta",
+      "subtitle": "Les reliques du destin",
+      "format": "Autre",
+      "duration": "1h30min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1566903354",
+      "start": "22h40",
+      "title": "Koh-Lanta",
+      "subtitle": "Les reliques du destin",
+      "format": "Autre",
+      "duration": "1h",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_1560515221",
+      "start": "23h40",
+      "title": "Une famille en or",
+      "subtitle": "La famille Givanovitch vs la famille Nasraoui",
+      "format": "Autre",
+      "duration": "55min",
+      "rebroadcast": false
+    },
+    {
+      "id": "TvProgram_27414329",
+      "start": "00h10",
+      "title": "New York Unité Spéciale",
+      "subtitle": "Mademoiselle Parfaite",
+      "format": "Série TV",
+      "duration": "50min",
+      "rebroadcast": true
+    },
+    {
+      "id": "TvProgram_127199752",
+      "start": "01h00",
+      "title": "New York Unité Spéciale",
+      "subtitle": "Sonate pour mineur",
+      "format": "Série TV",
+      "duration": "45min",
+      "rebroadcast": true
+    },
+    {
+      "id": "TvProgram_127521032",
+      "start": "01h45",
+      "title": "New York Unité Spéciale",
+      "subtitle": "Un homme d'honneur",
+      "format": "Série TV",
+      "duration": "55min",
+      "rebroadcast": true
+    }
+  ]
+}
