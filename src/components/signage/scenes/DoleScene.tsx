@@ -16,18 +16,17 @@ export const DoleScene = () => {
     [events]
   );
 
-  const [idx, setIdx] = useState(0);
-  const offset = useMemo(() => dayOffset(), []);
-
+  // Tick dérivé du temps réel (Date.now) plutôt que d'un state local —
+  // sinon avec le lazy mount on revoyait toujours le même fait en ouverture.
+  const [, forceRender] = useState(0);
   useEffect(() => {
-    const id = setInterval(
-      () => setIdx((i) => (i + 1) % pool.length),
-      ROTATION_MS
-    );
+    const id = setInterval(() => forceRender((n) => n + 1), ROTATION_MS);
     return () => clearInterval(id);
-  }, [pool.length]);
+  }, []);
 
-  const f = pool[(offset + idx) % pool.length];
+  const offset = dayOffset();
+  const idx = (offset + Math.floor(Date.now() / ROTATION_MS)) % pool.length;
+  const f = pool[idx];
 
   return (
     <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>

@@ -1,17 +1,23 @@
 import { memo, useEffect, useState } from "react";
 import { GOOD_NEWS_OF_THE_DAY } from "@/data/good-news";
+import { dayOffset } from "@/lib/signage/day-offset";
 
 const ROTATION_MS = 6000; // 1 nouvelle remplacée toutes les 6 secondes
 const TOTAL = GOOD_NEWS_OF_THE_DAY.length;
 
 export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) => {
-  // À chaque tick, on décale d'1 cran : carte 1 puis 2 puis 3 voient leur news changer.
-  const [tick, setTick] = useState(0);
+  // Important : le tick est dérivé de Date.now(), pas d'un useState local.
+  // Avec le lazy mount, la scène est démontée entre deux apparitions, donc
+  // un state interne repartait à 0 à chaque fois → on voyait toujours les
+  // 3 mêmes news en ouverture. En lisant le temps réel, on attaque toujours
+  // sur des news différentes au gré du temps écoulé + un décalage journalier.
+  const [, forceRender] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setTick((t) => t + 1), ROTATION_MS);
+    const id = setInterval(() => forceRender((n) => n + 1), ROTATION_MS);
     return () => clearInterval(id);
   }, []);
 
+  const tick = Math.floor(Date.now() / ROTATION_MS) + dayOffset();
   const items = [0, 1, 2].map(
     (i) => GOOD_NEWS_OF_THE_DAY[(newsOffset + tick + i) % TOTAL]
   );

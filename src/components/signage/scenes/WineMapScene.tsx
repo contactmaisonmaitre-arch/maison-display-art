@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { WINE_REGIONS } from "@/data/wine-regions";
 import { dayOffset } from "@/lib/signage/day-offset";
 
@@ -11,17 +11,15 @@ const FRANCE_OUTLINE =
   "M 28 12 Q 38 8 50 9 Q 62 11 73 18 Q 80 22 85 30 Q 88 38 87 48 Q 86 56 84 62 Q 88 68 86 74 Q 84 80 80 84 Q 76 86 72 85 Q 68 88 62 90 Q 58 95 52 96 Q 44 92 40 88 Q 32 90 28 86 Q 24 80 22 72 Q 16 66 14 56 Q 12 46 14 36 Q 18 24 28 12 Z";
 
 export const WineMapScene = () => {
-  // Offset journalier : la scène commence sur la région du jour (puis cycle
-  // sur toutes les autres). Le passant qui voit la TV chaque jour découvre
-  // une région différente en ouverture.
-  const startIdx = useMemo(() => dayOffset() % WINE_REGIONS.length, []);
-  const [idx, setIdx] = useState(startIdx);
+  // Tick dérivé de Date.now() — survit aux remontages liés au lazy mount,
+  // donc on commence toujours sur une région différente d'un passage à l'autre.
+  const [, forceRender] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => {
-      setIdx((i) => (i + 1) % WINE_REGIONS.length);
-    }, ROTATION_MS);
+    const id = setInterval(() => forceRender((n) => n + 1), ROTATION_MS);
     return () => clearInterval(id);
   }, []);
+  const idx =
+    (dayOffset() + Math.floor(Date.now() / ROTATION_MS)) % WINE_REGIONS.length;
   const active = WINE_REGIONS[idx];
 
   return (
