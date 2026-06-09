@@ -1,25 +1,33 @@
 import { useEffect, useMemo, useState } from "react";
 import { DOLE_FACTS } from "@/data/dole-facts";
 import { dayOffset } from "@/lib/signage/day-offset";
+import { useDoleEvents } from "@/hooks/useDoleEvents";
 
 const ROTATION_MS = 20000;
 
 export const DoleScene = () => {
-  const [idx, setIdx] = useState(0);
+  const events = useDoleEvents();
 
-  // L'offset est calculé une fois au mount — la scène est de courte durée
-  // et le display est rebooté tous les jours, donc pas besoin de recalculer.
+  // Pool combiné : faits historiques + événements frais scrapés chaque semaine
+  // depuis sortiradole.fr. Les events frais passent en tête de pool pour avoir
+  // un peu plus de visibilité, mais le dayOffset mélange tout naturellement.
+  const pool = useMemo(
+    () => (events.length > 0 ? [...events, ...DOLE_FACTS] : DOLE_FACTS),
+    [events]
+  );
+
+  const [idx, setIdx] = useState(0);
   const offset = useMemo(() => dayOffset(), []);
 
   useEffect(() => {
     const id = setInterval(
-      () => setIdx((i) => (i + 1) % DOLE_FACTS.length),
+      () => setIdx((i) => (i + 1) % pool.length),
       ROTATION_MS
     );
     return () => clearInterval(id);
-  }, []);
+  }, [pool.length]);
 
-  const f = DOLE_FACTS[(offset + idx) % DOLE_FACTS.length];
+  const f = pool[(offset + idx) % pool.length];
 
   return (
     <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
@@ -115,7 +123,7 @@ export const DoleScene = () => {
 
         {/* Indicateur de progression */}
         <div className="mt-12 flex gap-1.5">
-          {DOLE_FACTS.map((_, i) => (
+          {pool.map((_, i) => (
             <div
               key={i}
               style={{
