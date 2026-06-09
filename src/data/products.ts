@@ -15,14 +15,14 @@ export interface Product {
   bleed?: boolean;
 }
 
-// Produits réels — extraits de maisonmaitre.com
-// Le Chat Heureux est le coup de cœur thé.
-// Altiplano est le coup de cœur café (Pérou-Honduras).
+// Produits réels — extraits du catalogue maisonmaitre.com (juin 2026).
+// Le Chat Heureux est le coup de cœur thé/infusion.
+// Altiplano est le coup de cœur café.
 export const PRODUCTS_TO_TRY: Product[] = [
   {
-    cat: "Thé des Maitre · Vert",
+    cat: "Infusion des Maitre · Agrumes & Plantes",
     name: "Le Chat Heureux",
-    notes: "Notre incontournable",
+    notes: "Notre incontournable maison",
     price: "9,50 € / 100g",
     img: "/products/the-chat.webp",
     featured: "tea",
@@ -37,24 +37,31 @@ export const PRODUCTS_TO_TRY: Product[] = [
     bleed: true,
   },
   {
+    cat: "Café des Maitre · Mexique Chiapas",
+    name: "Aguacero",
+    notes: "Pluie de Chiapas — rond, doux, équilibré",
+    price: "11,25 € / 250g",
+    img: "/products/cafe-ethiopie.webp", // placeholder visuel — à remplacer
+  },
+  {
     cat: "Café des Maitre · Éthiopie",
-    name: "Yirgacheffe Heirloom",
-    notes: "Jasmin · Pêche · Miel",
-    price: "14,50 € / 100g",
+    name: "Moka Sidamo",
+    notes: "Fruité, floral, notes d'agrumes",
+    price: "12 € / 250g",
     img: "/products/cafe-ethiopie.webp",
   },
   {
-    cat: "Café des Maitre · Colombie",
-    name: "Huila Bourbon Rose",
+    cat: "Café des Maitre · Colombie Huila",
+    name: "Bourbon Rose Nature",
     notes: "Cerise · Framboise · Cacao",
-    price: "16 € / 100g",
+    price: "16 € / 250g",
     img: "/products/cafe-colombie-bourbon.webp",
   },
   {
-    cat: "Café des Maitre · Colombie",
-    name: "Huila Castillo Semi-Lavé",
+    cat: "Café des Maitre · Colombie Huila",
+    name: "Castillo Semi Lavé",
     notes: "Chocolat · Noisette · Caramel",
-    price: "14,50 € / 100g",
+    price: "14,50 € / 250g",
     img: "/products/cafe-colombie-castillo.gif",
   },
   {
@@ -65,6 +72,34 @@ export const PRODUCTS_TO_TRY: Product[] = [
     img: "/products/the-tsars.webp",
   },
   {
+    cat: "Thé des Maitre · Noir",
+    name: "Eden Floral",
+    notes: "Rose & Pivoine",
+    price: "8,20 € / 100g",
+    img: "/products/eden-floral.webp",
+  },
+  {
+    cat: "Thé des Maitre · Noir",
+    name: "Douceur Salée",
+    notes: "Caramel beurre salé",
+    price: "12,25 € / 100g",
+    img: "/products/douceur-salee.webp",
+  },
+  {
+    cat: "Thé des Maitre · Vert · Japon",
+    name: "Hojicha Bio",
+    notes: "Thé vert japonais torréfié — sucré, doux",
+    price: "14,75 € / 100g",
+    img: "/products/the-tsars.webp", // placeholder
+  },
+  {
+    cat: "Thé des Maitre · Vert · Japon",
+    name: "Genmaicha",
+    notes: "Vert japonais au riz soufflé",
+    price: "12,95 € / 100g",
+    img: "/products/the-tsars.webp", // placeholder
+  },
+  {
     cat: "Infusion des Maitre",
     name: "Délice des Vergers",
     notes: "Framboise · Hibiscus",
@@ -72,18 +107,11 @@ export const PRODUCTS_TO_TRY: Product[] = [
     img: "/products/infusion-vergers.webp",
   },
   {
-    cat: "Thé des Maitre · Floral",
-    name: "Eden Floral",
-    notes: "Rose & Pivoine",
-    price: "11,50 € / 100g",
-    img: "/products/eden-floral.webp",
-  },
-  {
-    cat: "Thé des Maitre · Caramel",
-    name: "Douceur Salée",
-    notes: "Caramel beurre salé",
-    price: "12,25 € / 100g",
-    img: "/products/douceur-salee.webp",
+    cat: "Infusion des Maitre",
+    name: "Au Coin du Feu",
+    notes: "Épices & Orange — l'hiver en tasse",
+    price: "7,45 € / 100g",
+    img: "/products/infusion-vergers.webp", // placeholder
   },
   {
     cat: "Boutique",
