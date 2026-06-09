@@ -1,8 +1,17 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { dayOffset } from "@/lib/signage/day-offset";
 
-// Reels Instagram @maison_maitre
-const INSTAGRAM_REELS = ["DXtn06bIgtd", "DXjAgNRirlr", "DXPVGNDioOU"];
-const REELS_PATH = "/reels-tv";
+// 20 photos sont déposées dans /public/instagram/ sous le nom insta-NN.webp.
+// Pour rafraîchir la sélection : ajouter des images, lancer `node
+// scripts/convert-insta.mjs`, commit. Le nombre est ajustable ici (le scène
+// teste les chargements et ignore silencieusement les fichiers absents).
+const TOTAL_PHOTOS = 20;
+const ALL_PHOTOS = Array.from(
+  { length: TOTAL_PHOTOS },
+  (_, i) => `/instagram/insta-${String(i + 1).padStart(2, "0")}.webp`
+);
+
+const SLIDE_MS = 5000; // une photo toutes les 5 secondes pendant la scène
 
 // Logo Instagram (caméra) en SVG, gradient officiel
 const InstagramLogo = ({ size = 72 }: { size?: number }) => (
@@ -22,64 +31,60 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
-const preloadReelAssets = (reelId: string) => {
-  if (typeof window === "undefined") return;
-  const links: { href: string; as: string; type?: string }[] = [
-    { href: `${REELS_PATH}/${reelId}.mp4`, as: "video", type: "video/mp4" },
-    { href: `${REELS_PATH}/${reelId}.jpg`, as: "image" },
-  ];
-  for (const { href, as, type } of links) {
-    const link = document.createElement("link");
-    link.rel = "preload";
-    link.as = as;
-    if (type) link.type = type;
-    link.href = href;
-    document.head.appendChild(link);
-  }
+// Détecte les photos qui ne se chargent pas (404), pour ne pas afficher de cadre vide.
+const usePhotos = () => {
+  const [available, setAvailable] = useState<string[]>([]);
+  useEffect(() => {
+    let cancelled = false;
+    Promise.all(
+      ALL_PHOTOS.map(
+        (src) =>
+          new Promise<string | null>((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve(src);
+            img.onerror = () => resolve(null);
+            img.src = src;
+          })
+      )
+    ).then((results) => {
+      if (cancelled) return;
+      const ok = results.filter((s): s is string => Boolean(s));
+      setAvailable(ok.length > 0 ? ok : ALL_PHOTOS);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+  return available;
 };
-if (typeof window !== "undefined") INSTAGRAM_REELS.forEach(preloadReelAssets);
-
-type FallbackStage = "video" | "webp" | "gif" | "jpg";
 
 export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
-  const idx = reelIndex % INSTAGRAM_REELS.length;
-  const reelId = INSTAGRAM_REELS[idx];
-  const nextId = INSTAGRAM_REELS[(idx + 1) % INSTAGRAM_REELS.length];
+  const photos = usePhotos();
 
-  const [stage, setStage] = useState<FallbackStage>("video");
-  const videoRef = useRef<HTMLVideoElement | null>(null);
+  // Démarrage : décalé selon (reelIndex × 3 + dayOffset), pour qu'à chaque
+  // passage de la scène on attaque sur des photos différentes, et que le set
+  // change globalement chaque jour.
+  const startIdx = useMemo(
+    () =>
+      photos.length > 0
+        ? (reelIndex * 3 + dayOffset()) % photos.length
+        : 0,
+    [photos.length, reelIndex]
+  );
 
+  const [idx, setIdx] = useState(0);
   useEffect(() => {
-    setStage("video");
-    preloadReelAssets(reelId);
-    preloadReelAssets(nextId);
-  }, [reelId, nextId]);
+    if (photos.length <= 1) return;
+    setIdx(startIdx);
+    // Avance toutes les SLIDE_MS quand la scène est active
+    if (!active) return;
+    const id = setInterval(() => {
+      setIdx((i) => (i + 1) % photos.length);
+    }, SLIDE_MS);
+    return () => clearInterval(id);
+  }, [photos.length, startIdx, active]);
 
-  // Watchdog : si la vidéo ne démarre pas en 2,5 s, fallback webp animé.
-  useEffect(() => {
-    if (stage !== "video") return;
-    const v = videoRef.current;
-    if (!v) return;
-    if (!active) {
-      v.pause();
-      return;
-    }
-    const p = v.play();
-    if (p && typeof p.catch === "function") p.catch(() => setStage("webp"));
-    const watchdog = window.setTimeout(() => {
-      if (v.paused || v.currentTime < 0.05) setStage("webp");
-    }, 2500);
-    return () => window.clearTimeout(watchdog);
-  }, [active, stage, reelId]);
-
-  const fallbackTo = (next: FallbackStage) => setStage(next);
-
-  const fallbackSrc =
-    stage === "webp"
-      ? `${REELS_PATH}/${reelId}.webp`
-      : stage === "gif"
-        ? `${REELS_PATH}/${reelId}.gif`
-        : `${REELS_PATH}/${reelId}.jpg`;
+  const currentSrc = photos[idx] ?? ALL_PHOTOS[0];
 
   return (
     <div
@@ -115,7 +120,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
         }}
       />
 
-      {/* Layout côte à côte : reel à gauche, panneau Suivez-nous à droite */}
+      {/* Layout côte à côte : photo à gauche, panneau Suivez-nous à droite */}
       <div
         className="relative h-full grid items-center px-16 pb-10 pt-32 gap-14"
         style={{
@@ -123,73 +128,113 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           animation: "mm-fade-in 0.8s ease-out both",
         }}
       >
-        {/* Cadre vidéo 16:9 */}
+        {/* Cadre photo style "post Instagram" */}
         <div
           className="relative overflow-hidden"
           style={{
-            aspectRatio: "16 / 9",
+            aspectRatio: "1 / 1",
             width: "100%",
             maxHeight: "100%",
+            margin: "0 auto",
             borderRadius: 24,
             boxShadow:
               "0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.45), 0 0 0 4px rgba(201,168,76,0.10)",
             background: "#000",
           }}
         >
-          {stage === "video" ? (
-            <video
-              ref={videoRef}
-              key={reelId}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              poster={`${REELS_PATH}/${reelId}.jpg`}
-              onError={() => fallbackTo("webp")}
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                background: "#000",
-                display: "block",
-              }}
-            >
-              <source src={`${REELS_PATH}/${reelId}.mp4`} type="video/mp4" />
-            </video>
-          ) : (
+          {/* Slideshow : on rend les photos en pile, on bascule l'opacité */}
+          {photos.map((src) => (
             <img
-              key={`${reelId}-${stage}`}
-              src={fallbackSrc}
+              key={src}
+              src={src}
               alt=""
-              onError={() => {
-                if (stage === "webp") fallbackTo("gif");
-                else if (stage === "gif") fallbackTo("jpg");
-              }}
               style={{
+                position: "absolute",
+                inset: 0,
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                opacity: src === currentSrc ? 1 : 0,
+                transition: "opacity 900ms ease",
                 background: "#000",
-                display: "block",
               }}
             />
-          )}
+          ))}
 
-          {/* Compteur Reel X/N — top right (pas de backdrop-filter, perf TV) */}
+          {/* Header post — profil + handle, façon flux IG */}
           <div
-            className="absolute top-5 right-5 font-sans-ui uppercase"
+            className="absolute top-0 left-0 right-0 flex items-center gap-3 px-5 py-4"
             style={{
-              fontSize: 12,
-              letterSpacing: "0.32em",
-              color: "rgba(201,168,76,0.95)",
-              padding: "8px 14px",
-              border: "1px solid rgba(201,168,76,0.45)",
-              borderRadius: 999,
-              background: "rgba(0,0,0,0.7)",
+              background:
+                "linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%)",
             }}
           >
-            Reel {idx + 1} / {INSTAGRAM_REELS.length}
+            <InstagramLogo size={32} />
+            <div className="flex flex-col">
+              <span
+                className="font-sans-ui"
+                style={{
+                  fontSize: 17,
+                  fontWeight: 600,
+                  color: "#fff",
+                  lineHeight: 1,
+                  letterSpacing: "0.01em",
+                }}
+              >
+                maison_maitre
+              </span>
+              <span
+                className="font-sans-ui uppercase mt-1"
+                style={{
+                  fontSize: 9,
+                  letterSpacing: "0.32em",
+                  color: "rgba(201,168,76,0.95)",
+                }}
+              >
+                Dole · Jura
+              </span>
+            </div>
+            <div className="ml-auto" style={{ fontSize: 18, color: "rgba(255,255,255,0.9)", letterSpacing: "0.18em" }}>
+              · · ·
+            </div>
+          </div>
+
+          {/* Footer post — like / comment / share + compteur */}
+          <div
+            className="absolute bottom-0 left-0 right-0 flex items-center gap-5 px-5 py-4"
+            style={{
+              background:
+                "linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)",
+            }}
+          >
+            {/* Heart */}
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+            </svg>
+            {/* Comment */}
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            {/* Share */}
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <line x1="22" y1="2" x2="11" y2="13" />
+              <polygon points="22 2 15 22 11 13 2 9 22 2" />
+            </svg>
+
+            <div
+              className="ml-auto font-sans-ui uppercase"
+              style={{
+                fontSize: 10,
+                letterSpacing: "0.32em",
+                color: "rgba(201,168,76,0.95)",
+                padding: "6px 12px",
+                border: "1px solid rgba(201,168,76,0.45)",
+                borderRadius: 999,
+                background: "rgba(0,0,0,0.55)",
+              }}
+            >
+              {idx + 1} / {photos.length || TOTAL_PHOTOS}
+            </div>
           </div>
         </div>
 
@@ -198,7 +243,6 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           className="relative h-full flex flex-col justify-center"
           style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}
         >
-          {/* Logo IG géant */}
           <div style={{ filter: "drop-shadow(0 20px 60px rgba(247,113,51,0.35))" }}>
             <InstagramLogo size={148} />
           </div>
@@ -257,6 +301,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
               fontWeight: 600,
               boxShadow:
                 "0 18px 40px -10px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+              whiteSpace: "nowrap",
             }}
           >
             ★ Suivez-nous
