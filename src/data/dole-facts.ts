@@ -30,4 +30,14 @@ export const DOLE_FACTS: DoleFact[] = [
   { emoji: "🪺", title: "La cigogne, retour gagnant", body: "Quasi-disparue dans les années 1970, la cigogne blanche niche à nouveau dans les vallées du Doubs et de la Loue autour de Dole." },
   { emoji: "🏞️", title: "À 30 minutes des cascades", body: "Au sud-est de Dole se trouvent les cascades du Hérisson — site naturel emblématique du Jura, classé Grand Site de France." },
   { emoji: "🥃", title: "Le Macvin du Jura", body: "AOC depuis 1991, ce mistelle juraissien (mélange de moût et de marc) se déguste apéritif ou en accord avec le Comté." },
+  // === Événements ce mois-ci — extrait de sortiradole.fr ===
+  // (à terme automatisé via scripts/fetch-dole-events.mjs — voir GitHub Action)
+  { emoji: "🚴", title: "Tour de France à Dole", body: "Le 17 juillet 2026, la ville sera le départ de la 13ᵉ étape — Dole-Belfort, 205 km, la plus longue étape de la Grande Boucle." },
+  { emoji: "🎸", title: "Rockalissimo · 5-6 juin", body: "Festival rock annuel à Saint-Aubin, gymnase Ernest-Gagnoux. Une scène, deux jours, des têtes d'affiche venues de toute la région." },
+  { emoji: "🎶", title: "Fête de la Musique · 19-22 juin", body: "Quatre jours de scènes ouvertes dans toute la ville. Tous les genres, toutes les places, tous gratuits." },
+  { emoji: "🎤", title: "Nuits (Re)Belles · 7 juin", body: "Festival rebelle et engagé à Parcey, à 15 min de Dole. Musique live, ambiance fraternelle, restauration locale." },
+  { emoji: "🩰", title: "Échappées Belles · 12-13 juin", body: "Gala de danse au Théâtre municipal — ballets contemporains, jeunes talents et créations originales." },
+  { emoji: "🏺", title: "Journées Européennes de l'Archéologie · 13 juin", body: "Visites guidées du centre-ville sous l'angle archéologique, ateliers de fouille pour enfants, conférences en accès libre." },
+  { emoji: "🎨", title: "Ctrl+Alt+Art au musée", body: "Exposition « Peindre le jeu vidéo » au Musée des Beaux-Arts — comment les artistes contemporains rejouent l'esthétique des jeux." },
+  { emoji: "🎉", title: "Fête de Tavaux · 13-14 juin", body: "Manèges, food trucks, feux d'artifice au Parc des Vernaux — le grand rendez-vous populaire du début d'été." },
 ];

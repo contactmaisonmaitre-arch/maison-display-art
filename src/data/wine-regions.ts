@@ -5,7 +5,7 @@ export interface WineRegion {
   terroir: string;
   /** Phrase d'accroche éditoriale */
   blurb: string;
-  /** Vignerons emblématiques en vin nature à mettre en avant */
+  /** Vignerons emblématiques à mettre en avant — issus de l'inventaire boutique */
   producers: string[];
   /** Couleur d'accent associée à la région */
   color: string;
@@ -16,88 +16,67 @@ export interface WineRegion {
   r: number;
 }
 
-// Régions ordonnées du nord au sud, principalement orientées vin nature.
-// Le Jura est mis en premier — c'est le terroir de Maison Maitre.
+// Régions ordonnées dans la rotation. Producteurs RÉELS — extraits de
+// l'export caisse "export_produits_2026-06-09…xlsx" (vins en boutique au
+// 9 juin 2026). Le Jura est mis en premier — c'est le terroir de Maison
+// Maitre.
 export const WINE_REGIONS: WineRegion[] = [
   {
     id: "jura",
     name: "Jura",
-    terroir: "Savagnin · Trousseau · Poulsard · Vin Jaune",
+    terroir: "Savagnin · Trousseau · Poulsard · Chardonnay sous voile",
     blurb:
-      "Notre terroir. Des vignerons obstinés, des cuvées qui ne ressemblent à rien d'autre — le Jura est unique au monde.",
-    producers: ["Domaine Tissot", "Overnoy-Houillon", "Marcel Cabelier"],
+      "Notre terroir. Des cuvées qui ne ressemblent à rien d'autre — Côtes du Jura, Crémant, Savagnin et chardonnay voilé.",
+    producers: [
+      "Domaine des Carlines",
+      "Domaine Grand",
+    ],
     color: "#C9A84C",
     cx: 73,
     cy: 47,
     r: 5,
   },
   {
-    id: "beaujolais",
-    name: "Beaujolais",
-    terroir: "Gamay des dix crus — Morgon, Fleurie, Moulin-à-Vent",
-    blurb:
-      "Le berceau du vin nature moderne. Marcel Lapierre y a tout commencé en 1981. La gourmandise à l'état pur.",
-    producers: ["Marcel Lapierre", "Jean Foillard", "Yvon Métras"],
-    color: "#9B2335",
-    cx: 67,
-    cy: 58,
-    r: 4.5,
-  },
-  {
-    id: "loire",
-    name: "Loire",
-    terroir: "Chenin · Cabernet franc · Sauvignon · Melon de Bourgogne",
-    blurb:
-      "Le fleuve royal des vignerons libres : Anjou, Touraine, Muscadet, Sancerre. Tendu, salin, vibrant.",
-    producers: ["Marc Pesnot", "Olivier Cousin", "Mark Angeli"],
-    color: "#5B8A4B",
-    cx: 35,
-    cy: 42,
-    r: 5.5,
-  },
-  {
-    id: "alsace",
-    name: "Alsace",
-    terroir: "Riesling · Pinot Gris · Gewurztraminer · Sylvaner",
-    blurb:
-      "Des vignerons qui osent : amphores, longues macérations, vins d'orange. L'élégance schisteuse.",
-    producers: ["Christian Binner", "Domaine Bohn", "Patrick Meyer"],
-    color: "#A37BC8",
-    cx: 84,
-    cy: 30,
-    r: 4,
-  },
-  {
     id: "bourgogne",
     name: "Bourgogne",
-    terroir: "Pinot noir · Chardonnay · Aligoté",
+    terroir: "Aligoté · Chardonnay · Pinot noir — Mâconnais, Marsannay",
     blurb:
-      "La perfection précise du climat. Quelques hectares peuvent dire le monde — du Côte de Nuits aux Hautes-Côtes.",
-    producers: ["Domaine Bizot", "Pierre Boisson", "Julie Balagny"],
+      "De Marsannay au Mâconnais : la perfection précise du climat bourguignon, des vieilles vignes aux blancs de Viré-Clessé.",
+    producers: [
+      "Domaine René Bouvier",
+      "Domaine des Gandines",
+    ],
     color: "#7E2A2A",
     cx: 68,
     cy: 45,
     r: 4.5,
   },
   {
-    id: "champagne",
-    name: "Champagne",
-    terroir: "Pinot noir · Chardonnay · Pinot meunier",
+    id: "beaujolais",
+    name: "Beaujolais",
+    terroir: "Gamay — granit, schistes et soleil du sud",
     blurb:
-      "Au-delà du luxe industriel : les vignerons de la Côte des Bar et de la Vallée de la Marne qui font des champagnes de cru.",
-    producers: ["Jérôme Prévost", "Selosse", "Egly-Ouriet"],
-    color: "#D6C19A",
-    cx: 60,
-    cy: 25,
-    r: 4,
+      "Le Gamay vibrant du Beaujolais. Légèreté, fraîcheur, gourmandise — l'esprit de la cuvée Marylou et de David Large.",
+    producers: [
+      "David Large",
+      "Cuvée Marylou — Beaujolais Villages",
+    ],
+    color: "#9B2335",
+    cx: 67,
+    cy: 58,
+    r: 4.5,
   },
   {
     id: "rhone",
-    name: "Rhône",
-    terroir: "Syrah · Grenache · Viognier · Marsanne",
+    name: "Vallée du Rhône",
+    terroir: "Grenache · Syrah · Mourvèdre — Châteauneuf, Gigondas, Vacqueyras",
     blurb:
-      "Du nord granitique de la Côte-Rôtie aux galets ronds de Châteauneuf — la Vallée du Rhône a toutes les facettes.",
-    producers: ["Gramenon", "Maxime Magnon", "Hervé Souhaut"],
+      "Du grand sud rhodanien aux Côtes du Rhône d'agréable rondeur. Le Domaine Fontavin signe nos coups de cœur AOC.",
+    producers: [
+      "Domaine Fontavin",
+      "Mas de Libian",
+      "Mas de Lilian",
+    ],
     color: "#B8552B",
     cx: 67,
     cy: 76,
@@ -105,11 +84,15 @@ export const WINE_REGIONS: WineRegion[] = [
   },
   {
     id: "languedoc",
-    name: "Languedoc",
-    terroir: "Carignan · Grenache · Cinsault · Mourvèdre",
+    name: "Languedoc-Roussillon",
+    terroir: "Carignan · Grenache · Cinsault — Corbières, Pic Saint-Loup",
     blurb:
-      "Le grand laboratoire du vin nature français. Garrigue, schistes, mer Méditerranée — et des prix encore tendres.",
-    producers: ["Fond Cyprès", "Sylvain Bock", "Mas Coutelou"],
+      "Garrigue, schiste, Méditerranée. Maxime Magnon, Mas Foulaquier, Benjamin Taillandier — la nouvelle scène du Sud.",
+    producers: [
+      "Domaine Maxime Magnon",
+      "Mas Foulaquier",
+      "Benjamin Taillandier",
+    ],
     color: "#C56A4A",
     cx: 50,
     cy: 87,
@@ -118,13 +101,41 @@ export const WINE_REGIONS: WineRegion[] = [
   {
     id: "sud-ouest",
     name: "Sud-Ouest",
-    terroir: "Tannat · Négrette · Manseng · Fer Servadou",
+    terroir: "Malbec · Petit Manseng · Tannat — Cahors, Jurançon, Bergerac",
     blurb:
-      "De Cahors à Madiran, des cépages oubliés que personne ne fait pousser ailleurs. Le Sud-Ouest est un trésor caché.",
-    producers: ["Patrick Bouju", "Élian Da Ros", "Plageoles"],
+      "De Cahors au Jurançon : des cépages oubliés, des vignerons obstinés. Cosse-Maisonneuve et Combel-Laserre en pointe.",
+    producers: [
+      "Cosse-Maisonneuve",
+      "Combel-Laserre",
+      "Domaine de Bellegarde",
+    ],
     color: "#876342",
     cx: 35,
     cy: 78,
     r: 4.5,
+  },
+  {
+    id: "alsace",
+    name: "Alsace",
+    terroir: "Riesling · Pinot Gris · Gewurztraminer",
+    blurb:
+      "L'élégance schisteuse alsacienne. Des vins droits, précis, qui chantent — signés Bader.",
+    producers: ["Domaine Bader"],
+    color: "#A37BC8",
+    cx: 84,
+    cy: 30,
+    r: 4,
+  },
+  {
+    id: "savoie",
+    name: "Savoie",
+    terroir: "Mondeuse · Jacquère · Altesse",
+    blurb:
+      "Les vins de montagne, vifs et minéraux. La Mondeuse de Jacques Bouchevreau est notre porte d'entrée.",
+    producers: ["Jacques Bouchevreau"],
+    color: "#4F7BA2",
+    cx: 80,
+    cy: 60,
+    r: 3.5,
   },
 ];
