@@ -1,17 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { DOLE_FACTS } from "@/data/dole-facts";
+import { dayOffset } from "@/lib/signage/day-offset";
 
 const ROTATION_MS = 20000;
-
-// Décale le pool de faits chaque jour : aujourd'hui le fait #N est l'ouverture,
-// demain c'est #N+1, etc. Comme ça les passants quotidiens ne voient pas
-// toujours les mêmes premiers faits dans le même ordre.
-const dayOffset = (d: Date = new Date()) => {
-  // Nombre de jours écoulés depuis le 1er janvier 2024 (date arbitraire stable)
-  const epoch = new Date(2024, 0, 1).getTime();
-  const today = new Date(d.getFullYear(), d.getMonth(), d.getDate()).getTime();
-  return Math.floor((today - epoch) / 86400000);
-};
 
 export const DoleScene = () => {
   const [idx, setIdx] = useState(0);

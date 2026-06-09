@@ -1,4 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { todaysPick } from "@/lib/signage/day-offset";
+import { WINE_REGIONS } from "@/data/wine-regions";
 
 // Dépose tes photos dans /public/cave/ avec ces noms — la scène utilise
 // uniquement celles qui existent (les autres sont silencieusement ignorées).
@@ -41,6 +43,9 @@ const useCellarPhotos = () => {
 export const WineScene = () => {
   const photos = useCellarPhotos();
   const [idx, setIdx] = useState(0);
+
+  // Région à l'honneur aujourd'hui — change chaque matin (déterministe).
+  const todaysRegion = useMemo(() => todaysPick(WINE_REGIONS), []);
 
   useEffect(() => {
     if (photos.length <= 1) return;
@@ -120,7 +125,8 @@ export const WineScene = () => {
             className="mm-eyebrow"
             style={{ fontSize: 20, color: "hsl(var(--gold))" }}
           >
-            Vins Naturels · La cave de Maison Maitre
+            Vins Naturels · La cave de Maison Maitre · Aujourd'hui ·{" "}
+            <span style={{ color: todaysRegion.color }}>{todaysRegion.name}</span>
           </div>
         </div>
 
@@ -172,9 +178,52 @@ export const WineScene = () => {
             textShadow: hasPhotos ? "0 2px 20px rgba(0,0,0,0.55)" : undefined,
           }}
         >
-          Vignerons engagés — Marcel Lapierre, Jean Foillard, Overnoy-Houillon,
-          Yvon Métras.
+          {todaysRegion.blurb}
         </p>
+
+        {/* Vignerons à l'honneur aujourd'hui — pioché dans la région du jour */}
+        <div
+          className="mt-10 flex flex-wrap items-baseline gap-x-8 gap-y-3"
+          style={{
+            animation: "mm-slide-up 1s ease-out 0.55s both",
+          }}
+        >
+          <span
+            className="mm-eyebrow"
+            style={{
+              fontSize: 13,
+              letterSpacing: "0.42em",
+              color: todaysRegion.color,
+            }}
+          >
+            ✦ Aujourd'hui à la cave
+          </span>
+          {todaysRegion.producers.map((p, i) => (
+            <span
+              key={p}
+              className="font-serif-display italic"
+              style={{
+                fontSize: 32,
+                color: hasPhotos ? "hsl(var(--linen))" : "hsl(var(--ink))",
+                textShadow: hasPhotos ? "0 2px 18px rgba(0,0,0,0.55)" : undefined,
+              }}
+            >
+              {p}
+              {i < todaysRegion.producers.length - 1 && (
+                <span
+                  style={{
+                    margin: "0 4px 0 12px",
+                    color: hasPhotos
+                      ? "rgba(201,168,76,0.55)"
+                      : "rgba(46,36,25,0.4)",
+                  }}
+                >
+                  ·
+                </span>
+              )}
+            </span>
+          ))}
+        </div>
 
         {hasPhotos && (
           <div
