@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { dayOffset } from "@/lib/signage/day-offset";
 
-// 20 photos sont déposées dans /public/instagram/ sous le nom insta-NN.webp.
-// Pour rafraîchir la sélection : ajouter des images, lancer `node
-// scripts/convert-insta.mjs`, commit. Le nombre est ajustable ici (le scène
-// teste les chargements et ignore silencieusement les fichiers absents).
-const TOTAL_PHOTOS = 20;
+// Les photos sont dans /public/instagram/ sous le nom insta-NN.webp.
+// Curation manuelle (audit visuel) — uniquement café / cave / boutique.
+// Pour ajouter de nouvelles photos : drop dans VISUEL, lancer convert-insta,
+// auditer le contenu, déposer la suite ici en incrémentant NN.
+const TOTAL_PHOTOS = 25;
 const ALL_PHOTOS = Array.from(
   { length: TOTAL_PHOTOS },
   (_, i) => `/instagram/insta-${String(i + 1).padStart(2, "0")}.webp`
@@ -59,26 +59,34 @@ const usePhotos = () => {
 };
 
 export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
+  void reelIndex; // gardé pour compatibilité signature, plus utilisé dans le calcul
   const photos = usePhotos();
 
-  // L'index est dérivé du temps réel + reelIndex + dayOffset. Comme ça :
-  // - chaque remontage de la scène (lazy mount) tombe sur une photo différente
-  //   parce que Date.now() a changé entre temps,
-  // - les 3 passages d'InstagramScene dans le cycle (reelIndex 0/1/2) attaquent
-  //   sur des photos décalées de 6,
-  // - tous les jours le set global est décalé par dayOffset() — donc même au
-  //   même moment lundi/mardi tu ne vois pas la même photo.
+  // À chaque réactivation de la scène, on note le tick courant comme point de
+  // départ. Pendant l'affichage (active), on avance d'une photo par SLIDE_MS.
+  // → Visit 1 montre [T..T+5], Visit 2 (~90s plus tard) montre [T+18..T+23],
+  //   Visit 3 montre [T+36..T+41]. Sur 25 photos = pas d'overlap intra-cycle,
+  //   et le startTick suivant est encore décalé → cycles suivants montrent
+  //   d'autres photos. Le dayOffset garantit la variation jour par jour.
   const [, forceRender] = useState(0);
+  const startTickRef = useRef<number>(Math.floor(Date.now() / SLIDE_MS));
+
   useEffect(() => {
+    if (active) {
+      startTickRef.current = Math.floor(Date.now() / SLIDE_MS);
+      forceRender((n) => n + 1);
+    }
     if (!active || photos.length <= 1) return;
     const id = setInterval(() => forceRender((n) => n + 1), SLIDE_MS);
     return () => clearInterval(id);
   }, [active, photos.length]);
 
+  const currentTick = Math.floor(Date.now() / SLIDE_MS);
+  const within = active ? Math.max(0, currentTick - startTickRef.current) : 0;
+
   const idx =
     photos.length > 0
-      ? (reelIndex * 6 + Math.floor(Date.now() / SLIDE_MS) + dayOffset()) %
-        photos.length
+      ? (startTickRef.current + within + dayOffset()) % photos.length
       : 0;
   const currentSrc = photos[idx] ?? ALL_PHOTOS[0];
 
