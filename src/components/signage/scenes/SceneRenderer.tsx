@@ -4,7 +4,6 @@ import { TextSlide } from "./TextSlide";
 import { WeatherScene } from "./WeatherScene";
 import { WineScene } from "./WineScene";
 import { WineMapScene } from "./WineMapScene";
-import { TeaScene } from "./TeaScene";
 import { MatchaScene } from "./MatchaScene";
 import { InstagramScene } from "./InstagramScene";
 import { AnecdoteScene } from "./AnecdoteScene";
@@ -47,8 +46,6 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <WineMapScene />;
     case "weather":
       return <WeatherScene weather={weather} />;
-    case "thé":
-      return <TeaScene />;
     case "épicerie":
       return (
         <TextSlide

@@ -32,7 +32,6 @@ export const SCENES: Scene[] = [
   { type: "review", duration: 20000 },
   { type: "produits", duration: 17000, productOffset: 3 },
   { type: "anecdote", duration: 15000, anecdoteIndex: ANECDOTE_ORDER[1] ?? 1 },
-  { type: "thé", duration: 13000 },
   { type: "matcha", duration: 15000 },
   { type: "weather", duration: 12000 },
   { type: "dole", duration: 20000 },

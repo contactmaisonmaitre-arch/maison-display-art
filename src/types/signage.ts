@@ -21,7 +21,6 @@ export type SceneType =
   | "vin"
   | "winemap"
   | "weather"
-  | "thé"
   | "matcha"
   | "épicerie"
   | "instagram"
