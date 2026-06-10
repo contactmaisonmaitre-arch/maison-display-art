@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-06-09T14:50:32.645Z",
+  "fetchedAt": "2026-06-10T08:12:27.971Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Koh-Lanta",
-        "subtitle": "Les reliques du destin",
-        "format": "Autre",
-        "duration": "1h30min",
+        "title": "Grey's Anatomy",
+        "subtitle": "Entre deux feux",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Koh-Lanta",
-        "subtitle": "Les reliques du destin",
-        "format": "Autre",
+        "start": "22h00",
+        "title": "Grey's Anatomy",
+        "subtitle": "Tout le monde sur le pont !",
+        "format": "Série TV",
         "duration": "1h",
         "rebroadcast": false
       },
@@ -33,11 +33,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "21h59",
-        "title": "Colonna, une tragédie corse",
-        "subtitle": "Le coupable",
-        "format": "Culture Infos",
-        "duration": "47min",
+        "start": "22h00",
+        "title": "L'or bleu",
+        "subtitle": "Episode 8",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
@@ -47,17 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "La randonnée, une affaire qui marche",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "title": "Si on lisait à voix haute",
+        "subtitle": "Saison 7 : la finale !",
+        "format": "Autre",
+        "duration": "2h",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Le jardinage, ça ratisse large !",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h05",
+        "title": "C ce soir",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -66,19 +67,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "21h00",
-        "title": "Tiktok, un réseau sous influence",
-        "subtitle": "Naissance d'un géant chinois",
-        "format": "Culture Infos",
-        "duration": "45min",
+        "title": "Parasite",
+        "format": "Cinéma",
+        "duration": "2h05min",
         "rebroadcast": true
       },
       "next": {
-        "start": "21h45",
-        "title": "Tiktok, un réseau sous influence",
-        "subtitle": "L'affrontement",
+        "start": "23h05",
+        "title": "\"Opération dragon\" : La révolution Bruce Lee",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -87,18 +86,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Mariés au premier regard",
-        "subtitle": "Que sont-ils devenus ?",
-        "format": "Culture Infos",
+        "title": "Top chef",
+        "subtitle": "Finale",
+        "format": "Autre",
         "duration": "1h",
         "rebroadcast": false
       },
       "next": {
         "start": "22h10",
-        "title": "Mariés au premier regard",
-        "subtitle": "Que sont-ils devenus ?",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "title": "Top chef",
+        "subtitle": "Finale",
+        "format": "Autre",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
