@@ -1,6 +1,6 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-06-09T13:48:01.192Z",
+  "fetchedAt": "2026-06-10T09:21:40.402Z",
   "facts": [
     {
       "emoji": "🎨",
@@ -18,69 +18,49 @@
       "body": "Lundi 01 juin à Dole · Grande Rue."
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents / accompagnement 0/3 ans",
-      "body": "Lundi 01 juin à Dole · Maison de la Parentalité."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Exposition de collages de Corinne Demuynck",
-      "body": "Lundi 01 juin à Dole · Au Detour."
-    },
-    {
-      "emoji": "🎶",
-      "title": "La Petite Histoire du Jazz - Jam Session",
-      "body": "Mardi 02 juin à Dole · Au Detour."
-    },
-    {
       "emoji": "📍",
       "title": "Montée au clocher",
       "body": "Jeudi 04 juin à Dole · Collégiale Notre-Dame."
     },
     {
+      "emoji": "🏺",
+      "title": "RDV Patrimoine : La nature en ville",
+      "body": "Dimanche 07 juin à Dole · Centre-Ville."
+    },
+    {
       "emoji": "📍",
-      "title": "Portes ouvertes du Conservatoire du Grand Dole",
-      "body": "Samedi 06 juin à Dole · Conservatoire."
+      "title": "Juste une illusion",
+      "body": "Mardi 09 juin à Saint-Aubin · Foyer rural."
     },
     {
       "emoji": "🎨",
-      "title": "Un dimanche au musée - Séance de yoga",
-      "body": "Dimanche 07 juin à Dole · Musée des Beaux-Arts."
-    },
-    {
-      "emoji": "📍",
-      "title": "Tourisme gastronomique et Culture : le Borobudur, de l’Indonésie au reste du Monde",
-      "body": "Mercredi 10 juin à Dole · Maison Natale de Louis Pasteur."
-    },
-    {
-      "emoji": "📍",
-      "title": "Soirée Boeuf",
-      "body": "Jeudi 11 juin à Dole · Au Detour."
-    },
-    {
-      "emoji": "📍",
-      "title": "RANDONNE LA MICHEL CHARLIER",
-      "body": "Samedi 13 juin à Dole · Gymnase Lachiche (Ledoux)."
+      "title": "EXPOSITION ATELIERS COMTOIS",
+      "body": "Mardi 09 juin à Dole · Chapelle des Carmélites."
     },
     {
       "emoji": "🎉",
-      "title": "Fête de Tavaux 2026",
-      "body": "Samedi 13 juin à Tavaux · Parc des Vernaux."
-    },
-    {
-      "emoji": "🎉",
-      "title": "Thé Dansant",
-      "body": "Mercredi 17 juin à Damparis · Salle des Fêtes de Damparis."
+      "title": "FESTIVAL D'EXPRESSION",
+      "body": "Mercredi 10 juin à Dole · Manège de Brack."
     },
     {
       "emoji": "📍",
-      "title": "Dole L'Essentiel",
-      "body": "Mercredi 17 juin à Dole · Dole Tourisme."
+      "title": "Chorale Croches en Choeur",
+      "body": "Samedi 20 juin à Dole · Auditorium Karl-Riepp."
     },
     {
-      "emoji": "🎶",
-      "title": "La Fête de la Musique Au Détour",
-      "body": "Dimanche 21 juin à Dole · Au Detour."
+      "emoji": "🎨",
+      "title": "Les RDV de l'Histoire de Dole - Dole, la reconquête d'un destin (1850-2000)",
+      "body": "Mardi 23 juin à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Ciné-Senior",
+      "body": "Vendredi 26 juin à Dole · 1 Rue du Général Béthouart."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 28 juin à Dole · Musée des Beaux-Arts."
     }
   ]
 }

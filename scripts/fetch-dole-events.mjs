@@ -41,6 +41,18 @@ const decode = (s) =>
     .replace(/\s+/g, " ")
     .trim();
 
+// Lieux concurrents qu'on ne veut PAS promouvoir sur l'écran Maison Maitre.
+// Toute occurrence (lieu OU titre) bloque l'événement. Ajouter ici les
+// nouveaux établissements concurrents dont on veut filtrer les events.
+const COMPETITOR_PATTERNS = [
+  /au\s*d[ée]tour/i, // Au Détour (bar à Dole)
+];
+
+const isCompetitor = (title, location) => {
+  const txt = `${title} ${location}`;
+  return COMPETITOR_PATTERNS.some((re) => re.test(txt));
+};
+
 // Devine un emoji par catégorie / lieu / titre — purement éditorial.
 const guessEmoji = (title, location) => {
   const t = (title + " " + location).toLowerCase();
@@ -106,8 +118,16 @@ const main = async () => {
   const html = await fetchHtml(URL_ROOT);
   console.log(`  → ${html.length} bytes`);
 
-  const allEvents = parseEvents(html);
-  console.log(`Found ${allEvents.length} unique events.`);
+  const rawEvents = parseEvents(html);
+  console.log(`Found ${rawEvents.length} unique events.`);
+
+  // Filtre concurrents — Au Détour & cie qu'on ne veut pas mettre en avant.
+  const blocked = rawEvents.filter((e) => isCompetitor(e.title, e.location));
+  if (blocked.length > 0) {
+    console.log(`  Filtered ${blocked.length} competitor events :`);
+    for (const b of blocked) console.log(`    × ${b.title} — ${b.location}`);
+  }
+  const allEvents = rawEvents.filter((e) => !isCompetitor(e.title, e.location));
 
   // On garde uniquement les "À la une" + on cap à 16 pour ne pas noyer
   // la rotation DoleScene.
