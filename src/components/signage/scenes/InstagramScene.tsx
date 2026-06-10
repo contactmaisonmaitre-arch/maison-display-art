@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { dayOffset } from "@/lib/signage/day-offset";
 
 // 20 photos sont déposées dans /public/instagram/ sous le nom insta-NN.webp.
@@ -61,29 +61,25 @@ const usePhotos = () => {
 export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
   const photos = usePhotos();
 
-  // Démarrage : décalé selon (reelIndex × 3 + dayOffset), pour qu'à chaque
-  // passage de la scène on attaque sur des photos différentes, et que le set
-  // change globalement chaque jour.
-  const startIdx = useMemo(
-    () =>
-      photos.length > 0
-        ? (reelIndex * 3 + dayOffset()) % photos.length
-        : 0,
-    [photos.length, reelIndex]
-  );
-
-  const [idx, setIdx] = useState(0);
+  // L'index est dérivé du temps réel + reelIndex + dayOffset. Comme ça :
+  // - chaque remontage de la scène (lazy mount) tombe sur une photo différente
+  //   parce que Date.now() a changé entre temps,
+  // - les 3 passages d'InstagramScene dans le cycle (reelIndex 0/1/2) attaquent
+  //   sur des photos décalées de 6,
+  // - tous les jours le set global est décalé par dayOffset() — donc même au
+  //   même moment lundi/mardi tu ne vois pas la même photo.
+  const [, forceRender] = useState(0);
   useEffect(() => {
-    if (photos.length <= 1) return;
-    setIdx(startIdx);
-    // Avance toutes les SLIDE_MS quand la scène est active
-    if (!active) return;
-    const id = setInterval(() => {
-      setIdx((i) => (i + 1) % photos.length);
-    }, SLIDE_MS);
+    if (!active || photos.length <= 1) return;
+    const id = setInterval(() => forceRender((n) => n + 1), SLIDE_MS);
     return () => clearInterval(id);
-  }, [photos.length, startIdx, active]);
+  }, [active, photos.length]);
 
+  const idx =
+    photos.length > 0
+      ? (reelIndex * 6 + Math.floor(Date.now() / SLIDE_MS) + dayOffset()) %
+        photos.length
+      : 0;
   const currentSrc = photos[idx] ?? ALL_PHOTOS[0];
 
   return (
