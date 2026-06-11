@@ -1,24 +1,23 @@
 {
-  "fetchedAt": "2026-06-10T08:12:27.971Z",
+  "fetchedAt": "2026-06-11T08:49:46.671Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Grey's Anatomy",
-        "subtitle": "Entre deux feux",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": false
+        "title": "Dirty Dancing",
+        "format": "Cinéma",
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Grey's Anatomy",
-        "subtitle": "Tout le monde sur le pont !",
+        "start": "23h00",
+        "title": "Esprits criminels",
+        "subtitle": "Mauvaises herbes",
         "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": false
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -33,11 +32,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "L'or bleu",
-        "subtitle": "Episode 8",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "23h00",
+        "title": "Complément d'enquête",
+        "subtitle": "Bruno Retailleau, en croisade pour l'Elysée",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
@@ -47,18 +46,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Si on lisait à voix haute",
-        "subtitle": "Saison 7 : la finale !",
-        "format": "Autre",
-        "duration": "2h",
+        "title": "Science grand format",
+        "format": "Culture Infos",
+        "duration": "2min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "C ce soir",
-        "format": "Autre",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "start": "22h00",
+        "title": "Oplontis et la malédiction du Vésuve",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -66,18 +64,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Parasite",
-        "format": "Cinéma",
-        "duration": "2h05min",
+        "start": "21h50",
+        "title": "Happy Valley",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h05",
-        "title": "\"Opération dragon\" : La révolution Bruce Lee",
-        "format": "Culture Infos",
+        "start": "22h40",
+        "title": "Happy Valley",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -85,19 +85,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Top chef",
-        "subtitle": "Finale",
-        "format": "Autre",
-        "duration": "1h",
+        "start": "23h10",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Top chef",
-        "subtitle": "Finale",
-        "format": "Autre",
-        "duration": "1h15min",
+        "start": "00h05",
+        "title": "Les secrets des chefs",
+        "subtitle": "Chef cuisinier : une étoile pour une nouvelle vie",
+        "format": "Culture Infos",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "error": null
