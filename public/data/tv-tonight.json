@@ -1,23 +1,22 @@
 {
-  "fetchedAt": "2026-06-11T08:49:46.671Z",
+  "fetchedAt": "2026-06-12T08:37:16.486Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Dirty Dancing",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "title": "Mask Singer",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Esprits criminels",
-        "subtitle": "Mauvaises herbes",
-        "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "22h15",
+        "title": "Mask Singer",
+        "format": "Autre",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -32,11 +31,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Complément d'enquête",
-        "subtitle": "Bruno Retailleau, en croisade pour l'Elysée",
-        "format": "Culture Infos",
-        "duration": "1h15min",
+        "start": "22h00",
+        "title": "Haute saison",
+        "subtitle": "Cesta punta",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -45,18 +44,19 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "Science grand format",
+        "start": "21h00",
+        "title": "C'est bon à savoir",
+        "subtitle": "Les modes de cuisson impactent les aliments. Comment ?",
         "format": "Culture Infos",
-        "duration": "2min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Oplontis et la malédiction du Vésuve",
+        "start": "23h05",
+        "title": "Le village de Madeleine",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": true
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -64,19 +64,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "Happy Valley",
-        "subtitle": "Episode 5",
+        "start": "21h40",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Du sang sur la Baltique",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h40",
-        "title": "Happy Valley",
-        "subtitle": "Episode 6",
+        "start": "22h25",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Du sang sur la Baltique",
         "format": "Série TV",
-        "duration": "55min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -92,12 +92,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "00h05",
-        "title": "Les secrets des chefs",
-        "subtitle": "Chef cuisinier : une étoile pour une nouvelle vie",
-        "format": "Culture Infos",
+        "start": "00h20",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Antibes",
+        "format": "Autre",
         "duration": "1h05min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     }
