@@ -1,21 +1,23 @@
 {
-  "fetchedAt": "2026-06-12T08:37:16.486Z",
+  "fetchedAt": "2026-06-13T07:52:27.083Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Mask Singer",
+        "title": "Le grand concours",
+        "subtitle": "Spéciale années 2000",
         "format": "Autre",
-        "duration": "1h05min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h15",
-        "title": "Mask Singer",
+        "start": "22h20",
+        "title": "Le grand concours",
+        "subtitle": "Spéciale années 2000",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h25min",
         "rebroadcast": false
       },
       "error": null
@@ -24,18 +26,17 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "21h05",
+        "title": "Réflexe !",
+        "format": "Culture Infos",
+        "duration": "4min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Haute saison",
-        "subtitle": "Cesta punta",
-        "format": "Série TV",
-        "duration": "55min",
+        "start": "23h25",
+        "title": "Quelle époque !",
+        "format": "Autre",
+        "duration": "2h15min",
         "rebroadcast": false
       },
       "error": null
@@ -46,17 +47,18 @@
       "hero": {
         "start": "21h00",
         "title": "C'est bon à savoir",
-        "subtitle": "Les modes de cuisson impactent les aliments. Comment ?",
+        "subtitle": "Les aliments ultra-transformés modifient notre goût. Comment ?",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Le village de Madeleine",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Bruxelles, le temps d'un week-end",
         "format": "Culture Infos",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -64,20 +66,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h40",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Du sang sur la Baltique",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "22h30",
+        "title": "Toutankhamon, le trésor redécouvert",
+        "format": "Culture Infos",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Du sang sur la Baltique",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "00h05",
+        "title": "The Cure : Anniversary 1978-2018 - Live in Hyde Park London",
+        "format": "Culture Infos",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,19 +85,19 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h10",
+        "start": "23h05",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "1h10min",
+        "duration": "30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h20",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Antibes",
-        "format": "Autre",
-        "duration": "1h05min",
-        "rebroadcast": true
+        "start": "23h50",
+        "title": "Brésil / Maroc",
+        "subtitle": "Football. Coupe du monde. 1re journée. Groupe C.",
+        "format": "Sport",
+        "duration": "2h15min",
+        "rebroadcast": false
       },
       "error": null
     }
