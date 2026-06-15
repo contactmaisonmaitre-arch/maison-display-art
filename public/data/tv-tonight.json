@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-06-14T08:18:24.326Z",
+  "fetchedAt": "2026-06-15T10:28:22.650Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Titanic",
+        "title": "Camping",
         "format": "Cinéma",
-        "duration": "3h30min",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "01h00",
-        "title": "10 sur 10, combien tu te mets ?",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "23h05",
+        "title": "New York Unité Spéciale",
+        "subtitle": "L'autre univers",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,19 +25,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h06",
-        "title": "Réflexe !",
-        "format": "Culture Infos",
-        "duration": "4min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Beau geste",
-        "subtitle": "Best of",
-        "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": false
+        "start": "22h10",
+        "title": "Meurtres au paradis",
+        "subtitle": "Plage à vendre",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,17 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "C'est bon à savoir",
-        "subtitle": "Le changement climatique impacte les cultures. Comment ?",
+        "title": "Le monde de Jamy",
+        "subtitle": "Des feux extrêmes en France : sommes-nous prêts ?",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Manouchian et ceux de l'Affiche rouge",
+        "start": "21h55",
+        "title": "Le monde de Jamy",
+        "subtitle": "Méga-orages, la nouvelle menace",
         "format": "Culture Infos",
-        "duration": "1h40min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -65,16 +67,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "21h00",
-        "title": "Les nerfs à vif",
+        "title": "Miss Daisy et son chauffeur",
         "format": "Cinéma",
-        "duration": "2h",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Noblesse oblige",
+        "start": "22h35",
+        "title": "Il était une fois... la révolution",
         "format": "Cinéma",
-        "duration": "1h45min",
+        "duration": "2h30min",
         "rebroadcast": true
       },
       "error": null
@@ -83,16 +85,16 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
+        "start": "23h05",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "25min",
+        "duration": "30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Pays-Bas / Japon",
-        "subtitle": "Football. Coupe du monde. 1re journée. Groupe F.",
+        "start": "23h50",
+        "title": "Arabie saoudite / Uruguay",
+        "subtitle": "Football. Coupe du monde. 1re journée. Groupe H.",
         "format": "Sport",
         "duration": "2h15min",
         "rebroadcast": false
