@@ -1,22 +1,24 @@
 {
-  "fetchedAt": "2026-06-16T09:30:51.011Z",
+  "fetchedAt": "2026-06-17T09:05:57.612Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Monk, le retour",
-        "format": "Téléfilm",
-        "duration": "45min",
-        "rebroadcast": true
+        "title": "Good American Family",
+        "subtitle": "En réponse à nos prières",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Monk, le retour",
-        "format": "Téléfilm",
-        "duration": "1h10min",
-        "rebroadcast": true
+        "start": "22h00",
+        "title": "Good American Family",
+        "subtitle": "Surmonte ton appréhension",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -25,17 +27,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h10",
-        "title": "Le duplex",
-        "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "title": "Danse ta vie",
+        "format": "Téléfilm",
+        "duration": "1h35min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Lapin",
+        "start": "22h45",
+        "title": "Justice en France",
+        "subtitle": "Audience correctionnelle d'appel à la cour d'appel de Poitiers - La justice face à la schizophrénie",
         "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "duration": "1h",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -44,17 +47,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Déco pour tous, l'envers du décor",
+        "title": "La grande librairie",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": true
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "La seconde main... première de la classe ?",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "C ce soir",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -62,20 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Monaco, la grande histoire d'un micro-Etat",
-        "subtitle": "Princes et croupiers",
-        "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "22h20",
+        "title": "Sidonie au Japon",
+        "format": "Cinéma",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h45",
-        "title": "Monaco, la grande histoire d'un micro-Etat",
-        "subtitle": "Dandys et hommes de paille",
+        "start": "23h50",
+        "title": "Les derniers pêcheurs de Hartlepool : Un film post-Brexit et ses conséquences",
         "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": true
+        "duration": "1h20min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -83,16 +84,16 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h05",
+        "start": "21h05",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
         "duration": "30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h50",
-        "title": "Irak / Norvège",
-        "subtitle": "Football. Coupe du monde. 1re journée. Groupe I.",
+        "start": "21h50",
+        "title": "Angleterre / Croatie",
+        "subtitle": "Football. Coupe du monde. 1re journée. Groupe L.",
         "format": "Sport",
         "duration": "2h15min",
         "rebroadcast": false
