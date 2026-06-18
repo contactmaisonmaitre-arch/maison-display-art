@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-06-17T09:05:57.612Z",
+  "fetchedAt": "2026-06-18T08:50:29.924Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Good American Family",
-        "subtitle": "En réponse à nos prières",
+        "title": "Zodiaque",
+        "subtitle": "Episode 1",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Good American Family",
-        "subtitle": "Surmonte ton appréhension",
+        "start": "22h05",
+        "title": "Zodiaque",
+        "subtitle": "Episode 2",
         "format": "Série TV",
-        "duration": "55min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
@@ -26,19 +26,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h10",
-        "title": "Danse ta vie",
-        "format": "Téléfilm",
-        "duration": "1h35min",
+        "start": "22h45",
+        "title": "Complément d'enquête",
+        "subtitle": "François Hollande : moi, encore président ?",
+        "format": "Culture Infos",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Justice en France",
-        "subtitle": "Audience correctionnelle d'appel à la cour d'appel de Poitiers - La justice face à la schizophrénie",
+        "start": "00h35",
+        "title": "Au bout de l'enquête, la fin du crime parfait ?",
+        "subtitle": "Affaire Cyril Koskinas : Fantasmes mortels",
         "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": false
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -46,14 +47,14 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "La grande librairie",
+        "start": "21h04",
+        "title": "Science grand format",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
+        "start": "22h40",
         "title": "C ce soir",
         "format": "Autre",
         "duration": "1h05min",
@@ -65,18 +66,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h20",
-        "title": "Sidonie au Japon",
-        "format": "Cinéma",
-        "duration": "1h30min",
-        "rebroadcast": false
+        "start": "21h50",
+        "title": "Happy Valley",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h50",
-        "title": "Les derniers pêcheurs de Hartlepool : Un film post-Brexit et ses conséquences",
-        "format": "Culture Infos",
-        "duration": "1h20min",
-        "rebroadcast": false
+        "start": "22h40",
+        "title": "Happy Valley",
+        "subtitle": "Episode 3",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -84,18 +87,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h05",
-        "title": "Coupe du monde de la FIFA - le mag",
-        "format": "Sport",
-        "duration": "30min",
-        "rebroadcast": false
+        "start": "23h05",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Astier",
+        "format": "Autre",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Angleterre / Croatie",
-        "subtitle": "Football. Coupe du monde. 1re journée. Groupe L.",
+        "start": "00h05",
+        "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "2h15min",
+        "duration": "10min",
         "rebroadcast": false
       },
       "error": null
