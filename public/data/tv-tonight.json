@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-06-19T09:08:15.463Z",
+  "fetchedAt": "2026-06-20T07:54:03.396Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Mask Singer",
+        "title": "Le grand concours",
         "format": "Autre",
-        "duration": "1h20min",
-        "rebroadcast": false
+        "duration": "1h05min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Mask Singer",
+        "start": "22h15",
+        "title": "Le grand concours",
         "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "duration": "1h05min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,18 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
+        "start": "22h35",
+        "title": "Les meilleurs moments de la Fête de la musique",
         "format": "Autre",
-        "duration": "10min",
+        "duration": "2h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Taratata 100% live",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "00h10",
+        "title": "Taratata l'histoire",
+        "format": "Culture Infos",
+        "duration": "2h25min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,17 +45,18 @@
       "hero": {
         "start": "21h00",
         "title": "C'est bon à savoir",
-        "subtitle": "Manger sur le pouce. Quels sont les bons choix ?",
+        "subtitle": "Les fruits et légumes respirent comme nous ?",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "La Caverne du Pont-Neuf",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Vietnam, le voyage d'une vie",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -64,17 +65,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "21h40",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Les nuits de la Saint-Jean",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "Serengeti, la grande cavalcade des animaux",
+        "subtitle": "Un paradis en feu",
+        "format": "Culture Infos",
+        "duration": "40min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Les nuits de la Saint-Jean",
-        "format": "Série TV",
+        "start": "22h20",
+        "title": "Serengeti, la grande cavalcade des animaux",
+        "subtitle": "Vivre à tout prix",
+        "format": "Culture Infos",
         "duration": "45min",
         "rebroadcast": true
       },
@@ -84,16 +85,16 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h05",
+        "start": "21h10",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "30min",
+        "duration": "25min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h50",
-        "title": "Ecosse / Maroc",
-        "subtitle": "Football. Coupe du monde. 2e journée. Groupe C.",
+        "start": "21h50",
+        "title": "Allemagne / Côte d'Ivoire",
+        "subtitle": "Football. Coupe du monde. 2e journée. Groupe E.",
         "format": "Sport",
         "duration": "2h15min",
         "rebroadcast": false
