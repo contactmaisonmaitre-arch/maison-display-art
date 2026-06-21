@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-06-20T07:54:03.396Z",
+  "fetchedAt": "2026-06-21T08:37:55.826Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le grand concours",
-        "format": "Autre",
-        "duration": "1h05min",
+        "title": "Le nouveau stagiaire",
+        "format": "Cinéma",
+        "duration": "2h10min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h15",
-        "title": "Le grand concours",
-        "format": "Autre",
-        "duration": "1h05min",
+        "start": "23h20",
+        "title": "Titanic",
+        "format": "Cinéma",
+        "duration": "3h30min",
         "rebroadcast": true
       },
       "error": null
@@ -24,18 +24,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "22h35",
-        "title": "Les meilleurs moments de la Fête de la musique",
-        "format": "Autre",
-        "duration": "2h05min",
-        "rebroadcast": false
+        "start": "21h03",
+        "title": "Des gestes pour demain",
+        "subtitle": "Choisir des produits éco-conçus",
+        "format": "Culture Infos",
+        "duration": "2min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h10",
-        "title": "Taratata l'histoire",
+        "start": "22h50",
+        "title": "Beau geste",
+        "subtitle": "Best of 3",
         "format": "Culture Infos",
-        "duration": "2h25min",
-        "rebroadcast": true
+        "duration": "40min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -43,19 +45,18 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h05",
         "title": "C'est bon à savoir",
-        "subtitle": "Les fruits et légumes respirent comme nous ?",
+        "subtitle": "La vitamine C, info ou intox ?",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Echappées belles",
-        "subtitle": "Vietnam, le voyage d'une vie",
+        "start": "22h50",
+        "title": "Qu'est-il arrivé à Rosemary Kennedy ?",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -64,17 +65,16 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h40",
-        "title": "Serengeti, la grande cavalcade des animaux",
-        "subtitle": "Un paradis en feu",
-        "format": "Culture Infos",
-        "duration": "40min",
+        "start": "23h40",
+        "title": "Benedetta",
+        "format": "Cinéma",
+        "duration": "2h05min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h20",
+        "start": "00h35",
         "title": "Serengeti, la grande cavalcade des animaux",
-        "subtitle": "Vivre à tout prix",
+        "subtitle": "Le temps de la résurrection",
         "format": "Culture Infos",
         "duration": "45min",
         "rebroadcast": true
@@ -85,18 +85,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Coupe du monde de la FIFA - le mag",
-        "format": "Sport",
-        "duration": "25min",
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Sexe et amour en Espagne",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Allemagne / Côte d'Ivoire",
-        "subtitle": "Football. Coupe du monde. 2e journée. Groupe E.",
+        "start": "00h05",
+        "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "2h15min",
+        "duration": "15min",
         "rebroadcast": false
       },
       "error": null
