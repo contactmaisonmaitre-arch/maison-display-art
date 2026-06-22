@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-06-21T08:37:55.826Z",
+  "fetchedAt": "2026-06-22T09:50:58.015Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le nouveau stagiaire",
+        "title": "Camping 2",
         "format": "Cinéma",
-        "duration": "2h10min",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "Titanic",
+        "start": "23h05",
+        "title": "Camping",
         "format": "Cinéma",
-        "duration": "3h30min",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "error": null
@@ -24,20 +24,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h03",
-        "title": "Des gestes pour demain",
-        "subtitle": "Choisir des produits éco-conçus",
-        "format": "Culture Infos",
-        "duration": "2min",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Beau geste",
-        "subtitle": "Best of 3",
-        "format": "Culture Infos",
-        "duration": "40min",
-        "rebroadcast": false
+        "start": "22h10",
+        "title": "Meurtres au paradis",
+        "subtitle": "Désignée coupable",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -46,17 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "C'est bon à savoir",
-        "subtitle": "La vitamine C, info ou intox ?",
+        "title": "Sur le front",
+        "subtitle": "Coraux : l'incroyable voyage",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Qu'est-il arrivé à Rosemary Kennedy ?",
+        "start": "21h55",
+        "title": "Sur le front",
+        "subtitle": "Faut-il avoir peur de nos glaciers ?",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h40",
-        "title": "Benedetta",
+        "start": "22h20",
+        "title": "Il était une fois en Amérique",
         "format": "Cinéma",
-        "duration": "2h05min",
+        "duration": "3h40min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h35",
-        "title": "Serengeti, la grande cavalcade des animaux",
-        "subtitle": "Le temps de la résurrection",
-        "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "01h45",
+        "title": "They Shot the Piano Player",
+        "format": "Cinéma",
+        "duration": "1h35min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,16 +84,15 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h05",
-        "title": "Enquête exclusive",
-        "subtitle": "Sexe et amour en Espagne",
-        "format": "Culture Infos",
-        "duration": "1h15min",
+        "start": "21h10",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "1h25min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h05",
-        "title": "Coupe du monde de la FIFA - le mag",
+        "start": "22h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
         "rebroadcast": false
