@@ -1,21 +1,16 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-06-15T11:31:32.075Z",
+  "fetchedAt": "2026-06-22T11:16:39.900Z",
   "facts": [
-    {
-      "emoji": "📍",
-      "title": "Enquête Game",
-      "body": "Lundi 01 juin à Dole · Grande Rue."
-    },
-    {
-      "emoji": "📚",
-      "title": "La rive gauche d'hier à aujourd'hui",
-      "body": "Lundi 01 juin à Dole · Médiathèque de l'Hôtel-Dieu."
-    },
     {
       "emoji": "🎨",
       "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
       "body": "Lundi 01 juin à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "🎨",
+      "title": "IA ou quand les Beaux Arts se confrontent à l'IA",
+      "body": "Lundi 01 juin à Dole · Ecole des Beaux-arts."
     },
     {
       "emoji": "👨‍👩‍👧",
@@ -23,14 +18,24 @@
       "body": "Lundi 01 juin à Dole · Maison de la Parentalité."
     },
     {
+      "emoji": "📚",
+      "title": "La rive gauche d'hier à aujourd'hui",
+      "body": "Lundi 01 juin à Dole · Médiathèque de l'Hôtel-Dieu."
+    },
+    {
+      "emoji": "📍",
+      "title": "Enquête Game",
+      "body": "Lundi 01 juin à Dole · Grande Rue."
+    },
+    {
       "emoji": "📍",
       "title": "Montée au clocher",
       "body": "Jeudi 04 juin à Dole · Collégiale Notre-Dame."
     },
     {
-      "emoji": "🥖",
-      "title": "Marché de potiers \" Les potiers cassent la baraque !\"",
-      "body": "Samedi 06 juin à Autres (Sortie Natura 2000) · Forêt de chaux."
+      "emoji": "📍",
+      "title": "La Gendarmerie vous ouvre ses portes",
+      "body": "Samedi 06 juin à Dole ·."
     },
     {
       "emoji": "📍",
@@ -38,49 +43,44 @@
       "body": "Samedi 06 juin à Dole · Collégiale Notre-Dame."
     },
     {
-      "emoji": "🎶",
-      "title": "Le Choeur des Roches en Concert",
-      "body": "Dimanche 07 juin à Dole · Collégiale Notre-Dame."
+      "emoji": "🏺",
+      "title": "RDV Patrimoine : La nature en ville",
+      "body": "Dimanche 07 juin à Dole · Centre-Ville."
     },
     {
-      "emoji": "📍",
-      "title": "Journée Nationale d’hommage aux morts pour la France en Indochine",
-      "body": "Lundi 08 juin à Dole · Cimetière de Landon."
-    },
-    {
-      "emoji": "🎨",
-      "title": "EXPOSITION ATELIERS COMTOIS",
-      "body": "Mardi 09 juin à Dole · Chapelle des Carmélites."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 14 juin à Dole · Musée des Beaux-Arts."
-    },
-    {
-      "emoji": "📍",
-      "title": "Lectures estivales",
-      "body": "Vendredi 19 juin à Dole · Jardin Philippe."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Des minions et des monstres",
-      "body": "Mercredi 24 juin à Dole · 1 Rue du Général Béthouart."
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Ferme pédagogique en famille",
-      "body": "Vendredi 26 juin à Dole · Maison de la Parentalité."
+      "emoji": "🎉",
+      "title": "Loto de l'Apel (association des parents d'élèves Ecole & Collège privé Laurent Monnier St Aubin)",
+      "body": "Vendredi 12 juin à Saint-Aubin · Salle des Fêtes de Saint-Aubin."
     },
     {
       "emoji": "🎶",
-      "title": "Fête de la musique 2026 à Tavaux",
-      "body": "Samedi 27 juin à Tavaux · Place Saint-Gervais."
+      "title": "Gala de danse \"Echappées Belles\"",
+      "body": "Vendredi 12 juin à Dole · Théâtre municipal."
     },
     {
-      "emoji": "🎨",
-      "title": "Marathon - Retour vers le futur",
-      "body": "Dimanche 28 juin à Dole · 1 Rue du Général Béthouart."
+      "emoji": "📍",
+      "title": "Le Bus Santé des Femmes",
+      "body": "Mardi 16 juin à Dole · Mesnils-Pasteur."
+    },
+    {
+      "emoji": "📍",
+      "title": "Baby Dating",
+      "body": "Mercredi 17 juin à Tavaux · Relais Petite Enfance (RPE)."
+    },
+    {
+      "emoji": "📍",
+      "title": "Chorale Croches en Choeur",
+      "body": "Vendredi 19 juin à Dole · Auditorium Karl-Riepp."
+    },
+    {
+      "emoji": "📍",
+      "title": "Chorale Croches en Choeur",
+      "body": "Samedi 20 juin à Dole · Auditorium Karl-Riepp."
+    },
+    {
+      "emoji": "🥖",
+      "title": "Marché de producteurs",
+      "body": "Dimanche 21 juin à Damparis ·."
     }
   ]
 }
