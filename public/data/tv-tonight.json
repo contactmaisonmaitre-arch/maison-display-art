@@ -1,22 +1,24 @@
 {
-  "fetchedAt": "2026-06-22T09:50:58.015Z",
+  "fetchedAt": "2026-06-23T07:54:03.759Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping 2",
-        "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "title": "Koh-Lanta",
+        "subtitle": "Les reliques du destin",
+        "format": "Autre",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Camping",
-        "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "start": "22h40",
+        "title": "Koh-Lanta",
+        "subtitle": "Les reliques du destin",
+        "format": "Autre",
+        "duration": "45min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -24,19 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "22h15",
+        "title": "Marc Bloch, au nom de la France",
+        "format": "Culture Infos",
+        "duration": "1h40min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Meurtres au paradis",
-        "subtitle": "Désignée coupable",
-        "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "23h55",
+        "title": "1939-1940 : une étrange défaite",
+        "format": "Culture Infos",
+        "duration": "1h35min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -45,19 +46,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Sur le front",
-        "subtitle": "Coraux : l'incroyable voyage",
+        "title": "Si j'étais sage-femme",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Sur le front",
-        "subtitle": "Faut-il avoir peur de nos glaciers ?",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "C ce soir",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -65,17 +64,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h20",
-        "title": "Il était une fois en Amérique",
-        "format": "Cinéma",
-        "duration": "3h40min",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "Amérique, qui es-tu ? Une histoire de la mentalité des Etats-Unis",
+        "subtitle": "Episode 1",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "01h45",
-        "title": "They Shot the Piano Player",
-        "format": "Cinéma",
-        "duration": "1h35min",
+        "start": "21h50",
+        "title": "Amérique, qui es-tu ? Une histoire de la mentalité des Etats-Unis",
+        "subtitle": "Episode 2",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -87,14 +88,15 @@
         "start": "21h10",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "1h25min",
+        "duration": "25min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "start": "21h50",
+        "title": "Angleterre / Ghana",
+        "subtitle": "Football. Coupe du monde. 2e journée. Groupe L.",
         "format": "Sport",
-        "duration": "15min",
+        "duration": "2h15min",
         "rebroadcast": false
       },
       "error": null
