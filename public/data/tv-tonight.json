@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-06-23T07:54:03.759Z",
+  "fetchedAt": "2026-06-24T07:49:03.222Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Koh-Lanta",
-        "subtitle": "Les reliques du destin",
-        "format": "Autre",
-        "duration": "1h30min",
+        "title": "Good American Family",
+        "subtitle": "Ça fait trop mal",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Koh-Lanta",
-        "subtitle": "Les reliques du destin",
-        "format": "Autre",
-        "duration": "45min",
+        "start": "22h00",
+        "title": "Good American Family",
+        "subtitle": "Pas aujourd'hui, Satan",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -26,17 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "22h15",
-        "title": "Marc Bloch, au nom de la France",
-        "format": "Culture Infos",
-        "duration": "1h40min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h55",
-        "title": "1939-1940 : une étrange défaite",
+        "start": "22h45",
+        "title": "Justice en France",
+        "subtitle": "Audience correctionnelle d'appel à la cour d'appel de Rennes (1)",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -46,13 +47,13 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Si j'étais sage-femme",
-        "format": "Culture Infos",
-        "duration": "1h30min",
+        "title": "Mémoire, la grande expérience",
+        "format": "Autre",
+        "duration": "1h50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
+        "start": "22h55",
         "title": "C ce soir",
         "format": "Autre",
         "duration": "1h05min",
@@ -65,16 +66,14 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "21h00",
-        "title": "Amérique, qui es-tu ? Une histoire de la mentalité des Etats-Unis",
-        "subtitle": "Episode 1",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "title": "Rosalie",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Amérique, qui es-tu ? Une histoire de la mentalité des Etats-Unis",
-        "subtitle": "Episode 2",
+        "start": "22h50",
+        "title": "Le cheveu : Tout un art",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": false
@@ -85,16 +84,16 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
+        "start": "23h05",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "25min",
+        "duration": "30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Angleterre / Ghana",
-        "subtitle": "Football. Coupe du monde. 2e journée. Groupe L.",
+        "start": "23h50",
+        "title": "Ecosse / Brésil",
+        "subtitle": "Football. Coupe du monde. 3e journée. Groupe C.",
         "format": "Sport",
         "duration": "2h15min",
         "rebroadcast": false
