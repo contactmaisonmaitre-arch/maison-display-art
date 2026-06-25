@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-06-24T07:49:03.222Z",
+  "fetchedAt": "2026-06-25T07:50:25.553Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Good American Family",
-        "subtitle": "Ça fait trop mal",
+        "title": "Zodiaque",
+        "subtitle": "Episode 3",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Good American Family",
-        "subtitle": "Pas aujourd'hui, Satan",
+        "start": "22h15",
+        "title": "New York Unité Spéciale",
+        "subtitle": "La vengeance est un plat...",
         "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": false
+        "duration": "40min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -33,11 +33,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Justice en France",
-        "subtitle": "Audience correctionnelle d'appel à la cour d'appel de Rennes (1)",
+        "start": "23h00",
+        "title": "Cash investigation : débat",
+        "subtitle": "Alimentation",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
@@ -47,16 +47,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Mémoire, la grande expérience",
-        "format": "Autre",
-        "duration": "1h50min",
+        "title": "Science grand format",
+        "format": "Culture Infos",
+        "duration": "2min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "C ce soir",
-        "format": "Autre",
-        "duration": "1h05min",
+        "start": "22h35",
+        "title": "Expression directe",
+        "subtitle": "CFTC",
+        "format": "Culture Infos",
+        "duration": "5min",
         "rebroadcast": false
       },
       "error": null
@@ -65,18 +66,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Rosalie",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": false
+        "start": "21h50",
+        "title": "Happy Valley",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h50",
-        "title": "Le cheveu : Tout un art",
-        "format": "Culture Infos",
+        "start": "22h40",
+        "title": "Happy Valley",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -84,20 +87,13 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h05",
-        "title": "Coupe du monde de la FIFA - le mag",
+        "start": "21h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
-        "duration": "30min",
+        "duration": "15min",
         "rebroadcast": false
       },
-      "next": {
-        "start": "23h50",
-        "title": "Ecosse / Brésil",
-        "subtitle": "Football. Coupe du monde. 3e journée. Groupe C.",
-        "format": "Sport",
-        "duration": "2h15min",
-        "rebroadcast": false
-      },
+      "next": null,
       "error": null
     }
   ]
