@@ -1,24 +1,22 @@
 {
-  "fetchedAt": "2026-06-25T07:50:25.553Z",
+  "fetchedAt": "2026-06-26T07:57:43.780Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Zodiaque",
-        "subtitle": "Episode 3",
-        "format": "Série TV",
-        "duration": "1h05min",
+        "title": "Le grand bêtisier",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h15",
-        "title": "New York Unité Spéciale",
-        "subtitle": "La vengeance est un plat...",
-        "format": "Série TV",
-        "duration": "40min",
-        "rebroadcast": true
+        "start": "22h20",
+        "title": "Le grand bêtisier",
+        "format": "Autre",
+        "duration": "1h20min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -26,19 +24,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
-        "rebroadcast": false
+        "start": "22h30",
+        "title": "Capitaine Marleau",
+        "subtitle": "En trompe-l'oeil",
+        "format": "Série TV",
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Cash investigation : débat",
-        "subtitle": "Alimentation",
+        "start": "00h40",
+        "title": "Au bout de l'enquête, la fin du crime parfait ?",
+        "subtitle": "Best of : Quand les victimes échappent de peu à la mort (Moulin + Autrand)",
         "format": "Culture Infos",
         "duration": "50min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -46,19 +45,19 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "Science grand format",
-        "format": "Culture Infos",
-        "duration": "2min",
-        "rebroadcast": false
-      },
-      "next": {
-        "start": "22h35",
-        "title": "Expression directe",
-        "subtitle": "CFTC",
+        "start": "21h00",
+        "title": "C'est bon à savoir",
+        "subtitle": "Comment s'y retrouver avec les labels avant d'acheter ?",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
+      },
+      "next": {
+        "start": "22h30",
+        "title": "Quand Marilyn chantait pour les GI's",
+        "format": "Culture Infos",
+        "duration": "1h05min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -66,19 +65,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "Happy Valley",
-        "subtitle": "Episode 5",
+        "start": "21h40",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Les secrets de l'île",
         "format": "Série TV",
         "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h40",
-        "title": "Happy Valley",
-        "subtitle": "Episode 6",
+        "start": "22h30",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Les secrets de l'île",
         "format": "Série TV",
-        "duration": "55min",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -87,13 +86,19 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h35",
-        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "start": "23h05",
+        "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "15min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
-      "next": null,
+      "next": {
+        "start": "00h05",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "30min",
+        "rebroadcast": false
+      },
       "error": null
     }
   ]
