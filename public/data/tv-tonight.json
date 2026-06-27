@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-06-26T07:57:43.780Z",
+  "fetchedAt": "2026-06-27T06:57:12.277Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le grand bêtisier",
+        "title": "Mask Singer",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h20min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "Le grand bêtisier",
+        "start": "22h30",
+        "title": "Mask Singer",
         "format": "Autre",
-        "duration": "1h20min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -24,19 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "22h30",
-        "title": "Capitaine Marleau",
-        "subtitle": "En trompe-l'oeil",
-        "format": "Série TV",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "23h25",
+        "title": "Quelle époque !",
+        "format": "Autre",
+        "duration": "2h15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "00h40",
-        "title": "Au bout de l'enquête, la fin du crime parfait ?",
-        "subtitle": "Best of : Quand les victimes échappent de peu à la mort (Moulin + Autrand)",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "start": "00h20",
+        "title": "Capitaine Marleau",
+        "subtitle": "Le prix à payer",
+        "format": "Série TV",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "error": null
@@ -47,16 +46,17 @@
       "hero": {
         "start": "21h00",
         "title": "C'est bon à savoir",
-        "subtitle": "Comment s'y retrouver avec les labels avant d'acheter ?",
+        "subtitle": "Idées reçues sur l'alimentation. Vrai ou faux ?",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Quand Marilyn chantait pour les GI's",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Albanie, la perle des Balkans",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h40",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Les secrets de l'île",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "22h45",
+        "title": "La guerre d'indépendance américaine : toute l'histoire",
+        "subtitle": "Une terre d'idéaux (mai 1775-juillet 1776)",
+        "format": "Culture Infos",
+        "duration": "2h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Les secrets de l'île",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "00h30",
+        "title": "Stonewall cinquante ans après",
+        "format": "Culture Infos",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -86,17 +85,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h05",
-        "title": "Coupe du monde de la FIFA - le mag",
+        "start": "22h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
-        "duration": "1h15min",
+        "duration": "15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h05",
-        "title": "Coupe du monde de la FIFA - le mag",
-        "format": "Sport",
-        "duration": "30min",
+        "start": "00h20",
+        "title": "Les stratèges",
+        "subtitle": "Dimitri Payet",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
