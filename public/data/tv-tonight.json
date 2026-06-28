@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-06-27T06:57:12.277Z",
+  "fetchedAt": "2026-06-28T07:54:10.918Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Mask Singer",
-        "format": "Autre",
-        "duration": "1h20min",
-        "rebroadcast": false
+        "title": "Barbecue",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Mask Singer",
-        "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "23h05",
+        "title": "Esprits criminels",
+        "subtitle": "Dans le viseur",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,18 +25,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "23h25",
-        "title": "Quelle époque !",
-        "format": "Autre",
-        "duration": "2h15min",
-        "rebroadcast": false
+        "start": "21h02",
+        "title": "Des gestes pour demain",
+        "subtitle": "Préserver l'eau",
+        "format": "Culture Infos",
+        "duration": "3min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h20",
-        "title": "Capitaine Marleau",
-        "subtitle": "Le prix à payer",
-        "format": "Série TV",
-        "duration": "1h45min",
+        "start": "22h45",
+        "title": "007 Spectre",
+        "format": "Cinéma",
+        "duration": "2h15min",
         "rebroadcast": true
       },
       "error": null
@@ -44,20 +45,20 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h00",
-        "title": "C'est bon à savoir",
-        "subtitle": "Idées reçues sur l'alimentation. Vrai ou faux ?",
+        "start": "21h35",
+        "title": "Face à l'histoire : L'épopée de Lady Liberty",
+        "subtitle": "Le flambeau de la liberté",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "40min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Echappées belles",
-        "subtitle": "Albanie, la perle des Balkans",
+        "start": "22h15",
+        "title": "Face à l'histoire : L'épopée de Lady Liberty",
+        "subtitle": "A l'ombre de la vieille dame",
         "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "duration": "45min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -65,19 +66,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h45",
-        "title": "La guerre d'indépendance américaine : toute l'histoire",
-        "subtitle": "Une terre d'idéaux (mai 1775-juillet 1776)",
-        "format": "Culture Infos",
-        "duration": "2h",
-        "rebroadcast": false
+        "start": "21h00",
+        "title": "Scarface",
+        "format": "Cinéma",
+        "duration": "2h40min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h30",
-        "title": "Stonewall cinquante ans après",
+        "start": "23h40",
+        "title": "The Bee Gees : \"How Can You Mend a Broken Heart\"",
         "format": "Culture Infos",
-        "duration": "1h05min",
-        "rebroadcast": true
+        "duration": "1h47min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,18 +85,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h35",
+        "start": "23h10",
+        "title": "Enquête exclusive",
+        "subtitle": "Pom-pom girls : la face cachée du rêve américain",
+        "format": "Culture Infos",
+        "duration": "1h10min",
+        "rebroadcast": true
+      },
+      "next": {
+        "start": "01h05",
         "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
-        "rebroadcast": false
-      },
-      "next": {
-        "start": "00h20",
-        "title": "Les stratèges",
-        "subtitle": "Dimitri Payet",
-        "format": "Autre",
-        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
