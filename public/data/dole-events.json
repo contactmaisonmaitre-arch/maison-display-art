@@ -1,26 +1,16 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-06-22T11:16:39.900Z",
+  "fetchedAt": "2026-06-29T10:10:36.003Z",
   "facts": [
-    {
-      "emoji": "🎨",
-      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
-      "body": "Lundi 01 juin à Dole · Musée des Beaux-Arts."
-    },
     {
       "emoji": "🎨",
       "title": "IA ou quand les Beaux Arts se confrontent à l'IA",
       "body": "Lundi 01 juin à Dole · Ecole des Beaux-arts."
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents / accompagnement 0/3 ans",
-      "body": "Lundi 01 juin à Dole · Maison de la Parentalité."
-    },
-    {
-      "emoji": "📚",
-      "title": "La rive gauche d'hier à aujourd'hui",
-      "body": "Lundi 01 juin à Dole · Médiathèque de l'Hôtel-Dieu."
+      "emoji": "🎨",
+      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
+      "body": "Lundi 01 juin à Dole · Musée des Beaux-Arts."
     },
     {
       "emoji": "📍",
@@ -28,24 +18,29 @@
       "body": "Lundi 01 juin à Dole · Grande Rue."
     },
     {
-      "emoji": "📍",
-      "title": "Montée au clocher",
-      "body": "Jeudi 04 juin à Dole · Collégiale Notre-Dame."
+      "emoji": "📚",
+      "title": "La rive gauche d'hier à aujourd'hui",
+      "body": "Lundi 01 juin à Dole · Médiathèque de l'Hôtel-Dieu."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Les RDV de l'Histoire de l'Art - Giotto et la révolution picturale du Trecento",
+      "body": "Mardi 02 juin à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Un dimanche au musée - Séance de yoga",
+      "body": "Dimanche 07 juin à Dole · Musée des Beaux-Arts."
     },
     {
       "emoji": "📍",
-      "title": "La Gendarmerie vous ouvre ses portes",
-      "body": "Samedi 06 juin à Dole ·."
+      "title": "Journée Nationale d’hommage aux morts pour la France en Indochine",
+      "body": "Lundi 08 juin à Dole · Cimetière de Landon."
     },
     {
-      "emoji": "📍",
-      "title": "Montée au clocher",
-      "body": "Samedi 06 juin à Dole · Collégiale Notre-Dame."
-    },
-    {
-      "emoji": "🏺",
-      "title": "RDV Patrimoine : La nature en ville",
-      "body": "Dimanche 07 juin à Dole · Centre-Ville."
+      "emoji": "🎉",
+      "title": "FESTIVAL D'EXPRESSION",
+      "body": "Mercredi 10 juin à Dole · Manège de Brack."
     },
     {
       "emoji": "🎉",
@@ -53,34 +48,39 @@
       "body": "Vendredi 12 juin à Saint-Aubin · Salle des Fêtes de Saint-Aubin."
     },
     {
+      "emoji": "🎨",
+      "title": "Marché de producteurs et artisans de Rainans",
+      "body": "Dimanche 14 juin à Rainans ·."
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier Eveil psychomoteur et Orthophonie",
+      "body": "Mardi 16 juin à Dole · Maison de la Parentalité."
+    },
+    {
       "emoji": "🎶",
-      "title": "Gala de danse \"Echappées Belles\"",
-      "body": "Vendredi 12 juin à Dole · Théâtre municipal."
+      "title": "FETE DE LA MUSIQUE",
+      "body": "Vendredi 19 juin à Damparis ·."
     },
     {
       "emoji": "📍",
-      "title": "Le Bus Santé des Femmes",
-      "body": "Mardi 16 juin à Dole · Mesnils-Pasteur."
+      "title": "Loto Jura Dolois Basket",
+      "body": "Samedi 20 juin à Damparis · Gymnase Belvoye."
     },
     {
       "emoji": "📍",
-      "title": "Baby Dating",
-      "body": "Mercredi 17 juin à Tavaux · Relais Petite Enfance (RPE)."
+      "title": "P'TIT DEJEUNER EMPLOI INFA SECTEUR HOTELLERIE RESTAURATION",
+      "body": "Lundi 22 juin à Dole ·."
     },
     {
-      "emoji": "📍",
-      "title": "Chorale Croches en Choeur",
-      "body": "Vendredi 19 juin à Dole · Auditorium Karl-Riepp."
+      "emoji": "🎨",
+      "title": "Les RDV de l'Histoire de Dole - Dole, la reconquête d'un destin (1850-2000)",
+      "body": "Mardi 23 juin à Dole · Musée des Beaux-Arts."
     },
     {
-      "emoji": "📍",
-      "title": "Chorale Croches en Choeur",
-      "body": "Samedi 20 juin à Dole · Auditorium Karl-Riepp."
-    },
-    {
-      "emoji": "🥖",
-      "title": "Marché de producteurs",
-      "body": "Dimanche 21 juin à Damparis ·."
+      "emoji": "👨‍👩‍👧",
+      "title": "Ferme pédagogique en famille",
+      "body": "Vendredi 26 juin à Dole · Maison de la Parentalité."
     }
   ]
 }
