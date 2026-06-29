@@ -1,23 +1,24 @@
 {
-  "fetchedAt": "2026-06-28T07:54:10.918Z",
+  "fetchedAt": "2026-06-29T09:02:21.115Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Barbecue",
-        "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "title": "Camping Paradis",
+        "subtitle": "Retour de flamme au Paradis",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Esprits criminels",
-        "subtitle": "Dans le viseur",
+        "start": "22h00",
+        "title": "Camping Paradis",
+        "subtitle": "Retour de flamme au Paradis",
         "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -25,18 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h02",
-        "title": "Des gestes pour demain",
-        "subtitle": "Préserver l'eau",
-        "format": "Culture Infos",
-        "duration": "3min",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "007 Spectre",
-        "format": "Cinéma",
-        "duration": "2h15min",
+        "start": "22h10",
+        "title": "Meurtres au paradis",
+        "subtitle": "La lettre anonyme",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -45,20 +46,20 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h35",
-        "title": "Face à l'histoire : L'épopée de Lady Liberty",
-        "subtitle": "Le flambeau de la liberté",
+        "start": "21h05",
+        "title": "Instinct animal",
+        "subtitle": "Avec Gil Alma",
         "format": "Culture Infos",
-        "duration": "40min",
-        "rebroadcast": false
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h15",
-        "title": "Face à l'histoire : L'épopée de Lady Liberty",
-        "subtitle": "A l'ombre de la vieille dame",
+        "start": "23h00",
+        "title": "25 kilos : 3 jours pour vider son sac",
+        "subtitle": "En Pays cathare",
         "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -66,17 +67,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Scarface",
-        "format": "Cinéma",
-        "duration": "2h40min",
-        "rebroadcast": true
+        "start": "23h00",
+        "title": "Monica Vitti : L'avventura d'une icône italienne",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "The Bee Gees : \"How Can You Mend a Broken Heart\"",
+        "start": "23h55",
+        "title": "Bernardo Bertolucci : Itinéraire d'un cinéaste anticonformiste",
         "format": "Culture Infos",
-        "duration": "1h47min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -85,15 +86,14 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h10",
-        "title": "Enquête exclusive",
-        "subtitle": "Pom-pom girls : la face cachée du rêve américain",
-        "format": "Culture Infos",
-        "duration": "1h10min",
-        "rebroadcast": true
+        "start": "21h15",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "01h05",
+        "start": "22h05",
         "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
