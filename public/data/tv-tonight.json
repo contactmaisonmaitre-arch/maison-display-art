@@ -1,24 +1,22 @@
 {
-  "fetchedAt": "2026-06-29T09:02:21.115Z",
+  "fetchedAt": "2026-06-30T07:57:11.786Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Retour de flamme au Paradis",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": false
+        "title": "La proposition",
+        "format": "Cinéma",
+        "duration": "2h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Camping Paradis",
-        "subtitle": "Retour de flamme au Paradis",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": false
+        "start": "23h10",
+        "title": "Le nouveau stagiaire",
+        "format": "Cinéma",
+        "duration": "2h15min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -26,19 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "21h10",
+        "title": "L'Amérique et nous - 250 ans d'amour/haine !",
+        "format": "Culture Infos",
+        "duration": "47min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Meurtres au paradis",
-        "subtitle": "La lettre anonyme",
-        "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "21h57",
+        "title": "L'Amérique et nous - 250 ans d'amour/haine !",
+        "format": "Culture Infos",
+        "duration": "1h03min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,19 +44,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Instinct animal",
-        "subtitle": "Avec Gil Alma",
+        "title": "Enquête de santé",
+        "subtitle": "Un été en toute sécurité",
         "format": "Culture Infos",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "25 kilos : 3 jours pour vider son sac",
-        "subtitle": "En Pays cathare",
+        "start": "21h55",
+        "title": "Enquête de santé",
+        "subtitle": "Ces gestes qui sauvent votre été",
         "format": "Culture Infos",
         "duration": "1h",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     },
@@ -67,18 +64,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h00",
-        "title": "Monica Vitti : L'avventura d'une icône italienne",
+        "start": "22h30",
+        "title": "Berlin 1933 : Le journal dʼune capitale",
+        "subtitle": "Episode 1",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h55",
-        "title": "Bernardo Bertolucci : Itinéraire d'un cinéaste anticonformiste",
+        "start": "00h50",
+        "title": "L'ange blond de Visconti : Björn Andrésen, de l'éphèbe à l'acteur",
         "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -89,11 +87,11 @@
         "start": "21h15",
         "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
-        "duration": "50min",
+        "duration": "1h20min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
+        "start": "22h35",
         "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
