@@ -1,22 +1,24 @@
 {
-  "fetchedAt": "2026-06-30T07:57:11.786Z",
+  "fetchedAt": "2026-07-01T08:17:11.988Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "La proposition",
-        "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": true
+        "title": "All Her Fault",
+        "subtitle": "Episode 1",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h10",
-        "title": "Le nouveau stagiaire",
-        "format": "Cinéma",
-        "duration": "2h15min",
-        "rebroadcast": true
+        "start": "22h00",
+        "title": "All Her Fault",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -24,18 +26,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h10",
-        "title": "L'Amérique et nous - 250 ans d'amour/haine !",
-        "format": "Culture Infos",
-        "duration": "47min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h57",
-        "title": "L'Amérique et nous - 250 ans d'amour/haine !",
-        "format": "Culture Infos",
-        "duration": "1h03min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "Capitaine Marleau",
+        "subtitle": "La der des der",
+        "format": "Série TV",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -44,36 +47,14 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Enquête de santé",
-        "subtitle": "Un été en toute sécurité",
+        "title": "Lucie en Thaïlande",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": false
       },
       "next": {
         "start": "21h55",
-        "title": "Enquête de santé",
-        "subtitle": "Ces gestes qui sauvent votre été",
-        "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": false
-      },
-      "error": null
-    },
-    {
-      "name": "Arte",
-      "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
-      "hero": {
-        "start": "22h30",
-        "title": "Berlin 1933 : Le journal dʼune capitale",
-        "subtitle": "Episode 1",
-        "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
-      },
-      "next": {
-        "start": "00h50",
-        "title": "L'ange blond de Visconti : Björn Andrésen, de l'éphèbe à l'acteur",
+        "title": "Lucie, mission Brésil",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
@@ -81,20 +62,39 @@
       "error": null
     },
     {
+      "name": "Arte",
+      "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
+      "hero": {
+        "start": "21h00",
+        "title": "Volver",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": true
+      },
+      "next": {
+        "start": "22h55",
+        "title": "La revanche du disco",
+        "format": "Culture Infos",
+        "duration": "1h40min",
+        "rebroadcast": false
+      },
+      "error": null
+    },
+    {
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h15",
-        "title": "Coupe du monde de la FIFA - le mag",
-        "format": "Sport",
-        "duration": "1h20min",
-        "rebroadcast": false
-      },
-      "next": {
-        "start": "22h35",
+        "start": "21h35",
         "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
+        "rebroadcast": false
+      },
+      "next": {
+        "start": "01h05",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "40min",
         "rebroadcast": false
       },
       "error": null
