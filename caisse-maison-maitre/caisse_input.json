@@ -1,0 +1,13 @@
+{
+  "date": "01-07-2026",
+  "fichier_sortie": "Caisse_01-07-2026.xlsx",
+  "billets": { "100": 0, "50": 1, "20": 7, "10": 20, "5": 7 },
+  "pieces":  { "2": 12, "1": 16, "0.5": 19, "0.2": 50, "0.1": 13, "0.05": 3, "0.02": 14, "0.01": 62 },
+  "cheques": [],
+  "A_a_transmettre": 0,
+  "B_rouleaux": 0,
+  "E_jour_precedent_D": 958.55,
+  "depot_jour_precedent": 600,
+  "E_prime_depose": 0,
+  "G_ticket_especes_net": 127.50
+}
