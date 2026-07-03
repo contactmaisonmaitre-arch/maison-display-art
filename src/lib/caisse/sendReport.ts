@@ -17,7 +17,9 @@ export interface SendOutcome {
 }
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL;
-const SUPABASE_ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY;
+// Lovable nomme parfois la clé anon « PUBLISHABLE_KEY » : on accepte les deux.
+const SUPABASE_ANON_KEY =
+  import.meta.env.VITE_SUPABASE_ANON_KEY ?? import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 
 /** Le backend d'envoi auto est-il configuré ? */
 export function backendConfigured(): boolean {

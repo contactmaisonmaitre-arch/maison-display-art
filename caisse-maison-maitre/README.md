@@ -31,9 +31,9 @@ Tant que ce n'est pas branché, le bouton ouvre simplement votre client mail
 pré-rempli (aucune config requise pour démarrer). Pour l'**envoi automatique** :
 
 1. Dans Lovable, brancher **Supabase** au projet.
-2. Ajouter les variables d'environnement front (Lovable / `.env`) :
+2. Ajouter les variables d'environnement front (Lovable / `.env`, cf. `.env.example`) :
    - `VITE_SUPABASE_URL`
-   - `VITE_SUPABASE_ANON_KEY`
+   - `VITE_SUPABASE_ANON_KEY` *(ou son alias Lovable `VITE_SUPABASE_PUBLISHABLE_KEY`)*
 3. Créer une clé API **Resend** (https://resend.com) et, côté Supabase
    (Edge Functions → Secrets), définir :
    - `RESEND_API_KEY`
