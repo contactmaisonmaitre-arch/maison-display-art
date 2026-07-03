@@ -1,0 +1,8 @@
+# Configuration Supabase — Maison Maitre.
+# project_id : renseigné automatiquement par Lovable lors du branchement Supabase.
+project_id = "maison-maitre"
+
+# L'Edge Function d'envoi du rapport de caisse est appelée depuis l'appli avec la clé anon :
+# on n'exige donc pas de JWT utilisateur (verify_jwt = false).
+[functions.send-caisse-report]
+verify_jwt = false
