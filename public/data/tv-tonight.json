@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-07-03T07:27:38.414Z",
+  "fetchedAt": "2026-07-04T06:51:23.936Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h10",
-        "title": "Les 12 coups",
-        "subtitle": "La Summer Party",
-        "format": "Autre",
-        "duration": "1h20min",
+        "start": "21h00",
+        "title": "Argentine / Ecosse",
+        "subtitle": "Rugby. Nations Championship. 1re journée.",
+        "format": "Sport",
+        "duration": "2h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Les 12 coups",
-        "subtitle": "La Summer Party",
+        "start": "23h05",
+        "title": "Vendredi, tout est permis avec Arthur",
+        "subtitle": "Episode 7",
         "format": "Autre",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -26,18 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "22h55",
+        "title": "L'image du jour",
+        "format": "Culture Infos",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "César Wagner",
-        "subtitle": "Un doigt de mystère",
+        "start": "00h15",
+        "title": "Capitaine Marleau",
+        "subtitle": "La der des der",
         "format": "Série TV",
-        "duration": "1h30min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -47,17 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Les trésors de Marie-Antoinette à Versailles",
+        "title": "Echappées belles",
+        "subtitle": "Japon, les surprises de Tokyo",
         "format": "Culture Infos",
         "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
         "start": "22h40",
-        "title": "Les trésors des jardins français",
-        "subtitle": "Les jardins du Moyen Age au XIXe siècle",
+        "title": "Echappées belles",
+        "subtitle": "Lille gourmand",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h33min",
         "rebroadcast": true
       },
       "error": null
@@ -66,20 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h40",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Au coeur de l'été",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "22h25",
+        "title": "Abysses, la face cachée des océans",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Au coeur de l'été",
-        "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "23h20",
+        "title": "Voyage au pôle Sud",
+        "format": "Cinéma",
+        "duration": "1h25min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -87,20 +86,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "La Chapelle-Launay (1/2)",
-        "format": "Autre",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "21h20",
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "La Chapelle-Launay (2/2)",
-        "format": "Autre",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "format": "Sport",
+        "duration": "15min",
+        "rebroadcast": false
       },
       "error": null
     }
