@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-07-05T07:32:19.797Z",
+  "fetchedAt": "2026-07-06T08:25:55.665Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Plancha",
-        "format": "Cinéma",
-        "duration": "1h55min",
+        "title": "Camping Paradis",
+        "subtitle": "Deux cheffes au Paradis",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h05",
-        "title": "Esprits criminels",
-        "subtitle": "Le cerbère",
+        "start": "22h00",
+        "title": "Camping Paradis",
+        "subtitle": "Deux cheffes au Paradis",
         "format": "Série TV",
-        "duration": "45min",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -25,17 +26,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h07",
-        "title": "L'image du jour",
-        "format": "Culture Infos",
-        "duration": "3min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "Meurtres au paradis",
+        "subtitle": "Carton plein",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Mourir peut attendre",
-        "format": "Cinéma",
-        "duration": "2h35min",
+        "start": "22h55",
+        "title": "Meurtres au paradis",
+        "subtitle": "La lettre anonyme",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -45,18 +48,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Franco, le dernier dictateur",
-        "subtitle": "Au nom du Christ et de l'Empire",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Guadeloupe, beauté fragile",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Franco, le dernier dictateur",
-        "subtitle": "Le manipulateur",
+        "start": "21h55",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Le Nord, en surchauffe",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -65,17 +68,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "L'impasse",
+        "start": "22h30",
+        "title": "Nickelodeon",
         "format": "Cinéma",
-        "duration": "2h20min",
-        "rebroadcast": true
+        "duration": "2h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h20",
-        "title": "Disco Sex Machine : La naissance du porn chic",
+        "start": "00h15",
+        "title": "Discothèque : nuits de folie à la campagne",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "52min",
         "rebroadcast": false
       },
       "error": null
@@ -84,18 +87,19 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h35",
-        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "start": "22h55",
+        "title": "Coupe du monde de la FIFA - le mag",
         "format": "Sport",
         "duration": "15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h55",
-        "title": "Coupe du monde de la FIFA - le mag",
-        "format": "Sport",
-        "duration": "35min",
-        "rebroadcast": false
+        "start": "00h30",
+        "title": "Enquête exclusive",
+        "subtitle": "Forains américains : fêtes géantes et fortunes XXL",
+        "format": "Culture Infos",
+        "duration": "1h05min",
+        "rebroadcast": true
       },
       "error": null
     }
