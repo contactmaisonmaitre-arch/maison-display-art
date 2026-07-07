@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-07-06T08:25:55.665Z",
+  "fetchedAt": "2026-07-07T07:45:41.462Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Deux cheffes au Paradis",
-        "format": "Série TV",
-        "duration": "50min",
+        "title": "Coup de foudre à Notting Hill",
+        "format": "Cinéma",
+        "duration": "2h15min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Camping Paradis",
-        "subtitle": "Deux cheffes au Paradis",
-        "format": "Série TV",
-        "duration": "1h05min",
+        "start": "23h25",
+        "title": "La proposition",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
@@ -26,19 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h55",
-        "title": "Meurtres au paradis",
-        "subtitle": "Carton plein",
-        "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Meurtres au paradis",
-        "subtitle": "La lettre anonyme",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "22h45",
+        "title": "Règne animal, les jeux de l'amour",
+        "subtitle": "Les maîtres du jeu",
+        "format": "Culture Infos",
+        "duration": "1h53min",
         "rebroadcast": true
       },
       "error": null
@@ -48,18 +45,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Guadeloupe, beauté fragile",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "title": "Tendre poulet",
+        "format": "Cinéma",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "next": {
-        "start": "21h55",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Le Nord, en surchauffe",
+        "start": "22h50",
+        "title": "C dans l'air",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "1h06min",
         "rebroadcast": true
       },
       "error": null
@@ -68,18 +63,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Nickelodeon",
-        "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": false
+        "start": "21h00",
+        "title": "Gardiens de la révolution : Les maîtres de l'Iran",
+        "subtitle": "L'Etat dans l'Etat",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h15",
-        "title": "Discothèque : nuits de folie à la campagne",
+        "start": "21h50",
+        "title": "Gardiens de la révolution : Les maîtres de l'Iran",
+        "subtitle": "Les agents du chaos",
         "format": "Culture Infos",
-        "duration": "52min",
-        "rebroadcast": false
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -87,18 +84,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h55",
-        "title": "Coupe du monde de la FIFA - le mag",
+        "start": "21h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
         "format": "Sport",
         "duration": "15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h30",
-        "title": "Enquête exclusive",
-        "subtitle": "Forains américains : fêtes géantes et fortunes XXL",
-        "format": "Culture Infos",
-        "duration": "1h05min",
+        "start": "00h00",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Tonnay-Charente",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
