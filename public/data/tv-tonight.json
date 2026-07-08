@@ -1,22 +1,24 @@
 {
-  "fetchedAt": "2026-07-07T07:45:41.462Z",
+  "fetchedAt": "2026-07-08T06:32:42.452Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Coup de foudre à Notting Hill",
-        "format": "Cinéma",
-        "duration": "2h15min",
-        "rebroadcast": true
+        "title": "All Her Fault",
+        "subtitle": "Episode 4",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h25",
-        "title": "La proposition",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "22h05",
+        "title": "All Her Fault",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -31,12 +33,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Règne animal, les jeux de l'amour",
-        "subtitle": "Les maîtres du jeu",
-        "format": "Culture Infos",
-        "duration": "1h53min",
-        "rebroadcast": true
+        "start": "22h44",
+        "title": "La minute EWC",
+        "format": "Sport",
+        "duration": "1min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -45,17 +46,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Tendre poulet",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "title": "Partenaires particuliers, un voyage pas comme les autres",
+        "subtitle": "Episode 1",
+        "format": "Culture Infos",
+        "duration": "25min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "C dans l'air",
+        "start": "21h55",
+        "title": "Partenaires particuliers, un voyage pas comme les autres",
+        "subtitle": "Episode 3",
         "format": "Culture Infos",
-        "duration": "1h06min",
-        "rebroadcast": true
+        "duration": "30min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -63,19 +66,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Gardiens de la révolution : Les maîtres de l'Iran",
-        "subtitle": "L'Etat dans l'Etat",
+        "start": "22h55",
+        "title": "Giorgio Moroder & Donna Summer : \"I Feel Love\"",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Gardiens de la révolution : Les maîtres de l'Iran",
-        "subtitle": "Les agents du chaos",
+        "start": "23h50",
+        "title": "Italo disco : le son scintillant des années 80",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -84,18 +85,17 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h35",
-        "title": "Coupe du monde de la FIFA - l'avant-match",
-        "format": "Sport",
-        "duration": "15min",
+        "start": "21h10",
+        "title": "Les Trois Mousquetaires : D'Artagnan",
+        "format": "Cinéma",
+        "duration": "2h20min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h00",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Tonnay-Charente",
-        "format": "Autre",
-        "duration": "55min",
+        "start": "23h30",
+        "title": "Une zone à défendre",
+        "format": "Cinéma",
+        "duration": "2h",
         "rebroadcast": true
       },
       "error": null
