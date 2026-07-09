@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-07-08T06:32:42.452Z",
+  "fetchedAt": "2026-07-09T07:46:31.693Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "All Her Fault",
-        "subtitle": "Episode 4",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": false
-      },
-      "next": {
-        "start": "22h05",
-        "title": "All Her Fault",
+        "title": "Zodiaque",
         "subtitle": "Episode 5",
         "format": "Série TV",
         "duration": "1h05min",
         "rebroadcast": false
+      },
+      "next": {
+        "start": "22h15",
+        "title": "New York Unité Spéciale",
+        "subtitle": "A la frontière du légal",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -33,11 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h44",
-        "title": "La minute EWC",
-        "format": "Sport",
-        "duration": "1min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "Et ça vous fait rire ?",
+        "subtitle": "Rire avec son temps",
+        "format": "Culture Infos",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,20 +46,20 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "Partenaires particuliers, un voyage pas comme les autres",
-        "subtitle": "Episode 1",
+        "start": "21h45",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Costa Rica",
         "format": "Culture Infos",
-        "duration": "25min",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h55",
-        "title": "Partenaires particuliers, un voyage pas comme les autres",
-        "subtitle": "Episode 3",
+        "start": "22h40",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Autriche",
         "format": "Culture Infos",
-        "duration": "30min",
-        "rebroadcast": false
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -66,18 +67,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h55",
-        "title": "Giorgio Moroder & Donna Summer : \"I Feel Love\"",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "21h55",
+        "title": "Happy Valley",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h50",
-        "title": "Italo disco : le son scintillant des années 80",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h55",
+        "title": "Happy Valley",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,18 +88,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Les Trois Mousquetaires : D'Artagnan",
-        "format": "Cinéma",
-        "duration": "2h20min",
+        "start": "21h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "format": "Sport",
+        "duration": "15min",
         "rebroadcast": false
       },
       "next": {
         "start": "23h30",
-        "title": "Une zone à défendre",
-        "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": true
+        "title": "Coupe du monde de la FIFA - le mag",
+        "format": "Sport",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     }
