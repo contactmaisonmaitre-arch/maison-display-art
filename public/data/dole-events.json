@@ -1,7 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-07-06T09:36:35.795Z",
+  "fetchedAt": "2026-07-13T08:34:20.673Z",
   "facts": [
+    {
+      "emoji": "📍",
+      "title": "Dole L'Essentiel",
+      "body": "Mercredi 01 juil. à Dole · Dole Tourisme."
+    },
     {
       "emoji": "📍",
       "title": "Enquête Game",
@@ -13,14 +18,9 @@
       "body": "Mercredi 01 juil. à Dole · Musée des Beaux-Arts."
     },
     {
-      "emoji": "🎶",
-      "title": "Les Jeudis en Musique 2026",
-      "body": "Jeudi 02 juil. à Dole · Cours Saint Mauris."
-    },
-    {
-      "emoji": "🥖",
-      "title": "Barbecue et marché paysans",
-      "body": "Jeudi 02 juil. à Dole · Cours Saint Mauris, 16h30 à 22h30."
+      "emoji": "📍",
+      "title": "Montée au clocher",
+      "body": "Jeudi 02 juil. à Dole · Collégiale Notre-Dame."
     },
     {
       "emoji": "🎨",
@@ -34,18 +34,23 @@
     },
     {
       "emoji": "📍",
-      "title": "Montée au clocher au coucher du soleil",
+      "title": "Montée au clocher",
       "body": "Samedi 04 juil. à Dole · Collégiale Notre-Dame."
     },
     {
-      "emoji": "🏆",
-      "title": "Stage sportif Aquaparc Isis",
-      "body": "Lundi 06 juil. à Dole · Aquaparc Isis."
+      "emoji": "📍",
+      "title": "Dole au temps des sorcières",
+      "body": "Samedi 04 juil. à Dole · Dole Tourisme."
     },
     {
       "emoji": "📍",
-      "title": "Dole Secret",
-      "body": "Mardi 07 juil. à Dole · Dole Tourisme."
+      "title": "Portes ouvertes de la SPA de Dole et sa région",
+      "body": "Dimanche 05 juil. à Biarne ·."
+    },
+    {
+      "emoji": "🎭",
+      "title": "Visite du théâtre",
+      "body": "Dimanche 05 juil. à Dole · Théâtre municipal."
     },
     {
       "emoji": "🎨",
@@ -54,33 +59,28 @@
     },
     {
       "emoji": "📍",
+      "title": "Dole Secret",
+      "body": "Mardi 07 juil. à Dole · Dole Tourisme."
+    },
+    {
+      "emoji": "📍",
+      "title": "Enquête Game",
+      "body": "Mercredi 08 juil. à Dole · Grande Rue."
+    },
+    {
+      "emoji": "📍",
       "title": "Les Petits Chats sur la piste",
       "body": "Jeudi 09 juil. à Dole · Dole Tourisme."
     },
     {
-      "emoji": "📍",
-      "title": "Lectures estivales",
-      "body": "Vendredi 10 juil. à Choisey ·."
+      "emoji": "📚",
+      "title": "Visite de l'Hôtel-Dieu",
+      "body": "Vendredi 10 juil. à Dole · Médiathèque de l'Hôtel-Dieu."
     },
     {
       "emoji": "📍",
-      "title": "Festivités du 13 juillet",
-      "body": "Lundi 13 juil. à Damparis ·."
-    },
-    {
-      "emoji": "📍",
-      "title": "Balades en calèche",
-      "body": "Mercredi 15 juil. à Dole · Avenue de Lahr."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 19 juil. à Dole · Musée des Beaux-Arts."
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier \"Défis de grands scientifiques \"",
-      "body": "Mercredi 22 juil. à Dole · Maison Natale de Louis Pasteur."
+      "title": "Ligne des Hirondelles",
+      "body": "Lundi 13 juil. à Dole · Gare de Dole."
     }
   ]
 }
