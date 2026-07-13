@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-07-12T06:38:51.106Z",
+  "fetchedAt": "2026-07-13T07:26:09.552Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Inestimable",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": false
+        "title": "Camping Paradis",
+        "subtitle": "Une régate au paradis",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Esprits criminels",
-        "subtitle": "Brutalisés",
+        "start": "22h00",
+        "title": "Camping Paradis",
+        "subtitle": "Une régate au paradis",
         "format": "Série TV",
-        "duration": "45min",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -25,18 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h07",
-        "title": "L'image du jour",
-        "format": "Culture Infos",
-        "duration": "3min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
+        "start": "23h02",
         "title": "Une vie en France",
-        "subtitle": "Gassama",
+        "subtitle": "Eva Joly",
         "format": "Culture Infos",
-        "duration": "1min",
+        "duration": "3min",
         "rebroadcast": false
       },
       "error": null
@@ -46,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "La côte Atlantique, à l'heure de la Belle Epoque",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Pyrénées, alerte venue des sommets",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": false
       },
       "next": {
         "start": "21h50",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "Larzac : le génie des Templiers",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Jura, un massif sous pression",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -66,18 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "La nuit nous appartient",
+        "start": "23h05",
+        "title": "L'impasse",
         "format": "Cinéma",
-        "duration": "1h50min",
+        "duration": "2h20min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h50",
-        "title": "The Full Monty, le grand jeu",
-        "format": "Cinéma",
-        "duration": "1h28min",
-        "rebroadcast": true
+        "start": "00h18",
+        "title": "Music Queer",
+        "subtitle": "Bronski Beat : \"Smalltown Boy\"",
+        "format": "Culture Infos",
+        "duration": "2min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -86,18 +88,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Capital",
-        "subtitle": "Au camping ou à la plage, mon confort à tout prix !",
+        "title": "Stars 80 vs stars 90 : la grande battle",
         "format": "Culture Infos",
-        "duration": "2h",
+        "duration": "1h",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h10",
-        "title": "Enquête exclusive",
-        "subtitle": "Les Keys en Floride : l'archipel des fêtes sans limite",
+        "start": "22h10",
+        "title": "Stars 80 vs stars 90 : la grande battle",
         "format": "Culture Infos",
-        "duration": "1h10min",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
