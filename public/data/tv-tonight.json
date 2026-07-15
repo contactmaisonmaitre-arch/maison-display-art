@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-07-14T06:16:14.940Z",
+  "fetchedAt": "2026-07-15T06:19:37.023Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Les experts : Las Vegas",
-        "subtitle": "Retour à Las Vegas",
+        "title": "All Her Fault",
+        "subtitle": "Episode 7",
         "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "duration": "1h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Les experts : Las Vegas",
-        "subtitle": "Noces funèbres",
+        "start": "22h10",
+        "title": "All Her Fault",
+        "subtitle": "Episode 8",
         "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -26,15 +26,15 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "22h55",
+        "start": "22h25",
         "title": "Une vie en France",
-        "subtitle": "Latifa Ibn Ziatem",
+        "subtitle": "Sophia Aram",
         "format": "Culture Infos",
-        "duration": "3min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "01h02",
+        "start": "00h27",
         "title": "La minute EWC",
         "format": "Sport",
         "duration": "3min",
@@ -47,16 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Claude Lelouch, la vie en mieux",
+        "title": "Nus et culottés",
+        "subtitle": "Objectif Paris",
         "format": "Culture Infos",
-        "duration": "1h15min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h15",
-        "title": "C dans l'air",
+        "start": "21h50",
+        "title": "Nus et culottés",
+        "subtitle": "Objectif Ibiza",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -65,18 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Tous accros : le piège des aliments ultratransformés",
+        "start": "22h45",
+        "title": "ABBA Silver, ABBA Gold",
         "format": "Culture Infos",
-        "duration": "1h25min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "Vive les microbes !",
+        "start": "23h40",
+        "title": "ABBA en concert",
         "format": "Culture Infos",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -91,11 +93,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "00h00",
-        "title": "Stars 80 : l'histoire d'un phénomène culte",
-        "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "00h25",
+        "title": "Programmes de la nuit",
+        "format": "Autre",
+        "duration": "5h35min",
+        "rebroadcast": false
       },
       "error": null
     }
