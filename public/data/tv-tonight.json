@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-07-16T06:22:59.698Z",
+  "fetchedAt": "2026-07-17T06:21:29.065Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Zodiaque",
-        "subtitle": "Episode 6",
-        "format": "Série TV",
+        "title": "Le dernier cercle",
+        "subtitle": "Episode 3",
+        "format": "Autre",
         "duration": "1h05min",
         "rebroadcast": false
       },
       "next": {
         "start": "22h15",
-        "title": "New York Unité Spéciale",
-        "subtitle": "Ensemble toujours plus fortes",
-        "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "title": "Le dernier cercle",
+        "subtitle": "Episode 3",
+        "format": "Autre",
+        "duration": "1h25min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -33,11 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h20",
-        "title": "Drag Race France : une seule sera la reine",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "22h05",
+        "title": "Tropiques criminels",
+        "subtitle": "La Pagerie",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -46,19 +47,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Floride",
+        "title": "Matisse & Lydia",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Cambodge",
+        "start": "22h00",
+        "title": "1,2,3 Poquelin",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "duration": "4h35min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -66,17 +65,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "Sacha",
-        "subtitle": "Episode 2",
+        "start": "22h30",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Un goût amer",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h40",
+        "start": "00h25",
         "title": "Sacha",
-        "subtitle": "Episode 3",
+        "subtitle": "Episode 5",
         "format": "Série TV",
         "duration": "55min",
         "rebroadcast": true
@@ -88,17 +87,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Les Trois Mousquetaires : Milady",
+        "title": "Toy Story 4",
         "format": "Cinéma",
-        "duration": "2h10min",
-        "rebroadcast": false
+        "duration": "1h45min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "Versailles, les secrets d'un château spectaculaire",
+        "start": "22h55",
+        "title": "Reine des Neiges : dans les secrets du nouveau défi de Disneyland Paris",
         "format": "Culture Infos",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "error": null
     }
