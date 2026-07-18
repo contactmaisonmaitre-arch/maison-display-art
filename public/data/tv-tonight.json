@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-07-17T06:21:29.065Z",
+  "fetchedAt": "2026-07-18T06:09:03.444Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h10",
-        "title": "Le dernier cercle",
-        "subtitle": "Episode 3",
-        "format": "Autre",
-        "duration": "1h05min",
+        "start": "21h00",
+        "title": "Argentine / Angleterre",
+        "subtitle": "Rugby. Nations Championship. 3e journée.",
+        "format": "Sport",
+        "duration": "2h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h15",
-        "title": "Le dernier cercle",
-        "subtitle": "Episode 3",
+        "start": "23h05",
+        "title": "Vendredi, tout est permis avec Arthur",
+        "subtitle": "Episode 273",
         "format": "Autre",
-        "duration": "1h25min",
+        "duration": "2h",
         "rebroadcast": false
       },
       "error": null
@@ -26,18 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "22h35",
+        "title": "L'image du jour",
+        "format": "Culture Infos",
+        "duration": "20min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Tropiques criminels",
-        "subtitle": "La Pagerie",
+        "start": "00h45",
+        "title": "César Wagner",
+        "subtitle": "Les liens du sang",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "error": null
@@ -47,17 +47,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Matisse & Lydia",
+        "title": "Echappées belles",
+        "subtitle": "Quercy, l'histoire au coeur",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "1,2,3 Poquelin",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Spectaculaire Irlande",
         "format": "Culture Infos",
-        "duration": "4h35min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -65,18 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Un goût amer",
-        "format": "Série TV",
-        "duration": "1h30min",
+        "start": "21h45",
+        "title": "Enfants du Soleil",
+        "subtitle": "Les Incas",
+        "format": "Culture Infos",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h25",
-        "title": "Sacha",
-        "subtitle": "Episode 5",
-        "format": "Série TV",
+        "start": "22h35",
+        "title": "Enfants du Soleil",
+        "subtitle": "Les Aztèques",
+        "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
       },
@@ -86,15 +88,15 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Toy Story 4",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "Coupe du monde de la FIFA - l'avant-match",
+        "format": "Sport",
+        "duration": "15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Reine des Neiges : dans les secrets du nouveau défi de Disneyland Paris",
+        "start": "00h45",
+        "title": "Disney, Harry Potter, Jurassic Park : la vie rêvée des Français d'Orlando",
         "format": "Culture Infos",
         "duration": "1h50min",
         "rebroadcast": true
