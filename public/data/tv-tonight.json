@@ -1,20 +1,22 @@
 {
-  "fetchedAt": "2026-07-19T06:34:51.360Z",
+  "fetchedAt": "2026-07-20T06:52:32.193Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Notre-Dame brûle",
-        "format": "Cinéma",
-        "duration": "2h05min",
+        "title": "Camping Paradis",
+        "subtitle": "Clair de lune au camping",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h15",
-        "title": "Notre-Dame, le chantier de leur vie",
-        "format": "Culture Infos",
+        "start": "22h00",
+        "title": "Camping Paradis",
+        "subtitle": "Clair de lune au camping",
+        "format": "Série TV",
         "duration": "1h",
         "rebroadcast": true
       },
@@ -24,18 +26,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h08",
-        "title": "L'image du jour",
-        "format": "Culture Infos",
-        "duration": "2min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "L'image du jour",
-        "format": "Culture Infos",
-        "duration": "5min",
-        "rebroadcast": false
+        "start": "22h00",
+        "title": "Meurtres au paradis",
+        "subtitle": "Un plat qui se mange froid",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -44,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "La Provence de Van Gogh",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Ille-et-Vilaine, ballotté par les flots",
         "format": "Culture Infos",
         "duration": "50min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "next": {
         "start": "21h50",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "Les Impressionnistes, de Montmartre aux côtes normandes",
+        "title": "Sale temps pour la planète",
+        "subtitle": "Pays de Savoie, sur la mauvaise pente ?",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -64,18 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "La fièvre du samedi soir",
+        "start": "23h00",
+        "title": "Spirit in the Blood",
         "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "The Bee Gees : \"How Can You Mend a Broken Heart\"",
+        "start": "00h45",
+        "title": "Hôtels mythiques",
+        "subtitle": "Le Shelbourne Hotel à Dublin",
         "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -83,19 +87,19 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "23h15",
-        "title": "Remise de la coupe",
-        "subtitle": "Football. Coupe du monde.",
-        "format": "Sport",
-        "duration": "20min",
-        "rebroadcast": false
+        "start": "21h10",
+        "title": "Le maillon faible",
+        "subtitle": "Spécial célébrités",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h55",
-        "title": "Enquête exclusive",
-        "subtitle": "New York, capitale du monde",
-        "format": "Culture Infos",
-        "duration": "1h30min",
+        "start": "22h15",
+        "title": "Le maillon faible",
+        "subtitle": "Spécial célébrités",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": true
       },
       "error": null
