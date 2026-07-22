@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-07-21T06:33:33.945Z",
+  "fetchedAt": "2026-07-22T06:33:36.691Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le transporteur",
+        "title": "Un Indien dans la ville",
         "format": "Cinéma",
-        "duration": "1h45min",
+        "duration": "1h40min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h55",
-        "title": "Piège de feu",
-        "format": "Cinéma",
-        "duration": "2h15min",
+        "start": "22h50",
+        "title": "Esprits criminels",
+        "subtitle": "Gabby",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -31,12 +32,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h10",
-        "title": "Sous pression",
-        "subtitle": "Episode 1",
+        "start": "21h55",
+        "title": "Tout cela je te le donnerai",
+        "subtitle": "Episode 2",
         "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,16 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Mortelle randonnée",
-        "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": true
+        "title": "Pieds Nus & Culottés",
+        "subtitle": "Objectif Drôme",
+        "format": "Culture Infos",
+        "duration": "1h35min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "C dans l'air",
+        "start": "22h35",
+        "title": "Nus et culottés",
+        "subtitle": "Objectif Irlande",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -63,18 +66,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "La flûte enchantée : Festival d'Aix-en-Provence 2026",
-        "format": "Culture Infos",
-        "duration": "2h35min",
-        "rebroadcast": false
+        "start": "21h00",
+        "title": "Hors normes",
+        "format": "Cinéma",
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h30",
-        "title": "Cette violence en nous",
+        "start": "22h50",
+        "title": "YMCA : L'histoire derrière Village People",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -83,19 +86,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Côte d'Azur : ses secrets pour faire revenir les ultra-riches",
-        "format": "Culture Infos",
-        "duration": "1h50min",
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Zone interdite",
-        "subtitle": "Bretagne, Normandie : les nouvelles destinations stars de vos vacances",
-        "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "22h05",
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "error": null
     }
