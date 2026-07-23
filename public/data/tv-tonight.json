@@ -1,20 +1,20 @@
 {
-  "fetchedAt": "2026-07-22T06:33:36.691Z",
+  "fetchedAt": "2026-07-23T06:34:11.348Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Un Indien dans la ville",
+        "title": "The Flash",
         "format": "Cinéma",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "duration": "2h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Esprits criminels",
-        "subtitle": "Gabby",
+        "start": "23h40",
+        "title": "New York Unité Spéciale",
+        "subtitle": "Le sommet de la chaîne alimentaire",
         "format": "Série TV",
         "duration": "50min",
         "rebroadcast": true
@@ -32,12 +32,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Tout cela je te le donnerai",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "23h25",
+        "title": "Drag Race France : une seule sera la reine",
+        "format": "Autre",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Pieds Nus & Culottés",
-        "subtitle": "Objectif Drôme",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Malaisie",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Nus et culottés",
-        "subtitle": "Objectif Irlande",
+        "start": "21h50",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Espagne",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -66,16 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Hors normes",
-        "format": "Cinéma",
-        "duration": "1h50min",
+        "start": "21h50",
+        "title": "Total Control",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h50",
-        "title": "YMCA : L'histoire derrière Village People",
-        "format": "Culture Infos",
+        "start": "22h35",
+        "title": "Total Control",
+        "subtitle": "Episode 3",
+        "format": "Série TV",
         "duration": "50min",
         "rebroadcast": true
       },
@@ -86,17 +87,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "J'en connais un rayon",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Malo-de-Guersac",
         "format": "Autre",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "J'en connais un rayon",
+        "start": "22h10",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Malo-de-Guersac",
         "format": "Autre",
-        "duration": "1h30min",
-        "rebroadcast": false
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     }
