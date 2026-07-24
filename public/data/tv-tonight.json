@@ -1,23 +1,24 @@
 {
-  "fetchedAt": "2026-07-23T06:34:11.348Z",
+  "fetchedAt": "2026-07-24T06:30:15.542Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "The Flash",
-        "format": "Cinéma",
-        "duration": "2h30min",
+        "title": "50mn Inside le mag",
+        "subtitle": "50' inside : Les 20 ans",
+        "format": "Culture Infos",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "New York Unité Spéciale",
-        "subtitle": "Le sommet de la chaîne alimentaire",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "22h20",
+        "title": "50mn Inside le mag",
+        "subtitle": "50' inside : Les 20 ans",
+        "format": "Culture Infos",
+        "duration": "1h20min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -32,11 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h25",
-        "title": "Drag Race France : une seule sera la reine",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "22h00",
+        "title": "Tropiques criminels",
+        "subtitle": "Rivière-Pilote",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,18 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Malaisie",
+        "title": "Renaud Capuçon aux Chorégies d'Orange",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Espagne",
+        "start": "22h35",
+        "title": "Claude Lelouch, la vie en mieux",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h10min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +65,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "Total Control",
-        "subtitle": "Episode 2",
+        "start": "22h30",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Les jumeaux",
         "format": "Série TV",
-        "duration": "45min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
+        "start": "00h15",
         "title": "Total Control",
-        "subtitle": "Episode 3",
+        "subtitle": "Episode 5",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -87,18 +87,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Malo-de-Guersac",
-        "format": "Autre",
-        "duration": "1h",
-        "rebroadcast": true
+        "title": "14 Jours pour aller mieux",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Malo-de-Guersac",
-        "format": "Autre",
-        "duration": "45min",
+        "start": "22h55",
+        "title": "Arnaques !",
+        "format": "Culture Infos",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
