@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-07-24T06:30:15.542Z",
+  "fetchedAt": "2026-07-25T06:22:04.459Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "50mn Inside le mag",
-        "subtitle": "50' inside : Les 20 ans",
-        "format": "Culture Infos",
-        "duration": "1h10min",
+        "title": "Le grand concours",
+        "format": "Autre",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "50mn Inside le mag",
-        "subtitle": "50' inside : Les 20 ans",
-        "format": "Culture Infos",
-        "duration": "1h20min",
+        "start": "22h25",
+        "title": "Le grand concours",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -27,18 +25,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
+        "title": "L'image du jour",
+        "format": "Culture Infos",
         "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Tropiques criminels",
-        "subtitle": "Rivière-Pilote",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h19",
+        "title": "Les chaises musicales infernales",
+        "format": "Autre",
+        "duration": "32min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,16 +44,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Renaud Capuçon aux Chorégies d'Orange",
+        "title": "Echappées belles",
+        "subtitle": "Hong Kong, l'année du serpent",
         "format": "Culture Infos",
-        "duration": "1h35min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
-        "title": "Claude Lelouch, la vie en mieux",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "Italie, Florence et la Toscane",
         "format": "Culture Infos",
-        "duration": "1h10min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +64,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Les jumeaux",
-        "format": "Série TV",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "22h25",
+        "title": "Incendies, innover pour mieux lutter",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "00h15",
-        "title": "Total Control",
-        "subtitle": "Episode 5",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "23h20",
+        "title": "Quand la Terre se réchauffe",
+        "subtitle": "Mers et océans",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -87,16 +85,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "14 Jours pour aller mieux",
-        "format": "Cinéma",
-        "duration": "1h45min",
+        "title": "La grande fête des tubes 80, 90, 2000",
+        "format": "Autre",
+        "duration": "1h50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Arnaques !",
+        "start": "23h00",
+        "title": "Stars 80 vs stars 90 : la grande battle",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
