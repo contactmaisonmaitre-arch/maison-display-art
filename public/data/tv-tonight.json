@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-07-25T06:22:04.459Z",
+  "fetchedAt": "2026-07-26T06:40:42.700Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le grand concours",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "title": "Supercondriaque",
+        "format": "Cinéma",
+        "duration": "2h05min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "Le grand concours",
-        "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "23h15",
+        "title": "Esprits criminels",
+        "subtitle": "Les dessous de Las Vegas",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,17 +25,17 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h07",
         "title": "L'image du jour",
         "format": "Culture Infos",
-        "duration": "10min",
+        "duration": "3min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h19",
-        "title": "Les chaises musicales infernales",
-        "format": "Autre",
-        "duration": "32min",
+        "start": "22h55",
+        "title": "Magnificat",
+        "format": "Cinéma",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "error": null
@@ -44,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Hong Kong, l'année du serpent",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Le Nord, terre de vélo",
         "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "Italie, Florence et la Toscane",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Alpes, les cols mythiques du Tour de France",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -64,19 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h25",
-        "title": "Incendies, innover pour mieux lutter",
+        "start": "21h00",
+        "title": "Fame",
+        "format": "Cinéma",
+        "duration": "2h10min",
+        "rebroadcast": true
+      },
+      "next": {
+        "start": "23h10",
+        "title": "\"Dirty Dancing\" : Comédie romantique engagée",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": false
-      },
-      "next": {
-        "start": "23h20",
-        "title": "Quand la Terre se réchauffe",
-        "subtitle": "Mers et océans",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
       },
       "error": null
     },
@@ -85,16 +85,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "La grande fête des tubes 80, 90, 2000",
-        "format": "Autre",
-        "duration": "1h50min",
+        "title": "Capital",
+        "subtitle": "Campings, clubs, villages vacances : jusqu'où iront les nouvelles formules all inclusive ?",
+        "format": "Culture Infos",
+        "duration": "1h55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Stars 80 vs stars 90 : la grande battle",
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Capri, Positano, Ravello : enquête sur la côte amalfitaine",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "1h10min",
         "rebroadcast": true
       },
       "error": null
