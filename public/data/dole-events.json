@@ -1,7 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-07-20T08:25:40.712Z",
+  "fetchedAt": "2026-07-27T08:55:55.685Z",
   "facts": [
+    {
+      "emoji": "🎨",
+      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
+      "body": "Mercredi 01 juil. à Dole · Musée des Beaux-Arts."
+    },
     {
       "emoji": "📍",
       "title": "Dole L'Essentiel",
@@ -18,24 +23,34 @@
       "body": "Jeudi 02 juil. à Dole · Musée des Beaux-Arts."
     },
     {
-      "emoji": "🥖",
-      "title": "Barbecue et marché paysans",
-      "body": "Jeudi 02 juil. à Dole · Cours Saint Mauris, 16h30 à 22h30."
-    },
-    {
       "emoji": "📍",
       "title": "Montée au clocher",
       "body": "Jeudi 02 juil. à Dole · Collégiale Notre-Dame."
     },
     {
-      "emoji": "📍",
-      "title": "Dole au temps des sorcières",
-      "body": "Samedi 04 juil. à Dole · Dole Tourisme."
+      "emoji": "🎉",
+      "title": "Fête de Jouhe",
+      "body": "Samedi 04 juil. à Jouhe · Salle des Fêtes de Jouhe."
     },
     {
       "emoji": "📍",
       "title": "Les Estivales 2026",
       "body": "Samedi 04 juil. à Dole · Mesnils-Pasteur."
+    },
+    {
+      "emoji": "📍",
+      "title": "Montée au clocher au coucher du soleil",
+      "body": "Samedi 04 juil. à Dole · Collégiale Notre-Dame."
+    },
+    {
+      "emoji": "🎭",
+      "title": "Visite du théâtre",
+      "body": "Dimanche 05 juil. à Dole · Théâtre municipal."
+    },
+    {
+      "emoji": "📍",
+      "title": "Voyage autour du monde en vidéo",
+      "body": "Lundi 06 juil. à Dole · MJC - Maison des Jeunes et de la Culture."
     },
     {
       "emoji": "🍷",
@@ -48,39 +63,24 @@
       "body": "Mardi 07 juil. à Dole · 1 Rue du Général Béthouart."
     },
     {
-      "emoji": "🎨",
-      "title": "Visite guidée - Histoire de Dole",
-      "body": "Mercredi 08 juil. à Dole · Musée des Beaux-Arts."
-    },
-    {
       "emoji": "📍",
       "title": "Enquête Game",
       "body": "Mercredi 08 juil. à Dole · Grande Rue."
     },
     {
+      "emoji": "🎨",
+      "title": "Marché de producteurs et artisans de Rainans",
+      "body": "Dimanche 12 juil. à Rainans ·."
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier \" La fée éléctricité\"",
+      "body": "Lundi 13 juil. à Dole · Maison Natale de Louis Pasteur."
+    },
+    {
       "emoji": "📍",
       "title": "Ligne des Hirondelles",
       "body": "Lundi 13 juil. à Dole · Gare de Dole."
-    },
-    {
-      "emoji": "📍",
-      "title": "“ENVOLÉ LE VÉLO !”",
-      "body": "Mercredi 15 juil. à Dole · MJC - Maison des Jeunes et de la Culture."
-    },
-    {
-      "emoji": "📍",
-      "title": "Balades en calèche",
-      "body": "Mercredi 15 juil. à Dole · Avenue de Lahr."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - L'Art et la couleur",
-      "body": "Jeudi 16 juil. à Dole · Musée des Beaux-Arts."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Mon aprèm au musée - Tisser la toile, le vêtement dans l'art",
-      "body": "Mardi 21 juil. à Dole · Musée des Beaux-Arts."
     }
   ]
 }
