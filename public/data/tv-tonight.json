@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-07-27T07:37:55.725Z",
+  "fetchedAt": "2026-07-28T06:30:44.520Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Une ferme au paradis",
-        "format": "Série TV",
-        "duration": "55min",
+        "title": "Le transporteur 2",
+        "format": "Cinéma",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "Camping Paradis",
-        "subtitle": "Une ferme au paradis",
-        "format": "Série TV",
-        "duration": "55min",
+        "start": "22h55",
+        "title": "Le transporteur",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
@@ -33,12 +31,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Meurtres au paradis",
-        "subtitle": "Court-circuit",
+        "start": "00h45",
+        "title": "Fifteen-Love",
+        "subtitle": "Episode 3",
         "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +45,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Normandie, là où la terre recule",
-        "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "title": "La mariée était en noir",
+        "format": "Cinéma",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Alsace, un terroir en mouvement",
+        "start": "22h35",
+        "title": "C dans l'air",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +63,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h05",
-        "title": "Terence Hill, un cowboy pacifiste",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
-      },
-      "next": {
-        "start": "00h05",
-        "title": "Patrick Swayze : acteur et danseur par passion",
+        "start": "21h00",
+        "title": "La Méditerranée en feu",
         "format": "Culture Infos",
         "duration": "1h25min",
-        "rebroadcast": true
+        "rebroadcast": false
+      },
+      "next": {
+        "start": "22h25",
+        "title": "Pompiers d'Europe : Sur le front des incendies",
+        "format": "Culture Infos",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -87,16 +83,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "La roue de la fortune célébrités",
-        "format": "Autre",
-        "duration": "45min",
-        "rebroadcast": true
+        "title": "Zone interdite",
+        "subtitle": "Turquie, Albanie, Monténégro : enquête sur les nouvelles destinations stars de la Méditerranée",
+        "format": "Culture Infos",
+        "duration": "1h50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "La roue de la fortune célébrités",
-        "format": "Autre",
-        "duration": "1h35min",
+        "start": "23h00",
+        "title": "Zone interdite",
+        "subtitle": "Grands départs : joies et galères sur l'autoroute des vacances",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
