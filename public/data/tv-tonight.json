@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-07-28T06:30:44.520Z",
+  "fetchedAt": "2026-07-29T06:35:39.358Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le transporteur 2",
+        "title": "La très très grande classe",
         "format": "Cinéma",
-        "duration": "1h45min",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h55",
-        "title": "Le transporteur",
-        "format": "Cinéma",
-        "duration": "1h50min",
+        "start": "23h00",
+        "title": "New York Unité Spéciale",
+        "subtitle": "Erreur du passé",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -24,18 +25,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "21h10",
+        "title": "Code Rouge",
+        "subtitle": "Episode 1",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "00h45",
-        "title": "Fifteen-Love",
-        "subtitle": "Episode 3",
+        "start": "21h55",
+        "title": "Code Rouge",
+        "subtitle": "Episode 2",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": false
       },
       "error": null
@@ -45,16 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "La mariée était en noir",
-        "format": "Cinéma",
-        "duration": "1h35min",
+        "title": "Nus et culottés",
+        "subtitle": "Objectif Mont Saint-Michel",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
-        "title": "C dans l'air",
+        "start": "22h50",
+        "title": "Nus et culottés",
+        "subtitle": "Objectif Sicile",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -63,17 +67,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "La Méditerranée en feu",
+        "start": "23h00",
+        "title": "Lady Gaga : Mes chansons. Ma vie",
         "format": "Culture Infos",
-        "duration": "1h25min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Pompiers d'Europe : Sur le front des incendies",
+        "start": "23h55",
+        "title": "Dua Lipa : Le futur de la pop",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -83,19 +87,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Turquie, Albanie, Monténégro : enquête sur les nouvelles destinations stars de la Méditerranée",
-        "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": false
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Zone interdite",
-        "subtitle": "Grands départs : joies et galères sur l'autoroute des vacances",
-        "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "22h10",
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "error": null
     }
