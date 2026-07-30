@@ -1,22 +1,21 @@
 {
-  "fetchedAt": "2026-07-29T06:35:39.358Z",
+  "fetchedAt": "2026-07-30T06:32:26.829Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "La très très grande classe",
+        "title": "Thor : Love and Thunder",
         "format": "Cinéma",
-        "duration": "1h50min",
+        "duration": "2h05min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "New York Unité Spéciale",
-        "subtitle": "Erreur du passé",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "23h15",
+        "title": "The Flash",
+        "format": "Cinéma",
+        "duration": "2h30min",
         "rebroadcast": true
       },
       "error": null
@@ -25,19 +24,17 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h10",
-        "title": "Code Rouge",
-        "subtitle": "Episode 1",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Code Rouge",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "23h40",
+        "title": "Drag Race France : une seule sera la reine",
+        "format": "Autre",
+        "duration": "1h40min",
         "rebroadcast": false
       },
       "error": null
@@ -47,18 +44,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Nus et culottés",
-        "subtitle": "Objectif Mont Saint-Michel",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Kazakhstan, au coeur de l'hiver",
         "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Nus et culottés",
-        "subtitle": "Objectif Sicile",
+        "start": "21h50",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Guatemala",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +64,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h00",
-        "title": "Lady Gaga : Mes chansons. Ma vie",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "start": "21h25",
+        "title": "Mum",
+        "subtitle": "Février",
+        "format": "Série TV",
+        "duration": "25min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h55",
-        "title": "Dua Lipa : Le futur de la pop",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "start": "22h20",
+        "title": "Mum",
+        "subtitle": "Août",
+        "format": "Série TV",
+        "duration": "30min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -87,17 +86,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "J'en connais un rayon",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Gervais",
         "format": "Autre",
-        "duration": "1h",
+        "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h10",
-        "title": "J'en connais un rayon",
+        "start": "22h05",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Gervais",
         "format": "Autre",
-        "duration": "1h45min",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     }
