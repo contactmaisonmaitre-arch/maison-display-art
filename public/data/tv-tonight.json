@@ -1,21 +1,23 @@
 {
-  "fetchedAt": "2026-07-30T06:32:26.829Z",
+  "fetchedAt": "2026-07-31T06:49:00.064Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Thor : Love and Thunder",
-        "format": "Cinéma",
-        "duration": "2h05min",
+        "title": "Camping Paradis",
+        "subtitle": "Salsa au paradis",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h15",
-        "title": "The Flash",
-        "format": "Cinéma",
-        "duration": "2h30min",
+        "start": "22h05",
+        "title": "Camping Paradis",
+        "subtitle": "Salsa au paradis",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -31,11 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "Drag Race France : une seule sera la reine",
-        "format": "Autre",
-        "duration": "1h40min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "Simon Coleman",
+        "subtitle": "Simon Coleman",
+        "format": "Série TV",
+        "duration": "1h34min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -44,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Kazakhstan, au coeur de l'hiver",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Cambodge, des sourires à toute épreuve",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Guatemala",
+        "start": "21h55",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Sibérie, le désert de glace",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -64,21 +67,14 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h25",
-        "title": "Mum",
-        "subtitle": "Février",
+        "start": "22h25",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Vicky",
         "format": "Série TV",
-        "duration": "25min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
-      "next": {
-        "start": "22h20",
-        "title": "Mum",
-        "subtitle": "Août",
-        "format": "Série TV",
-        "duration": "30min",
-        "rebroadcast": true
-      },
+      "next": null,
       "error": null
     },
     {
@@ -86,19 +82,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Gervais",
-        "format": "Autre",
-        "duration": "55min",
+        "title": "Les Crevettes Pailletées",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Gervais",
-        "format": "Autre",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h00",
+        "title": "Kaamelott",
+        "format": "Série TV",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     }
