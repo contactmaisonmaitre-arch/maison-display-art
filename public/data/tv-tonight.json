@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-07-31T06:49:00.064Z",
+  "fetchedAt": "2026-08-01T06:33:59.555Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Salsa au paradis",
-        "format": "Série TV",
-        "duration": "55min",
+        "title": "Le grand concours",
+        "subtitle": "Spécial 20 ans",
+        "format": "Autre",
+        "duration": "1h15min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "Camping Paradis",
-        "subtitle": "Salsa au paradis",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h25",
+        "title": "Le grand concours",
+        "subtitle": "Spécial 20 ans",
+        "format": "Autre",
+        "duration": "1h40min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -26,19 +26,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "21h05",
+        "title": "Immeuble partagé",
+        "subtitle": "Recyclage délicat",
+        "format": "Série TV",
+        "duration": "7min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Simon Coleman",
-        "subtitle": "Simon Coleman",
-        "format": "Série TV",
-        "duration": "1h34min",
-        "rebroadcast": true
+        "start": "23h15",
+        "title": "Les chaises musicales infernales",
+        "format": "Autre",
+        "duration": "30min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Cambodge, des sourires à toute épreuve",
+        "title": "Echappées belles",
+        "subtitle": "Le grand spectacle du Vercors",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h55",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Sibérie, le désert de glace",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "Martinique, l'Outre-mer au coeur",
         "format": "Culture Infos",
-        "duration": "45min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -67,14 +67,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h25",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Vicky",
-        "format": "Série TV",
-        "duration": "1h35min",
+        "start": "21h45",
+        "title": "Einstein-Hawking, l'Univers dévoilé",
+        "subtitle": "Episode 2",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": true
       },
-      "next": null,
+      "next": {
+        "start": "22h40",
+        "title": "Eclipse totale au-dessus de l'Europe",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": false
+      },
       "error": null
     },
     {
@@ -82,17 +88,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Les Crevettes Pailletées",
-        "format": "Cinéma",
-        "duration": "1h50min",
+        "title": "En famille",
+        "subtitle": "Des vacances bien corsées",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Kaamelott",
+        "start": "22h00",
+        "title": "En famille",
+        "subtitle": "Des vacances bien corsées",
         "format": "Série TV",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     }
