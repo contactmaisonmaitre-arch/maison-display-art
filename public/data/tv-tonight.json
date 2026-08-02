@@ -1,24 +1,23 @@
 {
-  "fetchedAt": "2026-08-01T06:33:59.555Z",
+  "fetchedAt": "2026-08-02T06:37:46.596Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le grand concours",
-        "subtitle": "Spécial 20 ans",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": true
+        "title": "Madame Web",
+        "format": "Cinéma",
+        "duration": "2h15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Le grand concours",
-        "subtitle": "Spécial 20 ans",
-        "format": "Autre",
-        "duration": "1h40min",
-        "rebroadcast": false
+        "start": "23h25",
+        "title": "Esprits criminels",
+        "subtitle": "Histoires de famille",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -26,18 +25,17 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h05",
-        "title": "Immeuble partagé",
-        "subtitle": "Recyclage délicat",
-        "format": "Série TV",
-        "duration": "7min",
+        "start": "21h08",
+        "title": "L'image du jour",
+        "format": "Culture Infos",
+        "duration": "2min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h15",
-        "title": "Les chaises musicales infernales",
-        "format": "Autre",
-        "duration": "30min",
+        "start": "22h45",
+        "title": "Le Théorème de Marguerite",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": false
       },
       "error": null
@@ -47,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Le grand spectacle du Vercors",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Les couleurs fauves de Collioure à Perpignan",
         "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "Martinique, l'Outre-mer au coeur",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Massif central, dans les pas de Montaigne",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -67,19 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h45",
-        "title": "Einstein-Hawking, l'Univers dévoilé",
-        "subtitle": "Episode 2",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "21h00",
+        "title": "Recherche Susan désespérément",
+        "format": "Cinéma",
+        "duration": "1h40min",
         "rebroadcast": true
       },
       "next": {
         "start": "22h40",
-        "title": "Eclipse totale au-dessus de l'Europe",
+        "title": "Madonna : Reine éternelle de la pop",
         "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -88,18 +85,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "En famille",
-        "subtitle": "Des vacances bien corsées",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "title": "Capital",
+        "subtitle": "Oléron, Ré, Belle-Ile : le match des îles est lancé !",
+        "format": "Culture Infos",
+        "duration": "1h55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "En famille",
-        "subtitle": "Des vacances bien corsées",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Monsters Cars : au coeur des shows de l'extrême",
+        "format": "Culture Infos",
+        "duration": "1h10min",
         "rebroadcast": true
       },
       "error": null
