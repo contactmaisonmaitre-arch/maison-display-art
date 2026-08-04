@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-08-03T07:32:42.461Z",
+  "fetchedAt": "2026-08-04T06:31:27.050Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Les bleus au Maroc",
-        "format": "Série TV",
-        "duration": "50min",
+        "title": "Le Transporteur 3",
+        "format": "Cinéma",
+        "duration": "2h",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Camping Paradis",
-        "subtitle": "Les bleus au Maroc",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "23h10",
+        "title": "Le transporteur 2",
+        "format": "Cinéma",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "error": null
@@ -33,11 +31,10 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Meurtres au paradis",
-        "subtitle": "Question d'avenir",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "22h55",
+        "title": "Bungalow 21",
+        "format": "Culture Infos",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "error": null
@@ -47,18 +44,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Cévennes, face aux colères du ciel",
-        "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "title": "La gifle",
+        "format": "Cinéma",
+        "duration": "1h40min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Sale temps pour la planète",
-        "subtitle": "Corse, les possibilités d'une île",
+        "start": "22h40",
+        "title": "I Am Martin Parr, le photographe so British",
         "format": "Culture Infos",
-        "duration": "1h",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +62,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h45",
-        "title": "6 morts dans la nuit : \"De sang-froid\", Truman Capote",
+        "start": "22h35",
+        "title": "Le cas Oppenheimer",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h40",
-        "title": "Lioness",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": false
+        "start": "01h25",
+        "title": "Planète finance",
+        "subtitle": "La course aux matières premières",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -87,16 +83,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Permis de conduire : le grand test",
-        "format": "Autre",
-        "duration": "1h15min",
+        "title": "Zone interdite",
+        "subtitle": "Plages, fêtes et traditions : un été au coeur du Pays basque",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "Permis de conduire : le grand test",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "23h00",
+        "title": "Zone interdite",
+        "subtitle": "Logement, courses, vacances : ils sont les rois de la débrouille",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
