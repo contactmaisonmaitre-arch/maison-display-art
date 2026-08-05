@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-08-04T06:31:27.050Z",
+  "fetchedAt": "2026-08-05T06:32:47.296Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le Transporteur 3",
+        "title": "Sirènes",
         "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": true
+        "duration": "1h50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h10",
-        "title": "Le transporteur 2",
-        "format": "Cinéma",
-        "duration": "1h45min",
+        "start": "23h00",
+        "title": "New York Unité Spéciale",
+        "subtitle": "La maison de poupées",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -31,11 +32,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Bungalow 21",
-        "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "21h55",
+        "title": "Code Rouge",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -44,16 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "La gifle",
-        "format": "Cinéma",
-        "duration": "1h40min",
-        "rebroadcast": true
-      },
-      "next": {
-        "start": "22h40",
-        "title": "I Am Martin Parr, le photographe so British",
+        "title": "Au bout c'est la mer",
+        "subtitle": "Le Nil (Egypte)",
         "format": "Culture Infos",
         "duration": "50min",
+        "rebroadcast": false
+      },
+      "next": {
+        "start": "21h50",
+        "title": "Au bout c'est la mer",
+        "subtitle": "Le fleuve Pô (Italie)",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -62,19 +66,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h35",
-        "title": "Le cas Oppenheimer",
-        "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "La prisonnière de Bordeaux",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "01h25",
-        "title": "Planète finance",
-        "subtitle": "La course aux matières premières",
+        "start": "22h45",
+        "title": "We Want the Funk !",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "duration": "1h20min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -83,19 +86,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Plages, fêtes et traditions : un été au coeur du Pays basque",
-        "format": "Culture Infos",
-        "duration": "1h50min",
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "1h",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Zone interdite",
-        "subtitle": "Logement, courses, vacances : ils sont les rois de la débrouille",
-        "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "22h10",
+        "title": "J'en connais un rayon",
+        "format": "Autre",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     }
