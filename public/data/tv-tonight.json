@@ -1,21 +1,23 @@
 {
-  "fetchedAt": "2026-08-06T06:35:42.901Z",
+  "fetchedAt": "2026-08-07T05:43:44.461Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le jeu",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "title": "Détox ta maison, 7 jours pour tout ranger",
+        "subtitle": "Mona et Bastien",
+        "format": "Autre",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Coup de foudre à Notting Hill",
-        "format": "Cinéma",
-        "duration": "2h15min",
+        "start": "22h40",
+        "title": "Détox ta maison, 7 jours pour tout ranger",
+        "subtitle": "Mauricio et ses filles",
+        "format": "Autre",
+        "duration": "1h40min",
         "rebroadcast": true
       },
       "error": null
@@ -31,12 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h15",
-        "title": "Drag Race France : une seule sera la reine",
-        "subtitle": "Pop couture",
-        "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "Capitaine Marleau",
+        "subtitle": "La nuit de la lune rousse",
+        "format": "Série TV",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,16 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Monténégro",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Mongolie, les nomades des sommets",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": false
       },
       "next": {
         "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Zimbabwe - Zambie",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Inde & Bangladesh, les colères du fleuve Brahmapoutre",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": true
@@ -65,40 +67,31 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h25",
-        "title": "Mum",
-        "subtitle": "Avril",
+        "start": "22h30",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Lili",
         "format": "Série TV",
-        "duration": "25min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
-      "next": {
-        "start": "22h20",
-        "title": "Mum",
-        "subtitle": "Juillet",
-        "format": "Série TV",
-        "duration": "25min",
-        "rebroadcast": true
-      },
+      "next": null,
       "error": null
     },
     {
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Sarlat-la-Canéda",
-        "format": "Autre",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "21h05",
+        "title": "Miraculous : Le film",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Sarlat-la-Canéda",
-        "format": "Autre",
-        "duration": "50min",
+        "start": "22h50",
+        "title": "Disney, Harry Potter, Jurassic Park : la vie rêvée des Français d'Orlando",
+        "format": "Culture Infos",
+        "duration": "1h40min",
         "rebroadcast": true
       },
       "error": null
