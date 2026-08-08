@@ -1,24 +1,22 @@
 {
-  "fetchedAt": "2026-08-07T05:43:44.461Z",
+  "fetchedAt": "2026-08-08T05:01:47.288Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Détox ta maison, 7 jours pour tout ranger",
-        "subtitle": "Mona et Bastien",
+        "title": "Le dernier cercle",
         "format": "Autre",
-        "duration": "1h30min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Détox ta maison, 7 jours pour tout ranger",
-        "subtitle": "Mauricio et ses filles",
+        "start": "22h25",
+        "title": "Le dernier cercle",
         "format": "Autre",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -27,18 +25,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "title": "L'image du jour",
+        "format": "Culture Infos",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Capitaine Marleau",
-        "subtitle": "La nuit de la lune rousse",
-        "format": "Série TV",
-        "duration": "1h35min",
-        "rebroadcast": true
+        "start": "23h25",
+        "title": "Fort Boyard",
+        "subtitle": "Par Domingo",
+        "format": "Autre",
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Mongolie, les nomades des sommets",
+        "title": "Echappées belles",
+        "subtitle": "Bolivie, le défi des sommets",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Inde & Bangladesh, les colères du fleuve Brahmapoutre",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "Catalogne, l'Espagne inspirée",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -68,31 +66,37 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "22h30",
+        "title": "\"Carmen\" au Festival de Salzbourg",
+        "format": "Culture Infos",
+        "duration": "3h15min",
+        "rebroadcast": false
+      },
+      "next": {
+        "start": "00h00",
         "title": "Meurtres à Sandhamn",
-        "subtitle": "Lili",
+        "subtitle": "Olivia",
         "format": "Série TV",
         "duration": "1h30min",
         "rebroadcast": true
       },
-      "next": null,
       "error": null
     },
     {
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h05",
-        "title": "Miraculous : Le film",
-        "format": "Cinéma",
-        "duration": "1h45min",
+        "start": "22h30",
+        "title": "Scènes de ménages",
+        "format": "Série TV",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Disney, Harry Potter, Jurassic Park : la vie rêvée des Français d'Orlando",
-        "format": "Culture Infos",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "start": "23h40",
+        "title": "Scènes de ménages",
+        "format": "Série TV",
+        "duration": "2h50min",
+        "rebroadcast": false
       },
       "error": null
     }
