@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-08-08T05:01:47.288Z",
+  "fetchedAt": "2026-08-09T05:10:17.314Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le dernier cercle",
-        "format": "Autre",
-        "duration": "1h15min",
+        "title": "Ducobu passe au vert",
+        "format": "Cinéma",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Le dernier cercle",
-        "format": "Autre",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "start": "22h40",
+        "title": "La très très grande classe",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,19 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h08",
         "title": "L'image du jour",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "2min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h25",
-        "title": "Fort Boyard",
-        "subtitle": "Par Domingo",
-        "format": "Autre",
-        "duration": "1h45min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "La revanche des Crevettes pailletées",
+        "format": "Cinéma",
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,18 +44,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Bolivie, le défi des sommets",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Les 3 corniches de la French Riviera",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "Catalogne, l'Espagne inspirée",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Au fil du Lot",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +64,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "\"Carmen\" au Festival de Salzbourg",
-        "format": "Culture Infos",
-        "duration": "3h15min",
-        "rebroadcast": false
+        "start": "21h00",
+        "title": "Studio 54",
+        "format": "Cinéma",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h00",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Olivia",
-        "format": "Série TV",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "Studio 54 : Un lieu de liberté et d'excès",
+        "format": "Culture Infos",
+        "duration": "1h40min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,18 +83,20 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h30",
-        "title": "Scènes de ménages",
-        "format": "Série TV",
-        "duration": "1h10min",
+        "start": "21h10",
+        "title": "Capital",
+        "subtitle": "Fraîcheur et sensations fortes : le jackpot des parcs aquatiques !",
+        "format": "Culture Infos",
+        "duration": "1h55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "Scènes de ménages",
-        "format": "Série TV",
-        "duration": "2h50min",
-        "rebroadcast": false
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Les incroyables vacances des Chinois en Chine",
+        "format": "Culture Infos",
+        "duration": "1h20min",
+        "rebroadcast": true
       },
       "error": null
     }
