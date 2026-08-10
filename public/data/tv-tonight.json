@@ -1,21 +1,23 @@
 {
-  "fetchedAt": "2026-08-09T05:10:17.314Z",
+  "fetchedAt": "2026-08-10T05:36:46.837Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Ducobu passe au vert",
-        "format": "Cinéma",
-        "duration": "1h30min",
-        "rebroadcast": false
+        "title": "Camping Paradis",
+        "subtitle": "Magie au Paradis",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h40",
-        "title": "La très très grande classe",
-        "format": "Cinéma",
-        "duration": "1h55min",
+        "start": "22h05",
+        "title": "Camping Paradis",
+        "subtitle": "Magie au Paradis",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -24,17 +26,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h08",
-        "title": "L'image du jour",
-        "format": "Culture Infos",
-        "duration": "2min",
+        "start": "21h00",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "La revanche des Crevettes pailletées",
-        "format": "Cinéma",
-        "duration": "1h50min",
+        "start": "22h05",
+        "title": "Meurtres au paradis",
+        "subtitle": "La liste de souhaits",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -44,16 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "Les 3 corniches de la French Riviera",
+        "title": "Les avions du bout du monde",
+        "subtitle": "Québec, l'omnibus des airs",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": true
       },
       "next": {
         "start": "21h50",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "Au fil du Lot",
+        "title": "Les avions du bout du monde",
+        "subtitle": "Papouasie-Nouvelle-Guinée, le samaritain des airs",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
@@ -64,18 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Studio 54",
-        "format": "Cinéma",
-        "duration": "1h35min",
+        "start": "22h30",
+        "title": "Enzo Ferrari, le rouge et le noir",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
-        "title": "Studio 54 : Un lieu de liberté et d'excès",
-        "format": "Culture Infos",
-        "duration": "1h40min",
-        "rebroadcast": false
+        "start": "23h25",
+        "title": "Wakefield",
+        "subtitle": "Episode 1",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -84,19 +88,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Capital",
-        "subtitle": "Fraîcheur et sensations fortes : le jackpot des parcs aquatiques !",
-        "format": "Culture Infos",
-        "duration": "1h55min",
-        "rebroadcast": false
+        "title": "QI : le grand test",
+        "format": "Autre",
+        "duration": "1h25min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h05",
-        "title": "Enquête exclusive",
-        "subtitle": "Les incroyables vacances des Chinois en Chine",
-        "format": "Culture Infos",
-        "duration": "1h20min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "QI : le grand test",
+        "format": "Autre",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     }
