@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-08-11T05:13:41.760Z",
+  "fetchedAt": "2026-08-12T05:40:23.477Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le Transporteur : Héritage",
+        "title": "8 Rue de l'Humanité",
         "format": "Cinéma",
-        "duration": "1h50min",
+        "duration": "2h10min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h00",
-        "title": "Le Transporteur 3",
-        "format": "Cinéma",
-        "duration": "2h",
+        "start": "23h20",
+        "title": "New York Unité Spéciale",
+        "subtitle": "Quatre flics en colère",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -25,18 +26,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Athlétisme : Championnats d'Europe",
-        "subtitle": "Championnats d'Europe. 2e journée.",
-        "format": "Sport",
-        "duration": "2h35min",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h35",
-        "title": "Gims à Paris la Défense Arena : le concert événement",
-        "format": "Culture Infos",
-        "duration": "2h10min",
-        "rebroadcast": false
+        "start": "22h00",
+        "title": "L'Eclipse",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -45,16 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Fenêtre sur cour",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "title": "Au bout c'est la mer",
+        "subtitle": "Hudson (Etats-Unis)",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "François Truffaut, le scénario de ma vie",
+        "start": "21h50",
+        "title": "Au bout c'est la mer",
+        "subtitle": "Fleuve Shannon (Irlande)",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -63,18 +66,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h45",
-        "title": "Les faussaires de la Bible",
-        "subtitle": "Episode 2",
+        "start": "23h05",
+        "title": "Eclipse totale au-dessus de l'Europe",
         "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Les secrets révélés de la Bible",
+        "start": "00h20",
+        "title": "La bataille de Jérusalem",
         "format": "Culture Infos",
-        "duration": "1h50min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -84,19 +86,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Concours loufoques, terroir et bonnes affaires : les secrets des plus grandes foires de France",
+        "title": "On n'est pas d'accord !",
         "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Zone interdite",
-        "subtitle": "Invasion de touristes : le grand ras-le-bol des locaux",
+        "start": "22h05",
+        "title": "On n'est pas d'accord !",
         "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     }
