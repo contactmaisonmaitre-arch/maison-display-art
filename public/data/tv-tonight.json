@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-08-12T05:40:23.477Z",
+  "fetchedAt": "2026-08-13T05:43:15.738Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "8 Rue de l'Humanité",
-        "format": "Cinéma",
-        "duration": "2h10min",
+        "title": "Monsieur Parizot",
+        "subtitle": "Episode 1",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "New York Unité Spéciale",
-        "subtitle": "Quatre flics en colère",
+        "start": "22h00",
+        "title": "Monsieur Parizot",
+        "subtitle": "Episode 1",
         "format": "Série TV",
-        "duration": "45min",
+        "duration": "1h10min",
         "rebroadcast": true
       },
       "error": null
@@ -26,18 +27,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "title": "Athlétisme : Championnats d'Europe",
+        "subtitle": "Championnats d'Europe. 4e journée.",
+        "format": "Sport",
+        "duration": "2h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "L'Eclipse",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "start": "23h35",
+        "title": "Drag Race France : une seule sera la reine",
+        "subtitle": "Makeover, la maison du drag",
+        "format": "Autre",
+        "duration": "2h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,16 +48,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Au bout c'est la mer",
-        "subtitle": "Hudson (Etats-Unis)",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Corée du Sud",
         "format": "Culture Infos",
         "duration": "50min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "next": {
         "start": "21h50",
-        "title": "Au bout c'est la mer",
-        "subtitle": "Fleuve Shannon (Irlande)",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Ethiopie",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": true
@@ -66,17 +68,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h05",
-        "title": "Eclipse totale au-dessus de l'Europe",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "21h25",
+        "title": "Mum",
+        "subtitle": "Mardi",
+        "format": "Série TV",
+        "duration": "30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h20",
-        "title": "La bataille de Jérusalem",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "22h20",
+        "title": "Mum",
+        "subtitle": "Jeudi",
+        "format": "Série TV",
+        "duration": "35min",
         "rebroadcast": true
       },
       "error": null
@@ -86,17 +90,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "On n'est pas d'accord !",
-        "format": "Culture Infos",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Marseille",
+        "format": "Autre",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "next": {
         "start": "22h05",
-        "title": "On n'est pas d'accord !",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Marseille",
+        "format": "Autre",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     }
