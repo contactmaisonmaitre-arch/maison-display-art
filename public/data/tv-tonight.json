@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-08-13T05:43:15.738Z",
+  "fetchedAt": "2026-08-14T05:40:24.005Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Monsieur Parizot",
-        "subtitle": "Episode 1",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "title": "Une famille en or",
+        "subtitle": "Ruquier vs Bernier",
+        "format": "Autre",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Monsieur Parizot",
-        "subtitle": "Episode 1",
-        "format": "Série TV",
+        "start": "22h20",
+        "title": "Une famille en or",
+        "subtitle": "Ferrari vs Tsamere",
+        "format": "Autre",
         "duration": "1h10min",
         "rebroadcast": true
       },
@@ -27,19 +27,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Athlétisme : Championnats d'Europe",
-        "subtitle": "Championnats d'Europe. 4e journée.",
-        "format": "Sport",
-        "duration": "2h35min",
+        "title": "Mot de passe : le duel",
+        "format": "Autre",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h35",
-        "title": "Drag Race France : une seule sera la reine",
-        "subtitle": "Makeover, la maison du drag",
-        "format": "Autre",
-        "duration": "2h15min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "Capitaine Marleau",
+        "subtitle": "A ciel ouvert",
+        "format": "Série TV",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -48,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Corée du Sud",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Colombie, la conquête d'une nouvelle vie",
         "format": "Culture Infos",
         "duration": "50min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "next": {
         "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Ethiopie",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Bhoutan, le bonheur à tout prix",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -68,19 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h25",
-        "title": "Mum",
-        "subtitle": "Mardi",
+        "start": "22h25",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Esther",
         "format": "Série TV",
-        "duration": "30min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h20",
-        "title": "Mum",
-        "subtitle": "Jeudi",
-        "format": "Série TV",
-        "duration": "35min",
+        "start": "23h55",
+        "title": "Innommable : l'affaire Dutroux",
+        "subtitle": "Disparues",
+        "format": "Culture Infos",
+        "duration": "1h",
         "rebroadcast": true
       },
       "error": null
@@ -90,18 +89,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Marseille",
-        "format": "Autre",
-        "duration": "55min",
+        "title": "La Chambre des merveilles",
+        "format": "Cinéma",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Marseille",
+        "start": "22h55",
+        "title": "Le maillon faible",
         "format": "Autre",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
