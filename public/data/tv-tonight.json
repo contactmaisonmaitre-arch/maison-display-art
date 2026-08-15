@@ -1,24 +1,22 @@
 {
-  "fetchedAt": "2026-08-14T05:40:24.005Z",
+  "fetchedAt": "2026-08-15T04:36:00.112Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Une famille en or",
-        "subtitle": "Ruquier vs Bernier",
+        "title": "Le dernier cercle",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "Une famille en or",
-        "subtitle": "Ferrari vs Tsamere",
+        "start": "22h15",
+        "title": "Le dernier cercle",
         "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": true
+        "duration": "1h45min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -27,17 +25,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
         "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "title": "Athlétisme : Championnats d'Europe",
+        "subtitle": "Championnats d'Europe. 6e journée.",
+        "format": "Sport",
+        "duration": "2h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Capitaine Marleau",
-        "subtitle": "A ciel ouvert",
-        "format": "Série TV",
-        "duration": "1h35min",
+        "start": "23h35",
+        "title": "A corps perdus",
+        "format": "Culture Infos",
+        "duration": "1h40min",
         "rebroadcast": true
       },
       "error": null
@@ -47,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Colombie, la conquête d'une nouvelle vie",
+        "title": "Echappées belles",
+        "subtitle": "Spéciale Martinique gourmande",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Bhoutan, le bonheur à tout prix",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "Corse du sud, de village en village",
         "format": "Culture Infos",
-        "duration": "45min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -68,19 +66,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "22h25",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Esther",
-        "format": "Série TV",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "title": "Sécheresses et inondations, chercheurs en action",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h55",
-        "title": "Innommable : l'affaire Dutroux",
-        "subtitle": "Disparues",
+        "start": "23h15",
+        "title": "Wagner : les pouvoirs du Ring - 150 ans de la création de \"L'anneau du Nibelung\"",
         "format": "Culture Infos",
         "duration": "1h",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     },
@@ -88,18 +84,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "La Chambre des merveilles",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "start": "22h30",
+        "title": "Scènes de ménages",
+        "format": "Série TV",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "Le maillon faible",
-        "format": "Autre",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h40",
+        "title": "Scènes de ménages",
+        "format": "Série TV",
+        "duration": "1h20min",
+        "rebroadcast": false
       },
       "error": null
     }
