@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-08-15T04:36:00.112Z",
+  "fetchedAt": "2026-08-16T04:39:59.704Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le dernier cercle",
-        "format": "Autre",
-        "duration": "1h05min",
+        "title": "Blue Beetle",
+        "format": "Cinéma",
+        "duration": "2h30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h15",
-        "title": "Le dernier cercle",
-        "format": "Autre",
-        "duration": "1h45min",
-        "rebroadcast": false
+        "start": "23h40",
+        "title": "Thor : Love and Thunder",
+        "format": "Cinéma",
+        "duration": "2h05min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -26,17 +26,17 @@
       "hero": {
         "start": "21h00",
         "title": "Athlétisme : Championnats d'Europe",
-        "subtitle": "Championnats d'Europe. 6e journée.",
+        "subtitle": "Championnats d'Europe. 7e jour.",
         "format": "Sport",
         "duration": "2h35min",
         "rebroadcast": false
       },
       "next": {
         "start": "23h35",
-        "title": "A corps perdus",
-        "format": "Culture Infos",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "title": "L'esprit Coubertin",
+        "format": "Cinéma",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -45,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Spéciale Martinique gourmande",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "La vallée des rois de France, de Chambord à Chinon",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "Corse du sud, de village en village",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Pyrénées, le sentier des contrebandiers",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -65,18 +65,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h25",
-        "title": "Sécheresses et inondations, chercheurs en action",
-        "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "start": "21h00",
+        "title": "Rendez-vous avec la mort",
+        "format": "Cinéma",
+        "duration": "1h40min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h15",
-        "title": "Wagner : les pouvoirs du Ring - 150 ans de la création de \"L'anneau du Nibelung\"",
+        "start": "22h40",
+        "title": "Couples mythiques du cinéma",
+        "subtitle": "Lauren Bacall et Humphrey Bogart",
         "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -84,18 +85,20 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h30",
-        "title": "Scènes de ménages",
-        "format": "Série TV",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "21h10",
+        "title": "Capital",
+        "subtitle": "Low-cost ou grand luxe, le business XXL des camping-cars",
+        "format": "Culture Infos",
+        "duration": "2h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h40",
-        "title": "Scènes de ménages",
-        "format": "Série TV",
-        "duration": "1h20min",
-        "rebroadcast": false
+        "start": "23h10",
+        "title": "Enquête exclusive",
+        "subtitle": "De la Bretagne à la Côte d'Azur : les nouvelles guerres du littoral",
+        "format": "Culture Infos",
+        "duration": "1h10min",
+        "rebroadcast": true
       },
       "error": null
     }
