@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-08-18T04:39:36.069Z",
+  "fetchedAt": "2026-08-19T04:41:29.261Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "The Marvels",
+        "title": "Ducobu président !",
         "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": false
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h05",
-        "title": "Le Transporteur : Héritage",
-        "format": "Cinéma",
-        "duration": "1h50min",
+        "start": "22h45",
+        "title": "New York Unité Spéciale",
+        "subtitle": "Le loup et l'agneau",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": true
       },
       "error": null
@@ -31,11 +32,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Rendez-vous en terre inconnue",
-        "subtitle": "Avec Kendji Girac chez les Turkana",
-        "format": "Culture Infos",
-        "duration": "1h38min",
+        "start": "22h10",
+        "title": "Les invisibles",
+        "subtitle": "Cassel",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -45,16 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "La grande évasion",
-        "format": "Cinéma",
-        "duration": "2h50min",
-        "rebroadcast": true
+        "title": "Au bout c'est la mer",
+        "subtitle": "Elbe (Allemagne)",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h50",
-        "title": "C dans l'air",
+        "start": "21h50",
+        "title": "Au bout c'est la mer",
+        "subtitle": "Le fleuve Uruguay",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -64,16 +67,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "22h35",
-        "title": "La Russie entre propagande et résistance",
-        "format": "Culture Infos",
-        "duration": "1h25min",
-        "rebroadcast": false
+        "title": "Youth",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "00h40",
-        "title": "Armin Mueller-Stahl : De Berlin à Hollywood",
+        "start": "00h00",
+        "title": "Bélarus, tes résistantes",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "error": null
@@ -83,19 +86,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Surtourisme, pollution : menace sur les perles de la Méditerranée",
+        "title": "A quel prix ?",
         "format": "Culture Infos",
-        "duration": "1h40min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Zone interdite",
-        "subtitle": "Gastronomie, chaleur humaine et traditions : pourquoi le Nord est-il si populaire ?",
+        "start": "22h05",
+        "title": "A quel prix ?",
         "format": "Culture Infos",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     }
