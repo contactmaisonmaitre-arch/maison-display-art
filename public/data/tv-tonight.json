@@ -1,24 +1,24 @@
 {
-  "fetchedAt": "2026-08-20T04:41:47.449Z",
+  "fetchedAt": "2026-08-21T04:43:20.581Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Monsieur Parizot",
-        "subtitle": "Le maître du crime",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "title": "Les 12 coups",
+        "subtitle": "Le combat des maîtres",
+        "format": "Autre",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Monsieur Parizot",
-        "subtitle": "Le maître du crime",
-        "format": "Série TV",
-        "duration": "1h05min",
-        "rebroadcast": true
+        "start": "22h25",
+        "title": "Les 12 coups",
+        "subtitle": "Le combat des maîtres",
+        "format": "Autre",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -33,12 +33,12 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "23h30",
-        "title": "Drag Race France : une seule sera la reine",
-        "subtitle": "Roast, the Wedding of Daphné and Loïc",
-        "format": "Autre",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "Capitaine Marleau",
+        "subtitle": "Au nom du fils",
+        "format": "Série TV",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -47,16 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Istanbul, au fil du Bosphore",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Vanuatu, envers et contre tout",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Des trains pas comme les autres",
-        "subtitle": "Suisse",
+        "start": "21h45",
+        "title": "Les routes de l'impossible",
+        "subtitle": "Pérou, vertiges dans les Andes",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
@@ -67,19 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "De grâce",
-        "subtitle": "Episode 2",
+        "start": "22h30",
+        "title": "Meurtres à Sandhamn",
+        "subtitle": "Madeleine",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h40",
-        "title": "De grâce",
-        "subtitle": "Episode 3",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "01h00",
+        "title": "Je suis Karl",
+        "format": "Cinéma",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "error": null
@@ -88,19 +87,18 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Berthevin-la-Tannière",
-        "format": "Autre",
-        "duration": "55min",
+        "start": "22h25",
+        "title": "Les Crevettes Pailletées",
+        "format": "Cinéma",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
+        "start": "00h50",
         "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Berthevin-la-Tannière",
+        "subtitle": "Ouistreham",
         "format": "Autre",
-        "duration": "45min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
