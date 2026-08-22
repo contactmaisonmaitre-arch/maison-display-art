@@ -1,23 +1,22 @@
 {
-  "fetchedAt": "2026-08-21T04:43:20.581Z",
+  "fetchedAt": "2026-08-22T04:37:39.808Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Les 12 coups",
-        "subtitle": "Le combat des maîtres",
+        "title": "The Voice Kids",
+        "subtitle": "Episode 1",
         "format": "Autre",
         "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
         "start": "22h25",
-        "title": "Les 12 coups",
-        "subtitle": "Le combat des maîtres",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "1h15min",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -26,19 +25,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Mot de passe : le duel",
-        "format": "Autre",
-        "duration": "10min",
+        "start": "21h05",
+        "title": "Immeuble partagé",
+        "subtitle": "Musculation partagée",
+        "format": "Série TV",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Capitaine Marleau",
-        "subtitle": "Au nom du fils",
-        "format": "Série TV",
+        "start": "23h25",
+        "title": "Quelle époque !",
+        "subtitle": "Best of",
+        "format": "Autre",
         "duration": "1h35min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Vanuatu, envers et contre tout",
+        "title": "Echappées belles",
+        "subtitle": "Les Baléares, d'île en île",
         "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h45",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Pérou, vertiges dans les Andes",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "La Riviera italienne en train",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Madeleine",
-        "format": "Série TV",
-        "duration": "1h30min",
+        "start": "21h45",
+        "title": "L'armée des romantiques",
+        "subtitle": "La vie comme un roman (1833-1848)",
+        "format": "Culture Infos",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "01h00",
-        "title": "Je suis Karl",
-        "format": "Cinéma",
-        "duration": "1h55min",
+        "start": "22h35",
+        "title": "L'armée des romantiques",
+        "subtitle": "Le crépuscule romantique (1848-1855)",
+        "format": "Culture Infos",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -87,16 +88,15 @@
       "name": "M6",
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
-        "start": "22h25",
-        "title": "Les Crevettes Pailletées",
-        "format": "Cinéma",
-        "duration": "1h55min",
+        "start": "21h10",
+        "title": "Le Roi Soleil à Versailles",
+        "format": "Autre",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h50",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Ouistreham",
+        "start": "22h00",
+        "title": "Le Roi Soleil à Versailles",
         "format": "Autre",
         "duration": "50min",
         "rebroadcast": true
