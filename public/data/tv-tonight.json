@@ -1,23 +1,22 @@
 {
-  "fetchedAt": "2026-08-22T04:37:39.808Z",
+  "fetchedAt": "2026-08-23T04:41:33.905Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "The Voice Kids",
-        "subtitle": "Episode 1",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "title": "Spider-Man : Homecoming",
+        "format": "Cinéma",
+        "duration": "2h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "The Voice Kids",
-        "format": "Autre",
-        "duration": "1h",
-        "rebroadcast": false
+        "start": "23h40",
+        "title": "Blue Beetle",
+        "format": "Cinéma",
+        "duration": "2h15min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -25,19 +24,17 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h05",
-        "title": "Immeuble partagé",
-        "subtitle": "Musculation partagée",
-        "format": "Série TV",
-        "duration": "5min",
+        "start": "21h07",
+        "title": "Réflexe !",
+        "format": "Culture Infos",
+        "duration": "3min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h25",
-        "title": "Quelle époque !",
-        "subtitle": "Best of",
-        "format": "Autre",
-        "duration": "1h35min",
+        "start": "22h40",
+        "title": "Première affaire",
+        "format": "Cinéma",
+        "duration": "1h40min",
         "rebroadcast": false
       },
       "error": null
@@ -47,18 +44,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Les Baléares, d'île en île",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Au fil du canal de Bourgogne",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "La Riviera italienne en train",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "La Martinique, une histoire créole",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -67,20 +64,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h45",
-        "title": "L'armée des romantiques",
-        "subtitle": "La vie comme un roman (1833-1848)",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "start": "21h00",
+        "title": "Un monde parfait",
+        "format": "Cinéma",
+        "duration": "2h15min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
-        "title": "L'armée des romantiques",
-        "subtitle": "Le crépuscule romantique (1848-1855)",
+        "start": "23h15",
+        "title": "Kevin Costner et le western",
         "format": "Culture Infos",
         "duration": "50min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     },
@@ -89,17 +84,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Le Roi Soleil à Versailles",
-        "format": "Autre",
-        "duration": "50min",
-        "rebroadcast": true
+        "title": "Capital",
+        "subtitle": "Corse : révélations sur l'argent du tourisme",
+        "format": "Culture Infos",
+        "duration": "1h55min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Le Roi Soleil à Versailles",
-        "format": "Autre",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Saisonniers : pour le meilleur et le pire des jobs d'été",
+        "format": "Culture Infos",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     }
