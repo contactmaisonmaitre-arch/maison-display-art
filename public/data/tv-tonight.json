@@ -1,22 +1,24 @@
 {
-  "fetchedAt": "2026-08-23T04:41:33.905Z",
+  "fetchedAt": "2026-08-24T04:51:02.628Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Spider-Man : Homecoming",
-        "format": "Cinéma",
-        "duration": "2h30min",
-        "rebroadcast": true
+        "title": "Camping Paradis",
+        "subtitle": "Pâtisserie au Paradis",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "Blue Beetle",
-        "format": "Cinéma",
-        "duration": "2h15min",
-        "rebroadcast": true
+        "start": "22h00",
+        "title": "Camping Paradis",
+        "subtitle": "Pâtisserie au Paradis",
+        "format": "Série TV",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -24,18 +26,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h07",
+        "start": "21h05",
         "title": "Réflexe !",
         "format": "Culture Infos",
-        "duration": "3min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Première affaire",
-        "format": "Cinéma",
-        "duration": "1h40min",
-        "rebroadcast": false
+        "start": "22h05",
+        "title": "Meurtres au paradis",
+        "subtitle": "Le troisième passager",
+        "format": "Série TV",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -44,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "Au fil du canal de Bourgogne",
+        "title": "Les avions du bout du monde",
+        "subtitle": "Ecosse, vol au-dessus des Orcades",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": true
       },
       "next": {
         "start": "21h50",
-        "title": "Les 100 lieux qu'il faut voir",
-        "subtitle": "La Martinique, une histoire créole",
+        "title": "Les avions du bout du monde",
+        "subtitle": "Colombie : DC3, la légende des airs",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -64,17 +67,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Un monde parfait",
+        "start": "22h45",
+        "title": "D'une vie à l'autre",
         "format": "Cinéma",
-        "duration": "2h15min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h15",
-        "title": "Kevin Costner et le western",
+        "start": "00h05",
+        "title": "Moderne, vivant, affirmé : le paysage musical polonais",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -84,18 +87,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Capital",
-        "subtitle": "Corse : révélations sur l'argent du tourisme",
-        "format": "Culture Infos",
-        "duration": "1h55min",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Enquête exclusive",
-        "subtitle": "Saisonniers : pour le meilleur et le pire des jobs d'été",
-        "format": "Culture Infos",
-        "duration": "1h10min",
+        "start": "22h20",
+        "title": "L'amour vu du pré",
+        "format": "Autre",
+        "duration": "45min",
         "rebroadcast": false
       },
       "error": null
