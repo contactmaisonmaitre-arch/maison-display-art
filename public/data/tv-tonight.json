@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-08-24T04:51:02.628Z",
+  "fetchedAt": "2026-08-25T04:43:22.145Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Pâtisserie au Paradis",
-        "format": "Série TV",
-        "duration": "50min",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Camping Paradis",
-        "subtitle": "Pâtisserie au Paradis",
-        "format": "Série TV",
-        "duration": "1h05min",
+        "start": "22h05",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "error": null
@@ -29,15 +29,14 @@
         "start": "21h05",
         "title": "Réflexe !",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Meurtres au paradis",
-        "subtitle": "Le troisième passager",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "22h40",
+        "title": "Lily et Lily",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "error": null
@@ -47,18 +46,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les avions du bout du monde",
-        "subtitle": "Ecosse, vol au-dessus des Orcades",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "title": "Nikita",
+        "format": "Cinéma",
+        "duration": "1h55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Les avions du bout du monde",
-        "subtitle": "Colombie : DC3, la légende des airs",
+        "start": "22h55",
+        "title": "C dans l'air",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -67,15 +64,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h45",
-        "title": "D'une vie à l'autre",
-        "format": "Cinéma",
-        "duration": "1h35min",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "Les derniers jours de Kaboul",
+        "subtitle": "Le pays perdu",
+        "format": "Culture Infos",
+        "duration": "1h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "00h05",
-        "title": "Moderne, vivant, affirmé : le paysage musical polonais",
+        "start": "22h00",
+        "title": "Les derniers jours de Kaboul",
+        "subtitle": "La guerre américaine",
         "format": "Culture Infos",
         "duration": "1h",
         "rebroadcast": false
@@ -87,17 +86,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "1h10min",
+        "title": "Zone interdite",
+        "subtitle": "Croisière dans les Caraïbes : au cœur du nouveau paquebot de la demesure",
+        "format": "Culture Infos",
+        "duration": "1h50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "L'amour vu du pré",
-        "format": "Autre",
-        "duration": "45min",
-        "rebroadcast": false
+        "start": "23h00",
+        "title": "Zone interdite",
+        "subtitle": "De l'été à la rentrée : au cœur d'un hypermarché des vacances",
+        "format": "Culture Infos",
+        "duration": "1h45min",
+        "rebroadcast": true
       },
       "error": null
     }
