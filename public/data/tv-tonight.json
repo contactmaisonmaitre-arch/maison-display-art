@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-08-25T04:43:22.145Z",
+  "fetchedAt": "2026-08-26T04:44:53.501Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "55min",
+        "title": "Tracker",
+        "subtitle": "Disparition programmée",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "1h30min",
+        "start": "21h55",
+        "title": "Tracker",
+        "subtitle": "Sur la piste du \"Professeur\"",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
@@ -33,10 +33,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "Lily et Lily",
-        "format": "Culture Infos",
-        "duration": "1h50min",
+        "start": "21h55",
+        "title": "Les invisibles",
+        "subtitle": "Stardust",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -46,16 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Nikita",
-        "format": "Cinéma",
-        "duration": "1h55min",
-        "rebroadcast": true
+        "title": "Au bout c'est la mer",
+        "subtitle": "Dordogne (France)",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "C dans l'air",
+        "start": "21h50",
+        "title": "Au bout c'est la mer",
+        "subtitle": "Fleuve Piteälven (Laponie)",
         "format": "Culture Infos",
-        "duration": "1h05min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "error": null
@@ -64,17 +67,15 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Les derniers jours de Kaboul",
-        "subtitle": "Le pays perdu",
-        "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": false
+        "start": "22h30",
+        "title": "Contrôle d'identité",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h00",
-        "title": "Les derniers jours de Kaboul",
-        "subtitle": "La guerre américaine",
+        "start": "00h05",
+        "title": "Biélorussie : business avec une dictature ?",
         "format": "Culture Infos",
         "duration": "1h",
         "rebroadcast": false
@@ -86,19 +87,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Zone interdite",
-        "subtitle": "Croisière dans les Caraïbes : au cœur du nouveau paquebot de la demesure",
-        "format": "Culture Infos",
-        "duration": "1h50min",
+        "title": "Les amateurs",
+        "subtitle": "Episode 1",
+        "format": "Série TV",
+        "duration": "35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Zone interdite",
-        "subtitle": "De l'été à la rentrée : au cœur d'un hypermarché des vacances",
-        "format": "Culture Infos",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "start": "21h45",
+        "title": "Les amateurs",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "35min",
+        "rebroadcast": false
       },
       "error": null
     }
