@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-08-26T04:44:53.501Z",
+  "fetchedAt": "2026-08-27T15:04:36.485Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Tracker",
-        "subtitle": "Disparition programmée",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "L'humour à la plage",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Tracker",
-        "subtitle": "Sur la piste du \"Professeur\"",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "22h25",
+        "title": "L'humour à la plage, la suite",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
@@ -29,16 +27,16 @@
         "start": "21h05",
         "title": "Réflexe !",
         "format": "Culture Infos",
-        "duration": "1min",
+        "duration": "2min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Les invisibles",
-        "subtitle": "Stardust",
-        "format": "Série TV",
-        "duration": "50min",
-        "rebroadcast": true
+        "start": "23h30",
+        "title": "Drag Race France : une seule sera la reine",
+        "subtitle": "Finale",
+        "format": "Autre",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Au bout c'est la mer",
-        "subtitle": "Dordogne (France)",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Singapour",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": false
       },
       "next": {
         "start": "21h50",
-        "title": "Au bout c'est la mer",
-        "subtitle": "Fleuve Piteälven (Laponie)",
+        "title": "Des trains pas comme les autres",
+        "subtitle": "Equateur",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +65,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Contrôle d'identité",
-        "format": "Cinéma",
-        "duration": "1h45min",
+        "start": "21h45",
+        "title": "De grâce",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h05",
-        "title": "Biélorussie : business avec une dictature ?",
-        "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": false
+        "start": "22h35",
+        "title": "De grâce",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -87,18 +87,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Les amateurs",
-        "subtitle": "Episode 1",
-        "format": "Série TV",
-        "duration": "35min",
+        "title": "Solidarité incendies : le grand concert en direct",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h45",
-        "title": "Les amateurs",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "35min",
+        "start": "22h05",
+        "title": "Solidarité incendies : le grand concert en direct",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
