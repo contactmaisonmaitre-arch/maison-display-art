@@ -1,23 +1,21 @@
 {
-  "fetchedAt": "2026-08-28T16:27:56.361Z",
+  "fetchedAt": "2026-08-29T10:56:19.093Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le grand concours",
-        "subtitle": "Spécial rentrée",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "Le grand concours",
-        "subtitle": "Spécial rentrée",
+        "start": "22h25",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "1h25min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
@@ -26,17 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h05",
+        "start": "21h00",
         "title": "Réflexe !",
+        "subtitle": "Brûlure thermique",
         "format": "Culture Infos",
-        "duration": "1min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "A l'instinct",
-        "subtitle": "Episode 1",
-        "format": "Série TV",
+        "start": "23h30",
+        "title": "Quelle époque !",
+        "subtitle": "Best of",
+        "format": "Autre",
         "duration": "1h30min",
         "rebroadcast": true
       },
@@ -47,18 +46,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Bangladesh, duel à tombeau ouvert",
+        "title": "Echappées belles",
+        "subtitle": "Islande, un rêve de voyageur",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h50",
-        "title": "Les routes de l'impossible",
-        "subtitle": "Lesotho, le royaume des neiges",
+        "start": "22h30",
+        "title": "Echappées belles",
+        "subtitle": "Les couleurs de l'Estérel",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h33min",
         "rebroadcast": true
       },
       "error": null
@@ -68,19 +67,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "22h25",
-        "title": "Meurtres à Sandhamn",
-        "subtitle": "Birgitta",
-        "format": "Série TV",
-        "duration": "1h30min",
+        "title": "Néfertiti : Le buste de la discorde",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h55",
-        "title": "Charlotte Link, la reine du suspense",
-        "subtitle": "Episode 1",
+        "start": "23h20",
+        "title": "Les étonnantes techniques des bâtisseurs de la pyramide de Khéops",
         "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -89,18 +86,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Arnaques !",
-        "subtitle": "Vacances : attention aux pièges",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Étchèque et mat",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Arnaques !",
-        "subtitle": "Vacances : attention aux pièges",
-        "format": "Culture Infos",
-        "duration": "1h15min",
+        "start": "21h55",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Combat à mort",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
