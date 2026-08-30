@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-08-29T10:56:19.093Z",
+  "fetchedAt": "2026-08-30T09:50:56.664Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "The Voice Kids",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "title": "Spider-Man : Far From Home",
+        "format": "Cinéma",
+        "duration": "2h25min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "The Voice Kids",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "23h35",
+        "title": "The Marvels",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,20 +24,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h07",
         "title": "Réflexe !",
-        "subtitle": "Brûlure thermique",
+        "subtitle": "Noyade",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "3min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h30",
-        "title": "Quelle époque !",
-        "subtitle": "Best of",
-        "format": "Autre",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "22h40",
+        "title": "Bolero",
+        "format": "Cinéma",
+        "duration": "2h",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,18 +45,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h00",
-        "title": "Echappées belles",
-        "subtitle": "Islande, un rêve de voyageur",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Le chemin de Chartres au Mont-Saint-Michel",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h30",
-        "title": "Echappées belles",
-        "subtitle": "Les couleurs de l'Estérel",
+        "start": "21h50",
+        "title": "Les 100 lieux qu'il faut voir",
+        "subtitle": "Au fil du canal de la Marne au Rhin",
         "format": "Culture Infos",
-        "duration": "1h33min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -66,15 +65,15 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h25",
-        "title": "Néfertiti : Le buste de la discorde",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "21h00",
+        "title": "La firme",
+        "format": "Cinéma",
+        "duration": "2h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "Les étonnantes techniques des bâtisseurs de la pyramide de Khéops",
+        "start": "23h30",
+        "title": "Hollywood sous influence chinoise",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
@@ -86,19 +85,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Étchèque et mat",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "Capital",
+        "subtitle": "Bon et pas cher : enquête sur les plats stars de l'été",
+        "format": "Culture Infos",
+        "duration": "1h55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Combat à mort",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h05",
+        "title": "Enquête exclusive",
+        "subtitle": "Extravagances et palais secrets : l'incroyable vie des maharadjahs indiens",
+        "format": "Culture Infos",
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "error": null
     }
