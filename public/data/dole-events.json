@@ -1,26 +1,11 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-08-24T06:04:57.605Z",
+  "fetchedAt": "2026-08-31T11:47:05.665Z",
   "facts": [
     {
       "emoji": "📍",
-      "title": "Dole L'Essentiel",
-      "body": "Samedi 01 août à Dole · Dole Tourisme."
-    },
-    {
-      "emoji": "📍",
-      "title": "Galeries Ephémères de l'été",
-      "body": "Samedi 01 août à Dole · Centre-Ville."
-    },
-    {
-      "emoji": "📍",
-      "title": "Ligne des Hirondelles",
-      "body": "Samedi 01 août à Dole · Gare de Dole."
-    },
-    {
-      "emoji": "📍",
-      "title": "Les Estivales 2026",
-      "body": "Samedi 01 août à Dole · Mesnils-Pasteur."
+      "title": "Enquête Game",
+      "body": "Samedi 01 août à Dole · Grande Rue."
     },
     {
       "emoji": "📚",
@@ -28,14 +13,24 @@
       "body": "Samedi 01 août à Dole · Cour de la médiathèque de l'Hôtel-Dieu."
     },
     {
-      "emoji": "📍",
-      "title": "Enquête Game",
-      "body": "Samedi 01 août à Dole · Grande Rue."
-    },
-    {
       "emoji": "🎨",
       "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
       "body": "Samedi 01 août à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "📍",
+      "title": "Dole L'Essentiel",
+      "body": "Samedi 01 août à Dole · Dole Tourisme."
+    },
+    {
+      "emoji": "📍",
+      "title": "Les Estivales 2026",
+      "body": "Samedi 01 août à Dole · Mesnils-Pasteur."
+    },
+    {
+      "emoji": "📍",
+      "title": "Enquête Game",
+      "body": "Samedi 01 août à Dole · Grande Rue."
     },
     {
       "emoji": "🎭",
@@ -44,13 +39,8 @@
     },
     {
       "emoji": "📍",
-      "title": "Dole Secret",
-      "body": "Mardi 04 août à Dole · Dole Tourisme."
-    },
-    {
-      "emoji": "📍",
-      "title": "Montée au clocher",
-      "body": "Mardi 04 août à Dole · Collégiale Notre-Dame."
+      "title": "Balades en calèche",
+      "body": "Lundi 03 août à Dole · Avenue de Lahr."
     },
     {
       "emoji": "🎨",
@@ -59,28 +49,38 @@
     },
     {
       "emoji": "📍",
-      "title": "Biodiversité en ville - L'aérienne",
-      "body": "Mercredi 05 août à Dole · Centre-Ville."
+      "title": "Montée au clocher",
+      "body": "Mardi 04 août à Dole · Collégiale Notre-Dame."
     },
     {
       "emoji": "📍",
-      "title": "Les Petits Chats sur la piste",
-      "body": "Jeudi 06 août à Dole · Dole Tourisme."
-    },
-    {
-      "emoji": "📍",
-      "title": "Lectures estivales",
-      "body": "Vendredi 07 août à Eclans-Nenon ·."
-    },
-    {
-      "emoji": "📚",
-      "title": "Visite de l'Hôtel-Dieu",
-      "body": "Vendredi 07 août à Dole · Médiathèque de l'Hôtel-Dieu."
+      "title": "Dole Secret",
+      "body": "Mardi 04 août à Dole · Dole Tourisme."
     },
     {
       "emoji": "📍",
       "title": "Nuits des Étoiles 2026",
-      "body": "Samedi 08 août à Dole · 188 rue du Boichot."
+      "body": "Vendredi 07 août à Dole · 188 rue du Boichot."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 09 août à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "📍",
+      "title": "La réserve naturelle face au climat",
+      "body": "Mercredi 12 août à Gevry · Réserve Naturelle Nationale de l'Île du Girard."
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée - L'Art et la couleur",
+      "body": "Jeudi 13 août à Dole · Musée des Beaux-Arts."
+    },
+    {
+      "emoji": "🎶",
+      "title": "Concert de l'Assomption",
+      "body": "Samedi 15 août à Dole · Chapelle du Sanctuaire Notre-Dame de Mont-Roland."
     }
   ]
 }
