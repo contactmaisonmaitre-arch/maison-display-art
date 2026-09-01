@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-08-31T10:42:14.939Z",
+  "fetchedAt": "2026-09-01T09:17:45.212Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Camping Paradis",
-        "subtitle": "Coups de coeur au Paradis",
-        "format": "Série TV",
-        "duration": "50min",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "Camping Paradis",
-        "subtitle": "Coups de coeur au Paradis",
-        "format": "Série TV",
-        "duration": "1h",
+        "start": "22h25",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -28,17 +28,16 @@
       "hero": {
         "start": "21h00",
         "title": "Réflexe !",
-        "subtitle": "Grêle",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Le Rouge et le Noir",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "21h50",
+        "title": "Léon - Au-delà de l'or",
+        "subtitle": "La méthode Bowman",
+        "format": "Culture Infos",
+        "duration": "35min",
         "rebroadcast": false
       },
       "error": null
@@ -48,16 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Burning Man, le désert de tous les possibles",
+        "title": "Grignote-moi si tu peux, les dessous de l'apéritif",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "C dans l'air",
+        "start": "21h55",
+        "title": "Sans alcool, la fête est-elle plus folle ?",
         "format": "Culture Infos",
-        "duration": "1h10min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -66,18 +65,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h35",
-        "title": "Call me Kate : Katharine Hepburn, une actrice de légende",
+        "start": "21h50",
+        "title": "Le temps des paysans",
+        "subtitle": "Désastres et révoltes",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "1h",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h25",
-        "title": "Que te vaya bonito, Rico",
-        "format": "Cinéma",
-        "duration": "35min",
-        "rebroadcast": false
+        "start": "22h50",
+        "title": "Le temps des paysans",
+        "subtitle": "Vers l'émancipation",
+        "format": "Culture Infos",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -86,16 +87,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "1h",
+        "title": "9-1-1",
+        "subtitle": "Le monde merveilleux des riches",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "21h55",
+        "title": "9-1-1",
+        "subtitle": "En vrille",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
