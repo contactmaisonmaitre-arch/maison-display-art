@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-09-01T09:17:45.212Z",
+  "fetchedAt": "2026-09-02T08:38:41.439Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "1h15min",
+        "title": "Tracker",
+        "subtitle": "Une protection inattendue",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "21h55",
+        "title": "Tracker",
+        "subtitle": "La femme d'affaires",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -33,12 +33,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "21h50",
-        "title": "Léon - Au-delà de l'or",
-        "subtitle": "La méthode Bowman",
-        "format": "Culture Infos",
-        "duration": "35min",
-        "rebroadcast": false
+        "start": "22h50",
+        "title": "Le combat d'Alice",
+        "format": "Téléfilm",
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -47,16 +46,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Grignote-moi si tu peux, les dessous de l'apéritif",
+        "title": "La grande librairie",
+        "subtitle": "Spéciale rentrée littéraire",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Sans alcool, la fête est-elle plus folle ?",
+        "start": "22h40",
+        "title": "C dans l'air",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h05min",
         "rebroadcast": true
       },
       "error": null
@@ -65,19 +65,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h50",
-        "title": "Le temps des paysans",
-        "subtitle": "Désastres et révoltes",
-        "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": true
+        "start": "21h00",
+        "title": "L'histoire de Souleymane",
+        "format": "Cinéma",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Le temps des paysans",
-        "subtitle": "Vers l'émancipation",
-        "format": "Culture Infos",
-        "duration": "50min",
+        "start": "22h30",
+        "title": "Family Mix",
+        "format": "Cinéma",
+        "duration": "1h45min",
         "rebroadcast": true
       },
       "error": null
@@ -87,18 +85,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "9-1-1",
-        "subtitle": "Le monde merveilleux des riches",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "Quel est l'âge de votre cerveau ?",
+        "format": "Autre",
+        "duration": "1h",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "9-1-1",
-        "subtitle": "En vrille",
-        "format": "Série TV",
-        "duration": "55min",
+        "start": "22h10",
+        "title": "Quel est l'âge de votre cerveau ?",
+        "format": "Autre",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "error": null
