@@ -1,23 +1,23 @@
 {
-  "fetchedAt": "2026-09-02T08:38:41.439Z",
+  "fetchedAt": "2026-09-03T08:47:13.865Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Tracker",
-        "subtitle": "Une protection inattendue",
+        "title": "Le mystère de la chambre jaune",
+        "subtitle": "L'élément aiguilleur",
         "format": "Série TV",
-        "duration": "45min",
+        "duration": "1h",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Tracker",
-        "subtitle": "La femme d'affaires",
+        "start": "22h10",
+        "title": "Le mystère de la chambre jaune",
+        "subtitle": "Les éléments objectifs",
         "format": "Série TV",
-        "duration": "55min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -28,16 +28,18 @@
       "hero": {
         "start": "21h00",
         "title": "Réflexe !",
+        "subtitle": "Cyber-harcèlement",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Le combat d'Alice",
-        "format": "Téléfilm",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "start": "23h00",
+        "title": "Complément d'enquête",
+        "subtitle": "La guerre de l'info - Pesticides : au coeur du champ de bataille",
+        "format": "Culture Infos",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,18 +48,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "La grande librairie",
-        "subtitle": "Spéciale rentrée littéraire",
+        "title": "Science grand format",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "C dans l'air",
+        "start": "22h35",
+        "title": "Expression directe",
+        "subtitle": "CGT-FO",
         "format": "Culture Infos",
-        "duration": "1h05min",
-        "rebroadcast": true
+        "duration": "10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -65,18 +67,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "L'histoire de Souleymane",
-        "format": "Cinéma",
-        "duration": "1h30min",
+        "start": "21h40",
+        "title": "Les secrets de la Saint-Jean",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Family Mix",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "start": "22h25",
+        "title": "Les secrets de la Saint-Jean",
+        "subtitle": "Episode 3",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,16 +89,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Quel est l'âge de votre cerveau ?",
+        "title": "Recherche appartement ou maison",
+        "subtitle": "Stefan et Olivia / Marie-Jo / Elodie et Guillaume, Isabelle et Alain, Alain",
         "format": "Autre",
         "duration": "1h",
         "rebroadcast": false
       },
       "next": {
         "start": "22h10",
-        "title": "Quel est l'âge de votre cerveau ?",
+        "title": "Recherche appartement ou maison",
+        "subtitle": "Stefan et Olivia / Marie-Jo / Elodie et Guillaume, Isabelle et Alain, Alain",
         "format": "Autre",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
