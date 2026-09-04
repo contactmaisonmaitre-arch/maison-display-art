@@ -1,22 +1,20 @@
 {
-  "fetchedAt": "2026-09-03T08:47:13.865Z",
+  "fetchedAt": "2026-09-04T08:42:58.057Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Le mystère de la chambre jaune",
-        "subtitle": "L'élément aiguilleur",
-        "format": "Série TV",
-        "duration": "1h",
+        "title": "Qui sera le plus nul ?",
+        "format": "Autre",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Le mystère de la chambre jaune",
-        "subtitle": "Les éléments objectifs",
-        "format": "Série TV",
+        "start": "22h15",
+        "title": "Qui sera le plus nul ?",
+        "format": "Autre",
         "duration": "1h10min",
         "rebroadcast": false
       },
@@ -28,18 +26,18 @@
       "hero": {
         "start": "21h00",
         "title": "Réflexe !",
-        "subtitle": "Cyber-harcèlement",
+        "subtitle": "Danger des écrans",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Complément d'enquête",
-        "subtitle": "La guerre de l'info - Pesticides : au coeur du champ de bataille",
-        "format": "Culture Infos",
-        "duration": "1h10min",
-        "rebroadcast": false
+        "start": "22h45",
+        "title": "A l'instinct",
+        "subtitle": "Le feu sacré",
+        "format": "Série TV",
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -48,18 +46,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Science grand format",
-        "format": "Culture Infos",
-        "duration": "1min",
-        "rebroadcast": false
+        "title": "Le sauvage",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h35",
-        "title": "Expression directe",
-        "subtitle": "CGT-FO",
+        "start": "22h50",
+        "title": "Belmondo l'incorrigible",
         "format": "Culture Infos",
-        "duration": "10min",
-        "rebroadcast": false
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -67,19 +64,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h40",
-        "title": "Les secrets de la Saint-Jean",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "45min",
+        "start": "22h30",
+        "title": "Le polar selon Fred Vargas",
+        "subtitle": "Le polar selon Fred Vargas",
+        "format": "Culture Infos",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Les secrets de la Saint-Jean",
-        "subtitle": "Episode 3",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "23h20",
+        "title": "Raye & Guests Live at Montreux Jazz Festival 2026",
+        "format": "Culture Infos",
+        "duration": "2h",
         "rebroadcast": false
       },
       "error": null
@@ -89,18 +85,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Recherche appartement ou maison",
-        "subtitle": "Stefan et Olivia / Marie-Jo / Elodie et Guillaume, Isabelle et Alain, Alain",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Bonnet-en-Champsaur",
         "format": "Autre",
         "duration": "1h",
         "rebroadcast": false
       },
       "next": {
         "start": "22h10",
-        "title": "Recherche appartement ou maison",
-        "subtitle": "Stefan et Olivia / Marie-Jo / Elodie et Guillaume, Isabelle et Alain, Alain",
+        "title": "Cauchemar en cuisine",
+        "subtitle": "Saint-Bonnet-en-Champsaur",
         "format": "Autre",
-        "duration": "55min",
+        "duration": "45min",
         "rebroadcast": false
       },
       "error": null
