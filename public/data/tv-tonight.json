@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-09-04T08:42:58.057Z",
+  "fetchedAt": "2026-09-05T08:13:55.827Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "Qui sera le plus nul ?",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "1h05min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h15",
-        "title": "Qui sera le plus nul ?",
+        "start": "22h25",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -26,18 +26,17 @@
       "hero": {
         "start": "21h00",
         "title": "Réflexe !",
-        "subtitle": "Danger des écrans",
+        "subtitle": "Brûlure thermique",
         "format": "Culture Infos",
         "duration": "5min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h45",
-        "title": "A l'instinct",
-        "subtitle": "Le feu sacré",
-        "format": "Série TV",
-        "duration": "1h35min",
-        "rebroadcast": true
+        "start": "23h30",
+        "title": "Quelle époque !",
+        "format": "Autre",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,14 +45,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Le sauvage",
-        "format": "Cinéma",
-        "duration": "1h45min",
+        "title": "Echappées belles",
+        "subtitle": "Alsace, sur la route des vins",
+        "format": "Culture Infos",
+        "duration": "1h30min",
         "rebroadcast": true
       },
       "next": {
-        "start": "22h50",
-        "title": "Belmondo l'incorrigible",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Lisbonne gourmande",
         "format": "Culture Infos",
         "duration": "1h35min",
         "rebroadcast": true
@@ -64,18 +65,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Le polar selon Fred Vargas",
-        "subtitle": "Le polar selon Fred Vargas",
+        "start": "22h15",
+        "title": "La locomotive du progrès : Une histoire des chemins de fer",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "1h35min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "Raye & Guests Live at Montreux Jazz Festival 2026",
+        "start": "23h50",
+        "title": "Alisa Weilerstein et la Philharmonie tchèque : Festival Kissinger Sommer 2025",
         "format": "Culture Infos",
-        "duration": "2h",
+        "duration": "1h25min",
         "rebroadcast": false
       },
       "error": null
@@ -85,19 +85,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Bonnet-en-Champsaur",
-        "format": "Autre",
-        "duration": "1h",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Les chaises musicales",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Cauchemar en cuisine",
-        "subtitle": "Saint-Bonnet-en-Champsaur",
-        "format": "Autre",
-        "duration": "45min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Le coeur au bord des lèvres",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     }
