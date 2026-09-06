@@ -1,22 +1,22 @@
 {
-  "fetchedAt": "2026-09-05T08:13:55.827Z",
+  "fetchedAt": "2026-09-06T08:32:47.767Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
         "start": "21h10",
-        "title": "The Voice Kids",
-        "format": "Autre",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "title": "Spider-Man : No Way Home",
+        "format": "Cinéma",
+        "duration": "2h30min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h25",
-        "title": "The Voice Kids",
-        "format": "Autre",
-        "duration": "1h",
-        "rebroadcast": false
+        "start": "23h40",
+        "title": "Bad Boys II",
+        "format": "Cinéma",
+        "duration": "2h40min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -24,19 +24,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h05",
         "title": "Réflexe !",
-        "subtitle": "Brûlure thermique",
         "format": "Culture Infos",
         "duration": "5min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h30",
-        "title": "Quelle époque !",
-        "format": "Autre",
-        "duration": "1h30min",
-        "rebroadcast": false
+        "start": "23h20",
+        "title": "Le Comte de Monte-Cristo",
+        "subtitle": "La lettre",
+        "format": "Série TV",
+        "duration": "45min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -44,20 +44,20 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "Echappées belles",
-        "subtitle": "Alsace, sur la route des vins",
+        "start": "21h00",
+        "title": "CIA, les guerres secrètes de l'après 11 septembre",
+        "subtitle": "La guerre contre la terreur",
         "format": "Culture Infos",
-        "duration": "1h30min",
-        "rebroadcast": true
+        "duration": "45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Echappées belles",
-        "subtitle": "Lisbonne gourmande",
+        "start": "21h45",
+        "title": "CIA, les guerres secrètes de l'après 11 septembre",
+        "subtitle": "Les nouveaux monstres",
         "format": "Culture Infos",
-        "duration": "1h35min",
-        "rebroadcast": true
+        "duration": "45min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -65,18 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h15",
-        "title": "La locomotive du progrès : Une histoire des chemins de fer",
-        "format": "Culture Infos",
-        "duration": "1h35min",
+        "start": "21h00",
+        "title": "Bon voyage",
+        "format": "Cinéma",
+        "duration": "1h50min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h50",
-        "title": "Alisa Weilerstein et la Philharmonie tchèque : Festival Kissinger Sommer 2025",
+        "start": "22h50",
+        "title": "Céline Dion à l'Eurovision : La note parfaite",
         "format": "Culture Infos",
-        "duration": "1h25min",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -85,19 +85,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Les chaises musicales",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "Capital",
+        "subtitle": "Grand Frais : les recettes secrètes du supermarché qui fait craquer les Français",
+        "format": "Culture Infos",
+        "duration": "2h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Le coeur au bord des lèvres",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h15",
+        "title": "Enquête exclusive",
+        "subtitle": "Sexe, amour et samba : le Brésil sans tabou",
+        "format": "Culture Infos",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     }
