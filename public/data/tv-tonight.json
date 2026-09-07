@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-09-06T08:32:47.767Z",
+  "fetchedAt": "2026-09-07T09:10:38.399Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h10",
-        "title": "Spider-Man : No Way Home",
-        "format": "Cinéma",
-        "duration": "2h30min",
-        "rebroadcast": true
+        "start": "21h05",
+        "title": "Koh-Lanta All Stars, les moments cultes",
+        "format": "Autre",
+        "duration": "5min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h40",
-        "title": "Bad Boys II",
-        "format": "Cinéma",
-        "duration": "2h40min",
-        "rebroadcast": true
+        "start": "22h05",
+        "title": "La cible",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -24,19 +25,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h05",
-        "title": "Réflexe !",
+        "start": "21h00",
+        "title": "Voyage au coeur du patrimoine",
+        "subtitle": "Château de Meung-sur-Loire",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h20",
-        "title": "Le Comte de Monte-Cristo",
-        "subtitle": "La lettre",
+        "start": "21h55",
+        "title": "Le Rouge et le Noir",
+        "subtitle": "Episode 4",
         "format": "Série TV",
-        "duration": "45min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -44,20 +46,20 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h00",
-        "title": "CIA, les guerres secrètes de l'après 11 septembre",
-        "subtitle": "La guerre contre la terreur",
+        "start": "21h05",
+        "title": "Thalassa, aventures extrêmes",
+        "subtitle": "Philippines, îles aux trésors",
         "format": "Culture Infos",
-        "duration": "45min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h45",
-        "title": "CIA, les guerres secrètes de l'après 11 septembre",
-        "subtitle": "Les nouveaux monstres",
+        "start": "21h55",
+        "title": "Thalassa, aventures extrêmes",
+        "subtitle": "Il était une fois l'Alaska",
         "format": "Culture Infos",
-        "duration": "45min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -65,18 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Bon voyage",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": true
-      },
-      "next": {
-        "start": "22h50",
-        "title": "Céline Dion à l'Eurovision : La note parfaite",
+        "start": "22h25",
+        "title": "Mia Farrow, en clair-obscur",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
+      },
+      "next": {
+        "start": "23h20",
+        "title": "Darling chérie",
+        "format": "Cinéma",
+        "duration": "1h55min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,18 +87,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Capital",
-        "subtitle": "Grand Frais : les recettes secrètes du supermarché qui fait craquer les Français",
-        "format": "Culture Infos",
-        "duration": "2h05min",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h15",
-        "title": "Enquête exclusive",
-        "subtitle": "Sexe, amour et samba : le Brésil sans tabou",
-        "format": "Culture Infos",
-        "duration": "1h10min",
+        "start": "22h20",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "45min",
         "rebroadcast": false
       },
       "error": null
