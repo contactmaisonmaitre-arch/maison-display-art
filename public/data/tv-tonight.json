@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-08T08:45:27.053Z",
+  "fetchedAt": "2026-09-09T08:51:22.402Z",
   "channels": [
     {
       "name": "TF1",
@@ -7,17 +7,16 @@
       "hero": {
         "start": "21h05",
         "title": "Koh-Lanta All Stars, les moments cultes",
-        "subtitle": "Episode 2",
         "format": "Autre",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "21h55",
+        "title": "Tracker",
+        "subtitle": "Nom de code Neptune",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
@@ -28,17 +27,18 @@
       "hero": {
         "start": "21h00",
         "title": "Voyage au coeur du patrimoine",
-        "subtitle": "L'auberge de l'Ermitage",
+        "subtitle": "Ancien bailliage de Pont-de-l'Arche",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Taratata 100% live",
-        "format": "Autre",
-        "duration": "2h20min",
-        "rebroadcast": true
+        "start": "21h55",
+        "title": "Les évaporés",
+        "subtitle": "Léna",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -47,18 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Mécaniques du journalisme",
-        "subtitle": "L'affaire Cahuzac",
+        "title": "La grande librairie",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Mécaniques du journalisme",
-        "subtitle": "L'affaire Bygmalion",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "22h40",
+        "title": "C ce soir",
+        "format": "Autre",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "error": null
@@ -68,18 +66,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
         "start": "21h00",
-        "title": "Fuck la planète : le choix du réchauffement",
-        "subtitle": "Episode 1",
-        "format": "Culture Infos",
-        "duration": "40min",
-        "rebroadcast": false
+        "title": "Tout s'est bien passé",
+        "format": "Cinéma",
+        "duration": "1h50min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "21h40",
-        "title": "Fuck la planète : le choix du réchauffement",
-        "subtitle": "Episode 2",
+        "start": "22h50",
+        "title": "Sophie Marceau, à voix haute",
         "format": "Culture Infos",
-        "duration": "45min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -89,19 +85,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "9-1-1",
-        "subtitle": "Quand le ciel s'effondre",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "On n'est pas d'accord !",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "9-1-1",
-        "subtitle": "Le choix de Buck",
-        "format": "Série TV",
+        "start": "22h05",
+        "title": "On n'est pas d'accord !",
+        "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     }
