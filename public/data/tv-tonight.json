@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-09T08:51:22.402Z",
+  "fetchedAt": "2026-09-10T08:50:26.423Z",
   "channels": [
     {
       "name": "TF1",
@@ -12,11 +12,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Tracker",
-        "subtitle": "Nom de code Neptune",
+        "start": "22h05",
+        "title": "Le mystère de la chambre jaune",
+        "subtitle": "La masculinité toxique",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -27,17 +27,17 @@
       "hero": {
         "start": "21h00",
         "title": "Voyage au coeur du patrimoine",
-        "subtitle": "Ancien bailliage de Pont-de-l'Arche",
+        "subtitle": "Palais des Evêques",
         "format": "Culture Infos",
         "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Les évaporés",
-        "subtitle": "Léna",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "23h00",
+        "title": "Cash investigation : débat",
+        "subtitle": "Cybercriminalité",
+        "format": "Culture Infos",
+        "duration": "1h",
         "rebroadcast": false
       },
       "error": null
@@ -47,17 +47,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "La grande librairie",
+        "title": "Science grand format",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "C ce soir",
-        "format": "Autre",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "Collisions : chasseurs d'astéroïdes",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -65,16 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Tout s'est bien passé",
-        "format": "Cinéma",
-        "duration": "1h50min",
-        "rebroadcast": true
+        "start": "21h45",
+        "title": "Les secrets de la Saint-Jean",
+        "subtitle": "Episode 5",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Sophie Marceau, à voix haute",
-        "format": "Culture Infos",
+        "start": "22h35",
+        "title": "Les secrets de la Saint-Jean",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
         "duration": "55min",
         "rebroadcast": false
       },
@@ -85,17 +87,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "On n'est pas d'accord !",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "title": "La chute de la Maison Blanche",
+        "format": "Cinéma",
+        "duration": "2h10min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "On n'est pas d'accord !",
+        "start": "23h20",
+        "title": "Arnaques !",
         "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     }
