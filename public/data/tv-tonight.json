@@ -1,21 +1,23 @@
 {
-  "fetchedAt": "2026-09-11T08:47:52.493Z",
+  "fetchedAt": "2026-09-12T08:31:30.448Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h05",
-        "title": "Koh-Lanta All Stars, les moments cultes",
+        "start": "21h10",
+        "title": "The Voice Kids",
+        "subtitle": "Episode 4",
         "format": "Autre",
-        "duration": "5min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Qui sera le plus nul ?",
+        "start": "22h20",
+        "title": "The Voice Kids",
+        "subtitle": "Episode 4",
         "format": "Autre",
-        "duration": "1h",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -26,17 +28,17 @@
       "hero": {
         "start": "21h00",
         "title": "Réflexe !",
+        "subtitle": "Noyade",
         "format": "Culture Infos",
         "duration": "5min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h45",
-        "title": "A l'instinct",
-        "subtitle": "Dans les limbes",
-        "format": "Série TV",
-        "duration": "1h35min",
-        "rebroadcast": true
+        "start": "23h25",
+        "title": "Show de Lena Situations - Celui où ils disent au revoir",
+        "format": "Culture Infos",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -45,16 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "The Queen",
-        "format": "Cinéma",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "title": "Echappées belles",
+        "subtitle": "Week-end à Saint-Tropez",
+        "format": "Culture Infos",
+        "duration": "1h30min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h45",
-        "title": "Camilla, la reine qui ne voulait pas être reine",
+        "start": "22h35",
+        "title": "Echappées belles",
+        "subtitle": "Rwanda, le pays aux mille collines",
         "format": "Culture Infos",
-        "duration": "1h32min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "error": null
@@ -63,17 +67,17 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "AC/DC : Forever Young",
+        "start": "22h25",
+        "title": "La cité des plaisirs de Néron",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h25",
-        "title": "AC/DC - Live at Donington",
+        "start": "23h20",
+        "title": "Une histoire de l'art érotique",
         "format": "Culture Infos",
-        "duration": "1h55min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -83,17 +87,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Le Jardinier",
-        "format": "Cinéma",
-        "duration": "1h55min",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Le mal incarné",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Les infaillibles",
-        "format": "Téléfilm",
-        "duration": "1h55min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Les trois quêtes",
+        "format": "Série TV",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     }
