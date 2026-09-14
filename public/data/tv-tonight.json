@@ -1,22 +1,21 @@
 {
-  "fetchedAt": "2026-09-12T08:31:30.448Z",
+  "fetchedAt": "2026-09-14T09:42:49.554Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h10",
-        "title": "The Voice Kids",
-        "subtitle": "Episode 4",
+        "start": "21h05",
+        "title": "Koh-Lanta All Stars, les moments cultes",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h20",
-        "title": "The Voice Kids",
+        "start": "22h05",
+        "title": "La cible",
         "subtitle": "Episode 4",
-        "format": "Autre",
+        "format": "Série TV",
         "duration": "1h10min",
         "rebroadcast": false
       },
@@ -26,18 +25,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Réflexe !",
-        "subtitle": "Noyade",
+        "start": "21h04",
+        "title": "Voyage au coeur du patrimoine",
+        "subtitle": "Abbaye d'Hautecombe",
         "format": "Culture Infos",
-        "duration": "5min",
-        "rebroadcast": true
+        "duration": "1min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h25",
-        "title": "Show de Lena Situations - Celui où ils disent au revoir",
-        "format": "Culture Infos",
-        "duration": "1h30min",
+        "start": "21h55",
+        "title": "La mère et l'assassin",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -47,18 +47,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Echappées belles",
-        "subtitle": "Week-end à Saint-Tropez",
+        "title": "Légitime défense",
+        "subtitle": "L'affaire de la route toxique",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
-        "title": "Echappées belles",
-        "subtitle": "Rwanda, le pays aux mille collines",
+        "start": "21h55",
+        "title": "Vert de rage",
+        "subtitle": "Armes, l'héritage toxique",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "55min",
         "rebroadcast": true
       },
       "error": null
@@ -67,18 +67,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h25",
-        "title": "La cité des plaisirs de Néron",
+        "start": "22h50",
+        "title": "Citizen Jane, l'Amérique selon Fonda",
         "format": "Culture Infos",
         "duration": "55min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h20",
-        "title": "Une histoire de l'art érotique",
+        "start": "23h45",
+        "title": "Henry Fonda : la justice pour devise",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -87,19 +87,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Le mal incarné",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "The Rookie : le flic de Los Angeles",
-        "subtitle": "Les trois quêtes",
-        "format": "Série TV",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h05",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     }
