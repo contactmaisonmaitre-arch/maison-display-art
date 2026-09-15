@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-14T09:42:49.554Z",
+  "fetchedAt": "2026-09-15T09:18:26.394Z",
   "channels": [
     {
       "name": "TF1",
@@ -12,11 +12,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "La cible",
-        "subtitle": "Episode 4",
-        "format": "Série TV",
-        "duration": "1h10min",
+        "start": "22h25",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "error": null
@@ -25,20 +25,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h04",
-        "title": "Voyage au coeur du patrimoine",
-        "subtitle": "Abbaye d'Hautecombe",
-        "format": "Culture Infos",
-        "duration": "1min",
+        "start": "21h00",
+        "title": "Sauvons nos forêts",
+        "format": "Autre",
+        "duration": "2h05min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "La mère et l'assassin",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
+        "start": "23h05",
+        "title": "Le monde de Jamy",
+        "subtitle": "Des feux extrêmes en France : sommes-nous prêts ?",
+        "format": "Culture Infos",
         "duration": "55min",
-        "rebroadcast": false
+        "rebroadcast": true
       },
       "error": null
     },
@@ -47,19 +46,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Légitime défense",
-        "subtitle": "L'affaire de la route toxique",
+        "title": "Ce qui nous tient debout",
         "format": "Culture Infos",
-        "duration": "50min",
+        "duration": "1h30min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Vert de rage",
-        "subtitle": "Armes, l'héritage toxique",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "22h35",
+        "title": "C ce soir",
+        "format": "Autre",
+        "duration": "1h10min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -67,18 +64,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h50",
-        "title": "Citizen Jane, l'Amérique selon Fonda",
+        "start": "21h00",
+        "title": "Ultra-riches - Taxe-moi (si tu peux !)",
+        "subtitle": "Le triomphe fiscal des ultra-riches",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "duration": "45min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h45",
-        "title": "Henry Fonda : la justice pour devise",
+        "start": "21h45",
+        "title": "Ultra-riches - Taxe-moi (si tu peux !)",
+        "subtitle": "La bataille des millionnaires pro-taxes",
         "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -87,16 +86,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "55min",
+        "title": "9-1-1",
+        "subtitle": "Retour sur terre",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "21h55",
+        "title": "9-1-1",
+        "subtitle": "Le jour des morts",
+        "format": "Série TV",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
