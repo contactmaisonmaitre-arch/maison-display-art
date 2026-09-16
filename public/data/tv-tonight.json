@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-15T09:18:26.394Z",
+  "fetchedAt": "2026-09-16T09:11:20.315Z",
   "channels": [
     {
       "name": "TF1",
@@ -12,11 +12,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h25",
-        "title": "Koh-Lanta",
-        "subtitle": "All Stars",
-        "format": "Autre",
-        "duration": "1h05min",
+        "start": "21h55",
+        "title": "Tracker",
+        "subtitle": "Seule contre toutes",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
@@ -25,19 +25,20 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
-        "title": "Sauvons nos forêts",
-        "format": "Autre",
-        "duration": "2h05min",
+        "start": "21h04",
+        "title": "Voyage au coeur du patrimoine",
+        "subtitle": "Maison Ysalguier",
+        "format": "Culture Infos",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Le monde de Jamy",
-        "subtitle": "Des feux extrêmes en France : sommes-nous prêts ?",
-        "format": "Culture Infos",
+        "start": "21h55",
+        "title": "Les évaporés",
+        "subtitle": "Manon",
+        "format": "Série TV",
         "duration": "55min",
-        "rebroadcast": true
+        "rebroadcast": false
       },
       "error": null
     },
@@ -46,16 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Ce qui nous tient debout",
+        "title": "La grande librairie",
         "format": "Culture Infos",
-        "duration": "1h30min",
+        "duration": "1h35min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h35",
+        "start": "22h40",
         "title": "C ce soir",
         "format": "Autre",
-        "duration": "1h10min",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "error": null
@@ -64,20 +65,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Ultra-riches - Taxe-moi (si tu peux !)",
-        "subtitle": "Le triomphe fiscal des ultra-riches",
+        "start": "22h40",
+        "title": "James Gray, l'odyssée intérieure",
         "format": "Culture Infos",
-        "duration": "45min",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h45",
-        "title": "Ultra-riches - Taxe-moi (si tu peux !)",
-        "subtitle": "La bataille des millionnaires pro-taxes",
+        "start": "23h35",
+        "title": "Joaquin Phoenix : un acteur possédé",
         "format": "Culture Infos",
-        "duration": "50min",
-        "rebroadcast": false
+        "duration": "55min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -86,18 +85,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "9-1-1",
-        "subtitle": "Retour sur terre",
-        "format": "Série TV",
-        "duration": "45min",
+        "title": "Patron incognito",
+        "subtitle": "Robert Guillet - Buffalo Grill (1/2)",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "9-1-1",
-        "subtitle": "Le jour des morts",
-        "format": "Série TV",
-        "duration": "55min",
+        "start": "22h05",
+        "title": "Patron incognito",
+        "subtitle": "Robert Guillet - Buffalo Grill (2/2)",
+        "format": "Culture Infos",
+        "duration": "40min",
         "rebroadcast": false
       },
       "error": null
