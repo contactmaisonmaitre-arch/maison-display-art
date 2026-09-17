@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-16T09:11:20.315Z",
+  "fetchedAt": "2026-09-17T09:19:30.948Z",
   "channels": [
     {
       "name": "TF1",
@@ -12,11 +12,11 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Tracker",
-        "subtitle": "Seule contre toutes",
+        "start": "22h05",
+        "title": "Le mystère de la chambre jaune",
+        "subtitle": "Episode 6",
         "format": "Série TV",
-        "duration": "50min",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
@@ -27,17 +27,17 @@
       "hero": {
         "start": "21h04",
         "title": "Voyage au coeur du patrimoine",
-        "subtitle": "Maison Ysalguier",
+        "subtitle": "Pavillon des vignes",
         "format": "Culture Infos",
         "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "21h55",
-        "title": "Les évaporés",
-        "subtitle": "Manon",
-        "format": "Série TV",
-        "duration": "55min",
+        "start": "23h00",
+        "title": "Complément d'enquête",
+        "subtitle": "Keffieh, tweets et polémiques : la méthode Rima Hassan",
+        "format": "Culture Infos",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "error": null
@@ -46,17 +46,18 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h05",
-        "title": "La grande librairie",
+        "start": "21h06",
+        "title": "Science grand format",
         "format": "Culture Infos",
-        "duration": "1h35min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h40",
-        "title": "C ce soir",
-        "format": "Autre",
-        "duration": "1h05min",
+        "start": "22h41",
+        "title": "Expression directe",
+        "subtitle": "UNAPL",
+        "format": "Culture Infos",
+        "duration": "4min",
         "rebroadcast": false
       },
       "error": null
@@ -65,18 +66,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h40",
-        "title": "James Gray, l'odyssée intérieure",
-        "format": "Culture Infos",
-        "duration": "55min",
+        "start": "22h10",
+        "title": "Prisonnière 951",
+        "subtitle": "Episode 2",
+        "format": "Série TV",
+        "duration": "1h",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h35",
-        "title": "Joaquin Phoenix : un acteur possédé",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": true
+        "start": "23h10",
+        "title": "Prisonnière 951",
+        "subtitle": "Episode 3",
+        "format": "Série TV",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -85,19 +88,17 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Patron incognito",
-        "subtitle": "Robert Guillet - Buffalo Grill (1/2)",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "title": "La chute de Londres",
+        "format": "Cinéma",
+        "duration": "1h45min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h05",
-        "title": "Patron incognito",
-        "subtitle": "Robert Guillet - Buffalo Grill (2/2)",
-        "format": "Culture Infos",
-        "duration": "40min",
-        "rebroadcast": false
+        "start": "22h55",
+        "title": "La chute de la Maison Blanche",
+        "format": "Cinéma",
+        "duration": "2h05min",
+        "rebroadcast": true
       },
       "error": null
     }
