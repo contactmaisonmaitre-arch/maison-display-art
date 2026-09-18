@@ -1,5 +1,5 @@
 {
-  "fetchedAt": "2026-09-17T09:19:30.948Z",
+  "fetchedAt": "2026-09-18T08:54:39.737Z",
   "channels": [
     {
       "name": "TF1",
@@ -12,11 +12,10 @@
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "Le mystère de la chambre jaune",
-        "subtitle": "Episode 6",
-        "format": "Série TV",
-        "duration": "1h10min",
+        "start": "22h30",
+        "title": "Qui sera le plus nul ?",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -25,20 +24,19 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h04",
-        "title": "Voyage au coeur du patrimoine",
-        "subtitle": "Pavillon des vignes",
+        "start": "21h00",
+        "title": "Réflexe !",
         "format": "Culture Infos",
-        "duration": "1min",
+        "duration": "5min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h00",
-        "title": "Complément d'enquête",
-        "subtitle": "Keffieh, tweets et polémiques : la méthode Rima Hassan",
-        "format": "Culture Infos",
-        "duration": "1h15min",
-        "rebroadcast": false
+        "start": "22h50",
+        "title": "Capitaine Marleau",
+        "subtitle": "Sang et lumière",
+        "format": "Série TV",
+        "duration": "1h40min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -46,18 +44,17 @@
       "name": "France 5",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
-        "start": "21h06",
-        "title": "Science grand format",
-        "format": "Culture Infos",
-        "duration": "1min",
-        "rebroadcast": false
+        "start": "21h05",
+        "title": "Et au milieu coule une rivière",
+        "format": "Cinéma",
+        "duration": "2h",
+        "rebroadcast": true
       },
       "next": {
-        "start": "22h41",
-        "title": "Expression directe",
-        "subtitle": "UNAPL",
+        "start": "23h05",
+        "title": "Riviera 76, le Woodstock oublié",
         "format": "Culture Infos",
-        "duration": "4min",
+        "duration": "1h02min",
         "rebroadcast": false
       },
       "error": null
@@ -66,20 +63,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h10",
-        "title": "Prisonnière 951",
-        "subtitle": "Episode 2",
-        "format": "Série TV",
-        "duration": "1h",
-        "rebroadcast": false
+        "start": "22h30",
+        "title": "Céline Dion à l'Eurovision : La note parfaite",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h10",
-        "title": "Prisonnière 951",
-        "subtitle": "Episode 3",
-        "format": "Série TV",
-        "duration": "1h05min",
-        "rebroadcast": false
+        "start": "23h25",
+        "title": "Jean-Claude Van Damme, coup sur coup",
+        "format": "Culture Infos",
+        "duration": "1h",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -88,17 +83,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "La chute de Londres",
-        "format": "Cinéma",
-        "duration": "1h45min",
-        "rebroadcast": true
+        "title": "Arnaques !",
+        "subtitle": "Voisins : la guerre est déclarée (1/2)",
+        "format": "Culture Infos",
+        "duration": "1h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h55",
-        "title": "La chute de la Maison Blanche",
-        "format": "Cinéma",
-        "duration": "2h05min",
-        "rebroadcast": true
+        "start": "22h10",
+        "title": "Arnaques !",
+        "subtitle": "Voisins : la guerre est déclarée (2/2)",
+        "format": "Culture Infos",
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     }
