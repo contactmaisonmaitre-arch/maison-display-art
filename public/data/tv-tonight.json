@@ -1,21 +1,21 @@
 {
-  "fetchedAt": "2026-09-18T08:54:39.737Z",
+  "fetchedAt": "2026-09-19T08:41:56.175Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h05",
-        "title": "Koh-Lanta All Stars, les moments cultes",
+        "start": "21h10",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "5min",
+        "duration": "1h15min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h30",
-        "title": "Qui sera le plus nul ?",
+        "start": "22h25",
+        "title": "The Voice Kids",
         "format": "Autre",
-        "duration": "55min",
+        "duration": "1h05min",
         "rebroadcast": false
       },
       "error": null
@@ -24,19 +24,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h00",
+        "start": "21h05",
         "title": "Réflexe !",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "10min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Capitaine Marleau",
-        "subtitle": "Sang et lumière",
-        "format": "Série TV",
-        "duration": "1h40min",
-        "rebroadcast": true
+        "start": "23h30",
+        "title": "Quelle époque !",
+        "format": "Autre",
+        "duration": "2h",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -45,17 +44,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Et au milieu coule une rivière",
-        "format": "Cinéma",
-        "duration": "2h",
-        "rebroadcast": true
+        "title": "Echappées belles",
+        "subtitle": "Finistère, les rivages au bout de la terre",
+        "format": "Culture Infos",
+        "duration": "1h35min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "23h05",
-        "title": "Riviera 76, le Woodstock oublié",
+        "start": "22h40",
+        "title": "Echappées belles",
+        "subtitle": "Week-end à Amsterdam",
         "format": "Culture Infos",
-        "duration": "1h02min",
-        "rebroadcast": false
+        "duration": "1h30min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -63,18 +64,18 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "22h30",
-        "title": "Céline Dion à l'Eurovision : La note parfaite",
+        "start": "22h25",
+        "title": "Versailles : Le palais retrouvé du Roi-Soleil",
         "format": "Culture Infos",
-        "duration": "55min",
+        "duration": "1h35min",
         "rebroadcast": true
       },
       "next": {
-        "start": "23h25",
-        "title": "Jean-Claude Van Damme, coup sur coup",
+        "start": "00h25",
+        "title": "Falco - Mon amour",
         "format": "Culture Infos",
-        "duration": "1h",
-        "rebroadcast": true
+        "duration": "55min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -83,19 +84,19 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Arnaques !",
-        "subtitle": "Voisins : la guerre est déclarée (1/2)",
-        "format": "Culture Infos",
-        "duration": "1h",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "L'ouragan Smitty",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h10",
-        "title": "Arnaques !",
-        "subtitle": "Voisins : la guerre est déclarée (2/2)",
-        "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "start": "21h55",
+        "title": "The Rookie : le flic de Los Angeles",
+        "subtitle": "Un meurtre pour de vrai",
+        "format": "Série TV",
+        "duration": "50min",
+        "rebroadcast": true
       },
       "error": null
     }
