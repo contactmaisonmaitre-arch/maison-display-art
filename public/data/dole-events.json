@@ -1,11 +1,11 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-14T10:55:32.120Z",
+  "fetchedAt": "2026-09-21T11:00:47.976Z",
   "facts": [
     {
-      "emoji": "🎨",
-      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
-      "body": "Mardi 01 sept. à Dole · Musée des Beaux-Arts."
+      "emoji": "📚",
+      "title": "Lumière sur les photographes dolois : 1824-1914 : origines, perfectionnement et démocratisation",
+      "body": "Mardi 01 sept. à Dole · Cour de la médiathèque de l'Hôtel-Dieu."
     },
     {
       "emoji": "📍",
@@ -13,9 +13,9 @@
       "body": "Mardi 01 sept. à Dole · Gare de Dole."
     },
     {
-      "emoji": "📚",
-      "title": "Lumière sur les photographes dolois : 1824-1914 : origines, perfectionnement et démocratisation",
-      "body": "Mardi 01 sept. à Dole · Cour de la médiathèque de l'Hôtel-Dieu."
+      "emoji": "🎨",
+      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
+      "body": "Mardi 01 sept. à Dole · Musée des Beaux-Arts."
     },
     {
       "emoji": "🎨",
@@ -23,24 +23,14 @@
       "body": "Mardi 01 sept. à Dole · 1 Rue du Général Béthouart."
     },
     {
-      "emoji": "☕",
-      "title": "Le Café de l'Arche",
-      "body": "Mercredi 02 sept. à Dole · Maison des Orphelins."
-    },
-    {
       "emoji": "📍",
       "title": "Dole L'Essentiel",
       "body": "Mercredi 02 sept. à Dole · Dole Tourisme."
     },
     {
-      "emoji": "🥖",
-      "title": "Barbecue et marché paysans",
-      "body": "Jeudi 03 sept. à Dole · Cours Saint Mauris, 16h30 à 22h30."
-    },
-    {
-      "emoji": "🎶",
-      "title": "Rock N’Rool touch",
-      "body": "Samedi 05 sept. à Damparis · Stade de la Pépinière."
+      "emoji": "🏆",
+      "title": "TOURNOI DE PÉTANQUE",
+      "body": "Samedi 05 sept. à Monnières ·."
     },
     {
       "emoji": "📍",
@@ -48,19 +38,24 @@
       "body": "Mardi 08 sept. à Dole · Manège de Brack."
     },
     {
+      "emoji": "📚",
+      "title": "Le Bus ouvre ses portes : en route vers la culture",
+      "body": "Mercredi 09 sept. à Dole · Esplanade de la Médiathèque de l'Hôtel-Dieu."
+    },
+    {
       "emoji": "🎨",
-      "title": "Jeudis de l'exposition - Rencontre",
-      "body": "Jeudi 10 sept. à Dole · Musée des Beaux-Arts."
+      "title": "Oasis don't look back in anger",
+      "body": "Mercredi 09 sept. à Dole · 1 Rue du Général Béthouart."
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Atelier portage",
-      "body": "Vendredi 11 sept. à Dole · Maison de la Parentalité."
+      "title": "Atelier prévention/conseil psychomoteur et orthophonie",
+      "body": "Jeudi 10 sept. à Dole · Maison de la Parentalité."
     },
     {
-      "emoji": "📍",
-      "title": "Loto du CNDR",
-      "body": "Samedi 12 sept. à Dole ·."
+      "emoji": "🎨",
+      "title": "Visite thématique - Figures saintes, légendaires, héroïques ou monstrueuses",
+      "body": "Samedi 12 sept. à Dole · Musée des Beaux-Arts."
     },
     {
       "emoji": "🎨",
@@ -68,14 +63,19 @@
       "body": "Dimanche 13 sept. à Rainans ·."
     },
     {
-      "emoji": "📍",
-      "title": "Lancement de la campagne d'octobre rose",
-      "body": "Samedi 19 sept. à Dole · Club Aviron Dole."
+      "emoji": "🎬",
+      "title": "Los Angeles, différemment cette fois",
+      "body": "Vendredi 18 sept. à Dole · Cinéma Majestic Rive Gauche."
     },
     {
       "emoji": "📍",
       "title": "Visite guidée de la Commanderie",
       "body": "Samedi 19 sept. à Dole · La Commanderie."
+    },
+    {
+      "emoji": "📍",
+      "title": "Visite guidée du Passage de L'Arsenal",
+      "body": "Dimanche 20 sept. à Dole · Centre-Ville."
     },
     {
       "emoji": "📍",
