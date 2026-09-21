@@ -1,22 +1,23 @@
 {
-  "fetchedAt": "2026-09-20T09:10:48.226Z",
+  "fetchedAt": "2026-09-21T09:47:17.259Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h10",
-        "title": "Equalizer 3",
-        "format": "Cinéma",
-        "duration": "2h05min",
-        "rebroadcast": false
+        "start": "21h05",
+        "title": "Koh-Lanta All Stars, les moments cultes",
+        "format": "Autre",
+        "duration": "5min",
+        "rebroadcast": true
       },
       "next": {
-        "start": "23h15",
-        "title": "Spider-Man : No Way Home",
-        "format": "Cinéma",
-        "duration": "2h30min",
-        "rebroadcast": true
+        "start": "22h00",
+        "title": "La cible",
+        "subtitle": "Episode 6",
+        "format": "Série TV",
+        "duration": "1h05min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -24,16 +25,18 @@
       "name": "France 2",
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-2-6.html",
       "hero": {
-        "start": "21h05",
-        "title": "Réflexe !",
+        "start": "21h04",
+        "title": "Voyage au coeur du patrimoine",
+        "subtitle": "Ferme nord",
         "format": "Culture Infos",
-        "duration": "5min",
+        "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "La relève, une année pour devenir prof",
-        "format": "Culture Infos",
+        "start": "22h00",
+        "title": "La mère et l'assassin",
+        "subtitle": "Episode 4",
+        "format": "Série TV",
         "duration": "50min",
         "rebroadcast": false
       },
@@ -44,14 +47,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Indochine, une guerre oubliée",
+        "title": "Le monde de Jamy",
+        "subtitle": "Manger de la viande, un crime pour la planète ?",
         "format": "Culture Infos",
-        "duration": "1h45min",
+        "duration": "50min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h50",
-        "title": "Les fantômes du Tonkin",
+        "start": "21h55",
+        "title": "Le monde de Jamy",
+        "subtitle": "Réchauffement climatique : nos produits du terroir vont-ils résister ?",
         "format": "Culture Infos",
         "duration": "1h",
         "rebroadcast": true
@@ -62,18 +67,19 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "21h00",
-        "title": "Le Parrain 2",
+        "start": "23h00",
+        "title": "Hondo, l'homme du désert",
         "format": "Cinéma",
-        "duration": "3h15min",
+        "duration": "1h20min",
         "rebroadcast": true
       },
       "next": {
-        "start": "00h00",
-        "title": "Le compositeur Antonio Salieri : Le mythe du meurtrier de Mozart",
+        "start": "00h15",
+        "title": "Corleone, le parrain des parrains",
+        "subtitle": "La chute",
         "format": "Culture Infos",
-        "duration": "55min",
-        "rebroadcast": false
+        "duration": "1h10min",
+        "rebroadcast": true
       },
       "error": null
     },
@@ -82,18 +88,16 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "Capital",
-        "subtitle": "Etiquettes : le vrai prix de ce que vous achetez",
-        "format": "Culture Infos",
-        "duration": "2h05min",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "55min",
         "rebroadcast": false
       },
       "next": {
-        "start": "23h15",
-        "title": "Enquête exclusive",
-        "subtitle": "Trafics de déchets : qui pollue la France ?",
-        "format": "Culture Infos",
-        "duration": "1h15min",
+        "start": "22h05",
+        "title": "L'amour est dans le pré",
+        "format": "Autre",
+        "duration": "1h10min",
         "rebroadcast": false
       },
       "error": null
