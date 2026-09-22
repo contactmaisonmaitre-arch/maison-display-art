@@ -1,21 +1,22 @@
 {
-  "fetchedAt": "2026-09-21T09:47:17.259Z",
+  "fetchedAt": "2026-09-22T09:11:20.188Z",
   "channels": [
     {
       "name": "TF1",
       "url": "https://www.programme-tv.net/programme/chaine/programme-tf1-19.html",
       "hero": {
-        "start": "21h05",
-        "title": "Koh-Lanta All Stars, les moments cultes",
+        "start": "21h10",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
         "format": "Autre",
-        "duration": "5min",
-        "rebroadcast": true
+        "duration": "1h15min",
+        "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "La cible",
-        "subtitle": "Episode 6",
-        "format": "Série TV",
+        "start": "22h25",
+        "title": "Koh-Lanta",
+        "subtitle": "All Stars",
+        "format": "Autre",
         "duration": "1h05min",
         "rebroadcast": false
       },
@@ -27,17 +28,17 @@
       "hero": {
         "start": "21h04",
         "title": "Voyage au coeur du patrimoine",
-        "subtitle": "Ferme nord",
+        "subtitle": "Moulin de Belle Née",
         "format": "Culture Infos",
         "duration": "1min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h00",
-        "title": "La mère et l'assassin",
-        "subtitle": "Episode 4",
-        "format": "Série TV",
-        "duration": "50min",
+        "start": "22h05",
+        "title": "Les cercles du silence",
+        "subtitle": "Le cercle familial",
+        "format": "Culture Infos",
+        "duration": "55min",
         "rebroadcast": false
       },
       "error": null
@@ -47,16 +48,14 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-france-5-9.html",
       "hero": {
         "start": "21h05",
-        "title": "Le monde de Jamy",
-        "subtitle": "Manger de la viande, un crime pour la planète ?",
+        "title": "Le chanvre des possibles",
         "format": "Culture Infos",
         "duration": "50min",
         "rebroadcast": false
       },
       "next": {
         "start": "21h55",
-        "title": "Le monde de Jamy",
-        "subtitle": "Réchauffement climatique : nos produits du terroir vont-ils résister ?",
+        "title": "Nos très chers animaux",
         "format": "Culture Infos",
         "duration": "1h",
         "rebroadcast": true
@@ -67,19 +66,20 @@
       "name": "Arte",
       "url": "https://www.programme-tv.net/programme/chaine/programme-arte-337.html",
       "hero": {
-        "start": "23h00",
-        "title": "Hondo, l'homme du désert",
-        "format": "Cinéma",
-        "duration": "1h20min",
-        "rebroadcast": true
+        "start": "21h50",
+        "title": "Inquisitions",
+        "subtitle": "Le secret et le faste",
+        "format": "Culture Infos",
+        "duration": "1h",
+        "rebroadcast": false
       },
       "next": {
-        "start": "00h15",
-        "title": "Corleone, le parrain des parrains",
-        "subtitle": "La chute",
+        "start": "22h50",
+        "title": "Notre-Dame de Paris, le chantier du siècle",
+        "subtitle": "La quête de la hauteur",
         "format": "Culture Infos",
-        "duration": "1h10min",
-        "rebroadcast": true
+        "duration": "50min",
+        "rebroadcast": false
       },
       "error": null
     },
@@ -88,16 +88,18 @@
       "url": "https://www.programme-tv.net/programme/chaine/programme-m6-12.html",
       "hero": {
         "start": "21h10",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "55min",
+        "title": "9-1-1",
+        "subtitle": "Histoire de famille",
+        "format": "Série TV",
+        "duration": "45min",
         "rebroadcast": false
       },
       "next": {
-        "start": "22h05",
-        "title": "L'amour est dans le pré",
-        "format": "Autre",
-        "duration": "1h10min",
+        "start": "21h55",
+        "title": "9-1-1",
+        "subtitle": "Secrets",
+        "format": "Série TV",
+        "duration": "50min",
         "rebroadcast": false
       },
       "error": null
