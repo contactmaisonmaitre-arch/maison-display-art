@@ -30,10 +30,10 @@ export type SceneType =
   | "anecdote"
   | "goodnews"
   | "review"
-  | "tv"
   | "dole"
   | "carte"
   | "ephemeres"
+  | "vedette"
   | "annonce";
 
 export interface Scene {
@@ -45,6 +45,8 @@ export interface Scene {
   productOffset?: number;
   /** Index de l'annonce (public/data/annonces.json) pour les scènes "annonce". */
   annonceIndex?: number;
+  /** Rang de passage pour la scène "vedette" (boisson mise en avant). */
+  vedetteIndex?: number;
 }
 
 /**
@@ -62,4 +64,3 @@ export interface PlaylistEntry {
   enabled?: boolean;
 }
 
-export type TvKind = "DOCUMENTAIRE" | "SÉRIE" | "ÉMISSION" | "CONCERT" | "DÉBAT";

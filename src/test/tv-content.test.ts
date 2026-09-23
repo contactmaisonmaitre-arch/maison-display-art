@@ -87,3 +87,28 @@ describe("événements Dole", () => {
     expect(eventDate({ emoji: "", title: "x", body: "Mardi 06 janv. à Dole." }, new Date("2026-12-20"))).toBe("2027-01-06");
   });
 });
+
+import { currentMoment, slug, vedettePool, allItems } from "@/data/carte";
+describe("carte interactive", () => {
+  const c = carte as CarteJson;
+  it("slug stable", () => {
+    expect(slug("Chaï latte")).toBe("chai-latte");
+    expect(slug("Jus d'orange")).toBe("jus-d-orange");
+  });
+  it("moment selon l'heure de Paris", () => {
+    expect(currentMoment(c, new Date("2026-10-10T09:00:00+02:00"))?.focus).toContain("Café");
+    expect(currentMoment(c, new Date("2026-10-10T15:00:00+02:00"))?.focus).toContain("Glacé");
+    expect(currentMoment(c, new Date("2026-10-10T18:00:00+02:00"))?.focus).toContain("Glouglou");
+  });
+  it("vedette : jamais une boisson épuisée, suit le moment", () => {
+    const soir = vedettePool(c, ["vin-au-verre"], new Date("2026-10-10T18:00:00+02:00"));
+    expect(soir.map((i) => i.id)).not.toContain("vin-au-verre");
+    expect(soir.some((i) => i.section === "Glouglou")).toBe(true);
+    const matin = vedettePool(c, [], new Date("2026-10-10T09:00:00+02:00"));
+    expect(matin.every((i) => i.section === "Café" || i.ephemere)).toBe(true);
+  });
+  it("tous les identifiants de boissons sont uniques", () => {
+    const ids = allItems(c).map((i) => i.id);
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+});

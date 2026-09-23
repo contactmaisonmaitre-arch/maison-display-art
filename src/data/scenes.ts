@@ -25,6 +25,7 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "café", seconds: 13 },
   { type: "weather", seconds: 12 },
   { type: "carte", seconds: 18 },
+  { type: "vedette", seconds: 14 },
   { type: "dole", seconds: 20 },
   { type: "review", seconds: 20 },
   { type: "instagram", seconds: 30 },
@@ -33,13 +34,13 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "anecdote", seconds: 15 },
   { type: "vin", seconds: 13 },
   { type: "winemap", seconds: 45 },
-  { type: "tv", seconds: 18 },
   { type: "annonce", seconds: 16 },
   { type: "instagram", seconds: 30 },
   { type: "produits", seconds: 17 },
   { type: "anecdote", seconds: 15 },
   { type: "matcha", seconds: 15 },
   { type: "ephemeres", seconds: 18 },
+  { type: "vedette", seconds: 14 },
   { type: "weather", seconds: 12 },
   { type: "dole", seconds: 20 },
   { type: "goodnews", seconds: 18 },
@@ -108,6 +109,9 @@ export const buildScenes = (
           break;
         case "annonce":
           scene.annonceIndex = n;
+          break;
+        case "vedette":
+          scene.vedetteIndex = n;
           break;
       }
       return scene;

@@ -1,22 +1,48 @@
 {
-  "_aide": "Carte des boissons (scènes « carte » et « ephemeres »), recopiée de la carte imprimée. Prix en euros sans le symbole, comme sur la carte (« 4,5 »). Pour changer un prix : modifier ici, la TV suit en moins de 30 min. Les éphémères n'apparaissent qu'entre from et until (AAAA-MM-JJ).",
-  "tagline": ["Le goût du café,", "le plaisir de le partager"],
+  "_aide": "Carte des boissons (scènes « carte », « vedette », « ephemeres » et page mobile /carte). Prix sans le symbole € (« 4,5 »). Options par boisson : desc (sous-titre), pitch (phrase pour la scène vedette), vedette:true (peut passer en grand), image (photo), tags : \"nouveau\", \"vegetal\" (100 % végétal), \"coeur\" (coup de cœur), \"glace\" (existe en glacé) ; allergenes : liste (ex. [\"lait\", \"fruits à coque\"]). moments : à quelle heure mettre quelles sections en avant. Les éphémères n'apparaissent qu'entre from et until.",
+  "tagline": [
+    "Le goût du café,",
+    "le plaisir de le partager"
+  ],
   "side": [
     {
       "label": "Dans nos moulins",
       "items": [
-        { "name": "Blend de la maison" },
-        { "name": "Café rare", "price": "+1,5" },
-        { "name": "Décaféiné", "price": "+1" }
+        {
+          "name": "Blend de la maison"
+        },
+        {
+          "name": "Café rare",
+          "price": "+1,5"
+        },
+        {
+          "name": "Décaféiné",
+          "price": "+1"
+        }
       ]
     },
     {
       "label": "Suppléments",
       "items": [
-        { "name": "Sirop", "price": "+0,5" },
-        { "name": "Lait végétal", "price": "+1", "desc": "Avoine, amande ou coco", "leaf": true },
-        { "name": "Chantilly", "price": "+1" },
-        { "name": "Grand format", "price": "+1", "desc": "Sur les boissons glacées" }
+        {
+          "name": "Sirop",
+          "price": "+0,5"
+        },
+        {
+          "name": "Lait végétal",
+          "price": "+1",
+          "desc": "Avoine, amande ou coco",
+          "leaf": true
+        },
+        {
+          "name": "Chantilly",
+          "price": "+1"
+        },
+        {
+          "name": "Grand format",
+          "price": "+1",
+          "desc": "Sur les boissons glacées"
+        }
       ]
     }
   ],
@@ -28,20 +54,53 @@
           {
             "label": "Espresso simple",
             "items": [
-              { "name": "Mocaccino", "price": "6" },
-              { "name": "Cappuccino", "price": "4,5" },
-              { "name": "Cortado", "price": "4" },
-              { "name": "Noisette", "price": "3" },
-              { "name": "Espresso", "price": "2" }
+              {
+                "name": "Mocaccino",
+                "price": "6"
+              },
+              {
+                "name": "Cappuccino",
+                "price": "4,5",
+                "vedette": true,
+                "pitch": "Espresso, lait et mousse de lait onctueuse."
+              },
+              {
+                "name": "Cortado",
+                "price": "4",
+                "vedette": true,
+                "pitch": "Espresso coupé d'un peu de lait : court et rond."
+              },
+              {
+                "name": "Noisette",
+                "price": "3"
+              },
+              {
+                "name": "Espresso",
+                "price": "2"
+              }
             ]
           },
           {
             "label": "Double espresso",
             "items": [
-              { "name": "Flat white", "price": "5" },
-              { "name": "Americano", "price": "3,5" },
-              { "name": "Allongé", "price": "2,5" },
-              { "name": "Doppio", "price": "2,4" }
+              {
+                "name": "Flat white",
+                "price": "5",
+                "vedette": true,
+                "pitch": "Double espresso et lait micro-moussé."
+              },
+              {
+                "name": "Americano",
+                "price": "3,5"
+              },
+              {
+                "name": "Allongé",
+                "price": "2,5"
+              },
+              {
+                "name": "Doppio",
+                "price": "2,4"
+              }
             ]
           }
         ]
@@ -53,11 +112,46 @@
         "groups": [
           {
             "items": [
-              { "name": "Matcha latte", "price": "7", "desc": "Matcha japonais de grade cérémonie" },
-              { "name": "Chaï latte", "price": "6" },
-              { "name": "Ube latte", "price": "6", "desc": "Poudre d'igname violet, lait" },
-              { "name": "Chocolat chaud", "price": "5" },
-              { "name": "Thé ou infusion", "price": "4,5" }
+              {
+                "name": "Matcha latte",
+                "price": "7",
+                "desc": "Matcha japonais de grade cérémonie",
+                "vedette": true,
+                "pitch": "Matcha japonais de grade cérémonie, fouetté à la main.",
+                "tags": [
+                  "glace"
+                ]
+              },
+              {
+                "name": "Chaï latte",
+                "price": "6",
+                "vedette": true,
+                "pitch": "Épices chaï et lait. Existe aussi en glacé.",
+                "tags": [
+                  "glace"
+                ]
+              },
+              {
+                "name": "Ube latte",
+                "price": "6",
+                "desc": "Poudre d'igname violet, lait",
+                "vedette": true,
+                "pitch": "Poudre d'igname violet et lait. Existe aussi en glacé.",
+                "tags": [
+                  "coeur",
+                  "glace"
+                ]
+              },
+              {
+                "name": "Chocolat chaud",
+                "price": "5",
+                "vedette": true,
+                "pitch": "Le grand classique, à savourer sur place."
+              },
+              {
+                "name": "Thé ou infusion",
+                "price": "4,5"
+              }
             ]
           }
         ]
@@ -68,8 +162,20 @@
         "groups": [
           {
             "items": [
-              { "name": "Fruity matcha", "price": "8", "desc": "Matcha glacé, purée de fruit au choix" },
-              { "name": "Café glacé", "price": "4,5", "desc": "Version large 6" }
+              {
+                "name": "Fruity matcha",
+                "price": "8",
+                "desc": "Matcha glacé, purée de fruit au choix",
+                "vedette": true,
+                "pitch": "Matcha glacé et purée de fruit au choix."
+              },
+              {
+                "name": "Café glacé",
+                "price": "4,5",
+                "desc": "Version large 6",
+                "vedette": true,
+                "pitch": "Sur glace, pour les jours chauds. Version large 6."
+              }
             ]
           }
         ]
@@ -81,12 +187,37 @@
         "groups": [
           {
             "items": [
-              { "name": "Vin au verre", "size": "12 cl", "price": "6" },
-              { "name": "Bière pression", "desc": "25 cl 4,5 · 50 cl 8,5" },
-              { "name": "Jus d'orange", "size": "23 cl", "price": "3,5" },
-              { "name": "Jus de pomme", "size": "23 cl", "price": "3,5" },
-              { "name": "Sirop à l'eau", "price": "2,5" },
-              { "name": "Boissons fraîches", "desc": "À retrouver en vitrine" }
+              {
+                "name": "Vin au verre",
+                "size": "12 cl",
+                "price": "6",
+                "vedette": true,
+                "pitch": "Un vin de notre cave, servi au verre (12 cl)."
+              },
+              {
+                "name": "Bière pression",
+                "desc": "25 cl 4,5 · 50 cl 8,5",
+                "vedette": true,
+                "pitch": "À la pression : 25 cl 4,5 · 50 cl 8,5."
+              },
+              {
+                "name": "Jus d'orange",
+                "size": "23 cl",
+                "price": "3,5"
+              },
+              {
+                "name": "Jus de pomme",
+                "size": "23 cl",
+                "price": "3,5"
+              },
+              {
+                "name": "Sirop à l'eau",
+                "price": "2,5"
+              },
+              {
+                "name": "Boissons fraîches",
+                "desc": "À retrouver en vitrine"
+              }
             ]
           }
         ]
@@ -96,7 +227,10 @@
         "groups": [
           {
             "items": [
-              { "name": "Viennoiseries & pâtisseries", "desc": "Notre sélection est à retrouver en vitrine" }
+              {
+                "name": "Viennoiseries & pâtisseries",
+                "desc": "Notre sélection est à retrouver en vitrine"
+              }
             ]
           }
         ]
@@ -108,7 +242,10 @@
     "until": "2026-11-30",
     "badge": "Nouveau",
     "eyebrow": "Recettes d'automne",
-    "title": ["Les", "Éphémères"],
+    "title": [
+      "Les",
+      "Éphémères"
+    ],
     "intro": "Des recettes exclusives, pensées et préparées avec soin par nos baristas.",
     "footnote": "Servies telles quelles. Le Tiramisu Latte est 100 % végétal.",
     "items": [
@@ -117,21 +254,65 @@
         "tagline": "La pistache et les épices de l'automne",
         "desc": "Lait de pistache chaud aux épices pumpkin spice, caramel, crème de pistache. Chantilly, caramel beurre salé, sucre d'érable & pistaches concassées.",
         "price": "9",
-        "tags": ["Chaud"],
+        "tags": [
+          "Chaud",
+          "nouveau"
+        ],
         "image": "carte/pumpkin-spice-pistachio-latte.webp",
-        "bg": "#C5C8BF"
+        "bg": "#C5C8BF",
+        "vedette": true,
+        "pitch": "La pistache et les épices de l'automne"
       },
       {
         "name": "Tiramisu Latte",
         "tagline": "Toute l'envie d'un tiramisu, dans un latte",
         "desc": "Espresso, caramel beurre salé, lait d'avoine. Cold foam à l'avoine & poudre de chocolat.",
         "price": "9",
-        "tags": ["Glacé"],
+        "tags": [
+          "Glacé",
+          "nouveau"
+        ],
         "vegan": true,
         "image": "carte/tiramisu-latte.webp",
-        "bg": "#EBD4C4"
+        "bg": "#EBD4C4",
+        "vedette": true,
+        "pitch": "Toute l'envie d'un tiramisu, dans un latte"
       }
     ]
   },
-  "footer": ["Prix en euros, service compris", "Liste des allergènes sur demande"]
+  "footer": [
+    "Prix en euros, service compris",
+    "Liste des allergènes sur demande"
+  ],
+  "moments": [
+    {
+      "from": "00:00",
+      "to": "11:30",
+      "label": "Ce matin",
+      "titre": "Bien commencer la journée",
+      "focus": [
+        "Café",
+        "Miam"
+      ]
+    },
+    {
+      "from": "11:30",
+      "to": "17:00",
+      "label": "Cet après-midi",
+      "titre": "L'heure de la pause",
+      "focus": [
+        "Glacé",
+        "Au chaud"
+      ]
+    },
+    {
+      "from": "17:00",
+      "to": "23:59",
+      "label": "En fin de journée",
+      "titre": "C'est l'heure du glouglou",
+      "focus": [
+        "Glouglou"
+      ]
+    }
+  ]
 }

@@ -1,5 +1,5 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, weather, carte, ephemeres, dole, review, instagram, produits, goodnews, anecdote, vin, winemap, tv, annonce, matcha, épicerie, chatperche-intro, chatperche-program.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, weather, carte, ephemeres, vedette, dole, review, instagram, produits, goodnews, anecdote, vin, winemap, annonce, matcha, épicerie, chatperche-intro, chatperche-program.",
   "scenes": [
     {
       "type": "café",
@@ -12,6 +12,10 @@
     {
       "type": "carte",
       "seconds": 18
+    },
+    {
+      "type": "vedette",
+      "seconds": 14
     },
     {
       "type": "dole",
@@ -46,10 +50,6 @@
       "seconds": 45
     },
     {
-      "type": "tv",
-      "seconds": 18
-    },
-    {
       "type": "annonce",
       "seconds": 16
     },
@@ -72,6 +72,10 @@
     {
       "type": "ephemeres",
       "seconds": 18
+    },
+    {
+      "type": "vedette",
+      "seconds": 14
     },
     {
       "type": "weather",

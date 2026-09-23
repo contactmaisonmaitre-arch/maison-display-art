@@ -11,11 +11,11 @@ import { GoodNewsScene } from "./GoodNewsScene";
 import { ProductsScene } from "./ProductsScene";
 import { ReviewScene } from "./ReviewScene";
 import { DoleScene } from "./DoleScene";
-import { TvTonightScene } from "./TvTonightScene";
 import { ChatPercheIntroScene } from "./ChatPercheIntroScene";
 import { ChatPercheProgramScene } from "./ChatPercheProgramScene";
 import { CarteScene } from "./CarteScene";
 import { EphemeresScene } from "./EphemeresScene";
+import { VedetteScene } from "./VedetteScene";
 import { AnnonceScene } from "./AnnonceScene";
 
 interface SceneRendererProps {
@@ -70,14 +70,14 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <ChatPercheProgramScene />;
     case "review":
       return <ReviewScene />;
-    case "tv":
-      return <TvTonightScene />;
     case "dole":
       return <DoleScene />;
     case "carte":
       return <CarteScene />;
     case "ephemeres":
       return <EphemeresScene />;
+    case "vedette":
+      return <VedetteScene vedetteIndex={scene.vedetteIndex ?? 0} />;
     case "annonce":
       return <AnnonceScene annonceIndex={scene.annonceIndex ?? 0} />;
     default:

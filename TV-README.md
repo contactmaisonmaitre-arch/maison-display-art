@@ -7,8 +7,7 @@ Affichage en boutique (1920×1080), React + Vite, hébergé par Lovable
 
 | Contenu | Source | Fréquence |
 |---|---|---|
-| Programme TV du soir | `scripts/fetch-tv-tonight.mjs` | chaque jour (`daily-tv.yml`) |
-| Événements à Dole | `scripts/fetch-dole-events.mjs` | chaque lundi |
+| Événements à Dole (à venir uniquement) | `scripts/fetch-dole-events.mjs` | chaque jour |
 | Produits + prix | catalogue public maisonmaitre.com | chaque jour (`daily-shop.yml`) |
 | Note + avis Google | API Google Places (clé requise) | chaque jour |
 | Photos Instagram | API Instagram (jeton requis) | chaque jour |
@@ -16,19 +15,36 @@ Affichage en boutique (1920×1080), React + Vite, hébergé par Lovable
 
 **Important :** la TV lit ses données (`public/data/*.json`) **directement sur
 GitHub** (`raw.githubusercontent.com`), pas dans le site publié par Lovable.
-Avant, Lovable ne republiant pas tout seul, la TV restait figée (programme TV
-du 10 juin affiché jusqu'en septembre). Maintenant, tout commit sur `main`
+Avant, Lovable ne republiant pas tout seul, la TV restait figée sur les
+données du jour de publication. Maintenant, tout commit sur `main`
 est visible sur la TV en moins de 30 min, **sans republier Lovable**.
 
 Il faut republier sur Lovable uniquement quand le **code** change (nouvelle
 scène, nouveau design). La TV se recharge seule chaque nuit à 4h30.
+
+## La carte interactive
+
+- **Selon l'heure** : `moments` dans `carte.json` (matin → Café & Miam,
+  après-midi → Glacé & Au chaud, fin de journée → Glouglou). La section du
+  moment est encadrée « En ce moment » et nourrit la scène « vedette ».
+- **Scène vedette** : une boisson en grand à chaque passage (`vedette: true`,
+  phrase `pitch`, photo `image` facultative). Jamais une boisson épuisée.
+- **Pastilles** : `tags` → `nouveau`, `coeur`, `vegetal` (100 % végétal), `glace`.
+- **Carte mobile** : `/carte` (QR code sur la TV). Allergènes affichés si le
+  champ `allergenes` est renseigné pour la boisson.
+- **Épuisé en un clic** : `/carte/equipe` sur le téléphone de l'équipe.
+  À la première ouverture, coller un jeton GitHub : github.com → Settings →
+  Developer settings → Fine-grained tokens → Generate, dépôt
+  `maison-display-art` uniquement, permission « Contents : Read and write ».
+  La TV et la carte mobile suivent en ~2 minutes.
 
 ## Modifier le contenu sans coder
 
 Sur github.com → dossier `public/data/` → ouvrir le fichier → crayon ✏️ →
 « Commit changes ». Chaque fichier a une ligne `_aide` qui explique ses champs.
 
-- `carte.json` — la carte des boissons + les éphémères (avec dates).
+- `carte.json` — la carte des boissons, les moments, les vedettes et les éphémères (avec dates).
+- `dispo.json` — boissons épuisées (géré par `/carte/equipe`).
 - `playlist.json` — ordre, durée et dates de passage des scènes.
 - `annonces.json` — annonces datées (événements, fermetures, nouveautés).
 - `coups-de-coeur.json` — thé et café mis en avant, produits exclus, notes.

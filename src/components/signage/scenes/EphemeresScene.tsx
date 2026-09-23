@@ -1,5 +1,5 @@
-import { useRemoteJson } from "@/hooks/useRemoteJson";
-import { BOARD, type CarteJson, type Ephemere } from "@/data/carte";
+import { useCarte, useDispo } from "@/hooks/useCarte";
+import { BOARD, slug, type Ephemere } from "@/data/carte";
 import { remoteUrl } from "@/lib/signage/remote";
 
 const img = (src?: string) => {
@@ -25,15 +25,25 @@ const Pill = ({ children, light = false }: { children: React.ReactNode; light?: 
   </span>
 );
 
-const Card = ({ e, i }: { e: Ephemere; i: number }) => (
+const Card = ({ e, i, soldOut = false }: { e: Ephemere; i: number; soldOut?: boolean }) => (
   <div
     className="relative flex flex-col rounded-[28px]"
     style={{
       background: e.bg ?? "#EAE3D6",
       padding: "0 44px 40px",
       animation: `mm-slide-up 1s ease-out ${0.25 + i * 0.18}s both`,
+      opacity: soldOut ? 0.5 : 1,
+      filter: soldOut ? "grayscale(0.7)" : "none",
     }}
   >
+    {soldOut && (
+      <div
+        className="absolute z-10 font-serif-display uppercase"
+        style={{ top: "38%", left: "50%", transform: "translate(-50%,-50%) rotate(-6deg)", fontSize: 30, letterSpacing: "0.25em", fontWeight: 700, padding: "12px 30px", borderRadius: 999, background: BOARD.wine, color: "#FFFFFF" }}
+      >
+        Épuisé
+      </div>
+    )}
     <div className="relative mx-auto" style={{ width: "86%", aspectRatio: "696 / 661", marginTop: 26 }}>
       {e.image && <img src={img(e.image)} alt={e.name} className="block h-full w-full" style={{ objectFit: "contain" }} />}
       {/* Pastille prix (recouvre celle de la photo d'origine) */}
@@ -59,9 +69,11 @@ const Card = ({ e, i }: { e: Ephemere; i: number }) => (
       )}
     </div>
     <div className="mt-4 flex gap-3">
-      {e.tags?.map((t) => (
-        <Pill key={t}>{t}</Pill>
-      ))}
+      {e.tags
+        ?.filter((t) => !["nouveau", "vegetal", "coeur", "glace"].includes(t.toLowerCase()))
+        .map((t) => (
+          <Pill key={t}>{t}</Pill>
+        ))}
       {e.vegan && <Pill light>100 % végétal</Pill>}
     </div>
     <div className="font-serif-display mt-4" style={{ fontSize: 50, lineHeight: 1.02, color: BOARD.wine, fontWeight: 600, letterSpacing: "-0.01em" }}>
@@ -82,7 +94,8 @@ const Card = ({ e, i }: { e: Ephemere; i: number }) => (
 
 // Scène « Les Éphémères » — recettes de saison, même charte que la carte imprimée.
 export const EphemeresScene = () => {
-  const carte = useRemoteJson<CarteJson>("data/carte.json", 30 * 60 * 1000);
+  const carte = useCarte();
+  const epuises = useDispo();
   const e = carte?.ephemeres;
   if (!e) return <div className="absolute inset-0" style={{ background: BOARD.cream }} />;
 
@@ -97,7 +110,7 @@ export const EphemeresScene = () => {
         }}
       >
         {e.items.map((it, i) => (
-          <Card key={it.name} e={it} i={i} />
+          <Card key={it.name} e={it} i={i} soldOut={epuises.includes(slug(it.name))} />
         ))}
       </div>
       <div
