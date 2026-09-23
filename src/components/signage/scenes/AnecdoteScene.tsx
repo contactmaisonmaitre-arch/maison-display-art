@@ -8,7 +8,7 @@ export const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number })
         className="pointer-events-none absolute"
         style={{
           top: "-20%", right: "-15%", width: 900, height: 900, borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.28) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(232,201,169,0.28) 0%, transparent 65%)",
           animation: "mm-glow 11s ease-in-out infinite",
         }}
       />
@@ -23,7 +23,7 @@ export const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number })
       {/* Giant editorial coffee glyph */}
       <div
         className="pointer-events-none absolute font-serif-display italic select-none"
-        style={{ right: -60, bottom: -120, fontSize: 720, color: "rgba(201,168,76,0.06)", lineHeight: 1 }}
+        style={{ right: -60, bottom: -120, fontSize: 720, color: "rgba(232,201,169,0.06)", lineHeight: 1 }}
       >
         ☕
       </div>
@@ -47,11 +47,11 @@ export const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number })
         <div className="mt-8" style={{ width: 160, height: 1, background: "linear-gradient(90deg, hsl(var(--gold)), transparent)" }} />
         <p
           className="mt-8 max-w-[1360px] font-serif-display italic"
-          style={{ fontSize: 48, lineHeight: 1.3, color: "rgba(242,237,228,0.86)" }}
+          style={{ fontSize: 48, lineHeight: 1.3, color: "rgba(244,240,231,0.86)" }}
         >
           {a.body}
         </p>
-        <div className="mt-12 mm-eyebrow" style={{ fontSize: 17, color: "rgba(201,168,76,0.7)" }}>
+        <div className="mt-12 mm-eyebrow" style={{ fontSize: 17, color: "rgba(232,201,169,0.7)" }}>
           Maison Maitre · Le café autrement
         </div>
       </div>
@@ -65,7 +65,7 @@ export const AnecdoteScene = ({ anecdoteIndex = 0 }: { anecdoteIndex?: number })
           textAlign: "center",
           fontSize: 11,
           letterSpacing: "0.2em",
-          color: "#C9A84C",
+          color: "#E8C9A9",
           opacity: 0.65,
         }}
       >

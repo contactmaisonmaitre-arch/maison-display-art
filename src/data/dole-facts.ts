@@ -2,6 +2,8 @@ export interface DoleFact {
   emoji: string;
   title: string;
   body: string;
+  /** Date de l'événement (AAAA-MM-JJ), pour ne pas afficher le passé. */
+  date?: string | null;
 }
 
 export const DOLE_FACTS: DoleFact[] = [

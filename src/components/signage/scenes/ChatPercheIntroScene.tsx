@@ -1,6 +1,6 @@
 // Scène 1/2 du Week-end Gourmand du Chat Perché — annonce / affiche.
 export const ChatPercheIntroScene = () => (
-  <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
+  <div className="absolute inset-0 overflow-hidden" style={{ background: "#46121F" }}>
     {/* Halo doré */}
     <div
       className="pointer-events-none absolute"
@@ -11,7 +11,7 @@ export const ChatPercheIntroScene = () => (
         height: 900,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(232,201,169,0.22) 0%, transparent 65%)",
         animation: "mm-glow 12s ease-in-out infinite",
       }}
     />
@@ -55,7 +55,7 @@ export const ChatPercheIntroScene = () => (
 
         <h1
           className="font-serif-display mt-8"
-          style={{ fontSize: 108, lineHeight: 1.0, color: "#F5EFE2" }}
+          style={{ fontSize: 108, lineHeight: 1.0, color: "#FFFFFF" }}
         >
           <span className="font-light">Le Week-end Gourmand</span>
           <br />
@@ -85,7 +85,7 @@ export const ChatPercheIntroScene = () => (
           style={{
             fontSize: 32,
             lineHeight: 1.4,
-            color: "rgba(245,239,226,0.85)",
+            color: "rgba(244,240,231,0.85)",
             maxWidth: 980,
           }}
         >
@@ -99,7 +99,7 @@ export const ChatPercheIntroScene = () => (
             style={{
               fontSize: 13,
               letterSpacing: "0.32em",
-              color: "#0A0A0A",
+              color: "#46121F",
               background: "hsl(var(--gold))",
               padding: "14px 28px",
               borderRadius: 2,
@@ -113,7 +113,7 @@ export const ChatPercheIntroScene = () => (
             className="font-serif-display italic"
             style={{
               fontSize: 24,
-              color: "rgba(245,239,226,0.7)",
+              color: "rgba(244,240,231,0.7)",
             }}
           >
             ★ Hommage à Marcel Aymé
@@ -125,7 +125,7 @@ export const ChatPercheIntroScene = () => (
           style={{
             fontSize: 12,
             letterSpacing: "0.36em",
-            color: "rgba(201,168,76,0.65)",
+            color: "rgba(232,201,169,0.65)",
           }}
         >
           weekend-gourmand-dole.fr · Dole, Jura

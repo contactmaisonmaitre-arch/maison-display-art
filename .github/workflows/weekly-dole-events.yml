@@ -1,11 +1,9 @@
-name: Refresh Dole events weekly
+name: Refresh Dole events daily
 
-# Tous les lundis à 5h30 UTC (≈ 7h30 heure Paris en été, 6h30 en hiver).
-# Choix du lundi pour que la TV ait les nouveaux événements de la semaine
-# dès le début de la semaine commerciale.
+# Tous les jours à 5h30 UTC (≈ 7h30 heure de Paris en été).
 on:
   schedule:
-    - cron: "30 5 * * 1"
+    - cron: "30 5 * * *"
   workflow_dispatch:
 
 permissions:

@@ -38,7 +38,7 @@ export const ChatPercheProgramScene = () => (
     className="absolute inset-0 overflow-hidden px-24 pb-20 pt-32"
     style={{
       background:
-        "linear-gradient(135deg, #0E0805 0%, #1A1410 50%, #2E2419 100%)",
+        "linear-gradient(135deg, #2E0B14 0%, #3A0F1A 50%, #46121F 100%)",
     }}
   >
     <div
@@ -50,7 +50,7 @@ export const ChatPercheProgramScene = () => (
         height: 800,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(232,201,169,0.16) 0%, transparent 65%)",
       }}
     />
 
@@ -95,7 +95,7 @@ export const ChatPercheProgramScene = () => (
         style={{
           fontSize: 26,
           lineHeight: 1.35,
-          color: "rgba(242,237,228,0.72)",
+          color: "rgba(244,240,231,0.72)",
         }}
       >
         25-26-27 septembre 2026 · Dole · Entrée libre · Pass jour 22 €
@@ -110,8 +110,8 @@ export const ChatPercheProgramScene = () => (
             key={c.title}
             className="relative flex flex-col rounded-sm p-7 overflow-hidden"
             style={{
-              backgroundColor: "rgba(242,237,228,0.06)",
-              border: "1px solid rgba(201,168,76,0.28)",
+              backgroundColor: "rgba(244,240,231,0.06)",
+              border: "1px solid rgba(232,201,169,0.28)",
               animation: `mm-slide-up 0.9s ease-out ${0.25 + i * 0.12}s both`,
             }}
           >
@@ -127,7 +127,7 @@ export const ChatPercheProgramScene = () => (
                 fontWeight: 300,
                 letterSpacing: "-0.05em",
                 color: "transparent",
-                WebkitTextStroke: "1px rgba(201,168,76,0.22)",
+                WebkitTextStroke: "1px rgba(232,201,169,0.22)",
               }}
             >
               0{i + 1}
@@ -178,7 +178,7 @@ export const ChatPercheProgramScene = () => (
               style={{
                 fontSize: 17,
                 lineHeight: 1.4,
-                color: "rgba(242,237,228,0.72)",
+                color: "rgba(244,240,231,0.72)",
               }}
             >
               {c.body}
@@ -193,7 +193,7 @@ export const ChatPercheProgramScene = () => (
       >
         <div
           className="font-serif-display italic"
-          style={{ fontSize: 22, color: "rgba(242,237,228,0.7)" }}
+          style={{ fontSize: 22, color: "rgba(244,240,231,0.7)" }}
         >
           ✦ Banquet, dîner mystère, forum « Du champ à l'assiette », menus
           spéciaux dans les restaurants de Dole.

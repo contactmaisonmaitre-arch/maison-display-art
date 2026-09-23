@@ -4,18 +4,18 @@
 
 @layer base {
   :root {
-    --linen: 36 33% 93%;
-    --cream: 38 30% 89%;
-    --parchment: 36 24% 86%;
+    --linen: 43 36% 93%;          /* crème carte #F4F0E7 */
+    --cream: 40 33% 89%;
+    --parchment: 38 30% 85%;
     --warm: 36 22% 72%;
-    --mink: 35 12% 55%;
-    --taupe: 36 11% 49%;
-    --espresso: 28 36% 14%;
-    --ink: 0 0% 9%;
-    --gold: 44 54% 54%;
-    --gold-lt: 44 60% 66%;
-    --wine: 350 50% 28%;
-    --copper: 25 57% 46%;
+    --mink: 351 18% 50%;
+    --taupe: 351 21% 45%;          /* bordeaux adouci #8A5A62 */
+    --espresso: 345 59% 17%;       /* bordeaux carte #46121F */
+    --ink: 345 62% 10%;
+    --gold: 24 42% 58%;            /* caramel — accent lisible sur crème et bordeaux */
+    --gold-lt: 29 56% 79%;         /* sable carte #E8C9A9 */
+    --wine: 345 59% 17%;
+    --copper: 22 58% 60%;          /* orange « Nouveau » #D4885C */
     --sage: 100 12% 45%;
 
     --background: var(--linen);
@@ -43,33 +43,34 @@
 
 @layer base {
   * { @apply border-border; }
-  html, body, #root { margin: 0; padding: 0; background: #161616; }
-  body { font-family: 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
+  html, body, #root { margin: 0; padding: 0; background: #2E0B14; }
+  body { font-family: 'Jost Variable', 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
 }
 
 @layer utilities {
   .font-serif-display {
-    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
+    /* Newsreader : serif robuste proche de la carte imprimée */
+    font-family: 'Newsreader Variable', 'Playfair Display', serif;
     font-weight: 500;
-    letter-spacing: -0.035em;
+    letter-spacing: -0.02em;
     font-feature-settings: "liga", "dlig", "kern";
   }
   .font-serif-classic { font-family: 'Cormorant Garamond', serif; letter-spacing: -0.01em; }
-  .mm-body { font-family: 'Playfair Display', 'Cormorant Garamond', serif; font-style: italic; font-weight: 400; letter-spacing: -0.005em; }
+  .mm-body { font-family: 'Newsreader Variable', 'Playfair Display', serif; font-style: italic; font-weight: 400; letter-spacing: -0.005em; }
   /* Tout texte italique sur Playfair passe en weight 400 (léger) */
   .font-serif-display.italic, .font-serif-display em, .font-serif-display i { font-weight: 400; }
-  .font-sans-ui { font-family: 'Jost', sans-serif; }
+  .font-sans-ui { font-family: 'Jost Variable', 'Jost', sans-serif; }
   .font-mono-ui { font-family: 'JetBrains Mono', monospace; font-feature-settings: "tnum"; }
-  .mm-eyebrow { font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.3em; font-weight: 400; }
+  .mm-eyebrow { font-family: 'Newsreader Variable', serif; text-transform: uppercase; letter-spacing: 0.28em; font-weight: 600; }
   .mm-glass-dark {
-    background: linear-gradient(135deg, rgba(46,36,25,0.45) 0%, rgba(20,15,10,0.55) 100%);
-    border: 1px solid rgba(201,168,76,0.22);
+    background: linear-gradient(135deg, rgba(70,18,31,0.45) 0%, rgba(46,11,20,0.55) 100%);
+    border: 1px solid rgba(232,201,169,0.22);
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
   .mm-glass-light {
     background: linear-gradient(135deg, rgba(255,253,248,0.78) 0%, rgba(244,238,226,0.66) 100%);
-    border: 1px solid rgba(46,36,25,0.10);
+    border: 1px solid rgba(70,18,31,0.10);
     backdrop-filter: blur(20px) saturate(1.4);
     -webkit-backdrop-filter: blur(20px) saturate(1.4);
   }
@@ -99,13 +100,13 @@
   /* Subtle dotted grid */
   .mm-grid::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image: radial-gradient(rgba(201,168,76,0.10) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(232,201,169,0.10) 1px, transparent 1px);
     background-size: 28px 28px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   }
   .mm-grid-light::before {
     content: ""; position: absolute; inset: 0; pointer-events: none;
-    background-image: radial-gradient(rgba(46,36,25,0.08) 1px, transparent 1px);
+    background-image: radial-gradient(rgba(70,18,31,0.08) 1px, transparent 1px);
     background-size: 28px 28px;
     mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
   }

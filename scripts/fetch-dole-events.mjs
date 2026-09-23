@@ -72,6 +72,20 @@ const guessEmoji = (title, location) => {
   return "📍";
 };
 
+// "MARDI 02 JUIN" → "2026-06-02" (année déduite : un mois déjà passé de plus
+// de 2 mois = l'année suivante, pour gérer décembre → janvier).
+const MONTHS = { janv: 1, "févr": 2, fevr: 2, mars: 3, avr: 4, mai: 5, juin: 6, juil: 7, "août": 8, aout: 8, sept: 9, oct: 10, nov: 11, "déc": 12, dec: 12 };
+export const toIsoDate = (label, now = new Date()) => {
+  const m = (label ?? "").toLowerCase().match(/(\d{1,2})\s+([a-zéû]+)/);
+  if (!m) return null;
+  const key = Object.keys(MONTHS).find((k) => m[2].startsWith(k));
+  if (!key) return null;
+  const month = MONTHS[key];
+  let year = now.getFullYear();
+  if (month < now.getMonth() + 1 - 2) year += 1;
+  return `${year}-${String(month).padStart(2, "0")}-${m[1].padStart(2, "0")}`;
+};
+
 const parseEvents = (html) => {
   // Découpe la frise en cases jour
   const cases = html.split(/<li id="c\d+" class="casesSly"/).slice(1);
@@ -131,8 +145,14 @@ const main = async () => {
 
   // On garde uniquement les "À la une" + on cap à 16 pour ne pas noyer
   // la rotation DoleScene.
-  const featured = allEvents.filter((e) => e.isAlaune);
-  const picked = (featured.length >= 8 ? featured : allEvents).slice(0, 16);
+  // On ne garde que les événements à venir (le site liste tout le mois).
+  const today = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
+  const upcoming = allEvents.filter((e) => {
+    const iso = toIsoDate(e.date);
+    return !iso || iso >= today;
+  });
+  const featured = upcoming.filter((e) => e.isAlaune);
+  const picked = (featured.length >= 8 ? featured : upcoming).slice(0, 16);
 
   const facts = picked.map((e) => {
     // Body : "Date — Lieu. (lien sortiradole.fr)"
@@ -145,6 +165,7 @@ const main = async () => {
       emoji: guessEmoji(e.title, e.location),
       title: e.title,
       body,
+      date: toIsoDate(e.date),
     };
   });
 

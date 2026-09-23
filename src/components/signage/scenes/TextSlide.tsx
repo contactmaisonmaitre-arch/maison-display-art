@@ -42,8 +42,8 @@ export const TextSlide = ({
       className="absolute inset-0"
       style={{
         background: bgImage
-          ? "linear-gradient(105deg, rgba(8,5,3,0.78) 0%, rgba(8,5,3,0.55) 35%, rgba(8,5,3,0.20) 70%, rgba(8,5,3,0.45) 100%)"
-          : "linear-gradient(105deg, rgba(10,7,4,0.55) 0%, rgba(10,7,4,0.15) 35%, rgba(251,247,238,0.92) 62%, rgba(251,247,238,0.99) 100%)",
+          ? "linear-gradient(105deg, rgba(40,9,17,0.78) 0%, rgba(40,9,17,0.55) 35%, rgba(40,9,17,0.20) 70%, rgba(40,9,17,0.45) 100%)"
+          : "linear-gradient(105deg, rgba(40,9,17,0.55) 0%, rgba(40,9,17,0.15) 35%, rgba(244,240,231,0.92) 62%, rgba(244,240,231,0.99) 100%)",
       }}
     />
 
@@ -57,7 +57,7 @@ export const TextSlide = ({
         height: 760,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(201,168,76,0.28) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(232,201,169,0.28) 0%, transparent 65%)",
         animation: "mm-glow 9s ease-in-out infinite",
       }}
     />
@@ -117,7 +117,7 @@ export const TextSlide = ({
         className="mt-8 max-w-[1180px] font-serif-display italic"
         style={{
           fontSize: 42,
-          color: bgImage ? "rgba(242,237,228,0.92)" : "hsl(var(--taupe))",
+          color: bgImage ? "rgba(244,240,231,0.92)" : "hsl(var(--taupe))",
           lineHeight: 1.28,
           textShadow: bgImage ? "0 2px 20px rgba(0,0,0,0.55)" : undefined,
         }}

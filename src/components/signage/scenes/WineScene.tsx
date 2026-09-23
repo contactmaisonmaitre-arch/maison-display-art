@@ -62,7 +62,7 @@ export const WineScene = () => {
       className="absolute inset-0 overflow-hidden"
       style={{
         background: hasPhotos
-          ? "#0A0606"
+          ? "#46121F"
           : "linear-gradient(135deg, #C0A8B0, #704050, #2A1020)",
       }}
     >
@@ -88,8 +88,8 @@ export const WineScene = () => {
         className="absolute inset-0"
         style={{
           background: hasPhotos
-            ? "linear-gradient(105deg, rgba(8,4,4,0.85) 0%, rgba(8,4,4,0.55) 38%, rgba(8,4,4,0.20) 70%, rgba(8,4,4,0.55) 100%)"
-            : "linear-gradient(105deg, rgba(10,6,6,0.55) 0%, rgba(10,6,6,0.15) 35%, rgba(251,247,238,0.92) 62%, rgba(251,247,238,0.99) 100%)",
+            ? "linear-gradient(105deg, rgba(40,9,17,0.85) 0%, rgba(40,9,17,0.55) 38%, rgba(40,9,17,0.20) 70%, rgba(40,9,17,0.55) 100%)"
+            : "linear-gradient(105deg, rgba(10,6,6,0.55) 0%, rgba(10,6,6,0.15) 35%, rgba(244,240,231,0.92) 62%, rgba(244,240,231,0.99) 100%)",
         }}
       />
 
@@ -103,7 +103,7 @@ export const WineScene = () => {
           height: 700,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(232,201,169,0.22) 0%, transparent 65%)",
           animation: "mm-glow 12s ease-in-out infinite",
         }}
       />
@@ -173,7 +173,7 @@ export const WineScene = () => {
           className="mt-8 max-w-[1180px] font-serif-display italic"
           style={{
             fontSize: 38,
-            color: hasPhotos ? "rgba(242,237,228,0.92)" : "hsl(var(--taupe))",
+            color: hasPhotos ? "rgba(244,240,231,0.92)" : "hsl(var(--taupe))",
             lineHeight: 1.28,
             textShadow: hasPhotos ? "0 2px 20px rgba(0,0,0,0.55)" : undefined,
           }}
@@ -214,8 +214,8 @@ export const WineScene = () => {
                   style={{
                     margin: "0 4px 0 12px",
                     color: hasPhotos
-                      ? "rgba(201,168,76,0.55)"
-                      : "rgba(46,36,25,0.4)",
+                      ? "rgba(232,201,169,0.55)"
+                      : "rgba(70,18,31,0.4)",
                   }}
                 >
                   ·
@@ -231,7 +231,7 @@ export const WineScene = () => {
             style={{
               fontSize: 12,
               letterSpacing: "0.42em",
-              color: "rgba(201,168,76,0.92)",
+              color: "rgba(232,201,169,0.92)",
             }}
           >
             <span

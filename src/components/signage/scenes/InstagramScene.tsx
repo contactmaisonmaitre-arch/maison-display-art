@@ -114,7 +114,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
       className="absolute inset-0 overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at center, #14110C 0%, #050505 70%)",
+          "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 70%)",
       }}
     >
       {/* halos doux */}
@@ -127,7 +127,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           height: 700,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,168,76,0.10) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(232,201,169,0.10) 0%, transparent 65%)",
         }}
       />
       <div
@@ -161,7 +161,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             margin: "0 auto",
             borderRadius: 24,
             boxShadow:
-              "0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,168,76,0.45), 0 0 0 4px rgba(201,168,76,0.10)",
+              "0 50px 120px rgba(0,0,0,0.7), 0 0 0 1px rgba(232,201,169,0.45), 0 0 0 4px rgba(232,201,169,0.10)",
             background: "#000",
           }}
         >
@@ -211,7 +211,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
                 style={{
                   fontSize: 9,
                   letterSpacing: "0.32em",
-                  color: "rgba(201,168,76,0.95)",
+                  color: "rgba(232,201,169,0.95)",
                 }}
               >
                 Dole · Jura
@@ -249,9 +249,9 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
               style={{
                 fontSize: 10,
                 letterSpacing: "0.32em",
-                color: "rgba(201,168,76,0.95)",
+                color: "rgba(232,201,169,0.95)",
                 padding: "6px 12px",
-                border: "1px solid rgba(201,168,76,0.45)",
+                border: "1px solid rgba(232,201,169,0.45)",
                 borderRadius: 999,
                 background: "rgba(0,0,0,0.55)",
               }}
@@ -304,7 +304,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             style={{
               fontSize: 30,
               lineHeight: 1.35,
-              color: "rgba(245,239,226,0.82)",
+              color: "rgba(244,240,231,0.82)",
               maxWidth: 540,
             }}
           >
@@ -316,14 +316,14 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             style={{
               fontSize: 18,
               letterSpacing: "0.36em",
-              color: "#0A0A0A",
+              color: "#46121F",
               background:
                 "linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-lt)) 100%)",
               padding: "20px 36px",
               borderRadius: 4,
               fontWeight: 600,
               boxShadow:
-                "0 18px 40px -10px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+                "0 18px 40px -10px rgba(232,201,169,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
               whiteSpace: "nowrap",
             }}
           >
@@ -335,7 +335,7 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             style={{
               fontSize: 12,
               letterSpacing: "0.42em",
-              color: "rgba(201,168,76,0.65)",
+              color: "rgba(232,201,169,0.65)",
             }}
           >
             instagram.com / maison_maitre

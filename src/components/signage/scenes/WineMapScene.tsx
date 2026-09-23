@@ -27,7 +27,7 @@ export const WineMapScene = () => {
       className="absolute inset-0 overflow-hidden"
       style={{
         background:
-          "radial-gradient(ellipse at 30% 50%, #1A0E0E 0%, #0A0606 70%, #050303 100%)",
+          "radial-gradient(ellipse at 30% 50%, #5A1828 0%, #46121F 60%, #2E0B14 100%)",
       }}
     >
       {/* Halo coloré qui suit la région active */}
@@ -83,7 +83,7 @@ export const WineMapScene = () => {
               {/* Voile sombre du fond carte */}
               <defs>
                 <radialGradient id="map-bg" cx="50%" cy="50%" r="60%">
-                  <stop offset="0%" stopColor="rgba(201,168,76,0.10)" />
+                  <stop offset="0%" stopColor="rgba(232,201,169,0.10)" />
                   <stop offset="100%" stopColor="transparent" />
                 </radialGradient>
                 <filter id="map-blur" x="-20%" y="-20%" width="140%" height="140%">
@@ -94,8 +94,8 @@ export const WineMapScene = () => {
               {/* Outline France — fond + trait or */}
               <path
                 d={FRANCE_OUTLINE}
-                fill="rgba(242,237,228,0.04)"
-                stroke="rgba(201,168,76,0.55)"
+                fill="rgba(244,240,231,0.04)"
+                stroke="rgba(232,201,169,0.55)"
                 strokeWidth="0.45"
                 strokeLinejoin="round"
               />
@@ -128,8 +128,8 @@ export const WineMapScene = () => {
                       cx={r.cx}
                       cy={r.cy}
                       r={isActive ? r.r : r.r * 0.55}
-                      fill={isActive ? r.color : "rgba(242,237,228,0.30)"}
-                      stroke={isActive ? "#fff" : "rgba(242,237,228,0.6)"}
+                      fill={isActive ? r.color : "rgba(244,240,231,0.30)"}
+                      stroke={isActive ? "#fff" : "rgba(244,240,231,0.6)"}
                       strokeWidth={isActive ? 0.4 : 0.18}
                       style={{
                         transition: "all 700ms cubic-bezier(0.22, 1, 0.36, 1)",
@@ -145,7 +145,7 @@ export const WineMapScene = () => {
                         fontStyle: "italic",
                         fontSize: isActive ? 3.5 : 1.9,
                         fontWeight: isActive ? 600 : 300,
-                        fill: isActive ? "#fff" : "rgba(242,237,228,0.55)",
+                        fill: isActive ? "#fff" : "rgba(244,240,231,0.55)",
                         transition: "all 700ms cubic-bezier(0.22, 1, 0.36, 1)",
                         paintOrder: "stroke",
                         stroke: "rgba(0,0,0,0.7)",
@@ -166,7 +166,7 @@ export const WineMapScene = () => {
             style={{
               fontSize: 11,
               letterSpacing: "0.36em",
-              color: "rgba(201,168,76,0.6)",
+              color: "rgba(232,201,169,0.6)",
             }}
           >
             <span>Maison Maitre · Sélection vin nature</span>
@@ -222,7 +222,7 @@ export const WineMapScene = () => {
             style={{
               fontSize: 14,
               letterSpacing: "0.32em",
-              color: "rgba(242,237,228,0.65)",
+              color: "rgba(244,240,231,0.65)",
             }}
           >
             {active.terroir}
@@ -233,7 +233,7 @@ export const WineMapScene = () => {
             style={{
               fontSize: 30,
               lineHeight: 1.38,
-              color: "rgba(242,237,228,0.88)",
+              color: "rgba(244,240,231,0.88)",
               maxWidth: 700,
             }}
           >

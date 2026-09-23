@@ -45,7 +45,7 @@ const SignageDisplay = () => {
   return (
     <div
       className="mm-grain-global fixed inset-0 overflow-hidden flex items-center justify-center"
-      style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)" }}
+      style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 100%)" }}
     >
       <div
         className="relative flex overflow-hidden"
@@ -55,7 +55,7 @@ const SignageDisplay = () => {
           transform: `scale(${scale})`,
           transformOrigin: "center center",
           flexShrink: 0,
-          background: "radial-gradient(ellipse at center, #0D0B08 0%, #050505 100%)",
+          background: "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 100%)",
         }}
       >
         <FixedTopBar />
@@ -67,8 +67,8 @@ const SignageDisplay = () => {
         className="fixed top-4 right-4 z-[9999] flex gap-1 rounded-full p-1 transition-opacity duration-500"
         style={{
           opacity: showCtrl ? 1 : 0,
-          backgroundColor: "rgba(26,22,15,0.92)",
-          border: "1px solid rgba(201,168,76,0.4)",
+          backgroundColor: "rgba(46,11,20,0.92)",
+          border: "1px solid rgba(232,201,169,0.4)",
           fontFamily: "Jost, sans-serif",
         }}
       >
@@ -80,7 +80,7 @@ const SignageDisplay = () => {
             className="rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] transition-colors"
             style={{
               backgroundColor: mode === o.k ? "hsl(var(--gold))" : "transparent",
-              color: mode === o.k ? "#1A160F" : "rgba(242,237,228,0.8)",
+              color: mode === o.k ? "#3A0F1A" : "rgba(244,240,231,0.8)",
               cursor: "pointer",
               border: "none",
             }}

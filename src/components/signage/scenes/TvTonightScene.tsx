@@ -32,8 +32,8 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
       <div
         className="flex flex-col rounded-sm p-7"
         style={{
-          backgroundColor: "rgba(242,237,228,0.04)",
-          border: "1px solid rgba(201,168,76,0.18)",
+          backgroundColor: "rgba(244,240,231,0.04)",
+          border: "1px solid rgba(232,201,169,0.18)",
           opacity: 0.55,
           animation: `mm-slide-up 0.9s ease-out ${0.2 + index * 0.1}s both`,
         }}
@@ -56,7 +56,7 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
           style={{
             fontSize: 11,
             letterSpacing: "0.3em",
-            color: "rgba(242,237,228,0.5)",
+            color: "rgba(244,240,231,0.5)",
             marginTop: 12,
           }}
         >
@@ -72,8 +72,8 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
     <div
       className="flex flex-col rounded-sm p-7"
       style={{
-        backgroundColor: "rgba(242,237,228,0.06)",
-        border: "1px solid rgba(201,168,76,0.25)",
+        backgroundColor: "rgba(244,240,231,0.06)",
+        border: "1px solid rgba(232,201,169,0.25)",
         animation: `mm-slide-up 0.9s ease-out ${0.2 + index * 0.12}s both`,
       }}
     >
@@ -119,7 +119,7 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
         style={{
           fontSize: 22,
           lineHeight: 1.25,
-          color: "rgba(242,237,228,0.95)",
+          color: "rgba(244,240,231,0.95)",
           fontWeight: 400,
         }}
       >
@@ -131,7 +131,7 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
           style={{
             fontSize: 17,
             lineHeight: 1.35,
-            color: "rgba(242,237,228,0.7)",
+            color: "rgba(244,240,231,0.7)",
           }}
         >
           {hero.subtitle}
@@ -142,16 +142,16 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
         style={{
           fontSize: 12,
           letterSpacing: "0.32em",
-          color: "rgba(201,168,76,0.85)",
+          color: "rgba(232,201,169,0.85)",
           lineHeight: 1.3,
-          borderTop: "1px solid rgba(201,168,76,0.2)",
+          borderTop: "1px solid rgba(232,201,169,0.2)",
           marginTop: "auto",
           paddingTop: 16,
         }}
       >
         {hero.duration ?? ""}
         {hero.rebroadcast && (
-          <span style={{ marginLeft: 10, color: "rgba(242,237,228,0.5)" }}>· Rediff.</span>
+          <span style={{ marginLeft: 10, color: "rgba(244,240,231,0.5)" }}>· Rediff.</span>
         )}
         {channel.next && (
           <div
@@ -159,7 +159,7 @@ const ChannelCard = ({ channel, index }: { channel: TvChannel; index: number }) 
             style={{
               fontSize: 13,
               marginTop: 8,
-              color: "rgba(242,237,228,0.55)",
+              color: "rgba(244,240,231,0.55)",
               letterSpacing: "0",
               textTransform: "none",
             }}
@@ -176,7 +176,7 @@ const TvLiveView = ({ data }: { data: import("@/hooks/useTvTonight").TvTonight }
   <div
     className="absolute inset-0 px-28 pb-24 pt-36"
     style={{
-      background: "linear-gradient(135deg, #1A1410 0%, #2E2419 60%, #0E0805 100%)",
+      background: "linear-gradient(135deg, #3A0F1A 0%, #46121F 60%, #2E0B14 100%)",
     }}
   >
     <div
@@ -188,7 +188,7 @@ const TvLiveView = ({ data }: { data: import("@/hooks/useTvTonight").TvTonight }
         height: 800,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(232,201,169,0.18) 0%, transparent 65%)",
       }}
     />
     <div className="relative">
@@ -213,7 +213,7 @@ const TvLiveView = ({ data }: { data: import("@/hooks/useTvTonight").TvTonight }
       </h2>
       <p
         className="mt-6 max-w-[1240px] font-serif-display italic"
-        style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}
+        style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(244,240,231,0.7)" }}
       >
         Les programmes phares de TF1, France 2, France 5, Arte et M6 — mis à jour chaque matin.
       </p>
@@ -229,7 +229,7 @@ const TvLiveView = ({ data }: { data: import("@/hooks/useTvTonight").TvTonight }
         style={{
           fontSize: 14,
           letterSpacing: "0.42em",
-          color: "rgba(201,168,76,0.55)",
+          color: "rgba(232,201,169,0.55)",
         }}
       >
         Grille TV · Source programme-tv.net · Rafraîchie chaque matin
@@ -252,7 +252,7 @@ const EditorialView = () => {
   return (
     <div
       className="absolute inset-0 px-28 pb-24 pt-36"
-      style={{ background: "linear-gradient(135deg, #1A1410 0%, #2E2419 60%, #0E0805 100%)" }}
+      style={{ background: "linear-gradient(135deg, #3A0F1A 0%, #46121F 60%, #2E0B14 100%)" }}
     >
       <div
         className="pointer-events-none absolute"
@@ -262,7 +262,7 @@ const EditorialView = () => {
           width: 800,
           height: 800,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(232,201,169,0.18) 0%, transparent 65%)",
         }}
       />
       <div className="relative">
@@ -287,7 +287,7 @@ const EditorialView = () => {
         </h2>
         <p
           className="mt-6 max-w-[1240px] font-serif-display italic"
-          style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(242,237,228,0.7)" }}
+          style={{ fontSize: 32, lineHeight: 1.3, color: "rgba(244,240,231,0.7)" }}
         >
           Notre sélection éditoriale — autour du café d'exception, du vin vivant et des terroirs.
         </p>
@@ -300,8 +300,8 @@ const EditorialView = () => {
                 key={`${p.channel}-${p.title}`}
                 className="flex flex-col rounded-sm p-7"
                 style={{
-                  backgroundColor: "rgba(242,237,228,0.06)",
-                  border: "1px solid rgba(201,168,76,0.25)",
+                  backgroundColor: "rgba(244,240,231,0.06)",
+                  border: "1px solid rgba(232,201,169,0.25)",
                   animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.12}s both`,
                 }}
               >
@@ -334,13 +334,13 @@ const EditorialView = () => {
                 <div className="mt-2" style={{ width: 36, height: 1, backgroundColor: "hsl(var(--gold) / 0.6)" }} />
                 <div
                   className="mt-4 font-serif-display italic"
-                  style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(242,237,228,0.95)" }}
+                  style={{ fontSize: 22, lineHeight: 1.25, color: "rgba(244,240,231,0.95)" }}
                 >
                   {p.title}
                 </div>
                 <div
                   className="mt-4 font-serif-display"
-                  style={{ fontSize: 17, lineHeight: 1.35, color: "rgba(242,237,228,0.72)" }}
+                  style={{ fontSize: 17, lineHeight: 1.35, color: "rgba(244,240,231,0.72)" }}
                 >
                   {p.note}
                 </div>
@@ -348,9 +348,9 @@ const EditorialView = () => {
                   className="font-serif-display italic"
                   style={{
                     fontSize: 16,
-                    color: "rgba(201,168,76,0.85)",
+                    color: "rgba(232,201,169,0.85)",
                     lineHeight: 1.3,
-                    borderTop: "1px solid rgba(201,168,76,0.2)",
+                    borderTop: "1px solid rgba(232,201,169,0.2)",
                     marginTop: "auto",
                     paddingTop: 16,
                   }}
@@ -364,7 +364,7 @@ const EditorialView = () => {
 
         <div
           className="mt-10 font-sans-ui uppercase text-center"
-          style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(201,168,76,0.7)" }}
+          style={{ fontSize: 16, letterSpacing: "0.42em", color: "rgba(232,201,169,0.7)" }}
         >
           Maison Maitre · Le bon goût, du grain au verre
         </div>

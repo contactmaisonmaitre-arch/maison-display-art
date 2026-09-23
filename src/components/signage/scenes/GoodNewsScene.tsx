@@ -27,7 +27,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
       className="absolute inset-0 overflow-hidden px-24 pb-24 pt-32"
       style={{
         background:
-          "linear-gradient(135deg, #0E0805 0%, #1A1410 50%, #0A0805 100%)",
+          "linear-gradient(135deg, #2E0B14 0%, #3A0F1A 50%, #0A0805 100%)",
       }}
     >
       {/* halos d'ambiance */}
@@ -40,7 +40,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
           height: 900,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,168,76,0.14) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(232,201,169,0.14) 0%, transparent 65%)",
           animation: "mm-glow 14s ease-in-out infinite",
         }}
       />
@@ -111,8 +111,8 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
             key={`${tick}-${i}`}
             className="relative flex flex-col overflow-hidden rounded-sm p-9"
             style={{
-              backgroundColor: "rgba(242,237,228,0.045)",
-              border: "1px solid rgba(201,168,76,0.28)",
+              backgroundColor: "rgba(244,240,231,0.045)",
+              border: "1px solid rgba(232,201,169,0.28)",
               boxShadow: "0 30px 60px -30px rgba(0,0,0,0.6)",
               animation: `mm-news-card-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.18}s both`,
             }}
@@ -143,7 +143,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
                 fontWeight: 600,
                 letterSpacing: "-0.05em",
                 color: "transparent",
-                WebkitTextStroke: "1px rgba(201,168,76,0.18)",
+                WebkitTextStroke: "1px rgba(232,201,169,0.18)",
               }}
             >
               0{i + 1}
@@ -185,7 +185,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
               style={{
                 fontSize: 22,
                 lineHeight: 1.42,
-                color: "rgba(242,237,228,0.78)",
+                color: "rgba(244,240,231,0.78)",
                 fontWeight: 300,
               }}
             >
@@ -197,8 +197,8 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
               style={{
                 fontSize: 11,
                 letterSpacing: "0.32em",
-                color: "rgba(201,168,76,0.6)",
-                borderTop: "1px solid rgba(201,168,76,0.18)",
+                color: "rgba(232,201,169,0.6)",
+                borderTop: "1px solid rgba(232,201,169,0.18)",
               }}
             >
               <span>Maison Maitre · Veille</span>
@@ -215,7 +215,7 @@ export const GoodNewsScene = memo(({ newsOffset = 0 }: { newsOffset?: number }) 
         style={{
           fontSize: 11,
           letterSpacing: "0.42em",
-          color: "rgba(242,237,228,0.45)",
+          color: "rgba(244,240,231,0.45)",
           textAlign: "center",
         }}
       >

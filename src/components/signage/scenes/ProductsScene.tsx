@@ -18,7 +18,7 @@ const ProductImage = ({ p }: { p: Product }) => {
         className="flex items-center justify-center h-full w-full"
         style={{
           background:
-            "linear-gradient(135deg, #F8F2E4 0%, #E5D5B0 100%)",
+            "linear-gradient(135deg, #F4F0E7 0%, #E8C9A9 100%)",
           padding: 18,
         }}
       >
@@ -26,7 +26,7 @@ const ProductImage = ({ p }: { p: Product }) => {
           className="font-serif-display italic text-center"
           style={{
             fontSize: 28,
-            color: "rgba(46,36,25,0.55)",
+            color: "rgba(70,18,31,0.55)",
             letterSpacing: "0.02em",
             lineHeight: 1.2,
           }}
@@ -53,7 +53,7 @@ const ProductImage = ({ p }: { p: Product }) => {
           : {
               objectFit: "contain",
               padding: 18,
-              filter: "drop-shadow(0 14px 24px rgba(46,36,25,0.25))",
+              filter: "drop-shadow(0 14px 24px rgba(70,18,31,0.25))",
             }
       }
     />
@@ -66,11 +66,11 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
     style={{
       gridTemplateColumns: "300px 1fr",
       minHeight: 0, // sinon une photo haute pousse les autres cartes hors écran
-      background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
-      border: p.featured ? "1.5px solid hsl(var(--gold))" : "1px solid rgba(201,168,76,0.25)",
+      background: "linear-gradient(180deg, #FFFFFF 0%, #F4F0E7 100%)",
+      border: p.featured ? "1.5px solid hsl(var(--gold))" : "1px solid rgba(232,201,169,0.25)",
       boxShadow: p.featured
-        ? "0 30px 60px -20px rgba(46,36,25,0.35), 0 0 0 1px rgba(255,255,255,0.6) inset, 0 0 0 3px rgba(201,168,76,0.18)"
-        : "0 30px 60px -20px rgba(46,36,25,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
+        ? "0 30px 60px -20px rgba(70,18,31,0.35), 0 0 0 1px rgba(255,255,255,0.6) inset, 0 0 0 3px rgba(232,201,169,0.18)"
+        : "0 30px 60px -20px rgba(70,18,31,0.30), 0 0 0 1px rgba(255,255,255,0.6) inset",
       animation: `mm-slide-up 0.9s ease-out ${0.2 + index * 0.15}s both`,
     }}
   >
@@ -88,7 +88,7 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
           padding: "7px 14px",
           borderRadius: 999,
           boxShadow:
-            "0 8px 18px -6px rgba(201,168,76,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
+            "0 8px 18px -6px rgba(232,201,169,0.55), 0 0 0 1px rgba(255,255,255,0.4) inset",
         }}
       >
         {FEATURED_LABEL[p.featured]}
@@ -99,14 +99,14 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
       style={{
         background: p.bleed
           ? "transparent"
-          : "linear-gradient(180deg, #F8F2E4 0%, #EFE4CC 100%)",
+          : "linear-gradient(180deg, #F4F0E7 0%, #EADFCF 100%)",
       }}
     >
       <ProductImage p={p} />
       {!p.bleed && (
         <div
           className="pointer-events-none absolute inset-0"
-          style={{ background: "linear-gradient(135deg, rgba(201,168,76,0.10) 0%, transparent 60%)" }}
+          style={{ background: "linear-gradient(135deg, rgba(232,201,169,0.10) 0%, transparent 60%)" }}
         />
       )}
     </div>
@@ -122,7 +122,7 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
           fontWeight: 300,
           letterSpacing: "-0.05em",
           color: "transparent",
-          WebkitTextStroke: "1.5px rgba(201,168,76,0.28)",
+          WebkitTextStroke: "1.5px rgba(232,201,169,0.28)",
           zIndex: 0,
         }}
       >
@@ -185,7 +185,7 @@ export const ProductsScene = ({ productOffset = 0 }: { productOffset?: number })
           height: 700,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,168,76,0.20) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(232,201,169,0.20) 0%, transparent 65%)",
           animation: "mm-glow 12s ease-in-out infinite",
         }}
       />

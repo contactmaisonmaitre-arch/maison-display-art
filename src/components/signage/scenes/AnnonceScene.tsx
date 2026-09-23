@@ -5,11 +5,11 @@ import { dayOffset } from "@/lib/signage/day-offset";
 // (public/data/annonces.json). Même langage visuel que les scènes Chat Perché.
 export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) => {
   const annonces = useAnnonces();
-  if (annonces.length === 0) return <div className="absolute inset-0" style={{ background: "#0A0A0A" }} />;
+  if (annonces.length === 0) return <div className="absolute inset-0" style={{ background: "#46121F" }} />;
   const a = annonces[(annonceIndex + dayOffset()) % annonces.length];
 
   return (
-    <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "#46121F" }}>
       {a.image && (
         <>
           <div
@@ -23,7 +23,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
           />
           <div
             className="absolute inset-0"
-            style={{ background: "linear-gradient(100deg, rgba(8,5,3,0.92) 0%, rgba(8,5,3,0.7) 45%, rgba(8,5,3,0.25) 100%)" }}
+            style={{ background: "linear-gradient(100deg, rgba(40,9,17,0.92) 0%, rgba(40,9,17,0.7) 45%, rgba(40,9,17,0.25) 100%)" }}
           />
         </>
       )}
@@ -35,7 +35,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
           width: 900,
           height: 900,
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 65%)",
+          background: "radial-gradient(circle, rgba(232,201,169,0.22) 0%, transparent 65%)",
           animation: "mm-glow 12s ease-in-out infinite",
         }}
       />
@@ -46,7 +46,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
               {a.eyebrow}
             </div>
           )}
-          <h1 className="font-serif-display mt-8" style={{ fontSize: 112, lineHeight: 1.0, color: "#F5EFE2" }}>
+          <h1 className="font-serif-display mt-8" style={{ fontSize: 112, lineHeight: 1.0, color: "#FFFFFF" }}>
             <span className="font-light">{a.title}</span>
             {a.titleItalic && (
               <>
@@ -66,7 +66,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
           {a.body && (
             <p
               className="font-serif-display italic mt-8"
-              style={{ fontSize: 34, lineHeight: 1.4, color: "rgba(245,239,226,0.85)", maxWidth: 1050 }}
+              style={{ fontSize: 34, lineHeight: 1.4, color: "rgba(244,240,231,0.85)", maxWidth: 1050 }}
             >
               {a.body}
             </p>
@@ -77,7 +77,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
               style={{
                 fontSize: 14,
                 letterSpacing: "0.3em",
-                color: "#0A0A0A",
+                color: "#46121F",
                 background: "hsl(var(--gold))",
                 padding: "14px 28px",
                 borderRadius: 2,
@@ -89,7 +89,7 @@ export const AnnonceScene = ({ annonceIndex = 0 }: { annonceIndex?: number }) =>
             </div>
           )}
           {a.footer && (
-            <div className="mt-14 font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "rgba(201,168,76,0.65)" }}>
+            <div className="mt-14 font-sans-ui uppercase" style={{ fontSize: 13, letterSpacing: "0.36em", color: "rgba(232,201,169,0.65)" }}>
               {a.footer}
             </div>
           )}

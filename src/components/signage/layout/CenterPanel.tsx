@@ -128,7 +128,7 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
                 background:
                   i === index
                     ? "linear-gradient(180deg, hsl(var(--gold-lt)), hsl(var(--gold)))"
-                    : "rgba(106,97,87,0.45)",
+                    : "rgba(138,90,98,0.45)",
                 boxShadow: i === index ? "0 0 12px hsl(var(--gold) / 0.7)" : "none",
               }}
             />
@@ -145,8 +145,8 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
         style={{
           width: 48,
           height: 48,
-          background: "rgba(26,22,15,0.7)",
-          border: "1px solid rgba(201,168,76,0.45)",
+          background: "rgba(46,11,20,0.7)",
+          border: "1px solid rgba(232,201,169,0.45)",
           cursor: "pointer",
           color: "hsl(var(--gold))",
         }}
@@ -163,8 +163,8 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
         style={{
           width: 48,
           height: 48,
-          background: "rgba(26,22,15,0.7)",
-          border: "1px solid rgba(201,168,76,0.45)",
+          background: "rgba(46,11,20,0.7)",
+          border: "1px solid rgba(232,201,169,0.45)",
           cursor: "pointer",
           color: "hsl(var(--gold))",
         }}
@@ -177,7 +177,7 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
       {/* Barre de progression dorée */}
       <div
         className="absolute bottom-0 left-0 right-0 z-20"
-        style={{ height: 3, background: "rgba(201,168,76,0.10)" }}
+        style={{ height: 3, background: "rgba(232,201,169,0.10)" }}
       >
         <div
           key={progressKey}

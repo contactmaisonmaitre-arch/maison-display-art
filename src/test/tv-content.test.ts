@@ -78,3 +78,12 @@ describe("produits", () => {
     expect(isTvEligible({ title: "Altiplano – 1 kg PRO", product_type: "café" })).toBe(false);
   });
 });
+
+import { eventDate } from "@/hooks/useDoleEvents";
+describe("événements Dole", () => {
+  it("lit la date dans le texte et repère le passé", () => {
+    const now = new Date("2026-09-23T10:00:00+02:00");
+    expect(eventDate({ emoji: "", title: "x", body: "Samedi 12 sept. à Dole · Musée." }, now)).toBe("2026-09-12");
+    expect(eventDate({ emoji: "", title: "x", body: "Mardi 06 janv. à Dole." }, new Date("2026-12-20"))).toBe("2027-01-06");
+  });
+});

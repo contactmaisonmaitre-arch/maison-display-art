@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { DOLE_FACTS } from "@/data/dole-facts";
 import { dayOffset } from "@/lib/signage/day-offset";
-import { useDoleEvents } from "@/hooks/useDoleEvents";
+import { eventDate, useDoleEvents } from "@/hooks/useDoleEvents";
 
 const ROTATION_MS = 20000;
 
@@ -27,9 +27,12 @@ export const DoleScene = () => {
   const offset = dayOffset();
   const idx = (offset + Math.floor(Date.now() / ROTATION_MS)) % pool.length;
   const f = pool[idx];
+  const iso = eventDate(f, new Date());
+  const when = iso ? new Date(`${iso}T12:00:00`) : null;
+  const long = f.title.length > 60;
 
   return (
-    <div className="absolute inset-0 overflow-hidden" style={{ background: "#0A0A0A" }}>
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "#46121F" }}>
       <div
         className="pointer-events-none absolute"
         style={{
@@ -39,7 +42,7 @@ export const DoleScene = () => {
           height: 800,
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(201,168,76,0.16) 0%, transparent 65%)",
+            "radial-gradient(circle, rgba(232,201,169,0.16) 0%, transparent 65%)",
         }}
       />
       <div
@@ -55,7 +58,7 @@ export const DoleScene = () => {
         }}
       />
 
-      <div className="relative flex h-full flex-col items-center justify-center px-24 text-center">
+      <div className="relative flex h-full flex-col items-center justify-center px-24 text-center" style={{ paddingTop: 118 }}>
         <div
           className="mm-eyebrow"
           style={{
@@ -64,7 +67,7 @@ export const DoleScene = () => {
             color: "hsl(var(--gold))",
           }}
         >
-          Dole · Le saviez-vous ?
+          {when ? "À faire à Dole" : "Dole · Le saviez-vous ?"}
         </div>
 
         <div
@@ -75,19 +78,38 @@ export const DoleScene = () => {
             marginTop: 36,
           }}
         >
-          {/* Emoji XXL */}
-          <div style={{ fontSize: 200, lineHeight: 1 }}>{f.emoji}</div>
+          {/* Événement : médaillon date façon carte ; anecdote : emoji */}
+          {when ? (
+            <div
+              className="flex flex-col items-center justify-center font-serif-display"
+              style={{
+                width: 170,
+                height: 170,
+                borderRadius: "50%",
+                background: "#F4F0E7",
+                color: "#46121F",
+                boxShadow: "0 0 0 8px rgba(232,201,169,0.18)",
+              }}
+            >
+              <div style={{ fontSize: 76, fontWeight: 600, lineHeight: 0.9, fontVariantNumeric: "lining-nums" }}>{when.getDate()}</div>
+              <div className="uppercase" style={{ fontSize: 17, letterSpacing: "0.24em", fontWeight: 600, marginTop: 6 }}>
+                {when.toLocaleDateString("fr-FR", { month: "short" }).replace(".", "")}
+              </div>
+            </div>
+          ) : (
+            <div style={{ fontSize: 120, lineHeight: 1 }}>{f.emoji}</div>
+          )}
 
           {/* Titre — passe de 2.8rem à un ~6rem responsive (≈ 96-110px) */}
           <h2
-            className="font-serif-display italic mt-10"
+            className="font-serif-display mt-10"
             style={{
-              fontSize: "clamp(80px, 6.4vw, 120px)",
-              color: "hsl(var(--gold))",
-              lineHeight: 1.05,
-              letterSpacing: "-0.01em",
+              fontSize: long ? 84 : 108,
+              color: "#FFFFFF",
+              fontWeight: 600,
+              lineHeight: 1.04,
+              letterSpacing: "-0.015em",
               maxWidth: "1500px",
-              textShadow: "0 4px 30px rgba(0,0,0,0.55)",
             }}
           >
             {f.title}
@@ -109,7 +131,7 @@ export const DoleScene = () => {
             className="mt-8 font-serif-display"
             style={{
               fontSize: "clamp(26px, 1.9vw, 36px)",
-              color: "#F5F0E8",
+              color: "hsl(var(--gold-lt))",
               maxWidth: "1280px",
               opacity: 0.92,
               lineHeight: 1.45,
@@ -130,7 +152,7 @@ export const DoleScene = () => {
                 height: 4,
                 borderRadius: 2,
                 background:
-                  i === idx ? "hsl(var(--gold))" : "rgba(201,168,76,0.25)",
+                  i === idx ? "hsl(var(--gold))" : "rgba(232,201,169,0.25)",
                 transition: "all 0.5s",
               }}
             />

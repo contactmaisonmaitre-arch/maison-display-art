@@ -44,7 +44,7 @@ export const MatchaScene = () => (
         height: 700,
         borderRadius: "50%",
         background:
-          "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 65%)",
+          "radial-gradient(circle, rgba(232,201,169,0.18) 0%, transparent 65%)",
         animation: "mm-glow 16s ease-in-out infinite reverse",
       }}
     />
@@ -79,9 +79,9 @@ export const MatchaScene = () => (
       >
         <span
           className="font-semibold"
-          style={{ animation: "mm-letter-rise 1s ease-out 0.4s both", display: "inline-block" }}
+          style={{ animation: "mm-letter-rise 1s ease-out 0.4s both", display: "inline-block", marginRight: "0.22em" }}
         >
-          La voie du{" "}
+          La voie du
         </span>
         <span
           className="italic font-light"
@@ -109,7 +109,7 @@ export const MatchaScene = () => (
         className="mt-8 max-w-[1240px] font-serif-display italic"
         style={{
           fontSize: 38,
-          color: "rgba(242,237,228,0.92)",
+          color: "rgba(244,240,231,0.92)",
           lineHeight: 1.32,
           textShadow: "0 2px 20px rgba(0,0,0,0.55)",
         }}

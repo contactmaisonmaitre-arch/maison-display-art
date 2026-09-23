@@ -121,7 +121,7 @@ export const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
     <div className="mm-cream mm-grid-light absolute inset-0 flex flex-col items-center justify-center px-24 pb-24 pt-36">
       <div
         className="pointer-events-none absolute"
-        style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
+        style={{ top: "-15%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(232,201,169,0.22) 0%, transparent 65%)", animation: "mm-glow 10s ease-in-out infinite" }}
       />
       <div className="relative flex items-center gap-5" style={{ animation: "mm-slide-up 1s ease-out both" }}>
         <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, transparent, hsl(var(--gold)))" }} />
@@ -129,7 +129,7 @@ export const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
         <div style={{ width: 64, height: 1, background: "linear-gradient(90deg, hsl(var(--gold)), transparent)" }} />
       </div>
       <div className="relative mt-8 flex items-center gap-12" style={{ animation: "mm-slide-up 1s ease-out 0.2s both" }}>
-        <div style={{ filter: "drop-shadow(0 12px 30px rgba(46,36,25,0.18))" }}>
+        <div style={{ filter: "drop-shadow(0 12px 30px rgba(70,18,31,0.18))" }}>
           <WeatherIcon code={w.weather_code} size={240} />
         </div>
         <div className="relative font-serif-display leading-none tabular-nums" style={{ fontSize: 360, fontWeight: 200, color: "hsl(var(--espresso))", letterSpacing: "-0.05em" }}>
@@ -171,7 +171,7 @@ export const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
                 )}
               </div>
             </div>
-            {i < arr.length - 1 && <div style={{ width: 1, height: 90, background: "rgba(46,36,25,0.15)" }} />}
+            {i < arr.length - 1 && <div style={{ width: 1, height: 90, background: "rgba(70,18,31,0.15)" }} />}
           </div>
         ))}
       </div>
@@ -183,7 +183,7 @@ export const WeatherScene = ({ weather }: { weather: WeatherData | null }) => {
             <div
               key={iso}
               className="flex flex-col items-center rounded-xl px-8 py-5"
-              style={{ background: "rgba(46,36,25,0.04)", border: "1px solid rgba(46,36,25,0.08)" }}
+              style={{ background: "rgba(70,18,31,0.04)", border: "1px solid rgba(70,18,31,0.08)" }}
             >
               <div className="mm-eyebrow" style={{ fontSize: 13, color: "hsl(var(--gold))" }}>{DAYS_FR_SHORT[d.getDay()]}</div>
               <div className="my-3" style={{ fontSize: 52 }}>{wmo(code).emoji}</div>

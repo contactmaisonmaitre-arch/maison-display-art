@@ -23,15 +23,15 @@ const GoldStar = ({ size = 24 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden>
     <defs>
       <linearGradient id={`gs-${size}`} x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stopColor="#F0CB6E" />
-        <stop offset="55%" stopColor="#C9A84C" />
-        <stop offset="100%" stopColor="#8C6F2A" />
+        <stop offset="0%" stopColor="#F3D7B8" />
+        <stop offset="55%" stopColor="#E3A67D" />
+        <stop offset="100%" stopColor="#B5663F" />
       </linearGradient>
     </defs>
     <path
       d="M12 2.6l2.78 5.96 6.55.78-4.84 4.5 1.31 6.46L12 17.1l-5.8 3.2 1.31-6.46-4.84-4.5 6.55-.78L12 2.6z"
       fill={`url(#gs-${size})`}
-      stroke="#7A5C1F"
+      stroke="#8A4A2E"
       strokeWidth="0.5"
       strokeLinejoin="round"
     />
@@ -60,7 +60,7 @@ export const ReviewScene = () => {
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=8&qzone=2&color=1A160F&bgcolor=FFFFFF&ecc=H&data=${encodeURIComponent(REVIEW_URL)}`;
 
   return (
-    <div className="absolute inset-0 overflow-hidden" style={{ background: "linear-gradient(135deg, #1A160F 0%, #2E2419 60%, #1A160F 100%)" }}>
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "linear-gradient(135deg, #3A0F1A 0%, #46121F 60%, #3A0F1A 100%)" }}>
       {/* halos colorés Google */}
       <div className="pointer-events-none absolute" style={{ top: "-20%", left: "-10%", width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle, rgba(66,133,244,0.18) 0%, transparent 65%)" }} />
       <div className="pointer-events-none absolute" style={{ bottom: "-25%", right: "-10%", width: 700, height: 700, borderRadius: "50%", background: "radial-gradient(circle, rgba(234,67,53,0.14) 0%, transparent 65%)" }} />
@@ -88,8 +88,8 @@ export const ReviewScene = () => {
             style={{
               padding: 32,
               borderRadius: 32,
-              background: "linear-gradient(180deg, #FFFFFF 0%, #FAF6EE 100%)",
-              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.5)",
+              background: "linear-gradient(180deg, #FFFFFF 0%, #F4F0E7 100%)",
+              boxShadow: "0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(232,201,169,0.5)",
               animation: "mm-slide-up 1s ease-out 0.3s both",
             }}
           >
@@ -122,7 +122,7 @@ export const ReviewScene = () => {
             style={{
               padding: 44,
               borderRadius: 4,
-              background: "#1A1510",
+              background: "#3A0F1A",
               borderLeft: "4px solid hsl(var(--gold))",
             }}
           >
@@ -134,7 +134,7 @@ export const ReviewScene = () => {
                 <span style={{ fontSize: 64, fontWeight: 300 }}>{ratingLabel}</span>
                 <span className="flex flex-col items-start gap-1">
                   <GoldStars size={22} gap={4} count={Math.round(data.rating)} />
-                  <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "rgba(242,237,228,0.65)" }}>
+                  <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "rgba(244,240,231,0.65)" }}>
                     {data.count} avis
                   </span>
                 </span>
@@ -152,8 +152,8 @@ export const ReviewScene = () => {
                   style={{
                     width: 64, height: 64, borderRadius: "50%",
                     background: "linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-lt)))",
-                    color: "#1A160F", fontSize: 28, fontWeight: 600,
-                    boxShadow: "0 0 0 2px rgba(201,168,76,0.3)",
+                    color: "#3A0F1A", fontSize: 28, fontWeight: 600,
+                    boxShadow: "0 0 0 2px rgba(232,201,169,0.3)",
                   }}
                 >
                   {r.name.charAt(0)}
@@ -162,7 +162,7 @@ export const ReviewScene = () => {
                   <div className="font-serif-display" style={{ fontSize: 26, color: "hsl(var(--linen))" }}>{r.name}</div>
                   <div className="mt-1 flex items-center gap-2">
                     <GoogleG size={16} />
-                    <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.65)" }}>Avis Google{when ? ` · ${when}` : ""}</span>
+                    <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(244,240,231,0.65)" }}>Avis Google{when ? ` · ${when}` : ""}</span>
                   </div>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export const ReviewScene = () => {
 
             <div className="mt-6 flex gap-2">
               {list.map((_, i) => (
-                <div key={i} style={{ flex: 1, height: 3, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(242,237,228,0.15)", transition: "background-color 0.4s" }} />
+                <div key={i} style={{ flex: 1, height: 3, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(244,240,231,0.15)", transition: "background-color 0.4s" }} />
               ))}
             </div>
           </div>
