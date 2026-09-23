@@ -33,6 +33,7 @@ jobs:
           if [[ -n "$(git status --porcelain public/data/dole-events.json)" ]]; then
             git add public/data/dole-events.json
             git commit -m "data: refresh Dole events ($(date -u +'%Y-%m-%d'))"
+            git pull --rebase --quiet
             git push
             echo "Dole events updated."
           else

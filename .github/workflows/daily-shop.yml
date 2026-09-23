@@ -1,0 +1,74 @@
+name: Refresh boutique (produits, avis Google, Instagram)
+
+# Tous les jours à 3h40 UTC (≈ 5h40 heure de Paris en été).
+# Chaque étape est indépendante : si l'une échoue (clé absente, API en
+# panne), les autres passent quand même et la TV garde les dernières données.
+on:
+  schedule:
+    - cron: "40 3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Produits (catalogue maisonmaitre.com)
+        continue-on-error: true
+        run: node scripts/fetch-products.mjs
+
+      - name: Avis Google
+        continue-on-error: true
+        env:
+          GOOGLE_PLACES_API_KEY: ${{ secrets.GOOGLE_PLACES_API_KEY }}
+          GOOGLE_PLACE_ID: ${{ vars.GOOGLE_PLACE_ID }}
+        run: node scripts/fetch-reviews.mjs
+
+      - name: Instagram
+        id: insta
+        continue-on-error: true
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_TOKEN_OUT: ${{ runner.temp }}/ig_token
+        run: |
+          if [[ -z "$IG_ACCESS_TOKEN" ]]; then
+            echo "Pas de IG_ACCESS_TOKEN — étape ignorée."
+            exit 0
+          fi
+          npm ci --no-audit --no-fund --silent
+          node scripts/fetch-instagram.mjs
+
+      - name: Prolonger le jeton Instagram (si GH_PAT configuré)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          f="${{ runner.temp }}/ig_token"
+          if [[ -s "$f" && -n "$GH_TOKEN" ]]; then
+            gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" < "$f"
+            echo "Secret IG_ACCESS_TOKEN mis à jour."
+          fi
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A public/data
+          [[ -d public/instagram-feed ]] && git add -A public/instagram-feed
+          if git diff --cached --quiet; then
+            echo "No change."
+          else
+            git commit -m "data: refresh boutique ($(date -u +'%Y-%m-%d'))"
+            git pull --rebase --quiet
+            git push
+          fi

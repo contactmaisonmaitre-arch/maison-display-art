@@ -15,6 +15,16 @@ const SignageDisplay = () => {
   const { mode, setMode, scale } = useFitMode();
   const [showCtrl, setShowCtrl] = useState(false);
 
+  // Rechargement complet chaque nuit vers 4h30 : récupère la dernière version
+  // publiée du site et évite que le navigateur de la TV s'encrasse.
+  useEffect(() => {
+    const id = setInterval(() => {
+      const d = new Date();
+      if (d.getHours() === 4 && d.getMinutes() === 30) window.location.reload();
+    }, 60_000);
+    return () => clearInterval(id);
+  }, []);
+
   // Show controls on mouse move, hide after 3s
   useEffect(() => {
     let t: number | undefined;

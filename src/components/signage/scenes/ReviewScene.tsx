@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
-import { FIVE_STAR_REVIEWS, REVIEW_URL } from "@/data/reviews";
+import { FALLBACK_REVIEWS, REVIEW_URL, type ReviewsData } from "@/data/reviews";
+import { useRemoteJson } from "@/hooks/useRemoteJson";
+
+const formatMonth = (d?: string | null) => {
+  if (!d) return null;
+  const date = new Date(d.length === 7 ? `${d}-01` : d);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("fr-FR", { month: "long", year: "numeric" });
+};
 
 // Logo Google "G" officiel multicolore
 const GoogleG = ({ size = 56 }: { size?: number }) => (
@@ -37,12 +45,17 @@ const GoldStars = ({ size = 24, gap = 4, count = 5 }: { size?: number; gap?: num
 );
 
 export const ReviewScene = () => {
+  const remote = useRemoteJson<ReviewsData>("data/reviews.json", 6 * 60 * 60 * 1000);
+  const data = remote?.reviews?.length ? remote : FALLBACK_REVIEWS;
+  const list = data.reviews;
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % FIVE_STAR_REVIEWS.length), 4500);
+    const t = setInterval(() => setIdx((i) => (i + 1) % list.length), 6500);
     return () => clearInterval(t);
-  }, []);
-  const r = FIVE_STAR_REVIEWS[idx];
+  }, [list.length]);
+  const r = list[idx % list.length];
+  const ratingLabel = data.rating.toFixed(1).replace(".", ",");
+  const when = formatMonth(r.date);
   // QR code Google avec couleurs et logo intégré (api goqr personnalisable)
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=720x720&margin=8&qzone=2&color=1A160F&bgcolor=FFFFFF&ecc=H&data=${encodeURIComponent(REVIEW_URL)}`;
 
@@ -115,17 +128,22 @@ export const ReviewScene = () => {
           >
             <div className="flex items-center justify-between">
               <div className="font-sans-ui uppercase" style={{ fontSize: 15, letterSpacing: "0.36em", color: "hsl(var(--gold))" }}>
-                Derniers avis 5 étoiles
+                Ils en parlent sur Google
               </div>
               <div className="font-serif-display flex items-baseline gap-3" style={{ color: "hsl(var(--linen))" }}>
-                <span style={{ fontSize: 64, fontWeight: 300 }}>5,0</span>
-                <GoldStars size={22} gap={4} />
+                <span style={{ fontSize: 64, fontWeight: 300 }}>{ratingLabel}</span>
+                <span className="flex flex-col items-start gap-1">
+                  <GoldStars size={22} gap={4} count={Math.round(data.rating)} />
+                  <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.3em", color: "rgba(242,237,228,0.65)" }}>
+                    {data.count} avis
+                  </span>
+                </span>
               </div>
             </div>
 
             <div key={idx} className="mt-8 flex-1 flex flex-col" style={{ animation: "mm-review-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) both" }}>
               <GoldStars size={42} gap={8} />
-              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
+              <p className="mt-8 font-serif-display italic flex-1" style={{ fontSize: r.text.length > 130 ? 44 : 56, lineHeight: 1.25, color: "hsl(var(--linen))", fontWeight: 300 }}>
                 « {r.text} »
               </p>
               <div className="mt-8 flex items-center gap-4">
@@ -143,17 +161,15 @@ export const ReviewScene = () => {
                 <div className="flex-1">
                   <div className="font-serif-display" style={{ fontSize: 26, color: "hsl(var(--linen))" }}>{r.name}</div>
                   <div className="mt-1 flex items-center gap-2">
-                    <span className="inline-flex items-center justify-center" style={{ width: 16, height: 16, borderRadius: "50%", background: "#4285F4" }}>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke="#fff" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    </span>
-                    <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.65)" }}>Avis vérifié · Google</span>
+                    <GoogleG size={16} />
+                    <span className="font-sans-ui uppercase" style={{ fontSize: 11, letterSpacing: "0.32em", color: "rgba(242,237,228,0.65)" }}>Avis Google{when ? ` · ${when}` : ""}</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="mt-6 flex gap-2">
-              {FIVE_STAR_REVIEWS.map((_, i) => (
+              {list.map((_, i) => (
                 <div key={i} style={{ flex: 1, height: 3, borderRadius: 2, backgroundColor: i === idx ? "hsl(var(--gold))" : "rgba(242,237,228,0.15)", transition: "background-color 0.4s" }} />
               ))}
             </div>

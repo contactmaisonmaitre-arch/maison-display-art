@@ -1,0 +1,123 @@
+{
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, weather, carte, ephemeres, dole, review, instagram, produits, goodnews, anecdote, vin, winemap, tv, annonce, matcha, épicerie, chatperche-intro, chatperche-program.",
+  "scenes": [
+    {
+      "type": "café",
+      "seconds": 13
+    },
+    {
+      "type": "weather",
+      "seconds": 12
+    },
+    {
+      "type": "carte",
+      "seconds": 18
+    },
+    {
+      "type": "dole",
+      "seconds": 20
+    },
+    {
+      "type": "review",
+      "seconds": 20
+    },
+    {
+      "type": "instagram",
+      "seconds": 30
+    },
+    {
+      "type": "produits",
+      "seconds": 17
+    },
+    {
+      "type": "goodnews",
+      "seconds": 18
+    },
+    {
+      "type": "anecdote",
+      "seconds": 15
+    },
+    {
+      "type": "vin",
+      "seconds": 13
+    },
+    {
+      "type": "winemap",
+      "seconds": 45
+    },
+    {
+      "type": "tv",
+      "seconds": 18
+    },
+    {
+      "type": "annonce",
+      "seconds": 16
+    },
+    {
+      "type": "instagram",
+      "seconds": 30
+    },
+    {
+      "type": "produits",
+      "seconds": 17
+    },
+    {
+      "type": "anecdote",
+      "seconds": 15
+    },
+    {
+      "type": "matcha",
+      "seconds": 15
+    },
+    {
+      "type": "ephemeres",
+      "seconds": 18
+    },
+    {
+      "type": "weather",
+      "seconds": 12
+    },
+    {
+      "type": "dole",
+      "seconds": 20
+    },
+    {
+      "type": "goodnews",
+      "seconds": 18
+    },
+    {
+      "type": "review",
+      "seconds": 20
+    },
+    {
+      "type": "instagram",
+      "seconds": 30
+    },
+    {
+      "type": "produits",
+      "seconds": 17
+    },
+    {
+      "type": "anecdote",
+      "seconds": 15
+    },
+    {
+      "type": "épicerie",
+      "seconds": 13
+    },
+    {
+      "type": "annonce",
+      "seconds": 16
+    },
+    {
+      "type": "chatperche-intro",
+      "seconds": 15,
+      "until": "2026-09-27"
+    },
+    {
+      "type": "chatperche-program",
+      "seconds": 15,
+      "until": "2026-09-27"
+    }
+  ]
+}

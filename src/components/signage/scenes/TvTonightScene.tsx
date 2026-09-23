@@ -375,7 +375,13 @@ const EditorialView = () => {
 
 export const TvTonightScene = () => {
   const tv = useTvTonight();
-  if (tv && tv.channels.some((c) => c.hero)) {
+  // Garde-fou : on n'affiche jamais un programme d'un autre jour
+  // (c'était le cas avant — la TV montrait le programme du 10 juin).
+  const isToday =
+    !!tv?.fetchedAt &&
+    new Date(tv.fetchedAt).toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" }) ===
+      new Date().toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" });
+  if (tv && isToday && tv.channels.some((c) => c.hero)) {
     return <TvLiveView data={tv} />;
   }
   return <EditorialView />;

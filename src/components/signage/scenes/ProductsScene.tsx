@@ -1,11 +1,7 @@
 import { useState } from "react";
-import {
-  FEATURED_TEA,
-  FEATURED_COFFEE,
-  NON_FEATURED,
-  PRODUCTS_TO_TRY,
-  type Product,
-} from "@/data/products";
+import type { Product } from "@/data/products";
+import { useProducts } from "@/hooks/useProducts";
+import { dayOffset } from "@/lib/signage/day-offset";
 
 const FEATURED_LABEL: Record<NonNullable<Product["featured"]>, string> = {
   tea: "★ Coup de cœur thé",
@@ -13,8 +9,9 @@ const FEATURED_LABEL: Record<NonNullable<Product["featured"]>, string> = {
 };
 
 const ProductImage = ({ p }: { p: Product }) => {
-  const [failed, setFailed] = useState(false);
-  if (failed) {
+  const [attempt, setAttempt] = useState(0);
+  const src = attempt === 0 ? p.img : attempt === 1 ? p.fallbackImg : undefined;
+  if (!src) {
     // Placeholder élégant si l'image n'est pas (encore) déposée dans /public/products/
     return (
       <div
@@ -41,10 +38,10 @@ const ProductImage = ({ p }: { p: Product }) => {
   }
   return (
     <img
-      src={p.img}
+      src={src}
       alt={p.name}
       loading="lazy"
-      onError={() => setFailed(true)}
+      onError={() => setAttempt((a) => (a === 0 && p.fallbackImg ? 1 : 2))}
       className="h-full w-full"
       style={
         p.bleed
@@ -68,6 +65,7 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
     className="mm-noise relative grid overflow-hidden rounded-2xl"
     style={{
       gridTemplateColumns: "300px 1fr",
+      minHeight: 0, // sinon une photo haute pousse les autres cartes hors écran
       background: "linear-gradient(180deg, #FFFFFF 0%, #FBF6EC 100%)",
       border: p.featured ? "1.5px solid hsl(var(--gold))" : "1px solid rgba(201,168,76,0.25)",
       boxShadow: p.featured
@@ -97,7 +95,7 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
       </div>
     )}
     <div
-      className="relative w-full overflow-hidden"
+      className="relative w-full h-full min-h-0 overflow-hidden"
       style={{
         background: p.bleed
           ? "transparent"
@@ -167,15 +165,14 @@ const ProductCard = ({ p, index }: { p: Product; index: number }) => (
 );
 
 export const ProductsScene = ({ productOffset = 0 }: { productOffset?: number }) => {
-  // Toujours montrer : coup de cœur thé + coup de cœur café + 1 produit qui tourne.
-  const fallbackPool = NON_FEATURED.length > 0 ? NON_FEATURED : PRODUCTS_TO_TRY;
-  const rotating = fallbackPool[productOffset % fallbackPool.length];
+  // Toujours montrer : coup de cœur thé + coup de cœur café + 1 produit qui
+  // tourne (catalogue Shopify, décalé chaque jour pour varier).
+  const { featuredTea, featuredCoffee, pool } = useProducts();
+  const rotating = pool.length > 0 ? pool[(productOffset + dayOffset()) % pool.length] : undefined;
 
-  const items: Product[] = [
-    FEATURED_TEA,
-    FEATURED_COFFEE,
-    rotating,
-  ].filter((p): p is Product => Boolean(p));
+  const items: Product[] = [featuredTea, featuredCoffee, rotating].filter(
+    (p): p is Product => Boolean(p),
+  );
 
   return (
     <div className="mm-cream mm-grid-light absolute inset-0 px-24 pb-20 pt-32 overflow-hidden">
@@ -229,7 +226,7 @@ export const ProductsScene = ({ productOffset = 0 }: { productOffset?: number })
         </div>
 
         {/* Right — product grid */}
-        <div className="grid gap-6" style={{ gridTemplateRows: "repeat(3, minmax(0, 1fr))" }}>
+        <div className="grid h-full min-h-0 gap-6" style={{ gridTemplateRows: "repeat(3, minmax(0, 1fr))" }}>
           {items.map((p, i) => (
             <ProductCard key={p.name} p={p} index={i} />
           ))}

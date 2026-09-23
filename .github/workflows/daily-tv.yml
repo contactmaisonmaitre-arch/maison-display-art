@@ -31,6 +31,7 @@ jobs:
           if [[ -n "$(git status --porcelain public/data/tv-tonight.json)" ]]; then
             git add public/data/tv-tonight.json
             git commit -m "data: refresh TV schedule ($(date -u +'%Y-%m-%d'))"
+            git pull --rebase --quiet
             git push
             echo "TV schedule updated."
           else

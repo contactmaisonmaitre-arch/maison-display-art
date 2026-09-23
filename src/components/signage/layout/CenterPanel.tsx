@@ -1,6 +1,6 @@
 import { memo, useCallback, useEffect, useState } from "react";
 import type { WeatherData } from "@/types/signage";
-import { SCENES } from "@/data/scenes";
+import { useScenes } from "@/hooks/useScenes";
 import { SceneRenderer } from "@/components/signage/scenes/SceneRenderer";
 
 interface CenterPanelProps {
@@ -11,7 +11,20 @@ interface CenterPanelProps {
 const TRANSITION_MS = 1000;
 
 export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
-  const [index, setIndex] = useState(0);
+  const SCENES = useScenes();
+  // Aperçu : ?scene=carte ouvre directement sur cette scène, ?pause la fige.
+  const params = new URLSearchParams(window.location.search);
+  const paused = params.has("pause");
+  const wanted = params.get("scene");
+  const [rawIndex, setIndex] = useState(0);
+  // La programmation arrive de GitHub après le premier rendu → on recale.
+  const wantedIdx = wanted ? SCENES.findIndex((s) => s.type === wanted) : -1;
+  useEffect(() => {
+    if (wantedIdx >= 0) setIndex(wantedIdx);
+  }, [wantedIdx]);
+  // La programmation peut changer en cours de journée (nouvelle playlist,
+  // événement qui se termine) → on reste toujours dans les bornes.
+  const index = rawIndex % SCENES.length;
   // Index de la scène qui est en train de fade out — null entre les transitions.
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [progressKey, setProgressKey] = useState(0);
@@ -25,18 +38,19 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
       setIndex(target);
       setProgressKey((k) => k + 1);
     },
-    [index]
+    [index, SCENES.length]
   );
 
   // Cycle principal — au bout de la durée de la scène active, on passe à la suivante.
   useEffect(() => {
+    if (paused) return;
     const t = setTimeout(() => {
       setPreviousIndex(index);
       setIndex((i) => (i + 1) % SCENES.length);
       setProgressKey((k) => k + 1);
     }, SCENES[index].duration);
     return () => clearTimeout(t);
-  }, [index]);
+  }, [index, SCENES, paused]);
 
   // Une fois la transition terminée, on démonte la scène précédente.
   useEffect(() => {
@@ -59,7 +73,7 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
   // On ne monte que les scènes nécessaires : active + suivante (préchauffe) + précédente (fade-out).
   const nextIndex = (index + 1) % SCENES.length;
   const mounted = new Set<number>([index, nextIndex]);
-  if (previousIndex !== null) mounted.add(previousIndex);
+  if (previousIndex !== null && previousIndex < SCENES.length) mounted.add(previousIndex);
   const mountedList = Array.from(mounted).sort((a, b) => a - b);
 
   return (

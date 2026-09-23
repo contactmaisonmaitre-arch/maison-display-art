@@ -1,0 +1,16 @@
+{
+  "_aide": "Annonces temporaires (scène « annonce »). Chaque annonce n'apparaît qu'entre from et until (AAAA-MM-JJ, inclus). Plusieurs annonces actives = elles tournent. Champs possibles : eyebrow, title, titleItalic, subtitle, body, badge, footer, image (URL ou chemin /scenes/…), from, until.",
+  "annonces": [
+    {
+      "eyebrow": "Ce week-end · Cloître de la Visitation",
+      "title": "Retrouvez-nous au",
+      "titleItalic": "Week-end Gourmand",
+      "subtitle": "25-26-27 septembre 2026",
+      "body": "Café de spécialité, infusions et boutique Maison Maitre au cloître de la Visitation — étape du pass dégustation.",
+      "badge": "★ Lucero, le café de l'événement",
+      "footer": "weekend-gourmand-dole.fr · Dole, Jura",
+      "from": "2026-09-20",
+      "until": "2026-09-27"
+    }
+  ]
+}

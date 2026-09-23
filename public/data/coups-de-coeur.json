@@ -1,0 +1,24 @@
+{
+  "_aide": "Réglages de la scène « Nos coups de cœur ». Modifiable directement sur GitHub (crayon ✏️ puis « Commit changes ») : la TV le prend en compte en moins de 30 min, sans republier Lovable. Les « handle » sont la fin de l'URL du produit sur maisonmaitre.com/products/…",
+  "featuredTea": "le-chat-heureux-the-des-maitre-100g",
+  "featuredCoffee": "cafe-assemblage-maison-maitre",
+  "rotationTypes": ["café", "thé noir", "thé vert", "thé blanc", "infusion", "rooibos", "maté"],
+  "include": ["enamel-mug"],
+  "exclude": ["cafe-des-maitre-mexique-chiapas-250g"],
+  "notes": {
+    "le-chat-heureux-the-des-maitre-100g": "Notre incontournable maison — agrumes & plantes",
+    "cafe-assemblage-maison-maitre": "Cacao · Caramel · Notes douces d'altitude",
+    "cafe-des-maitre-ethiopie-moka-sidamo-250g": "Fruité, floral, notes d'agrumes",
+    "ataco-cafe-du-salvador-250-g": "Nouveau à la maison — tout droit du Salvador",
+    "lucero-cafe-de-specialite-250g-maison-maitre": "Orange · Panela · Mûre",
+    "pomelo-cafe-colombie-huila-250-g-sapidite": "Gingembre · Citron vert · Pamplemousse",
+    "kanelbulle-cafe-colombie-risaralda-250-g-sapidite": "Orange · Cannelle · Cardamome",
+    "cafe-des-maitre-blend-italien-arabica-robusta-250g": "L'esprit de l'espresso italien",
+    "terraforte-cafe-de-specialite-250g": "Le goût des cafés de caractère",
+    "banquet-des-tsars-the-noir-bergamote-agrumes-100g-the-des-maitre": "Bergamote & agrumes",
+    "eden-floral-the-noir-rose-pivoine-100g-the-des-maitre": "Rose & Pivoine",
+    "douceur-salee-the-noir-caramel-beurre-sale-100g-the-des-maitre": "Caramel beurre salé",
+    "delice-des-vergers-infusion-framboise-hibiscus-100g-the-des-maitre": "Framboise · Hibiscus",
+    "enamel-mug": "« Buvez un bon café »"
+  }
+}

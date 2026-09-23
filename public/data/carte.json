@@ -1,0 +1,137 @@
+{
+  "_aide": "Carte des boissons (scènes « carte » et « ephemeres »), recopiée de la carte imprimée. Prix en euros sans le symbole, comme sur la carte (« 4,5 »). Pour changer un prix : modifier ici, la TV suit en moins de 30 min. Les éphémères n'apparaissent qu'entre from et until (AAAA-MM-JJ).",
+  "tagline": ["Le goût du café,", "le plaisir de le partager"],
+  "side": [
+    {
+      "label": "Dans nos moulins",
+      "items": [
+        { "name": "Blend de la maison" },
+        { "name": "Café rare", "price": "+1,5" },
+        { "name": "Décaféiné", "price": "+1" }
+      ]
+    },
+    {
+      "label": "Suppléments",
+      "items": [
+        { "name": "Sirop", "price": "+0,5" },
+        { "name": "Lait végétal", "price": "+1", "desc": "Avoine, amande ou coco", "leaf": true },
+        { "name": "Chantilly", "price": "+1" },
+        { "name": "Grand format", "price": "+1", "desc": "Sur les boissons glacées" }
+      ]
+    }
+  ],
+  "columns": [
+    [
+      {
+        "title": "Café",
+        "groups": [
+          {
+            "label": "Espresso simple",
+            "items": [
+              { "name": "Mocaccino", "price": "6" },
+              { "name": "Cappuccino", "price": "4,5" },
+              { "name": "Cortado", "price": "4" },
+              { "name": "Noisette", "price": "3" },
+              { "name": "Espresso", "price": "2" }
+            ]
+          },
+          {
+            "label": "Double espresso",
+            "items": [
+              { "name": "Flat white", "price": "5" },
+              { "name": "Americano", "price": "3,5" },
+              { "name": "Allongé", "price": "2,5" },
+              { "name": "Doppio", "price": "2,4" }
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Au chaud",
+        "groups": [
+          {
+            "items": [
+              { "name": "Matcha latte", "price": "7", "desc": "Matcha japonais de grade cérémonie" },
+              { "name": "Chaï latte", "price": "6" },
+              { "name": "Ube latte", "price": "6", "desc": "Poudre d'igname violet, lait" },
+              { "name": "Chocolat chaud", "price": "5" },
+              { "name": "Thé ou infusion", "price": "4,5" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Glacé",
+        "note": "Chaï latte et ube latte existent aussi en glacé",
+        "groups": [
+          {
+            "items": [
+              { "name": "Fruity matcha", "price": "8", "desc": "Matcha glacé, purée de fruit au choix" },
+              { "name": "Café glacé", "price": "4,5", "desc": "Version large 6" }
+            ]
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "title": "Glouglou",
+        "groups": [
+          {
+            "items": [
+              { "name": "Vin au verre", "size": "12 cl", "price": "6" },
+              { "name": "Bière pression", "desc": "25 cl 4,5 · 50 cl 8,5" },
+              { "name": "Jus d'orange", "size": "23 cl", "price": "3,5" },
+              { "name": "Jus de pomme", "size": "23 cl", "price": "3,5" },
+              { "name": "Sirop à l'eau", "price": "2,5" },
+              { "name": "Boissons fraîches", "desc": "À retrouver en vitrine" }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Miam",
+        "groups": [
+          {
+            "items": [
+              { "name": "Viennoiseries & pâtisseries", "desc": "Notre sélection est à retrouver en vitrine" }
+            ]
+          }
+        ]
+      }
+    ]
+  ],
+  "ephemeres": {
+    "from": "2026-09-01",
+    "until": "2026-11-30",
+    "badge": "Nouveau",
+    "eyebrow": "Recettes d'automne",
+    "title": ["Les", "Éphémères"],
+    "intro": "Des recettes exclusives, pensées et préparées avec soin par nos baristas.",
+    "footnote": "Servies telles quelles. Le Tiramisu Latte est 100 % végétal.",
+    "items": [
+      {
+        "name": "Pumpkin Spice Pistachio Latte",
+        "tagline": "La pistache et les épices de l'automne",
+        "desc": "Lait de pistache chaud aux épices pumpkin spice, caramel, crème de pistache. Chantilly, caramel beurre salé, sucre d'érable & pistaches concassées.",
+        "price": "9",
+        "tags": ["Chaud"],
+        "image": "carte/pumpkin-spice-pistachio-latte.webp",
+        "bg": "#C5C8BF"
+      },
+      {
+        "name": "Tiramisu Latte",
+        "tagline": "Toute l'envie d'un tiramisu, dans un latte",
+        "desc": "Espresso, caramel beurre salé, lait d'avoine. Cold foam à l'avoine & poudre de chocolat.",
+        "price": "9",
+        "tags": ["Glacé"],
+        "vegan": true,
+        "image": "carte/tiramisu-latte.webp",
+        "bg": "#EBD4C4"
+      }
+    ]
+  },
+  "footer": ["Prix en euros, service compris", "Liste des allergènes sur demande"]
+}

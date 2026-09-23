@@ -13,6 +13,8 @@ export interface Product {
    * propre décor de fond (ex. l'Altiplano sur fond rayé vert/blanc).
    */
   bleed?: boolean;
+  /** Image de secours si `img` ne charge pas. */
+  fallbackImg?: string;
 }
 
 // Produits réels — extraits du catalogue maisonmaitre.com (juin 2026).

@@ -14,6 +14,9 @@ import { DoleScene } from "./DoleScene";
 import { TvTonightScene } from "./TvTonightScene";
 import { ChatPercheIntroScene } from "./ChatPercheIntroScene";
 import { ChatPercheProgramScene } from "./ChatPercheProgramScene";
+import { CarteScene } from "./CarteScene";
+import { EphemeresScene } from "./EphemeresScene";
+import { AnnonceScene } from "./AnnonceScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -71,6 +74,14 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <TvTonightScene />;
     case "dole":
       return <DoleScene />;
+    case "carte":
+      return <CarteScene />;
+    case "ephemeres":
+      return <EphemeresScene />;
+    case "annonce":
+      return <AnnonceScene annonceIndex={scene.annonceIndex ?? 0} />;
+    default:
+      return null;
   }
 });
 SceneRenderer.displayName = "SceneRenderer";

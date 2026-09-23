@@ -1,5 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { dayOffset } from "@/lib/signage/day-offset";
+import { remoteUrl } from "@/lib/signage/remote";
+import { useRemoteJson } from "@/hooks/useRemoteJson";
+
+interface InstagramFeed {
+  fetchedAt?: string;
+  photos: { src: string; permalink?: string; date?: string }[];
+}
+
+// En dessous de ce nombre de photos auto, on garde la sélection manuelle.
+const MIN_FEED_PHOTOS = 6;
 
 // Les photos sont dans /public/instagram/ sous le nom insta-NN.webp.
 // Curation manuelle (audit visuel) — uniquement café / cave / boutique.
@@ -31,13 +41,22 @@ const InstagramLogo = ({ size = 72 }: { size?: number }) => (
   </svg>
 );
 
+// Photos : flux Instagram récupéré chaque jour (scripts/fetch-instagram.mjs)
+// s'il existe, sinon les 25 photos sélectionnées à la main.
 // Détecte les photos qui ne se chargent pas (404), pour ne pas afficher de cadre vide.
 const usePhotos = () => {
+  const feed = useRemoteJson<InstagramFeed>("data/instagram.json", 60 * 60 * 1000);
+  const feedSrcs = (feed?.photos ?? []).map((p) =>
+    import.meta.env.DEV ? `/${p.src}` : remoteUrl(p.src),
+  );
+  const candidates = feedSrcs.length >= MIN_FEED_PHOTOS ? feedSrcs : ALL_PHOTOS;
+  const key = candidates.join("|");
   const [available, setAvailable] = useState<string[]>([]);
   useEffect(() => {
     let cancelled = false;
+    const list = key.split("|");
     Promise.all(
-      ALL_PHOTOS.map(
+      list.map(
         (src) =>
           new Promise<string | null>((resolve) => {
             const img = new Image();
@@ -54,7 +73,7 @@ const usePhotos = () => {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [key]);
   return available;
 };
 
