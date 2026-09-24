@@ -2,6 +2,7 @@ import { BOARD } from "@/data/carte";
 import { useRemoteJson } from "@/hooks/useRemoteJson";
 import { useProducts } from "@/hooks/useProducts";
 import type { ShopProduct } from "@/hooks/useProducts";
+import { remoteUrl } from "@/lib/signage/remote";
 
 export interface ChatPercheJson {
   from?: string;
@@ -9,7 +10,7 @@ export interface ChatPercheJson {
   edition: string;
   dates: string;
   lieux: { titre: string; quand?: string; texte: string }[];
-  produits: { handle?: string; nom: string; badge?: string; texte: string; image?: string; price?: string }[];
+  produits: { handle?: string; nom: string; badge?: string; texte: string; image?: string; price?: string; bg?: string; cover?: boolean }[];
 }
 
 export const useChatPerche = () => useRemoteJson<ChatPercheJson>("data/chatperche.json", 30 * 60 * 1000);
@@ -82,8 +83,14 @@ export const ChatPercheMaisonScene = () => {
   );
 };
 
-const sized = (url?: string | null) =>
-  url ? (url.includes("cdn.shopify.com") ? `${url}${url.includes("?") ? "&" : "?"}width=700` : url) : undefined;
+// Photos : Shopify (redimensionnée) ou fichier du dépôt (servi depuis GitHub,
+// visible sans republier Lovable).
+const sized = (url?: string | null) => {
+  if (!url) return undefined;
+  if (url.includes("cdn.shopify.com")) return `${url}${url.includes("?") ? "&" : "?"}width=700`;
+  if (url.startsWith("/") && !import.meta.env.DEV) return remoteUrl(url);
+  return url;
+};
 
 // Annonce officielle : nos produits du Week-end Gourmand.
 export const ChatPercheProduitsScene = () => {
@@ -116,9 +123,9 @@ export const ChatPercheProduitsScene = () => {
               className="flex flex-col rounded-[28px] overflow-hidden"
               style={{ background: "#FFFFFF", boxShadow: "0 0 0 1px #E3D6BC inset", animation: `mm-slide-up 0.9s ease-out ${0.2 + i * 0.15}s both`, minHeight: 0 }}
             >
-              <div className="relative flex items-center justify-center" style={{ height: 380, background: i === 1 ? BOARD.wine : "#EFE6DA" }}>
+              <div className="relative flex items-center justify-center" style={{ height: 420, background: p.bg ?? "#EFE6DA" }}>
                 {img ? (
-                  <img src={img} alt={p.nom} onError={(e) => (e.currentTarget.style.visibility = "hidden")} style={{ maxHeight: "88%", maxWidth: "80%", objectFit: "contain", filter: "drop-shadow(0 18px 26px rgba(46,11,20,0.25))" }} />
+                  <img src={img} alt={p.nom} onError={(e) => (e.currentTarget.style.visibility = "hidden")} style={{ height: "100%", width: "100%", objectFit: p.cover ? "cover" : "contain", padding: p.cover ? 0 : "14px 0" }} />
                 ) : (
                   <div className="flex flex-col items-center">
                     <Cat size={150} color={BOARD.sand} />

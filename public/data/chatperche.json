@@ -21,20 +21,27 @@
       "handle": "lucero-cafe-de-specialite-250g-maison-maitre",
       "nom": "Lucero",
       "badge": "Le café officiel du week-end",
-      "texte": "Notre café de l'événement. Notes d'orange, de panela et de mûre."
+      "texte": "Notre café de l'événement, de Colombie. Notes d'orange, de panela et de mûre.",
+      "image": "/chatperche/lucero.webp",
+      "bg": "#EFE6DA"
     },
     {
       "nom": "Mat-chat perché",
       "badge": "Création exclusive",
-      "texte": "Bricelets au matcha et au chocolat blanc, imaginés avec L'Atelier de Géraldine à Saint-Amour.",
-      "price": ""
+      "texte": "Bricelets matcha & chocolat blanc, façonnés dans le Jura avec L'Atelier de Géraldine (Saint-Amour). Boîte de 160 g.",
+      "price": "",
+      "image": "/chatperche/bricelets-mat-chat-perche.webp",
+      "bg": "#F2EEE8",
+      "cover": true
     },
     {
       "handle": "le-chat-heureux-the-des-maitre-100g",
       "nom": "Le Chat Heureux",
       "badge": "L'infusion maison",
-      "texte": "Agrumes et plantes : l'infusion phare de Maison Maitre, à déguster sur le stand.",
-      "image": "/products/the-chat.webp"
+      "texte": "Notre infusion fine : feuilles de mûre, pomme, mélisse, verveine, camomille, notes d'agrumes.",
+      "image": "/chatperche/le-chat-heureux.webp",
+      "bg": "#E7DBCF",
+      "cover": true
     }
   ]
 }
