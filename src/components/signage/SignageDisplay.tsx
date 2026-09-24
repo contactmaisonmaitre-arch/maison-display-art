@@ -58,7 +58,7 @@ const SignageDisplay = () => {
           background: "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 100%)",
         }}
       >
-        <FixedTopBar />
+        <FixedTopBar weather={weather} />
         <CenterPanel weather={weather} />
       </div>
 

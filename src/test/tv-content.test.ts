@@ -112,3 +112,25 @@ describe("carte interactive", () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 });
+
+import { marketStatus, holidays, nextHoliday, moonPhase } from "@/data/dole-pratique";
+import { SIGNES, horoscopeDuJour } from "@/data/horoscope";
+describe("infos pratiques", () => {
+  it("marché : jeudi matin ouvert, lundi → prochain mardi", () => {
+    expect(marketStatus(new Date("2026-09-24T10:00:00+02:00"))?.open).toBe(true); // jeudi
+    expect(marketStatus(new Date("2026-09-28T10:00:00+02:00"))?.text).toMatch(/demain/); // lundi → mardi
+  });
+  it("jours fériés 2027 : Pâques au 29 mars → lundi 29 mars", () => {
+    const lp = holidays(2027).find((h) => h.name === "Lundi de Pâques")!;
+    expect(lp.date.getMonth()).toBe(2);
+    expect(lp.date.getDate()).toBe(29);
+    expect(nextHoliday(new Date("2026-09-24T10:00:00+02:00")).name).toBe("Toussaint");
+  });
+  it("lune : pleine lune du 26/09/2026 (à ±1 j)", () => {
+    expect(moonPhase(new Date("2026-09-26T20:00:00Z")).name).toMatch(/Pleine|gibbeuse/);
+  });
+  it("horoscope : 12 phrases différentes le même jour", () => {
+    const p = SIGNES.map((_, i) => horoscopeDuJour(i, "2026-09-24", ["A"]).phrase);
+    expect(new Set(p).size).toBe(12);
+  });
+});

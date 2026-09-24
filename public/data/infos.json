@@ -1,0 +1,8 @@
+{
+  "vacances": [
+    { "name": "Vacances de la Toussaint", "start": "2026-10-17", "end": "2026-11-02", "zone": "Zone A" },
+    { "name": "Vacances de Noël", "start": "2026-12-19", "end": "2027-01-04", "zone": "Zone A" },
+    { "name": "Vacances d'Hiver", "start": "2027-02-13", "end": "2027-03-01", "zone": "Zone A" }
+  ],
+  "fetchedAt": "2026-09-24T09:30:00.000Z"
+}

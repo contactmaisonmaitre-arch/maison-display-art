@@ -11,7 +11,10 @@ Affichage en boutique (1920×1080), React + Vite, hébergé par Lovable
 | Produits + prix | catalogue public maisonmaitre.com | chaque jour (`daily-shop.yml`) |
 | Note + avis Google | API Google Places (clé requise) | chaque jour |
 | Photos Instagram | API Instagram (jeton requis) | chaque jour |
-| Météo | open-meteo.com | toutes les 10 min, en direct |
+| Météo, lever/coucher du soleil | open-meteo.com | toutes les 10 min, en direct |
+| Qualité de l'air, pollens | air-quality-api.open-meteo.com | toutes les 30 min, en direct |
+| Vacances scolaires (zone A) + « Ce jour-là » (Wikipédia, filtré) | `scripts/fetch-infos.mjs` | chaque jour |
+| Marchés, jours fériés, changement d'heure, lune, horoscope | calculés dans l'app (`src/data/dole-pratique.ts`, `horoscope.ts`) | — |
 
 **Important :** la TV lit ses données (`public/data/*.json`) **directement sur
 GitHub** (`raw.githubusercontent.com`), pas dans le site publié par Lovable.
@@ -21,6 +24,14 @@ est visible sur la TV en moins de 30 min, **sans republier Lovable**.
 
 Il faut republier sur Lovable uniquement quand le **code** change (nouvelle
 scène, nouveau design). La TV se recharge seule chaque nuit à 4h30.
+
+## Infos pour les Dolois et les touristes
+
+- **Bandeau du haut** : une info pratique toutes les 7 s (météo, marché ouvert,
+  pluie, soleil, air/pollen, événement du jour, vacances, jour férié,
+  changement d'heure, lune). Les infos importantes passent en premier.
+- **Aujourd'hui à Dole**, **Dole à pied** (FR/EN), **L'horoscope du café**
+  (6 signes par passage), **Ce jour-là** (saute si pas de données du jour).
 
 ## La carte interactive
 

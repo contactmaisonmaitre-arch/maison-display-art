@@ -1,13 +1,13 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, weather, carte, ephemeres, vedette, dole, review, instagram, produits, goodnews, anecdote, vin, winemap, annonce, matcha, épicerie, chatperche-intro, chatperche-program.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, aujourdhui, carte, vedette, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, weather, goodnews, anecdote, vin, winemap, matcha, épicerie, chatperche-intro, chatperche-program.",
   "scenes": [
     {
       "type": "café",
-      "seconds": 13
+      "seconds": 12
     },
     {
-      "type": "weather",
-      "seconds": 12
+      "type": "aujourdhui",
+      "seconds": 18
     },
     {
       "type": "carte",
@@ -18,63 +18,43 @@
       "seconds": 14
     },
     {
-      "type": "dole",
-      "seconds": 20
+      "type": "review",
+      "seconds": 18
     },
     {
-      "type": "review",
+      "type": "horoscope",
       "seconds": 20
     },
     {
       "type": "instagram",
-      "seconds": 30
+      "seconds": 25
     },
     {
-      "type": "produits",
-      "seconds": 17
-    },
-    {
-      "type": "goodnews",
-      "seconds": 18
-    },
-    {
-      "type": "anecdote",
+      "type": "dole",
       "seconds": 15
     },
     {
-      "type": "vin",
-      "seconds": 13
-    },
-    {
-      "type": "winemap",
-      "seconds": 45
-    },
-    {
-      "type": "annonce",
+      "type": "produits",
       "seconds": 16
     },
     {
-      "type": "instagram",
-      "seconds": 30
+      "type": "dole-a-pied",
+      "seconds": 20
     },
     {
-      "type": "produits",
-      "seconds": 17
-    },
-    {
-      "type": "anecdote",
-      "seconds": 15
-    },
-    {
-      "type": "matcha",
-      "seconds": 15
-    },
-    {
-      "type": "ephemeres",
+      "type": "ephemeride",
       "seconds": 18
     },
     {
+      "type": "ephemeres",
+      "seconds": 16
+    },
+    {
       "type": "vedette",
+      "seconds": 14
+    },
+    {
+      "type": "annonce",
       "seconds": 14
     },
     {
@@ -82,36 +62,44 @@
       "seconds": 12
     },
     {
-      "type": "dole",
-      "seconds": 20
-    },
-    {
       "type": "goodnews",
-      "seconds": 18
-    },
-    {
-      "type": "review",
-      "seconds": 20
-    },
-    {
-      "type": "instagram",
-      "seconds": 30
-    },
-    {
-      "type": "produits",
-      "seconds": 17
-    },
-    {
-      "type": "anecdote",
       "seconds": 15
     },
     {
-      "type": "épicerie",
+      "type": "horoscope",
+      "seconds": 20
+    },
+    {
+      "type": "anecdote",
+      "seconds": 14
+    },
+    {
+      "type": "vin",
       "seconds": 13
     },
     {
-      "type": "annonce",
+      "type": "winemap",
+      "seconds": 30
+    },
+    {
+      "type": "carte",
+      "seconds": 18
+    },
+    {
+      "type": "produits",
       "seconds": 16
+    },
+    {
+      "type": "matcha",
+      "seconds": 14
+    },
+    {
+      "type": "dole-a-pied",
+      "seconds": 20
+    },
+    {
+      "type": "épicerie",
+      "seconds": 12
     },
     {
       "type": "chatperche-intro",

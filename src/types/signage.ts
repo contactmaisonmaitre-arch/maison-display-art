@@ -13,6 +13,9 @@ export interface WeatherData {
     weather_code: number[];
     temperature_2m_max: number[];
     temperature_2m_min: number[];
+    sunrise?: string[];
+    sunset?: string[];
+    precipitation_probability_max?: number[];
   };
 }
 
@@ -34,6 +37,10 @@ export type SceneType =
   | "carte"
   | "ephemeres"
   | "vedette"
+  | "aujourdhui"
+  | "dole-a-pied"
+  | "horoscope"
+  | "ephemeride"
   | "annonce";
 
 export interface Scene {
@@ -47,6 +54,8 @@ export interface Scene {
   annonceIndex?: number;
   /** Rang de passage pour la scène "vedette" (boisson mise en avant). */
   vedetteIndex?: number;
+  /** Page à afficher pour les scènes paginées (horoscope : 6 signes par page). */
+  page?: number;
 }
 
 /**

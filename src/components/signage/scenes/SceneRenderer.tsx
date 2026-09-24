@@ -16,6 +16,10 @@ import { ChatPercheProgramScene } from "./ChatPercheProgramScene";
 import { CarteScene } from "./CarteScene";
 import { EphemeresScene } from "./EphemeresScene";
 import { VedetteScene } from "./VedetteScene";
+import { AujourdhuiScene } from "./AujourdhuiScene";
+import { DoleAPiedScene } from "./DoleAPiedScene";
+import { HoroscopeScene } from "./HoroscopeScene";
+import { EphemerideScene } from "./EphemerideScene";
 import { AnnonceScene } from "./AnnonceScene";
 
 interface SceneRendererProps {
@@ -80,6 +84,14 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <VedetteScene vedetteIndex={scene.vedetteIndex ?? 0} />;
     case "annonce":
       return <AnnonceScene annonceIndex={scene.annonceIndex ?? 0} />;
+    case "aujourdhui":
+      return <AujourdhuiScene weather={weather} />;
+    case "dole-a-pied":
+      return <DoleAPiedScene />;
+    case "horoscope":
+      return <HoroscopeScene page={scene.page ?? 0} />;
+    case "ephemeride":
+      return <EphemerideScene />;
     default:
       return null;
   }

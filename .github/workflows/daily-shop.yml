@@ -1,4 +1,4 @@
-name: Refresh boutique (produits, avis Google, Instagram)
+name: Refresh boutique (produits, infos du jour, avis Google, Instagram)
 
 # Tous les jours à 3h40 UTC (≈ 5h40 heure de Paris en été).
 # Chaque étape est indépendante : si l'une échoue (clé absente, API en
@@ -26,6 +26,10 @@ jobs:
       - name: Produits (catalogue maisonmaitre.com)
         continue-on-error: true
         run: node scripts/fetch-products.mjs
+
+      - name: Infos du jour (vacances scolaires, éphémérides)
+        continue-on-error: true
+        run: node scripts/fetch-infos.mjs
 
       - name: Avis Google
         continue-on-error: true

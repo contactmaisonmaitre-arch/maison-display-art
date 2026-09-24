@@ -5,6 +5,7 @@ import { useRemoteJson } from "./useRemoteJson";
 import { useToday } from "./useToday";
 import { useAnnonces } from "./useAnnonces";
 import { ephemeresActive, type CarteJson } from "@/data/carte";
+import { useInfos } from "./useInfos";
 
 interface PlaylistJson {
   scenes: PlaylistEntry[];
@@ -22,11 +23,14 @@ export const useScenes = (): Scene[] => {
   const carte = useRemoteJson<CarteJson>("data/carte.json", 30 * 60 * 1000);
   // Tant que la carte n'est pas chargée, on suppose les éphémères actifs.
   const eph = carte ? ephemeresActive(carte) : true;
+  const infos = useInfos();
+  const todayIso = today.toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
+  const ephemeride = infos ? infos.ephemerides?.date === todayIso && (infos.ephemerides.events.length > 0) : false;
   const playlist = json?.scenes?.length ? json.scenes : DEFAULT_PLAYLIST;
   const key = JSON.stringify(playlist);
   return useMemo(
-    () => buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph }),
+    () => buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }),
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [key, today, annonces.length, eph],
+    [key, today, annonces.length, eph, ephemeride],
   );
 };

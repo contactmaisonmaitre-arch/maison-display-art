@@ -22,34 +22,31 @@ const NEWS_ORDER = shuffled(GOOD_NEWS_OF_THE_DAY.map((_, i) => i));
  * (modifiable sur GitHub sans republier Lovable).
  */
 export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
-  { type: "café", seconds: 13 },
-  { type: "weather", seconds: 12 },
+  { type: "café", seconds: 12 },
+  { type: "aujourdhui", seconds: 18 },
   { type: "carte", seconds: 18 },
   { type: "vedette", seconds: 14 },
-  { type: "dole", seconds: 20 },
-  { type: "review", seconds: 20 },
-  { type: "instagram", seconds: 30 },
-  { type: "produits", seconds: 17 },
-  { type: "goodnews", seconds: 18 },
-  { type: "anecdote", seconds: 15 },
-  { type: "vin", seconds: 13 },
-  { type: "winemap", seconds: 45 },
-  { type: "annonce", seconds: 16 },
-  { type: "instagram", seconds: 30 },
-  { type: "produits", seconds: 17 },
-  { type: "anecdote", seconds: 15 },
-  { type: "matcha", seconds: 15 },
-  { type: "ephemeres", seconds: 18 },
+  { type: "review", seconds: 18 },
+  { type: "horoscope", seconds: 20 },
+  { type: "instagram", seconds: 25 },
+  { type: "dole", seconds: 15 },
+  { type: "produits", seconds: 16 },
+  { type: "dole-a-pied", seconds: 20 },
+  { type: "ephemeride", seconds: 18 },
+  { type: "ephemeres", seconds: 16 },
   { type: "vedette", seconds: 14 },
+  { type: "annonce", seconds: 14 },
   { type: "weather", seconds: 12 },
-  { type: "dole", seconds: 20 },
-  { type: "goodnews", seconds: 18 },
-  { type: "review", seconds: 20 },
-  { type: "instagram", seconds: 30 },
-  { type: "produits", seconds: 17 },
-  { type: "anecdote", seconds: 15 },
-  { type: "épicerie", seconds: 13 },
-  { type: "annonce", seconds: 16 },
+  { type: "goodnews", seconds: 15 },
+  { type: "horoscope", seconds: 20 },
+  { type: "anecdote", seconds: 14 },
+  { type: "vin", seconds: 13 },
+  { type: "winemap", seconds: 30 },
+  { type: "carte", seconds: 18 },
+  { type: "produits", seconds: 16 },
+  { type: "matcha", seconds: 14 },
+  { type: "dole-a-pied", seconds: 20 },
+  { type: "épicerie", seconds: 12 },
   { type: "chatperche-intro", seconds: 15, until: "2026-09-27" },
   { type: "chatperche-program", seconds: 15, until: "2026-09-27" },
 ];
@@ -62,6 +59,8 @@ const todayIso = (now: Date) =>
 export interface SceneContext {
   annonceCount: number;
   ephemeres: boolean;
+  /** Éphémérides du jour disponibles (sinon la scène « Ce jour-là » saute). */
+  ephemeride?: boolean;
 }
 
 export const isEntryActive = (e: PlaylistEntry, now: Date, ctx: SceneContext) => {
@@ -76,6 +75,7 @@ export const isEntryActive = (e: PlaylistEntry, now: Date, ctx: SceneContext) =>
   }
   if (e.type === "annonce" && ctx.annonceCount === 0) return false;
   if (e.type === "ephemeres" && !ctx.ephemeres) return false;
+  if (e.type === "ephemeride" && ctx.ephemeride === false) return false;
   return true;
 };
 
@@ -112,6 +112,9 @@ export const buildScenes = (
           break;
         case "vedette":
           scene.vedetteIndex = n;
+          break;
+        case "horoscope":
+          scene.page = n;
           break;
       }
       return scene;

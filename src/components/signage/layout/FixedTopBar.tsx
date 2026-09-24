@@ -2,8 +2,10 @@ import { memo } from "react";
 import { getSaintDuJour } from "@/data/saints";
 import { formatDateLong, pad } from "@/lib/signage/date";
 import { useNow } from "@/hooks/useNow";
+import type { WeatherData } from "@/types/signage";
+import { InfoRotator } from "./InfoRotator";
 
-export const FixedTopBar = memo(() => {
+export const FixedTopBar = memo(({ weather }: { weather: WeatherData | null }) => {
   const now = useNow();
   return (
     <div
@@ -36,6 +38,7 @@ export const FixedTopBar = memo(() => {
           </div>
         </div>
       </div>
+      <InfoRotator weather={weather} />
       <div className="flex items-center gap-6">
         <div style={{ width: 1, height: 64, background: "linear-gradient(180deg, transparent, hsl(var(--gold) / 0.55), transparent)" }} />
         <div className="text-right">
