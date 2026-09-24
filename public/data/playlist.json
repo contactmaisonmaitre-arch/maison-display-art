@@ -1,9 +1,14 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, aujourdhui, carte, vedette, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, weather, goodnews, anecdote, vin, winemap, matcha, épicerie, chatperche-intro, chatperche-program.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, aujourdhui, carte, vedette, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-intro, chatperche-program — et en réserve : weather, goodnews, matcha, épicerie.",
   "scenes": [
     {
       "type": "café",
       "seconds": 12
+    },
+    {
+      "type": "chatperche-maison",
+      "seconds": 16,
+      "until": "2026-09-27"
     },
     {
       "type": "aujourdhui",
@@ -18,6 +23,11 @@
       "seconds": 14
     },
     {
+      "type": "chatperche-produits",
+      "seconds": 18,
+      "until": "2026-09-27"
+    },
+    {
       "type": "review",
       "seconds": 18
     },
@@ -28,6 +38,11 @@
     {
       "type": "instagram",
       "seconds": 25
+    },
+    {
+      "type": "chatperche-intro",
+      "seconds": 14,
+      "until": "2026-09-27"
     },
     {
       "type": "dole",
@@ -42,6 +57,11 @@
       "seconds": 20
     },
     {
+      "type": "chatperche-maison",
+      "seconds": 16,
+      "until": "2026-09-27"
+    },
+    {
       "type": "ephemeride",
       "seconds": 18
     },
@@ -54,16 +74,13 @@
       "seconds": 14
     },
     {
+      "type": "chatperche-produits",
+      "seconds": 18,
+      "until": "2026-09-27"
+    },
+    {
       "type": "annonce",
       "seconds": 14
-    },
-    {
-      "type": "weather",
-      "seconds": 12
-    },
-    {
-      "type": "goodnews",
-      "seconds": 15
     },
     {
       "type": "horoscope",
@@ -74,42 +91,21 @@
       "seconds": 14
     },
     {
-      "type": "vin",
-      "seconds": 13
-    },
-    {
-      "type": "winemap",
-      "seconds": 30
-    },
-    {
       "type": "carte",
       "seconds": 18
+    },
+    {
+      "type": "chatperche-program",
+      "seconds": 14,
+      "until": "2026-09-27"
     },
     {
       "type": "produits",
       "seconds": 16
     },
     {
-      "type": "matcha",
-      "seconds": 14
-    },
-    {
       "type": "dole-a-pied",
       "seconds": 20
-    },
-    {
-      "type": "épicerie",
-      "seconds": 12
-    },
-    {
-      "type": "chatperche-intro",
-      "seconds": 15,
-      "until": "2026-09-27"
-    },
-    {
-      "type": "chatperche-program",
-      "seconds": 15,
-      "until": "2026-09-27"
     }
   ]
 }

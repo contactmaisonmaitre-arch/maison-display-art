@@ -2,8 +2,6 @@ import { memo } from "react";
 import type { Scene, WeatherData } from "@/types/signage";
 import { TextSlide } from "./TextSlide";
 import { WeatherScene } from "./WeatherScene";
-import { WineScene } from "./WineScene";
-import { WineMapScene } from "./WineMapScene";
 import { MatchaScene } from "./MatchaScene";
 import { InstagramScene } from "./InstagramScene";
 import { AnecdoteScene } from "./AnecdoteScene";
@@ -20,6 +18,7 @@ import { AujourdhuiScene } from "./AujourdhuiScene";
 import { DoleAPiedScene } from "./DoleAPiedScene";
 import { HoroscopeScene } from "./HoroscopeScene";
 import { EphemerideScene } from "./EphemerideScene";
+import { ChatPercheMaisonScene, ChatPercheProduitsScene } from "./ChatPercheMaisonScene";
 import { AnnonceScene } from "./AnnonceScene";
 
 interface SceneRendererProps {
@@ -47,10 +46,6 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
-    case "vin":
-      return <WineScene />;
-    case "winemap":
-      return <WineMapScene />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "épicerie":
@@ -92,6 +87,10 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <HoroscopeScene page={scene.page ?? 0} />;
     case "ephemeride":
       return <EphemerideScene />;
+    case "chatperche-maison":
+      return <ChatPercheMaisonScene />;
+    case "chatperche-produits":
+      return <ChatPercheProduitsScene />;
     default:
       return null;
   }

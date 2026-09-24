@@ -21,14 +21,14 @@ export interface WeatherData {
 
 export type SceneType =
   | "café"
-  | "vin"
-  | "winemap"
   | "weather"
   | "matcha"
   | "épicerie"
   | "instagram"
   | "chatperche-intro"
   | "chatperche-program"
+  | "chatperche-maison"
+  | "chatperche-produits"
   | "produits"
   | "anecdote"
   | "goodnews"

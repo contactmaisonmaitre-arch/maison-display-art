@@ -1,0 +1,40 @@
+{
+  "_aide": "Page spéciale Week-end Gourmand du Chat Perché (scènes « chatperche-maison » et « chatperche-produits »). Visible uniquement entre from et until. Pour un produit : handle = fin de l'URL maisonmaitre.com/products/… (photo et prix repris de la boutique en ligne), ou image/price à la main. price vide = pas de prix affiché.",
+  "from": "2026-09-20",
+  "until": "2026-09-27",
+  "edition": "Week-end Gourmand du Chat Perché",
+  "dates": "25 · 26 · 27 septembre 2026",
+  "lieux": [
+    {
+      "titre": "Cloître de la Visitation",
+      "quand": "Samedi 26 & dimanche 27",
+      "texte": "Notre stand café & thé du pass dégustation, et un coin boutique pour repartir avec nos créations."
+    },
+    {
+      "titre": "Maison Maitre · 16 rue de Besançon",
+      "quand": "Tout le week-end",
+      "texte": "La boutique vous accueille, avec la buvette installée juste devant."
+    }
+  ],
+  "produits": [
+    {
+      "handle": "lucero-cafe-de-specialite-250g-maison-maitre",
+      "nom": "Lucero",
+      "badge": "Le café officiel du week-end",
+      "texte": "Notre café de l'événement. Notes d'orange, de panela et de mûre."
+    },
+    {
+      "nom": "Mat-chat perché",
+      "badge": "Création exclusive",
+      "texte": "Bricelets au matcha et au chocolat blanc, imaginés avec L'Atelier de Géraldine à Saint-Amour.",
+      "price": ""
+    },
+    {
+      "handle": "le-chat-heureux-the-des-maitre-100g",
+      "nom": "Le Chat Heureux",
+      "badge": "L'infusion maison",
+      "texte": "Agrumes et plantes : l'infusion phare de Maison Maitre, à déguster sur le stand.",
+      "image": "/products/the-chat.webp"
+    }
+  ]
+}

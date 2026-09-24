@@ -26,7 +26,7 @@ describe("programmation", () => {
   });
 
   it("filtre par jour de la semaine", () => {
-    const s = buildScenes([{ type: "vin", seconds: 10, days: [5, 6] }, { type: "café", seconds: 10 }], at("2026-09-23"), ctx);
+    const s = buildScenes([{ type: "anecdote", seconds: 10, days: [5, 6] }, { type: "café", seconds: 10 }], at("2026-09-23"), ctx);
     expect(s.map((x) => x.type)).toEqual(["café"]); // mercredi
   });
 

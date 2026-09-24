@@ -46,6 +46,8 @@ export interface ProductSelection {
   featuredTea?: Product;
   featuredCoffee?: Product;
   pool: Product[];
+  /** Catalogue brut (pour retrouver un produit par handle). */
+  raw?: ShopProduct[];
 }
 
 /** Image Shopify redimensionnée (évite de charger des 3000 px sur la TV). */
@@ -106,5 +108,5 @@ export const selectProducts = (
 export const useProducts = (): ProductSelection => {
   const data = useRemoteJson<ProductsJson>("data/products.json", 60 * 60 * 1000);
   const cfg = useRemoteJson<ProductsConfig>("data/coups-de-coeur.json", 30 * 60 * 1000);
-  return useMemo(() => selectProducts(data, cfg), [data, cfg]);
+  return useMemo(() => ({ ...selectProducts(data, cfg), raw: data?.products }), [data, cfg]);
 };
