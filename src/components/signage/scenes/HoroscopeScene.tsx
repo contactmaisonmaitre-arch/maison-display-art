@@ -14,7 +14,9 @@ export const HoroscopeScene = ({ page = 0 }: { page?: number }) => {
     [carte],
   );
   const dayKey = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
-  const start = (page % 2) * PER_PAGE;
+  // Une seule scène horoscope par tour : on alterne les deux moitiés toutes les 5 min.
+  const half = (page + Math.floor(Date.now() / 300_000)) % 2;
+  const start = half * PER_PAGE;
   const signs = SIGNES.slice(start, start + PER_PAGE);
 
   return (

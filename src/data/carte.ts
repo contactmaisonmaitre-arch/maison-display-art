@@ -145,7 +145,8 @@ export const allItems = (c: CarteJson | null): FlatItem[] => {
  * mises en avant à cette heure-ci, puis les éphémères. Les épuisées sont exclues.
  */
 export const vedettePool = (c: CarteJson | null, epuises: string[], now = new Date()): FlatItem[] => {
-  const items = allItems(c).filter((i) => i.vedette && !epuises.includes(i.id));
+  // Uniquement les boissons qui ont une photo dédiée.
+  const items = allItems(c).filter((i) => i.vedette && i.image && !epuises.includes(i.id));
   const focus = currentMoment(c, now)?.focus ?? [];
   const inFocus = items.filter((i) => focus.includes(i.section));
   const eph = items.filter((i) => i.ephemere);

@@ -1,5 +1,5 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Options par scène : from / until (AAAA-MM-JJ) pour une période, days (0=dim … 6=sam), enabled:false pour couper. Types : café, aujourdhui, carte, vedette, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-intro, chatperche-program — et en réserve : weather, goodnews, matcha, épicerie.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, matcha, épicerie.",
   "scenes": [
     {
       "type": "café",
@@ -16,11 +16,7 @@
     },
     {
       "type": "carte",
-      "seconds": 18
-    },
-    {
-      "type": "vedette",
-      "seconds": 14
+      "seconds": 20
     },
     {
       "type": "chatperche-produits",
@@ -40,59 +36,16 @@
       "seconds": 25
     },
     {
-      "type": "chatperche-intro",
-      "seconds": 14,
-      "until": "2026-09-27"
-    },
-    {
       "type": "dole",
       "seconds": 15
-    },
-    {
-      "type": "produits",
-      "seconds": 16
-    },
-    {
-      "type": "dole-a-pied",
-      "seconds": 20
-    },
-    {
-      "type": "chatperche-maison",
-      "seconds": 16,
-      "until": "2026-09-27"
-    },
-    {
-      "type": "ephemeride",
-      "seconds": 18
     },
     {
       "type": "ephemeres",
       "seconds": 16
     },
     {
-      "type": "vedette",
-      "seconds": 14
-    },
-    {
-      "type": "chatperche-produits",
-      "seconds": 18,
-      "until": "2026-09-27"
-    },
-    {
-      "type": "annonce",
-      "seconds": 14
-    },
-    {
-      "type": "horoscope",
-      "seconds": 20
-    },
-    {
-      "type": "anecdote",
-      "seconds": 14
-    },
-    {
-      "type": "carte",
-      "seconds": 18
+      "type": "produits",
+      "seconds": 16
     },
     {
       "type": "chatperche-program",
@@ -100,12 +53,20 @@
       "until": "2026-09-27"
     },
     {
-      "type": "produits",
-      "seconds": 16
-    },
-    {
       "type": "dole-a-pied",
       "seconds": 20
+    },
+    {
+      "type": "ephemeride",
+      "seconds": 18
+    },
+    {
+      "type": "anecdote",
+      "seconds": 14
+    },
+    {
+      "type": "annonce",
+      "seconds": 14
     }
   ]
 }

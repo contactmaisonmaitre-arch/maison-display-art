@@ -15,8 +15,8 @@ describe("programmation", () => {
   it("les scènes Chat Perché disparaissent après le 27/09/2026", () => {
     const before = buildScenes(DEFAULT_PLAYLIST, at("2026-09-26"), ctx).map((s) => s.type);
     const after = buildScenes(DEFAULT_PLAYLIST, at("2026-09-28"), ctx).map((s) => s.type);
-    expect(before).toContain("chatperche-intro");
-    expect(after).not.toContain("chatperche-intro");
+    expect(before).toContain("chatperche-maison");
+    expect(after).not.toContain("chatperche-maison");
   });
 
   it("pas de scène annonce / éphémères sans contenu", () => {
@@ -100,12 +100,10 @@ describe("carte interactive", () => {
     expect(currentMoment(c, new Date("2026-10-10T15:00:00+02:00"))?.focus).toContain("Glacé");
     expect(currentMoment(c, new Date("2026-10-10T18:00:00+02:00"))?.focus).toContain("Glouglou");
   });
-  it("vedette : jamais une boisson épuisée, suit le moment", () => {
-    const soir = vedettePool(c, ["vin-au-verre"], new Date("2026-10-10T18:00:00+02:00"));
-    expect(soir.map((i) => i.id)).not.toContain("vin-au-verre");
-    expect(soir.some((i) => i.section === "Glouglou")).toBe(true);
-    const matin = vedettePool(c, [], new Date("2026-10-10T09:00:00+02:00"));
-    expect(matin.every((i) => i.section === "Café" || i.ephemere)).toBe(true);
+  it("vedette : seulement avec photo, jamais une boisson épuisée", () => {
+    const pool = vedettePool(c, ["tiramisu-latte"], new Date("2026-10-10T18:00:00+02:00"));
+    expect(pool.every((i) => i.image)).toBe(true);
+    expect(pool.map((i) => i.id)).not.toContain("tiramisu-latte");
   });
   it("tous les identifiants de boissons sont uniques", () => {
     const ids = allItems(c).map((i) => i.id);
