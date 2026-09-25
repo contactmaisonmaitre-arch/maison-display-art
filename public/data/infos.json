@@ -1,8 +1,96 @@
 {
   "vacances": [
-    { "name": "Vacances de la Toussaint", "start": "2026-10-17", "end": "2026-11-02", "zone": "Zone A" },
-    { "name": "Vacances de Noël", "start": "2026-12-19", "end": "2027-01-04", "zone": "Zone A" },
-    { "name": "Vacances d'Hiver", "start": "2027-02-13", "end": "2027-03-01", "zone": "Zone A" }
+    {
+      "name": "Vacances de la Toussaint",
+      "start": "2026-10-17",
+      "end": "2026-11-02",
+      "zone": "Zone A"
+    },
+    {
+      "name": "Vacances de Noël",
+      "start": "2026-12-19",
+      "end": "2027-01-04",
+      "zone": "Zone A"
+    },
+    {
+      "name": "Vacances d'Hiver",
+      "start": "2027-02-13",
+      "end": "2027-03-01",
+      "zone": "Zone A"
+    },
+    {
+      "name": "Vacances de Printemps",
+      "start": "2027-04-10",
+      "end": "2027-04-26",
+      "zone": "Zone A"
+    }
   ],
-  "fetchedAt": "2026-09-24T09:30:00.000Z"
+  "fetchedAt": "2026-09-25T09:05:43.771Z",
+  "ephemerides": {
+    "date": "2026-09-25",
+    "events": [
+      {
+        "year": 1992,
+        "text": "inauguration du canal Rhin-Main-Danube.",
+        "kind": "event"
+      },
+      {
+        "year": 1944,
+        "text": "fin de l'opération Market Garden aux Pays-Bas.",
+        "kind": "event"
+      },
+      {
+        "year": 1921,
+        "text": "mise en service de l'AVUS, première autoroute au monde, en Allemagne.",
+        "kind": "event"
+      },
+      {
+        "year": 1513,
+        "text": "Vasco Núñez de Balboa (gravure) est le premier Européen à voir l'océan Pacifique lors de sa traversée de l'isthme de Panama.",
+        "kind": "event"
+      },
+      {
+        "year": 2025,
+        "text": "à Madagascar, début des manifestations contre les coupures fréquentes d'eau et d'électricité, réprimées par les forces de l'ordre.",
+        "kind": "event"
+      },
+      {
+        "year": 2015,
+        "text": "adoption des objectifs de développement durable, par l'Assemblée générale des Nations unies.",
+        "kind": "event"
+      }
+    ],
+    "births": [
+      {
+        "year": 1997,
+        "text": "Abby Roque, joueuse de hockey américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Damian Penaud, joueur de rugby à XV français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1993,
+        "text": "Yann Siegwarth, basketteur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Anthony Sonigo, acteur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Emmy Clarke, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "Ugo Bernalicis, homme politique français.",
+        "kind": "birth"
+      }
+    ]
+  }
 }
