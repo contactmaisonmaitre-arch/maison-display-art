@@ -1,86 +1,102 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-21T11:00:47.976Z",
+  "fetchedAt": "2026-09-25T10:28:52.522Z",
   "facts": [
     {
-      "emoji": "📚",
-      "title": "Lumière sur les photographes dolois : 1824-1914 : origines, perfectionnement et démocratisation",
-      "body": "Mardi 01 sept. à Dole · Cour de la médiathèque de l'Hôtel-Dieu."
+      "emoji": "🎨",
+      "title": "Partir ou Rester",
+      "body": "Vendredi 25 sept. à Eclans-Nenon · Bibliothèque Eclans-Nenon.",
+      "date": "2026-09-25"
     },
     {
       "emoji": "📍",
-      "title": "Ligne des Hirondelles",
-      "body": "Mardi 01 sept. à Dole · Gare de Dole."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
-      "body": "Mardi 01 sept. à Dole · Musée des Beaux-Arts."
-    },
-    {
-      "emoji": "🎨",
-      "title": "Harry Potter - Le marathon",
-      "body": "Mardi 01 sept. à Dole · 1 Rue du Général Béthouart."
+      "title": "Comment accueillir la biodiversité chez soi ?",
+      "body": "Vendredi 25 sept. à Dole · Locodole.",
+      "date": "2026-09-25"
     },
     {
       "emoji": "📍",
-      "title": "Dole L'Essentiel",
-      "body": "Mercredi 02 sept. à Dole · Dole Tourisme."
-    },
-    {
-      "emoji": "🏆",
-      "title": "TOURNOI DE PÉTANQUE",
-      "body": "Samedi 05 sept. à Monnières ·."
-    },
-    {
-      "emoji": "📍",
-      "title": "LA GUINGUETTE DES SENIORS",
-      "body": "Mardi 08 sept. à Dole · Manège de Brack."
-    },
-    {
-      "emoji": "📚",
-      "title": "Le Bus ouvre ses portes : en route vers la culture",
-      "body": "Mercredi 09 sept. à Dole · Esplanade de la Médiathèque de l'Hôtel-Dieu."
+      "title": "Conférence et Dédicace Michel Colleuil sur Hyacinthe Friant",
+      "body": "Vendredi 25 sept. à Dole · Librairie La Passerelle.",
+      "date": "2026-09-25"
     },
     {
       "emoji": "🎨",
-      "title": "Oasis don't look back in anger",
-      "body": "Mercredi 09 sept. à Dole · 1 Rue du Général Béthouart."
+      "title": "Couleurs et cépages - Atelier d'assemblage - Week-end gourmand du Chat perché",
+      "body": "Samedi 26 sept. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "Banquet du chat gourmand",
+      "body": "Samedi 26 sept. à Dole · La Commanderie.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée double Handball",
+      "body": "Samedi 26 sept. à Dole · Espace Pierre-Talagrand.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Atelier théâtre par Comédiadol'arté",
+      "body": "Samedi 26 sept. à Dole ·.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "Concours de pétanque",
+      "body": "Samedi 26 sept. à Gevry · Terrain rue du Pasquier.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "🎉",
+      "title": "Sauvez la Reine ! par la compagnie ALCAZAR",
+      "body": "Samedi 26 sept. à Vriange · Salle des Fêtes de Vriange.",
+      "date": "2026-09-26"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Atelier prévention/conseil psychomoteur et orthophonie",
-      "body": "Jeudi 10 sept. à Dole · Maison de la Parentalité."
+      "title": "CROC'MOUV",
+      "body": "Samedi 26 sept. à Dole · Maison de la Parentalité.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "STAGE DE CUISINE VÉGÉTARIENNE",
+      "body": "Samedi 26 sept. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
+      "body": "Samedi 26 sept. à Dole · Maison de la Parentalité.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "Week-end Gourmand du Chat Perché",
+      "body": "Samedi 26 sept. à Dole · Centre-Ville.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
+      "title": "BOURSE TOUTES COLLECTIONS 2026",
+      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
+      "date": "2026-09-27"
     },
     {
       "emoji": "🎨",
-      "title": "Visite thématique - Figures saintes, légendaires, héroïques ou monstrueuses",
-      "body": "Samedi 12 sept. à Dole · Musée des Beaux-Arts."
+      "title": "Bourse toutes collections et exposition",
+      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
+      "date": "2026-09-27"
     },
     {
       "emoji": "🎨",
-      "title": "Marché de producteurs et d'artisans de Rainans",
-      "body": "Dimanche 13 sept. à Rainans ·."
-    },
-    {
-      "emoji": "🎬",
-      "title": "Los Angeles, différemment cette fois",
-      "body": "Vendredi 18 sept. à Dole · Cinéma Majestic Rive Gauche."
-    },
-    {
-      "emoji": "📍",
-      "title": "Visite guidée de la Commanderie",
-      "body": "Samedi 19 sept. à Dole · La Commanderie."
-    },
-    {
-      "emoji": "📍",
-      "title": "Visite guidée du Passage de L'Arsenal",
-      "body": "Dimanche 20 sept. à Dole · Centre-Ville."
-    },
-    {
-      "emoji": "📍",
-      "title": "Les semaines du développement durable 2026",
-      "body": "Mercredi 23 sept. à ·."
+      "title": "Défilé de 800 Motards Motovirade",
+      "body": "Dimanche 27 sept. à Dole · Dolexpo.",
+      "date": "2026-09-27"
     }
   ]
 }
