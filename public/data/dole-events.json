@@ -1,41 +1,17 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-25T10:28:52.522Z",
+  "fetchedAt": "2026-09-26T10:08:49.944Z",
   "facts": [
     {
-      "emoji": "🎨",
-      "title": "Partir ou Rester",
-      "body": "Vendredi 25 sept. à Eclans-Nenon · Bibliothèque Eclans-Nenon.",
-      "date": "2026-09-25"
-    },
-    {
       "emoji": "📍",
-      "title": "Comment accueillir la biodiversité chez soi ?",
-      "body": "Vendredi 25 sept. à Dole · Locodole.",
-      "date": "2026-09-25"
-    },
-    {
-      "emoji": "📍",
-      "title": "Conférence et Dédicace Michel Colleuil sur Hyacinthe Friant",
-      "body": "Vendredi 25 sept. à Dole · Librairie La Passerelle.",
-      "date": "2026-09-25"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Couleurs et cépages - Atelier d'assemblage - Week-end gourmand du Chat perché",
-      "body": "Samedi 26 sept. à Dole · Musée des Beaux-Arts.",
+      "title": "STAGE DE CUISINE VÉGÉTARIENNE",
+      "body": "Samedi 26 sept. à Dole · MJC - Maison des Jeunes et de la Culture.",
       "date": "2026-09-26"
     },
     {
       "emoji": "📍",
       "title": "Banquet du chat gourmand",
       "body": "Samedi 26 sept. à Dole · La Commanderie.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "Soirée double Handball",
-      "body": "Samedi 26 sept. à Dole · Espace Pierre-Talagrand.",
       "date": "2026-09-26"
     },
     {
@@ -46,8 +22,20 @@
     },
     {
       "emoji": "📍",
+      "title": "Soirée double Handball",
+      "body": "Samedi 26 sept. à Dole · Espace Pierre-Talagrand.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "📍",
       "title": "Concours de pétanque",
       "body": "Samedi 26 sept. à Gevry · Terrain rue du Pasquier.",
+      "date": "2026-09-26"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Couleurs et cépages - Atelier d'assemblage - Week-end gourmand du Chat perché",
+      "body": "Samedi 26 sept. à Dole · Musée des Beaux-Arts.",
       "date": "2026-09-26"
     },
     {
@@ -60,12 +48,6 @@
       "emoji": "👨‍👩‍👧",
       "title": "CROC'MOUV",
       "body": "Samedi 26 sept. à Dole · Maison de la Parentalité.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "STAGE DE CUISINE VÉGÉTARIENNE",
-      "body": "Samedi 26 sept. à Dole · MJC - Maison des Jeunes et de la Culture.",
       "date": "2026-09-26"
     },
     {
@@ -88,8 +70,8 @@
     },
     {
       "emoji": "🎨",
-      "title": "Bourse toutes collections et exposition",
-      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 27 sept. à Dole · Musée des Beaux-Arts.",
       "date": "2026-09-27"
     },
     {
@@ -97,6 +79,24 @@
       "title": "Défilé de 800 Motards Motovirade",
       "body": "Dimanche 27 sept. à Dole · Dolexpo.",
       "date": "2026-09-27"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Bourse toutes collections et exposition",
+      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
+      "date": "2026-09-27"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
+      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
+      "date": "2026-09-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "Retrouver la Rivière",
+      "body": "Mardi 29 sept. à Dole · Parc de la Vouivre.",
+      "date": "2026-09-29"
     }
   ]
 }
