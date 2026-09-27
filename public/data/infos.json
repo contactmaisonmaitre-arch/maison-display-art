@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-09-26T08:49:50.962Z",
+  "fetchedAt": "2026-09-27T09:31:42.737Z",
   "ephemerides": {
-    "date": "2026-09-26",
+    "date": "2026-09-27",
     "events": [
       {
-        "year": 2014,
-        "text": "enlèvements d'Iguala au Mexique.",
+        "year": 1988,
+        "text": "fondation de la Ligue nationale pour la démocratie birmane d'Aung San Suu Kyi.",
         "kind": "event"
       },
       {
-        "year": 1907,
-        "text": "la colonie de Nouvelle-Zélande devient un dominion, étape symbolique dans son accession à l'indépendance.",
+        "year": 1822,
+        "text": "Champollion expose à l'Académie des inscriptions et belles-lettres française une ébauche de sa Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques.",
         "kind": "event"
       },
       {
-        "year": 1905,
-        "text": "Albert Einstein publie sa théorie de la relativité restreinte.",
+        "year": 1540,
+        "text": "promulgation de la bulle Regimini militantis Ecclesiæ reconnaissant la Compagnie de Jésus.",
         "kind": "event"
       },
       {
-        "year": 1815,
-        "text": "la Sainte-Alliance est fondée à Vienne, en Autriche.",
+        "year": 1312,
+        "text": "signature de la charte de Cortenbergh.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "l'impacteur DART du programme de défense planétaire de la NASA percute avec succès l'astéroïde Dimorphos.",
+        "year": 2025,
+        "text": "l'Unesco classe Sao Tomé-et-Principe en réserve mondiale de biosphère, première fois qu'un pays est couvert en intégralité sous ce niveau de protection environnementale.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "en Mer Baltique, plusieurs fuites de gaz touchent les gazoducs Nord Stream 1 et 2, après des détonations à proximité.",
+        "year": 2018,
+        "text": "en France, Barbara Cassin reçoit la médaille d'or du CNRS.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1995,
-        "text": "Henri PFR (Henri Peiffer dit), DJ belge.",
+        "year": 2011,
+        "text": "Maja Söderström, actrice suédoise.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Michael Kidd-Gilchrist, basketteur américain.",
+        "year": 2004,
+        "text": "Autumn Peltier, militante wiikwemkoong ontarienne pour le droit à l'eau.",
+        "kind": "birth"
+      },
+      {
+        "year": 2002,
+        "text": "Jenna Ortega, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1997,
+        "text": "Prince Wong, militante de Hong Kong.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Lina Leandersson, actrice suédoise.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "Vincent Limare, judoka français.",
-        "kind": "birth"
-      },
-      {
-        "year": 1991,
-        "text": "Kim Jin-woo, chanteur, danseur et acteur sud-coréen du groupe Winner.",
-        "kind": "birth"
-      },
-      {
-        "year": 1990,
-        "text": "Michael Matthews, cycliste sur route australien.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Jonny Bairstow (Jonathan Marc Bairstow dit), joueur de cricket anglais.",
+        "text": "Pak Kwang-ryong, footballeur nord-coréen.",
         "kind": "birth"
       }
     ]
