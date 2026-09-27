@@ -1,83 +1,17 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-26T10:08:49.944Z",
+  "fetchedAt": "2026-09-27T10:41:34.273Z",
   "facts": [
     {
-      "emoji": "📍",
-      "title": "STAGE DE CUISINE VÉGÉTARIENNE",
-      "body": "Samedi 26 sept. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "Banquet du chat gourmand",
-      "body": "Samedi 26 sept. à Dole · La Commanderie.",
-      "date": "2026-09-26"
-    },
-    {
       "emoji": "🎨",
-      "title": "Atelier théâtre par Comédiadol'arté",
-      "body": "Samedi 26 sept. à Dole ·.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "Soirée double Handball",
-      "body": "Samedi 26 sept. à Dole · Espace Pierre-Talagrand.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "Concours de pétanque",
-      "body": "Samedi 26 sept. à Gevry · Terrain rue du Pasquier.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Couleurs et cépages - Atelier d'assemblage - Week-end gourmand du Chat perché",
-      "body": "Samedi 26 sept. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "🎉",
-      "title": "Sauvez la Reine ! par la compagnie ALCAZAR",
-      "body": "Samedi 26 sept. à Vriange · Salle des Fêtes de Vriange.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "CROC'MOUV",
-      "body": "Samedi 26 sept. à Dole · Maison de la Parentalité.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
-      "body": "Samedi 26 sept. à Dole · Maison de la Parentalité.",
-      "date": "2026-09-26"
-    },
-    {
-      "emoji": "📍",
-      "title": "Week-end Gourmand du Chat Perché",
-      "body": "Samedi 26 sept. à Dole · Centre-Ville.",
-      "date": "2026-09-26"
+      "title": "Défilé de 800 Motards Motovirade",
+      "body": "Dimanche 27 sept. à Dole · Dolexpo.",
+      "date": "2026-09-27"
     },
     {
       "emoji": "📍",
       "title": "BOURSE TOUTES COLLECTIONS 2026",
       "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 27 sept. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Défilé de 800 Motards Motovirade",
-      "body": "Dimanche 27 sept. à Dole · Dolexpo.",
       "date": "2026-09-27"
     },
     {
@@ -88,15 +22,51 @@
     },
     {
       "emoji": "🎨",
-      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
-      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-09-29"
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 27 sept. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-09-27"
     },
     {
       "emoji": "📍",
       "title": "Retrouver la Rivière",
       "body": "Mardi 29 sept. à Dole · Parc de la Vouivre.",
       "date": "2026-09-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "De la comédie française",
+      "body": "Mardi 29 sept. à Saint-Aubin · Foyer rural.",
+      "date": "2026-09-29"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
+      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
+      "date": "2026-09-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "TOUT CE QUE VOUS DEVEZ SAVOIR SUR LA TRANSMISSION ET LA REPRISE D'ENTREPRISE",
+      "body": "Mardi 29 sept. à Dole · Locodole.",
+      "date": "2026-09-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "Loto pour aider Léo",
+      "body": "Mercredi 30 sept. à Tavaux · Salle Gérard Philipe.",
+      "date": "2026-09-30"
+    },
+    {
+      "emoji": "📚",
+      "title": "Le Bus ouvres ses portes : en route vers la culture !",
+      "body": "Mercredi 30 sept. à Authume · Bibliothèque d'Authume.",
+      "date": "2026-09-30"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Ensemble, trouvons l'équilibre du numérique à la maison",
+      "body": "Mercredi 30 sept. à Dole · Maison de la Parentalité.",
+      "date": "2026-09-30"
     }
   ]
 }
