@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-09-27T09:31:42.737Z",
+  "fetchedAt": "2026-09-28T10:10:03.146Z",
   "ephemerides": {
-    "date": "2026-09-27",
+    "date": "2026-09-28",
     "events": [
       {
-        "year": 1988,
-        "text": "fondation de la Ligue nationale pour la démocratie birmane d'Aung San Suu Kyi.",
+        "year": 2000,
+        "text": "début de la seconde intifada.",
         "kind": "event"
       },
       {
-        "year": 1822,
-        "text": "Champollion expose à l'Académie des inscriptions et belles-lettres française une ébauche de sa Lettre à M. Dacier relative à l'alphabet des hiéroglyphes phonétiques.",
+        "year": 1864,
+        "text": "fondation de l'Association internationale des travailleurs (« Première Internationale »).",
         "kind": "event"
       },
       {
-        "year": 1540,
-        "text": "promulgation de la bulle Regimini militantis Ecclesiæ reconnaissant la Compagnie de Jésus.",
+        "year": 1791,
+        "text": "promulgation de la loi sur l'émancipation des Juifs en France.",
         "kind": "event"
       },
       {
-        "year": 1312,
-        "text": "signature de la charte de Cortenbergh.",
+        "year": 1066,
+        "text": "débarquement de Guillaume le Conquérant à Pevensey.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "l'Unesco classe Sao Tomé-et-Principe en réserve mondiale de biosphère, première fois qu'un pays est couvert en intégralité sous ce niveau de protection environnementale.",
+        "year": 2015,
+        "text": "les talibans prennent la ville afghane de Kondoz.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "en France, Barbara Cassin reçoit la médaille d'or du CNRS.",
+        "year": 2015,
+        "text": "un lanceur PSLV met en orbite Astrosat, le premier observatoire astronomique spatial indien.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2011,
-        "text": "Maja Söderström, actrice suédoise.",
-        "kind": "birth"
-      },
-      {
         "year": 2004,
-        "text": "Autumn Peltier, militante wiikwemkoong ontarienne pour le droit à l'eau.",
+        "text": "Isack Hadjar, pilote automobile français.",
         "kind": "birth"
       },
       {
-        "year": 2002,
-        "text": "Jenna Ortega, actrice américaine.",
+        "year": 2000,
+        "text": "Franklin « Frankie » Nathaniel Jonas, acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Prince Wong, militante de Hong Kong.",
+        "year": 1996,
+        "text": "Michael Ronda, acteur et chanteur mexicain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Aurélien Le Coq, homme politique français, député depuis 2024.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "Lina Leandersson, actrice suédoise.",
+        "text": "Juan Hernangómez, basketteur espagnol.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Pak Kwang-ryong, footballeur nord-coréen.",
+        "year": 1994,
+        "text": "Benjamin Axus, judoka français.",
         "kind": "birth"
       }
     ]
