@@ -1,35 +1,11 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-27T10:41:34.273Z",
+  "fetchedAt": "2026-09-28T11:56:11.290Z",
   "facts": [
     {
       "emoji": "🎨",
-      "title": "Défilé de 800 Motards Motovirade",
-      "body": "Dimanche 27 sept. à Dole · Dolexpo.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "📍",
-      "title": "BOURSE TOUTES COLLECTIONS 2026",
-      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Bourse toutes collections et exposition",
-      "body": "Dimanche 27 sept. à Dole · Manège de Brack.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 27 sept. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-09-27"
-    },
-    {
-      "emoji": "📍",
-      "title": "Retrouver la Rivière",
-      "body": "Mardi 29 sept. à Dole · Parc de la Vouivre.",
+      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
+      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
       "date": "2026-09-29"
     },
     {
@@ -39,9 +15,9 @@
       "date": "2026-09-29"
     },
     {
-      "emoji": "🎨",
-      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
-      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
+      "emoji": "📍",
+      "title": "Retrouver la Rivière",
+      "body": "Mardi 29 sept. à Dole · Parc de la Vouivre.",
       "date": "2026-09-29"
     },
     {
@@ -51,9 +27,15 @@
       "date": "2026-09-29"
     },
     {
-      "emoji": "📍",
-      "title": "Loto pour aider Léo",
-      "body": "Mercredi 30 sept. à Tavaux · Salle Gérard Philipe.",
+      "emoji": "🩰",
+      "title": "Cours de danse roc",
+      "body": "Mardi 29 sept. à Dole · Le Spritz.",
+      "date": "2026-09-29"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Ensemble, trouvons l'équilibre du numérique à la maison",
+      "body": "Mercredi 30 sept. à Dole · Maison de la Parentalité.",
       "date": "2026-09-30"
     },
     {
@@ -63,9 +45,9 @@
       "date": "2026-09-30"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Ensemble, trouvons l'équilibre du numérique à la maison",
-      "body": "Mercredi 30 sept. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "Loto pour aider Léo",
+      "body": "Mercredi 30 sept. à Tavaux · Salle Gérard Philipe.",
       "date": "2026-09-30"
     }
   ]
