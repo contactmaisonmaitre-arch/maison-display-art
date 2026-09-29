@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-09-28T10:10:03.146Z",
+  "fetchedAt": "2026-09-29T10:08:07.504Z",
   "ephemerides": {
-    "date": "2026-09-28",
+    "date": "2026-09-29",
     "events": [
       {
-        "year": 2000,
-        "text": "début de la seconde intifada.",
+        "year": 1961,
+        "text": "retrait de la Syrie de la République arabe unie.",
         "kind": "event"
       },
       {
-        "year": 1864,
-        "text": "fondation de l'Association internationale des travailleurs (« Première Internationale »).",
+        "year": 1923,
+        "text": "entrée en vigueur du mandat britannique en Palestine.",
         "kind": "event"
       },
       {
-        "year": 1791,
-        "text": "promulgation de la loi sur l'émancipation des Juifs en France.",
+        "year": 1918,
+        "text": "dernière des quatre conférences de Spa : les Dioscures demandent l'ouverture de négociations d'armistice.",
         "kind": "event"
       },
       {
-        "year": 1066,
-        "text": "débarquement de Guillaume le Conquérant à Pevensey.",
+        "year": 1818,
+        "text": "ouverture du congrès qui aboutit au troisième traité d'Aix-la-Chapelle.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "les talibans prennent la ville afghane de Kondoz.",
+        "year": 1555,
+        "text": "paix d'Augsbourg marquant une pause dans le conflit religieux au sein du Saint-Empire romain germanique.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "un lanceur PSLV met en orbite Astrosat, le premier observatoire astronomique spatial indien.",
+        "year": 2004,
+        "text": "l'astéroïde géocroiseur (4179) Toutatis s'approche de la Terre, à une distance de 1,5 million de kilomètres.",
         "kind": "event"
       }
     ],
     "births": [
       {
         "year": 2004,
-        "text": "Isack Hadjar, pilote automobile français.",
+        "text": "Mourad (Mourad Tsimpou dit), pianiste et chanteur français († 29 juin 2024).",
         "kind": "birth"
       },
       {
         "year": 2000,
-        "text": "Franklin « Frankie » Nathaniel Jonas, acteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Michael Ronda, acteur et chanteur mexicain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Aurélien Le Coq, homme politique français, député depuis 2024.",
+        "text": "Izzy Daniel, joueuse de hockey américaine.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "Juan Hernangómez, basketteur espagnol.",
+        "text": "Tara Hetharia, actrice, doubleuse, danseuse et chanteuse néerlandaise.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Sasha Lane, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Mathias Lessort, basketteur français.",
         "kind": "birth"
       },
       {
         "year": 1994,
-        "text": "Benjamin Axus, judoka français.",
+        "text": "Halsey (Ashley Nicolette Frangipane dite), chanteuse et compositrice américaine.",
         "kind": "birth"
       }
     ]
