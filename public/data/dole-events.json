@@ -1,36 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-29T11:31:09.043Z",
+  "fetchedAt": "2026-09-30T11:19:24.213Z",
   "facts": [
     {
-      "emoji": "🎨",
-      "title": "Auditeurs du Soirs : \"Vous avez dit Mozart ?\"",
-      "body": "Mardi 29 sept. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-09-29"
-    },
-    {
-      "emoji": "📍",
-      "title": "Retrouver la Rivière",
-      "body": "Mardi 29 sept. à Dole · Parc de la Vouivre.",
-      "date": "2026-09-29"
-    },
-    {
-      "emoji": "📍",
-      "title": "De la comédie française",
-      "body": "Mardi 29 sept. à Saint-Aubin · Foyer rural.",
-      "date": "2026-09-29"
-    },
-    {
-      "emoji": "📍",
-      "title": "TOUT CE QUE VOUS DEVEZ SAVOIR SUR LA TRANSMISSION ET LA REPRISE D'ENTREPRISE",
-      "body": "Mardi 29 sept. à Dole · Locodole.",
-      "date": "2026-09-29"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Cours de danse roc",
-      "body": "Mardi 29 sept. à Dole · Le Spritz.",
-      "date": "2026-09-29"
+      "emoji": "📚",
+      "title": "Le Bus ouvres ses portes : en route vers la culture !",
+      "body": "Mercredi 30 sept. à Authume · Bibliothèque d'Authume.",
+      "date": "2026-09-30"
     },
     {
       "emoji": "📍",
@@ -42,12 +18,6 @@
       "emoji": "👨‍👩‍👧",
       "title": "Ensemble, trouvons l'équilibre du numérique à la maison",
       "body": "Mercredi 30 sept. à Dole · Maison de la Parentalité.",
-      "date": "2026-09-30"
-    },
-    {
-      "emoji": "📚",
-      "title": "Le Bus ouvres ses portes : en route vers la culture !",
-      "body": "Mercredi 30 sept. à Authume · Bibliothèque d'Authume.",
       "date": "2026-09-30"
     }
   ]
