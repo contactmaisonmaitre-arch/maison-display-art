@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-09-29T10:08:07.504Z",
+  "fetchedAt": "2026-09-30T10:00:20.872Z",
   "ephemerides": {
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "events": [
       {
-        "year": 1961,
-        "text": "retrait de la Syrie de la République arabe unie.",
+        "year": 1938,
+        "text": "signature des accords de Munich mettant fin à la crise des Sudètes.",
         "kind": "event"
       },
       {
-        "year": 1923,
-        "text": "entrée en vigueur du mandat britannique en Palestine.",
+        "year": 1791,
+        "text": "première représentation de La Flûte enchantée de Mozart au Theater auf der Wieden à Vienne (affiche).",
         "kind": "event"
       },
       {
-        "year": 1918,
-        "text": "dernière des quatre conférences de Spa : les Dioscures demandent l'ouverture de négociations d'armistice.",
+        "year": 1772,
+        "text": "premier partage de la Pologne.",
         "kind": "event"
       },
       {
-        "year": 1818,
-        "text": "ouverture du congrès qui aboutit au troisième traité d'Aix-la-Chapelle.",
+        "year": 2024,
+        "text": "le prix des droits de l'homme Václav-Havel est décerné à María Corina Machado, femme politique vénézuélienne.",
         "kind": "event"
       },
       {
-        "year": 1555,
-        "text": "paix d'Augsbourg marquant une pause dans le conflit religieux au sein du Saint-Empire romain germanique.",
+        "year": 2019,
+        "text": "le Conseil de l'Europe décerne le prix Václav-Havel à l'intellectuel ouïghour Ilham Tohti, et à l'Initiative des jeunes pour les droits de l'homme.",
         "kind": "event"
       },
       {
-        "year": 2004,
-        "text": "l'astéroïde géocroiseur (4179) Toutatis s'approche de la Terre, à une distance de 1,5 million de kilomètres.",
+        "year": 2016,
+        "text": "la sonde spatiale Rosetta s’écrase sur la comète Tchouri.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2004,
-        "text": "Mourad (Mourad Tsimpou dit), pianiste et chanteur français († 29 juin 2024).",
+        "year": 2002,
+        "text": "Levi Miller, acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 2000,
-        "text": "Izzy Daniel, joueuse de hockey américaine.",
+        "year": 2002,
+        "text": "Maddie Ziegler, actrice, mannequin et danseuse américaine.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Tara Hetharia, actrice, doubleuse, danseuse et chanteuse néerlandaise.",
+        "year": 1997,
+        "text": "Max Verstappen, pilote automobile néerlandais.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Sasha Lane, actrice américaine.",
+        "year": 1993,
+        "text": "Abibatou Yaya, escrimeuse togolaise.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Mathias Lessort, basketteur français.",
+        "year": 1991,
+        "text": "Joffrey Lauvergne, basketteur français.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Halsey (Ashley Nicolette Frangipane dite), chanteuse et compositrice américaine.",
+        "year": 1989,
+        "text": "Jasmine Thomas, basketteuse américaine.",
         "kind": "birth"
       }
     ]
