@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-09-30T10:00:20.872Z",
+  "fetchedAt": "2026-10-01T10:27:24.605Z",
   "ephemerides": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "events": [
       {
-        "year": 1938,
-        "text": "signature des accords de Munich mettant fin à la crise des Sudètes.",
+        "year": 1891,
+        "text": "l'université Stanford est fondée aux États-Unis.",
         "kind": "event"
       },
       {
-        "year": 1791,
-        "text": "première représentation de La Flûte enchantée de Mozart au Theater auf der Wieden à Vienne (affiche).",
+        "year": 1890,
+        "text": "le parc national de Yosemite est créé aux États-Unis, le deuxième du pays.",
         "kind": "event"
       },
       {
-        "year": 1772,
-        "text": "premier partage de la Pologne.",
+        "year": 1800,
+        "text": "signature du traité de San Ildefonso : l'Espagne cède la Louisiane à la France.",
         "kind": "event"
       },
       {
         "year": 2024,
-        "text": "le prix des droits de l'homme Václav-Havel est décerné à María Corina Machado, femme politique vénézuélienne.",
+        "text": "Mark Rutte (photo) entre en fonction comme nouveau secrétaire général de l'OTAN et succède à Jens Stoltenberg.",
         "kind": "event"
       },
       {
-        "year": 2019,
-        "text": "le Conseil de l'Europe décerne le prix Václav-Havel à l'intellectuel ouïghour Ilham Tohti, et à l'Initiative des jeunes pour les droits de l'homme.",
+        "year": 2021,
+        "text": "à Dubaï, inauguration de l’exposition universelle qui s'ouvre pour six mois.",
         "kind": "event"
       },
       {
-        "year": 2016,
-        "text": "la sonde spatiale Rosetta s’écrase sur la comète Tchouri.",
+        "year": 2018,
+        "text": "la Cour internationale de justice déboute la Bolivie de sa requête contre le Chili d'avoir un accès à la mer.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Levi Miller, acteur américain.",
+        "year": 2006,
+        "text": "Priah Ferguson, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 2004,
+        "text": "Karoy Anderson, footballeur jamaïcain.",
+        "kind": "birth"
+      },
+      {
+        "year": 2004,
+        "text": "Marcus Rafferty, footballeur suédois.",
+        "kind": "birth"
+      },
+      {
+        "year": 2003,
+        "text": "Franjo Ivanović, footballeur croate.",
+        "kind": "birth"
+      },
+      {
+        "year": 2003,
+        "text": "Imam Jagne, footballeur suédois.",
         "kind": "birth"
       },
       {
         "year": 2002,
-        "text": "Maddie Ziegler, actrice, mannequin et danseuse américaine.",
-        "kind": "birth"
-      },
-      {
-        "year": 1997,
-        "text": "Max Verstappen, pilote automobile néerlandais.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Abibatou Yaya, escrimeuse togolaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1991,
-        "text": "Joffrey Lauvergne, basketteur français.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Jasmine Thomas, basketteuse américaine.",
+        "text": "Alessandro Bianco, footballeur italien.",
         "kind": "birth"
       }
     ]
