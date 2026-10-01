@@ -1,24 +1,102 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-09-30T11:19:24.213Z",
+  "fetchedAt": "2026-10-01T11:46:31.001Z",
   "facts": [
     {
-      "emoji": "📚",
-      "title": "Le Bus ouvres ses portes : en route vers la culture !",
-      "body": "Mercredi 30 sept. à Authume · Bibliothèque d'Authume.",
-      "date": "2026-09-30"
+      "emoji": "📍",
+      "title": "ÇA CONTE À DOLE - CELUI QUI FUT APPELÉ CHICO REI",
+      "body": "Jeudi 01 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-10-01"
     },
     {
       "emoji": "📍",
-      "title": "Loto pour aider Léo",
-      "body": "Mercredi 30 sept. à Tavaux · Salle Gérard Philipe.",
-      "date": "2026-09-30"
+      "title": "Les semaines du développement durable 2026",
+      "body": "Jeudi 01 oct. à ·.",
+      "date": "2026-10-01"
+    },
+    {
+      "emoji": "📚",
+      "title": "Lumière sur les photographes dolois : 1824-1914 : origines, perfectionnement et démocratisation",
+      "body": "Jeudi 01 oct. à Dole · Cour de la médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-01"
+    },
+    {
+      "emoji": "🎬",
+      "title": "Los Angeles, différemment cette fois",
+      "body": "Jeudi 01 oct. à Dole · Cinéma Majestic Rive Gauche.",
+      "date": "2026-10-01"
+    },
+    {
+      "emoji": "📍",
+      "title": "Retrouver la Rivière",
+      "body": "Jeudi 01 oct. à Dole · Parc de la Vouivre.",
+      "date": "2026-10-01"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
+      "body": "Jeudi 01 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-01"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Biennale France-Chine 2026",
+      "body": "Vendredi 02 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-02"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée fondue",
+      "body": "Samedi 03 oct. à Choisey · Salle Jean-Claude Lab.",
+      "date": "2026-10-03"
+    },
+    {
+      "emoji": "🎨",
+      "title": "4e édition de la Biennale d’Art du Jura - ZigZag 2026",
+      "body": "Samedi 03 oct. à Grand Dole ·.",
+      "date": "2026-10-03"
+    },
+    {
+      "emoji": "🎉",
+      "title": "FÊTE DE LA SCIENCE 2026",
+      "body": "Lundi 05 oct. à Dole ·.",
+      "date": "2026-10-05"
+    },
+    {
+      "emoji": "📍",
+      "title": "LES SEMAINES DE LA SANTÉ MENTALE",
+      "body": "Lundi 05 oct. à Dole ·.",
+      "date": "2026-10-05"
+    },
+    {
+      "emoji": "📍",
+      "title": "FORUM SANTÉ - 1ERE EDITION",
+      "body": "Mardi 06 oct. à Dole · La Commanderie.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "📍",
+      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
+      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-10-10"
+    },
+    {
+      "emoji": "📍",
+      "title": "ADIE Je crée mon entreprise",
+      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
+      "date": "2026-10-13"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Ensemble, trouvons l'équilibre du numérique à la maison",
-      "body": "Mercredi 30 sept. à Dole · Maison de la Parentalité.",
-      "date": "2026-09-30"
+      "title": "Café des aidants : Autisme ou autres troubles du neurodéveloppement",
+      "body": "Mercredi 14 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-14"
+    },
+    {
+      "emoji": "🍷",
+      "title": "Stages de cirque",
+      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
+      "date": "2026-10-19"
     }
   ]
 }
