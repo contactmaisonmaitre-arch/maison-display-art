@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-01T10:27:24.605Z",
+  "fetchedAt": "2026-10-02T10:03:09.873Z",
   "ephemerides": {
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "events": [
       {
-        "year": 1891,
-        "text": "l'université Stanford est fondée aux États-Unis.",
+        "year": 1997,
+        "text": "l'Union européenne signe le traité d'Amsterdam, qui modifie les traités de Maastricht et de Rome.",
         "kind": "event"
       },
       {
-        "year": 1890,
-        "text": "le parc national de Yosemite est créé aux États-Unis, le deuxième du pays.",
+        "year": 1935,
+        "text": "les Italiens envahissent l'Éthiopie.",
         "kind": "event"
       },
       {
-        "year": 1800,
-        "text": "signature du traité de San Ildefonso : l'Espagne cède la Louisiane à la France.",
+        "year": 1928,
+        "text": "à Madrid , fondation de l'Opus Dei par Josemaría Escrivá de Balaguer.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "Mark Rutte (photo) entre en fonction comme nouveau secrétaire général de l'OTAN et succède à Jens Stoltenberg.",
+        "year": 1535,
+        "text": "Jacques Cartier (vue d’artiste) arrive au Canada.",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "à Dubaï, inauguration de l’exposition universelle qui s'ouvre pour six mois.",
+        "year": 1187,
+        "text": "Saladin reprend Jérusalem aux croisés.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "la Cour internationale de justice déboute la Bolivie de sa requête contre le Chili d'avoir un accès à la mer.",
+        "year": 2023,
+        "text": "le Kirghizistan et le Tadjikistan signent un accord sur la frontière séparant les deux pays.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Priah Ferguson, actrice américaine.",
-        "kind": "birth"
-      },
-      {
-        "year": 2004,
-        "text": "Karoy Anderson, footballeur jamaïcain.",
-        "kind": "birth"
-      },
-      {
-        "year": 2004,
-        "text": "Marcus Rafferty, footballeur suédois.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Franjo Ivanović, footballeur croate.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Imam Jagne, footballeur suédois.",
-        "kind": "birth"
-      },
-      {
         "year": 2002,
-        "text": "Alessandro Bianco, footballeur italien.",
+        "text": "Jacob Sartorius, chanteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 2001,
+        "text": "Michou, youtubeur français",
+        "kind": "birth"
+      },
+      {
+        "year": 1998,
+        "text": "Lamyai Haithongkham, chanteuse pop thaïlandaise de musique mor lam et luk thung.",
+        "kind": "birth"
+      },
+      {
+        "year": 1998,
+        "text": "Maxime Godart, acteur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Arnaud Prusak, comédien français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1993,
+        "text": "Michy Batshuayi, footballeur belge.",
         "kind": "birth"
       }
     ]
