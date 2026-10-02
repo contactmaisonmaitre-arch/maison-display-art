@@ -1,42 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-01T11:46:31.001Z",
+  "fetchedAt": "2026-10-02T11:16:40.878Z",
   "facts": [
     {
-      "emoji": "📍",
-      "title": "ÇA CONTE À DOLE - CELUI QUI FUT APPELÉ CHICO REI",
-      "body": "Jeudi 01 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-10-01"
-    },
-    {
-      "emoji": "📍",
-      "title": "Les semaines du développement durable 2026",
-      "body": "Jeudi 01 oct. à ·.",
-      "date": "2026-10-01"
-    },
-    {
       "emoji": "📚",
-      "title": "Lumière sur les photographes dolois : 1824-1914 : origines, perfectionnement et démocratisation",
-      "body": "Jeudi 01 oct. à Dole · Cour de la médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-01"
-    },
-    {
-      "emoji": "🎬",
-      "title": "Los Angeles, différemment cette fois",
-      "body": "Jeudi 01 oct. à Dole · Cinéma Majestic Rive Gauche.",
-      "date": "2026-10-01"
-    },
-    {
-      "emoji": "📍",
-      "title": "Retrouver la Rivière",
-      "body": "Jeudi 01 oct. à Dole · Parc de la Vouivre.",
-      "date": "2026-10-01"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
-      "body": "Jeudi 01 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-01"
+      "title": "Vente de livres déclassés",
+      "body": "Vendredi 02 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-02"
     },
     {
       "emoji": "🎨",
@@ -45,16 +15,16 @@
       "date": "2026-10-02"
     },
     {
-      "emoji": "📍",
-      "title": "Soirée fondue",
-      "body": "Samedi 03 oct. à Choisey · Salle Jean-Claude Lab.",
-      "date": "2026-10-03"
-    },
-    {
       "emoji": "🎨",
       "title": "4e édition de la Biennale d’Art du Jura - ZigZag 2026",
       "body": "Samedi 03 oct. à Grand Dole ·.",
       "date": "2026-10-03"
+    },
+    {
+      "emoji": "📍",
+      "title": "Dans la bulle de Slash",
+      "body": "Lundi 05 oct. à Dole ·.",
+      "date": "2026-10-05"
     },
     {
       "emoji": "🎉",
@@ -64,39 +34,69 @@
     },
     {
       "emoji": "📍",
-      "title": "LES SEMAINES DE LA SANTÉ MENTALE",
-      "body": "Lundi 05 oct. à Dole ·.",
-      "date": "2026-10-05"
-    },
-    {
-      "emoji": "📍",
-      "title": "FORUM SANTÉ - 1ERE EDITION",
-      "body": "Mardi 06 oct. à Dole · La Commanderie.",
+      "title": "SEMAINE BLEUE 2026",
+      "body": "Mardi 06 oct. à Dole ·.",
       "date": "2026-10-06"
     },
     {
-      "emoji": "📍",
-      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
-      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "emoji": "🎨",
+      "title": "SOIRÉE TARTIFLETTE",
+      "body": "Samedi 10 oct. à Moissey · Caveau de Moissey.",
       "date": "2026-10-10"
     },
     {
-      "emoji": "📍",
-      "title": "ADIE Je crée mon entreprise",
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier Installation d'applications publiques",
       "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
       "date": "2026-10-13"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Café des aidants : Autisme ou autres troubles du neurodéveloppement",
-      "body": "Mercredi 14 oct. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de l'Aide à la personne",
+      "body": "Mercredi 14 oct. à Dole · Info Jeunesse Jura Dole.",
       "date": "2026-10-14"
+    },
+    {
+      "emoji": "📍",
+      "title": "Intervention CPAM",
+      "body": "Jeudi 15 oct. à Dole · Centre Social Olympe de Gouges.",
+      "date": "2026-10-15"
+    },
+    {
+      "emoji": "🎭",
+      "title": "BREL ! LE SPECTACLE",
+      "body": "Vendredi 16 oct. à Dole · La Commanderie.",
+      "date": "2026-10-16"
+    },
+    {
+      "emoji": "📍",
+      "title": "Magnificat",
+      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Thé dansant",
+      "body": "Dimanche 18 oct. à Saint-Aubin · Foyer rural.",
+      "date": "2026-10-18"
+    },
+    {
+      "emoji": "📍",
+      "title": "Détective du goût",
+      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-19"
     },
     {
       "emoji": "🍷",
       "title": "Stages de cirque",
       "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
       "date": "2026-10-19"
+    },
+    {
+      "emoji": "📚",
+      "title": "Cahier dolois n°23",
+      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-20"
     }
   ]
 }
