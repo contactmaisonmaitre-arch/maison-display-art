@@ -1,19 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-02T11:16:40.878Z",
+  "fetchedAt": "2026-10-03T10:33:06.835Z",
   "facts": [
-    {
-      "emoji": "📚",
-      "title": "Vente de livres déclassés",
-      "body": "Vendredi 02 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-02"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Biennale France-Chine 2026",
-      "body": "Vendredi 02 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-02"
-    },
     {
       "emoji": "🎨",
       "title": "4e édition de la Biennale d’Art du Jura - ZigZag 2026",
@@ -22,81 +10,57 @@
     },
     {
       "emoji": "📍",
-      "title": "Dans la bulle de Slash",
-      "body": "Lundi 05 oct. à Dole ·.",
-      "date": "2026-10-05"
-    },
-    {
-      "emoji": "🎉",
-      "title": "FÊTE DE LA SCIENCE 2026",
+      "title": "LES SEMAINES DE LA SANTÉ MENTALE",
       "body": "Lundi 05 oct. à Dole ·.",
       "date": "2026-10-05"
     },
     {
       "emoji": "📍",
-      "title": "SEMAINE BLEUE 2026",
-      "body": "Mardi 06 oct. à Dole ·.",
-      "date": "2026-10-06"
-    },
-    {
-      "emoji": "🎨",
-      "title": "SOIRÉE TARTIFLETTE",
-      "body": "Samedi 10 oct. à Moissey · Caveau de Moissey.",
+      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
+      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
       "date": "2026-10-10"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Installation d'applications publiques",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
-    },
-    {
-      "emoji": "📍",
-      "title": "Les rendez-vous métiers de l'Aide à la personne",
-      "body": "Mercredi 14 oct. à Dole · Info Jeunesse Jura Dole.",
-      "date": "2026-10-14"
-    },
-    {
-      "emoji": "📍",
-      "title": "Intervention CPAM",
-      "body": "Jeudi 15 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-15"
-    },
-    {
-      "emoji": "🎭",
-      "title": "BREL ! LE SPECTACLE",
-      "body": "Vendredi 16 oct. à Dole · La Commanderie.",
-      "date": "2026-10-16"
-    },
-    {
-      "emoji": "📍",
-      "title": "Magnificat",
-      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "Thé dansant",
-      "body": "Dimanche 18 oct. à Saint-Aubin · Foyer rural.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "🍷",
-      "title": "Stages de cirque",
-      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "📚",
-      "title": "Cahier dolois n°23",
-      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "emoji": "🎨",
+      "title": "Mardi, on joue au musée",
+      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-20"
+    },
+    {
+      "emoji": "📍",
+      "title": "La science des couleurs 4-7 ans NOUVEAU !",
+      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
+      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎉",
+      "title": "Fête de la Forêt de Chaux",
+      "body": "Samedi 24 oct. à Grand Dole ·.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Mardi, on joue au musée",
+      "body": "Mardi 27 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-27"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier parents et ados : Corps, émotions et relations",
+      "body": "Mercredi 28 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "📍",
+      "title": "Anne Tuffigo",
+      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
+      "date": "2026-10-30"
     }
   ]
 }
