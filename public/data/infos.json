@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-02T10:03:09.873Z",
+  "fetchedAt": "2026-10-03T09:25:49.543Z",
   "ephemerides": {
-    "date": "2026-10-02",
+    "date": "2026-10-03",
     "events": [
       {
-        "year": 1997,
-        "text": "l'Union européenne signe le traité d'Amsterdam, qui modifie les traités de Maastricht et de Rome.",
+        "year": 1990,
+        "text": "réunification allemande.",
         "kind": "event"
       },
       {
-        "year": 1935,
-        "text": "les Italiens envahissent l'Éthiopie.",
+        "year": 1952,
+        "text": "explosion de la première bombe atomique britannique.",
         "kind": "event"
       },
       {
-        "year": 1928,
-        "text": "à Madrid , fondation de l'Opus Dei par Josemaría Escrivá de Balaguer.",
+        "year": 1942,
+        "text": "lancement du premier missile V2 depuis Peenemünde.",
         "kind": "event"
       },
       {
-        "year": 1535,
-        "text": "Jacques Cartier (vue d’artiste) arrive au Canada.",
+        "year": 1932,
+        "text": "indépendance de l'Irak.",
         "kind": "event"
       },
       {
-        "year": 1187,
-        "text": "Saladin reprend Jérusalem aux croisés.",
+        "year": 1929,
+        "text": "naissance du royaume de Yougoslavie.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "le Kirghizistan et le Tadjikistan signent un accord sur la frontière séparant les deux pays.",
+        "year": 2025,
+        "text": "au Luxembourg, le grand-duc Henri abdique en faveur de son fils Guillaume (photo).",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Jacob Sartorius, chanteur américain.",
+        "year": 2005,
+        "text": "Lukas Pélissier, acteur sourd français.",
         "kind": "birth"
       },
       {
-        "year": 2001,
-        "text": "Michou, youtubeur français",
+        "year": 2004,
+        "text": "Noah Schnapp, acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Lamyai Haithongkham, chanteuse pop thaïlandaise de musique mor lam et luk thung.",
+        "year": 2003,
+        "text": "Ibtoihi Hadhari, footballeur comorien.",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Maxime Godart, acteur français.",
+        "year": 2003,
+        "text": "Lisa Hirner, sauteuse à ski et coureuse autrichienne du combiné nordique",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Arnaud Prusak, comédien français.",
+        "year": 1999,
+        "text": "Tarania Clarke, footballeuse jamaïcaine († 31 octobre 2019).",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Michy Batshuayi, footballeur belge.",
+        "year": 1997,
+        "text": "Bang Chan, chanteur, rappeur, producteur de musique australo-coréen et leader du groupe Stray Kids.",
         "kind": "birth"
       }
     ]
