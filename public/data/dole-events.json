@@ -1,13 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-03T10:33:06.835Z",
+  "fetchedAt": "2026-10-04T11:15:05.102Z",
   "facts": [
-    {
-      "emoji": "🎨",
-      "title": "4e édition de la Biennale d’Art du Jura - ZigZag 2026",
-      "body": "Samedi 03 oct. à Grand Dole ·.",
-      "date": "2026-10-03"
-    },
     {
       "emoji": "📍",
       "title": "LES SEMAINES DE LA SANTÉ MENTALE",
@@ -15,52 +9,58 @@
       "date": "2026-10-05"
     },
     {
-      "emoji": "📍",
-      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
-      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-10-10"
+      "emoji": "☕",
+      "title": "Le Café de l'Arche / SISM",
+      "body": "Mercredi 07 oct. à Dole · Maison des Orphelins.",
+      "date": "2026-10-07"
     },
     {
       "emoji": "🎨",
-      "title": "Mardi, on joue au musée",
-      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
+      "title": "Marathon - Hunger Game",
+      "body": "Vendredi 09 oct. à Dole · 1 Rue du Général Béthouart.",
+      "date": "2026-10-09"
+    },
+    {
+      "emoji": "📚",
+      "title": "Vente de livres d'occasion",
+      "body": "Samedi 17 oct. à Dole ·.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "🍷",
+      "title": "Stages de cirque",
+      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
+      "date": "2026-10-19"
+    },
+    {
+      "emoji": "🎬",
+      "title": "Stage cinéma halloween !",
+      "body": "Mardi 20 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
       "date": "2026-10-20"
     },
     {
-      "emoji": "📍",
-      "title": "La science des couleurs 4-7 ans NOUVEAU !",
-      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-21"
-    },
-    {
       "emoji": "🎨",
-      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
-      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
+      "title": "Visite guidée : L'Art et la couleur",
+      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-21"
     },
     {
-      "emoji": "🎉",
-      "title": "Fête de la Forêt de Chaux",
-      "body": "Samedi 24 oct. à Grand Dole ·.",
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de l'International & Tourisme",
+      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
+      "date": "2026-10-23"
+    },
+    {
+      "emoji": "📍",
+      "title": "Salon d'Epanouissement Personne",
+      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
       "date": "2026-10-24"
     },
     {
       "emoji": "🎨",
-      "title": "Mardi, on joue au musée",
-      "body": "Mardi 27 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-27"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier parents et ados : Corps, émotions et relations",
-      "body": "Mercredi 28 oct. à Dole · Maison de la Parentalité.",
+      "title": "Visite guidée : L'Art et la couleur",
+      "body": "Mercredi 28 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-28"
-    },
-    {
-      "emoji": "📍",
-      "title": "Anne Tuffigo",
-      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
-      "date": "2026-10-30"
     }
   ]
 }
