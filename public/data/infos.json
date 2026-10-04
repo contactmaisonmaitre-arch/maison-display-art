@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-03T09:25:49.543Z",
+  "fetchedAt": "2026-10-04T10:05:07.031Z",
   "ephemerides": {
-    "date": "2026-10-03",
+    "date": "2026-10-04",
     "events": [
       {
-        "year": 1990,
-        "text": "réunification allemande.",
+        "year": 1958,
+        "text": "promulgation de la constitution de la Cinquième République française.",
         "kind": "event"
       },
       {
-        "year": 1952,
-        "text": "explosion de la première bombe atomique britannique.",
+        "year": 1957,
+        "text": "mise en orbite par l'URSS de Spoutnik 1, premier satellite artificiel de la Terre.",
         "kind": "event"
       },
       {
-        "year": 1942,
-        "text": "lancement du premier missile V2 depuis Peenemünde.",
+        "year": 1945,
+        "text": "ordonnance portant création de la Sécurité sociale en France.",
         "kind": "event"
       },
       {
-        "year": 1932,
-        "text": "indépendance de l'Irak.",
+        "year": 1830,
+        "text": "indépendance de la Belgique.",
         "kind": "event"
       },
       {
-        "year": 1929,
-        "text": "naissance du royaume de Yougoslavie.",
+        "year": 1824,
+        "text": "proclamation de la Première République fédérale mexicaine.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "au Luxembourg, le grand-duc Henri abdique en faveur de son fils Guillaume (photo).",
+        "year": 2022,
+        "text": "le prix Nobel de physique est attribué au Français Alain Aspect, à l'Américain John Clauser et à l'Autrichien Anton Zeilinger pour leurs découvertes sur l'intrication quantique.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2005,
-        "text": "Lukas Pélissier, acteur sourd français.",
-        "kind": "birth"
-      },
-      {
-        "year": 2004,
-        "text": "Noah Schnapp, acteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Ibtoihi Hadhari, footballeur comorien.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Lisa Hirner, sauteuse à ski et coureuse autrichienne du combiné nordique",
-        "kind": "birth"
-      },
-      {
-        "year": 1999,
-        "text": "Tarania Clarke, footballeuse jamaïcaine († 31 octobre 2019).",
+        "year": 1997,
+        "text": "Tom Moyal, designer graphique français.",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Bang Chan, chanteur, rappeur, producteur de musique australo-coréen et leader du groupe Stray Kids.",
+        "text": "Yuju (Choi Yu Na dite), chanteuse sud-coréenne du groupe GFriend.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Lillie Keenan, cavalière américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Rupi Kaur, poétesse canadienne d'origine indienne.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "Dakota Johnson, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1988,
+        "text": "Melissa Benoist, actrice américaine.",
         "kind": "birth"
       }
     ]
