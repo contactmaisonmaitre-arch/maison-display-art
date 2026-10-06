@@ -1,11 +1,83 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-05T12:33:10.754Z",
+  "fetchedAt": "2026-10-06T12:11:14.840Z",
   "facts": [
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Sommeil de l'enfant : des repères simples pour les parents.",
+      "body": "Mardi 06 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "📍",
+      "title": "SEMAINE BLEUE 2026",
+      "body": "Mardi 06 oct. à Dole ·.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "📍",
+      "title": "FORUM SANTÉ - 1ERE EDITION",
+      "body": "Mardi 06 oct. à Dole · La Commanderie.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Temps de rencontre \"cheminer ensemble après la perte d'un enfant\"",
+      "body": "Mardi 06 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "📍",
+      "title": "LA GUINGUETTE DES SENIORS",
+      "body": "Mardi 06 oct. à Dole · Manège de Brack.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Les RDV de l'Histoire de l'Art - Chine et Occident : interactions artistiques",
+      "body": "Mardi 06 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-06"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Ecoute parentalité parents d'ados",
+      "body": "Mercredi 07 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-07"
+    },
+    {
+      "emoji": "🎉",
+      "title": "Nuit Noire",
+      "body": "Mercredi 07 oct. à Champvans · Salle des Fêtes de Champvans.",
+      "date": "2026-10-07"
+    },
+    {
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de l'Environnement & de l'Agriculture",
+      "body": "Mercredi 07 oct. à Dole · Info Jeunesse Jura Dole.",
+      "date": "2026-10-07"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Atelier duo rencontre",
+      "body": "Mercredi 07 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-07"
+    },
+    {
+      "emoji": "📍",
+      "title": "Le Carrefour de l'Emploi",
+      "body": "Mercredi 07 oct. à Dole · Gare de Dole.",
+      "date": "2026-10-07"
+    },
     {
       "emoji": "☕",
       "title": "Le Café de l'Arche / SISM",
       "body": "Mercredi 07 oct. à Dole · Maison des Orphelins.",
+      "date": "2026-10-07"
+    },
+    {
+      "emoji": "🎉",
+      "title": "Scène ouverte / open-mic",
+      "body": "Mercredi 07 oct. à Champvans · Salle des Fêtes de Champvans.",
       "date": "2026-10-07"
     },
     {
@@ -22,51 +94,9 @@
     },
     {
       "emoji": "📍",
-      "title": "ADIE Je crée mon entreprise",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
-    },
-    {
-      "emoji": "📍",
-      "title": "Magnificat",
-      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Salon du Mariage",
-      "body": "Samedi 17 oct. à Dole · Dolexpo.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée : L'Art et la couleur",
-      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier linogravure",
-      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "🏆",
-      "title": "CONCOURS AGILITY",
-      "body": "Samedi 24 oct. à Dole · Complexe sportif du Tumulus.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Mardi, on joue au musée",
-      "body": "Mardi 27 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-27"
+      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
+      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-10-10"
     }
   ]
 }
