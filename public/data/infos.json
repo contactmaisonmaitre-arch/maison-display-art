@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-05T10:50:41.733Z",
+  "fetchedAt": "2026-10-06T10:46:43.713Z",
   "ephemerides": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "events": [
       {
-        "year": 1947,
-        "text": "création du Kominform qui succède au Komintern.",
+        "year": 2008,
+        "text": "krach boursier au cours duquel les bourses mondiales enregistrent une baisse de 20 % en moyenne.",
         "kind": "event"
       },
       {
-        "year": 1795,
-        "text": "insurrection royaliste du 13 vendémiaire an IV à Paris.",
+        "year": 1995,
+        "text": "annonce de la découverte de la première exoplanète autour d'une étoile de la séquence principale par des astrophysiciens de l'observatoire de Genève.",
         "kind": "event"
       },
       {
-        "year": 1465,
-        "text": "le traité de Conflans met un terme à la ligue du Bien public.",
-        "kind": "event"
-      },
-      {
-        "year": 2023,
-        "text": "le prix Nobel de littérature est attribué au Norvégien Jon Fosse « pour ses pièces de théâtre et sa prose novatrices qui donnent une voix à l'indicible ».",
+        "year": 1789,
+        "text": "le roi de France Louis XVI et la famille royale quittent Versailles pour les Tuileries à Paris.",
         "kind": "event"
       },
       {
         "year": 2022,
-        "text": "La Slovénie devient le premier pays d’Europe de l’Est à autoriser le mariage homosexuel et l’adoption après un vote du Parlement.",
+        "text": "le prix Nobel de littérature est attribué à la Française Annie Ernaux.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "Michel Denisot tourne quelques scènes de son premier long-métrage de fiction, Toute ressemblance..., sous l'arcade ouest de la place parisienne des Vosges.",
+        "year": 2021,
+        "text": "le prix Nobel de chimie est attribué à l'Allemand Benjamin List et le Britannique David MacMillan pour le développement de l'organocatalyse asymétrique.",
+        "kind": "event"
+      },
+      {
+        "year": 2020,
+        "text": "le prix Nobel de physique est attribué au britannique Roger Penrose, l'Allemand Reinhard Genzel et l'Américain Andrea Ghez pour leurs travaux sur les trous noirs.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Jacob Tremblay, acteur canadien.",
+        "year": 2004,
+        "text": "Bronny James, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Shaybo, rappeuse nigériano-britannique.",
+        "year": 2000,
+        "text": "Jazz Jennings, auteure et militante des droits LGBT américaine.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "DeShane « Shane » Larkin, basketteur américain.",
+        "year": 1995,
+        "text": "Théo Hernandez, footballeur français.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Cody Zeller, basketteur américain.",
+        "year": 1995,
+        "text": "Shuri Atomi, star du porno japonais.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Tornike Shengelia (თორნიკე შენგელია), basketteur géorgien.",
+        "year": 1994,
+        "text": "Lee Joo-heon, rappeur coréen du groupe Monsta X.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Maud Medenou, basketteuse française.",
+        "year": 1994,
+        "text": "Ryan Pulock, hockeyeur canadien.",
         "kind": "birth"
       }
     ]
