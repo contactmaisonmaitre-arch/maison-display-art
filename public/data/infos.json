@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-07T10:34:36.377Z",
+  "fetchedAt": "2026-10-08T10:55:47.914Z",
   "ephemerides": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "events": [
       {
-        "year": 2008,
-        "text": "chute sur Terre de l'astéroïde 2008 TC3, le premier objet découvert dans l'espace avant d'impacter notre planète.",
+        "year": 1982,
+        "text": "la Pologne interdit Solidarność ainsi que les autres syndicats.",
+        "kind": "event"
+      },
+      {
+        "year": 1967,
+        "text": "capture de Che Guevara en Bolivie.",
+        "kind": "event"
+      },
+      {
+        "year": 1573,
+        "text": "les Espagnols lèvent le siège d'Alkmaar.",
+        "kind": "event"
+      },
+      {
+        "year": 451,
+        "text": "ouverture du concile de Chalcédoine.",
         "kind": "event"
       },
       {
         "year": 2024,
-        "text": "le prix Nobel de physiologie ou médecine est attribué aux américains Victor Ambros et Gary Ruvkun pour leurs travaux sur les micro-ARN.",
+        "text": "le prix Nobel de physique est attribué à l'Américain John Joseph Hopfield et au Britannico-canadien Geoffrey Hinton pour leurs travaux sur l'apprentissage automatique.",
         "kind": "event"
       },
       {
         "year": 2022,
-        "text": "le prix Nobel de la paix est attribué au Biélorusse Alès Bialiatski, à l'association russe Memorial et à l'association ukrainienne Centre pour les libertés civiles.",
-        "kind": "event"
-      },
-      {
-        "year": 2021,
-        "text": "le prix Nobel de littérature est attribué au Tanzanien Abdulrazak Gurnah.",
-        "kind": "event"
-      },
-      {
-        "year": 2020,
-        "text": "le prix Nobel de chimie est attribué à la Française Emmanuelle Charpentier et l'Américaine Jennifer A. Doudna pour le développement d'une méthode d'édition génomique.",
-        "kind": "event"
-      },
-      {
-        "year": 2019,
-        "text": "Début des manifestations de 2019-2021 au Chili en réaction à l'augmentation du prix des billets de métro.",
+        "text": "une explosion endommage le pont de Crimée.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Oumaima El Bouchti, taekwondoïste marocaine.",
+        "year": 2001,
+        "text": "Percy Hynes White, acteur canadien.",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Trent Alexander-Arnold, footballeur international anglais.",
+        "year": 2000,
+        "text": "Ethan Torchio, batteur du groupe de rock italien Måneskin.",
+        "kind": "birth"
+      },
+      {
+        "year": 1999,
+        "text": "Putthipong Assaratanakul, acteur et chanteur thaïlandais.",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Nicole Maines, actrice transgenre américaine.",
+        "text": "Gabriel Bordier, athlète français.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Lucas Pazat, céiste français.",
+        "year": 1997,
+        "text": "Bella Thorne, actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Akou Dulcie Nodjo, escrimeuse togolaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Hugo Clément, journaliste français.",
+        "year": 1995,
+        "text": "Grayson Allen, basketteur américain.",
         "kind": "birth"
       }
     ]
