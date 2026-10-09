@@ -1,6 +1,6 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-08T12:12:14.469Z",
+  "fetchedAt": "2026-10-09T12:03:40.929Z",
   "facts": [
     {
       "emoji": "🎨",
@@ -10,75 +10,9 @@
     },
     {
       "emoji": "🎨",
-      "title": "SOIRÉE TARTIFLETTE",
-      "body": "Samedi 10 oct. à Moissey · Caveau de Moissey.",
-      "date": "2026-10-10"
-    },
-    {
-      "emoji": "🎉",
-      "title": "Loto Roller Dole Tavaux",
-      "body": "Samedi 10 oct. à Sampans · Salle des fêtes l'Impasse.",
-      "date": "2026-10-10"
-    },
-    {
-      "emoji": "📍",
-      "title": "DOLE IT YOURSELF : La Journée de la Réparation et de l'Entraide !",
-      "body": "Samedi 10 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-10-10"
-    },
-    {
-      "emoji": "🎨",
-      "title": "La prescription muséale - SISM",
-      "body": "Dimanche 11 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-11"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 11 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-11"
-    },
-    {
-      "emoji": "🎨",
       "title": "Marché de producteurs et d'artisans de Rainans",
       "body": "Dimanche 11 oct. à Rainans ·.",
       "date": "2026-10-11"
-    },
-    {
-      "emoji": "📍",
-      "title": "Florilège de Vivaldi",
-      "body": "Dimanche 11 oct. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-10-11"
-    },
-    {
-      "emoji": "📍",
-      "title": "Fashion Dole",
-      "body": "Lundi 12 oct. à Dole · La Commanderie.",
-      "date": "2026-10-12"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents",
-      "body": "Lundi 12 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-12"
-    },
-    {
-      "emoji": "📍",
-      "title": "CAFE ECHANGES - FRANCE SERVICES",
-      "body": "Lundi 12 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-12"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Installation d'applications publiques",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
-    },
-    {
-      "emoji": "📍",
-      "title": "ADIE Je crée mon entreprise",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
     },
     {
       "emoji": "📍",
@@ -87,16 +21,46 @@
       "date": "2026-10-13"
     },
     {
-      "emoji": "🎶",
-      "title": "Paroles de Jazz",
-      "body": "Mardi 13 oct. à Dole · Librairie La Passerelle.",
-      "date": "2026-10-13"
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de l'Aide à la personne",
+      "body": "Mercredi 14 oct. à Dole · Info Jeunesse Jura Dole.",
+      "date": "2026-10-14"
+    },
+    {
+      "emoji": "🍷",
+      "title": "Stages de cirque",
+      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
+      "date": "2026-10-19"
+    },
+    {
+      "emoji": "📍",
+      "title": "Détective du goût",
+      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-19"
     },
     {
       "emoji": "🎨",
-      "title": "Atelier duo rencontre",
-      "body": "Mercredi 14 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-14"
+      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
+      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée Jeux",
+      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Mon aprèm au musée",
+      "body": "Jeudi 29 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée loup-garou",
+      "body": "Samedi 31 oct. à Dole · La Table Ronde.",
+      "date": "2026-10-31"
     }
   ]
 }
