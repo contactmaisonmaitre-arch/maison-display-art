@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-08T10:55:47.914Z",
+  "fetchedAt": "2026-10-09T10:54:42.155Z",
   "ephemerides": {
-    "date": "2026-10-08",
+    "date": "2026-10-09",
     "events": [
       {
-        "year": 1982,
-        "text": "la Pologne interdit Solidarność ainsi que les autres syndicats.",
+        "year": 2004,
+        "text": "Élisabeth II inaugure le bâtiment du Parlement écossais à Édimbourg.",
         "kind": "event"
       },
       {
-        "year": 1967,
-        "text": "capture de Che Guevara en Bolivie.",
+        "year": 1192,
+        "text": "Richard Cœur de Lion quitte la Terre sainte et embarque pour l'Angleterre après avoir signé un traité de paix avec Saladin, au terme de la troisième croisade.",
         "kind": "event"
       },
       {
-        "year": 1573,
-        "text": "les Espagnols lèvent le siège d'Alkmaar.",
-        "kind": "event"
-      },
-      {
-        "year": 451,
-        "text": "ouverture du concile de Chalcédoine.",
+        "year": 2025,
+        "text": "le Prix Nobel de littérature est décerné au Hongrois László Krasznahorkai (photo).",
         "kind": "event"
       },
       {
         "year": 2024,
-        "text": "le prix Nobel de physique est attribué à l'Américain John Joseph Hopfield et au Britannico-canadien Geoffrey Hinton pour leurs travaux sur l'apprentissage automatique.",
+        "text": "le prix Nobel de chimie est attribué aux Américains David Baker et John Michael Jumper ainsi qu'au Britannique Demis Hassabis pour leurs travaux sur les protéines.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "une explosion endommage le pont de Crimée.",
+        "year": 2021,
+        "text": "en Autriche, le chancelier fédéral Sebastian Kurz annonce sa démission.",
+        "kind": "event"
+      },
+      {
+        "year": 2017,
+        "text": "le Prix Nobel d'économie est attribué à l'Américain Richard Thaler, pour ses contributions à la compréhension de la psychologie de l'économie sur la finance comportementale.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2001,
-        "text": "Percy Hynes White, acteur canadien.",
+        "year": 1996,
+        "text": "Bella Hadid, mannequin américaine.",
         "kind": "birth"
       },
       {
-        "year": 2000,
-        "text": "Ethan Torchio, batteur du groupe de rock italien Måneskin.",
+        "year": 1996,
+        "text": "Étienne Ory, basketteur français.",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Putthipong Assaratanakul, acteur et chanteur thaïlandais.",
+        "year": 1994,
+        "text": "Alexie Alaïs, athlète française.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Gabriel Bordier, athlète français.",
+        "year": 1994,
+        "text": "Jodelle Ferland, actrice canadienne.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Bella Thorne, actrice américaine.",
+        "year": 1994,
+        "text": "Mama Diop, footballeuse sénégalaise.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Grayson Allen, basketteur américain.",
+        "year": 1994,
+        "text": "Asisat Oshoala, footballeuse nigériane.",
         "kind": "birth"
       }
     ]
