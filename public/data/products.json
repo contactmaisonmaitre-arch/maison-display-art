@@ -1,6 +1,6 @@
 {
   "source": "https://maisonmaitre.com",
-  "fetchedAt": "2026-10-08T10:55:35.759Z",
+  "fetchedAt": "2026-10-10T10:07:22.808Z",
   "products": [
     {
       "handle": "emporter-supplement-grand",
@@ -105,7 +105,7 @@
       "type": "boisson à emporter",
       "notes": "Chaud, épices de courge et pistache.",
       "price": "9 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-pumpkin-studio-sept2026.webp?v=1791374557",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-pumpkin-studio-sept2026.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -117,7 +117,7 @@
       "type": "boisson à emporter",
       "notes": "Glacé, 100 % végétal.",
       "price": "9 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-tiramisu-studio.webp?v=1791374557",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-tiramisu-studio.webp?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -141,7 +141,7 @@
       "type": "boisson à emporter",
       "notes": "Espresso, glaçons et lait.",
       "price": "4,50 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5099_2_dbd5c0e1-7651-40ab-b88d-d878a0f2100c.jpg?v=1791374559",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5099_2_dbd5c0e1-7651-40ab-b88d-d878a0f2100c.jpg?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -177,7 +177,7 @@
       "type": "boisson à emporter",
       "notes": "Poudre d'igname violet et lait, chaud ou glacé.",
       "price": "6 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_0095_0ed18f66-847b-466c-9f17-a5ab23d86d2b.jpg?v=1791374559",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_0095_0ed18f66-847b-466c-9f17-a5ab23d86d2b.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -189,7 +189,7 @@
       "type": "boisson à emporter",
       "notes": "Épices chaï et lait, chaud ou glacé.",
       "price": "6 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-25.webp?v=1791374557",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-25.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -201,7 +201,7 @@
       "type": "boisson à emporter",
       "notes": "Matcha japonais de grade cérémonie.",
       "price": "7 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_4487_2_6d656042-7426-46ee-8897-995848ea6794.jpg?v=1791374560",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_4487_2_6d656042-7426-46ee-8897-995848ea6794.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -213,7 +213,7 @@
       "type": "boisson à emporter",
       "notes": "Double espresso et lait micro-moussé.",
       "price": "5 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-21.webp?v=1791374556",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-21.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -261,7 +261,7 @@
       "type": "boisson à emporter",
       "notes": "Espresso, chocolat et lait.",
       "price": "6 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-22.webp?v=1791374556",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-22.webp?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -273,7 +273,7 @@
       "type": "boisson à emporter",
       "notes": "Espresso, lait et mousse onctueuse.",
       "price": "4,50 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-01.webp?v=1791374556",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-01.webp?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -285,7 +285,7 @@
       "type": "boisson à emporter",
       "notes": "Espresso et lait chaud à parts égales.",
       "price": "4 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-18.webp?v=1791374556",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-18.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -297,7 +297,7 @@
       "type": "boisson à emporter",
       "notes": "Espresso et une touche de lait mousseux.",
       "price": "3 €",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5305_3a7d292b-5fd9-44ad-85e5-754c2d640ece.jpg?v=1791374563",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5305_3a7d292b-5fd9-44ad-85e5-754c2d640ece.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
@@ -333,7 +333,7 @@
       "type": "café",
       "notes": "Orange, panela, mûre.",
       "price": "14 € · 250 g",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-lucero-paquet-v2.png?v=1789637961",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-lucero-paquet-v2.png?v=1791612011",
       "available": true,
       "vendor": "Maison Maitre",
       "online": true

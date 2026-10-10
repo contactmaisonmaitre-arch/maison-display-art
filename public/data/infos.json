@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-09T10:54:42.155Z",
+  "fetchedAt": "2026-10-10T10:07:29.225Z",
   "ephemerides": {
-    "date": "2026-10-09",
+    "date": "2026-10-10",
     "events": [
       {
-        "year": 2004,
-        "text": "Élisabeth II inaugure le bâtiment du Parlement écossais à Édimbourg.",
+        "year": 1954,
+        "text": "naissance du Front de libération nationale en Algérie.",
         "kind": "event"
       },
       {
-        "year": 1192,
-        "text": "Richard Cœur de Lion quitte la Terre sainte et embarque pour l'Angleterre après avoir signé un traité de paix avec Saladin, au terme de la troisième croisade.",
+        "year": 1863,
+        "text": "Maximilien d'Autriche (portrait) accepte le trône impérial du Mexique.",
+        "kind": "event"
+      },
+      {
+        "year": 1801,
+        "text": "le traité de Paris est signé entre la France et la Russie.",
         "kind": "event"
       },
       {
         "year": 2025,
-        "text": "le Prix Nobel de littérature est décerné au Hongrois László Krasznahorkai (photo).",
+        "text": "le Prix Nobel de la paix est décerné à la femme politique vénézuélienne María Corina Machado.",
         "kind": "event"
       },
       {
         "year": 2024,
-        "text": "le prix Nobel de chimie est attribué aux Américains David Baker et John Michael Jumper ainsi qu'au Britannique Demis Hassabis pour leurs travaux sur les protéines.",
+        "text": "le prix Nobel de littérature est attribué à la romancière Sud-coréenne Han Kang.",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "en Autriche, le chancelier fédéral Sebastian Kurz annonce sa démission.",
-        "kind": "event"
-      },
-      {
-        "year": 2017,
-        "text": "le Prix Nobel d'économie est attribué à l'Américain Richard Thaler, pour ses contributions à la compréhension de la psychologie de l'économie sur la finance comportementale.",
+        "year": 2022,
+        "text": "le prix Nobel d'économie est attribué aux Américains Ben Bernanke, Douglas Diamond et Philip Dybvig pour leurs recherches sur les banques et les crises financières.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1996,
-        "text": "Bella Hadid, mannequin américaine.",
+        "year": 2003,
+        "text": "Maggie Elizabeth Jones, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 2002,
+        "text": "Mukarama Abdulai, footballeuse ghanéenne.",
+        "kind": "birth"
+      },
+      {
+        "year": 2000,
+        "text": "Darya Bilodid, judokate ukrainienne.",
+        "kind": "birth"
+      },
+      {
+        "year": 2000,
+        "text": "Desiet Kidane, coureuse cycliste érythréenne († 8 novembre 2021).",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Étienne Ory, basketteur français.",
+        "text": "Melissa Herrera, footballeuse costaricaine.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Alexie Alaïs, athlète française.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Jodelle Ferland, actrice canadienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Mama Diop, footballeuse sénégalaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Asisat Oshoala, footballeuse nigériane.",
+        "year": 1991,
+        "text": "Gabriella Cilmi, chanteuse australienne.",
         "kind": "birth"
       }
     ]
