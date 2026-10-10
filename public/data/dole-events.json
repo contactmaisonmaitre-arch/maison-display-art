@@ -1,66 +1,54 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-09T12:03:40.929Z",
+  "fetchedAt": "2026-10-10T11:20:09.215Z",
   "facts": [
     {
       "emoji": "🎨",
-      "title": "Marathon - Hunger Game",
-      "body": "Vendredi 09 oct. à Dole · 1 Rue du Général Béthouart.",
-      "date": "2026-10-09"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Marché de producteurs et d'artisans de Rainans",
-      "body": "Dimanche 11 oct. à Rainans ·.",
+      "title": "La prescription muséale - SISM",
+      "body": "Dimanche 11 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-11"
     },
     {
-      "emoji": "📍",
-      "title": "Auditeurs du Soir : Quatuor de saxophones",
-      "body": "Mardi 13 oct. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-10-13"
-    },
-    {
-      "emoji": "📍",
-      "title": "Les rendez-vous métiers de l'Aide à la personne",
-      "body": "Mercredi 14 oct. à Dole · Info Jeunesse Jura Dole.",
-      "date": "2026-10-14"
-    },
-    {
-      "emoji": "🍷",
-      "title": "Stages de cirque",
-      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
+      "emoji": "🩰",
+      "title": "Stage Danse Créations",
+      "body": "Lundi 19 oct. à Dole · La Visitation.",
       "date": "2026-10-19"
     },
     {
-      "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "🎨",
-      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
-      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "📍",
-      "title": "Soirée Jeux",
-      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
-      "date": "2026-10-24"
+      "emoji": "🎬",
+      "title": "Stage cinéma halloween !",
+      "body": "Mardi 20 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-10-20"
     },
     {
       "emoji": "🎨",
       "title": "Mon aprèm au musée",
-      "body": "Jeudi 29 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-29"
+      "body": "Jeudi 22 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-22"
     },
     {
       "emoji": "📍",
-      "title": "Soirée loup-garou",
-      "body": "Samedi 31 oct. à Dole · La Table Ronde.",
-      "date": "2026-10-31"
+      "title": "Rendez-vous des créateurs",
+      "body": "Samedi 24 oct. à Tavaux · Gymnase Pierre Mendes.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "Salon d'Epanouissement Personnel",
+      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier parents et ados : Corps, émotions et relations",
+      "body": "Mercredi 28 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "📍",
+      "title": "Anne Tuffigo",
+      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
+      "date": "2026-10-30"
     }
   ]
 }
