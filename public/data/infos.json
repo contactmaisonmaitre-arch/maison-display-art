@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-10T10:07:29.225Z",
+  "fetchedAt": "2026-10-11T10:19:10.301Z",
   "ephemerides": {
-    "date": "2026-10-10",
+    "date": "2026-10-11",
     "events": [
       {
-        "year": 1954,
-        "text": "naissance du Front de libération nationale en Algérie.",
+        "year": 1962,
+        "text": "ouverture du concile Vatican II.",
         "kind": "event"
       },
       {
-        "year": 1863,
-        "text": "Maximilien d'Autriche (portrait) accepte le trône impérial du Mexique.",
+        "year": 1231,
+        "text": "le pape Grégoire IX charge Conrad de Marbourg de mettre en place des instances du tribunal d'Inquisition dans l'ensemble du Saint-Empire romain germanique.",
         "kind": "event"
       },
       {
-        "year": 1801,
-        "text": "le traité de Paris est signé entre la France et la Russie.",
+        "year": 2021,
+        "text": "en Autriche, Alexander Schallenberg devient chancelier fédéral, deux jours après la démission de Sebastian Kurz.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "le Prix Nobel de la paix est décerné à la femme politique vénézuélienne María Corina Machado.",
+        "year": 2021,
+        "text": "le prix « Nobel » d'économie est attribué au Canadien David Card, à l'Israélien-Américain Joshua Angrist et le Néerlandais-Américain Guido Imbens.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "le prix Nobel de littérature est attribué à la romancière Sud-coréenne Han Kang.",
+        "year": 2018,
+        "text": "le patriarche de Constantinople révoque le décret qui avait placé l'Église orthodoxe d'Ukraine sous la tutelle directe du patriarche de Moscou, en 1686.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "le prix Nobel d'économie est attribué aux Américains Ben Bernanke, Douglas Diamond et Philip Dybvig pour leurs recherches sur les banques et les crises financières.",
+        "year": 2017,
+        "text": "le robot Sophia est introduit dans l'Organisation des Nations unies.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2003,
-        "text": "Maggie Elizabeth Jones, actrice américaine.",
+        "year": 2011,
+        "text": "Joo Ye-rim (주예림), actrice sud-coréenne.",
         "kind": "birth"
       },
       {
-        "year": 2002,
-        "text": "Mukarama Abdulai, footballeuse ghanéenne.",
+        "year": 1994,
+        "text": "Clésio Bauque, footballeur mozambicain ;",
         "kind": "birth"
       },
       {
-        "year": 2000,
-        "text": "Darya Bilodid, judokate ukrainienne.",
+        "year": 1994,
+        "text": "Nikita Loutchine (Никита Сергеевич Лучин), joueur russe de volley-ball.",
         "kind": "birth"
       },
       {
-        "year": 2000,
-        "text": "Desiet Kidane, coureuse cycliste érythréenne († 8 novembre 2021).",
+        "year": 1993,
+        "text": "Ophélie Ah-Kouen, surfeuse française spécialiste du longboard ;",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Melissa Herrera, footballeuse costaricaine.",
+        "year": 1993,
+        "text": "Imed Louati, footballeur tunisien ;",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Gabriella Cilmi, chanteuse australienne.",
+        "year": 1993,
+        "text": "Nikita Uglov (Никита Углов), athlète russe, spécialiste du 400 mètres.",
         "kind": "birth"
       }
     ]
