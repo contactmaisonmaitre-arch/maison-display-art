@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-11T10:19:10.301Z",
+  "fetchedAt": "2026-10-12T11:19:31.544Z",
   "ephemerides": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "events": [
       {
-        "year": 1962,
-        "text": "ouverture du concile Vatican II.",
+        "year": 2011,
+        "text": "inauguration de l'opéra royal de Mascate.",
         "kind": "event"
       },
       {
-        "year": 1231,
-        "text": "le pape Grégoire IX charge Conrad de Marbourg de mettre en place des instances du tribunal d'Inquisition dans l'ensemble du Saint-Empire romain germanique.",
+        "year": 1929,
+        "text": "signature de la convention de Varsovie régissant le transport aérien.",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "en Autriche, Alexander Schallenberg devient chancelier fédéral, deux jours après la démission de Sebastian Kurz.",
-        "kind": "event"
-      },
-      {
-        "year": 2021,
-        "text": "le prix « Nobel » d'économie est attribué au Canadien David Card, à l'Israélien-Américain Joshua Angrist et le Néerlandais-Américain Guido Imbens.",
-        "kind": "event"
-      },
-      {
-        "year": 2018,
-        "text": "le patriarche de Constantinople révoque le décret qui avait placé l'Église orthodoxe d'Ukraine sous la tutelle directe du patriarche de Moscou, en 1686.",
+        "year": 2020,
+        "text": "le prix Nobel d'économie est attribué aux Américains Paul Milgrom et Robert B. Wilson pour leurs travaux sur la théorie des enchères.",
         "kind": "event"
       },
       {
         "year": 2017,
-        "text": "le robot Sophia est introduit dans l'Organisation des Nations unies.",
+        "text": "l'astéroïde 2012 TC4 passe à 50 150 km de la Terre.",
+        "kind": "event"
+      },
+      {
+        "year": 2007,
+        "text": "consécration de la Basilique de la Sainte Trinité du Sanctuaire de Fátima (Portugal).",
+        "kind": "event"
+      },
+      {
+        "year": 1999,
+        "text": "Naissance symbolique ci-après (démographie mondiale) à Sarajevo.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2011,
-        "text": "Joo Ye-rim (주예림), actrice sud-coréenne.",
+        "year": 2002,
+        "text": "Eva Timush, chanteuse moldave.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Clésio Bauque, footballeur mozambicain ;",
+        "year": 1999,
+        "text": "Margot van Hecking, joueuse néerlandaise de hockey sur gazon.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Nikita Loutchine (Никита Сергеевич Лучин), joueur russe de volley-ball.",
+        "year": 1996,
+        "text": "Marjan Salahshouri, taekwondoïste iranienne.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Ophélie Ah-Kouen, surfeuse française spécialiste du longboard ;",
+        "year": 1992,
+        "text": "Joshua « Josh » Hutcherson, acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Imed Louati, footballeur tunisien ;",
+        "year": 1991,
+        "text": "Michael Carter-Williams, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Nikita Uglov (Никита Углов), athlète russe, spécialiste du 400 mètres.",
+        "year": 1990,
+        "text": "Népal (Clément Di Fiore dit), rappeur et beatmaker français († 9 novembre 2019).",
         "kind": "birth"
       }
     ]
