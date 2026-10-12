@@ -1,29 +1,41 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-11T11:33:27.713Z",
+  "fetchedAt": "2026-10-12T13:27:06.321Z",
   "facts": [
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents",
-      "body": "Lundi 12 oct. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "CAFE ECHANGES - FRANCE SERVICES",
+      "body": "Lundi 12 oct. à Dole · Centre Social Olympe de Gouges.",
       "date": "2026-10-12"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Installation d'applications publiques",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
+      "emoji": "🎨",
+      "title": "Atelier duo rencontre",
+      "body": "Mercredi 14 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-14"
     },
     {
-      "emoji": "📍",
-      "title": "SUPER LOTO",
-      "body": "Samedi 17 oct. à Dole · Manège de Brack.",
+      "emoji": "🎨",
+      "title": "Visite thématique : visite architecturale - dans le cadre des Journées nationales de l'architecture",
+      "body": "Samedi 17 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-17"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Concert Gospel",
+      "body": "Dimanche 18 oct. à Dole · Eglise La Bonne Nouvelle.",
+      "date": "2026-10-18"
     },
     {
       "emoji": "🍷",
       "title": "Stages de cirque",
       "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
+      "date": "2026-10-19"
+    },
+    {
+      "emoji": "📍",
+      "title": "Détective du goût",
+      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
       "date": "2026-10-19"
     },
     {
@@ -40,15 +52,21 @@
     },
     {
       "emoji": "📍",
-      "title": "Apprenti·e·s pisteurs·euses",
-      "body": "Mercredi 21 oct. à Gevry ·.",
-      "date": "2026-10-21"
+      "title": "Soirée Jeux",
+      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
+      "date": "2026-10-24"
     },
     {
       "emoji": "🎨",
-      "title": "L'Histoire de Dole en balade",
-      "body": "Vendredi 30 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-30"
+      "title": "Ma première visite au musée",
+      "body": "Mercredi 28 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "📍",
+      "title": "Camille Jourdy en dédicace \" L'Homme en fer-blanc\"",
+      "body": "Samedi 31 oct. à Dole · Librairie La Passerelle.",
+      "date": "2026-10-31"
     }
   ]
 }
