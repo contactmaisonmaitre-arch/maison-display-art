@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-12T11:19:31.544Z",
+  "fetchedAt": "2026-10-13T11:05:53.702Z",
   "ephemerides": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "events": [
       {
-        "year": 2011,
-        "text": "inauguration de l'opéra royal de Mascate.",
+        "year": 2006,
+        "text": "l'État islamique d'Irak est fondé.",
         "kind": "event"
       },
       {
-        "year": 1929,
-        "text": "signature de la convention de Varsovie régissant le transport aérien.",
+        "year": 1977,
+        "text": "le vol Lufthansa 181 est détourné par quatre pirates de l'air se revendiquant du Front populaire de libération de la Palestine.",
         "kind": "event"
       },
       {
-        "year": 2020,
-        "text": "le prix Nobel d'économie est attribué aux Américains Paul Milgrom et Robert B. Wilson pour leurs travaux sur la théorie des enchères.",
+        "year": 1956,
+        "text": "la résolution 118 du Conseil de sécurité des Nations unies, relative aux exigences quant au règlement de la crise du canal de Suez, est adoptée.",
         "kind": "event"
       },
       {
-        "year": 2017,
-        "text": "l'astéroïde 2012 TC4 passe à 50 150 km de la Terre.",
+        "year": 1307,
+        "text": "les Templiers de France sont arrêtés.",
         "kind": "event"
       },
       {
-        "year": 2007,
-        "text": "consécration de la Basilique de la Sainte Trinité du Sanctuaire de Fátima (Portugal).",
+        "year": 2025,
+        "text": "le prix de la Banque de Suède en sciences économiques en mémoire d'Alfred Nobel est attribué à l'Américano-Israélien Joel Mokyr, au Français Philippe Aghion et au Canadien Peter Howitt.",
         "kind": "event"
       },
       {
-        "year": 1999,
-        "text": "Naissance symbolique ci-après (démographie mondiale) à Sarajevo.",
+        "year": 2023,
+        "text": "La mission Psyche de la NASA est lancée pour explorer l’astéroïde 16 Psyche, riche en métaux.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Eva Timush, chanteuse moldave.",
+        "year": 2010,
+        "text": "Anastasia Tyurina (Анастасия Тюрина), joueuse de balalaïka russe.",
+        "kind": "birth"
+      },
+      {
+        "year": 2001,
+        "text": "Caleb McLaughlin, acteur américain.",
         "kind": "birth"
       },
       {
         "year": 1999,
-        "text": "Margot van Hecking, joueuse néerlandaise de hockey sur gazon.",
+        "text": "Moses Brown, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Marjan Salahshouri, taekwondoïste iranienne.",
+        "year": 1989,
+        "text": "Slimane (Slimane Nebchi dit), chanteur français.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Joshua « Josh » Hutcherson, acteur américain.",
+        "year": 1988,
+        "text": "Norris Cole, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Michael Carter-Williams, basketteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1990,
-        "text": "Népal (Clément Di Fiore dit), rappeur et beatmaker français († 9 novembre 2019).",
+        "year": 1987,
+        "text": "Zachery Peacock, basketteur américain.",
         "kind": "birth"
       }
     ]
