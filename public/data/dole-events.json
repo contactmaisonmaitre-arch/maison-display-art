@@ -1,12 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-12T13:27:06.321Z",
+  "fetchedAt": "2026-10-13T12:54:30.072Z",
   "facts": [
     {
       "emoji": "📍",
-      "title": "CAFE ECHANGES - FRANCE SERVICES",
-      "body": "Lundi 12 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-12"
+      "title": "ADIE Je crée mon entreprise",
+      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
+      "date": "2026-10-13"
     },
     {
       "emoji": "🎨",
@@ -15,9 +15,9 @@
       "date": "2026-10-14"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite thématique : visite architecturale - dans le cadre des Journées nationales de l'architecture",
-      "body": "Samedi 17 oct. à Dole · Musée des Beaux-Arts.",
+      "emoji": "📚",
+      "title": "Vente de livres d'occasion",
+      "body": "Samedi 17 oct. à Dole ·.",
       "date": "2026-10-17"
     },
     {
@@ -27,46 +27,34 @@
       "date": "2026-10-18"
     },
     {
+      "emoji": "📍",
+      "title": "STAGE DE YOGA",
+      "body": "Lundi 19 oct. à Dole · La Visitation.",
+      "date": "2026-10-19"
+    },
+    {
       "emoji": "🍷",
       "title": "Stages de cirque",
       "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
       "date": "2026-10-19"
     },
     {
+      "emoji": "🎨",
+      "title": "Mardi, on joue au musée",
+      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-20"
+    },
+    {
       "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
+      "title": "Les rendez-vous métiers de l'International & Tourisme",
+      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
+      "date": "2026-10-23"
     },
     {
       "emoji": "📚",
-      "title": "Cahier dolois n°23",
-      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-20"
-    },
-    {
-      "emoji": "🎬",
-      "title": "Stage cinéma halloween !",
-      "body": "Mardi 20 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-10-20"
-    },
-    {
-      "emoji": "📍",
-      "title": "Soirée Jeux",
-      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
+      "title": "L'Hôtel-Dieu dans tous ses états",
+      "body": "Samedi 24 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
       "date": "2026-10-24"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Ma première visite au musée",
-      "body": "Mercredi 28 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-28"
-    },
-    {
-      "emoji": "📍",
-      "title": "Camille Jourdy en dédicace \" L'Homme en fer-blanc\"",
-      "body": "Samedi 31 oct. à Dole · Librairie La Passerelle.",
-      "date": "2026-10-31"
     }
   ]
 }
