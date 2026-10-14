@@ -1,36 +1,18 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-13T12:54:30.072Z",
+  "fetchedAt": "2026-10-14T10:31:14.718Z",
   "facts": [
     {
       "emoji": "📍",
-      "title": "ADIE Je crée mon entreprise",
-      "body": "Mardi 13 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-13"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Atelier duo rencontre",
-      "body": "Mercredi 14 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-14"
-    },
-    {
-      "emoji": "📚",
-      "title": "Vente de livres d'occasion",
-      "body": "Samedi 17 oct. à Dole ·.",
+      "title": "Opération nettoyage",
+      "body": "Samedi 17 oct. à Choisey · Mairie.",
       "date": "2026-10-17"
     },
     {
-      "emoji": "🎶",
-      "title": "Concert Gospel",
-      "body": "Dimanche 18 oct. à Dole · Eglise La Bonne Nouvelle.",
+      "emoji": "🥖",
+      "title": "Marché local",
+      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
       "date": "2026-10-18"
-    },
-    {
-      "emoji": "📍",
-      "title": "STAGE DE YOGA",
-      "body": "Lundi 19 oct. à Dole · La Visitation.",
-      "date": "2026-10-19"
     },
     {
       "emoji": "🍷",
@@ -40,21 +22,39 @@
     },
     {
       "emoji": "🎨",
-      "title": "Mardi, on joue au musée",
-      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-20"
+      "title": "Ma première visite au musée",
+      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-21"
     },
     {
-      "emoji": "📍",
-      "title": "Les rendez-vous métiers de l'International & Tourisme",
-      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
+      "emoji": "🎨",
+      "title": "L'Histoire de Dole en balade",
+      "body": "Vendredi 23 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-23"
     },
     {
-      "emoji": "📚",
-      "title": "L'Hôtel-Dieu dans tous ses états",
-      "body": "Samedi 24 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "emoji": "☕",
+      "title": "CAFÉ DIABÈTE",
+      "body": "Samedi 24 oct. à Choisey · Mairie.",
       "date": "2026-10-24"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 25 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-25"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Mon aprèm au musée",
+      "body": "Jeudi 29 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-29"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée loup-garou",
+      "body": "Samedi 31 oct. à Dole · La Table Ronde.",
+      "date": "2026-10-31"
     }
   ]
 }
