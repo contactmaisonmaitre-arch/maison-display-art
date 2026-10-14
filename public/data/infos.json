@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-13T11:05:53.702Z",
+  "fetchedAt": "2026-10-14T09:01:59.855Z",
   "ephemerides": {
-    "date": "2026-10-13",
+    "date": "2026-10-14",
     "events": [
       {
-        "year": 2006,
-        "text": "l'État islamique d'Irak est fondé.",
+        "year": 1985,
+        "text": "Coluche fonde les Restaurants du Cœur.",
         "kind": "event"
       },
       {
-        "year": 1977,
-        "text": "le vol Lufthansa 181 est détourné par quatre pirates de l'air se revendiquant du Front populaire de libération de la Palestine.",
+        "year": 1964,
+        "text": "Martin Luther King reçoit le prix Nobel de la paix, dont il prendra possession le 10 décembre à Oslo.",
         "kind": "event"
       },
       {
-        "year": 1956,
-        "text": "la résolution 118 du Conseil de sécurité des Nations unies, relative aux exigences quant au règlement de la crise du canal de Suez, est adoptée.",
+        "year": 1952,
+        "text": "la Cité radieuse de Le Corbusier est inaugurée à Marseille.",
         "kind": "event"
       },
       {
-        "year": 1307,
-        "text": "les Templiers de France sont arrêtés.",
+        "year": 1943,
+        "text": "une révolte éclate au centre d'extermination de Sobibór.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "le prix de la Banque de Suède en sciences économiques en mémoire d'Alfred Nobel est attribué à l'Américano-Israélien Joel Mokyr, au Français Philippe Aghion et au Canadien Peter Howitt.",
+        "year": 1670,
+        "text": "première du Bourgeois gentilhomme de Molière à Chambord devant Louis XIV.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "La mission Psyche de la NASA est lancée pour explorer l’astéroïde 16 Psyche, riche en métaux.",
+        "year": 2024,
+        "text": "la sociologue Eva Illouz (photo) reçoit le prix Aby-Warburg, attribué tous les quatre ans.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2010,
-        "text": "Anastasia Tyurina (Анастасия Тюрина), joueuse de balalaïka russe.",
+        "year": 2004,
+        "text": "Gabriel Bortoleto, pilote automobile brésilien",
         "kind": "birth"
       },
       {
-        "year": 2001,
-        "text": "Caleb McLaughlin, acteur américain.",
+        "year": 2002,
+        "text": "Caroline Harvey, joueuse de hockey américaine",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Moses Brown, basketteur américain.",
+        "year": 1993,
+        "text": "Sabrine Bouzenna, basketteuse française.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Savannah Outen, chanteuse américaine.",
         "kind": "birth"
       },
       {
         "year": 1989,
-        "text": "Slimane (Slimane Nebchi dit), chanteur français.",
+        "text": "Kateřina Elhotová, basketteuse tchèque.",
         "kind": "birth"
       },
       {
-        "year": 1988,
-        "text": "Norris Cole, basketteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1987,
-        "text": "Zachery Peacock, basketteur américain.",
+        "year": 1989,
+        "text": "Doriane Tahane, basketteuse française.",
         "kind": "birth"
       }
     ]
