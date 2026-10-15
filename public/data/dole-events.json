@@ -1,18 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-14T10:31:14.718Z",
+  "fetchedAt": "2026-10-15T10:15:12.386Z",
   "facts": [
     {
-      "emoji": "📍",
-      "title": "Opération nettoyage",
-      "body": "Samedi 17 oct. à Choisey · Mairie.",
+      "emoji": "🎨",
+      "title": "Salon du Mariage",
+      "body": "Samedi 17 oct. à Dole · Dolexpo.",
       "date": "2026-10-17"
-    },
-    {
-      "emoji": "🥖",
-      "title": "Marché local",
-      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
-      "date": "2026-10-18"
     },
     {
       "emoji": "🍷",
@@ -22,38 +16,44 @@
     },
     {
       "emoji": "🎨",
+      "title": "Mardi, on joue au musée",
+      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-20"
+    },
+    {
+      "emoji": "🎨",
       "title": "Ma première visite au musée",
       "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-21"
     },
     {
-      "emoji": "🎨",
-      "title": "L'Histoire de Dole en balade",
-      "body": "Vendredi 23 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-23"
-    },
-    {
-      "emoji": "☕",
-      "title": "CAFÉ DIABÈTE",
-      "body": "Samedi 24 oct. à Choisey · Mairie.",
+      "emoji": "📍",
+      "title": "Salon d'Epanouissement Personnel",
+      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
       "date": "2026-10-24"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 25 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-25"
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier linogravure",
+      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
+      "date": "2026-10-24"
     },
     {
-      "emoji": "🎨",
-      "title": "Mon aprèm au musée",
-      "body": "Jeudi 29 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-29"
+      "emoji": "📚",
+      "title": "Paroles de conteur : Kamishibike",
+      "body": "Mercredi 28 oct. à Dole · Bibliothèque Mauricette-Rafin.",
+      "date": "2026-10-28"
     },
     {
       "emoji": "📍",
-      "title": "Soirée loup-garou",
-      "body": "Samedi 31 oct. à Dole · La Table Ronde.",
+      "title": "Anne Tuffigo",
+      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
+      "date": "2026-10-30"
+    },
+    {
+      "emoji": "📍",
+      "title": "club DoleSubaquatique : Baptêmes de plongée",
+      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
       "date": "2026-10-31"
     }
   ]
