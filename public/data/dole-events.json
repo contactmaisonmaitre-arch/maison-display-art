@@ -1,7 +1,37 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-15T10:15:12.386Z",
+  "fetchedAt": "2026-10-16T10:04:00.229Z",
   "facts": [
+    {
+      "emoji": "🎭",
+      "title": "BREL ! LE SPECTACLE",
+      "body": "Vendredi 16 oct. à Dole · La Commanderie.",
+      "date": "2026-10-16"
+    },
+    {
+      "emoji": "📍",
+      "title": "Intervention CIDFF",
+      "body": "Vendredi 16 oct. à Dole · Centre Social Olympe de Gouges.",
+      "date": "2026-10-16"
+    },
+    {
+      "emoji": "📍",
+      "title": "ETOFFE DE PHILOSOPHE",
+      "body": "Vendredi 16 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-10-16"
+    },
+    {
+      "emoji": "📍",
+      "title": "Stéréo Kompas",
+      "body": "Vendredi 16 oct. à Dole · La Fabrique.",
+      "date": "2026-10-16"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Soirée Blind Test en famille",
+      "body": "Vendredi 16 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-16"
+    },
     {
       "emoji": "🎨",
       "title": "Salon du Mariage",
@@ -9,52 +39,64 @@
       "date": "2026-10-17"
     },
     {
-      "emoji": "🍷",
-      "title": "Stages de cirque",
-      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Mardi, on joue au musée",
-      "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-20"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Ma première visite au musée",
-      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-21"
-    },
-    {
       "emoji": "📍",
-      "title": "Salon d'Epanouissement Personnel",
-      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
-      "date": "2026-10-24"
+      "title": "Magnificat",
+      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
+      "date": "2026-10-17"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Atelier linogravure",
-      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
-      "date": "2026-10-24"
+      "title": "Prévention/éveil psychomoteur et orthophonie",
+      "body": "Samedi 17 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "SUPER LOTO",
+      "body": "Samedi 17 oct. à Dole · Manège de Brack.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Opération nettoyage",
+      "body": "Samedi 17 oct. à Choisey · Mairie.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Collectif Ensemble",
+      "body": "Samedi 17 oct. à Dole · La Commanderie.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique : visite architecturale - dans le cadre des Journées nationales de l'architecture",
+      "body": "Samedi 17 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-17"
     },
     {
       "emoji": "📚",
-      "title": "Paroles de conteur : Kamishibike",
-      "body": "Mercredi 28 oct. à Dole · Bibliothèque Mauricette-Rafin.",
-      "date": "2026-10-28"
+      "title": "Les secrets des fromages du massif jurassien",
+      "body": "Samedi 17 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-17"
     },
     {
       "emoji": "📍",
-      "title": "Anne Tuffigo",
-      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
-      "date": "2026-10-30"
+      "title": "Porte Ouverte de La Bonne Nouvelle",
+      "body": "Samedi 17 oct. à Dole ·.",
+      "date": "2026-10-17"
     },
     {
-      "emoji": "📍",
-      "title": "club DoleSubaquatique : Baptêmes de plongée",
-      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
-      "date": "2026-10-31"
+      "emoji": "📚",
+      "title": "Vente de livres d'occasion",
+      "body": "Samedi 17 oct. à Dole ·.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "🏺",
+      "title": "Visite Patrimoine & Vin - Vignoble en scène",
+      "body": "Samedi 17 oct. à Dole · Collégiale Notre-Dame.",
+      "date": "2026-10-17"
     }
   ]
 }
