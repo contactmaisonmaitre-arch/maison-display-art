@@ -1,77 +1,11 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-16T10:04:00.229Z",
+  "fetchedAt": "2026-10-17T09:37:14.583Z",
   "facts": [
-    {
-      "emoji": "🎭",
-      "title": "BREL ! LE SPECTACLE",
-      "body": "Vendredi 16 oct. à Dole · La Commanderie.",
-      "date": "2026-10-16"
-    },
-    {
-      "emoji": "📍",
-      "title": "Intervention CIDFF",
-      "body": "Vendredi 16 oct. à Dole · Centre Social Olympe de Gouges.",
-      "date": "2026-10-16"
-    },
-    {
-      "emoji": "📍",
-      "title": "ETOFFE DE PHILOSOPHE",
-      "body": "Vendredi 16 oct. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-10-16"
-    },
-    {
-      "emoji": "📍",
-      "title": "Stéréo Kompas",
-      "body": "Vendredi 16 oct. à Dole · La Fabrique.",
-      "date": "2026-10-16"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Soirée Blind Test en famille",
-      "body": "Vendredi 16 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-16"
-    },
     {
       "emoji": "🎨",
       "title": "Salon du Mariage",
       "body": "Samedi 17 oct. à Dole · Dolexpo.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "Magnificat",
-      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Prévention/éveil psychomoteur et orthophonie",
-      "body": "Samedi 17 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "SUPER LOTO",
-      "body": "Samedi 17 oct. à Dole · Manège de Brack.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "Opération nettoyage",
-      "body": "Samedi 17 oct. à Choisey · Mairie.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "📍",
-      "title": "Collectif Ensemble",
-      "body": "Samedi 17 oct. à Dole · La Commanderie.",
-      "date": "2026-10-17"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite thématique : visite architecturale - dans le cadre des Journées nationales de l'architecture",
-      "body": "Samedi 17 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-17"
     },
     {
@@ -82,8 +16,44 @@
     },
     {
       "emoji": "📍",
-      "title": "Porte Ouverte de La Bonne Nouvelle",
-      "body": "Samedi 17 oct. à Dole ·.",
+      "title": "Opération nettoyage",
+      "body": "Samedi 17 oct. à Choisey · Mairie.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Prévention/éveil psychomoteur et orthophonie",
+      "body": "Samedi 17 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "🏺",
+      "title": "Visite Patrimoine & Vin - Vignoble en scène",
+      "body": "Samedi 17 oct. à Dole · Collégiale Notre-Dame.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Escape game : communiquer dans la tempête",
+      "body": "Samedi 17 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Collectif Ensemble",
+      "body": "Samedi 17 oct. à Dole · La Commanderie.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "SUPER LOTO",
+      "body": "Samedi 17 oct. à Dole · Manège de Brack.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Magnificat",
+      "body": "Samedi 17 oct. à Dole · Auditorium Karl-Riepp.",
       "date": "2026-10-17"
     },
     {
@@ -93,10 +63,40 @@
       "date": "2026-10-17"
     },
     {
-      "emoji": "🏺",
-      "title": "Visite Patrimoine & Vin - Vignoble en scène",
-      "body": "Samedi 17 oct. à Dole · Collégiale Notre-Dame.",
+      "emoji": "📍",
+      "title": "Porte Ouverte de La Bonne Nouvelle",
+      "body": "Samedi 17 oct. à Dole ·.",
       "date": "2026-10-17"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique : visite architecturale - dans le cadre des Journées nationales de l'architecture",
+      "body": "Samedi 17 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-17"
+    },
+    {
+      "emoji": "📍",
+      "title": "Thé dansant",
+      "body": "Dimanche 18 oct. à Saint-Aubin · Foyer rural.",
+      "date": "2026-10-18"
+    },
+    {
+      "emoji": "🥖",
+      "title": "Marche solidaire DAMPA'ROSE",
+      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
+      "date": "2026-10-18"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Marché artisanal et des producteurs à Choisey",
+      "body": "Dimanche 18 oct. à Choisey · Salle Jean-Claude Lab.",
+      "date": "2026-10-18"
+    },
+    {
+      "emoji": "📍",
+      "title": "La fumigation",
+      "body": "Dimanche 18 oct. à Dole ·.",
+      "date": "2026-10-18"
     }
   ]
 }
