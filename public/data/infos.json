@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-16T08:29:50.316Z",
+  "fetchedAt": "2026-10-17T08:02:26.812Z",
   "ephemerides": {
-    "date": "2026-10-16",
+    "date": "2026-10-17",
     "events": [
       {
-        "year": 1964,
-        "text": "la Chine fait exploser sa première bombe atomique.",
-        "kind": "event"
-      },
-      {
-        "year": 1925,
-        "text": "signature des accords de Locarno entre différents États européens concernant les frontières de l'Allemagne.",
-        "kind": "event"
-      },
-      {
-        "year": 1923,
-        "text": "Walt Disney crée The Walt Disney Company.",
-        "kind": "event"
-      },
-      {
-        "year": 1879,
-        "text": "publication initiale du roman Nana d'Émile Zola sous forme de feuilleton dans Le Voltaire.",
+        "year": 1979,
+        "text": "mère Teresa (photo) reçoit le prix Nobel de la paix.",
         "kind": "event"
       },
       {
         "year": 2022,
-        "text": "la goélette Tara achève sa circumnavigation australe de deux ans.",
+        "text": "l'écrivain srilankais Shehan Karunatilaka remporte le prix Booker 2022.",
         "kind": "event"
       },
       {
         "year": 2019,
-        "text": "début de la Foire du livre de Francfort, jusqu'au 20 octobre.",
+        "text": "au Mexique, de violents combats à Culiacán opposent les forces de l'ordre et le Cartel de Sinaloa pour décider du sort d'un de ses chefs arrêtés.",
+        "kind": "event"
+      },
+      {
+        "year": 2018,
+        "text": "le Canada devient le deuxième pays à légaliser le cannabis.",
+        "kind": "event"
+      },
+      {
+        "year": 2018,
+        "text": "En Russie et Ukraine, dans la péninsule de Crimée, à Kertch, au moins 21 personnes meurent lors d’une tuerie.",
+        "kind": "event"
+      },
+      {
+        "year": 2013,
+        "text": "le Tchad, le Chili, la Lituanie, le Nigeria et l’Arabie saoudite sont élus au Conseil de sécurité de l’ONU, l’Arabie saoudite refuse son siège.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Sophie Jaques, joueuse de hockey canadienne.",
+        "year": 1997,
+        "text": "Gina Stiebitz, actrice allemande.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Aurélien Diesse, judoka français.",
-        "kind": "birth"
-      },
-      {
-        "year": 1997,
-        "text": "Charles Leclerc, pilote automobile monégasque.",
+        "year": 1995,
+        "text": "Fanta Keita, handballeuse franco-sénégalaise.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Caroline Garcia, joueuse de tennis française.",
+        "text": "Vincent Poirier, basketteur français.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "Bryce Harper, joueur de baseball américain.",
+        "text": "Keerthi Suresh (en), actrice indienne.",
         "kind": "birth"
       },
       {
         "year": 1991,
-        "text": "Wilfried Yeguete, basketteur français.",
+        "text": "Brenda Asnicar, actrice et chanteuse argentine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Agathe Auproux, journaliste et chroniqueuse de télévision française.",
         "kind": "birth"
       }
     ]
