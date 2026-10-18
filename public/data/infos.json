@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-17T08:02:26.812Z",
+  "fetchedAt": "2026-10-18T08:19:59.758Z",
   "ephemerides": {
-    "date": "2026-10-17",
+    "date": "2026-10-18",
     "events": [
       {
-        "year": 1979,
-        "text": "mère Teresa (photo) reçoit le prix Nobel de la paix.",
+        "year": 1922,
+        "text": "fondation de la BBC, plus ancien radiodiffuseur national du monde.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "l'écrivain srilankais Shehan Karunatilaka remporte le prix Booker 2022.",
+        "year": 1867,
+        "text": "les États-Unis achètent l'Alaska à l'Empire russe.",
         "kind": "event"
       },
       {
-        "year": 2019,
-        "text": "au Mexique, de violents combats à Culiacán opposent les forces de l'ordre et le Cartel de Sinaloa pour décider du sort d'un de ses chefs arrêtés.",
+        "year": 1685,
+        "text": "le roi de France Louis XIV signe l'édit de Fontainebleau (photo), révoquant l'édit de Nantes qui accordait la liberté de culte aux protestants.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "le Canada devient le deuxième pays à légaliser le cannabis.",
+        "year": 1622,
+        "text": "le traité de Montpellier est signé entre le roi de France Louis XIII et le duc Henri II de Rohan.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "En Russie et Ukraine, dans la péninsule de Crimée, à Kertch, au moins 21 personnes meurent lors d’une tuerie.",
+        "year": 614,
+        "text": "l'édit de Clotaire II est promulgué par le roi des Francs éponyme.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "le Tchad, le Chili, la Lituanie, le Nigeria et l’Arabie saoudite sont élus au Conseil de sécurité de l’ONU, l’Arabie saoudite refuse son siège.",
+        "year": 2020,
+        "text": "le Z Event 2020 récolte 5,7 millions d'euros de dons pour Amnesty International, battant le record mondial pour un marathon vidéoludique qu'il détenait lui-même l'année précédente.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1997,
-        "text": "Gina Stiebitz, actrice allemande.",
-        "kind": "birth"
-      },
-      {
-        "year": 1995,
-        "text": "Fanta Keita, handballeuse franco-sénégalaise.",
+        "year": 2005,
+        "text": "Anneth Delliecia, chanteuse indonésienne.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Vincent Poirier, basketteur français.",
+        "text": "Zarina Diyas (Зарина Диас), joueuse de tennis kazakhe.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Keerthi Suresh (en), actrice indienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1991,
-        "text": "Brenda Asnicar, actrice et chanteuse argentine.",
+        "year": 1993,
+        "text": "Bastien Pinault, basketteur français.",
         "kind": "birth"
       },
       {
         "year": 1991,
-        "text": "Agathe Auproux, journaliste et chroniqueuse de télévision française.",
+        "text": "Morgan Escaré, joueur de rugby à XIII français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Zohran Mamdani, politicien américain, maire de la ville de New York",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Tyler Posey, acteur, musicien et chanteur américain.",
         "kind": "birth"
       }
     ]
