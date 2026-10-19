@@ -1,67 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-18T09:49:45.585Z",
+  "fetchedAt": "2026-10-19T11:09:16.054Z",
   "facts": [
-    {
-      "emoji": "🎨",
-      "title": "La prescription muséale - SISM",
-      "body": "Dimanche 18 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "🎶",
-      "title": "Concert Gospel",
-      "body": "Dimanche 18 oct. à Dole · Eglise La Bonne Nouvelle.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "📍",
-      "title": "Thé dansant",
-      "body": "Dimanche 18 oct. à Saint-Aubin · Foyer rural.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "🥖",
-      "title": "Marche solidaire DAMPA'ROSE",
-      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "🥖",
-      "title": "Marche solidaire",
-      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "📍",
-      "title": "La fumigation",
-      "body": "Dimanche 18 oct. à Dole ·.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "🥖",
-      "title": "Marché local",
-      "body": "Dimanche 18 oct. à Damparis · Gymnase Auguste Delaune.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Marché artisanal et des producteurs à Choisey",
-      "body": "Dimanche 18 oct. à Choisey · Salle Jean-Claude Lab.",
-      "date": "2026-10-18"
-    },
-    {
-      "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "📍",
-      "title": "STAGE DE YOGA",
-      "body": "Lundi 19 oct. à Dole · La Visitation.",
-      "date": "2026-10-19"
-    },
     {
       "emoji": "🍷",
       "title": "Stages de cirque",
@@ -73,6 +13,24 @@
       "title": "Stage Danse Créations",
       "body": "Lundi 19 oct. à Dole · La Visitation.",
       "date": "2026-10-19"
+    },
+    {
+      "emoji": "📍",
+      "title": "STAGE DE YOGA",
+      "body": "Lundi 19 oct. à Dole · La Visitation.",
+      "date": "2026-10-19"
+    },
+    {
+      "emoji": "📍",
+      "title": "Détective du goût",
+      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-19"
+    },
+    {
+      "emoji": "📚",
+      "title": "Cahier dolois n°23",
+      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-20"
     },
     {
       "emoji": "🎬",
@@ -87,16 +45,58 @@
       "date": "2026-10-20"
     },
     {
-      "emoji": "📚",
-      "title": "Cahier dolois n°23",
-      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-20"
-    },
-    {
       "emoji": "🎨",
       "title": "Mardi, on joue au musée",
       "body": "Mardi 20 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-20"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée : L'Art et la couleur",
+      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "Apprenti·e·s pisteurs·euses",
+      "body": "Mercredi 21 oct. à Gevry ·.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
+      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Ma première visite au musée",
+      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "La science des couleurs 4-7 ans NOUVEAU !",
+      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Mon aprèm au musée",
+      "body": "Jeudi 22 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-22"
+    },
+    {
+      "emoji": "🎨",
+      "title": "L'Histoire de Dole en balade",
+      "body": "Vendredi 23 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-23"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier Communication Alternative Améliorée",
+      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-23"
     }
   ]
 }
