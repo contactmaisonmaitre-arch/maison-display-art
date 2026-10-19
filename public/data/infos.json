@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-18T08:19:59.758Z",
+  "fetchedAt": "2026-10-19T09:18:09.367Z",
   "ephemerides": {
-    "date": "2026-10-18",
+    "date": "2026-10-19",
     "events": [
       {
-        "year": 1922,
-        "text": "fondation de la BBC, plus ancien radiodiffuseur national du monde.",
+        "year": 1987,
+        "text": "krach d'octobre 1987.",
         "kind": "event"
       },
       {
-        "year": 1867,
-        "text": "les États-Unis achètent l'Alaska à l'Empire russe.",
+        "year": 1974,
+        "text": "Niue prend son indépendance vis-à-vis de la Nouvelle-Zélande et en devient un État associé.",
         "kind": "event"
       },
       {
-        "year": 1685,
-        "text": "le roi de France Louis XIV signe l'édit de Fontainebleau (photo), révoquant l'édit de Nantes qui accordait la liberté de culte aux protestants.",
+        "year": 1921,
+        "text": "nuit sanglante au Portugal.",
         "kind": "event"
       },
       {
-        "year": 1622,
-        "text": "le traité de Montpellier est signé entre le roi de France Louis XIII et le duc Henri II de Rohan.",
+        "year": 1783,
+        "text": "premier vol humain en montgolfière à la folie Titon, à Paris.",
         "kind": "event"
       },
       {
-        "year": 614,
-        "text": "l'édit de Clotaire II est promulgué par le roi des Francs éponyme.",
+        "year": 2025,
+        "text": "en France, à Paris, plusieurs joyaux de la Couronne de France sont volés au musée du Louvre.",
         "kind": "event"
       },
       {
-        "year": 2020,
-        "text": "le Z Event 2020 récolte 5,7 millions d'euros de dons pour Amnesty International, battant le record mondial pour un marathon vidéoludique qu'il détenait lui-même l'année précédente.",
+        "year": 2017,
+        "text": "découverte de 1I/ʻOumuamua, le tout premier astéroïde détecté ayant une origine extrasolaire confirmée.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2005,
-        "text": "Anneth Delliecia, chanteuse indonésienne.",
+        "year": 1995,
+        "text": "Pascaline Adanhouegbe, athlète béninoise.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Zarina Diyas (Зарина Диас), joueuse de tennis kazakhe.",
+        "year": 1986,
+        "text": "Alexis Contin, patineur de vitesse français.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Bastien Pinault, basketteur français.",
+        "year": 1986,
+        "text": "Mourad El Mabrouk, basketteur tunisien.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Morgan Escaré, joueur de rugby à XIII français.",
+        "year": 1985,
+        "text": "Maxime Desbiens-Tremblay, acteur québécois.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Zohran Mamdani, politicien américain, maire de la ville de New York",
+        "year": 1984,
+        "text": "Jérémy Chatelain, chanteur français.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Tyler Posey, acteur, musicien et chanteur américain.",
+        "year": 1984,
+        "text": "Joshua Aubry « Josh » Tomlin, joueur de baseball américain.",
         "kind": "birth"
       }
     ]
