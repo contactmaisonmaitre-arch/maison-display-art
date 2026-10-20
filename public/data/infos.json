@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-19T09:18:09.367Z",
+  "fetchedAt": "2026-10-20T08:52:27.564Z",
   "ephemerides": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "events": [
       {
-        "year": 1987,
-        "text": "krach d'octobre 1987.",
+        "year": 2021,
+        "text": "le prix Sakharov est attribué à l’opposant russe Alexeï Navalny.",
         "kind": "event"
       },
       {
-        "year": 1974,
-        "text": "Niue prend son indépendance vis-à-vis de la Nouvelle-Zélande et en devient un État associé.",
+        "year": 2020,
+        "text": "la sonde OSIRIS-REx commence à prélever le régolithe de l'astéroïde Bénou.",
         "kind": "event"
       },
       {
-        "year": 1921,
-        "text": "nuit sanglante au Portugal.",
+        "year": 2019,
+        "text": "clôture du XIe Festival Lumière, à Lyon, une ville des frères Lumière, de Bertrand Tavernier et Thierry Frémaux, festival ouvert cette année le 12 octobre.",
         "kind": "event"
       },
       {
-        "year": 1783,
-        "text": "premier vol humain en montgolfière à la folie Titon, à Paris.",
+        "year": 2018,
+        "text": "les agences spatiales européenne et japonaise lancent la mission d’exploration de Mercure, BepiColombo.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "en France, à Paris, plusieurs joyaux de la Couronne de France sont volés au musée du Louvre.",
+        "year": 1996,
+        "text": "marche blanche en Belgique, à la suite du scandale Dutroux.",
         "kind": "event"
       },
       {
-        "year": 2017,
-        "text": "découverte de 1I/ʻOumuamua, le tout premier astéroïde détecté ayant une origine extrasolaire confirmée.",
+        "year": 1973,
+        "text": "ouverture de l'opéra de Sydney, en Australie.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1995,
-        "text": "Pascaline Adanhouegbe, athlète béninoise.",
+        "year": 1994,
+        "text": "Andries Malan, joueur sud-africain de badminton.",
         "kind": "birth"
       },
       {
-        "year": 1986,
-        "text": "Alexis Contin, patineur de vitesse français.",
+        "year": 1992,
+        "text": "Rodney Hood, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1986,
-        "text": "Mourad El Mabrouk, basketteur tunisien.",
+        "year": 1992,
+        "text": "Klemen Prepelič, basketteur slovène.",
         "kind": "birth"
       },
       {
-        "year": 1985,
-        "text": "Maxime Desbiens-Tremblay, acteur québécois.",
+        "year": 1992,
+        "text": "Mathieu Wojciechowski, basketteur franco-polonais.",
         "kind": "birth"
       },
       {
-        "year": 1984,
-        "text": "Jérémy Chatelain, chanteur français.",
+        "year": 1989,
+        "text": "Yanina Wickmayer, joueuse de tennis belge.",
         "kind": "birth"
       },
       {
-        "year": 1984,
-        "text": "Joshua Aubry « Josh » Tomlin, joueur de baseball américain.",
+        "year": 1989,
+        "text": "Jess Glynne, chanteuse et auteure-compositrice anglaise",
         "kind": "birth"
       }
     ]
