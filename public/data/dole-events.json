@@ -1,37 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-19T11:09:16.054Z",
+  "fetchedAt": "2026-10-20T10:21:38.228Z",
   "facts": [
-    {
-      "emoji": "🍷",
-      "title": "Stages de cirque",
-      "body": "Lundi 19 oct. à Dole · L'Atribudu Quoi, 24 place Barberousse.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Stage Danse Créations",
-      "body": "Lundi 19 oct. à Dole · La Visitation.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "📍",
-      "title": "STAGE DE YOGA",
-      "body": "Lundi 19 oct. à Dole · La Visitation.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "📍",
-      "title": "Détective du goût",
-      "body": "Lundi 19 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-19"
-    },
-    {
-      "emoji": "📚",
-      "title": "Cahier dolois n°23",
-      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-20"
-    },
     {
       "emoji": "🎬",
       "title": "Stage cinéma halloween !",
@@ -39,9 +9,9 @@
       "date": "2026-10-20"
     },
     {
-      "emoji": "📍",
-      "title": "Les rendez-vous métiers de la Sécurité",
-      "body": "Mardi 20 oct. à Dole · Info Jeunesse Jura Dole.",
+      "emoji": "📚",
+      "title": "Cahier dolois n°23",
+      "body": "Mardi 20 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
       "date": "2026-10-20"
     },
     {
@@ -51,15 +21,21 @@
       "date": "2026-10-20"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite guidée : L'Art et la couleur",
-      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-21"
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de la Sécurité",
+      "body": "Mardi 20 oct. à Dole · Info Jeunesse Jura Dole.",
+      "date": "2026-10-20"
     },
     {
       "emoji": "📍",
-      "title": "Apprenti·e·s pisteurs·euses",
-      "body": "Mercredi 21 oct. à Gevry ·.",
+      "title": "La science des couleurs 4-7 ans NOUVEAU !",
+      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée : L'Art et la couleur",
+      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-21"
     },
     {
@@ -76,8 +52,8 @@
     },
     {
       "emoji": "📍",
-      "title": "La science des couleurs 4-7 ans NOUVEAU !",
-      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "title": "Apprenti·e·s pisteurs·euses",
+      "body": "Mercredi 21 oct. à Gevry ·.",
       "date": "2026-10-21"
     },
     {
@@ -87,16 +63,40 @@
       "date": "2026-10-22"
     },
     {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier Communication Alternative Améliorée",
+      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-23"
+    },
+    {
+      "emoji": "📍",
+      "title": "Bourse aux Vélos et petit matériel",
+      "body": "Vendredi 23 oct. à Dole · Gymnase Lachiche (Ledoux).",
+      "date": "2026-10-23"
+    },
+    {
       "emoji": "🎨",
       "title": "L'Histoire de Dole en balade",
       "body": "Vendredi 23 oct. à Dole · Musée des Beaux-Arts.",
       "date": "2026-10-23"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Communication Alternative Améliorée",
-      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "Les rendez-vous métiers de l'International & Tourisme",
+      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
       "date": "2026-10-23"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée Jeux",
+      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📚",
+      "title": "L'Hôtel-Dieu dans tous ses états",
+      "body": "Samedi 24 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-24"
     }
   ]
 }
