@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-20T08:52:27.564Z",
+  "fetchedAt": "2026-10-21T08:52:47.426Z",
   "ephemerides": {
-    "date": "2026-10-20",
+    "date": "2026-10-21",
     "events": [
       {
-        "year": 2021,
-        "text": "le prix Sakharov est attribué à l’opposant russe Alexeï Navalny.",
+        "year": 1986,
+        "text": "les Îles Marshall accèdent à l'indépendance vis-à-vis des États-Unis.",
         "kind": "event"
       },
       {
-        "year": 2020,
-        "text": "la sonde OSIRIS-REx commence à prélever le régolithe de l'astéroïde Bénou.",
+        "year": 2025,
+        "text": "en Pologne, l'Américain Eric Lu gagne le Concours international de piano Frédéric-Chopin à la Philharmonie nationale de Varsovie.",
         "kind": "event"
       },
       {
-        "year": 2019,
-        "text": "clôture du XIe Festival Lumière, à Lyon, une ville des frères Lumière, de Bertrand Tavernier et Thierry Frémaux, festival ouvert cette année le 12 octobre.",
+        "year": 2024,
+        "text": "ouverture à Cali en Colombie, de la COP 16 (logo).",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "les agences spatiales européenne et japonaise lancent la mission d’exploration de Mercure, BepiColombo.",
+        "year": 2012,
+        "text": "canonisation de Kateri Tekakwitha par Benoit XVI.",
         "kind": "event"
       },
       {
-        "year": 1996,
-        "text": "marche blanche en Belgique, à la suite du scandale Dutroux.",
+        "year": 1986,
+        "text": "les Îles Marshall accèdent à l'indépendance.",
         "kind": "event"
       },
       {
-        "year": 1973,
-        "text": "ouverture de l'opéra de Sydney, en Australie.",
+        "year": 1986,
+        "text": "l'entrée en vigueur de la Charte africaine des droits de l'homme et des peuples.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1994,
-        "text": "Andries Malan, joueur sud-africain de badminton.",
+        "year": 1999,
+        "text": "Camille Felton, actrice québécoise.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Feriel Adjabi, escrimeuse algérienne.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "Rodney Hood, basketteur américain.",
+        "text": "CutiePieMarzia (Marzia Bisognin dite), vidéaste web italienne.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Klemen Prepelič, basketteur slovène.",
+        "year": 1991,
+        "text": "Sébastien Vahaamahina, joueur de rugby français.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Mathieu Wojciechowski, basketteur franco-polonais.",
+        "year": 1990,
+        "text": "Ricky Rubio (Ricard Rubio Vives dit), basketteur espagnol.",
         "kind": "birth"
       },
       {
-        "year": 1989,
-        "text": "Yanina Wickmayer, joueuse de tennis belge.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Jess Glynne, chanteuse et auteure-compositrice anglaise",
+        "year": 1990,
+        "text": "Maxime Vachier-Lagrave, joueur d'échecs français.",
         "kind": "birth"
       }
     ]
