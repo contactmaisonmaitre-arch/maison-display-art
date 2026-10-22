@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-21T08:52:47.426Z",
+  "fetchedAt": "2026-10-22T08:55:09.244Z",
   "ephemerides": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "events": [
       {
-        "year": 1986,
-        "text": "les Îles Marshall accèdent à l'indépendance vis-à-vis des États-Unis.",
+        "year": 1964,
+        "text": "Jean-Paul Sartre refuse le prix Nobel de littérature.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "en Pologne, l'Américain Eric Lu gagne le Concours international de piano Frédéric-Chopin à la Philharmonie nationale de Varsovie.",
+        "year": 1953,
+        "text": "indépendance du royaume du Laos vis-à-vis de la France après l'abolition du protectorat.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "ouverture à Cali en Colombie, de la COP 16 (logo).",
+        "year": 1907,
+        "text": "début de la panique des banquiers aux États-Unis.",
         "kind": "event"
       },
       {
-        "year": 2012,
-        "text": "canonisation de Kateri Tekakwitha par Benoit XVI.",
+        "year": 1797,
+        "text": "André-Jacques Garnerin réalise le premier saut en parachute non rigide au-dessus de l'actuel parc Monceau.",
         "kind": "event"
       },
       {
-        "year": 1986,
-        "text": "les Îles Marshall accèdent à l'indépendance.",
+        "year": 451,
+        "text": "le concile de Chalcédoine (fresque) définit les concepts de dyophysisme et d'union hypostatique.",
         "kind": "event"
       },
       {
-        "year": 1986,
-        "text": "l'entrée en vigueur de la Charte africaine des droits de l'homme et des peuples.",
+        "year": 2019,
+        "text": "couronnement de Naruhito, 126 e empereur du Japon.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1999,
-        "text": "Camille Felton, actrice québécoise.",
+        "year": 2006,
+        "text": "Sheika Scott, footballeuse internationale costaricienne.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Feriel Adjabi, escrimeuse algérienne.",
+        "year": 1996,
+        "text": "B.I (Kim Han-bin dit), rappeur sud-coréen.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "CutiePieMarzia (Marzia Bisognin dite), vidéaste web italienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1991,
-        "text": "Sébastien Vahaamahina, joueur de rugby français.",
+        "year": 1994,
+        "text": "David Shongo, musicien congolais.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Ricky Rubio (Ricard Rubio Vives dit), basketteur espagnol.",
+        "text": "Khathia Bâ, kayakiste sénégalaise.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Maxime Vachier-Lagrave, joueur d'échecs français.",
+        "text": "David Savard, hockeyeur sur glace canadien.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "Sho Yano, enfant prodige américain.",
         "kind": "birth"
       }
     ]
