@@ -1,43 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-21T10:30:25.400Z",
+  "fetchedAt": "2026-10-22T10:31:49.339Z",
   "facts": [
-    {
-      "emoji": "📍",
-      "title": "Apprenti·e·s pisteurs·euses",
-      "body": "Mercredi 21 oct. à Gevry ·.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Ma première visite au musée",
-      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "🎨",
-      "title": "EXPOSITION-VENTE DE SOIERIES LYONNAISES",
-      "body": "Mercredi 21 oct. à Dole · Chapelle des Carmélites.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Visite guidée : L'Art et la couleur",
-      "body": "Mercredi 21 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Animations enfants",
-      "body": "Mercredi 21 oct. à Dole · Espace Pierre-Talagrand.",
-      "date": "2026-10-21"
-    },
-    {
-      "emoji": "📍",
-      "title": "La science des couleurs 4-7 ans NOUVEAU !",
-      "body": "Mercredi 21 oct. à Dole · Maison Natale de Louis Pasteur.",
-      "date": "2026-10-21"
-    },
     {
       "emoji": "🎨",
       "title": "Mon aprèm au musée",
@@ -45,15 +9,9 @@
       "date": "2026-10-22"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Communication Alternative Améliorée",
-      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-23"
-    },
-    {
       "emoji": "📍",
-      "title": "Les rendez-vous métiers de l'International & Tourisme",
-      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
+      "title": "Bourse aux Vélos et petit matériel",
+      "body": "Vendredi 23 oct. à Dole · Gymnase Lachiche (Ledoux).",
       "date": "2026-10-23"
     },
     {
@@ -64,21 +22,15 @@
     },
     {
       "emoji": "📍",
-      "title": "Bourse aux Vélos et petit matériel",
-      "body": "Vendredi 23 oct. à Dole · Gymnase Lachiche (Ledoux).",
+      "title": "Les rendez-vous métiers de l'International & Tourisme",
+      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
       "date": "2026-10-23"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Atelier linogravure",
-      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "🎉",
-      "title": "Fête de la Forêt de Chaux",
-      "body": "Samedi 24 oct. à Grand Dole ·.",
-      "date": "2026-10-24"
+      "title": "Atelier Communication Alternative Améliorée",
+      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-23"
     },
     {
       "emoji": "🏆",
@@ -87,15 +39,63 @@
       "date": "2026-10-24"
     },
     {
-      "emoji": "🎉",
-      "title": "FÊTE D'AUTOMNE À ARCHELANGE",
-      "body": "Samedi 24 oct. à Archelange · Centre-Ville.",
+      "emoji": "📚",
+      "title": "L'Hôtel-Dieu dans tous ses états",
+      "body": "Samedi 24 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier linogravure",
+      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "☕",
+      "title": "Café Diabète",
+      "body": "Samedi 24 oct. à Choisey · Mairie.",
       "date": "2026-10-24"
     },
     {
       "emoji": "📚",
       "title": "Escape Game : Papyrus et la Potion des Pluies Oubliées",
       "body": "Samedi 24 oct. à Tavaux · Médiathèque de Tavaux.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "l’EXAMA’M",
+      "body": "Samedi 24 oct. à Dole · Salle Georges Brassens, 26A rue du Maréchal Leclerc.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "Soirée Jeux",
+      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "Rendez-vous des créateurs",
+      "body": "Samedi 24 oct. à Tavaux · Gymnase Pierre Mendes.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "Salon d'Epanouissement Personnel",
+      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "☕",
+      "title": "CAFÉ DIABÈTE",
+      "body": "Samedi 24 oct. à Choisey · Mairie.",
+      "date": "2026-10-24"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
+      "body": "Samedi 24 oct. à Dole · Maison de la Parentalité.",
       "date": "2026-10-24"
     }
   ]
