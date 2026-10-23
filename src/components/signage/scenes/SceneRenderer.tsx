@@ -20,6 +20,9 @@ import { HoroscopeScene } from "./HoroscopeScene";
 import { EphemerideScene } from "./EphemerideScene";
 import { ChatPercheMaisonScene, ChatPercheProduitsScene } from "./ChatPercheMaisonScene";
 import { AnnonceScene } from "./AnnonceScene";
+import { ChemineeScene } from "./ChemineeScene";
+import { VideoScene } from "./VideoScene";
+import { ClubScene } from "./ClubScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -91,6 +94,12 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <ChatPercheMaisonScene />;
     case "chatperche-produits":
       return <ChatPercheProduitsScene />;
+    case "cheminee":
+      return <ChemineeScene active={active} src={scene.src} poster={scene.poster} />;
+    case "video":
+      return <VideoScene active={active} src={scene.src} poster={scene.poster} />;
+    case "club":
+      return <ClubScene />;
     default:
       return null;
   }

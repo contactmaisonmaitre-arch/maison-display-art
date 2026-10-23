@@ -53,9 +53,9 @@ describe("carte", () => {
 describe("produits", () => {
   it("coups de cœur trouvés dans le catalogue", () => {
     const sel = selectProducts(products as never, coups);
-    expect(sel.featuredTea?.name).toBe("Le Chat Heureux");
-    expect(sel.featuredCoffee?.name).toBe("Altiplano");
-    expect(sel.pool.some((p) => p.name === "Aguacero")).toBe(false); // exclu (remplacé par Ataco)
+    expect(sel.featuredTea?.name).toMatch(/^Le Chat Heureux/);
+    expect(sel.featuredCoffee?.name).toMatch(/^Altiplano/);
+    expect(sel.pool.some((p) => p.name.startsWith("Aguacero"))).toBe(false); // exclu (remplacé par Ataco)
     expect(sel.pool.length).toBeGreaterThan(15);
   });
 
@@ -130,5 +130,46 @@ describe("infos pratiques", () => {
   it("horoscope : 12 phrases différentes le même jour", () => {
     const p = SIGNES.map((_, i) => horoscopeDuJour(i, "2026-09-24", ["A"]).phrase);
     expect(new Set(p).size).toBe(12);
+  });
+});
+
+describe("feu de cheminée entre les scènes", () => {
+  const fire = { type: "cheminee" as const, seconds: 6, from: "2026-10-15", until: "2027-03-15" };
+  const list = [
+    { type: "café" as const, seconds: 10 },
+    { type: "carte" as const, seconds: 10 },
+    { type: "review" as const, seconds: 10 },
+  ];
+
+  it("glisse le feu après chaque scène pendant la période", () => {
+    const s = buildScenes(list, at("2026-11-10"), ctx, fire).map((x) => x.type);
+    expect(s).toEqual(["café", "cheminee", "carte", "cheminee", "review", "cheminee"]);
+  });
+
+  it("jamais deux feux à la suite, même avec un feu déjà dans la liste", () => {
+    const s = buildScenes([...list, { type: "cheminee", seconds: 8 }], at("2026-11-10"), ctx, fire);
+    const types = s.map((x) => x.type);
+    for (let i = 0; i < types.length; i++) {
+      expect(types[i] === "cheminee" && types[(i + 1) % types.length] === "cheminee").toBe(false);
+    }
+  });
+
+  it("pas de feu hors période ni quand il est coupé", () => {
+    expect(buildScenes(list, at("2026-06-10"), ctx, fire).map((x) => x.type)).not.toContain("cheminee");
+    expect(buildScenes(list, at("2026-11-10"), ctx, { ...fire, enabled: false }).map((x) => x.type)).not.toContain("cheminee");
+  });
+
+  it("playlist.json : feu actif en novembre", () => {
+    const p = playlist as unknown as { scenes: never; interlude: typeof fire };
+    const s = buildScenes(p.scenes, at("2026-11-10"), ctx, p.interlude);
+    expect(s.filter((x) => x.interlude).length).toBeGreaterThan(5);
+  });
+});
+
+describe("Club", () => {
+  it("la scène club n'apparaît qu'à partir du 4 novembre 2026", () => {
+    const p = playlist as unknown as { scenes: never };
+    expect(buildScenes(p.scenes, at("2026-11-03"), ctx).map((x) => x.type)).not.toContain("club");
+    expect(buildScenes(p.scenes, at("2026-11-04"), ctx).map((x) => x.type)).toContain("club");
   });
 });

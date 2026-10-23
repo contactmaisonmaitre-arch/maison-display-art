@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import type { PlaylistEntry, Scene } from "@/types/signage";
-import { DEFAULT_PLAYLIST, buildScenes } from "@/data/scenes";
+import type { InterludeEntry, PlaylistEntry, Scene } from "@/types/signage";
+import { DEFAULT_INTERLUDE, DEFAULT_PLAYLIST, buildScenes } from "@/data/scenes";
 import { useRemoteJson } from "./useRemoteJson";
 import { useToday } from "./useToday";
 import { useAnnonces } from "./useAnnonces";
@@ -9,6 +9,8 @@ import { useInfos } from "./useInfos";
 
 interface PlaylistJson {
   scenes: PlaylistEntry[];
+  /** Feu de cheminée entre les scènes. Absent = interlude par défaut. */
+  interlude?: InterludeEntry | null;
 }
 
 /**
@@ -27,9 +29,10 @@ export const useScenes = (): Scene[] => {
   const todayIso = today.toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
   const ephemeride = infos ? infos.ephemerides?.date === todayIso && (infos.ephemerides.events.length > 0) : false;
   const playlist = json?.scenes?.length ? json.scenes : DEFAULT_PLAYLIST;
-  const key = JSON.stringify(playlist);
+  const interlude = json && "interlude" in json ? json.interlude ?? null : DEFAULT_INTERLUDE;
+  const key = JSON.stringify([playlist, interlude]);
   return useMemo(
-    () => buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }),
+    () => buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }, interlude),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [key, today, annonces.length, eph, ephemeride],
   );

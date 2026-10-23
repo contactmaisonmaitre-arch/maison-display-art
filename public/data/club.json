@@ -1,0 +1,29 @@
+{
+  "_aide": "Scène « club » (programme de fidélité). Tout est modifiable ici sans coder. tiers = les niveaux, de gauche à droite : name (nom sur la carte), condition (qui y a droit), gain (ligne en gros), extra (avantage en plus, facultatif), finish (rendu de la carte : creme, or, platine, bronze, noir). Le nombre de niveaux est libre (2 à 4).",
+  "eyebrow": "Nouveau · Programme de fidélité",
+  "title": "Maison Maitre,",
+  "titleItalic": "le Club",
+  "tiers": [
+    {
+      "name": "Club",
+      "condition": "Pour tous · inscription gratuite en caisse",
+      "gain": "80 € d'achats = 5 € offerts",
+      "finish": "creme"
+    },
+    {
+      "name": "Gold",
+      "condition": "Dès 400 € d'achats sur 12 mois",
+      "gain": "100 € d'achats = 8 € offerts",
+      "finish": "or"
+    },
+    {
+      "name": "Platine",
+      "condition": "Dès 1 000 € d'achats sur 12 mois",
+      "gain": "100 € d'achats = 10 € offerts",
+      "extra": "+ un cadeau Maison Maitre au choix",
+      "finish": "platine"
+    }
+  ],
+  "footer": "Votre cagnotte se dépense sur tout, même au salon de thé. Elle n'expire jamais.",
+  "cta": "Demandez votre carte en caisse"
+}

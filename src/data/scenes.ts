@@ -1,4 +1,4 @@
-import type { PlaylistEntry, Scene } from "@/types/signage";
+import type { InterludeEntry, PlaylistEntry, Scene } from "@/types/signage";
 import { COFFEE_ANECDOTES } from "@/data/anecdotes";
 import { GOOD_NEWS_OF_THE_DAY } from "@/data/good-news";
 
@@ -38,7 +38,20 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "ephemeride", seconds: 18 },
   { type: "anecdote", seconds: 14 },
   { type: "annonce", seconds: 14 },
+  { type: "club", seconds: 20, from: "2026-11-04" },
 ];
+
+/** Vidéo du feu de cheminée (servie par le site publié, pas par GitHub). */
+export const CHEMINEE_SRC = "/videos/cheminee.mp4";
+export const CHEMINEE_POSTER = "/videos/cheminee.webp";
+
+/** Interlude par défaut : le feu entre chaque scène, l'automne et l'hiver. */
+export const DEFAULT_INTERLUDE: InterludeEntry = {
+  type: "cheminee",
+  seconds: 6,
+  from: "2026-10-15",
+  until: "2027-03-15",
+};
 
 /** "2026-09-27" → comparable avec la date du jour (heure de Paris). */
 const todayIso = (now: Date) =>
@@ -76,6 +89,7 @@ export const buildScenes = (
   playlist: PlaylistEntry[],
   now: Date,
   ctx: SceneContext = { annonceCount: 0, ephemeres: true },
+  interlude: InterludeEntry | null = null,
 ): Scene[] => {
   const seen: Partial<Record<string, number>> = {};
   const scenes = playlist
@@ -83,6 +97,8 @@ export const buildScenes = (
     .map((e): Scene => {
       const n = (seen[e.type] = (seen[e.type] ?? -1) + 1);
       const scene: Scene = { type: e.type, duration: Math.max(4, e.seconds) * 1000 };
+      if (e.src) scene.src = e.src;
+      if (e.poster) scene.poster = e.poster;
       switch (e.type) {
         case "instagram":
           scene.reelIndex = n;
@@ -108,5 +124,34 @@ export const buildScenes = (
       }
       return scene;
     });
-  return scenes.length > 0 ? scenes : [{ type: "café", duration: 15000 }];
+  const base = scenes.length > 0 ? scenes : [{ type: "café", duration: 15000 } as Scene];
+  return insertInterludes(base, interlude, now, ctx);
+};
+
+/**
+ * Glisse l'interlude (feu de cheminée) après chaque scène. Jamais deux
+ * interludes à la suite, ni à côté d'une scène du même type déjà présente
+ * dans la liste (la boucle repart au début : on regarde aussi la première).
+ */
+export const insertInterludes = (
+  scenes: Scene[],
+  interlude: InterludeEntry | null | undefined,
+  now: Date,
+  ctx: SceneContext,
+): Scene[] => {
+  if (!interlude || !isEntryActive(interlude, now, ctx) || scenes.length < 2) return scenes;
+  const make = (): Scene => ({
+    type: interlude.type,
+    duration: Math.max(3, interlude.seconds) * 1000,
+    interlude: true,
+    ...(interlude.src ? { src: interlude.src } : {}),
+    ...(interlude.poster ? { poster: interlude.poster } : {}),
+  });
+  const out: Scene[] = [];
+  scenes.forEach((s, i) => {
+    out.push(s);
+    const next = scenes[(i + 1) % scenes.length];
+    if (s.type !== interlude.type && next.type !== interlude.type) out.push(make());
+  });
+  return out;
 };

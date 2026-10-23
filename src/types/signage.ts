@@ -41,7 +41,10 @@ export type SceneType =
   | "dole-a-pied"
   | "horoscope"
   | "ephemeride"
-  | "annonce";
+  | "annonce"
+  | "cheminee"
+  | "video"
+  | "club";
 
 export interface Scene {
   type: SceneType;
@@ -54,6 +57,12 @@ export interface Scene {
   annonceIndex?: number;
   /** Rang de passage pour la scène "vedette" (boisson mise en avant). */
   vedetteIndex?: number;
+  /** Vidéo à jouer (scènes "video" et "cheminee"). */
+  src?: string;
+  /** Image affichée pendant le chargement ou si la vidéo ne passe pas. */
+  poster?: string;
+  /** Scène insérée automatiquement entre deux scènes (feu de cheminée). */
+  interlude?: boolean;
   /** Page à afficher pour les scènes paginées (horoscope : 6 signes par page). */
   page?: number;
 }
@@ -70,6 +79,18 @@ export interface PlaylistEntry {
   from?: string;
   until?: string;
   days?: number[];
+  enabled?: boolean;
+  /** Scènes "video" / "cheminee" : fichier vidéo (/videos/… ou URL). */
+  src?: string;
+  poster?: string;
+}
+
+/**
+ * Interlude (public/data/playlist.json → "interlude") : une scène, en
+ * général le feu de cheminée, glissée automatiquement entre chaque scène
+ * pendant la période from → until.
+ */
+export interface InterludeEntry extends PlaylistEntry {
   enabled?: boolean;
 }
 

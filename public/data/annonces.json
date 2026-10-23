@@ -1,4 +1,15 @@
 {
   "_aide": "Annonces temporaires (scène « annonce »). Chaque annonce n'apparaît qu'entre from et until (AAAA-MM-JJ, inclus). Plusieurs annonces actives = elles tournent. Champs possibles : eyebrow, title, titleItalic, subtitle, body, badge, footer, image (URL ou chemin /scenes/…), from, until.",
-  "annonces": []
+  "annonces": [
+    {
+      "eyebrow": "Nouveau",
+      "title": "Maison Maitre,",
+      "titleItalic": "le Club",
+      "subtitle": "Votre fidélité récompensée",
+      "body": "Une cagnotte qui grandit à chaque passage, à dépenser sur tout, même au salon de thé.",
+      "badge": "Demandez votre carte en caisse",
+      "from": "2026-11-04",
+      "until": "2026-11-30"
+    }
+  ]
 }

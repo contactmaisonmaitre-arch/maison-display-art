@@ -82,6 +82,27 @@ prolonge tout seul, ajouter aussi un secret `GH_PAT` (jeton GitHub avec droit
 « Secrets: write » sur ce repo). Une publication avec `#notv` dans la légende
 n'apparaît pas sur la TV. Sans jeton : les 25 photos choisies à la main.
 
+## Vidéos, feu de cheminée et Club (oct. 2026)
+
+- **Test de la télé** : ouvrir `maison-display-art.lovable.app/test-video.html`
+  sur la TV. Pastilles vertes/rouges pour chaque format, verdict en haut au
+  bout de 15 s (vidéo depuis le site vs depuis GitHub, photos, GIF).
+- **Les vidéos sont servies par le site publié** (`public/videos/`), pas
+  par GitHub : raw.githubusercontent.com ne les sert pas comme de vraies
+  vidéos. Ajouter ou changer une vidéo = republier sur Lovable.
+- **Préparer une vidéo** : `scripts/convert-video.sh <fichier> <nom>`
+  → MP4 H.264 1080p sans son + image fixe .webp dans `public/videos/`.
+- **Scène vidéo** : dans `playlist.json`,
+  `{ "type": "video", "seconds": 15, "src": "/videos/nom.mp4", "poster": "/videos/nom.webp" }`.
+  Si la vidéo ne démarre pas en 4 s, l'image fixe reste : jamais d'écran noir.
+- **Feu de cheminée** : `playlist.json` → `interlude` (du 15/10 au 15/03,
+  6 s, entre chaque scène). `"enabled": false` pour le couper. La vidéo est
+  `public/videos/cheminee.mp4` ; sans elle, des braises en CSS s'affichent.
+- **Club** : scène `club` à partir du 4/11/2026, textes et niveaux dans
+  `public/data/club.json` (noms, seuils, rendu de carte : creme, or,
+  platine, bronze, noir). Annonce « le Club » du 4 au 30/11 dans `annonces.json`.
+- Aperçus : `?scene=club&pause`, `?scene=cheminee&pause`, `?scene=video&pause`.
+
 ## Dev
 
 ```bash

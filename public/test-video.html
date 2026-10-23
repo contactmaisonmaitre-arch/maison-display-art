@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test vidéo TV</title>
+<style>
+  :root { --bg:#46121F; --ink:#F4F0E7; --gold:#D9B45C; --ok:#3FB96B; --ko:#E5484D; --wait:#C9A227; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.4 system-ui, sans-serif; padding:24px 32px; }
+  h1 { margin:0 0 6px; font-size:34px; color:var(--gold); }
+  #info { font-size:15px; opacity:.85; margin-bottom:18px; white-space:pre-wrap; }
+  #verdict { font-size:22px; margin:10px 0 18px; padding:12px 16px; background:rgba(0,0,0,.25); border-left:4px solid var(--gold); }
+  .grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
+  .t { background:rgba(0,0,0,.28); border-radius:10px; overflow:hidden; }
+  .m { aspect-ratio:16/9; background:#000; display:flex; align-items:center; justify-content:center; }
+  .m video, .m img { width:100%; height:100%; object-fit:cover; display:block; }
+  .l { padding:10px 12px; font-size:15px; }
+  .s { display:inline-block; padding:2px 10px; border-radius:20px; font-weight:700; color:#111; background:var(--wait); }
+  .s.ok { background:var(--ok); } .s.ko { background:var(--ko); color:#fff; }
+  .d { opacity:.7; font-size:13px; margin-top:4px; }
+</style>
+</head>
+<body>
+<h1>Test vidéo — écran TV Maison Maitre</h1>
+<div id="info"></div>
+<div id="verdict">Test en cours… attendre 15 secondes.</div>
+<div class="grid" id="grid"></div>
+
+<script>
+var RAW = "https://raw.githubusercontent.com/contactmaisonmaitre-arch/maison-display-art/main/public";
+var TESTS = [
+  { k:"video", label:"MP4 H.264 1080p (site)", src:"/videos/test/test-1080p.mp4" },
+  { k:"video", label:"MP4 H.264 540p (site)", src:"/reels-tv/DXjAgNRirlr.mp4" },
+  { k:"video", label:"WebM VP9 (site)", src:"/videos/test/test.webm" },
+  { k:"video", label:"MP4 depuis GitHub", src: RAW + "/reels-tv/DXjAgNRirlr.mp4" },
+  { k:"video", label:"Feu de cheminée", src:"/videos/cheminee.mp4" },
+  { k:"img", label:"GIF lourd (7 Mo)", src:"/reels-tv/DXPVGNDioOU.gif" },
+  { k:"img", label:"Photo WebP (site)", src:"/instagram/insta-01.webp" },
+  { k:"img", label:"Photo WebP depuis GitHub", src: RAW + "/instagram/insta-02.webp" }
+];
+
+function cp(t){ try { var v=document.createElement("video"); return v.canPlayType(t) || "non"; } catch(e){ return "erreur"; } }
+document.getElementById("info").textContent =
+  "Navigateur : " + navigator.userAgent +
+  "\nÉcran : " + screen.width + "×" + screen.height + " · fenêtre " + innerWidth + "×" + innerHeight + " · ratio " + (window.devicePixelRatio||1) +
+  "\nSait lire → H.264 : " + cp('video/mp4; codecs="avc1.640028"') +
+  " · HEVC : " + cp('video/mp4; codecs="hvc1.1.6.L120.90"') +
+  " · VP9 : " + cp('video/webm; codecs="vp9"') +
+  " · AV1 : " + cp('video/mp4; codecs="av01.0.08M.08"');
+
+var results = [];
+var grid = document.getElementById("grid");
+TESTS.forEach(function(t, i){
+  var box = document.createElement("div"); box.className="t";
+  var m = document.createElement("div"); m.className="m";
+  var l = document.createElement("div"); l.className="l";
+  var s = document.createElement("span"); s.className="s"; s.textContent="…";
+  var d = document.createElement("div"); d.className="d"; d.textContent="chargement";
+  l.appendChild(document.createTextNode(t.label + " ")); l.appendChild(s); l.appendChild(d);
+  box.appendChild(m); box.appendChild(l); grid.appendChild(box);
+  var t0 = Date.now(); var done = false;
+  function set(ok, msg){ if(done && ok!==true) return; done = ok===true || ok===false ? true : done;
+    s.className = "s " + (ok===true?"ok":ok===false?"ko":""); s.textContent = ok===true?"OK":ok===false?"NON":"…";
+    d.textContent = msg + " · " + ((Date.now()-t0)/1000).toFixed(1) + " s"; results[i] = { label:t.label, ok:ok }; }
+  if (t.k === "video") {
+    var v = document.createElement("video");
+    v.muted = true; v.defaultMuted = true; v.setAttribute("muted",""); v.setAttribute("playsinline","");
+    v.loop = true; v.autoplay = true; v.preload = "auto";
+    v.addEventListener("playing", function(){ set(true, "lecture OK"); });
+    v.addEventListener("error", function(){ var c = v.error ? v.error.code : "?"; set(false, "erreur code " + c + (c===4?" (format/serveur refusé)":c===3?" (décodage)":c===2?" (réseau)":"")); });
+    v.addEventListener("stalled", function(){ if(!done) d.textContent = "bloqué en chargement…"; });
+    v.src = t.src; m.appendChild(v);
+    var p = v.play(); if (p && p.catch) p.catch(function(e){ if(!done) d.textContent = "lecture auto refusée (" + e.name + "), on réessaie"; setTimeout(function(){ v.play().catch(function(){}); }, 1500); });
+    setTimeout(function(){ if(!done) set(false, v.readyState < 2 ? "rien reçu en 15 s" : "chargé mais ne démarre pas"); }, 15000);
+  } else {
+    var img = new Image();
+    img.onload = function(){ set(true, "affichée"); };
+    img.onerror = function(){ set(false, "ne charge pas"); };
+    img.src = t.src; m.appendChild(img);
+    setTimeout(function(){ if(!done) set(false, "trop lent (> 15 s)"); }, 15000);
+  }
+});
+
+setTimeout(function(){
+  var r = function(i){ return results[i] && results[i].ok; };
+  var msg;
+  if (r(0) || r(1)) {
+    msg = "✅ La télé sait lire les vidéos MP4 hébergées sur le site.";
+    if (r(3) === false) msg += " ❌ Mais PAS celles servies par GitHub : c'est ça qui bloquait — les vidéos doivent être servies par le site.";
+    if (r(4) === false) msg += " (Le feu de cheminée n'est pas encore en ligne.)";
+  } else {
+    msg = "❌ La télé ne lit pas la vidéo, même en MP4 simple : le navigateur de la télé est en cause, il faut un petit boîtier (Fire TV Stick + navigateur kiosque, ou mini-PC).";
+  }
+  if (r(7) === false || r(6) === false) msg += " Photos : " + (r(6) ? "OK depuis le site" : "KO depuis le site") + ", " + (r(7) ? "OK depuis GitHub" : "KO depuis GitHub") + ".";
+  document.getElementById("verdict").textContent = msg;
+}, 16000);
+</script>
+</body>
+</html>

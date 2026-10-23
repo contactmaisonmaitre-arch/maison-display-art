@@ -72,6 +72,8 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
 
   // On ne monte que les scènes nécessaires : active + suivante (préchauffe) + précédente (fade-out).
   const nextIndex = (index + 1) % SCENES.length;
+  // Pendant le feu de cheminée (interlude), le point de la scène d'avant reste allumé.
+  const litIndex = SCENES[index]?.interlude ? (index - 1 + SCENES.length) % SCENES.length : index;
   const mounted = new Set<number>([index, nextIndex]);
   if (previousIndex !== null && previousIndex < SCENES.length) mounted.add(previousIndex);
   const mountedList = Array.from(mounted).sort((a, b) => a - b);
@@ -106,7 +108,7 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
 
       {/* Pager dots — cliquables pour sauter à une scène */}
       <div className="absolute right-3 top-1/2 z-30 flex -translate-y-1/2 flex-col gap-2">
-        {SCENES.map((scene, i) => (
+        {SCENES.map((scene, i) => scene.interlude ? null : (
           <button
             key={i}
             type="button"
@@ -124,12 +126,12 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
               style={{
                 display: "block",
                 width: 6,
-                height: i === index ? 28 : 6,
+                height: i === litIndex ? 28 : 6,
                 background:
-                  i === index
+                  i === litIndex
                     ? "linear-gradient(180deg, hsl(var(--gold-lt)), hsl(var(--gold)))"
                     : "rgba(138,90,98,0.45)",
-                boxShadow: i === index ? "0 0 12px hsl(var(--gold) / 0.7)" : "none",
+                boxShadow: i === litIndex ? "0 0 12px hsl(var(--gold) / 0.7)" : "none",
               }}
             />
           </button>
