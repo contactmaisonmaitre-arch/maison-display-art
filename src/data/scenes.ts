@@ -28,7 +28,7 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "carte", seconds: 20 },
   { type: "chatperche-produits", seconds: 18, until: "2026-09-27" },
   { type: "review", seconds: 18 },
-  { type: "horoscope", seconds: 20 },
+  { type: "horoscope", seconds: 30 },
   { type: "instagram", seconds: 25 },
   { type: "dole", seconds: 15 },
   { type: "ephemeres", seconds: 16 },

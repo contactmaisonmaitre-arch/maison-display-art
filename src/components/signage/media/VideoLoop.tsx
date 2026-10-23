@@ -6,7 +6,7 @@ interface VideoLoopProps {
   poster?: string;
   /** La scène est à l'écran : on lit. Sinon on met en pause. */
   active: boolean;
-  /** Ce qu'on affiche à la place de la vidéo (par défaut : le poster). */
+  /** Affiché tant que la vidéo ne joue pas, sous l'image fixe. */
   fallback?: ReactNode;
   fit?: "cover" | "contain";
 }
@@ -78,21 +78,23 @@ export const VideoLoop = ({ src, poster, active, fallback, fit = "cover" }: Vide
 
   const showFallback = state !== "playing";
 
+  // L'image fixe reste toujours sous la vidéo : certaines TV disent « lecture »
+  // mais n'affichent rien (vidéo transparente) — on voit alors au moins l'image.
   return (
     <div className="absolute inset-0 overflow-hidden" style={{ background: "#120507" }}>
-      {showFallback &&
-        (fallback ??
-          (poster ? (
-            <img
-              src={poster}
-              alt=""
-              className="absolute inset-0 h-full w-full"
-              style={{ objectFit: fit }}
-              onError={(e) => {
-                (e.currentTarget as HTMLImageElement).style.display = "none";
-              }}
-            />
-          ) : null))}
+      {/* Secours (ex. braises) sous l'image fixe : visible seulement si elle manque. */}
+      {showFallback && fallback}
+      {poster && (
+        <img
+          src={poster}
+          alt=""
+          className="absolute inset-0 h-full w-full"
+          style={{ objectFit: fit }}
+          onError={(e) => {
+            (e.currentTarget as HTMLImageElement).style.display = "none";
+          }}
+        />
+      )}
       <video
         ref={ref}
         muted
@@ -108,10 +110,11 @@ export const VideoLoop = ({ src, poster, active, fallback, fit = "cover" }: Vide
           void v.play().catch(() => undefined);
         }}
         className="absolute inset-0 h-full w-full"
+        // visibility plutôt qu'opacity : une opacité sur <video> peut la
+        // rendre invisible sur les TV qui la dessinent en matériel.
         style={{
           objectFit: fit,
-          opacity: state === "playing" ? 1 : 0,
-          transition: "opacity 800ms ease",
+          visibility: state === "playing" ? "visible" : "hidden",
         }}
       />
     </div>

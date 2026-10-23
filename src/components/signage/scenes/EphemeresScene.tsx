@@ -44,15 +44,17 @@ const Card = ({ e, i, soldOut = false }: { e: Ephemere; i: number; soldOut?: boo
         Épuisé
       </div>
     )}
-    <div className="relative mx-auto" style={{ width: "86%", aspectRatio: "696 / 661", marginTop: 26 }}>
-      {e.image && <img src={img(e.image)} alt={e.name} className="block h-full w-full" style={{ objectFit: "contain" }} />}
+    {/* Format 696×661 par padding-bottom : aspect-ratio est inconnu du navigateur de la TV. */}
+    <div className="relative mx-auto" style={{ width: "86%", paddingBottom: `${(661 / 696) * 86}%`, marginTop: 26 }}>
+      {e.image && <img src={img(e.image)} alt={e.name} className="absolute inset-0 block h-full w-full" style={{ objectFit: "contain" }} />}
       {/* Pastille prix (recouvre celle de la photo d'origine) */}
       {e.price && (
         <div
           className="absolute flex items-center justify-center font-serif-display"
           style={{
             width: "28%",
-            aspectRatio: "1",
+            height: 0,
+            paddingBottom: "28%",
             left: "81.2%",
             top: "2.1%",
             transform: "translate(-50%, -50%)",
@@ -64,7 +66,7 @@ const Card = ({ e, i, soldOut = false }: { e: Ephemere; i: number; soldOut?: boo
             boxShadow: `0 0 0 6px ${e.bg ?? "#EAE3D6"}`,
           }}
         >
-          {e.price}
+          <span className="absolute inset-0 flex items-center justify-center">{e.price}</span>
         </div>
       )}
     </div>

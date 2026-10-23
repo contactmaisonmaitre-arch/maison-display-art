@@ -151,13 +151,14 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
           animation: "mm-fade-in 0.8s ease-out both",
         }}
       >
-        {/* Cadre photo style "post Instagram" */}
+        {/* Cadre photo style "post Instagram" — taille fixe : le navigateur
+            de la TV ne connaît pas aspect-ratio (cadre aplati sinon). */}
         <div
           className="relative overflow-hidden"
           style={{
-            aspectRatio: "1 / 1",
-            width: "100%",
-            maxHeight: "100%",
+            width: 900,
+            height: 900,
+            maxWidth: "100%",
             margin: "0 auto",
             borderRadius: 24,
             boxShadow:

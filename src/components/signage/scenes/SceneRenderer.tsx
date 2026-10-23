@@ -87,7 +87,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
     case "dole-a-pied":
       return <DoleAPiedScene />;
     case "horoscope":
-      return <HoroscopeScene page={scene.page ?? 0} />;
+      return <HoroscopeScene page={scene.page ?? 0} active={active} duration={scene.duration} />;
     case "ephemeride":
       return <EphemerideScene />;
     case "chatperche-maison":

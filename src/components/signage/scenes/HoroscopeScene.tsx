@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { BOARD, allItems } from "@/data/carte";
 import { SIGNES, horoscopeDuJour } from "@/data/horoscope";
 import { useCarte } from "@/hooks/useCarte";
@@ -7,15 +7,21 @@ const PER_PAGE = 6;
 
 // « L'horoscope du café » — pour sourire. 6 signes par passage, avec une
 // boisson porte-bonheur tirée de la carte.
-export const HoroscopeScene = ({ page = 0 }: { page?: number }) => {
+export const HoroscopeScene = ({ page = 0, active = true, duration = 30_000 }: { page?: number; active?: boolean; duration?: number }) => {
   const carte = useCarte();
+  // Les 12 signes à chaque passage : 6, puis les 6 autres à mi-scène.
+  const [half, setHalf] = useState(page % 2);
+  useEffect(() => {
+    if (!active) return;
+    setHalf(page % 2);
+    const id = window.setTimeout(() => setHalf((page + 1) % 2), duration / 2);
+    return () => window.clearTimeout(id);
+  }, [active, page, duration]);
   const drinks = useMemo(
     () => allItems(carte).filter((i) => i.price && i.section !== "Glouglou" && i.section !== "Miam").map((i) => i.name),
     [carte],
   );
   const dayKey = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
-  // Une seule scène horoscope par tour : on alterne les deux moitiés toutes les 5 min.
-  const half = (page + Math.floor(Date.now() / 300_000)) % 2;
   const start = half * PER_PAGE;
   const signs = SIGNES.slice(start, start + PER_PAGE);
 

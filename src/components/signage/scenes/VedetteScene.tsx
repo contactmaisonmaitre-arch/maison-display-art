@@ -41,14 +41,14 @@ export const VedetteScene = ({ vedetteIndex = 0 }: { vedetteIndex?: number }) =>
         {photo ? (
           // Même cadrage que la carte imprimée : la pastille prix recouvre
           // exactement celle de la photo d'origine.
-          <div className="relative" style={{ width: 640, aspectRatio: "696 / 661", animation: "mm-slide-up 1.1s ease-out 0.1s both" }}>
+          <div className="relative" style={{ width: 640, height: Math.round((640 * 661) / 696), animation: "mm-slide-up 1.1s ease-out 0.1s both" }}>
             <img src={photo} alt={it.name} className="block h-full w-full" style={{ objectFit: "contain" }} />
             {it.price && (
               <div
                 className="absolute flex items-center justify-center font-serif-display"
                 style={{
-                  width: "28%",
-                  aspectRatio: "1",
+                  width: 179,
+                  height: 179,
                   left: "81.2%",
                   top: "2.1%",
                   transform: "translate(-50%, -50%)",
