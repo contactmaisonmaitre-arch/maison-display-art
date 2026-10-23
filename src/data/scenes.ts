@@ -48,7 +48,7 @@ export const CHEMINEE_POSTER = "/videos/cheminee.webp";
 /** Interlude par défaut : le feu entre chaque scène, l'automne et l'hiver. */
 export const DEFAULT_INTERLUDE: InterludeEntry = {
   type: "cheminee",
-  seconds: 6,
+  seconds: 30,
   from: "2026-10-15",
   until: "2027-03-15",
 };
