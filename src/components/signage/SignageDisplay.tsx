@@ -25,6 +25,24 @@ const SignageDisplay = () => {
     return () => clearInterval(id);
   }, []);
 
+  // Nouvelle version publiée (Lovable) → on recharge dans les 5 min, sans
+  // attendre la nuit : on compare le script principal de la page en ligne.
+  useEffect(() => {
+    if (import.meta.env.DEV) return;
+    const mine = document.querySelector<HTMLScriptElement>('script[type="module"][src*="/assets/"]')?.getAttribute("src");
+    if (!mine) return;
+    const id = setInterval(async () => {
+      try {
+        const html = await (await fetch(`/?v=${Date.now()}`, { cache: "no-store" })).text();
+        const live = html.match(/\/assets\/index-[\w-]+\.js/)?.[0];
+        if (live && !mine.endsWith(live)) window.location.reload();
+      } catch {
+        // hors ligne : on réessaiera
+      }
+    }, 5 * 60_000);
+    return () => clearInterval(id);
+  }, []);
+
   // Show controls on mouse move, hide after 3s
   useEffect(() => {
     let t: number | undefined;

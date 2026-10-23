@@ -29,7 +29,7 @@ export const HoroscopeScene = ({ page = 0, active = true, duration = 30_000 }: {
     <div className="absolute inset-0 overflow-hidden flex" style={{ background: BOARD.cream, paddingTop: 118 }}>
       <div className="flex flex-col justify-center shrink-0" style={{ width: 470, padding: "0 30px 40px 80px" }}>
         <div className="font-serif-display uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: BOARD.orange, fontWeight: 700 }}>
-          Pour sourire ✦
+          Pour sourire ✦ {half + 1}/2
         </div>
         <div className="font-serif-display mt-5" style={{ fontSize: 70, lineHeight: 0.95, color: BOARD.wine, fontWeight: 600, letterSpacing: "-0.02em" }}>
           L'horoscope

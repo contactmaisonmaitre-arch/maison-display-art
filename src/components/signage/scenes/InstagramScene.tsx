@@ -51,30 +51,25 @@ const usePhotos = () => {
   );
   const candidates = feedSrcs.length >= MIN_FEED_PHOTOS ? feedSrcs : ALL_PHOTOS;
   const key = candidates.join("|");
-  const [available, setAvailable] = useState<string[]>([]);
+  // On affiche tout de suite (pas d'écran noir le temps que les 25 photos
+  // arrivent sur le wifi de la TV) et on retire celles qui échouent.
+  const [failed, setFailed] = useState<Set<string>>(new Set());
   useEffect(() => {
     let cancelled = false;
-    const list = key.split("|");
-    Promise.all(
-      list.map(
-        (src) =>
-          new Promise<string | null>((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve(src);
-            img.onerror = () => resolve(null);
-            img.src = src;
-          })
-      )
-    ).then((results) => {
-      if (cancelled) return;
-      const ok = results.filter((s): s is string => Boolean(s));
-      setAvailable(ok.length > 0 ? ok : ALL_PHOTOS);
-    });
+    setFailed(new Set());
+    for (const src of key.split("|")) {
+      const img = new Image();
+      img.onerror = () => {
+        if (!cancelled) setFailed((f) => new Set(f).add(src));
+      };
+      img.src = src;
+    }
     return () => {
       cancelled = true;
     };
   }, [key]);
-  return available;
+  const ok = candidates.filter((s) => !failed.has(s));
+  return ok.length > 0 ? ok : ALL_PHOTOS;
 };
 
 export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; reelIndex?: number }) => {
