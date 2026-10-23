@@ -41,8 +41,11 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "club", seconds: 20, from: "2026-11-04" },
 ];
 
-/** Vidéo du feu de cheminée (servie par le site publié, pas par GitHub). */
-export const CHEMINEE_SRC = "/videos/cheminee.mp4";
+/**
+ * Feu de cheminée : boucle de 10 s en WebP animé (servie par le site publié).
+ * Pas de <video> : le navigateur de la TV la lit mais l'affiche en noir.
+ */
+export const CHEMINEE_SRC = "/videos/cheminee-anim.webp";
 export const CHEMINEE_POSTER = "/videos/cheminee.webp";
 
 /** Interlude par défaut : le feu entre chaque scène, l'automne et l'hiver. */
