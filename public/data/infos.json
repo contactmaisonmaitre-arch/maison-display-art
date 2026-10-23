@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-22T08:55:09.244Z",
+  "fetchedAt": "2026-10-23T08:50:06.918Z",
   "ephemerides": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "events": [
       {
-        "year": 1964,
-        "text": "Jean-Paul Sartre refuse le prix Nobel de littérature.",
+        "year": 1837,
+        "text": "tenue de l'Assemblée des six-comtés, précurseur de la rébellion des Patriotes du Bas-Canada.",
         "kind": "event"
       },
       {
-        "year": 1953,
-        "text": "indépendance du royaume du Laos vis-à-vis de la France après l'abolition du protectorat.",
+        "year": 2018,
+        "text": "Xi Jinping inaugure le plus long pont maritime du monde, qui relie Hong Kong à Macao.",
         "kind": "event"
       },
       {
-        "year": 1907,
-        "text": "début de la panique des banquiers aux États-Unis.",
+        "year": 2013,
+        "text": "baptême du prince George de Cambridge par l'archevêque de Canterbury, Justin Welby, en la chapelle royale du Palais Saint-James, à Londres, Angleterre.",
         "kind": "event"
       },
       {
-        "year": 1797,
-        "text": "André-Jacques Garnerin réalise le premier saut en parachute non rigide au-dessus de l'actuel parc Monceau.",
+        "year": 2001,
+        "text": "lancement du premier ordiphone iPod, par la firme américaine Apple.",
         "kind": "event"
       },
       {
-        "year": 451,
-        "text": "le concile de Chalcédoine (fresque) définit les concepts de dyophysisme et d'union hypostatique.",
+        "year": 1996,
+        "text": "Ce même pape Jean-Paul II reconnaît dans la théorie de l'évolution plus qu'une hypothèse.",
         "kind": "event"
       },
       {
-        "year": 2019,
-        "text": "couronnement de Naruhito, 126 e empereur du Japon.",
+        "year": 1989,
+        "text": "proclamation de la Troisième République hongroise, le jour du 33e anniversaire de l'insurrection de 1956 supra, mettant ainsi fin à la république populaire de Hongrie.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Sheika Scott, footballeuse internationale costaricienne.",
+        "year": 2004,
+        "text": "Ulysse Ciment, rameur français.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "B.I (Kim Han-bin dit), rappeur sud-coréen.",
+        "year": 2003,
+        "text": "Théodora, chanteuse et rappeuse franco-congolaise.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "David Shongo, musicien congolais.",
+        "year": 2002,
+        "text": "Ningning, chanteuse chinoise.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Khathia Bâ, kayakiste sénégalaise.",
+        "year": 2001,
+        "text": "Mina Sundwall, actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "David Savard, hockeyeur sur glace canadien.",
+        "year": 1999,
+        "text": "Samuel Tefera, athlète éthiopien.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Sho Yano, enfant prodige américain.",
+        "year": 1998,
+        "text": "Amandla Stenberg, actrice américaine.",
         "kind": "birth"
       }
     ]
