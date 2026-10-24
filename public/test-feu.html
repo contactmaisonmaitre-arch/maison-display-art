@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test feu TV</title>
+<style>
+  /* La vidéo seule, plein écran, sans aucun cadre agrandi ni animé autour :
+     si le feu est fluide ici, la TV saura l'afficher dans l'écran principal. */
+  html, body { margin:0; height:100%; background:#000; overflow:hidden; }
+  video { position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; }
+  #etat { position:fixed; left:24px; bottom:20px; font:20px system-ui, sans-serif; color:#fff; background:rgba(0,0,0,.55); padding:8px 14px; border-radius:8px; }
+</style>
+</head>
+<body>
+<video id="v" src="/videos/cheminee.mp4" muted autoplay loop playsinline preload="auto"></video>
+<div id="etat">Chargement…</div>
+<script>
+  var v = document.getElementById("v"), etat = document.getElementById("etat");
+  v.muted = true; v.setAttribute("muted", "");
+  function essai() { var p = v.play(); if (p && p.catch) p.catch(function () { setTimeout(essai, 1000); }); }
+  essai();
+  v.addEventListener("error", function () { etat.textContent = "Erreur vidéo (code " + (v.error ? v.error.code : "?") + ")"; });
+  setInterval(function () {
+    etat.textContent = (v.paused ? "En pause" : "Lecture") + " · " + v.currentTime.toFixed(1) + " s · " + navigator.userAgent;
+  }, 1000);
+</script>
+</body>
+</html>
