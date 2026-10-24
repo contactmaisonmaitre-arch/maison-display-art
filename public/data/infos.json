@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-23T08:50:06.918Z",
+  "fetchedAt": "2026-10-24T08:24:08.760Z",
   "ephemerides": {
-    "date": "2026-10-23",
+    "date": "2026-10-24",
     "events": [
       {
-        "year": 1837,
-        "text": "tenue de l'Assemblée des six-comtés, précurseur de la rébellion des Patriotes du Bas-Canada.",
+        "year": 1945,
+        "text": "entrée en vigueur de la charte des Nations unies ; la date est aujourd'hui commémorée comme journée des Nations unies.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "Xi Jinping inaugure le plus long pont maritime du monde, qui relie Hong Kong à Macao.",
+        "year": 1929,
+        "text": "« jeudi noir », début du krach de 1929, qui durera jusqu'au 29 octobre à la bourse de New York, et provoquera la Grande Dépression.",
+        "kind": "event"
+      },
+      {
+        "year": 1844,
+        "text": "le traité de Huangpu, l'un des « traités inégaux », est signé entre la France et la Chine.",
+        "kind": "event"
+      },
+      {
+        "year": 2023,
+        "text": "en Islande, une grève des Islandaises réunit 100 000 personnes devant le parlement.",
         "kind": "event"
       },
       {
         "year": 2013,
-        "text": "baptême du prince George de Cambridge par l'archevêque de Canterbury, Justin Welby, en la chapelle royale du Palais Saint-James, à Londres, Angleterre.",
+        "text": "annonce de la découverte de la galaxie z8 GND 5296, la plus éloignée connue à ce jour[Quand ?], à une distance apparente de 13,1 milliards d’années-lumière de la Terre.",
         "kind": "event"
       },
       {
-        "year": 2001,
-        "text": "lancement du premier ordiphone iPod, par la firme américaine Apple.",
-        "kind": "event"
-      },
-      {
-        "year": 1996,
-        "text": "Ce même pape Jean-Paul II reconnaît dans la théorie de l'évolution plus qu'une hypothèse.",
-        "kind": "event"
-      },
-      {
-        "year": 1989,
-        "text": "proclamation de la Troisième République hongroise, le jour du 33e anniversaire de l'insurrection de 1956 supra, mettant ainsi fin à la république populaire de Hongrie.",
+        "year": 2003,
+        "text": "dernier vol du Concorde.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2004,
-        "text": "Ulysse Ciment, rameur français.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Théodora, chanteuse et rappeuse franco-congolaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 2002,
-        "text": "Ningning, chanteuse chinoise.",
-        "kind": "birth"
-      },
-      {
         "year": 2001,
-        "text": "Mina Sundwall, actrice américaine.",
+        "text": "Adèle Castillon, actrice et chanteuse française.",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Samuel Tefera, athlète éthiopien.",
+        "year": 1996,
+        "text": "Tamino (Tamino-Amir Moharam Fouad, dit), auteur-compositeur-interprète et musicien belge",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Amandla Stenberg, actrice américaine.",
+        "year": 1991,
+        "text": "Bojan Dubljević (Бојан Дубљевић), basketteur monténégrin.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "Ilkay Gündogan, footballeur allemand.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "Peyton Siva, basketteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "David Castañeda, acteur Mexicano-Américain.",
         "kind": "birth"
       }
     ]
