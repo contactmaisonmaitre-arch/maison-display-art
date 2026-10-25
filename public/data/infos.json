@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-24T08:24:08.760Z",
+  "fetchedAt": "2026-10-25T08:43:11.898Z",
   "ephemerides": {
-    "date": "2026-10-24",
+    "date": "2026-10-25",
     "events": [
       {
-        "year": 1945,
-        "text": "entrée en vigueur de la charte des Nations unies ; la date est aujourd'hui commémorée comme journée des Nations unies.",
+        "year": 1971,
+        "text": "la république populaire de Chine devient membre permanent du Conseil de sécurité des Nations unies en lieu et place de la république de Chine.",
         "kind": "event"
       },
       {
-        "year": 1929,
-        "text": "« jeudi noir », début du krach de 1929, qui durera jusqu'au 29 octobre à la bourse de New York, et provoquera la Grande Dépression.",
+        "year": 1616,
+        "text": "l'explorateur néerlandais Dirk Hartog débarque sur la côte ouest de l'Australie.",
         "kind": "event"
       },
       {
-        "year": 1844,
-        "text": "le traité de Huangpu, l'un des « traités inégaux », est signé entre la France et la Chine.",
+        "year": 1555,
+        "text": "Charles Quint abdique ses couronnes néerlandaises (portrait).",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "en Islande, une grève des Islandaises réunit 100 000 personnes devant le parlement.",
+        "year": 1147,
+        "text": "alors royaume émergent, le Portugal s'empare de Lisbonne lors de la Reconquista.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "annonce de la découverte de la galaxie z8 GND 5296, la plus éloignée connue à ce jour[Quand ?], à une distance apparente de 13,1 milliards d’années-lumière de la Terre.",
+        "year": 732,
+        "text": "les Francs, Aquitains et Vascons alliés contre les Omeyyades défont les troupes d'Abd al-Rahman à Poitiers.",
         "kind": "event"
       },
       {
-        "year": 2003,
-        "text": "dernier vol du Concorde.",
+        "year": 2018,
+        "text": "Oleh Sentsov, emprisonné en Russie, reçoit le prix Sakharov 2018 du Parlement européen.",
         "kind": "event"
       }
     ],
     "births": [
       {
         "year": 2001,
-        "text": "Adèle Castillon, actrice et chanteuse française.",
+        "text": "Élisabeth princesse de Belgique.",
+        "kind": "birth"
+      },
+      {
+        "year": 1999,
+        "text": "Romeo Langford, basketteur américain.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Tamino (Tamino-Amir Moharam Fouad, dit), auteur-compositeur-interprète et musicien belge",
+        "text": "Emira D'Spain, mannequin émiratie.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Bojan Dubljević (Бојан Дубљевић), basketteur monténégrin.",
+        "year": 1995,
+        "text": "Conchita Campbell, actrice canadienne.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Ilkay Gündogan, footballeur allemand.",
+        "year": 1995,
+        "text": "William Cloutier, chanteur québécois.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Peyton Siva, basketteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "David Castañeda, acteur Mexicano-Américain.",
+        "year": 1992,
+        "text": "Clarisse Agbegnenou, judokate française.",
         "kind": "birth"
       }
     ]
