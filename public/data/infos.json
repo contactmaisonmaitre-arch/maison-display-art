@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-25T08:43:11.898Z",
+  "fetchedAt": "2026-10-26T09:21:32.466Z",
   "ephemerides": {
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "events": [
       {
-        "year": 1971,
-        "text": "la république populaire de Chine devient membre permanent du Conseil de sécurité des Nations unies en lieu et place de la république de Chine.",
+        "year": 1994,
+        "text": "traité de paix israélo-jordanien.",
         "kind": "event"
       },
       {
-        "year": 1616,
-        "text": "l'explorateur néerlandais Dirk Hartog débarque sur la côte ouest de l'Australie.",
+        "year": 1955,
+        "text": "proclamation de la république du Vietnam.",
         "kind": "event"
       },
       {
-        "year": 1555,
-        "text": "Charles Quint abdique ses couronnes néerlandaises (portrait).",
+        "year": 2025,
+        "text": "au Soudan, après cinq cents jours de siège, la ville d'El Fasher tombe aux mains des Forces de soutien rapide.",
         "kind": "event"
       },
       {
-        "year": 1147,
-        "text": "alors royaume émergent, le Portugal s'empare de Lisbonne lors de la Reconquista.",
+        "year": 2024,
+        "text": "Israël frappe l'Iran.",
         "kind": "event"
       },
       {
-        "year": 732,
-        "text": "les Francs, Aquitains et Vascons alliés contre les Omeyyades défont les troupes d'Abd al-Rahman à Poitiers.",
+        "year": 2022,
+        "text": "en Espagne, seize ans après sa mise en chantier, le tram-train de la Baie de Cadix, premier tram-train du pays, est mis en service.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "Oleh Sentsov, emprisonné en Russie, reçoit le prix Sakharov 2018 du Parlement européen.",
+        "year": 2020,
+        "text": "aux États-Unis, la nomination d'Amy Coney Barrett à la Cour suprême est confirmée au Sénat par 52 voix pour et 48 contre.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2001,
-        "text": "Élisabeth princesse de Belgique.",
+        "year": 1991,
+        "text": "Exaucé Ngambili Ibam, homme politique Congolais.",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Romeo Langford, basketteur américain.",
+        "year": 1987,
+        "text": "Stany Delayre, rameur français.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Emira D'Spain, mannequin émiratie.",
+        "year": 1987,
+        "text": "Samuel Gathimba, athlète kényan.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Conchita Campbell, actrice canadienne.",
+        "year": 1987,
+        "text": "Alexie Ribes, actrice française.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "William Cloutier, chanteur québécois.",
+        "year": 1984,
+        "text": "Adriano Correia Claro, footballeur brésilien.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Clarisse Agbegnenou, judokate française.",
+        "year": 1984,
+        "text": "Sasha Cohen, patineuse artistique américaine.",
         "kind": "birth"
       }
     ]

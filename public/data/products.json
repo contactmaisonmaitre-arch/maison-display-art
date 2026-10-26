@@ -1,6 +1,6 @@
 {
   "source": "https://maisonmaitre.com",
-  "fetchedAt": "2026-10-10T10:07:22.808Z",
+  "fetchedAt": "2026-10-26T09:21:29.106Z",
   "products": [
     {
       "handle": "emporter-supplement-grand",
@@ -315,18 +315,6 @@
       "online": true
     },
     {
-      "handle": "le-chat-heureux-the-des-maitre-100g",
-      "name": "Le Chat Heureux, infusion agrumes et plantes",
-      "cat": "Infusion des Maitre",
-      "type": "infusion",
-      "notes": "Le Chat Heureux, l’infusion phare de Maison Maitre.",
-      "price": "11,50 € · 100 g",
-      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/B3483265-1FC7-4780-956F-F47DDDC0DEA8.png?v=1780757291",
-      "available": true,
-      "vendor": "Maison Maitre",
-      "online": true
-    },
-    {
       "handle": "lucero-cafe-de-specialite-250g-maison-maitre",
       "name": "Lucero, café du Week-end gourmand du Chat Perché",
       "cat": "Café des Maitre",
@@ -553,6 +541,18 @@
       "available": true,
       "vendor": "Maison Maitre",
       "online": true
+    },
+    {
+      "handle": "le-chat-heureux-the-des-maitre-100g",
+      "name": "Le Chat Heureux, infusion agrumes et plantes",
+      "cat": "Infusion des Maitre",
+      "type": "infusion",
+      "notes": "Le Chat Heureux, l’infusion phare de Maison Maitre.",
+      "price": "11,50 € · 100 g",
+      "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/B3483265-1FC7-4780-956F-F47DDDC0DEA8.png?v=1780757291",
+      "available": true,
+      "vendor": "Maison Maitre",
+      "online": false
     },
     {
       "handle": "banquet-des-tsars-the-noir-bergamote-agrumes-100g-the-des-maitre",
