@@ -25,6 +25,7 @@ export type SceneType =
   | "weather"
   | "matcha"
   | "nouveautes"
+  | "thedesmaitre"
   | "épicerie"
   | "instagram"
   | "chatperche-intro"

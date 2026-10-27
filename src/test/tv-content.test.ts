@@ -9,6 +9,8 @@ import products from "../../public/data/products.json";
 import coups from "../../public/data/coups-de-coeur.json";
 import club from "../../public/data/club.json";
 import { pickNouveautes } from "@/components/signage/scenes/NouveautesScene";
+import { teasForPage } from "@/components/signage/scenes/TheDesMaitreScene";
+import the from "../../public/data/the-des-maitre.json";
 
 const at = (iso: string) => new Date(`${iso}T10:00:00+02:00`);
 const ctx = { annonceCount: 1, ephemeres: true };
@@ -193,5 +195,15 @@ describe("nouveautés", () => {
     expect(sel.length).toBeLessThanOrEqual(4);
     expect(sel.every((p) => p.type !== "boisson à emporter" && p.img)).toBe(true);
     expect(sel.map((p) => p.name).some((n) => n.startsWith("Ataco"))).toBe(true);
+  });
+});
+
+describe("thé des maitre", () => {
+  it("coffret à 29,90 €, thés avec prix et image, défilement par 4 sans trou", () => {
+    expect(the.coffret?.prix).toBe("29,90 €");
+    expect(the.teas.every((t) => t.prix && t.img.startsWith("/the-des-maitre/"))).toBe(true);
+    const vus = new Set([0, 1, 2, 3, 4].flatMap((p) => teasForPage(the.teas, p).map((t) => t.nom)));
+    expect(vus.size).toBe(the.teas.length);
+    expect(buildScenes((playlist as unknown as { scenes: never }).scenes, at("2026-11-14"), ctx).map((x) => x.type)).not.toContain("thedesmaitre");
   });
 });

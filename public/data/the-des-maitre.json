@@ -1,0 +1,140 @@
+{
+  "_aide": "Scène « thedesmaitre » (gamme Thé des Maitre). Généré depuis catalogue_the_des_maitre.json (sélection Noël, noel_v1) le 27/10/2026 ; prix = onglet PRIX PROPOSÉS, à vérifier avant le lancement. Tout est modifiable ici : coffret (nom, prix, contenu, img), teas (nom, famille, prix, format, img : ils défilent par 4), club (ligne sur l'avantage Club), site (ligne sur la boutique en ligne, ex. l'adresse du site). Images dans public/the-des-maitre/.",
+  "eyebrow": "Nouveau · la gamme de thés de Maison Maitre",
+  "title": "Thé des",
+  "titleItalic": "Maitre",
+  "coffret": {
+    "nom": "Coffret de Noël",
+    "prix": "29,90 €",
+    "contenu": [
+      "Éclat de Spéculoos",
+      "Hiver à Chamonix",
+      "Réveillon",
+      "Sentier Givré"
+    ],
+    "img": "/the-des-maitre/coffret-de-noel-2026.webp"
+  },
+  "teas": [
+    {
+      "nom": "Banquet des Tsars",
+      "famille": "THÉ NOIR AROMATISÉ",
+      "prix": "14,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/banquet-des-tsars.webp"
+    },
+    {
+      "nom": "Réserve du Comte",
+      "famille": "THÉ NOIR AROMATISÉ",
+      "prix": "15,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/reserve-du-comte.webp"
+    },
+    {
+      "nom": "Hiver à Chamonix",
+      "famille": "THÉ NOIR AROMATISÉ",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/hiver-a-chamonix.webp"
+    },
+    {
+      "nom": "Trésor de Monsieur Noël",
+      "famille": "THÉ NOIR AROMATISÉ",
+      "prix": "11,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/tresor-de-monsieur-noel.webp"
+    },
+    {
+      "nom": "Réveillon",
+      "famille": "INFUSION AROMATISÉE",
+      "prix": "13,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/reveillon.webp"
+    },
+    {
+      "nom": "Éclat de Spéculoos",
+      "famille": "THÉ VERT AROMATISÉ",
+      "prix": "11,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/eclat-de-speculoos.webp"
+    },
+    {
+      "nom": "Coup de Zeste",
+      "famille": "THÉ VERT AROMATISÉ",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/coup-de-zeste.webp"
+    },
+    {
+      "nom": "Poire des Anciens",
+      "famille": "THÉ VERT AROMATISÉ",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/poire-des-anciens.webp"
+    },
+    {
+      "nom": "Instant Présent",
+      "famille": "THÉ VERT",
+      "prix": "11,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/instant-present.webp"
+    },
+    {
+      "nom": "Fruit du Lagon",
+      "famille": "THÉ VERT AROMATISÉ",
+      "prix": "13,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/fruit-du-lagon.webp"
+    },
+    {
+      "nom": "Balade dans l'Orangerie",
+      "famille": "THÉ VERT AROMATISÉ",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/balade-dans-l-orangerie.webp"
+    },
+    {
+      "nom": "Poussière d'Étoiles",
+      "famille": "ROOIBOS",
+      "prix": "11,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/poussiere-d-etoiles.webp"
+    },
+    {
+      "nom": "Au Coin du Feu",
+      "famille": "INFUSION AROMATISÉE",
+      "prix": "9,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/au-coin-du-feu.webp"
+    },
+    {
+      "nom": "Cœur Croustillant",
+      "famille": "INFUSION AROMATISÉE",
+      "prix": "11,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/coeur-croustillant.webp"
+    },
+    {
+      "nom": "Sentier Givré",
+      "famille": "INFUSION AROMATISÉE",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/sentier-givre.webp"
+    },
+    {
+      "nom": "Pomme d'Avent",
+      "famille": "OOLONG AROMATISÉ",
+      "prix": "10,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/pomme-d-avent.webp"
+    },
+    {
+      "nom": "Premier Flocon",
+      "famille": "THÉ BLANC AROMATISÉ",
+      "prix": "20,90 €",
+      "format": "100 g",
+      "img": "/the-des-maitre/premier-flocon.webp"
+    }
+  ],
+  "club": "Membres du Club : jusqu'à 10 % de vos achats reviennent sur votre cagnotte.",
+  "site": "Bientôt en ligne : la boutique Thé des Maitre"
+}

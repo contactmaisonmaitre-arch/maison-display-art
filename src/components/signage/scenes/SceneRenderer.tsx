@@ -18,6 +18,7 @@ import { AujourdhuiScene } from "./AujourdhuiScene";
 import { DoleAPiedScene } from "./DoleAPiedScene";
 import { HoroscopeScene } from "./HoroscopeScene";
 import { NouveautesScene } from "./NouveautesScene";
+import { TheDesMaitreScene } from "./TheDesMaitreScene";
 import { EphemerideScene } from "./EphemerideScene";
 import { ChatPercheMaisonScene, ChatPercheProduitsScene } from "./ChatPercheMaisonScene";
 import { AnnonceScene } from "./AnnonceScene";
@@ -70,6 +71,8 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <MatchaScene />;
     case "nouveautes":
       return <NouveautesScene />;
+    case "thedesmaitre":
+      return <TheDesMaitreScene active={active} />;
     case "instagram":
       return <InstagramScene active={active} reelIndex={scene.reelIndex ?? 0} />;
     case "chatperche-intro":
