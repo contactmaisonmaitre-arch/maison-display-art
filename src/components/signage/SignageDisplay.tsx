@@ -88,12 +88,14 @@ const SignageDisplay = () => {
 
   return (
     <div
-      className="mm-grain-global fixed inset-0 overflow-hidden flex items-center justify-center"
+      className={`${fire ? "" : "mm-grain-global "}fixed inset-0 overflow-hidden flex items-center justify-center`}
       style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 100%)" }}
     >
       <div
         className="relative flex overflow-hidden"
         style={{
+          // Retiré de l'affichage pendant le feu : la vidéo doit être seule à l'écran (voir FireOverlay).
+          display: fire ? "none" : "flex",
           width: 1920,
           height: 1080,
           transform: `scale(${scale})`,
@@ -106,14 +108,11 @@ const SignageDisplay = () => {
         <CenterPanel weather={weather} onSceneChange={setScene} />
       </div>
 
-      {/* Feu de cheminée : vidéo plein écran hors de la scène mise à l'échelle (voir FireOverlay). */}
-      <FireOverlay
-        active={fire}
-        src={(fire && scene?.src) || CHEMINEE_SRC}
-        poster={(fire && scene?.poster) || CHEMINEE_POSTER}
-      />
+      {/* Feu de cheminée : vidéo plein écran, seule à l'écran (voir FireOverlay). */}
+      {fire && <FireOverlay src={scene?.src || CHEMINEE_SRC} poster={scene?.poster || CHEMINEE_POSTER} />}
 
-      {/* Mode d'affichage — visible au survol */}
+      {/* Mode d'affichage — visible au survol (absent pendant le feu : rien au-dessus de la vidéo) */}
+      {!fire && (
       <div
         className="fixed top-4 right-4 z-[9999] flex gap-1 rounded-full p-1 transition-opacity duration-500"
         style={{
@@ -140,6 +139,7 @@ const SignageDisplay = () => {
           </button>
         ))}
       </div>
+      )}
     </div>
   );
 };

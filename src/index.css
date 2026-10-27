@@ -149,7 +149,6 @@
   animation-play-state: paused !important;
 }
 
-@keyframes mm-fire-reveal { from { opacity: 1; } to { opacity: 0; } }
 @keyframes mm-club-sheen { 0% { left: -60%; } 35%, 100% { left: 130%; } }
 /* Scène Club : éventail qui flotte, cartes distribuées, jauge des seuils, repères qui apparaissent. */
 @keyframes mm-club-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-16px) rotate(0.6deg); } }
