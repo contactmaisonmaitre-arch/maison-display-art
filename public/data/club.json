@@ -1,29 +1,50 @@
 {
-  "_aide": "Scène « club » (programme de fidélité). Tout est modifiable ici sans coder. tiers = les niveaux, de gauche à droite : name (nom sur la carte), condition (qui y a droit), gain (ligne en gros), extra (avantage en plus, facultatif), finish (rendu de la carte : creme, or, platine, bronze, noir). Le nombre de niveaux est libre (2 à 4).",
+  "_aide": "Scène « club » (programme de fidélité), en deux temps : d'abord « comment ça marche » (steps), puis les niveaux (tiers). Tout est modifiable ici sans coder. steps = les étapes, chacune avec title et text (3 conseillé). tiers = les niveaux, du moins au plus prestigieux : name (nom sur la carte), rate (taux en gros sur la carte, ex. « 6 % »), threshold (seuil en € sur 12 mois, sert à la jauge ; 0 pour le premier niveau), condition (qui y a droit), gain (ligne en gros), extra (avantage en plus, facultatif), finish (rendu de la carte : bronze, or, platine, creme, noir). Le nombre de niveaux est libre (2 à 4). gaugeTitle = titre de la deuxième partie.",
   "eyebrow": "Nouveau · Programme de fidélité",
   "title": "Maison Maitre,",
   "titleItalic": "le Club",
+  "steps": [
+    {
+      "title": "Inscrivez-vous en caisse",
+      "text": "Gratuit, avec votre numéro de téléphone. Votre carte vous est remise sur place."
+    },
+    {
+      "title": "Chaque achat remplit votre cagnotte",
+      "text": "Une part de vos achats revient sur votre carte, en euros."
+    },
+    {
+      "title": "Dépensez-la quand vous voulez",
+      "text": "Dès votre passage suivant, sur tout, même au salon de thé."
+    }
+  ],
+  "gaugeTitle": "Plus vous venez, plus elle grandit",
   "tiers": [
     {
-      "name": "Club",
-      "condition": "Pour tous · inscription gratuite en caisse",
-      "gain": "80 € d'achats = 5 € offerts",
-      "finish": "creme"
+      "name": "Bronze",
+      "rate": "6 %",
+      "threshold": 0,
+      "condition": "Pour tous · inscription gratuite",
+      "gain": "100 € d'achats = 6 € offerts",
+      "finish": "bronze"
     },
     {
       "name": "Gold",
+      "rate": "8 %",
+      "threshold": 400,
       "condition": "Dès 400 € d'achats sur 12 mois",
       "gain": "100 € d'achats = 8 € offerts",
       "finish": "or"
     },
     {
       "name": "Platine",
+      "rate": "10 %",
+      "threshold": 1000,
       "condition": "Dès 1 000 € d'achats sur 12 mois",
       "gain": "100 € d'achats = 10 € offerts",
       "extra": "+ un cadeau Maison Maitre au choix",
       "finish": "platine"
     }
   ],
-  "footer": "Votre cagnotte se dépense sur tout, même au salon de thé. Elle n'expire jamais.",
+  "footer": "Votre cagnotte se dépense sur tout, même au salon de thé. Elle reste valable 6 mois.",
   "cta": "Demandez votre carte en caisse"
 }

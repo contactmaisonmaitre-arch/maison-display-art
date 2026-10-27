@@ -99,7 +99,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
     case "video":
       return <VideoScene active={active} src={scene.src} poster={scene.poster} />;
     case "club":
-      return <ClubScene />;
+      return <ClubScene active={active} duration={scene.duration} />;
     default:
       return null;
   }

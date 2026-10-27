@@ -7,6 +7,7 @@ import playlist from "../../public/data/playlist.json";
 import carte from "../../public/data/carte.json";
 import products from "../../public/data/products.json";
 import coups from "../../public/data/coups-de-coeur.json";
+import club from "../../public/data/club.json";
 
 const at = (iso: string) => new Date(`${iso}T10:00:00+02:00`);
 const ctx = { annonceCount: 1, ephemeres: true };
@@ -171,5 +172,15 @@ describe("Club", () => {
     const p = playlist as unknown as { scenes: never };
     expect(buildScenes(p.scenes, at("2026-11-03"), ctx).map((x) => x.type)).not.toContain("club");
     expect(buildScenes(p.scenes, at("2026-11-04"), ctx).map((x) => x.type)).toContain("club");
+  });
+});
+
+describe("club", () => {
+  it("niveaux du moins au plus prestigieux, seuils croissants, étapes renseignées", () => {
+    expect(club.tiers.map((t) => t.name)).toEqual(["Bronze", "Gold", "Platine"]);
+    const seuils = club.tiers.map((t) => t.threshold);
+    expect(seuils).toEqual([...seuils].sort((a, b) => a - b));
+    expect(club.steps.length).toBeGreaterThan(0);
+    expect(club.footer).not.toMatch(/n'expire jamais/);
   });
 });

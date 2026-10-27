@@ -31,9 +31,12 @@ export const useScenes = (): Scene[] => {
   const playlist = json?.scenes?.length ? json.scenes : DEFAULT_PLAYLIST;
   const interlude = json && "interlude" in json ? json.interlude ?? null : DEFAULT_INTERLUDE;
   const key = JSON.stringify([playlist, interlude]);
-  return useMemo(
-    () => buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }, interlude),
+  // Aperçu : ?scene=club montre la scène même hors de ses dates (ex. avant son lancement).
+  const wanted = new URLSearchParams(window.location.search).get("scene");
+  return useMemo(() => {
+    const scenes = buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }, interlude);
+    const entry = wanted && !scenes.some((s) => s.type === wanted) ? playlist.find((e) => e.type === wanted) : undefined;
+    return entry ? [...scenes, { type: entry.type, duration: Math.max(4, entry.seconds) * 1000 }] : scenes;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [key, today, annonces.length, eph, ephemeride],
-  );
+  }, [key, today, annonces.length, eph, ephemeride, wanted]);
 };
