@@ -21,6 +21,7 @@ export interface WeatherData {
 
 export type SceneType =
   | "café"
+  | "chat-heureux"
   | "weather"
   | "matcha"
   | "épicerie"

@@ -23,6 +23,7 @@ import { AnnonceScene } from "./AnnonceScene";
 import { ChemineeScene } from "./ChemineeScene";
 import { VideoScene } from "./VideoScene";
 import { ClubScene } from "./ClubScene";
+import { ChatHeureuxScene } from "./ChatHeureuxScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -49,6 +50,8 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <GoodNewsScene newsOffset={scene.newsOffset ?? 0} />;
     case "produits":
       return <ProductsScene productOffset={scene.productOffset ?? 0} />;
+    case "chat-heureux":
+      return <ChatHeureuxScene />;
     case "weather":
       return <WeatherScene weather={weather} />;
     case "épicerie":
