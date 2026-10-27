@@ -7,7 +7,7 @@ const STORAGE_KEY = "mm-fit";
 
 export const useFitMode = () => {
   const [mode, setMode] = useState<FitMode>(
-    () => (safeGetStorage(STORAGE_KEY) as FitMode) || "fit"
+    () => (safeGetStorage(STORAGE_KEY) as FitMode) || "cover" // bord à bord par défaut (barre de Silk : écran pas en 16/9)
   );
   const [scale, setScale] = useState(1);
 
