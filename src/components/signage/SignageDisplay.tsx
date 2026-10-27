@@ -25,6 +25,27 @@ const SignageDisplay = () => {
     return () => clearInterval(id);
   }, []);
 
+  // Plein écran au premier appui (OK de la télécommande du Fire TV Stick, clic) :
+  // cache la barre du navigateur. Les navigateurs exigent un geste de l'utilisateur.
+  useEffect(() => {
+    const goFullscreen = () => {
+      const el = document.documentElement as HTMLElement & { webkitRequestFullscreen?: () => void };
+      if (document.fullscreenElement) return;
+      try {
+        if (el.requestFullscreen) void el.requestFullscreen().catch(() => undefined);
+        else el.webkitRequestFullscreen?.();
+      } catch {
+        // pas de plein écran sur ce navigateur : on reste tel quel
+      }
+    };
+    window.addEventListener("keydown", goFullscreen);
+    window.addEventListener("click", goFullscreen);
+    return () => {
+      window.removeEventListener("keydown", goFullscreen);
+      window.removeEventListener("click", goFullscreen);
+    };
+  }, []);
+
   // Nouvelle version publiée (Lovable) → on recharge dans les 5 min, sans
   // attendre la nuit : on compare le script principal de la page en ligne.
   useEffect(() => {
