@@ -14,7 +14,7 @@ export interface TheDesMaitreJson {
   eyebrow?: string;
   title?: string;
   titleItalic?: string;
-  coffret?: { nom: string; prix?: string; contenu?: string[]; img?: string } | null;
+  coffret?: { nom: string; prix?: string; format?: string; contenu?: string[]; img?: string } | null;
   teas: Tea[];
   club?: string;
   site?: string;
@@ -82,6 +82,7 @@ export const TheDesMaitreScene = ({ active = true }: { active?: boolean }) => {
                 {c.prix && (
                   <div className="font-serif-display mt-2" style={{ fontSize: 40, color: GOLD, fontWeight: 600 }}>
                     {c.prix}
+                    {c.format && <span style={{ fontSize: 20, color: CREAM, fontWeight: 400 }}> · {c.format}</span>}
                   </div>
                 )}
                 {c.contenu && (

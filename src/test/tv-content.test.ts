@@ -204,6 +204,6 @@ describe("thé des maitre", () => {
     expect(the.teas.every((t) => t.prix && t.img.startsWith("/the-des-maitre/"))).toBe(true);
     const vus = new Set([0, 1, 2, 3, 4].flatMap((p) => teasForPage(the.teas, p).map((t) => t.nom)));
     expect(vus.size).toBe(the.teas.length);
-    expect(buildScenes((playlist as unknown as { scenes: never }).scenes, at("2026-11-14"), ctx).map((x) => x.type)).not.toContain("thedesmaitre");
+    expect(buildScenes((playlist as unknown as { scenes: never }).scenes, at("2026-10-28"), ctx).map((x) => x.type)).toContain("thedesmaitre");
   });
 });

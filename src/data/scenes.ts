@@ -34,7 +34,7 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "ephemeres", seconds: 16 },
   { type: "produits", seconds: 16 },
   { type: "nouveautes", seconds: 18 },
-  { type: "thedesmaitre", seconds: 30, from: "2026-11-15" },
+  { type: "thedesmaitre", seconds: 30 },
   { type: "chat-heureux", seconds: 16 },
   { type: "chatperche-program", seconds: 14, until: "2026-09-27" },
   { type: "dole-a-pied", seconds: 20 },

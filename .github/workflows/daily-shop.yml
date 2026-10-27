@@ -27,6 +27,10 @@ jobs:
         continue-on-error: true
         run: node scripts/fetch-products.mjs
 
+      - name: Thé des Maitre (prix et formats de la boutique Shopify)
+        continue-on-error: true
+        run: node scripts/fetch-the-des-maitre.mjs
+
       - name: Infos du jour (vacances scolaires, éphémérides)
         continue-on-error: true
         run: node scripts/fetch-infos.mjs

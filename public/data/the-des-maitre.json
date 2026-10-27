@@ -1,5 +1,5 @@
 {
-  "_aide": "Scène « thedesmaitre » (gamme Thé des Maitre). Généré depuis catalogue_the_des_maitre.json (sélection Noël, noel_v1) le 27/10/2026 ; prix = onglet PRIX PROPOSÉS, à vérifier avant le lancement. Tout est modifiable ici : coffret (nom, prix, contenu, img), teas (nom, famille, prix, format, img : ils défilent par 4), club (ligne sur l'avantage Club), site (ligne sur la boutique en ligne, ex. l'adresse du site). Images dans public/the-des-maitre/.",
+  "_aide": "Scène « thedesmaitre » (gamme Thé des Maitre). Généré depuis catalogue_the_des_maitre.json (sélection Noël, noel_v1) le 27/10/2026 ; prix et formats mis à jour chaque nuit depuis la boutique Shopify Thé des Maitre (scripts/fetch-the-des-maitre.mjs). Tout est modifiable ici : coffret (nom, prix, contenu, img), teas (nom, famille, prix, format, img : ils défilent par 4), club (ligne sur l'avantage Club), site (ligne sur la boutique en ligne, ex. l'adresse du site). Images dans public/the-des-maitre/.",
   "eyebrow": "Nouveau · la gamme de thés de Maison Maitre",
   "title": "Thé des",
   "titleItalic": "Maitre",
@@ -12,7 +12,8 @@
       "Réveillon",
       "Sentier Givré"
     ],
-    "img": "/the-des-maitre/coffret-de-noel-2026.webp"
+    "img": "/the-des-maitre/coffret-de-noel-2026.webp",
+    "format": "Coffret 4 × 25 g"
   },
   "teas": [
     {
