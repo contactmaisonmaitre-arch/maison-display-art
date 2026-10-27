@@ -33,6 +33,7 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "dole", seconds: 15 },
   { type: "ephemeres", seconds: 16 },
   { type: "produits", seconds: 16 },
+  { type: "nouveautes", seconds: 18 },
   { type: "chat-heureux", seconds: 16 },
   { type: "chatperche-program", seconds: 14, until: "2026-09-27" },
   { type: "dole-a-pied", seconds: 20 },

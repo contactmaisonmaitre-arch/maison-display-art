@@ -1,72 +1,63 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import { BOARD, allItems } from "@/data/carte";
 import { SIGNES, horoscopeDuJour } from "@/data/horoscope";
 import { useCarte } from "@/hooks/useCarte";
 
-const PER_PAGE = 6;
-
-// « L'horoscope du café » — pour sourire. 6 signes par passage, avec une
-// boisson porte-bonheur tirée de la carte.
-export const HoroscopeScene = ({ page = 0, active = true, duration = 30_000 }: { page?: number; active?: boolean; duration?: number }) => {
+// « L'horoscope du café » — pour sourire. Les 12 signes sur une seule page
+// (4 colonnes × 3 lignes), avec une boisson porte-bonheur tirée de la carte.
+export const HoroscopeScene = () => {
   const carte = useCarte();
-  // Les 12 signes à chaque passage : 6, puis les 6 autres à mi-scène.
-  const [half, setHalf] = useState(page % 2);
-  useEffect(() => {
-    if (!active) return;
-    setHalf(page % 2);
-    const id = window.setTimeout(() => setHalf((page + 1) % 2), duration / 2);
-    return () => window.clearTimeout(id);
-  }, [active, page, duration]);
   const drinks = useMemo(
     () => allItems(carte).filter((i) => i.price && i.section !== "Glouglou" && i.section !== "Miam").map((i) => i.name),
     [carte],
   );
   const dayKey = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Paris" });
-  const start = half * PER_PAGE;
-  const signs = SIGNES.slice(start, start + PER_PAGE);
 
   return (
-    <div className="absolute inset-0 overflow-hidden flex" style={{ background: BOARD.cream, paddingTop: 118 }}>
-      <div className="flex flex-col justify-center shrink-0" style={{ width: 470, padding: "0 30px 40px 80px" }}>
-        <div className="font-serif-display uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: BOARD.orange, fontWeight: 700 }}>
-          Pour sourire ✦ {half + 1}/2
+    <div className="absolute inset-0 overflow-hidden flex flex-col" style={{ background: BOARD.cream, paddingTop: 118 }}>
+      <div className="flex items-end justify-between shrink-0" style={{ padding: "26px 80px 0" }}>
+        <div className="flex items-baseline gap-6">
+          <div className="font-serif-display" style={{ fontSize: 60, lineHeight: 1, color: BOARD.wine, fontWeight: 600, letterSpacing: "-0.02em" }}>
+            L'horoscope <span className="italic" style={{ fontWeight: 400 }}>du café</span>
+          </div>
+          <div className="font-serif-display uppercase" style={{ fontSize: 15, letterSpacing: "0.3em", color: BOARD.orange, fontWeight: 700 }}>
+            Pour sourire ✦
+          </div>
         </div>
-        <div className="font-serif-display mt-5" style={{ fontSize: 70, lineHeight: 0.95, color: BOARD.wine, fontWeight: 600, letterSpacing: "-0.02em" }}>
-          L'horoscope
-          <br />
-          <span className="italic" style={{ fontWeight: 400 }}>du café</span>
-        </div>
-        <div className="font-serif-display italic mt-6" style={{ fontSize: 24, color: BOARD.muted, lineHeight: 1.35 }}>
-          Signes {start === 0 ? "du Bélier à la Vierge" : "de la Balance aux Poissons"} · avec la boisson porte-bonheur du jour.
+        <div className="font-serif-display italic" style={{ fontSize: 24, color: BOARD.muted }}>
+          avec la boisson porte-bonheur du jour
         </div>
       </div>
-      <div className="grid flex-1" style={{ gridTemplateColumns: "1fr 1fr", gridTemplateRows: "repeat(3, minmax(0, 1fr))", gap: 20, padding: "40px 90px 56px 30px" }}>
-        {signs.map((s, k) => {
-          const h = horoscopeDuJour(start + k, dayKey, drinks);
+      <div
+        className="grid flex-1"
+        style={{ gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gridTemplateRows: "repeat(3, minmax(0, 1fr))", gap: 16, padding: "22px 80px 40px" }}
+      >
+        {SIGNES.map((s, k) => {
+          const h = horoscopeDuJour(k, dayKey, drinks);
           return (
             <div
               key={s.name}
-              className="flex items-center gap-5 rounded-[22px]"
-              style={{ background: "#FFFFFF", boxShadow: "0 0 0 1px #E3D6BC inset", padding: "20px 24px", animation: `mm-slide-up 0.8s ease-out ${0.12 + k * 0.08}s both`, minHeight: 0 }}
+              className="flex flex-col rounded-[20px]"
+              style={{ background: "#FFFFFF", boxShadow: "0 0 0 1px #E3D6BC inset", padding: "18px 22px", animation: `mm-slide-up 0.8s ease-out ${0.1 + k * 0.06}s both`, minHeight: 0 }}
             >
-              <div
-                className="flex items-center justify-center shrink-0"
-                style={{ width: 78, height: 78, borderRadius: "50%", background: BOARD.wine, color: BOARD.sand, fontSize: 40 }}
-              >
-                {`${s.symbol}\uFE0E`}
-              </div>
-              <div className="min-w-0">
-                <div className="flex items-baseline gap-3">
-                  <span className="font-serif-display" style={{ fontSize: 32, fontWeight: 600, color: BOARD.wine }}>{s.name}</span>
-                  <span className="font-serif-display italic" style={{ fontSize: 16, color: BOARD.muted }}>{s.dates}</span>
+              <div className="flex items-center gap-4">
+                <div
+                  className="flex items-center justify-center shrink-0"
+                  style={{ width: 52, height: 52, borderRadius: "50%", background: BOARD.wine, color: BOARD.sand, fontSize: 28 }}
+                >
+                  {`${s.symbol}\uFE0E`}
                 </div>
-                <div className="font-serif-display" style={{ fontSize: 25, lineHeight: 1.32, color: BOARD.wine, marginTop: 4 }}>{h.phrase}</div>
-                {h.drink && (
-                  <div className="font-serif-display italic" style={{ fontSize: 21, color: BOARD.orange, marginTop: 8 }}>
-                    Boisson porte-bonheur : {h.drink}
-                  </div>
-                )}
+                <div className="min-w-0">
+                  <div className="font-serif-display" style={{ fontSize: 32, lineHeight: 1, fontWeight: 600, color: BOARD.wine }}>{s.name}</div>
+                  <div className="font-serif-display italic mt-1" style={{ fontSize: 16, color: BOARD.muted }}>{s.dates}</div>
+                </div>
               </div>
+              <div className="font-serif-display mt-3" style={{ fontSize: 26, lineHeight: 1.26, color: BOARD.wine }}>{h.phrase}</div>
+              {h.drink && (
+                <div className="font-serif-display italic mt-auto pt-2" style={{ fontSize: 20, color: BOARD.orange }}>
+                  Boisson porte-bonheur : {h.drink}
+                </div>
+              )}
             </div>
           );
         })}

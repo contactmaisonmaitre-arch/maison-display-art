@@ -61,7 +61,7 @@ export const isTvEligible = (raw) => {
 };
 
 /**
- * @param raw  { handle, title, product_type, vendor, body_html, images:[{src}],
+ * @param raw  { handle, title, product_type, vendor, created_at, body_html, images:[{src}],
  *               variants:[{title, price, available}] }
  */
 export const mapProduct = (raw) => {
@@ -96,5 +96,7 @@ export const mapProduct = (raw) => {
     img,
     available: raw.variants?.some((v) => v.available !== false) ?? true,
     vendor: raw.vendor ?? "",
+    // Date de création sur la boutique (AAAA-MM-JJ) : sert à la scène « nouveautés ».
+    createdAt: raw.created_at ? String(raw.created_at).slice(0, 10) : null,
   };
 };

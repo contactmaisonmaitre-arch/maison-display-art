@@ -1,6 +1,6 @@
 {
   "source": "https://maisonmaitre.com",
-  "fetchedAt": "2026-10-26T09:21:29.106Z",
+  "fetchedAt": "2026-10-27T15:03:53.439Z",
   "products": [
     {
       "handle": "emporter-supplement-grand",
@@ -12,6 +12,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -24,6 +25,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -36,6 +38,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -48,6 +51,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -60,6 +64,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -72,6 +77,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -84,6 +90,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -96,6 +103,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -108,6 +116,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-pumpkin-studio-sept2026.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -120,6 +129,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-tiramisu-studio.webp?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -132,6 +142,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -144,6 +155,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5099_2_dbd5c0e1-7651-40ab-b88d-d878a0f2100c.jpg?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -156,6 +168,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -168,6 +181,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -180,6 +194,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_0095_0ed18f66-847b-466c-9f17-a5ab23d86d2b.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -192,6 +207,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-25.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -204,6 +220,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_4487_2_6d656042-7426-46ee-8897-995848ea6794.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -216,6 +233,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-21.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -228,6 +246,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -240,6 +259,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -252,6 +272,7 @@
       "img": null,
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -264,6 +285,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-22.webp?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -276,6 +298,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-01.webp?v=1791612008",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -288,6 +311,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/insta-18.webp?v=1791612007",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -300,6 +324,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/IMG_5305_3a7d292b-5fd9-44ad-85e5-754c2d640ece.jpg?v=1791612009",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -312,6 +337,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-extraction_01a5d9a5-4dd7-4db2-ad7f-c45e5e8ed37c.jpg?v=1791374557",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-10-07",
       "online": true
     },
     {
@@ -324,6 +350,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-lucero-paquet-v2.png?v=1791612011",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-07-08",
       "online": true
     },
     {
@@ -336,6 +363,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/ataco-chat-tasse-v3.png?v=1789540591",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-09-15",
       "online": true
     },
     {
@@ -348,6 +376,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/kanelbulle-studio-v5.png?v=1789540591",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-09-15",
       "online": true
     },
     {
@@ -360,6 +389,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/pomelo-studio-v3.png?v=1789540592",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-09-15",
       "online": true
     },
     {
@@ -372,6 +402,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-cappuccino.jpg?v=1789457594",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-09-14",
       "online": true
     },
     {
@@ -384,6 +415,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/double-wall-clear-plastic-tumbler-_16-oz_-16-oz-right-697a3dfaf21ab.png?v=1778012350",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2026-01-28",
       "online": true
     },
     {
@@ -396,6 +428,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/corduroy-hat-oxford-navy-front-67f51b8423c19.png?v=1778012351",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-04-08",
       "online": true
     },
     {
@@ -408,6 +441,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/corduroy-hat-camel-front-67f41fa6b4a17.png?v=1778012352",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-04-07",
       "online": true
     },
     {
@@ -420,6 +454,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/enamel-mug-white-12-oz-front-67f41bdf94cf3.png?v=1780757290",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-04-07",
       "online": true
     },
     {
@@ -432,6 +467,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/eco-tote-bag-oyster-front-67f4179c59483.png?v=1778012350",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-04-07",
       "online": true
     },
     {
@@ -444,6 +480,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/can-shaped-glass-_16-oz_-16-oz-front-697a873788078.png?v=1780757291",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-04-07",
       "online": true
     },
     {
@@ -456,6 +493,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-terraforte-studio-v4.png?v=1789540591",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-01-08",
       "online": true
     },
     {
@@ -468,6 +506,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/corduroy-hat-dark-olive-right-front-677daf5d6478b.png?v=1778012351",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-01-07",
       "online": true
     },
     {
@@ -480,6 +519,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/classic-dad-hat-khaki-left-front-677da50a43592.png?v=1778012351",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-01-07",
       "online": true
     },
     {
@@ -492,6 +532,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/fisherman-beanie-black-front-677c5699dffd3.png?v=1783408810",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2025-01-06",
       "online": true
     },
     {
@@ -504,6 +545,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/DSC02821.jpg?v=1780757290",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2024-08-26",
       "online": true
     },
     {
@@ -516,6 +558,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-aguacero-studio-v4.png?v=1789540591",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2024-08-26",
       "online": true
     },
     {
@@ -528,6 +571,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/maison-moka-sidamo-studio-v4.png?v=1789540589",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2024-08-26",
       "online": true
     },
     {
@@ -540,6 +584,7 @@
       "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/altiplano-packshot.png?v=1789291870",
       "available": true,
       "vendor": "Maison Maitre",
+      "createdAt": "2024-02-06",
       "online": true
     },
     {

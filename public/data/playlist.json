@@ -1,5 +1,5 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, matcha, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, matcha, nouveautes, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée.",
   "interlude": {
     "type": "cheminee",
     "seconds": 30,
@@ -55,7 +55,15 @@
       "seconds": 16
     },
     {
+      "type": "nouveautes",
+      "seconds": 18
+    },
+    {
       "type": "produits",
+      "seconds": 16
+    },
+    {
+      "type": "matcha",
       "seconds": 16
     },
     {

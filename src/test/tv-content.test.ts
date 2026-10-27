@@ -8,6 +8,7 @@ import carte from "../../public/data/carte.json";
 import products from "../../public/data/products.json";
 import coups from "../../public/data/coups-de-coeur.json";
 import club from "../../public/data/club.json";
+import { pickNouveautes } from "@/components/signage/scenes/NouveautesScene";
 
 const at = (iso: string) => new Date(`${iso}T10:00:00+02:00`);
 const ctx = { annonceCount: 1, ephemeres: true };
@@ -182,5 +183,15 @@ describe("club", () => {
     expect(seuils).toEqual([...seuils].sort((a, b) => a - b));
     expect(club.steps.length).toBeGreaterThan(0);
     expect(club.footer).not.toMatch(/n'expire jamais/);
+  });
+});
+
+describe("nouveautés", () => {
+  it("les produits récents de la boutique, sans les boissons à emporter", () => {
+    const sel = pickNouveautes(products.products as never, at("2026-10-27"));
+    expect(sel.length).toBeGreaterThan(0);
+    expect(sel.length).toBeLessThanOrEqual(4);
+    expect(sel.every((p) => p.type !== "boisson à emporter" && p.img)).toBe(true);
+    expect(sel.map((p) => p.name).some((n) => n.startsWith("Ataco"))).toBe(true);
   });
 });
