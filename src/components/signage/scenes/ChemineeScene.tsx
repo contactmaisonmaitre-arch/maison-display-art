@@ -1,5 +1,4 @@
-import { VideoLoop } from "@/components/signage/media/VideoLoop";
-import { CHEMINEE_POSTER, CHEMINEE_SRC } from "@/data/scenes";
+import { CHEMINEE_POSTER } from "@/data/scenes";
 
 /** Braises en CSS : ce qu'on voit si la vidéo du feu ne passe pas. */
 const Braises = () => (
@@ -38,9 +37,19 @@ const Braises = () => (
  * Feu de cheminée plein écran — joué en interlude entre les scènes
  * (playlist.json → "interlude") ou comme scène normale (type "cheminee").
  */
-export const ChemineeScene = ({ active, src, poster }: { active: boolean; src?: string; poster?: string }) => (
+export const ChemineeScene = ({ poster }: { poster?: string }) => (
   <div className="absolute inset-0 overflow-hidden" style={{ background: "#140604" }}>
-    <VideoLoop src={src ?? CHEMINEE_SRC} poster={poster ?? CHEMINEE_POSTER} active={active} fallback={<Braises />} />
+    {/* La vidéo est jouée par FireOverlay, par-dessus tout l'écran ; ici, l'image fixe en secours. */}
+    <Braises />
+    <img
+      src={poster ?? CHEMINEE_POSTER}
+      alt=""
+      className="absolute inset-0 h-full w-full"
+      style={{ objectFit: "cover" }}
+      onError={(e) => {
+        (e.currentTarget as HTMLImageElement).style.display = "none";
+      }}
+    />
     {/* Vignette douce pour fondre le feu dans la charte */}
     <div
       className="pointer-events-none absolute inset-0"

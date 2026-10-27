@@ -1,16 +1,18 @@
 import { memo, useCallback, useEffect, useState } from "react";
-import type { WeatherData } from "@/types/signage";
+import type { Scene, WeatherData } from "@/types/signage";
 import { useScenes } from "@/hooks/useScenes";
 import { SceneRenderer } from "@/components/signage/scenes/SceneRenderer";
 
 interface CenterPanelProps {
   weather: WeatherData | null;
+  /** Prévenu à chaque changement de scène (ex. pour afficher le feu par-dessus). */
+  onSceneChange?: (scene: Scene | undefined) => void;
 }
 
 // Durée du fade-out / fade-in d'une scène — doit matcher la transition CSS plus bas.
 const TRANSITION_MS = 1000;
 
-export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
+export const CenterPanel = memo(({ weather, onSceneChange }: CenterPanelProps) => {
   const SCENES = useScenes();
   // Aperçu : ?scene=carte ouvre directement sur cette scène, ?pause la fige.
   const params = new URLSearchParams(window.location.search);
@@ -25,6 +27,10 @@ export const CenterPanel = memo(({ weather }: CenterPanelProps) => {
   // La programmation peut changer en cours de journée (nouvelle playlist,
   // événement qui se termine) → on reste toujours dans les bornes.
   const index = rawIndex % SCENES.length;
+  const current = SCENES[index];
+  useEffect(() => {
+    onSceneChange?.(current);
+  }, [current, onSceneChange]);
   // Index de la scène qui est en train de fade out — null entre les transitions.
   const [previousIndex, setPreviousIndex] = useState<number | null>(null);
   const [progressKey, setProgressKey] = useState(0);

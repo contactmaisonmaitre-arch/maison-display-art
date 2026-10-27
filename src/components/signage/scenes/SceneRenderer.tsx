@@ -98,7 +98,7 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
     case "chatperche-produits":
       return <ChatPercheProduitsScene />;
     case "cheminee":
-      return <ChemineeScene active={active} src={scene.src} poster={scene.poster} />;
+      return <ChemineeScene poster={scene.poster} />;
     case "video":
       return <VideoScene active={active} src={scene.src} poster={scene.poster} />;
     case "club":

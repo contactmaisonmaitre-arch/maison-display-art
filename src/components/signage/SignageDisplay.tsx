@@ -3,6 +3,9 @@ import { useWeather } from "@/hooks/useWeather";
 import { useFitMode, type FitMode } from "@/hooks/useFitMode";
 import { FixedTopBar } from "./layout/FixedTopBar";
 import { CenterPanel } from "./layout/CenterPanel";
+import { FireOverlay } from "./media/FireOverlay";
+import { CHEMINEE_POSTER, CHEMINEE_SRC } from "@/data/scenes";
+import type { Scene } from "@/types/signage";
 
 const FIT_OPTIONS: { k: FitMode; label: string; desc: string }[] = [
   { k: "fit", label: "Adapter", desc: "Aucun contenu coupé" },
@@ -14,6 +17,8 @@ const SignageDisplay = () => {
   const weather = useWeather();
   const { mode, setMode, scale } = useFitMode();
   const [showCtrl, setShowCtrl] = useState(false);
+  const [scene, setScene] = useState<Scene | undefined>();
+  const fire = scene?.type === "cheminee";
 
   // Rechargement complet chaque nuit vers 4h30 : récupère la dernière version
   // publiée du site et évite que le navigateur de la TV s'encrasse.
@@ -98,8 +103,15 @@ const SignageDisplay = () => {
         }}
       >
         <FixedTopBar weather={weather} />
-        <CenterPanel weather={weather} />
+        <CenterPanel weather={weather} onSceneChange={setScene} />
       </div>
+
+      {/* Feu de cheminée : vidéo plein écran hors de la scène mise à l'échelle (voir FireOverlay). */}
+      <FireOverlay
+        active={fire}
+        src={(fire && scene?.src) || CHEMINEE_SRC}
+        poster={(fire && scene?.poster) || CHEMINEE_POSTER}
+      />
 
       {/* Mode d'affichage — visible au survol */}
       <div
