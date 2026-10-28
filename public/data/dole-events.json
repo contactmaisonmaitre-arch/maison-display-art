@@ -1,102 +1,102 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-22T10:31:49.339Z",
+  "fetchedAt": "2026-10-28T11:32:08.771Z",
   "facts": [
+    {
+      "emoji": "📍",
+      "title": "École des sorciers",
+      "body": "Mercredi 28 oct. à Dole · Maison Natale de Louis Pasteur.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Ma première visite au musée",
+      "body": "Mercredi 28 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "📚",
+      "title": "Paroles de conteur : Kamishibike",
+      "body": "Mercredi 28 oct. à Dole · Bibliothèque Mauricette-Rafin.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite guidée : L'Art et la couleur",
+      "body": "Mercredi 28 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "☕",
+      "title": "Le Café de l'Arche",
+      "body": "Mercredi 28 oct. à Dole · Maison des Orphelins.",
+      "date": "2026-10-28"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier parents et ados : Corps, émotions et relations",
+      "body": "Mercredi 28 oct. à Dole · Maison de la Parentalité.",
+      "date": "2026-10-28"
+    },
     {
       "emoji": "🎨",
       "title": "Mon aprèm au musée",
-      "body": "Jeudi 22 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-22"
+      "body": "Jeudi 29 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-29"
     },
     {
       "emoji": "📍",
-      "title": "Bourse aux Vélos et petit matériel",
-      "body": "Vendredi 23 oct. à Dole · Gymnase Lachiche (Ledoux).",
-      "date": "2026-10-23"
+      "title": "Anne Tuffigo",
+      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
+      "date": "2026-10-30"
     },
     {
       "emoji": "🎨",
       "title": "L'Histoire de Dole en balade",
-      "body": "Vendredi 23 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-23"
-    },
-    {
-      "emoji": "📍",
-      "title": "Les rendez-vous métiers de l'International & Tourisme",
-      "body": "Vendredi 23 oct. à Dole · Info Jeunesse Jura Dole.",
-      "date": "2026-10-23"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier Communication Alternative Améliorée",
-      "body": "Vendredi 23 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-23"
-    },
-    {
-      "emoji": "🏆",
-      "title": "CONCOURS AGILITY",
-      "body": "Samedi 24 oct. à Dole · Complexe sportif du Tumulus.",
-      "date": "2026-10-24"
+      "body": "Vendredi 30 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-30"
     },
     {
       "emoji": "📚",
-      "title": "L'Hôtel-Dieu dans tous ses états",
-      "body": "Samedi 24 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Atelier linogravure",
-      "body": "Samedi 24 oct. à Dole · Atelier/Galerie Les Mains Noires.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "☕",
-      "title": "Café Diabète",
-      "body": "Samedi 24 oct. à Choisey · Mairie.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "📚",
-      "title": "Escape Game : Papyrus et la Potion des Pluies Oubliées",
-      "body": "Samedi 24 oct. à Tavaux · Médiathèque de Tavaux.",
-      "date": "2026-10-24"
+      "title": "Guide des secrets pour lire des histoires aux enfants",
+      "body": "Vendredi 30 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-30"
     },
     {
       "emoji": "📍",
-      "title": "l’EXAMA’M",
-      "body": "Samedi 24 oct. à Dole · Salle Georges Brassens, 26A rue du Maréchal Leclerc.",
-      "date": "2026-10-24"
+      "title": "Bouuuuhm Dia de los Muertos",
+      "body": "Vendredi 30 oct. à Dole · Espace Pierre-Talagrand.",
+      "date": "2026-10-30"
     },
     {
       "emoji": "📍",
-      "title": "Soirée Jeux",
-      "body": "Samedi 24 oct. à Dole · Librairie La Passerelle.",
-      "date": "2026-10-24"
+      "title": "Baptême de plongée",
+      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "🎨",
+      "title": "L'art face à l'I.A.",
+      "body": "Samedi 31 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique : Vision d'horreur, les oeuvres qui font peur - Halloween au musée",
+      "body": "Samedi 31 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-31"
     },
     {
       "emoji": "📍",
-      "title": "Rendez-vous des créateurs",
-      "body": "Samedi 24 oct. à Tavaux · Gymnase Pierre Mendes.",
-      "date": "2026-10-24"
+      "title": "Halloween à Dole",
+      "body": "Samedi 31 oct. à Dole · Centre-Ville.",
+      "date": "2026-10-31"
     },
     {
       "emoji": "📍",
-      "title": "Salon d'Epanouissement Personnel",
-      "body": "Samedi 24 oct. à Dole · Manège de Brack.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "☕",
-      "title": "CAFÉ DIABÈTE",
-      "body": "Samedi 24 oct. à Choisey · Mairie.",
-      "date": "2026-10-24"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
-      "body": "Samedi 24 oct. à Dole · Maison de la Parentalité.",
-      "date": "2026-10-24"
+      "title": "club DoleSubaquatique : Baptêmes de plongée",
+      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
+      "date": "2026-10-31"
     }
   ]
 }
