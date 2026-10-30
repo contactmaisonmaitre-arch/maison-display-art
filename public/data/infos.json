@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-29T10:24:53.582Z",
+  "fetchedAt": "2026-10-30T10:27:35.738Z",
   "ephemerides": {
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "events": [
       {
-        "year": 1969,
-        "text": "envoi par le réseau ARPANET du premier message électronique — le mot « login » — depuis l'université de Californie à Los Angeles vers l'institut de recherche de Stanford.",
+        "year": 2014,
+        "text": "des manifestants occupent et saccagent l’Assemblée nationale du Burkina Faso à Ouagadougou.",
         "kind": "event"
       },
       {
-        "year": 1923,
-        "text": "proclamation de la République de Turquie après la chute de l'Empire ottoman ; Mustafa Kemal Atatürk (photo) déplace la capitale de Constantinople — qui devient Istanbul — à Ankara.",
+        "year": 2014,
+        "text": "la Suède reconnaît officiellement la Palestine.",
         "kind": "event"
       },
       {
-        "year": 1888,
-        "text": "signature de la convention de Constantinople réglementant la circulation dans le canal de Suez.",
+        "year": 2012,
+        "text": "the Walt Disney Company achète Lucasfilm.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "ouverture de la ligne Marmaray, un tunnel ferroviaire sous le Bosphore reliant les rives européenne et asiatique d’Istanbul en Turquie.",
+        "year": 1992,
+        "text": "des violences ethniques éclatent entre Ossètes et Ingouches dans le Caucase au sud de la Russie.",
         "kind": "event"
       },
       {
-        "year": 2008,
-        "text": "fusion de Delta Air Lines et Northwest Airlines sous le seul nom de Delta, créant la plus grande compagnie aérienne mondiale.",
+        "year": 1987,
+        "text": "sortie au Japon de la PC-Engine — par la suite rebaptisée TurboGrafx-16 —, une console de jeux vidéo de quatrième génération 16-bit, par la société nippone NEC.",
         "kind": "event"
       },
       {
-        "year": 2004,
-        "text": "Norodom Sihamoni devient roi du Cambodge.",
+        "year": 1985,
+        "text": "la navette spatiale Challenger décolle pour sa 9e mission (la dernière à réussir).",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1998,
-        "text": "Lance Stroll, pilote automobile canadien.",
+        "year": 2000,
+        "text": "Giselle, chanteuse japonaise.",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Fouad Aghnima, joueur international allemand de futsal.",
-        "kind": "birth"
-      },
-      {
-        "year": 1992,
-        "text": "Evan Fournier, basketteur français.",
+        "text": "Hester van der Veld, joueuse néerlandaise de hockey sur gazon.",
         "kind": "birth"
       },
       {
         "year": 1991,
-        "text": "Linda Bousbaa, basketteuse française.",
+        "text": "Artemi Panarine (Артемий Сергеевич Панарин), hockeyeur sur glace russe.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Dmitri Koulikov (Дмитрий Владимирович Куликов), hockeyeur sur glace russe.",
+        "text": "Catherine Brunet, actrice québécoise.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Amarna Miller, actrice pornographique Espagnole.",
+        "text": "Joseph Matthew « Joe » Panik, joueur de baseball américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "Gauvain Sers, chanteur français.",
         "kind": "birth"
       }
     ]
