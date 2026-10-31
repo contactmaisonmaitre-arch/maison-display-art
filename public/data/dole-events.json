@@ -1,37 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-10-30T11:33:37.515Z",
+  "fetchedAt": "2026-10-31T11:08:11.842Z",
   "facts": [
-    {
-      "emoji": "🎨",
-      "title": "L'Histoire de Dole en balade",
-      "body": "Vendredi 30 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-30"
-    },
-    {
-      "emoji": "📍",
-      "title": "Bouuuuhm Dia de los Muertos",
-      "body": "Vendredi 30 oct. à Dole · Espace Pierre-Talagrand.",
-      "date": "2026-10-30"
-    },
-    {
-      "emoji": "📍",
-      "title": "Anne Tuffigo",
-      "body": "Vendredi 30 oct. à Dole · La Commanderie.",
-      "date": "2026-10-30"
-    },
-    {
-      "emoji": "📚",
-      "title": "Guide des secrets pour lire des histoires aux enfants",
-      "body": "Vendredi 30 oct. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-10-30"
-    },
-    {
-      "emoji": "📍",
-      "title": "Camille Jourdy en dédicace \" L'Homme en fer-blanc\"",
-      "body": "Samedi 31 oct. à Dole · Librairie La Passerelle.",
-      "date": "2026-10-31"
-    },
     {
       "emoji": "📍",
       "title": "Soirée loup-garou",
@@ -40,14 +10,8 @@
     },
     {
       "emoji": "📍",
-      "title": "club DoleSubaquatique : Baptêmes de plongée",
-      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
-      "date": "2026-10-31"
-    },
-    {
-      "emoji": "📍",
-      "title": "Halloween à Dole",
-      "body": "Samedi 31 oct. à Dole · Centre-Ville.",
+      "title": "Camille Jourdy en dédicace \" L'Homme en fer-blanc\"",
+      "body": "Samedi 31 oct. à Dole · Librairie La Passerelle.",
       "date": "2026-10-31"
     },
     {
@@ -57,21 +21,9 @@
       "date": "2026-10-31"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite thématique : Vision d'horreur, les oeuvres qui font peur - Halloween au musée",
-      "body": "Samedi 31 oct. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-10-31"
-    },
-    {
       "emoji": "📍",
       "title": "Journée Hallowwen à Rochefort",
       "body": "Samedi 31 oct. à Rochefort-sur-Nenon · Place de la Mairie.",
-      "date": "2026-10-31"
-    },
-    {
-      "emoji": "📍",
-      "title": "Baptême de plongée",
-      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
       "date": "2026-10-31"
     },
     {
@@ -90,6 +42,30 @@
       "emoji": "📍",
       "title": "Chorale au profit de la SPA de Dole",
       "body": "Samedi 31 oct. à Lavans-lès-Dole · Eglise.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "📍",
+      "title": "Halloween à Dole",
+      "body": "Samedi 31 oct. à Dole · Centre-Ville.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "📍",
+      "title": "club DoleSubaquatique : Baptêmes de plongée",
+      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique : Vision d'horreur, les oeuvres qui font peur - Halloween au musée",
+      "body": "Samedi 31 oct. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-10-31"
+    },
+    {
+      "emoji": "📍",
+      "title": "Baptême de plongée",
+      "body": "Samedi 31 oct. à Dole · Place Precipiano.",
       "date": "2026-10-31"
     }
   ]
