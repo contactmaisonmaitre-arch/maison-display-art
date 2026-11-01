@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-10-31T09:57:16.966Z",
+  "fetchedAt": "2026-11-01T10:48:19.294Z",
   "ephemerides": {
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "events": [
       {
-        "year": 2011,
-        "text": "la population mondiale atteint les sept milliards d'individus selon les estimations de l'Organisation des Nations unies.",
+        "year": 2025,
+        "text": "Inauguration du Grand Musée égyptien, le plus grand musée du monde dédié à l'Égypte antique.",
         "kind": "event"
       },
       {
-        "year": 1978,
-        "text": "approbation de la nouvelle constitution espagnole par les Cortes Generales.",
+        "year": 1952,
+        "text": "les États-Unis font exploser Ivy Mike (photo), leur première bombe H, à Eniwetok dans les îles Marshall.",
         "kind": "event"
       },
       {
-        "year": 1517,
-        "text": "Martin Luther (portrait) placarde ses « 95 thèses » à la porte de l'église de Wittemberg.",
+        "year": 1929,
+        "text": "Léopoldville (actuelle Kinshasa) devient capitale du Congo belge à la place de Boma.",
         "kind": "event"
       },
       {
-        "year": 2016,
-        "text": "fin de l’opération Sangaris en République centrafricaine.",
+        "year": 1814,
+        "text": "ouverture du congrès de Vienne pour établir un nouvel ordre politique européen après la première abdication de Napoléon Ier.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "passage de l'astéroïde 2015 TB145 à proximité de la Terre, à 1,3 fois la distance Terre-Lune.",
+        "year": 1501,
+        "text": "découverte de la baie de Tous les Saints sur le littoral brésilien par l'expédition commandée par Gaspar de Lemos.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "le vol 9268 Metrojet s’écrase, dans la péninsule du Sinaï, tuant les 224 passagers de l’appareil.",
+        "year": 2025,
+        "text": "inauguration du Grand Musée égyptien, le plus grand musée du monde dédié à l'Égypte antique qui rassemble plus de 100 000 pièces.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2005,
-        "text": "Leonor de Borbón Ortiz, princesse héritière du trône d'Espagne.",
-        "kind": "birth"
-      },
-      {
-        "year": 2002,
-        "text": "Ansu Fati , footballeur espagnol.",
-        "kind": "birth"
-      },
-      {
-        "year": 2000,
-        "text": "Willow Smith, actrice américaine, fille de Will Smith.",
-        "kind": "birth"
-      },
-      {
-        "year": 1999,
-        "text": "Léa Serna, patineuse artistique française.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Alice Morel-Michaud, actrice québécoise.",
+        "year": 2006,
+        "text": "Dmitri Iakovlev, orphelin russe († 8 juillet 2008).",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Marcus Rashford , footballeur anglais.",
+        "text": "Kaylee Bryant, actrice américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Lil Peep, rappeur américain († 15 novembre 2017).",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Yoo Jeongyeon, chanteuse et danseuse sud-coréenne.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Joe Chealey, basketteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "Sébastien Corchia, footballeur français.",
         "kind": "birth"
       }
     ]
