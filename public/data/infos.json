@@ -1,12 +1,6 @@
 {
   "vacances": [
     {
-      "name": "Vacances de la Toussaint",
-      "start": "2026-10-17",
-      "end": "2026-11-02",
-      "zone": "Zone A"
-    },
-    {
       "name": "Vacances de Noël",
       "start": "2026-12-19",
       "end": "2027-01-04",
@@ -23,72 +17,78 @@
       "start": "2027-04-10",
       "end": "2027-04-26",
       "zone": "Zone A"
+    },
+    {
+      "name": "Pont de l'Ascension",
+      "start": "2027-05-07",
+      "end": "2027-05-07",
+      "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-01T10:48:19.294Z",
+  "fetchedAt": "2026-11-02T11:40:46.941Z",
   "ephemerides": {
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "events": [
       {
-        "year": 2025,
-        "text": "Inauguration du Grand Musée égyptien, le plus grand musée du monde dédié à l'Égypte antique.",
+        "year": 2000,
+        "text": "la Station spatiale internationale accueille ses trois premiers occupants avec l'expédition 1.",
         "kind": "event"
       },
       {
-        "year": 1952,
-        "text": "les États-Unis font exploser Ivy Mike (photo), leur première bombe H, à Eniwetok dans les îles Marshall.",
+        "year": 1930,
+        "text": "Haïlé Sélassié (photo) est sacré Negusse Negest d'Abyssinie.",
         "kind": "event"
       },
       {
-        "year": 1929,
-        "text": "Léopoldville (actuelle Kinshasa) devient capitale du Congo belge à la place de Boma.",
+        "year": 1917,
+        "text": "déclaration Balfour sur l'établissement d'un foyer national pour le peuple juif en Palestine.",
         "kind": "event"
       },
       {
-        "year": 1814,
-        "text": "ouverture du congrès de Vienne pour établir un nouvel ordre politique européen après la première abdication de Napoléon Ier.",
+        "year": 2017,
+        "text": "la mission franco-égyptienne Scanpyramids annonce avoir découvert une cavité dans la pyramide de Khéops.",
         "kind": "event"
       },
       {
-        "year": 1501,
-        "text": "découverte de la baie de Tous les Saints sur le littoral brésilien par l'expédition commandée par Gaspar de Lemos.",
+        "year": 2012,
+        "text": "la navette spatiale américaine Atlantis rejoint le Space Center Visitor Complex du Centre spatial Kennedy, en Floride, près de Cap Canaveral.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "inauguration du Grand Musée égyptien, le plus grand musée du monde dédié à l'Égypte antique qui rassemble plus de 100 000 pièces.",
+        "year": 2006,
+        "text": "en Afghanistan, fondation du Front national uni.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Dmitri Iakovlev, orphelin russe († 8 juillet 2008).",
-        "kind": "birth"
-      },
-      {
-        "year": 1997,
-        "text": "Kaylee Bryant, actrice américaine.",
+        "year": 2000,
+        "text": "Anne Tukkers, joueuse néerlandaise de hockey sur gazon.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Lil Peep, rappeur américain († 15 novembre 2017).",
+        "text": "Jana Fett, joueuse de tennis croate.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Yoo Jeongyeon, chanteuse et danseuse sud-coréenne.",
+        "year": 1993,
+        "text": "Marianne Fortier, actrice canadienne.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Joe Chealey, basketteur américain.",
+        "year": 1993,
+        "text": "Radwa Reda, taekwondoïste égyptienne.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Sébastien Corchia, footballeur français.",
+        "text": "Kendall Schmidt, acteur et chanteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "Luke Schenn, hockeyeur sur glace canadien.",
         "kind": "birth"
       }
     ]
