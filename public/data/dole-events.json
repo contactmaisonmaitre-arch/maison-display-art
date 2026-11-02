@@ -1,18 +1,12 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-01T11:59:01.633Z",
+  "fetchedAt": "2026-11-02T13:46:34.261Z",
   "facts": [
     {
-      "emoji": "🎬",
-      "title": "Los Angeles, différemment cette fois",
-      "body": "Dimanche 01 nov. à Dole · Cinéma Majestic Rive Gauche.",
-      "date": "2026-11-01"
-    },
-    {
       "emoji": "🎨",
-      "title": "Ctrl + Alt + Art - Peindre le jeu vidéo",
-      "body": "Dimanche 01 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-01"
+      "title": "RDV de l'Histoire de l'Art - Ombres et lumières : Caravage et le caravagisme",
+      "body": "Mardi 03 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-03"
     },
     {
       "emoji": "🎨",
@@ -34,45 +28,45 @@
     },
     {
       "emoji": "📍",
-      "title": "Championnat Territorial Ring",
-      "body": "Samedi 07 nov. à Damparis ·.",
+      "title": "Tribute The Cure",
+      "body": "Samedi 07 nov. à Choisey · Beer Hoppy.",
       "date": "2026-11-07"
     },
     {
-      "emoji": "📍",
-      "title": "Loto des Razmotos",
-      "body": "Mercredi 18 nov. à Tavaux · Salle Gérard Philipe.",
+      "emoji": "👨‍👩‍👧",
+      "title": "Cercles de parents",
+      "body": "Lundi 16 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-16"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Temps de rencontre après la perte d'un enfant",
+      "body": "Mardi 17 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-17"
+    },
+    {
+      "emoji": "🩰",
+      "title": "CASSE-NOISETTE Ballet et Orchestre",
+      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
       "date": "2026-11-18"
     },
     {
       "emoji": "📍",
-      "title": "Salon des voyages 2026",
-      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "📚",
-      "title": "Bourse aux jouets et livres",
-      "body": "Samedi 21 nov. à Dole · Ancienne école d'Azans.",
+      "title": "Découverte de la réserve naturelle",
+      "body": "Samedi 21 nov. à Gevry ·.",
       "date": "2026-11-21"
     },
     {
       "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 22 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-22"
+      "title": "Jeudi de l'exposition - Conférence",
+      "body": "Jeudi 26 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-26"
     },
     {
-      "emoji": "📍",
-      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
-      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "📍",
-      "title": "Bourse aux skis",
-      "body": "Dimanche 29 nov. à Tavaux · Salle Gérard Philipe.",
-      "date": "2026-11-29"
+      "emoji": "🥖",
+      "title": "Marché de Noel",
+      "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
+      "date": "2026-11-28"
     }
   ]
 }
