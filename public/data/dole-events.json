@@ -1,6 +1,6 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-02T13:46:34.261Z",
+  "fetchedAt": "2026-11-03T12:57:48.898Z",
   "facts": [
     {
       "emoji": "🎨",
@@ -15,10 +15,16 @@
       "date": "2026-11-03"
     },
     {
-      "emoji": "🎨",
-      "title": "LES ARTISANALES",
-      "body": "Jeudi 05 nov. à Dole · Manège de Brack.",
-      "date": "2026-11-05"
+      "emoji": "📚",
+      "title": "Secrets de restauration, visite inaugurale",
+      "body": "Mercredi 04 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-11-04"
+    },
+    {
+      "emoji": "📚",
+      "title": "Les secrets de \"Génération Mitterrand\"",
+      "body": "Vendredi 06 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-11-06"
     },
     {
       "emoji": "📍",
@@ -28,21 +34,27 @@
     },
     {
       "emoji": "📍",
-      "title": "Tribute The Cure",
-      "body": "Samedi 07 nov. à Choisey · Beer Hoppy.",
+      "title": "Championnat Territorial Ring",
+      "body": "Samedi 07 nov. à Damparis ·.",
       "date": "2026-11-07"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents",
-      "body": "Lundi 16 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-16"
+      "emoji": "🎨",
+      "title": "Un dimanche au musée - Yoga",
+      "body": "Dimanche 08 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-08"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Temps de rencontre après la perte d'un enfant",
-      "body": "Mardi 17 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-17"
+      "emoji": "📍",
+      "title": "Loto des pompiers du Grand Dole",
+      "body": "Vendredi 13 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Concert Les Bousous",
+      "body": "Samedi 14 nov. à Tavaux · Centre Gérard Philipe.",
+      "date": "2026-11-14"
     },
     {
       "emoji": "🩰",
@@ -51,16 +63,28 @@
       "date": "2026-11-18"
     },
     {
-      "emoji": "📍",
-      "title": "Découverte de la réserve naturelle",
-      "body": "Samedi 21 nov. à Gevry ·.",
+      "emoji": "🎉",
+      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
+      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
+      "date": "2026-11-19"
+    },
+    {
+      "emoji": "📚",
+      "title": "Bourse aux jouets et livres",
+      "body": "Samedi 21 nov. à Dole · Ancienne école d'Azans.",
       "date": "2026-11-21"
     },
     {
       "emoji": "🎨",
-      "title": "Jeudi de l'exposition - Conférence",
-      "body": "Jeudi 26 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-26"
+      "title": "SALON DOLE ARTS ET LIVRES",
+      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "🎭",
+      "title": "Calogero, un soir dans les théâtres",
+      "body": "Mercredi 25 nov. à Dole · La Commanderie.",
+      "date": "2026-11-25"
     },
     {
       "emoji": "🥖",
