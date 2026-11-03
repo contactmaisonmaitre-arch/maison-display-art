@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-02T11:40:46.941Z",
+  "fetchedAt": "2026-11-03T11:20:20.278Z",
   "ephemerides": {
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "events": [
       {
-        "year": 2000,
-        "text": "la Station spatiale internationale accueille ses trois premiers occupants avec l'expédition 1.",
+        "year": 1978,
+        "text": "indépendance de la Dominique vis-à-vis du Royaume-Uni.",
         "kind": "event"
       },
       {
-        "year": 1930,
-        "text": "Haïlé Sélassié (photo) est sacré Negusse Negest d'Abyssinie.",
+        "year": 1958,
+        "text": "inauguration de la maison de l'UNESCO à Paris.",
         "kind": "event"
       },
       {
-        "year": 1917,
-        "text": "déclaration Balfour sur l'établissement d'un foyer national pour le peuple juif en Palestine.",
+        "year": 1957,
+        "text": "la chienne Laïka, à bord de Spoutnik 2, devient le premier être vivant à être mis en orbite ; elle survit sept heures.",
         "kind": "event"
       },
       {
-        "year": 2017,
-        "text": "la mission franco-égyptienne Scanpyramids annonce avoir découvert une cavité dans la pyramide de Khéops.",
+        "year": 1903,
+        "text": "indépendance du Panama vis-à-vis de la Colombie, dont il constituait un département.",
         "kind": "event"
       },
       {
-        "year": 2012,
-        "text": "la navette spatiale américaine Atlantis rejoint le Space Center Visitor Complex du Centre spatial Kennedy, en Floride, près de Cap Canaveral.",
+        "year": 1468,
+        "text": "pillage de la ville de Liège par Charles le Téméraire.",
         "kind": "event"
       },
       {
-        "year": 2006,
-        "text": "en Afghanistan, fondation du Front national uni.",
+        "year": 1978,
+        "text": "indépendance de la Dominique.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Anne Tukkers, joueuse néerlandaise de hockey sur gazon.",
+        "year": 2007,
+        "text": "Ever Anderson, actrice et mannequin américano-britannico-ukrainienne.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Jana Fett, joueuse de tennis croate.",
+        "year": 1997,
+        "text": "Diana Silvers, actrice et mannequin américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Kendall Jenner, mannequin américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Coline Mattel, sauteuse à ski française.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Jean Quiquampoix, tireur sportif français, champion olympique.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Marianne Fortier, actrice canadienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Radwa Reda, taekwondoïste égyptienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1990,
-        "text": "Kendall Schmidt, acteur et chanteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Luke Schenn, hockeyeur sur glace canadien.",
+        "text": "Kaleena Mosqueda-Lewis, basketteuse américaine.",
         "kind": "birth"
       }
     ]
