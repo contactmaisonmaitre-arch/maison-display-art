@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-03T11:20:20.278Z",
+  "fetchedAt": "2026-11-04T11:34:16.000Z",
   "ephemerides": {
-    "date": "2026-11-03",
+    "date": "2026-11-04",
     "events": [
       {
-        "year": 1978,
-        "text": "indépendance de la Dominique vis-à-vis du Royaume-Uni.",
+        "year": 1979,
+        "text": "prise d'assaut de l'ambassade américaine à Téhéran.",
         "kind": "event"
       },
       {
-        "year": 1958,
-        "text": "inauguration de la maison de l'UNESCO à Paris.",
+        "year": 1950,
+        "text": "signature de la Convention européenne des droits de l'homme par les États membres du Conseil de l'Europe.",
         "kind": "event"
       },
       {
-        "year": 1957,
-        "text": "la chienne Laïka, à bord de Spoutnik 2, devient le premier être vivant à être mis en orbite ; elle survit sept heures.",
+        "year": 1922,
+        "text": "l'égyptologue britannique Howard Carter découvre le tombeau du pharaon Toutânkhamon (masque funéraire) dans la vallée des Rois.",
         "kind": "event"
       },
       {
-        "year": 1903,
-        "text": "indépendance du Panama vis-à-vis de la Colombie, dont il constituait un département.",
+        "year": 1911,
+        "text": "traité franco-allemand à la suite du coup de force d'Agadir.",
         "kind": "event"
       },
       {
-        "year": 1468,
-        "text": "pillage de la ville de Liège par Charles le Téméraire.",
+        "year": 1848,
+        "text": "promulgation de la constitution de la Deuxième République en France.",
         "kind": "event"
       },
       {
-        "year": 1978,
-        "text": "indépendance de la Dominique.",
+        "year": 2025,
+        "text": "aux États-Unis, le socialiste démocrate Zohran Mamdani est élu maire de New York.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2007,
-        "text": "Ever Anderson, actrice et mannequin américano-britannico-ukrainienne.",
+        "year": 2000,
+        "text": "Feryel Ziden, escrimeuse tunisienne.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Diana Silvers, actrice et mannequin américaine.",
+        "year": 1999,
+        "text": "Emma Maltais, joueuse de hockey canadienne.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Kendall Jenner, mannequin américain.",
+        "year": 1998,
+        "text": "Darcy Rose Byrnes, actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Coline Mattel, sauteuse à ski française.",
+        "year": 1987,
+        "text": "T.O.P (Choi Seung-hyun dit), chanteur et acteur sud-coréen du groupe BIGBANG.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Jean Quiquampoix, tireur sportif français, champion olympique.",
+        "year": 1985,
+        "text": "Olivia Taylor Dudley, actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Kaleena Mosqueda-Lewis, basketteuse américaine.",
+        "year": 1984,
+        "text": "Dustin Brown, hockeyeur professionnel américain.",
         "kind": "birth"
       }
     ]
