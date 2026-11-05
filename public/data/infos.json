@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-04T11:34:16.000Z",
+  "fetchedAt": "2026-11-05T11:29:43.549Z",
   "ephemerides": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "events": [
       {
-        "year": 1979,
-        "text": "prise d'assaut de l'ambassade américaine à Téhéran.",
+        "year": 2013,
+        "text": "l'Inde lance la sonde spatiale Mangalyaan en direction de la planète Mars.",
         "kind": "event"
       },
       {
-        "year": 1950,
-        "text": "signature de la Convention européenne des droits de l'homme par les États membres du Conseil de l'Europe.",
+        "year": 2021,
+        "text": "en Sierra Leone, au moins 101 personnes meurent lors de l'explosion d'un camion-citerne à Freetown.",
         "kind": "event"
       },
       {
-        "year": 1922,
-        "text": "l'égyptologue britannique Howard Carter découvre le tombeau du pharaon Toutânkhamon (masque funéraire) dans la vallée des Rois.",
+        "year": 2017,
+        "text": "Publication des Paradise Papers",
         "kind": "event"
       },
       {
-        "year": 1911,
-        "text": "traité franco-allemand à la suite du coup de force d'Agadir.",
+        "year": 2015,
+        "text": "La rupture de deux digues de déchets miniers, dans le Minas Gerais (Brésil), provoque la destruction d'un village.",
         "kind": "event"
       },
       {
-        "year": 1848,
-        "text": "promulgation de la constitution de la Deuxième République en France.",
+        "year": 2013,
+        "text": "Bill de Blasio est élu le 109e maire de New York.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "aux États-Unis, le socialiste démocrate Zohran Mamdani est élu maire de New York.",
+        "year": 2013,
+        "text": "l’Inde lance la sonde spatiale Mangalyaan en direction de la planète Mars.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Feryel Ziden, escrimeuse tunisienne.",
+        "year": 2006,
+        "text": "Harouna Djibirin, footballeur camerounais.",
+        "kind": "birth"
+      },
+      {
+        "year": 2004,
+        "text": "Yaimar Medina, footballeur équatorien.",
+        "kind": "birth"
+      },
+      {
+        "year": 2003,
+        "text": "Wilfried Gnonto, footballeur italien.",
+        "kind": "birth"
+      },
+      {
+        "year": 2003,
+        "text": "Shea Charles, footballeur nord-irlandais.",
+        "kind": "birth"
+      },
+      {
+        "year": 2002,
+        "text": "Berta Castañé, actrice et mannequin espagnole.",
         "kind": "birth"
       },
       {
         "year": 1999,
-        "text": "Emma Maltais, joueuse de hockey canadienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Darcy Rose Byrnes, actrice américaine.",
-        "kind": "birth"
-      },
-      {
-        "year": 1987,
-        "text": "T.O.P (Choi Seung-hyun dit), chanteur et acteur sud-coréen du groupe BIGBANG.",
-        "kind": "birth"
-      },
-      {
-        "year": 1985,
-        "text": "Olivia Taylor Dudley, actrice américaine.",
-        "kind": "birth"
-      },
-      {
-        "year": 1984,
-        "text": "Dustin Brown, hockeyeur professionnel américain.",
+        "text": "Odette Ahirindi Menkreo, joueuse de volley-ball camerounaise.",
         "kind": "birth"
       }
     ]
