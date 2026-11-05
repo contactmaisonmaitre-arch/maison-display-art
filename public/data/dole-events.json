@@ -1,6 +1,6 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-04T13:13:20.487Z",
+  "fetchedAt": "2026-11-05T13:27:02.578Z",
   "facts": [
     {
       "emoji": "🎨",
@@ -9,82 +9,40 @@
       "date": "2026-11-05"
     },
     {
-      "emoji": "📚",
-      "title": "Les secrets de \"Génération Mitterrand\"",
-      "body": "Vendredi 06 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-11-06"
-    },
-    {
       "emoji": "📍",
       "title": "Nutrition seniors",
       "body": "Vendredi 06 nov. à Dole · Espace Santé Dole Nord Jura.",
       "date": "2026-11-06"
     },
     {
-      "emoji": "📍",
-      "title": "Tribute The Cure",
-      "body": "Samedi 07 nov. à Choisey · Beer Hoppy.",
+      "emoji": "🎉",
+      "title": "Bourse aux jouets",
+      "body": "Samedi 07 nov. à Audelange · Salle des Fêtes d'Audelange.",
       "date": "2026-11-07"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
-      "body": "Dimanche 08 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-08"
+      "emoji": "👨‍👩‍👧",
+      "title": "Rendez-vous préparatoire - ATELIER DE COUTURE UNIVERS BRIDGERTON",
+      "body": "Jeudi 12 nov. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-11-12"
     },
     {
       "emoji": "🎶",
-      "title": "Paroles de Jazz",
-      "body": "Mardi 10 nov. à Dole · Librairie La Passerelle.",
-      "date": "2026-11-10"
-    },
-    {
-      "emoji": "📍",
-      "title": "J.U.NE",
-      "body": "Vendredi 13 nov. à Dole · CEM - 7C avenue de Northwich.",
-      "date": "2026-11-13"
-    },
-    {
-      "emoji": "🎶",
-      "title": "Concert secret !",
-      "body": "Samedi 14 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "title": "concert Bénabar",
+      "body": "Samedi 14 nov. à Dole · La Commanderie.",
       "date": "2026-11-14"
     },
     {
-      "emoji": "🎉",
-      "title": "NATURALIES 2026",
-      "body": "Dimanche 15 nov. à Crissey · Salle des Fêtes de Crissey.",
-      "date": "2026-11-15"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Temps de rencontre après la perte d'un enfant",
-      "body": "Mardi 17 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-17"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Ballet Casse-noisette",
-      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
-      "date": "2026-11-18"
-    },
-    {
-      "emoji": "🎉",
-      "title": "Ciné-débat : La Réparation",
-      "body": "Jeudi 19 nov. à Eclans-Nenon · Salle des fêtes d'Éclans-Nenon.",
+      "emoji": "📍",
+      "title": "Réunion d'information - Escapade Spécial Seniors",
+      "body": "Jeudi 19 nov. à Dole · Hôtel de Ville, Salle Edgar Faure.",
       "date": "2026-11-19"
     },
     {
-      "emoji": "🎭",
-      "title": "Vaslav",
-      "body": "Vendredi 20 nov. à Dole · Théâtre municipal.",
+      "emoji": "📚",
+      "title": "Les Belles Latinas : au coeur de l'Argentine",
+      "body": "Vendredi 20 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
       "date": "2026-11-20"
-    },
-    {
-      "emoji": "📍",
-      "title": "Découverte de la réserve naturelle",
-      "body": "Samedi 21 nov. à Gevry ·.",
-      "date": "2026-11-21"
     },
     {
       "emoji": "👨‍👩‍👧",
@@ -93,10 +51,10 @@
       "date": "2026-11-25"
     },
     {
-      "emoji": "🥖",
-      "title": "Marché de Noel",
-      "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
-      "date": "2026-11-28"
+      "emoji": "📍",
+      "title": "Bourse aux skis",
+      "body": "Dimanche 29 nov. à Tavaux · Salle Gérard Philipe.",
+      "date": "2026-11-29"
     }
   ]
 }
