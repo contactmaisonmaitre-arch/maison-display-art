@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-05T11:29:43.549Z",
+  "fetchedAt": "2026-11-06T11:29:44.093Z",
   "ephemerides": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "events": [
       {
-        "year": 2013,
-        "text": "l'Inde lance la sonde spatiale Mangalyaan en direction de la planète Mars.",
+        "year": 1975,
+        "text": "début de la Marche verte lancée par le roi du Maroc Hassan II sur le Sahara espagnol.",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "en Sierra Leone, au moins 101 personnes meurent lors de l'explosion d'un camion-citerne à Freetown.",
+        "year": 2025,
+        "text": "le Florentin et d'autres joyaux de la famille impériale des Habsbourg sont « retrouvés » au Canada plus de cent ans après leur volatilisation en Suisse.",
         "kind": "event"
       },
       {
-        "year": 2017,
-        "text": "Publication des Paradise Papers",
+        "year": 2022,
+        "text": "en Tanzanie, un ATR 42-500, effectuant le vol Precision Air 494 s’écrase dans le lac Victoria, tuant 19 des 43 personnes à bord.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "La rupture de deux digues de déchets miniers, dans le Minas Gerais (Brésil), provoque la destruction d'un village.",
+        "year": 2006,
+        "text": "la conférence internationale pour les Principes de Yogyakarta commence, en Indonésie.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "Bill de Blasio est élu le 109e maire de New York.",
+        "year": 2004,
+        "text": "le prince Louis de Bourbon se marie religieusement avec María Margarita Vargas Santaella, roturière vénézuélienne.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "l’Inde lance la sonde spatiale Mangalyaan en direction de la planète Mars.",
+        "year": 1996,
+        "text": "la Croatie devient le 40e État du Conseil de l'Europe avant de le devenir de l'Union européenne.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Harouna Djibirin, footballeur camerounais.",
-        "kind": "birth"
-      },
-      {
-        "year": 2004,
-        "text": "Yaimar Medina, footballeur équatorien.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Wilfried Gnonto, footballeur italien.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Shea Charles, footballeur nord-irlandais.",
-        "kind": "birth"
-      },
-      {
         "year": 2002,
-        "text": "Berta Castañé, actrice et mannequin espagnole.",
+        "text": "Mya-Lecia Naylor, actrice, chanteuse et mannequin britannique († 7 avril 2019).",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Odette Ahirindi Menkreo, joueuse de volley-ball camerounaise.",
+        "year": 2000,
+        "text": "Mathis Dossou-Yovo, basketteur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Anys Mezzaour (أنيس مزاور), écrivain algérien.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Jang Seung-yeon, chanteuse sud-coréenne du girl group CLC.",
+        "kind": "birth"
+      },
+      {
+        "year": 1994,
+        "text": "Isaah Yeo, joueur de rugby australien.",
+        "kind": "birth"
+      },
+      {
+        "year": 1993,
+        "text": "Alastair Aiken, YouTuber britannique.",
         "kind": "birth"
       }
     ]
