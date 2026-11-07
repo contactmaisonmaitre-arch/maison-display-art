@@ -1,54 +1,48 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-06T13:10:34.576Z",
+  "fetchedAt": "2026-11-07T11:53:15.418Z",
   "facts": [
     {
+      "emoji": "📚",
+      "title": "COMMENCER SON HISTOIRE EN HISTOIRES",
+      "body": "Samedi 07 nov. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-11-07"
+    },
+    {
       "emoji": "📍",
-      "title": "Nutrition seniors",
-      "body": "Vendredi 06 nov. à Dole · Espace Santé Dole Nord Jura.",
-      "date": "2026-11-06"
+      "title": "Cérémonies commémoratives du 11 novembre",
+      "body": "Mercredi 11 nov. à Dole · Cimetière de Landon, 11h30.",
+      "date": "2026-11-11"
     },
     {
-      "emoji": "🎶",
-      "title": "Paroles de Jazz",
-      "body": "Mardi 10 nov. à Dole · Librairie La Passerelle.",
-      "date": "2026-11-10"
+      "emoji": "📍",
+      "title": "DUB INC",
+      "body": "Jeudi 12 nov. à Dole · La Commanderie.",
+      "date": "2026-11-12"
     },
     {
-      "emoji": "🏺",
-      "title": "RDV du patrimoine : La Rive Gauche change de décor",
-      "body": "Samedi 14 nov. à Dole · Centre-Ville.",
-      "date": "2026-11-14"
+      "emoji": "📍",
+      "title": "J.U.NE",
+      "body": "Vendredi 13 nov. à Dole · CEM - 7C avenue de Northwich.",
+      "date": "2026-11-13"
     },
     {
       "emoji": "🎉",
-      "title": "NATURALIES 2026",
-      "body": "Dimanche 15 nov. à Crissey · Salle des Fêtes de Crissey.",
-      "date": "2026-11-15"
+      "title": "Matrimoniaque",
+      "body": "Samedi 14 nov. à Amange · Salle des Fêtes d'Amange.",
+      "date": "2026-11-14"
+    },
+    {
+      "emoji": "🎭",
+      "title": "Vaslav",
+      "body": "Vendredi 20 nov. à Dole · Théâtre municipal.",
+      "date": "2026-11-20"
     },
     {
       "emoji": "📍",
-      "title": "Salon des voyages 2026",
-      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "🎨",
-      "title": "SALON DOLE ARTS ET LIVRES",
-      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
+      "title": "Mentissa",
+      "body": "Samedi 21 nov. à Dole · La Commanderie.",
       "date": "2026-11-21"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Stage de danse africaine",
-      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "📍",
-      "title": "KARMA",
-      "body": "Mardi 24 nov. à Saint-Aubin · Foyer rural.",
-      "date": "2026-11-24"
     },
     {
       "emoji": "👨‍👩‍👧",
@@ -57,22 +51,10 @@
       "date": "2026-11-25"
     },
     {
-      "emoji": "🎨",
-      "title": "Jeudi de l'exposition - Conférence",
-      "body": "Jeudi 26 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-26"
-    },
-    {
-      "emoji": "📚",
-      "title": "Pré-Maîtrise : Petites histoires naturelles",
-      "body": "Vendredi 27 nov. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-11-27"
-    },
-    {
-      "emoji": "📍",
-      "title": "Bourse aux skis",
-      "body": "Dimanche 29 nov. à Tavaux · Salle Gérard Philipe.",
-      "date": "2026-11-29"
+      "emoji": "👨‍👩‍👧",
+      "title": "Café des parents d'ados",
+      "body": "Samedi 28 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-28"
     }
   ]
 }
