@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-06T11:29:44.093Z",
+  "fetchedAt": "2026-11-07T10:41:24.979Z",
   "ephemerides": {
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "events": [
       {
-        "year": 1975,
-        "text": "début de la Marche verte lancée par le roi du Maroc Hassan II sur le Sahara espagnol.",
+        "year": 2005,
+        "text": "Naypyidaw devient la capitale de la Birmanie en remplacement de Rangoun.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "le Florentin et d'autres joyaux de la famille impériale des Habsbourg sont « retrouvés » au Canada plus de cent ans après leur volatilisation en Suisse.",
+        "year": 1787,
+        "text": "signature par le roi de France Louis XVI de l'édit de tolérance dit « de Versailles » permettant aux non catholiques de bénéficier de l'état civil sans devoir se convertir.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "en Tanzanie, un ATR 42-500, effectuant le vol Precision Air 494 s’écrase dans le lac Victoria, tuant 19 des 43 personnes à bord.",
+        "year": 1631,
+        "text": "première observation d'un transit de Mercure, prédit par Johannes Kepler, par quatre personnes dont Pierre Gassendi.",
         "kind": "event"
       },
       {
-        "year": 2006,
-        "text": "la conférence internationale pour les Principes de Yogyakarta commence, en Indonésie.",
+        "year": 2024,
+        "text": "en Allemagne, la coalition au pouvoir est rompue à la suite de désaccords économiques et budgétaires.",
         "kind": "event"
       },
       {
-        "year": 2004,
-        "text": "le prince Louis de Bourbon se marie religieusement avec María Margarita Vargas Santaella, roturière vénézuélienne.",
+        "year": 2023,
+        "text": "le Prix Goncourt récompense Jean-Baptiste Andrea pour Veiller sur elle et le Renaudot va à Ann Scott pour Les Insolents.",
         "kind": "event"
       },
       {
-        "year": 1996,
-        "text": "la Croatie devient le 40e État du Conseil de l'Europe avant de le devenir de l'Union européenne.",
+        "year": 2018,
+        "text": "le Prix Goncourt est attribué à Nicolas Mathieu pour son livre Leurs enfants après eux et le Renaudot à Valérie Manteau pour Le Sillon.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Mya-Lecia Naylor, actrice, chanteuse et mannequin britannique († 7 avril 2019).",
-        "kind": "birth"
-      },
-      {
-        "year": 2000,
-        "text": "Mathis Dossou-Yovo, basketteur français.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Anys Mezzaour (أنيس مزاور), écrivain algérien.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Jang Seung-yeon, chanteuse sud-coréenne du girl group CLC.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Isaah Yeo, joueur de rugby australien.",
+        "year": 2001,
+        "text": "Amybeth McNulty, actrice irlando-canadienne.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Alastair Aiken, YouTuber britannique.",
+        "text": "Jürgen Locadia, footballeur néerlandais.",
+        "kind": "birth"
+      },
+      {
+        "year": 1993,
+        "text": "Tan Ya-ting (谭雅婷), archère taïwanaise.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Agnès Raharolahy, athlète de sprint française.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "David de Gea, footballeur espagnol.",
+        "kind": "birth"
+      },
+      {
+        "year": 1989,
+        "text": "Sonny Gray, joueur de baseball américain.",
         "kind": "birth"
       }
     ]
