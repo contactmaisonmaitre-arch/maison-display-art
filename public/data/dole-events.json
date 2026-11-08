@@ -1,12 +1,36 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-07T11:53:15.418Z",
+  "fetchedAt": "2026-11-08T12:08:00.703Z",
   "facts": [
     {
-      "emoji": "📚",
-      "title": "COMMENCER SON HISTOIRE EN HISTOIRES",
-      "body": "Samedi 07 nov. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-11-07"
+      "emoji": "🎨",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 08 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-08"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Marché de producteurs et d'artisans de Rainans",
+      "body": "Dimanche 08 nov. à Rainans ·.",
+      "date": "2026-11-08"
+    },
+    {
+      "emoji": "📍",
+      "title": "La Chambre Symphonique",
+      "body": "Dimanche 08 nov. à Dole · La Commanderie.",
+      "date": "2026-11-08"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Un dimanche au musée - Yoga",
+      "body": "Dimanche 08 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-08"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Paroles de Jazz",
+      "body": "Mardi 10 nov. à Dole · Librairie La Passerelle.",
+      "date": "2026-11-10"
     },
     {
       "emoji": "📍",
@@ -21,40 +45,58 @@
       "date": "2026-11-12"
     },
     {
+      "emoji": "👨‍👩‍👧",
+      "title": "Rendez-vous préparatoire - ATELIER DE COUTURE UNIVERS BRIDGERTON",
+      "body": "Jeudi 12 nov. à Dole · MJC - Maison des Jeunes et de la Culture.",
+      "date": "2026-11-12"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Appel aux dons pour la restauration de trois œuvres",
+      "body": "Jeudi 12 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-12"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier allaitement avec la PMI de Dole",
+      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "📍",
+      "title": "Geremy Credeville – Enchanteur",
+      "body": "Vendredi 13 nov. à Dole · La Commanderie.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Prévention/éveil psychomoteur et orthophonie",
+      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-13"
+    },
+    {
       "emoji": "📍",
       "title": "J.U.NE",
       "body": "Vendredi 13 nov. à Dole · CEM - 7C avenue de Northwich.",
       "date": "2026-11-13"
     },
     {
+      "emoji": "📍",
+      "title": "Loto des pompiers du Grand Dole",
+      "body": "Vendredi 13 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "📍",
+      "title": "Stage de SHATTA DANCEHALL",
+      "body": "Samedi 14 nov. à Dole ·.",
+      "date": "2026-11-14"
+    },
+    {
       "emoji": "🎉",
       "title": "Matrimoniaque",
       "body": "Samedi 14 nov. à Amange · Salle des Fêtes d'Amange.",
       "date": "2026-11-14"
-    },
-    {
-      "emoji": "🎭",
-      "title": "Vaslav",
-      "body": "Vendredi 20 nov. à Dole · Théâtre municipal.",
-      "date": "2026-11-20"
-    },
-    {
-      "emoji": "📍",
-      "title": "Mentissa",
-      "body": "Samedi 21 nov. à Dole · La Commanderie.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "café des aidants : Troubles du neurodéveloppement",
-      "body": "Mercredi 25 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Café des parents d'ados",
-      "body": "Samedi 28 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-28"
     }
   ]
 }
