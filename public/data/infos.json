@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-07T10:41:24.979Z",
+  "fetchedAt": "2026-11-08T10:45:50.469Z",
   "ephemerides": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "events": [
       {
-        "year": 2005,
-        "text": "Naypyidaw devient la capitale de la Birmanie en remplacement de Rangoun.",
+        "year": 535,
+        "text": "ouverture du premier concile de Clermont à Arvernis (future Clermont).",
         "kind": "event"
       },
       {
-        "year": 1787,
-        "text": "signature par le roi de France Louis XVI de l'édit de tolérance dit « de Versailles » permettant aux non catholiques de bénéficier de l'état civil sans devoir se convertir.",
+        "year": 2017,
+        "text": "inauguration du Louvre Abou Dabi aux Émirats arabes unis.",
         "kind": "event"
       },
       {
-        "year": 1631,
-        "text": "première observation d'un transit de Mercure, prédit par Johannes Kepler, par quatre personnes dont Pierre Gassendi.",
+        "year": 2016,
+        "text": "la promulgation d'une nouvelle constitution fait entrer la Côte d'Ivoire dans sa Troisième République.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "en Allemagne, la coalition au pouvoir est rompue à la suite de désaccords économiques et budgétaires.",
+        "year": 2011,
+        "text": "décollage de la mission spatiale russe, Phobos-Grunt, destinée à l'étude de Phobos.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "le Prix Goncourt récompense Jean-Baptiste Andrea pour Veiller sur elle et le Renaudot va à Ann Scott pour Les Insolents.",
+        "year": 1991,
+        "text": "approbation du règlement de l'Assemblée balte.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "le Prix Goncourt est attribué à Nicolas Mathieu pour son livre Leurs enfants après eux et le Renaudot à Valérie Manteau pour Le Sillon.",
+        "year": 1968,
+        "text": "signature de la convention de Vienne sur la circulation routière.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2001,
-        "text": "Amybeth McNulty, actrice irlando-canadienne.",
+        "year": 2003,
+        "text": "Keyonte George, basketteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 2003,
+        "text": "Louise Mountbatten-Windsor, princesse britannique.",
+        "kind": "birth"
+      },
+      {
+        "year": 2000,
+        "text": "Jasmine Thompson, chanteuse anglaise.",
+        "kind": "birth"
+      },
+      {
+        "year": 1994,
+        "text": "Diawandou Diagne, footballeur sénégalais.",
+        "kind": "birth"
+      },
+      {
+        "year": 1994,
+        "text": "Matheus Doria, footballeur brésilien.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Jürgen Locadia, footballeur néerlandais.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Tan Ya-ting (谭雅婷), archère taïwanaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1992,
-        "text": "Agnès Raharolahy, athlète de sprint française.",
-        "kind": "birth"
-      },
-      {
-        "year": 1990,
-        "text": "David de Gea, footballeur espagnol.",
-        "kind": "birth"
-      },
-      {
-        "year": 1989,
-        "text": "Sonny Gray, joueur de baseball américain.",
+        "text": "Przemysław Karnowski, basketteur polonais.",
         "kind": "birth"
       }
     ]
