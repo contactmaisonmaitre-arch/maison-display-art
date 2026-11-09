@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-08T10:45:50.469Z",
+  "fetchedAt": "2026-11-09T12:07:38.749Z",
   "ephemerides": {
-    "date": "2026-11-08",
+    "date": "2026-11-09",
     "events": [
       {
-        "year": 535,
-        "text": "ouverture du premier concile de Clermont à Arvernis (future Clermont).",
+        "year": 1989,
+        "text": "chute du mur de Berlin.",
         "kind": "event"
       },
       {
-        "year": 2017,
-        "text": "inauguration du Louvre Abou Dabi aux Émirats arabes unis.",
+        "year": 1923,
+        "text": "Adolf Hitler et plusieurs membres du NSDAP sont arrêtés après avoir tenté de prendre le pouvoir à Munich lors du putsch de la Brasserie.",
         "kind": "event"
       },
       {
-        "year": 2016,
-        "text": "la promulgation d'une nouvelle constitution fait entrer la Côte d'Ivoire dans sa Troisième République.",
+        "year": 1918,
+        "text": "abdication de l'empereur allemand Guillaume II et proclamation à Berlin de la république.",
+        "kind": "event"
+      },
+      {
+        "year": 2022,
+        "text": "départ retardé de trois jours à un mercredi, pour raisons météorologiques, de la XXe Route du rhum nautique Saint-Malo-Pointe-à-Pitre.",
+        "kind": "event"
+      },
+      {
+        "year": 2012,
+        "text": "nomination de Justin Welby au poste d'archevêque de Cantorbéry.",
         "kind": "event"
       },
       {
         "year": 2011,
-        "text": "décollage de la mission spatiale russe, Phobos-Grunt, destinée à l'étude de Phobos.",
-        "kind": "event"
-      },
-      {
-        "year": 1991,
-        "text": "approbation du règlement de l'Assemblée balte.",
-        "kind": "event"
-      },
-      {
-        "year": 1968,
-        "text": "signature de la convention de Vienne sur la circulation routière.",
+        "text": "sortie en France du film américain de Steven Soderbergh Contagion.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2003,
-        "text": "Keyonte George, basketteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 2003,
-        "text": "Louise Mountbatten-Windsor, princesse britannique.",
-        "kind": "birth"
-      },
-      {
         "year": 2000,
-        "text": "Jasmine Thompson, chanteuse anglaise.",
+        "text": "Selma Bacha, footballeuse française.",
+        "kind": "birth"
+      },
+      {
+        "year": 1999,
+        "text": "Karol Sevilla (Karol Itzitery Piña Cisneros dite), actrice, chanteuse et youtubeuse mexicaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1998,
+        "text": "Juan Tinaglini, footballeur uruguayen.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Momo (Hirai Momo dite), chanteuse japonaise du groupe Twice.",
+        "kind": "birth"
+      },
+      {
+        "year": 1995,
+        "text": "Bouma Ferimata Coulibaly, taekwondoïste ivoirienne.",
         "kind": "birth"
       },
       {
         "year": 1994,
-        "text": "Diawandou Diagne, footballeur sénégalais.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Matheus Doria, footballeur brésilien.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Przemysław Karnowski, basketteur polonais.",
+        "text": "Charlotte Cardin, chanteuse et pianiste québécoise.",
         "kind": "birth"
       }
     ]
