@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-09T12:07:38.749Z",
+  "fetchedAt": "2026-11-10T11:46:05.857Z",
   "ephemerides": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "events": [
       {
-        "year": 1989,
-        "text": "chute du mur de Berlin.",
+        "year": 1937,
+        "text": "instauration de l'Estado Novo au Brésil.",
         "kind": "event"
       },
       {
-        "year": 1923,
-        "text": "Adolf Hitler et plusieurs membres du NSDAP sont arrêtés après avoir tenté de prendre le pouvoir à Munich lors du putsch de la Brasserie.",
+        "year": 1859,
+        "text": "le traité de Zurich met fin à la campagne d'Italie remportée par la coalition franco-sarde face à l'empire d'Autriche.",
         "kind": "event"
       },
       {
-        "year": 1918,
-        "text": "abdication de l'empereur allemand Guillaume II et proclamation à Berlin de la république.",
+        "year": 1630,
+        "text": "lors de la journée des Dupes, Louis XIII réitère sa confiance au cardinal de Richelieu contre l'avis de sa mère Marie de Médicis, la contraignant à l'exil.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "départ retardé de trois jours à un mercredi, pour raisons météorologiques, de la XXe Route du rhum nautique Saint-Malo-Pointe-à-Pitre.",
+        "year": 2019,
+        "text": "en France, manifestation controversée contre l'islamophobie à Paris.",
         "kind": "event"
       },
       {
-        "year": 2012,
-        "text": "nomination de Justin Welby au poste d'archevêque de Cantorbéry.",
+        "year": 1977,
+        "text": "l'Académie française rendue à la lettre \"E\" de la révision de son dictionnaire y admet comme nouvelles entrées les mots \"emmerder\", \"emmerdeur\" et \"emmerdant\".",
         "kind": "event"
       },
       {
-        "year": 2011,
-        "text": "sortie en France du film américain de Steven Soderbergh Contagion.",
+        "year": 1975,
+        "text": "résolution no 3379 de l’Assemblée générale des Nations unies, sur le sionisme.",
         "kind": "event"
       }
     ],
     "births": [
       {
+        "year": 2002,
+        "text": "Eduardo Camavinga, footballeur français.",
+        "kind": "birth"
+      },
+      {
         "year": 2000,
-        "text": "Selma Bacha, footballeuse française.",
+        "text": "Mackenzie Foy, actrice américaine.",
         "kind": "birth"
       },
       {
         "year": 1999,
-        "text": "Karol Sevilla (Karol Itzitery Piña Cisneros dite), actrice, chanteuse et youtubeuse mexicaine.",
+        "text": "Kiernan Shipka, actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Juan Tinaglini, footballeur uruguayen.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Momo (Hirai Momo dite), chanteuse japonaise du groupe Twice.",
+        "year": 1999,
+        "text": "Armand Duplantis, sauteur à la perche américano-suédois concourant pour la Suède.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "Bouma Ferimata Coulibaly, taekwondoïste ivoirienne.",
+        "text": "Ralfs Grīnbergs (en), hockeyeur letton.",
         "kind": "birth"
       },
       {
         "year": 1994,
-        "text": "Charlotte Cardin, chanteuse et pianiste québécoise.",
+        "text": "Takuma Asano, footballeur japonais.",
         "kind": "birth"
       }
     ]
