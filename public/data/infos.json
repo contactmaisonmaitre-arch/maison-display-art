@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-10T11:46:05.857Z",
+  "fetchedAt": "2026-11-11T11:26:57.214Z",
   "ephemerides": {
-    "date": "2026-11-10",
+    "date": "2026-11-11",
     "events": [
       {
-        "year": 1937,
-        "text": "instauration de l'Estado Novo au Brésil.",
-        "kind": "event"
-      },
-      {
-        "year": 1859,
-        "text": "le traité de Zurich met fin à la campagne d'Italie remportée par la coalition franco-sarde face à l'empire d'Autriche.",
-        "kind": "event"
-      },
-      {
-        "year": 1630,
-        "text": "lors de la journée des Dupes, Louis XIII réitère sa confiance au cardinal de Richelieu contre l'avis de sa mère Marie de Médicis, la contraignant à l'exil.",
-        "kind": "event"
-      },
-      {
-        "year": 2019,
-        "text": "en France, manifestation controversée contre l'islamophobie à Paris.",
-        "kind": "event"
-      },
-      {
-        "year": 1977,
-        "text": "l'Académie française rendue à la lettre \"E\" de la révision de son dictionnaire y admet comme nouvelles entrées les mots \"emmerder\", \"emmerdeur\" et \"emmerdant\".",
+        "year": 1982,
+        "text": "première mission opérationnelle de la navette spatiale américaine Columbia.",
         "kind": "event"
       },
       {
         "year": 1975,
-        "text": "résolution no 3379 de l’Assemblée générale des Nations unies, sur le sionisme.",
+        "text": "indépendance de l'Angola, alors un État de l'Empire colonial portugais, sous le nom de république populaire d'Angola.",
+        "kind": "event"
+      },
+      {
+        "year": 1889,
+        "text": "le territoire de Washington devient le 42e État des États-Unis sous le nom d'État de Washington.",
+        "kind": "event"
+      },
+      {
+        "year": 2011,
+        "text": "la société de développement de jeux vidéo Bethesda Softworks sort le cinquième opus de la série de The Elder Scrolls : Skyrim.",
+        "kind": "event"
+      },
+      {
+        "year": 1998,
+        "text": "début de l'opération Desert Thunder.",
+        "kind": "event"
+      },
+      {
+        "year": 1992,
+        "text": "l'Église anglicane d'Angleterre autorise l'ordination des femmes.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Eduardo Camavinga, footballeur français.",
+        "year": 2006,
+        "text": "Jeff Ekhator, footballeur italien.",
         "kind": "birth"
       },
       {
-        "year": 2000,
-        "text": "Mackenzie Foy, actrice américaine.",
+        "year": 2006,
+        "text": "Tobías Ramírez, footballeur argentin.",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Kiernan Shipka, actrice américaine.",
+        "year": 2005,
+        "text": "Can Uzun, footballeur germano-turc.",
         "kind": "birth"
       },
       {
-        "year": 1999,
-        "text": "Armand Duplantis, sauteur à la perche américano-suédois concourant pour la Suède.",
+        "year": 2005,
+        "text": "Ben Gannon-Doak, footballeur écossais.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Ralfs Grīnbergs (en), hockeyeur letton.",
+        "year": 2005,
+        "text": "Alexander Simmelhack, footballeur danois.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Takuma Asano, footballeur japonais.",
+        "year": 2004,
+        "text": "Gustavo Sá, footballeur portugais.",
         "kind": "birth"
       }
     ]
