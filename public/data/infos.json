@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-11T11:26:57.214Z",
+  "fetchedAt": "2026-11-12T11:50:35.664Z",
   "ephemerides": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "events": [
       {
-        "year": 1982,
-        "text": "première mission opérationnelle de la navette spatiale américaine Columbia.",
+        "year": 2014,
+        "text": "atterrissage du module Philae de la sonde spatiale Rosetta sur la comète « Tchouri ».",
         "kind": "event"
       },
       {
-        "year": 1975,
-        "text": "indépendance de l'Angola, alors un État de l'Empire colonial portugais, sous le nom de république populaire d'Angola.",
+        "year": 1937,
+        "text": "inauguration de l'aérogare de l’aéroport international du Bourget.",
         "kind": "event"
       },
       {
-        "year": 1889,
-        "text": "le territoire de Washington devient le 42e État des États-Unis sous le nom d'État de Washington.",
+        "year": 1920,
+        "text": "signature du premier traité de Rapallo entre l'Italie et le royaume des Serbes, Croates et Slovènes pour reconnaître mutuellement leur souveraineté et fixer leur frontière.",
         "kind": "event"
       },
       {
-        "year": 2011,
-        "text": "la société de développement de jeux vidéo Bethesda Softworks sort le cinquième opus de la série de The Elder Scrolls : Skyrim.",
+        "year": 1893,
+        "text": "création de la ligne Durand, frontière entre l'émirat d'Afghanistan et le Raj britannique.",
         "kind": "event"
       },
       {
-        "year": 1998,
-        "text": "début de l'opération Desert Thunder.",
+        "year": 2025,
+        "text": "l'Algérie gracie l'écrivain franco-algérien Boualem Sansal (photo).",
         "kind": "event"
       },
       {
-        "year": 1992,
-        "text": "l'Église anglicane d'Angleterre autorise l'ordination des femmes.",
+        "year": 2023,
+        "text": "effondrement du tunnel de l'Uttarakhand (Inde) en 2023. 41 employés ont été enfermés (sauvés le 28 novembre)",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2006,
-        "text": "Jeff Ekhator, footballeur italien.",
+        "year": 2000,
+        "text": "Pippa Allen, actrice néerlandaise.",
         "kind": "birth"
       },
       {
-        "year": 2006,
-        "text": "Tobías Ramírez, footballeur argentin.",
+        "year": 1998,
+        "text": "Jules Koundé, footballeur français.",
         "kind": "birth"
       },
       {
-        "year": 2005,
-        "text": "Can Uzun, footballeur germano-turc.",
+        "year": 1998,
+        "text": "Hebatallah Serry, gymnaste artistique marocaine.",
         "kind": "birth"
       },
       {
-        "year": 2005,
-        "text": "Ben Gannon-Doak, footballeur écossais.",
+        "year": 1998,
+        "text": "Fanny Stollár, joueuse de tennis hongroise.",
         "kind": "birth"
       },
       {
-        "year": 2005,
-        "text": "Alexander Simmelhack, footballeur danois.",
+        "year": 1995,
+        "text": "Thomas Lemar, footballeur français.",
         "kind": "birth"
       },
       {
-        "year": 2004,
-        "text": "Gustavo Sá, footballeur portugais.",
+        "year": 1994,
+        "text": "Guillaume Cizeron, patineur artistique français de danse sur glace.",
         "kind": "birth"
       }
     ]
