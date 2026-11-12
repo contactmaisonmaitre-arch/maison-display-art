@@ -1,37 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-11T12:54:37.018Z",
+  "fetchedAt": "2026-11-12T13:56:45.465Z",
   "facts": [
-    {
-      "emoji": "📍",
-      "title": "Cérémonies commémoratives du 11 novembre",
-      "body": "Mercredi 11 nov. à Dole · Cimetière de Landon, 11h30.",
-      "date": "2026-11-11"
-    },
-    {
-      "emoji": "📍",
-      "title": "DUB INC",
-      "body": "Jeudi 12 nov. à Dole · La Commanderie.",
-      "date": "2026-11-12"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Appel aux dons pour la restauration de trois œuvres",
-      "body": "Jeudi 12 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-12"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Rendez-vous préparatoire - ATELIER DE COUTURE UNIVERS BRIDGERTON",
-      "body": "Jeudi 12 nov. à Dole · MJC - Maison des Jeunes et de la Culture.",
-      "date": "2026-11-12"
-    },
-    {
-      "emoji": "📍",
-      "title": "Loto des pompiers du Grand Dole",
-      "body": "Vendredi 13 nov. à Dole · Manège de Brack.",
-      "date": "2026-11-13"
-    },
     {
       "emoji": "📍",
       "title": "Geremy Credeville – Enchanteur",
@@ -39,64 +9,46 @@
       "date": "2026-11-13"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Prévention/éveil psychomoteur et orthophonie",
-      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-13"
+      "emoji": "🩰",
+      "title": "Ballet Casse-noisette",
+      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
+      "date": "2026-11-18"
     },
     {
       "emoji": "📍",
-      "title": "J.U.NE",
-      "body": "Vendredi 13 nov. à Dole · CEM - 7C avenue de Northwich.",
-      "date": "2026-11-13"
+      "title": "Réunion d'information - Escapade Spécial Seniors",
+      "body": "Jeudi 19 nov. à Dole · Hôtel de Ville, Salle Edgar Faure.",
+      "date": "2026-11-19"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Atelier allaitement avec la PMI de Dole",
-      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-13"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Jeux en famille avec la Ludothèque du Grand Dole",
-      "body": "Samedi 14 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-14"
+      "title": "Formation Gestes 1er secours enfants/nourissons",
+      "body": "Samedi 21 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-21"
     },
     {
       "emoji": "📍",
-      "title": "Stage de SHATTA DANCEHALL",
-      "body": "Samedi 14 nov. à Dole ·.",
-      "date": "2026-11-14"
+      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
+      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
+      "date": "2026-11-25"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite thématique - Quand la création est un voyage : expériences de l'autre et de l'ailleurs",
-      "body": "Samedi 14 nov. à Dole · Musée des Beaux-Arts.",
-      "date": "2026-11-14"
+      "emoji": "📚",
+      "title": "Pré-Maîtrise : Petites histoires naturelles",
+      "body": "Vendredi 27 nov. à Dole · Auditorium Karl-Riepp.",
+      "date": "2026-11-27"
     },
     {
-      "emoji": "🎉",
-      "title": "Matrimoniaque",
-      "body": "Samedi 14 nov. à Amange · Salle des Fêtes d'Amange.",
-      "date": "2026-11-14"
+      "emoji": "🥖",
+      "title": "Marché de Noel",
+      "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
+      "date": "2026-11-28"
     },
     {
-      "emoji": "🎶",
-      "title": "Concert Les Bousous",
-      "body": "Samedi 14 nov. à Tavaux · Centre Gérard Philipe.",
-      "date": "2026-11-14"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "Café rencontre autour du TSA",
-      "body": "Samedi 14 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-14"
-    },
-    {
-      "emoji": "🎶",
-      "title": "Concert secret !",
-      "body": "Samedi 14 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-11-14"
+      "emoji": "📍",
+      "title": "Bourse aux skis",
+      "body": "Dimanche 29 nov. à Tavaux · Salle Gérard Philipe.",
+      "date": "2026-11-29"
     }
   ]
 }
