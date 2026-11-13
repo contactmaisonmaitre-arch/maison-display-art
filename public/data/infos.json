@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-12T11:50:35.664Z",
+  "fetchedAt": "2026-11-13T11:33:18.907Z",
   "ephemerides": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "events": [
       {
-        "year": 2014,
-        "text": "atterrissage du module Philae de la sonde spatiale Rosetta sur la comète « Tchouri ».",
+        "year": 1956,
+        "text": "la Cour suprême des États-Unis déclare anticonstitutionnelles les lois ségrégationnistes s'appliquant aux passagers des autobus.",
         "kind": "event"
       },
       {
-        "year": 1937,
-        "text": "inauguration de l'aérogare de l’aéroport international du Bourget.",
+        "year": 2021,
+        "text": "Clôture à Glasgow, au Royaume-Uni, de la COP 26 débutée 13 jours plus tôt.",
         "kind": "event"
       },
       {
-        "year": 1920,
-        "text": "signature du premier traité de Rapallo entre l'Italie et le royaume des Serbes, Croates et Slovènes pour reconnaître mutuellement leur souveraineté et fixer leur frontière.",
+        "year": 2015,
+        "text": "En Irak, les peshmergas du GRK et des groupes liés au PKK reprennent la ville de Sinjar à l’organisation \"État islamique\".",
         "kind": "event"
       },
       {
-        "year": 1893,
-        "text": "création de la ligne Durand, frontière entre l'émirat d'Afghanistan et le Raj britannique.",
+        "year": 2012,
+        "text": "Une éclipse solaire totale est visible en Australie et dans le sud de l’océan Pacifique.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "l'Algérie gracie l'écrivain franco-algérien Boualem Sansal (photo).",
+        "year": 2002,
+        "text": "Une brèche s'ouvre sur la coque du pétrolier Prestige, qui coule et provoque une marée noire.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "effondrement du tunnel de l'Uttarakhand (Inde) en 2023. 41 employés ont été enfermés (sauvés le 28 novembre)",
+        "year": 1995,
+        "text": "Sortie de l'album rock live acoustique Stripped des Rolling Stones.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Pippa Allen, actrice néerlandaise.",
+        "year": 1999,
+        "text": "Lando Norris, pilote automobile britanno-belge",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Jules Koundé, footballeur français.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Hebatallah Serry, gymnaste artistique marocaine.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Fanny Stollár, joueuse de tennis hongroise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1995,
-        "text": "Thomas Lemar, footballeur français.",
+        "year": 1996,
+        "text": "Dougie Baldwin, acteur australien.",
         "kind": "birth"
       },
       {
         "year": 1994,
-        "text": "Guillaume Cizeron, patineur artistique français de danse sur glace.",
+        "text": "Edgars Kulda (en), hockeyeur letton.",
+        "kind": "birth"
+      },
+      {
+        "year": 1994,
+        "text": "Andrew Tang, pilote automobile singapourien.",
+        "kind": "birth"
+      },
+      {
+        "year": 1994,
+        "text": "Lim Yin Fun (en), joueuse de badminton malaisienne.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Daniel Gossett, joueur de baseball américain.",
         "kind": "birth"
       }
     ]
