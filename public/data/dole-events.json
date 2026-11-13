@@ -1,7 +1,31 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-12T13:56:45.465Z",
+  "fetchedAt": "2026-11-13T13:22:38.460Z",
   "facts": [
+    {
+      "emoji": "📍",
+      "title": "J.U.NE",
+      "body": "Vendredi 13 nov. à Dole · CEM - 7C avenue de Northwich.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Prévention/éveil psychomoteur et orthophonie",
+      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "📍",
+      "title": "Loto des pompiers du Grand Dole",
+      "body": "Vendredi 13 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-13"
+    },
+    {
+      "emoji": "🎉",
+      "title": "Novembre bleu",
+      "body": "Vendredi 13 nov. à Damparis · Salle des Fêtes de Damparis.",
+      "date": "2026-11-13"
+    },
     {
       "emoji": "📍",
       "title": "Geremy Credeville – Enchanteur",
@@ -9,46 +33,70 @@
       "date": "2026-11-13"
     },
     {
-      "emoji": "🩰",
-      "title": "Ballet Casse-noisette",
-      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
-      "date": "2026-11-18"
+      "emoji": "👨‍👩‍👧",
+      "title": "Atelier allaitement avec la PMI de Dole",
+      "body": "Vendredi 13 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-13"
     },
     {
-      "emoji": "📍",
-      "title": "Réunion d'information - Escapade Spécial Seniors",
-      "body": "Jeudi 19 nov. à Dole · Hôtel de Ville, Salle Edgar Faure.",
-      "date": "2026-11-19"
+      "emoji": "🎉",
+      "title": "Matrimoniaque",
+      "body": "Samedi 14 nov. à Amange · Salle des Fêtes d'Amange.",
+      "date": "2026-11-14"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique - Quand la création est un voyage : expériences de l'autre et de l'ailleurs",
+      "body": "Samedi 14 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-14"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Concert secret !",
+      "body": "Samedi 14 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
+      "date": "2026-11-14"
     },
     {
       "emoji": "👨‍👩‍👧",
-      "title": "Formation Gestes 1er secours enfants/nourissons",
-      "body": "Samedi 21 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-21"
+      "title": "Jeux en famille avec la Ludothèque du Grand Dole",
+      "body": "Samedi 14 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-14"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Concert Les Bousous",
+      "body": "Samedi 14 nov. à Tavaux · Centre Gérard Philipe.",
+      "date": "2026-11-14"
+    },
+    {
+      "emoji": "🎶",
+      "title": "concert Bénabar",
+      "body": "Samedi 14 nov. à Dole · La Commanderie.",
+      "date": "2026-11-14"
     },
     {
       "emoji": "📍",
-      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
-      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
-      "date": "2026-11-25"
+      "title": "Stage de SHATTA DANCEHALL",
+      "body": "Samedi 14 nov. à Dole ·.",
+      "date": "2026-11-14"
     },
     {
-      "emoji": "📚",
-      "title": "Pré-Maîtrise : Petites histoires naturelles",
-      "body": "Vendredi 27 nov. à Dole · Auditorium Karl-Riepp.",
-      "date": "2026-11-27"
+      "emoji": "🏺",
+      "title": "RDV du patrimoine : La Rive Gauche change de décor",
+      "body": "Samedi 14 nov. à Dole · Centre-Ville.",
+      "date": "2026-11-14"
     },
     {
-      "emoji": "🥖",
-      "title": "Marché de Noel",
-      "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
-      "date": "2026-11-28"
+      "emoji": "👨‍👩‍👧",
+      "title": "Café rencontre autour du TSA",
+      "body": "Samedi 14 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-14"
     },
     {
-      "emoji": "📍",
-      "title": "Bourse aux skis",
-      "body": "Dimanche 29 nov. à Tavaux · Salle Gérard Philipe.",
-      "date": "2026-11-29"
+      "emoji": "🏆",
+      "title": "Cyclocross de Dole",
+      "body": "Dimanche 15 nov. à Crissey · Terrain de Sports.",
+      "date": "2026-11-15"
     }
   ]
 }
