@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-13T11:33:18.907Z",
+  "fetchedAt": "2026-11-14T10:55:31.000Z",
   "ephemerides": {
-    "date": "2026-11-13",
+    "date": "2026-11-14",
     "events": [
       {
-        "year": 1956,
-        "text": "la Cour suprême des États-Unis déclare anticonstitutionnelles les lois ségrégationnistes s'appliquant aux passagers des autobus.",
+        "year": 1990,
+        "text": "signature d'un traité entre l'Allemagne et la Pologne garantissant le respect de la frontière entre les deux pays formée par la « ligne Oder-Neisse ».",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "Clôture à Glasgow, au Royaume-Uni, de la COP 26 débutée 13 jours plus tôt.",
+        "year": 1975,
+        "text": "signature des accords de Madrid entre le Maroc, la Mauritanie et l'Espagne pour mettre fin à la domination espagnole sur le Sahara occidental.",
         "kind": "event"
       },
       {
-        "year": 2015,
-        "text": "En Irak, les peshmergas du GRK et des groupes liés au PKK reprennent la ville de Sinjar à l’organisation \"État islamique\".",
+        "year": 1963,
+        "text": "l'île de Surtsey émerge de l'océan au large de l'Islande à la suite d'une éruption sous-marine.",
         "kind": "event"
       },
       {
-        "year": 2012,
-        "text": "Une éclipse solaire totale est visible en Australie et dans le sud de l’océan Pacifique.",
+        "year": 1913,
+        "text": "publication à compte d'auteur du roman de Marcel Proust (photo) Du côté de chez Swann, premier volume d'À la recherche du temps perdu.",
         "kind": "event"
       },
       {
-        "year": 2002,
-        "text": "Une brèche s'ouvre sur la coque du pétrolier Prestige, qui coule et provoque une marée noire.",
+        "year": 2022,
+        "text": "révélation d'une découverte le 18 juin 2021 en Espagne, en Navarre, près de Pampelune d'une main en bronze datant du Ier siècle avant J.C et dénommée Main d'Irulegi.",
         "kind": "event"
       },
       {
-        "year": 1995,
-        "text": "Sortie de l'album rock live acoustique Stripped des Rolling Stones.",
+        "year": 2018,
+        "text": "la Commission européenne impose la radio numérique dans les autoradios vendus dans l'Union.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1999,
-        "text": "Lando Norris, pilote automobile britanno-belge",
+        "year": 1997,
+        "text": "Christopher Nkunku, footballeur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1997,
+        "text": "Ivanna Sakhno, actrice ukrainienne.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Dougie Baldwin, acteur australien.",
+        "text": "Borna Ćorić, joueur de tennis croate.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Edgars Kulda (en), hockeyeur letton.",
+        "year": 1993,
+        "text": "Francisco Lindor, joueur de baseball portoricain.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Andrew Tang, pilote automobile singapourien.",
+        "year": 1993,
+        "text": "Hymel Hunt (en), joueur de rugby néo-zélandais.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Lim Yin Fun (en), joueuse de badminton malaisienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1992,
-        "text": "Daniel Gossett, joueur de baseball américain.",
+        "year": 1993,
+        "text": "Shūhei Nomura (en) (野村 周平), acteur japonais.",
         "kind": "birth"
       }
     ]
