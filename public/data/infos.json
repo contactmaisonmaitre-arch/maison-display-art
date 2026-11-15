@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-14T10:55:31.000Z",
+  "fetchedAt": "2026-11-15T11:29:47.983Z",
   "ephemerides": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "events": [
       {
-        "year": 1990,
-        "text": "signature d'un traité entre l'Allemagne et la Pologne garantissant le respect de la frontière entre les deux pays formée par la « ligne Oder-Neisse ».",
-        "kind": "event"
-      },
-      {
-        "year": 1975,
-        "text": "signature des accords de Madrid entre le Maroc, la Mauritanie et l'Espagne pour mettre fin à la domination espagnole sur le Sahara occidental.",
-        "kind": "event"
-      },
-      {
-        "year": 1963,
-        "text": "l'île de Surtsey émerge de l'océan au large de l'Islande à la suite d'une éruption sous-marine.",
-        "kind": "event"
-      },
-      {
-        "year": 1913,
-        "text": "publication à compte d'auteur du roman de Marcel Proust (photo) Du côté de chez Swann, premier volume d'À la recherche du temps perdu.",
-        "kind": "event"
-      },
-      {
         "year": 2022,
-        "text": "révélation d'une découverte le 18 juin 2021 en Espagne, en Navarre, près de Pampelune d'une main en bronze datant du Ier siècle avant J.C et dénommée Main d'Irulegi.",
+        "text": "la population mondiale dépasse probablement les huit milliards d'habitants.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "la Commission européenne impose la radio numérique dans les autoradios vendus dans l'Union.",
+        "year": 1920,
+        "text": "première assemblée de la Société des Nations au palais Wilson à Genève.",
+        "kind": "event"
+      },
+      {
+        "year": 1908,
+        "text": "l'État indépendant du Congo devient une colonie belge sous l'appellation de Congo belge.",
+        "kind": "event"
+      },
+      {
+        "year": 1889,
+        "text": "déposition de l'empereur brésilien Pierre II et naissance de la république des États-Unis du Brésil.",
+        "kind": "event"
+      },
+      {
+        "year": 1884,
+        "text": "début de la conférence de Berlin au cours de laquelle les puissances européennes se partagent l'Afrique.",
+        "kind": "event"
+      },
+      {
+        "year": 1533,
+        "text": "prise de la capitale impériale Cuzco par les conquistadors espagnols commandés par Francisco Pizarro, pendant la conquête de l'Empire inca.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1997,
-        "text": "Christopher Nkunku, footballeur français.",
+        "year": 2022,
+        "text": "Vinice Mabansag, choisie symboliquement comme la huit milliardième personne sur Terre.",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Ivanna Sakhno, actrice ukrainienne.",
+        "text": "Paula Badosa, joueuse de tennis espagnole.",
+        "kind": "birth"
+      },
+      {
+        "year": 1997,
+        "text": "Viktor Tsyhankov, footballeur ukrainien.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Borna Ćorić, joueur de tennis croate.",
+        "text": "Antoine Dupont, joueur de rugby français.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Francisco Lindor, joueur de baseball portoricain.",
+        "year": 1995,
+        "text": "Karl-Anthony Towns, basketteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Hymel Hunt (en), joueur de rugby néo-zélandais.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Shūhei Nomura (en) (野村 周平), acteur japonais.",
+        "year": 1994,
+        "text": "Bryce Cartwright (en), joueur de rugby australien.",
         "kind": "birth"
       }
     ]
