@@ -1,25 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-15T12:55:33.351Z",
+  "fetchedAt": "2026-11-16T13:56:11.491Z",
   "facts": [
-    {
-      "emoji": "🏆",
-      "title": "Cyclocross de Dole",
-      "body": "Dimanche 15 nov. à Crissey · Terrain de Sports.",
-      "date": "2026-11-15"
-    },
-    {
-      "emoji": "🎉",
-      "title": "NATURALIES 2026",
-      "body": "Dimanche 15 nov. à Crissey · Salle des Fêtes de Crissey.",
-      "date": "2026-11-15"
-    },
-    {
-      "emoji": "📍",
-      "title": "Bourse puériculture",
-      "body": "Dimanche 15 nov. à Dole · Ecole Simone Veil.",
-      "date": "2026-11-15"
-    },
     {
       "emoji": "👨‍👩‍👧",
       "title": "Cercles de parents",
@@ -39,22 +21,16 @@
       "date": "2026-11-17"
     },
     {
-      "emoji": "🩰",
-      "title": "Ballet Casse-noisette",
-      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
-      "date": "2026-11-18"
-    },
-    {
-      "emoji": "🩰",
-      "title": "CASSE-NOISETTE Ballet et Orchestre",
-      "body": "Mercredi 18 nov. à Dole · La Commanderie.",
-      "date": "2026-11-18"
-    },
-    {
       "emoji": "📍",
       "title": "Loto des Razmotos",
       "body": "Mercredi 18 nov. à Tavaux · Salle Gérard Philipe.",
       "date": "2026-11-18"
+    },
+    {
+      "emoji": "📍",
+      "title": "Salon des voyages 2026",
+      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
+      "date": "2026-11-19"
     },
     {
       "emoji": "📍",
@@ -64,27 +40,15 @@
     },
     {
       "emoji": "🎉",
-      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
-      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "🎉",
       "title": "Ciné-débat : La Réparation",
       "body": "Jeudi 19 nov. à Eclans-Nenon · Salle des fêtes d'Éclans-Nenon.",
       "date": "2026-11-19"
     },
     {
-      "emoji": "📍",
-      "title": "Salon des voyages 2026",
-      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
+      "emoji": "🎉",
+      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
+      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
       "date": "2026-11-19"
-    },
-    {
-      "emoji": "🎭",
-      "title": "Vaslav",
-      "body": "Vendredi 20 nov. à Dole · Théâtre municipal.",
-      "date": "2026-11-20"
     },
     {
       "emoji": "📚",
@@ -93,9 +57,45 @@
       "date": "2026-11-20"
     },
     {
+      "emoji": "🎭",
+      "title": "Vaslav",
+      "body": "Vendredi 20 nov. à Dole · Théâtre municipal.",
+      "date": "2026-11-20"
+    },
+    {
       "emoji": "📍",
-      "title": "Découverte de la réserve naturelle",
-      "body": "Samedi 21 nov. à Gevry ·.",
+      "title": "Portes ouvertes à la radio RCF Jura",
+      "body": "Samedi 21 nov. à Dole ·.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "🎨",
+      "title": "SALON DOLE ARTS ET LIVRES",
+      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "🩰",
+      "title": "Stage de danse africaine",
+      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📚",
+      "title": "Bourse aux jouets et livres",
+      "body": "Samedi 21 nov. à Dole · Ancienne école d'Azans.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "Mentissa - ANNULÉE",
+      "body": "Samedi 21 nov. à Dole · La Commanderie.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "Formation Gestes 1er secours enfants/nourissons",
+      "body": "Samedi 21 nov. à Dole · Maison de la Parentalité.",
       "date": "2026-11-21"
     }
   ]
