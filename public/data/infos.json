@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-15T11:29:47.983Z",
+  "fetchedAt": "2026-11-16T12:02:52.472Z",
   "ephemerides": {
-    "date": "2026-11-15",
+    "date": "2026-11-16",
     "events": [
       {
-        "year": 2022,
-        "text": "la population mondiale dépasse probablement les huit milliards d'habitants.",
+        "year": 1973,
+        "text": "signature par Richard Nixon de l'acte autorisant la construction de l'oléoduc trans-Alaska.",
         "kind": "event"
       },
       {
-        "year": 1920,
-        "text": "première assemblée de la Société des Nations au palais Wilson à Genève.",
+        "year": 1973,
+        "text": "lancement du vol spatial habité américain Skylab 4.",
         "kind": "event"
       },
       {
-        "year": 1908,
-        "text": "l'État indépendant du Congo devient une colonie belge sous l'appellation de Congo belge.",
+        "year": 1965,
+        "text": "lancement de la sonde spatiale soviétique Venera 3.",
         "kind": "event"
       },
       {
-        "year": 1889,
-        "text": "déposition de l'empereur brésilien Pierre II et naissance de la république des États-Unis du Brésil.",
+        "year": 1945,
+        "text": "création de l'Organisation des Nations unies pour l'éducation, la science et la culture (UNESCO) par vingt États.",
         "kind": "event"
       },
       {
-        "year": 1884,
-        "text": "début de la conférence de Berlin au cours de laquelle les puissances européennes se partagent l'Afrique.",
+        "year": 1907,
+        "text": "le territoire de l'Oklahoma devient le 46e État des États-Unis sous le nom d'Oklahoma.",
         "kind": "event"
       },
       {
-        "year": 1533,
-        "text": "prise de la capitale impériale Cuzco par les conquistadors espagnols commandés par Francisco Pizarro, pendant la conquête de l'Empire inca.",
+        "year": 1848,
+        "text": "l'Assemblée fédérale suisse élit le premier Conseil fédéral.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2022,
-        "text": "Vinice Mabansag, choisie symboliquement comme la huit milliardième personne sur Terre.",
-        "kind": "birth"
-      },
-      {
-        "year": 1997,
-        "text": "Paula Badosa, joueuse de tennis espagnole.",
-        "kind": "birth"
-      },
-      {
-        "year": 1997,
-        "text": "Viktor Tsyhankov, footballeur ukrainien.",
-        "kind": "birth"
-      },
-      {
-        "year": 1996,
-        "text": "Antoine Dupont, joueur de rugby français.",
+        "year": 1995,
+        "text": "Cliff Alexander, basketteur américain.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "Karl-Anthony Towns, basketteur américain.",
+        "text": "Noah Gray-Cabey, musicien et acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Bryce Cartwright (en), joueur de rugby australien.",
+        "year": 1993,
+        "text": "Peter « Pete » Davidson, acteur américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1993,
+        "text": "Stefan Küng, cycliste sur route et sur piste liechtensteinois-suisse.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "George Akpabio (en), footballeur nigérian.",
+        "kind": "birth"
+      },
+      {
+        "year": 1992,
+        "text": "Shane Prince, hockeyeur sur glace américain.",
         "kind": "birth"
       }
     ]
