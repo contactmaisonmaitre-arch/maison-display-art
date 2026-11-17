@@ -1,5 +1,5 @@
 {
-  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side left/right), full (photo plein écran), trio (3 photos), chiffre (grand chiffre), defile (packshots qui défilent : items [{img, name, sub}]), hero (un produit en grand qui flotte : items, price), icones (comment ça marche : icons [{icon, title, text}] ; icônes : comptoir, service, etage, groupe, club, enligne, cadeau, sachet). Les images peuvent être des liens Shopify (cdn.shopify.com) : la TV les charge en taille réduite. qr : {\"url\", \"label\"}. Aperçu : ?scene=edito&slide=ID&pause&noel",
+  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side left/right), full (photo plein écran), trio (3 photos), chiffre (grand chiffre), defile (packshots qui défilent : items [{img, name, sub}]), hero (un produit en grand qui flotte : items, price), icones (comment ça marche : icons [{icon, title, text}] ; icônes : comptoir, service, etage, groupe, club, enligne, cadeau, sachet). Les images peuvent être des liens Shopify (cdn.shopify.com) : la TV les charge en taille réduite. qr : {\"url\", \"label\"}. Aperçu : ?scene=edito&slide=ID&pause&noel site : adresse affichée en grand, sans QR code.",
   "slides": [
     {
       "id": "bienvenue",
@@ -216,6 +216,27 @@
         },
         {
           "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-kanelbulle-packshot-transparent.png"
+        }
+      ]
+    },
+    {
+      "id": "the-en-ligne",
+      "layout": "hero",
+      "side": "right",
+      "eyebrow": "Thé des Maitre · En ligne",
+      "title": "Nos thés,",
+      "titleItalic": "aussi chez vous.",
+      "body": "Plus de cent thés et infusions, les thés de Noël et le coffret, à commander depuis chez vous.",
+      "site": "thedesmaitre.com",
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/hiver-a-chamonix-packshot.jpg"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/reveillon-scene.jpg"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/coffret-de-noel-4-boites.png"
         }
       ]
     },

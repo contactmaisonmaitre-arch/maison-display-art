@@ -40,6 +40,8 @@ export interface EditoSlide {
   footer?: string;
   /** QR code : lien à scanner (ex. https://maisonmaitre.com) et son libellé. */
   qr?: { url: string; label?: string };
+  /** Adresse de site affichée en grand, sans QR code. */
+  site?: string;
 }
 
 interface SlidesJson {
@@ -127,6 +129,19 @@ const Qr = ({ qr, light }: { qr?: EditoSlide["qr"]; light?: boolean }) =>
         <div className="font-serif-display" style={{ fontSize: 40, fontWeight: 600, color: light ? "#F4F0E7" : WINE, marginTop: 4 }}>
           {qr.label ?? qr.url.replace(/^https?:\/\//, "")}
         </div>
+      </div>
+    </div>
+  ) : null;
+
+/** Adresse de site en grand (sans QR code). */
+const Site = ({ site, light }: { site?: string; light?: boolean }) =>
+  site ? (
+    <div style={{ marginTop: 38, ...rise(0.9) }}>
+      <div className="mm-eyebrow" style={{ fontSize: 14, color: light ? GOLD_LT : "#8A7468" }}>
+        Retrouvez-nous en ligne
+      </div>
+      <div className="font-serif-display" style={{ fontSize: 56, fontWeight: 600, color: light ? "#F4F0E7" : WINE, marginTop: 6, borderBottom: `2px solid ${GOLD}`, display: "inline-block", paddingBottom: 6 }}>
+        {site}
       </div>
     </div>
   ) : null;
@@ -446,6 +461,7 @@ const Hero = ({ s }: { s: EditoSlide }) => {
         )}
         <Chips chips={s.chips} light />
         <Qr qr={s.qr} light />
+        <Site site={s.site} light />
       </div>
     </div>
   );
