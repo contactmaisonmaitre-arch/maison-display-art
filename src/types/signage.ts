@@ -51,7 +51,8 @@ export type SceneType =
   | "noel-menu"
   | "conseil"
   | "grain"
-  | "edito";
+  | "edito"
+  | "plan";
 
 export interface Scene {
   type: SceneType;

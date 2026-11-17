@@ -16,6 +16,7 @@ import { EphemeresScene } from "./EphemeresScene";
 import { VedetteScene } from "./VedetteScene";
 import { AujourdhuiScene } from "./AujourdhuiScene";
 import { DoleAPiedScene } from "./DoleAPiedScene";
+import { PlanScene } from "./PlanScene";
 import { HoroscopeScene } from "./HoroscopeScene";
 import { NouveautesScene } from "./NouveautesScene";
 import { TheDesMaitreScene } from "./TheDesMaitreScene";
@@ -99,6 +100,8 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <AujourdhuiScene weather={weather} />;
     case "dole-a-pied":
       return <DoleAPiedScene />;
+    case "plan":
+      return <PlanScene />;
     case "horoscope":
       return <HoroscopeScene />;
     case "ephemeride":

@@ -1,5 +1,5 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, grain (photo « Du grain à la tasse »), noel-menu (menu de Noël), conseil (conseil du barista, un différent à chaque passage), edito (slide photo de public/data/slides.json, avec \"slide\": \"id\"), club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, matcha, nouveautes, thedesmaitre, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée. Dans « interlude », every : le feu toutes les N scènes (1 = après chaque scène).",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, grain (photo « Du grain à la tasse »), noel-menu (menu de Noël), conseil (conseil du barista, un différent à chaque passage), edito (slide photo de public/data/slides.json, avec \"slide\": \"id\"), club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, plan (plan animé de Dole, zooms sur les lieux), matcha, nouveautes, thedesmaitre, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée. Dans « interlude », every : le feu toutes les N scènes (1 = après chaque scène).",
   "interlude": {
     "type": "cheminee",
     "seconds": 50,
@@ -64,6 +64,10 @@
       "type": "edito",
       "slide": "dole-pasteur",
       "seconds": 18
+    },
+    {
+      "type": "plan",
+      "seconds": 39
     },
     {
       "type": "edito",

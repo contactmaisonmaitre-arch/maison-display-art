@@ -120,3 +120,9 @@ npm install
 npm run dev      # données locales de public/data
 npm test
 ```
+
+## Plan animé de Dole (scène `plan`)
+
+Plan dessiné de la vieille ville (données © les contributeurs OpenStreetMap, rendu en une image : `public/plan/plan-dole.webp`).
+La caméra part de la vue d'ensemble, zoome sur la boutique (écusson MM), puis sur la Collégiale, la maison natale de Pasteur et les Halles avec le trajet à pied en pointillés, et finit sur tous les trajets (~39 s).
+Les lieux et textes sont dans `src/components/signage/scenes/PlanScene.tsx`. Pour couper la scène : `"enabled": false` sur l'entrée `plan` de `public/data/playlist.json`.
