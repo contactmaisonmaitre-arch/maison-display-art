@@ -27,12 +27,13 @@ scène, nouveau design). La TV se recharge seule chaque nuit à 4h30.
 
 ## Noël et feu de cheminée
 
-- **Feu de cheminée** : dessiné en direct (WebGL, `media/FeuCanvas.tsx`), plus de
-  vidéo. Le navigateur du Fire TV Stick lisait mal le MP4 (noir, saccades). Si
-  WebGL manque, des braises en CSS s'affichent. Aperçu : `?scene=cheminee&pause`.
+- **Feu de cheminée** : vraie vidéo, version légère `videos/cheminee-720.mp4`
+  (720p, 20 s qui bouclent sans raccord, 3,4 Mo au lieu de 15 Mo). Dans
+  playlist.json → interlude, `every` règle la fréquence (3 = toutes les 3 scènes).
+- **Slides photo** : `public/data/slides.json` (scène `edito`, 4 mises en page :
+  split, full, trio, chiffre). Aperçu : `?scene=edito&slide=ID&pause&noel`.
 - **Noël** : `public/data/noel.json` (dates, recettes, théière de Noël, conseils du
-  barista, photo d'ouverture). Pendant ses dates : rubans tartan, cadre tartan
-  autour du feu, scènes `grain`, `noel-menu`, `conseil`. Aperçu hors dates : `&noel`.
+  barista, photo d'ouverture). Pendant ses dates : rubans tartan, scènes `grain`, `noel-menu`, `conseil`. Aperçu hors dates : `&noel`.
 
 ## Infos pour les Dolois et les touristes
 

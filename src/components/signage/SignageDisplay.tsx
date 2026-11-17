@@ -4,6 +4,7 @@ import { useFitMode, type FitMode } from "@/hooks/useFitMode";
 import { FixedTopBar } from "./layout/FixedTopBar";
 import { CenterPanel } from "./layout/CenterPanel";
 import { FireOverlay } from "./media/FireOverlay";
+import { CHEMINEE_POSTER, CHEMINEE_SRC } from "@/data/scenes";
 import { useNoelActive } from "@/hooks/useNoel";
 import { TartanRibbon } from "./noel/Tartan";
 import type { Scene } from "@/types/signage";
@@ -96,7 +97,7 @@ const SignageDisplay = () => {
       <div
         className="relative flex overflow-hidden"
         style={{
-          // Retiré de l'affichage pendant le feu : le feu est seul à l'écran (voir FireOverlay).
+          // Retiré de l'affichage pendant le feu : la vidéo doit être seule à l'écran (voir FireOverlay).
           display: fire ? "none" : "flex",
           width: 1920,
           height: 1080,
@@ -117,8 +118,8 @@ const SignageDisplay = () => {
         )}
       </div>
 
-      {/* Feu de cheminée : dessiné en direct, plein écran, seul à l'écran (voir FireOverlay). */}
-      {fire && <FireOverlay scale={scale} />}
+      {/* Feu de cheminée : vidéo plein écran, seule à l'écran (voir FireOverlay). */}
+      {fire && <FireOverlay src={scene?.src || CHEMINEE_SRC} poster={scene?.poster || CHEMINEE_POSTER} />}
 
       {/* Mode d'affichage — visible au survol (absent pendant le feu : rien au-dessus de la vidéo) */}
       {!fire && (

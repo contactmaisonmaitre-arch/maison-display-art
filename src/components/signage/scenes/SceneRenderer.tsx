@@ -29,6 +29,7 @@ import { ChatHeureuxScene } from "./ChatHeureuxScene";
 import { NoelMenuScene } from "./NoelMenuScene";
 import { ConseilScene } from "./ConseilScene";
 import { GrainScene } from "./GrainScene";
+import { EditoScene } from "./EditoScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -116,6 +117,8 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <ConseilScene index={scene.conseilIndex ?? 0} />;
     case "grain":
       return <GrainScene />;
+    case "edito":
+      return <EditoScene id={scene.slide} />;
     case "club":
       return <ClubScene active={active} duration={scene.duration} />;
     default:

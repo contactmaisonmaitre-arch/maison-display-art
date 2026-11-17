@@ -33,10 +33,15 @@ export const useScenes = (): Scene[] => {
   const key = JSON.stringify([playlist, interlude]);
   // Aperçu : ?scene=club montre la scène même hors de ses dates (ex. avant son lancement).
   const wanted = new URLSearchParams(window.location.search).get("scene");
+  // Aperçu d'une slide « edito » précise : ?scene=edito&slide=bienvenue
+  const wantedSlide = new URLSearchParams(window.location.search).get("slide");
   return useMemo(() => {
+    if (wanted === "edito" && wantedSlide) {
+      return [{ type: "edito" as const, duration: 20_000, slide: wantedSlide }];
+    }
     const scenes = buildScenes(playlist, today, { annonceCount: annonces.length, ephemeres: eph, ephemeride }, interlude);
     const entry = wanted && !scenes.some((s) => s.type === wanted) ? playlist.find((e) => e.type === wanted) : undefined;
     return entry ? [...scenes, { type: entry.type, duration: Math.max(4, entry.seconds) * 1000 }] : scenes;
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key, today, annonces.length, eph, ephemeride, wanted]);
+  }, [key, today, annonces.length, eph, ephemeride, wanted, wantedSlide]);
 };

@@ -1,0 +1,164 @@
+{
+  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side: left/right pour la photo), full (photo plein écran), trio (3 photos sur tartan), chiffre (grand chiffre + texte, sans photo). photos : chemins dans /public. title = début du titre, titleItalic = la fin en italique. Aperçu : ?scene=edito&slide=ID&pause&noel",
+  "slides": [
+    {
+      "id": "bienvenue",
+      "layout": "full",
+      "photos": [
+        "/instagram/insta-19.webp"
+      ],
+      "position": "50% 60%",
+      "eyebrow": "Maison Maitre · 16 rue de Besançon",
+      "title": "Bienvenue",
+      "titleItalic": "chez nous.",
+      "body": "Café de spécialité, salon de thé, vins nature et épicerie fine, au cœur de Dole depuis 2022."
+    },
+    {
+      "id": "latte",
+      "layout": "trio",
+      "photos": [
+        "/instagram/insta-21.webp",
+        "/instagram/insta-01.webp",
+        "/instagram/insta-22.webp"
+      ],
+      "eyebrow": "Au comptoir",
+      "title": "Fait main,",
+      "titleItalic": "tasse après tasse.",
+      "body": "Chaque latte est monté et dessiné à la main par nos baristas."
+    },
+    {
+      "id": "matcha",
+      "layout": "split",
+      "side": "right",
+      "photos": [
+        "/scenes/matcha.webp"
+      ],
+      "position": "50% 45%",
+      "eyebrow": "Cérémonie · Matcha d'Uji",
+      "title": "Le matcha,",
+      "titleItalic": "à la japonaise.",
+      "body": "Un matcha de cérémonie cultivé à Uji, près de Kyoto, fouetté à la main au chasen, comme le veut la tradition.",
+      "chips": [
+        "Uji, Kyoto",
+        "Fouetté minute",
+        "80 °C"
+      ]
+    },
+    {
+      "id": "the",
+      "layout": "split",
+      "side": "left",
+      "photos": [
+        "/instagram/insta-08.webp"
+      ],
+      "position": "50% 40%",
+      "eyebrow": "Thé des Maitre",
+      "title": "Thés & infusions,",
+      "titleItalic": "à emporter.",
+      "body": "Toute notre gamme se déguste ici en théière ou s'emporte en sachet. Les thés de Noël sont arrivés.",
+      "chips": [
+        "Sur place",
+        "En sachet",
+        "Idées cadeaux"
+      ]
+    },
+    {
+      "id": "cave",
+      "layout": "full",
+      "photos": [
+        "/cave/cave-1.webp"
+      ],
+      "position": "50% 50%",
+      "eyebrow": "La cave · Vins nature",
+      "title": "Pour vos tables",
+      "titleItalic": "de fêtes.",
+      "body": "Des vins nature choisis chez des vignerons qu'on connaît. Dites-nous votre menu, on vous trouve la bouteille."
+    },
+    {
+      "id": "douceurs",
+      "layout": "trio",
+      "photos": [
+        "/instagram/insta-20.webp",
+        "/instagram/insta-23.webp",
+        "/instagram/insta-24.webp"
+      ],
+      "eyebrow": "Fait maison",
+      "title": "Les douceurs",
+      "titleItalic": "de la maison.",
+      "body": "Cookies, cakes et pâtisseries faits maison, pour accompagner votre boisson."
+    },
+    {
+      "id": "epicerie",
+      "layout": "split",
+      "side": "right",
+      "photos": [
+        "/instagram/insta-16.webp"
+      ],
+      "position": "50% 45%",
+      "eyebrow": "Épicerie fine",
+      "title": "De quoi garnir",
+      "titleItalic": "vos paniers de Noël.",
+      "body": "Conserves, chocolats, biscuits et douceurs, du Jura et d'ailleurs, choisis avec la même exigence que nos cafés.",
+      "chips": [
+        "Paniers garnis",
+        "Idées cadeaux"
+      ]
+    },
+    {
+      "id": "equipe",
+      "layout": "split",
+      "photos": [
+        "/instagram/insta-11.webp"
+      ],
+      "position": "50% 80%",
+      "eyebrow": "La maison",
+      "title": "Une maison",
+      "titleItalic": "de famille.",
+      "body": "Une équipe de passionnés, derrière le comptoir comme en cuisine.",
+      "side": "right"
+    },
+    {
+      "id": "dehors",
+      "layout": "trio",
+      "photos": [
+        "/instagram/insta-03.webp",
+        "/instagram/insta-02.webp",
+        "/instagram/insta-04.webp"
+      ],
+      "eyebrow": "Hors les murs",
+      "title": "On vous retrouve",
+      "titleItalic": "aussi dehors.",
+      "body": "Marchés, Week-end Gourmand du Chat Perché, dégustations : les prochains rendez-vous sont sur @maison_maitre."
+    },
+    {
+      "id": "dole-pasteur",
+      "layout": "chiffre",
+      "figure": "1822",
+      "eyebrow": "Dole · Le saviez-vous ?",
+      "title": "Louis Pasteur",
+      "titleItalic": "est né ici.",
+      "body": "Le père des vaccins modernes est né à Dole le 27 décembre 1822. Sa maison natale, au bord du canal des Tanneurs, est aujourd'hui un musée.",
+      "footer": "Maison natale · 43 rue Pasteur"
+    },
+    {
+      "id": "dole-patrimoine",
+      "layout": "chiffre",
+      "figure": "XVIᵉ",
+      "eyebrow": "Dole · Ville d'Art et d'Histoire",
+      "title": "La vieille ville",
+      "titleItalic": "se visite à pied.",
+      "body": "Ruelles médiévales, hôtels particuliers du XVIᵉ siècle et la collégiale Notre-Dame, qui domine toute la ville.",
+      "footer": "Demandez-nous le plan « Dole à pied »"
+    },
+    {
+      "id": "dole-jura",
+      "layout": "chiffre",
+      "figure": "20 min",
+      "eyebrow": "Dole · Porte du Jura",
+      "title": "Aux portes",
+      "titleItalic": "du vignoble.",
+      "body": "Les premières vignes du Jura sont à vingt minutes : savagnin, vin jaune et vins nature.",
+      "footer": "Demandez conseil à la cave"
+    }
+  ]
+}

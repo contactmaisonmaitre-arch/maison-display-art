@@ -50,7 +50,8 @@ export type SceneType =
   | "club"
   | "noel-menu"
   | "conseil"
-  | "grain";
+  | "grain"
+  | "edito";
 
 export interface Scene {
   type: SceneType;
@@ -63,6 +64,8 @@ export interface Scene {
   annonceIndex?: number;
   /** Index du conseil du barista (public/data/noel.json → conseils). */
   conseilIndex?: number;
+  /** Scène « edito » : identifiant de la slide (public/data/slides.json). */
+  slide?: string;
   /** Rang de passage pour la scène "vedette" (boisson mise en avant). */
   vedetteIndex?: number;
   /** Vidéo à jouer (scènes "video" et "cheminee"). */
@@ -91,6 +94,8 @@ export interface PlaylistEntry {
   /** Scènes "video" / "cheminee" : fichier vidéo (/videos/… ou URL). */
   src?: string;
   poster?: string;
+  /** Scène « edito » : identifiant de la slide dans public/data/slides.json. */
+  slide?: string;
 }
 
 /**
@@ -100,5 +105,7 @@ export interface PlaylistEntry {
  */
 export interface InterludeEntry extends PlaylistEntry {
   enabled?: boolean;
+  /** Le feu toutes les N scènes (défaut : 1, après chaque scène). */
+  every?: number;
 }
 

@@ -47,8 +47,12 @@ export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
   { type: "club", seconds: 30, from: "2026-11-04" },
 ];
 
-/** Vidéo du feu de cheminée (servie par le site publié, pas par GitHub). La TV la lit via le Fire TV Stick. */
-export const CHEMINEE_SRC = "/videos/cheminee.mp4";
+/**
+ * Vidéo du feu de cheminée (servie par le site publié, pas par GitHub).
+ * Version légère : 720p, 25 i/s, 20 s qui bouclent sans raccord visible, 3,4 Mo
+ * (l'ancienne faisait 15 Mo en 1080p et faisait ramer le Fire TV Stick).
+ */
+export const CHEMINEE_SRC = "/videos/cheminee-720.mp4";
 export const CHEMINEE_POSTER = "/videos/cheminee.webp";
 
 /** Interlude par défaut : le feu entre chaque scène, l'automne et l'hiver. */
@@ -105,6 +109,7 @@ export const buildScenes = (
       const scene: Scene = { type: e.type, duration: Math.max(4, e.seconds) * 1000 };
       if (e.src) scene.src = e.src;
       if (e.poster) scene.poster = e.poster;
+      if (e.slide) scene.slide = e.slide;
       switch (e.type) {
         case "instagram":
           scene.reelIndex = n;
@@ -157,9 +162,12 @@ export const insertInterludes = (
     ...(interlude.poster ? { poster: interlude.poster } : {}),
   });
   const out: Scene[] = [];
+  // every : le feu toutes les N scènes (1 = après chaque scène, comportement d'origine).
+  const every = Math.max(1, Math.round(interlude.every ?? 1));
   scenes.forEach((s, i) => {
     out.push(s);
     const next = scenes[(i + 1) % scenes.length];
+    if ((i + 1) % every !== 0) return;
     if (s.type !== interlude.type && next.type !== interlude.type) out.push(make());
   });
   return out;
