@@ -47,7 +47,10 @@ export type SceneType =
   | "annonce"
   | "cheminee"
   | "video"
-  | "club";
+  | "club"
+  | "noel-menu"
+  | "conseil"
+  | "grain";
 
 export interface Scene {
   type: SceneType;
@@ -58,6 +61,8 @@ export interface Scene {
   productOffset?: number;
   /** Index de l'annonce (public/data/annonces.json) pour les scènes "annonce". */
   annonceIndex?: number;
+  /** Index du conseil du barista (public/data/noel.json → conseils). */
+  conseilIndex?: number;
   /** Rang de passage pour la scène "vedette" (boisson mise en avant). */
   vedetteIndex?: number;
   /** Vidéo à jouer (scènes "video" et "cheminee"). */

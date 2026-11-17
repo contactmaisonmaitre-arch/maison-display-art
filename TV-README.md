@@ -25,6 +25,15 @@ est visible sur la TV en moins de 30 min, **sans republier Lovable**.
 Il faut republier sur Lovable uniquement quand le **code** change (nouvelle
 scène, nouveau design). La TV se recharge seule chaque nuit à 4h30.
 
+## Noël et feu de cheminée
+
+- **Feu de cheminée** : dessiné en direct (WebGL, `media/FeuCanvas.tsx`), plus de
+  vidéo. Le navigateur du Fire TV Stick lisait mal le MP4 (noir, saccades). Si
+  WebGL manque, des braises en CSS s'affichent. Aperçu : `?scene=cheminee&pause`.
+- **Noël** : `public/data/noel.json` (dates, recettes, théière de Noël, conseils du
+  barista, photo d'ouverture). Pendant ses dates : rubans tartan, cadre tartan
+  autour du feu, scènes `grain`, `noel-menu`, `conseil`. Aperçu hors dates : `&noel`.
+
 ## Infos pour les Dolois et les touristes
 
 - **Bandeau du haut** : une info pratique toutes les 7 s (météo, marché ouvert,

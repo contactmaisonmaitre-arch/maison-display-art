@@ -4,7 +4,8 @@ import { useFitMode, type FitMode } from "@/hooks/useFitMode";
 import { FixedTopBar } from "./layout/FixedTopBar";
 import { CenterPanel } from "./layout/CenterPanel";
 import { FireOverlay } from "./media/FireOverlay";
-import { CHEMINEE_POSTER, CHEMINEE_SRC } from "@/data/scenes";
+import { useNoelActive } from "@/hooks/useNoel";
+import { TartanRibbon } from "./noel/Tartan";
 import type { Scene } from "@/types/signage";
 
 const FIT_OPTIONS: { k: FitMode; label: string; desc: string }[] = [
@@ -19,6 +20,7 @@ const SignageDisplay = () => {
   const [showCtrl, setShowCtrl] = useState(false);
   const [scene, setScene] = useState<Scene | undefined>();
   const fire = scene?.type === "cheminee";
+  const noel = useNoelActive();
 
   // Rechargement complet chaque nuit vers 4h30 : récupère la dernière version
   // publiée du site et évite que le navigateur de la TV s'encrasse.
@@ -94,7 +96,7 @@ const SignageDisplay = () => {
       <div
         className="relative flex overflow-hidden"
         style={{
-          // Retiré de l'affichage pendant le feu : la vidéo doit être seule à l'écran (voir FireOverlay).
+          // Retiré de l'affichage pendant le feu : le feu est seul à l'écran (voir FireOverlay).
           display: fire ? "none" : "flex",
           width: 1920,
           height: 1080,
@@ -106,10 +108,17 @@ const SignageDisplay = () => {
       >
         <FixedTopBar weather={weather} />
         <CenterPanel weather={weather} onSceneChange={setScene} />
+        {/* Noël : ruban tartan sous la barre du haut et en bas de l'écran */}
+        {noel && (
+          <>
+            <TartanRibbon height={12} style={{ position: "absolute", left: 0, right: 0, top: 118, zIndex: 31 }} />
+            <TartanRibbon height={12} style={{ position: "absolute", left: 0, right: 0, bottom: 0, zIndex: 31 }} />
+          </>
+        )}
       </div>
 
-      {/* Feu de cheminée : vidéo plein écran, seule à l'écran (voir FireOverlay). */}
-      {fire && <FireOverlay src={scene?.src || CHEMINEE_SRC} poster={scene?.poster || CHEMINEE_POSTER} />}
+      {/* Feu de cheminée : dessiné en direct, plein écran, seul à l'écran (voir FireOverlay). */}
+      {fire && <FireOverlay scale={scale} />}
 
       {/* Mode d'affichage — visible au survol (absent pendant le feu : rien au-dessus de la vidéo) */}
       {!fire && (

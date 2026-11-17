@@ -26,6 +26,9 @@ import { ChemineeScene } from "./ChemineeScene";
 import { VideoScene } from "./VideoScene";
 import { ClubScene } from "./ClubScene";
 import { ChatHeureuxScene } from "./ChatHeureuxScene";
+import { NoelMenuScene } from "./NoelMenuScene";
+import { ConseilScene } from "./ConseilScene";
+import { GrainScene } from "./GrainScene";
 
 interface SceneRendererProps {
   scene: Scene;
@@ -107,6 +110,12 @@ export const SceneRenderer = memo(({ scene, weather, active }: SceneRendererProp
       return <ChemineeScene poster={scene.poster} />;
     case "video":
       return <VideoScene active={active} src={scene.src} poster={scene.poster} />;
+    case "noel-menu":
+      return <NoelMenuScene />;
+    case "conseil":
+      return <ConseilScene index={scene.conseilIndex ?? 0} />;
+    case "grain":
+      return <GrainScene />;
     case "club":
       return <ClubScene active={active} duration={scene.duration} />;
     default:

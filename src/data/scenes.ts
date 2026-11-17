@@ -22,7 +22,10 @@ const NEWS_ORDER = shuffled(GOOD_NEWS_OF_THE_DAY.map((_, i) => i));
  * (modifiable sur GitHub sans republier Lovable).
  */
 export const DEFAULT_PLAYLIST: PlaylistEntry[] = [
+  { type: "grain", seconds: 16, from: "2026-11-17", until: "2027-01-04" },
   { type: "café", seconds: 12 },
+  { type: "noel-menu", seconds: 24, from: "2026-11-17", until: "2027-01-04" },
+  { type: "conseil", seconds: 16, from: "2026-11-17", until: "2027-01-04" },
   { type: "chatperche-maison", seconds: 16, until: "2026-09-27" },
   { type: "aujourdhui", seconds: 18 },
   { type: "carte", seconds: 20 },
@@ -117,6 +120,9 @@ export const buildScenes = (
           break;
         case "annonce":
           scene.annonceIndex = n;
+          break;
+        case "conseil":
+          scene.conseilIndex = n;
           break;
         case "vedette":
           scene.vedetteIndex = n;

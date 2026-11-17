@@ -1,0 +1,31 @@
+{
+  "_aide": "Noël sur la TV. from / until (AAAA-MM-JJ) : période où le tartan et les scènes de Noël s'affichent. recettes : les boissons de Noël (name, price, desc). thes / infusions : la théière de Noël. conseils : les « conseils du barista » (une carte par passage). photo : la photo de la scène « Du grain à la tasse ».",
+  "from": "2026-11-17",
+  "until": "2027-01-04",
+  "eyebrow": "Noël 2026 · Pour accompagner vos fêtes",
+  "recettes": [
+    { "name": "L'Élixir de Santa", "price": "8,50", "desc": "Chocolat blanc chaud à la noisette, guimauve, chantilly et vermicelles de fête" },
+    { "name": "La Malice du Lutin", "price": "7,00", "desc": "Mochaccino à la menthe : espresso, chocolat, menthe, lait" },
+    { "name": "Le Petit Bonhomme Vert", "price": "8,00", "desc": "Matcha latte au pain d'épices" }
+  ],
+  "thes": {
+    "title": "Thés de Noël",
+    "price": "La théière 4,50",
+    "items": ["Trésor de Monsieur Noël", "Hiver à Chamonix", "Éclat de Spéculoos", "Pomme d'Avent", "Premier Flocon"]
+  },
+  "infusions": {
+    "title": "Infusions de Noël",
+    "price": "La théière 4,50",
+    "items": ["Au Coin du Feu", "Réveillon", "Pommes au Four", "Sentier Givré"]
+  },
+  "photo": "/scenes/cafe.webp",
+  "conseils": [
+    { "theme": "Café", "title": "Moudre au dernier moment", "text": "Le café moulu perd ses arômes en quelques minutes. Moulez juste avant de préparer, et seulement la dose du jour." },
+    { "theme": "Café", "title": "Jamais d'eau bouillante", "text": "Pour un filtre ou une cafetière à piston, visez une eau entre 92 et 96 °C : laissez reposer la bouilloire 30 secondes." },
+    { "theme": "Café", "title": "Le bon dosage", "text": "Pour un café filtre, comptez environ 60 g de café pour un litre d'eau. Pesez : c'est le secret d'une tasse régulière." },
+    { "theme": "Café", "title": "Pas au frigo", "text": "Gardez votre café dans son sachet bien fermé, à l'abri de l'air, de la lumière et de la chaleur. Le frigo lui donne de l'humidité et des odeurs." },
+    { "theme": "Matcha", "title": "Un matcha tout doux", "text": "Tamisez la poudre, versez une eau à 75-80 °C, jamais bouillante, puis fouettez en « W » jusqu'à la mousse. Sinon, il devient amer." },
+    { "theme": "Thé", "title": "Chaque thé, sa température", "text": "Thé vert ou blanc : 70 à 80 °C, 2 à 3 minutes. Thé noir : 90 à 95 °C, 3 à 4 minutes. Infusions : eau frémissante, 5 à 7 minutes." },
+    { "theme": "Thé", "title": "Une eau douce", "text": "Une eau peu minérale révèle mieux les arômes du thé comme du café. Une eau trop calcaire les étouffe." }
+  ]
+}

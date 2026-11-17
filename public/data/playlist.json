@@ -1,15 +1,28 @@
 {
-  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, matcha, nouveautes, thedesmaitre, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée.",
+  "_aide": "Ordre et durée (secondes) des scènes de la TV. Chaque scène une seule fois par tour. Options : from / until (AAAA-MM-JJ), days (0=dim … 6=sam), enabled:false. Types : café, grain (photo « Du grain à la tasse »), noel-menu (menu de Noël), conseil (conseil du barista, un différent à chaque passage), club, video (avec src : /videos/xxx.mp4), cheminee, aujourdhui, carte, ephemeres, review, horoscope, instagram, dole, produits, dole-a-pied, matcha, nouveautes, thedesmaitre, ephemeride, annonce, anecdote, chatperche-maison, chatperche-produits, chatperche-program, chatperche-intro — en réserve : vedette (quand il y aura des photos pour chaque boisson), weather, goodnews, épicerie. « interlude » : scène glissée automatiquement entre chaque scène (le feu de cheminée), entre from et until ; mettre enabled:false pour le couper, seconds pour sa durée.",
   "interlude": {
     "type": "cheminee",
-    "seconds": 30,
+    "seconds": 20,
     "from": "2026-10-15",
     "until": "2027-03-15"
   },
   "scenes": [
     {
+      "type": "grain",
+      "seconds": 16,
+      "from": "2026-11-17",
+      "until": "2027-01-04"
+    },
+    {
       "type": "café",
-      "seconds": 12
+      "seconds": 12,
+      "from": "2027-01-05"
+    },
+    {
+      "type": "noel-menu",
+      "seconds": 24,
+      "from": "2026-11-17",
+      "until": "2027-01-04"
     },
     {
       "type": "club",
@@ -17,38 +30,42 @@
       "from": "2026-11-04"
     },
     {
-      "type": "chatperche-maison",
-      "seconds": 16,
-      "until": "2026-09-27"
-    },
-    {
-      "type": "aujourdhui",
-      "seconds": 18
-    },
-    {
       "type": "carte",
       "seconds": 20
     },
     {
-      "type": "chatperche-produits",
-      "seconds": 18,
-      "until": "2026-09-27"
-    },
-    {
-      "type": "review",
-      "seconds": 18
-    },
-    {
-      "type": "horoscope",
-      "seconds": 30
+      "type": "conseil",
+      "seconds": 16,
+      "from": "2026-11-17",
+      "until": "2027-01-04"
     },
     {
       "type": "instagram",
       "seconds": 25
     },
     {
-      "type": "dole",
-      "seconds": 15
+      "type": "thedesmaitre",
+      "seconds": 30
+    },
+    {
+      "type": "aujourdhui",
+      "seconds": 18
+    },
+    {
+      "type": "noel-menu",
+      "seconds": 24,
+      "from": "2026-11-17",
+      "until": "2027-01-04"
+    },
+    {
+      "type": "conseil",
+      "seconds": 16,
+      "from": "2026-11-17",
+      "until": "2027-01-04"
+    },
+    {
+      "type": "review",
+      "seconds": 18
     },
     {
       "type": "ephemeres",
@@ -59,10 +76,6 @@
       "seconds": 18
     },
     {
-      "type": "thedesmaitre",
-      "seconds": 30
-    },
-    {
       "type": "produits",
       "seconds": 16
     },
@@ -71,13 +84,16 @@
       "seconds": 16
     },
     {
-      "type": "chatperche-program",
-      "seconds": 14,
-      "until": "2026-09-27"
+      "type": "horoscope",
+      "seconds": 30
     },
     {
       "type": "dole-a-pied",
       "seconds": 20
+    },
+    {
+      "type": "dole",
+      "seconds": 15
     },
     {
       "type": "ephemeride",
@@ -90,6 +106,21 @@
     {
       "type": "annonce",
       "seconds": 14
+    },
+    {
+      "type": "chatperche-maison",
+      "seconds": 16,
+      "until": "2026-09-27"
+    },
+    {
+      "type": "chatperche-produits",
+      "seconds": 18,
+      "until": "2026-09-27"
+    },
+    {
+      "type": "chatperche-program",
+      "seconds": 14,
+      "until": "2026-09-27"
     }
   ]
 }
