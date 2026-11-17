@@ -1,5 +1,5 @@
 {
-  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side left/right), full (photo plein écran), trio (3 photos), chiffre (grand chiffre), defile (packshots qui défilent : items [{img, name, sub}]), hero (un produit en grand qui flotte : items, price), icones (comment ça marche : icons [{icon, title, text}] ; icônes : comptoir, service, etage, groupe, club, enligne, cadeau, sachet). Les images peuvent être des liens Shopify (cdn.shopify.com) : la TV les charge en taille réduite. qr : {\"url\", \"label\"}. Aperçu : ?scene=edito&slide=ID&pause&noel site : adresse affichée en grand, sans QR code.",
+  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side left/right), full (photo plein écran), trio (3 photos), chiffre (grand chiffre), defile (packshots qui défilent : items [{img, name, sub}]), hero (un produit en grand qui flotte : items, price), icones (comment ça marche : icons [{icon, title, text}] ; icônes : comptoir, service, etage, groupe, club, enligne, cadeau, sachet). Les images peuvent être des liens Shopify (cdn.shopify.com) : la TV les charge en taille réduite. qr : {\"url\", \"label\"}. Aperçu : ?scene=edito&slide=ID&pause&noel site : adresse affichée en grand, sans QR code. hero.frame : \"arche\" (défaut, packshot sur fond crème) ou \"libre\" (PNG détourés qui flottent sur le tartan).",
   "slides": [
     {
       "id": "bienvenue",
@@ -124,7 +124,7 @@
       "layout": "split",
       "side": "right",
       "photos": [
-        "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/banquet-des-tsars-scene.jpg"
+        "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/vrac-macro-banquet-des-tsars.jpg"
       ],
       "position": "50% 50%",
       "eyebrow": "Thé des Maitre",
@@ -152,7 +152,8 @@
           "name": "Bourbon",
           "sub": "250 g"
         }
-      ]
+      ],
+      "frame": "libre"
     },
     {
       "id": "cafes",
@@ -209,7 +210,7 @@
       },
       "items": [
         {
-          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-altiplano-2000.jpg"
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-bourbon-packshot-transparent.png"
         },
         {
           "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-pomelo-packshot-transparent.png"
@@ -217,7 +218,8 @@
         {
           "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-kanelbulle-packshot-transparent.png"
         }
-      ]
+      ],
+      "frame": "libre"
     },
     {
       "id": "the-en-ligne",
@@ -233,7 +235,7 @@
           "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/hiver-a-chamonix-packshot.jpg"
         },
         {
-          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/reveillon-scene.jpg"
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/vrac-macro-reveillon.jpg"
         },
         {
           "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/coffret-de-noel-4-boites.png"

@@ -42,6 +42,8 @@ export interface EditoSlide {
   qr?: { url: string; label?: string };
   /** Adresse de site affichée en grand, sans QR code. */
   site?: string;
+  /** Hero : "arche" (packshot sur fond crème, dans une arche) ou "libre" (packshots détourés qui flottent sur le tartan). */
+  frame?: "arche" | "libre";
 }
 
 interface SlidesJson {
@@ -421,19 +423,39 @@ const Hero = ({ s }: { s: EditoSlide }) => {
       <div className="absolute" style={{ top: 0, bottom: 0, width: 900, [photoLeft ? "left" : "right"]: 0, ...tartanBg(488) }}>
         <div className="absolute inset-0" style={{ background: "rgba(20,6,10,0.3)" }} />
         <Twinkles count={10} />
-        {main && (
-          <div
-            className="absolute flex items-center justify-center"
-            style={{ left: 120, right: 120, top: 190, bottom: 70, background: CREAM, borderRadius: "330px 330px 0 0", border: `2px solid ${GOLD}`, boxShadow: "0 0 0 12px rgba(246,240,227,0.25), 0 40px 80px -25px rgba(0,0,0,0.8)", overflow: "hidden", ...rise(0.1) }}
-          >
-            <img src={sized(main.img, 900)} alt={main.name ?? ""} style={{ width: "92%", height: "92%", objectFit: "contain", animation: "mm-float 6s ease-in-out infinite" }} />
+        {s.frame === "libre" ? (
+          // Packshots détourés (PNG transparents) : posés directement sur le tartan, avec une ombre au sol.
+          <div className="absolute" style={{ left: 40, right: 40, top: 150, bottom: 40 }}>
+            {[main, ...rest.slice(0, 2)].filter(Boolean).map((it, i) => {
+              const big = i === 0;
+              const w = big ? 560 : 330;
+              const left = big ? 160 : i === 1 ? -10 : 520;
+              const top = big ? 120 : 430;
+              return (
+                <div key={it!.img} className="absolute" style={{ left, top, width: w, height: w, zIndex: big ? 2 : 1, animation: `mm-pop 1s ease-out ${0.2 + i * 0.3}s both` }}>
+                  <div aria-hidden className="absolute" style={{ left: "12%", right: "12%", bottom: -10, height: 46, borderRadius: "50%", background: "radial-gradient(ellipse, rgba(0,0,0,0.55), transparent 70%)" }} />
+                  <img src={sized(it!.img, big ? 900 : 500)} alt={it!.name ?? ""} className="relative h-full w-full" style={{ objectFit: "contain", animation: `mm-float ${6 + i}s ease-in-out ${i * 0.8}s infinite` }} />
+                </div>
+              );
+            })}
           </div>
+        ) : (
+          <>
+            {main && (
+              <div
+                className="absolute flex items-center justify-center"
+                style={{ left: 120, right: 120, top: 190, bottom: 70, background: CREAM, borderRadius: "330px 330px 0 0", border: `2px solid ${GOLD}`, boxShadow: "0 0 0 12px rgba(246,240,227,0.25), 0 40px 80px -25px rgba(0,0,0,0.8)", overflow: "hidden", ...rise(0.1) }}
+              >
+                <img src={sized(main.img, 900)} alt={main.name ?? ""} style={{ width: "92%", height: "92%", objectFit: "contain", animation: "mm-float 6s ease-in-out infinite" }} />
+              </div>
+            )}
+            {rest.slice(0, 2).map((it, i) => (
+              <div key={it.img} className="absolute" style={{ [i === 0 ? "left" : "right"]: 40, bottom: 90 + i * 40, width: 210, height: 210, background: CREAM, padding: 8, border: `1px solid ${GOLD}`, boxShadow: "0 25px 50px -20px rgba(0,0,0,0.8)", animation: `mm-pop 1s ease-out ${0.8 + i * 0.3}s both` }}>
+                <img src={sized(it.img, 400)} alt={it.name ?? ""} className="h-full w-full" style={{ objectFit: "cover" }} />
+              </div>
+            ))}
+          </>
         )}
-        {rest.slice(0, 2).map((it, i) => (
-          <div key={it.img} className="absolute" style={{ [i === 0 ? "left" : "right"]: 40, bottom: 90 + i * 40, width: 210, height: 210, background: CREAM, padding: 8, border: `1px solid ${GOLD}`, boxShadow: "0 25px 50px -20px rgba(0,0,0,0.8)", animation: `mm-pop 1s ease-out ${0.8 + i * 0.3}s both` }}>
-            <img src={sized(it.img, 400)} alt={it.name ?? ""} className="h-full w-full" style={{ objectFit: "cover" }} />
-          </div>
-        ))}
       </div>
       <div aria-hidden className="absolute" style={{ top: 0, bottom: 0, width: 2, background: GOLD, [photoLeft ? "left" : "right"]: 900 }} />
       <div className="absolute flex flex-col justify-center" style={{ top: 150, bottom: 90, [photoLeft ? "left" : "right"]: 990, [photoLeft ? "right" : "left"]: 100 }}>
