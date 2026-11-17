@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-16T12:02:52.472Z",
+  "fetchedAt": "2026-11-17T12:26:53.081Z",
   "ephemerides": {
-    "date": "2026-11-16",
+    "date": "2026-11-17",
     "events": [
       {
-        "year": 1973,
-        "text": "signature par Richard Nixon de l'acte autorisant la construction de l'oléoduc trans-Alaska.",
+        "year": 2019,
+        "text": "apparition du SARS-CoV-2 à Wuhan, en Chine, responsable de la Covid-19 et d'une pandémie de trois ans.",
         "kind": "event"
       },
       {
-        "year": 1973,
-        "text": "lancement du vol spatial habité américain Skylab 4.",
+        "year": 1950,
+        "text": "intronisation de Tenzin Gyatso, 14e dalaï-lama.",
         "kind": "event"
       },
       {
-        "year": 1965,
-        "text": "lancement de la sonde spatiale soviétique Venera 3.",
+        "year": 1869,
+        "text": "inauguration du canal de Suez par l'impératrice Eugénie ; à cette occasion le khédive Ismaïl Pacha commande à Giuseppe Verdi l'opéra Aida.",
         "kind": "event"
       },
       {
-        "year": 1945,
-        "text": "création de l'Organisation des Nations unies pour l'éducation, la science et la culture (UNESCO) par vingt États.",
+        "year": 1800,
+        "text": "première session du Congrès des États-Unis au Capitole.",
         "kind": "event"
       },
       {
-        "year": 1907,
-        "text": "le territoire de l'Oklahoma devient le 46e État des États-Unis sous le nom d'Oklahoma.",
+        "year": 794,
+        "text": "l'empereur Kanmu déplace la capitale du Japon de Nara à Kyoto, au début de la florissante époque de Heian.",
         "kind": "event"
       },
       {
-        "year": 1848,
-        "text": "l'Assemblée fédérale suisse élit le premier Conseil fédéral.",
+        "year": 2019,
+        "text": "Apparition officielle du SARS-CoV-2, coronavirus responsable de la Covid-19, à Wuhan, en Chine.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 1995,
-        "text": "Cliff Alexander, basketteur américain.",
+        "year": 2003,
+        "text": "Luce Douady, grimpeuse française († 14 juin 2020).",
+        "kind": "birth"
+      },
+      {
+        "year": 1997,
+        "text": "Kim Yugyeom, chanteur et danseur du groupe sud-coréen Got7.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "Noah Gray-Cabey, musicien et acteur américain.",
+        "text": "Elise Mertens, joueuse de tennis belge.",
         "kind": "birth"
       },
       {
         "year": 1993,
-        "text": "Peter « Pete » Davidson, acteur américain.",
-        "kind": "birth"
-      },
-      {
-        "year": 1993,
-        "text": "Stefan Küng, cycliste sur route et sur piste liechtensteinois-suisse.",
+        "text": "Valérie Carpentier, chanteuse québécoise.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "George Akpabio (en), footballeur nigérian.",
+        "text": "Takayoshi Ishihara, footballeur japonais.",
         "kind": "birth"
       },
       {
-        "year": 1992,
-        "text": "Shane Prince, hockeyeur sur glace américain.",
+        "year": 1991,
+        "text": "Pierre Hubert Dibombe, boxeur français d'origine camerounaise.",
         "kind": "birth"
       }
     ]
