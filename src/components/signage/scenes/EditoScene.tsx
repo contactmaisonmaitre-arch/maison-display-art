@@ -5,9 +5,27 @@ import { DoubleFilet, tartanBg } from "../noel/Tartan";
 import { QrCode } from "../QrCode";
 import fallbackSlides from "../../../../public/data/slides.json";
 
+export interface EditoItem {
+  img: string;
+  name?: string;
+  sub?: string;
+}
+
+export interface EditoIcon {
+  icon: IconName;
+  title: string;
+  text?: string;
+}
+
 export interface EditoSlide {
   id: string;
-  layout: "split" | "full" | "trio" | "chiffre";
+  layout: "split" | "full" | "trio" | "chiffre" | "defile" | "hero" | "icones";
+  /** Défilé / hero : produits (packshots) avec nom et sous-titre. */
+  items?: EditoItem[];
+  /** Hero : prix mis en avant. */
+  price?: string;
+  /** Icônes : les étapes « comment ça marche ». */
+  icons?: EditoIcon[];
   side?: "left" | "right";
   photos?: string[];
   position?: string;
@@ -119,7 +137,7 @@ const Split = ({ s, noel }: { s: EditoSlide; noel: boolean }) => {
   const cardW = 760;
   return (
     <div className="absolute inset-0" style={{ background: "#2E0B14" }}>
-      <Photo src={s.photos?.[0] ?? ""} position={s.position} style={photoLeft ? { left: 0, top: 0, bottom: 0, right: cardW } : { left: cardW, top: 0, bottom: 0, right: 0 }} />
+      <Photo src={sized(s.photos?.[0] ?? "", 1600)} position={s.position} style={photoLeft ? { left: 0, top: 0, bottom: 0, right: cardW } : { left: cardW, top: 0, bottom: 0, right: 0 }} />
       {noel && (
         <div
           className="absolute"
@@ -151,7 +169,7 @@ const Split = ({ s, noel }: { s: EditoSlide; noel: boolean }) => {
 /** Photo plein écran, titre en bas à gauche sur un dégradé, cadre doré fin. */
 const Full = ({ s, noel }: { s: EditoSlide; noel: boolean }) => (
   <div className="absolute inset-0" style={{ background: "#2E0B14" }}>
-    <Photo src={s.photos?.[0] ?? ""} position={s.position} style={{ inset: 0 }} />
+    <Photo src={sized(s.photos?.[0] ?? "", 1600)} position={s.position} style={{ inset: 0 }} />
     <div className="absolute inset-0" style={{ background: "linear-gradient(90deg, rgba(30,8,14,0.88) 0%, rgba(30,8,14,0.6) 38%, rgba(30,8,14,0.05) 70%), linear-gradient(0deg, rgba(30,8,14,0.6) 0%, transparent 40%)" }} />
     <div aria-hidden className="pointer-events-none absolute" style={{ left: 48, right: 48, top: 166, bottom: 48, border: `1px solid rgba(217,184,101,0.55)` }} />
     {noel && <div className="absolute" style={{ left: 48, top: 166, bottom: 48, width: 22, ...tartanBg(244), borderRight: `1px solid ${GOLD}` }} />}
@@ -204,7 +222,7 @@ const Trio = ({ s, noel }: { s: EditoSlide; noel: boolean }) => {
           >
             <div
               className="h-full w-full"
-              style={{ backgroundImage: `url(${p})`, backgroundSize: "cover", backgroundPosition: "50% 50%", borderRadius: i === 1 ? "260px 260px 0 0" : 0 }}
+              style={{ backgroundImage: `url(${sized(p, 800)})`, backgroundSize: "cover", backgroundPosition: "50% 50%", borderRadius: i === 1 ? "260px 260px 0 0" : 0 }}
             />
           </div>
         ))}
@@ -250,6 +268,240 @@ const Chiffre = ({ s, noel }: { s: EditoSlide; noel: boolean }) => (
   </div>
 );
 
+/* ───────────────────── Icônes maison (traits fins, tracés animés) ───────────────────── */
+export type IconName = "comptoir" | "service" | "etage" | "groupe" | "club" | "enligne" | "cadeau" | "sachet";
+
+const ICON_PATHS: Record<IconName, string[]> = {
+  // Comptoir : caisse + ticket
+  comptoir: ["M10 52h60", "M16 52V30h48v22", "M24 30V18h32v12", "M30 24h20", "M34 40h12", "M58 18l6-8"],
+  // Service : plateau + tasse fumante
+  service: ["M12 50h56", "M18 50c0-14 10-22 22-22s22 8 22 22", "M40 28v-4", "M36 24h8", "M30 14c2-3 0-5 2-8", "M40 14c2-3 0-5 2-8", "M50 14c2-3 0-5 2-8"],
+  // Étage : escalier + fauteuil
+  etage: ["M10 60h16V48h14V36h14V24h16", "M52 56h18", "M56 56v-8h10v8", "M56 48v-6h10v6"],
+  // Groupe : trois silhouettes
+  groupe: ["M40 30a8 8 0 1 0 0-16a8 8 0 1 0 0 16", "M26 58c0-10 6-16 14-16s14 6 14 16", "M20 34a6 6 0 1 0 0-12a6 6 0 1 0 0 12", "M8 58c0-8 5-13 12-13", "M60 34a6 6 0 1 0 0-12a6 6 0 1 0 0 12", "M72 58c0-8-5-13-12-13"],
+  // Club : carte avec étoile
+  club: ["M10 22h60v36H10z", "M10 32h60", "M40 38l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6-4.5-4 6-1z"],
+  // En ligne : téléphone + colis
+  enligne: ["M18 10h22v48H18z", "M26 52h6", "M46 34h24v22H46z", "M46 34l12-8 12 8", "M58 26v30"],
+  // Cadeau : boîte + nœud
+  cadeau: ["M14 32h52v28H14z", "M10 24h60v8H10z", "M40 24v36", "M40 24c-6-10-18-10-16-2s16 2 16 2", "M40 24c6-10 18-10 16-2s-16 2-16 2"],
+  // Sachet de thé
+  sachet: ["M24 14h32l4 10v36H20V24z", "M20 24h40", "M30 36h20v14H30z", "M40 8v6"],
+};
+
+const HouseIcon = ({ name, size = 120, delay = 0 }: { name: IconName; size?: number; delay?: number }) => (
+  <svg width={size} height={size} viewBox="0 0 80 70" fill="none" aria-hidden>
+    {(ICON_PATHS[name] ?? []).map((d, i) => (
+      <path
+        key={i}
+        d={d}
+        stroke={GOLD_LT}
+        strokeWidth={2.4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        style={{ strokeDasharray: 400, strokeDashoffset: 400, animation: `mm-draw 1.6s ease-out ${delay + i * 0.12}s forwards` }}
+      />
+    ))}
+  </svg>
+);
+
+/** Image en ligne (Shopify) en taille raisonnable pour la TV. */
+const sized = (src: string, w = 700) => (src.includes("cdn.shopify.com") ? `${src}${src.includes("?") ? "&" : "?"}width=${w}` : src);
+
+/** Petites étoiles dorées qui scintillent (décor de Noël, très léger). */
+const Twinkles = ({ count = 14 }: { count?: number }) => (
+  <>
+    {Array.from({ length: count }).map((_, i) => (
+      <span
+        key={i}
+        aria-hidden
+        className="pointer-events-none absolute"
+        style={{
+          left: `${(i * 37) % 100}%`,
+          top: `${(i * 53 + 11) % 100}%`,
+          width: 6,
+          height: 6,
+          borderRadius: "50%",
+          background: "#F6DFA0",
+          boxShadow: "0 0 12px 3px rgba(246,223,160,0.6)",
+          animation: `mm-twinkle ${2.4 + (i % 5) * 0.5}s ease-in-out ${(i % 7) * 0.4}s infinite`,
+        }}
+      />
+    ))}
+  </>
+);
+
+/** Défilé : les packshots passent en continu sur fond tartan, sous un titre. */
+const Defile = ({ s }: { s: EditoSlide }) => {
+  const items = s.items ?? [];
+  const loop = [...items, ...items];
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={tartanBg(488)}>
+      <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(20,6,10,0.15), rgba(20,6,10,0.5))" }} />
+      <Twinkles />
+      <div className="absolute flex items-end justify-between" style={{ left: 90, right: 90, top: 160, gap: 60 }}>
+        <div>
+          {s.eyebrow && <Eyebrow light>{s.eyebrow}</Eyebrow>}
+          <div style={{ marginTop: 18, textShadow: "0 4px 30px rgba(0,0,0,0.6)" }}>
+            <h2 className="font-serif-display" style={{ fontSize: 104, lineHeight: 0.96, color: "#F4F0E7", ...rise(0.3) }}>
+              <span style={{ fontWeight: 600 }}>{s.title} </span>
+              {s.titleItalic && (
+                <span className="italic" style={{ color: GOLD_LT }}>
+                  {s.titleItalic}
+                </span>
+              )}
+            </h2>
+          </div>
+        </div>
+        {(s.body || s.price) && (
+          <div style={{ maxWidth: 620, background: CREAM, padding: "26px 34px", position: "relative", boxShadow: "0 20px 50px -20px rgba(0,0,0,0.7)", ...rise(0.5) }}>
+            <div aria-hidden className="absolute" style={{ inset: 8, border: `1px solid ${GOLD}` }} />
+            {s.price && (
+              <div className="font-serif-display" style={{ fontSize: 44, fontWeight: 600, color: WINE, lineHeight: 1 }}>
+                {s.price}
+              </div>
+            )}
+            {s.body && (
+              <p className="font-serif-display italic" style={{ marginTop: s.price ? 10 : 0, fontSize: 28, lineHeight: 1.3, color: "#5A4A44" }}>
+                {s.body}
+              </p>
+            )}
+          </div>
+        )}
+      </div>
+      <div className="absolute" style={{ left: 0, right: 0, bottom: 70, height: 560 }}>
+        <div className="flex h-full" style={{ width: "max-content", gap: 40, animation: `mm-defile ${Math.max(20, items.length * 5)}s linear infinite` }}>
+          {loop.map((it, i) => (
+            <div key={i} className="relative flex flex-col items-center" style={{ width: 360, background: CREAM, padding: "18px 18px 22px", boxShadow: "0 30px 60px -25px rgba(0,0,0,0.8)" }}>
+              <div aria-hidden className="absolute" style={{ inset: 7, border: `1px solid rgba(201,164,92,0.7)` }} />
+              <div className="relative overflow-hidden" style={{ width: "100%", height: 400 }}>
+                <img src={sized(it.img)} alt={it.name ?? ""} className="h-full w-full" style={{ objectFit: "cover" }} />
+                <div aria-hidden className="absolute inset-y-0" style={{ width: "40%", background: "linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent)", animation: `mm-sheen-pass 6s ease-in-out ${(i % 5) * 1.1}s infinite` }} />
+              </div>
+              {it.name && (
+                <div className="font-serif-display text-center" style={{ marginTop: 14, fontSize: 32, fontWeight: 600, color: INK, lineHeight: 1.1 }}>
+                  {it.name}
+                </div>
+              )}
+              {it.sub && (
+                <div className="mm-eyebrow text-center" style={{ marginTop: 6, fontSize: 13, color: WINE }}>
+                  {it.sub}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+/** Hero produit : un packshot qui flotte dans une arche crème, sur tartan, avec le texte à côté. */
+const Hero = ({ s }: { s: EditoSlide }) => {
+  const [main, ...rest] = s.items ?? [];
+  const photoLeft = s.side !== "right";
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "radial-gradient(ellipse at 30% 55%, #5A1424 0%, #2E0B14 100%)" }}>
+      <div className="absolute" style={{ top: 0, bottom: 0, width: 900, [photoLeft ? "left" : "right"]: 0, ...tartanBg(488) }}>
+        <div className="absolute inset-0" style={{ background: "rgba(20,6,10,0.3)" }} />
+        <Twinkles count={10} />
+        {main && (
+          <div
+            className="absolute flex items-center justify-center"
+            style={{ left: 120, right: 120, top: 190, bottom: 70, background: CREAM, borderRadius: "330px 330px 0 0", border: `2px solid ${GOLD}`, boxShadow: "0 0 0 12px rgba(246,240,227,0.25), 0 40px 80px -25px rgba(0,0,0,0.8)", overflow: "hidden", ...rise(0.1) }}
+          >
+            <img src={sized(main.img, 900)} alt={main.name ?? ""} style={{ width: "92%", height: "92%", objectFit: "contain", animation: "mm-float 6s ease-in-out infinite" }} />
+          </div>
+        )}
+        {rest.slice(0, 2).map((it, i) => (
+          <div key={it.img} className="absolute" style={{ [i === 0 ? "left" : "right"]: 40, bottom: 90 + i * 40, width: 210, height: 210, background: CREAM, padding: 8, border: `1px solid ${GOLD}`, boxShadow: "0 25px 50px -20px rgba(0,0,0,0.8)", animation: `mm-pop 1s ease-out ${0.8 + i * 0.3}s both` }}>
+            <img src={sized(it.img, 400)} alt={it.name ?? ""} className="h-full w-full" style={{ objectFit: "cover" }} />
+          </div>
+        ))}
+      </div>
+      <div aria-hidden className="absolute" style={{ top: 0, bottom: 0, width: 2, background: GOLD, [photoLeft ? "left" : "right"]: 900 }} />
+      <div className="absolute flex flex-col justify-center" style={{ top: 150, bottom: 90, [photoLeft ? "left" : "right"]: 990, [photoLeft ? "right" : "left"]: 100 }}>
+        {s.eyebrow && <Eyebrow light>{s.eyebrow}</Eyebrow>}
+        <div style={{ marginTop: 26 }}>
+          <Title s={s} size={100} light />
+        </div>
+        <div style={{ marginTop: 30, width: 140, height: 1, background: `linear-gradient(90deg, ${GOLD}, transparent)` }} />
+        {s.body && (
+          <p className="font-serif-display italic" style={{ marginTop: 26, fontSize: 38, lineHeight: 1.32, color: "rgba(244,240,231,0.9)", ...rise(0.6) }}>
+            {s.body}
+          </p>
+        )}
+        {s.price && (
+          <div className="flex items-baseline" style={{ marginTop: 34, gap: 18, ...rise(0.8) }}>
+            <span className="font-serif-display" style={{ fontSize: 76, fontWeight: 600, color: GOLD_LT, lineHeight: 1 }}>
+              {s.price}
+            </span>
+            {main?.sub && (
+              <span className="mm-eyebrow" style={{ fontSize: 15, color: "rgba(232,201,169,0.8)" }}>
+                {main.sub}
+              </span>
+            )}
+          </div>
+        )}
+        <Chips chips={s.chips} light />
+        <Qr qr={s.qr} light />
+      </div>
+    </div>
+  );
+};
+
+/** Icônes : « comment ça marche », 3 ou 4 cartes qui apparaissent une à une, icônes tracées en direct. */
+const Icones = ({ s }: { s: EditoSlide }) => {
+  const icons = s.icons ?? [];
+  return (
+    <div className="absolute inset-0 overflow-hidden" style={{ background: "radial-gradient(ellipse at 50% 40%, #5A1424 0%, #2E0B14 100%)" }}>
+      <div className="absolute" style={{ left: 0, right: 0, bottom: 0, height: 26, ...tartanBg(244), borderTop: `1px solid ${GOLD}` }} />
+      <Twinkles count={10} />
+      <div className="absolute flex flex-col items-center text-center" style={{ left: 120, right: 120, top: 170 }}>
+        {s.eyebrow && <Eyebrow light>{s.eyebrow}</Eyebrow>}
+        <h2 className="font-serif-display" style={{ marginTop: 18, fontSize: 96, lineHeight: 0.98, color: "#F4F0E7", ...rise(0.3) }}>
+          <span style={{ fontWeight: 600 }}>{s.title} </span>
+          {s.titleItalic && (
+            <span className="italic" style={{ color: GOLD_LT }}>
+              {s.titleItalic}
+            </span>
+          )}
+        </h2>
+      </div>
+      <div className="absolute grid" style={{ left: 110, right: 110, top: 430, bottom: 110, gridTemplateColumns: `repeat(${icons.length}, minmax(0, 1fr))`, gap: 34 }}>
+        {icons.map((ic, i) => (
+          <div
+            key={ic.title}
+            className="relative flex flex-col items-center text-center"
+            style={{ background: "rgba(246,240,227,0.06)", border: `1px solid rgba(217,184,101,0.45)`, padding: "40px 28px 30px", animation: `mm-pop 0.9s ease-out ${0.5 + i * 0.35}s both` }}
+          >
+            <div className="mm-eyebrow" style={{ fontSize: 14, color: "rgba(232,201,169,0.7)" }}>
+              {String(i + 1).padStart(2, "0")}
+            </div>
+            <div style={{ marginTop: 10 }}>
+              <HouseIcon name={ic.icon} size={130} delay={0.8 + i * 0.35} />
+            </div>
+            <div className="font-serif-display" style={{ marginTop: 16, fontSize: 40, fontWeight: 600, lineHeight: 1.05, color: "#F4F0E7" }}>
+              {ic.title}
+            </div>
+            {ic.text && (
+              <p className="font-serif-display italic" style={{ marginTop: 12, fontSize: 27, lineHeight: 1.3, color: "rgba(244,240,231,0.82)" }}>
+                {ic.text}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+      {s.footer && (
+        <div className="mm-eyebrow absolute text-center" style={{ left: 0, right: 0, bottom: 58, fontSize: 15, color: GOLD_LT, ...rise(1.8) }}>
+          {s.footer}
+        </div>
+      )}
+    </div>
+  );
+};
+
 /** Slide éditoriale haut de gamme, décrite dans public/data/slides.json. */
 export const EditoScene = ({ id }: { id?: string }) => {
   const json = useRemoteJson<SlidesJson>("data/slides.json", 30 * 60 * 1000) ?? (fallbackSlides as SlidesJson);
@@ -263,6 +515,12 @@ export const EditoScene = ({ id }: { id?: string }) => {
       return <Trio s={s} noel={noel} />;
     case "chiffre":
       return <Chiffre s={s} noel={noel} />;
+    case "defile":
+      return <Defile s={s} />;
+    case "hero":
+      return <Hero s={s} />;
+    case "icones":
+      return <Icones s={s} />;
     default:
       return <Split s={s} noel={noel} />;
   }

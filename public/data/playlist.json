@@ -22,7 +22,7 @@
     {
       "type": "edito",
       "slide": "bienvenue",
-      "seconds": 15
+      "seconds": 14
     },
     {
       "type": "noel-menu",
@@ -31,13 +31,18 @@
       "until": "2027-01-04"
     },
     {
+      "type": "edito",
+      "slide": "the-noel",
+      "seconds": 24
+    },
+    {
       "type": "carte",
       "seconds": 20
     },
     {
       "type": "edito",
-      "slide": "latte",
-      "seconds": 15
+      "slide": "comment",
+      "seconds": 20
     },
     {
       "type": "conseil",
@@ -46,18 +51,14 @@
       "until": "2027-01-04"
     },
     {
+      "type": "edito",
+      "slide": "coffret-noel",
+      "seconds": 18
+    },
+    {
       "type": "club",
       "seconds": 30,
       "from": "2026-11-04"
-    },
-    {
-      "type": "edito",
-      "slide": "the",
-      "seconds": 15
-    },
-    {
-      "type": "thedesmaitre",
-      "seconds": 30
     },
     {
       "type": "edito",
@@ -66,8 +67,8 @@
     },
     {
       "type": "edito",
-      "slide": "tout-s-achete",
-      "seconds": 15
+      "slide": "bourbon",
+      "seconds": 18
     },
     {
       "type": "horoscope",
@@ -75,8 +76,8 @@
     },
     {
       "type": "edito",
-      "slide": "chat-heureux",
-      "seconds": 15
+      "slide": "cafes",
+      "seconds": 24
     },
     {
       "type": "instagram",
@@ -84,8 +85,8 @@
     },
     {
       "type": "edito",
-      "slide": "en-ligne",
-      "seconds": 18
+      "slide": "the-maison",
+      "seconds": 16
     },
     {
       "type": "aujourdhui",
@@ -99,13 +100,13 @@
     },
     {
       "type": "edito",
-      "slide": "douceurs",
-      "seconds": 15
+      "slide": "en-ligne",
+      "seconds": 18
     },
     {
       "type": "edito",
       "slide": "cave",
-      "seconds": 15
+      "seconds": 16
     },
     {
       "type": "review",
@@ -118,13 +119,13 @@
       "until": "2027-01-04"
     },
     {
-      "type": "edito",
-      "slide": "cafe-grains",
-      "seconds": 15
+      "type": "thedesmaitre",
+      "seconds": 30
     },
     {
-      "type": "nouveautes",
-      "seconds": 18
+      "type": "edito",
+      "slide": "equipe",
+      "seconds": 16
     },
     {
       "type": "edito",
@@ -132,23 +133,13 @@
       "seconds": 18
     },
     {
-      "type": "edito",
-      "slide": "equipe",
-      "seconds": 15
-    },
-    {
-      "type": "edito",
-      "slide": "the-en-ligne",
+      "type": "nouveautes",
       "seconds": 18
-    },
-    {
-      "type": "produits",
-      "seconds": 16
     },
     {
       "type": "edito",
       "slide": "matcha",
-      "seconds": 15
+      "seconds": 16
     },
     {
       "type": "dole-a-pied",
@@ -163,12 +154,16 @@
     {
       "type": "edito",
       "slide": "dehors",
-      "seconds": 15
+      "seconds": 16
     },
     {
       "type": "edito",
       "slide": "dole-jura",
       "seconds": 18
+    },
+    {
+      "type": "produits",
+      "seconds": 16
     },
     {
       "type": "anecdote",

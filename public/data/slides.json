@@ -1,5 +1,5 @@
 {
-  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side: left/right pour la photo), full (photo plein écran), trio (3 photos sur tartan), chiffre (grand chiffre + texte, sans photo ; figureLabel = petit texte du rond). qr : {\"url\": \"https://…\", \"label\": \"…\"} ajoute un QR code à scanner. photos : chemins dans /public. title = début du titre, titleItalic = la fin en italique. Aperçu : ?scene=edito&slide=ID&pause&noel",
+  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side left/right), full (photo plein écran), trio (3 photos), chiffre (grand chiffre), defile (packshots qui défilent : items [{img, name, sub}]), hero (un produit en grand qui flotte : items, price), icones (comment ça marche : icons [{icon, title, text}] ; icônes : comptoir, service, etage, groupe, club, enligne, cadeau, sachet). Les images peuvent être des liens Shopify (cdn.shopify.com) : la TV les charge en taille réduite. qr : {\"url\", \"label\"}. Aperçu : ?scene=edito&slide=ID&pause&noel",
   "slides": [
     {
       "id": "bienvenue",
@@ -14,17 +14,210 @@
       "body": "Café de spécialité, salon de thé, vins nature et épicerie fine, au cœur de Dole depuis 2022."
     },
     {
-      "id": "latte",
-      "layout": "trio",
-      "photos": [
-        "/instagram/insta-21.webp",
-        "/instagram/insta-01.webp",
-        "/instagram/insta-22.webp"
+      "id": "comment",
+      "layout": "icones",
+      "eyebrow": "Bienvenue · Comment ça marche ?",
+      "title": "Chez nous,",
+      "titleItalic": "c'est simple.",
+      "icons": [
+        {
+          "icon": "comptoir",
+          "title": "On commande au comptoir",
+          "text": "Vous choisissez et réglez à la caisse."
+        },
+        {
+          "icon": "service",
+          "title": "On vous l'apporte",
+          "text": "Installez-vous, votre boisson arrive."
+        },
+        {
+          "icon": "etage",
+          "title": "Montez à l'étage",
+          "text": "Une trentaine de places assises, au calme."
+        },
+        {
+          "icon": "groupe",
+          "title": "6 personnes ou plus ?",
+          "text": "Réservez en semaine, par mail ou sur maisonmaitre.com."
+        }
       ],
-      "eyebrow": "Au comptoir",
-      "title": "Fait main,",
-      "titleItalic": "tasse après tasse.",
-      "body": "Chaque latte est monté et dessiné à la main par nos baristas."
+      "footer": "Demandez votre carte du Club au comptoir : votre nom et votre numéro, c'est tout"
+    },
+    {
+      "id": "the-noel",
+      "layout": "defile",
+      "eyebrow": "Thé des Maitre · Noël 2026",
+      "title": "Les thés",
+      "titleItalic": "de Noël.",
+      "price": "La théière 4,50",
+      "body": "En théière au comptoir, ou en sachet de 100 g à emporter.",
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/tresor-de-monsieur-noel-packshot.jpg",
+          "name": "Trésor de Monsieur Noël",
+          "sub": "Thé noir"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/hiver-a-chamonix-packshot.jpg",
+          "name": "Hiver à Chamonix",
+          "sub": "Thé noir"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/eclat-de-speculoos-packshot.jpg",
+          "name": "Éclat de Spéculoos",
+          "sub": "Thé vert"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/pomme-d-avent-packshot.jpg",
+          "name": "Pomme d'Avent",
+          "sub": "Oolong"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/premier-flocon-packshot.jpg",
+          "name": "Premier Flocon",
+          "sub": "Thé blanc"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/au-coin-du-feu-packshot.jpg",
+          "name": "Au Coin du Feu",
+          "sub": "Infusion"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/reveillon-packshot.jpg",
+          "name": "Réveillon",
+          "sub": "Infusion"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/pommes-au-four-packshot.jpg",
+          "name": "Pommes au Four",
+          "sub": "Infusion"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/sentier-givre-packshot.jpg",
+          "name": "Sentier Givré",
+          "sub": "Infusion"
+        }
+      ]
+    },
+    {
+      "id": "coffret-noel",
+      "layout": "hero",
+      "side": "left",
+      "eyebrow": "Thé des Maitre · À offrir",
+      "title": "Le coffret",
+      "titleItalic": "de Noël.",
+      "price": "29,90 €",
+      "body": "Hiver à Chamonix, Éclat de Spéculoos, Réveillon et Sentier Givré dans leurs boîtes, avec le nœud tartan : le cadeau tout prêt.",
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/coffret-de-noel-packshot-3d.jpg",
+          "name": "Coffret de Noël",
+          "sub": "4 × 25 g"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/coffret-de-noel-4-boites.png"
+        }
+      ]
+    },
+    {
+      "id": "the-maison",
+      "layout": "split",
+      "side": "right",
+      "photos": [
+        "https://cdn.shopify.com/s/files/1/0803/0863/3738/files/banquet-des-tsars-scene.jpg"
+      ],
+      "position": "50% 50%",
+      "eyebrow": "Thé des Maitre",
+      "title": "Notre maison",
+      "titleItalic": "de thé.",
+      "body": "Plus de cent thés et infusions en vrac, à goûter ici en théière et à emporter en sachet.",
+      "chips": [
+        "En vrac",
+        "Sachets 100 g",
+        "Conseils au comptoir"
+      ]
+    },
+    {
+      "id": "bourbon",
+      "layout": "hero",
+      "side": "right",
+      "eyebrow": "Sapidité · Café de Noël",
+      "title": "Bourbon,",
+      "titleItalic": "le café de Noël.",
+      "price": "16 €",
+      "body": "Un Bourbon rose de Colombie, région de Huila, en édition de Noël. En grains, à emporter ou sur maisonmaitre.com.",
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-bourbon-packshot-transparent.png",
+          "name": "Bourbon",
+          "sub": "250 g"
+        }
+      ]
+    },
+    {
+      "id": "cafes",
+      "layout": "defile",
+      "eyebrow": "Café des Maitre",
+      "title": "Nos cafés",
+      "titleItalic": "en grains.",
+      "price": "250 g",
+      "body": "Le café de votre tasse repart avec vous : demandez conseil au comptoir.",
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-altiplano-2000.jpg",
+          "name": "Altiplano",
+          "sub": "Pérou · Honduras"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-sidama-2000.jpg",
+          "name": "Sidama",
+          "sub": "Éthiopie"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-ataco-2000.jpg",
+          "name": "Ataco",
+          "sub": "Salvador"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-lucero-2000.jpg",
+          "name": "Lucero",
+          "sub": "Café du Chat Perché"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-terraforte-2000.jpg",
+          "name": "Terraforte",
+          "sub": "Pérou · Honduras"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-sapienza-2000.jpg",
+          "name": "Sapienza",
+          "sub": "Espresso italien"
+        }
+      ]
+    },
+    {
+      "id": "en-ligne",
+      "layout": "hero",
+      "side": "left",
+      "eyebrow": "Boutique en ligne",
+      "title": "Nos cafés,",
+      "titleItalic": "livrés chez vous.",
+      "body": "Cafés en grains et abonnement café : tout se commande sur maisonmaitre.com.",
+      "qr": {
+        "url": "https://maisonmaitre.com",
+        "label": "maisonmaitre.com"
+      },
+      "items": [
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/cafe-des-maitre-altiplano-2000.jpg"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-pomelo-packshot-transparent.png"
+        },
+        {
+          "img": "https://cdn.shopify.com/s/files/1/0798/8264/9933/files/sapidite-kanelbulle-packshot-transparent.png"
+        }
+      ]
     },
     {
       "id": "matcha",
@@ -45,19 +238,6 @@
       ]
     },
     {
-      "id": "the",
-      "layout": "trio",
-      "photos": [
-        "/products/the-tsars.webp",
-        "/products/the-chat.webp",
-        "/products/eden-floral.webp"
-      ],
-      "eyebrow": "Thé des Maitre",
-      "title": "Nos thés,",
-      "titleItalic": "en sachet.",
-      "body": "Toute la gamme se déguste ici en théière et repart avec vous en sachet. Les thés de Noël sont arrivés."
-    },
-    {
       "id": "cave",
       "layout": "full",
       "photos": [
@@ -68,36 +248,6 @@
       "title": "Pour vos tables",
       "titleItalic": "de fêtes.",
       "body": "Des vins nature choisis chez des vignerons qu'on connaît. Dites-nous votre menu, on vous trouve la bouteille."
-    },
-    {
-      "id": "douceurs",
-      "layout": "trio",
-      "photos": [
-        "/instagram/insta-20.webp",
-        "/instagram/insta-23.webp",
-        "/instagram/insta-24.webp"
-      ],
-      "eyebrow": "Fait maison",
-      "title": "Les douceurs",
-      "titleItalic": "de la maison.",
-      "body": "Cookies, cakes et pâtisseries faits maison, pour accompagner votre boisson."
-    },
-    {
-      "id": "epicerie",
-      "layout": "split",
-      "side": "right",
-      "photos": [
-        "/instagram/insta-16.webp"
-      ],
-      "position": "50% 45%",
-      "eyebrow": "Épicerie fine",
-      "title": "De quoi garnir",
-      "titleItalic": "vos paniers de Noël.",
-      "body": "Conserves, chocolats, biscuits et douceurs, du Jura et d'ailleurs, choisis avec la même exigence que nos cafés.",
-      "chips": [
-        "Paniers garnis",
-        "Idées cadeaux"
-      ]
     },
     {
       "id": "equipe",
@@ -154,83 +304,6 @@
       "titleItalic": "du vignoble.",
       "body": "Les premières vignes du Jura sont à vingt minutes : savagnin, vin jaune et vins nature.",
       "footer": "Demandez conseil à la cave"
-    },
-    {
-      "id": "chat-heureux",
-      "layout": "split",
-      "side": "right",
-      "photos": [
-        "/products/the-chat.webp"
-      ],
-      "position": "50% 40%",
-      "eyebrow": "Notre légende",
-      "title": "Le Chat Heureux,",
-      "titleItalic": "l'infusion culte.",
-      "body": "Agrumes et plantes : notre infusion la plus demandée, depuis toujours. Goûtez-la en théière, ou emportez-la en sachet.",
-      "chips": [
-        "Best-seller",
-        "Sur place",
-        "En sachet"
-      ]
-    },
-    {
-      "id": "cafe-grains",
-      "layout": "split",
-      "side": "left",
-      "photos": [
-        "/products/cafe-altiplano.webp"
-      ],
-      "position": "50% 50%",
-      "eyebrow": "Café des Maitre",
-      "title": "Le café de chez nous,",
-      "titleItalic": "à la maison.",
-      "body": "Le café de votre tasse existe en grains, à emporter : Altiplano, Sidama, Ataco, Lucero… et pour Noël, le Bourbon.",
-      "chips": [
-        "En grains",
-        "250 g",
-        "Conseils de mouture"
-      ]
-    },
-    {
-      "id": "tout-s-achete",
-      "layout": "trio",
-      "photos": [
-        "/instagram/insta-09.webp",
-        "/instagram/insta-08.webp",
-        "/instagram/insta-14.webp"
-      ],
-      "eyebrow": "Comment ça marche ?",
-      "title": "Ici, tout se goûte,",
-      "titleItalic": "tout s'emporte.",
-      "body": "Le café de votre tasse, le thé de votre théière, le vin de votre verre : demandez-nous, ils repartent avec vous."
-    },
-    {
-      "id": "en-ligne",
-      "layout": "chiffre",
-      "figure": "24 h/24",
-      "figureLabel": "En ligne",
-      "eyebrow": "Boutique en ligne",
-      "title": "Maison Maitre,",
-      "titleItalic": "aussi chez vous.",
-      "body": "Nos cafés en grains et l'abonnement café, livré chez vous : tout est sur maisonmaitre.com.",
-      "qr": {
-        "url": "https://maisonmaitre.com",
-        "label": "maisonmaitre.com"
-      }
-    },
-    {
-      "id": "the-en-ligne",
-      "layout": "chiffre",
-      "figure": "TDM",
-      "figureLabel": "Thé des Maitre",
-      "eyebrow": "Nouveau · En ligne",
-      "title": "Nos thés,",
-      "titleItalic": "en un clic.",
-      "body": "Toute la gamme Thé des Maitre, les thés de Noël et le coffret, à commander depuis chez vous.",
-      "qr": {
-        "url": "https://thedesmaitre.com",
-        "label": "thedesmaitre.com"
-      }
     }
   ]
 }
