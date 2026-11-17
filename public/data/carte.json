@@ -258,9 +258,9 @@
         "pitch": "Chocolat blanc chaud à la noisette, guimauve, chantilly et vermicelles de fête"
       },
       {
-        "name": "La Malice du Lutin",
-        "tagline": "Mochaccino à la menthe : espresso, chocolat, menthe, lait",
-        "desc": "Mochaccino à la menthe : espresso, chocolat, menthe, lait",
+        "name": "Mocha givré",
+        "tagline": "Espresso, chocolat et menthe",
+        "desc": "Espresso, chocolat et menthe",
         "price": "7",
         "tags": [
           "Chaud",
@@ -268,10 +268,10 @@
         ],
         "bg": "#D9E2D6",
         "vedette": true,
-        "pitch": "Mochaccino à la menthe : espresso, chocolat, menthe, lait"
+        "pitch": "Espresso, chocolat et menthe"
       },
       {
-        "name": "Le Petit Bonhomme Vert",
+        "name": "Ginger Matcha",
         "tagline": "Matcha latte au pain d'épices",
         "desc": "Matcha latte au pain d'épices",
         "price": "8",
