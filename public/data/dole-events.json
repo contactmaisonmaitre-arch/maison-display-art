@@ -1,23 +1,17 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-16T13:56:11.491Z",
+  "fetchedAt": "2026-11-17T14:49:33.854Z",
   "facts": [
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Cercles de parents",
-      "body": "Lundi 16 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-16"
+      "emoji": "🎨",
+      "title": "Les RDV de l'HIstoire de Dole : Les Cordeliers de Dole",
+      "body": "Mardi 17 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-17"
     },
     {
       "emoji": "👨‍👩‍👧",
       "title": "Temps de rencontre après la perte d'un enfant",
       "body": "Mardi 17 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-17"
-    },
-    {
-      "emoji": "🎨",
-      "title": "Les RDV de l'HIstoire de Dole : Les Cordeliers de Dole",
-      "body": "Mardi 17 nov. à Dole · Musée des Beaux-Arts.",
       "date": "2026-11-17"
     },
     {
@@ -27,9 +21,9 @@
       "date": "2026-11-18"
     },
     {
-      "emoji": "📍",
-      "title": "Salon des voyages 2026",
-      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
+      "emoji": "🎉",
+      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
+      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
       "date": "2026-11-19"
     },
     {
@@ -45,16 +39,10 @@
       "date": "2026-11-19"
     },
     {
-      "emoji": "🎉",
-      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
-      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
+      "emoji": "📍",
+      "title": "Salon des voyages 2026",
+      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
       "date": "2026-11-19"
-    },
-    {
-      "emoji": "📚",
-      "title": "Les Belles Latinas : au coeur de l'Argentine",
-      "body": "Vendredi 20 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-11-20"
     },
     {
       "emoji": "🎭",
@@ -63,21 +51,9 @@
       "date": "2026-11-20"
     },
     {
-      "emoji": "📍",
-      "title": "Portes ouvertes à la radio RCF Jura",
-      "body": "Samedi 21 nov. à Dole ·.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "🎨",
-      "title": "SALON DOLE ARTS ET LIVRES",
-      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Stage de danse africaine",
-      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
+      "emoji": "👨‍👩‍👧",
+      "title": "Formation Gestes 1er secours enfants/nourissons",
+      "body": "Samedi 21 nov. à Dole · Maison de la Parentalité.",
       "date": "2026-11-21"
     },
     {
@@ -88,14 +64,38 @@
     },
     {
       "emoji": "📍",
+      "title": "STAGE HUMAN BEATBOX",
+      "body": "Samedi 21 nov. à Dole · La Visitation.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "Portes ouvertes à la radio RCF Jura",
+      "body": "Samedi 21 nov. à Dole ·.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "🏆",
+      "title": "Match Nationale 2 Féminine",
+      "body": "Samedi 21 nov. à Dole · Espace Pierre-Talagrand.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📍",
       "title": "Mentissa - ANNULÉE",
       "body": "Samedi 21 nov. à Dole · La Commanderie.",
       "date": "2026-11-21"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "Formation Gestes 1er secours enfants/nourissons",
-      "body": "Samedi 21 nov. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "Découverte de la réserve naturelle",
+      "body": "Samedi 21 nov. à Gevry ·.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "🩰",
+      "title": "Stage de danse africaine",
+      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
       "date": "2026-11-21"
     }
   ]
