@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { useRemoteJson } from "@/hooks/useRemoteJson";
 import { useNoelActive } from "@/hooks/useNoel";
 import { DoubleFilet, tartanBg } from "../noel/Tartan";
+import { QrCode } from "../QrCode";
 import fallbackSlides from "../../../../public/data/slides.json";
 
 export interface EditoSlide {
@@ -16,7 +17,11 @@ export interface EditoSlide {
   body?: string;
   chips?: string[];
   figure?: string;
+  /** Petit texte au-dessus du chiffre (défaut : « Dole · Jura »). */
+  figureLabel?: string;
   footer?: string;
+  /** QR code : lien à scanner (ex. https://maisonmaitre.com) et son libellé. */
+  qr?: { url: string; label?: string };
 }
 
 interface SlidesJson {
@@ -90,6 +95,24 @@ const Chips = ({ chips, light }: { chips?: string[]; light?: boolean }) =>
     </div>
   ) : null;
 
+/** QR code + libellé, pour aller sur le site depuis son téléphone. */
+const Qr = ({ qr, light }: { qr?: EditoSlide["qr"]; light?: boolean }) =>
+  qr ? (
+    <div className="flex items-center" style={{ gap: 24, marginTop: 40, ...rise(0.9) }}>
+      <div style={{ padding: 10, background: "#FFFFFF", border: `1px solid ${GOLD}` }}>
+        <QrCode value={qr.url} size={150} fg="#2A1A1C" bg="#FFFFFF" />
+      </div>
+      <div>
+        <div className="mm-eyebrow" style={{ fontSize: 14, color: light ? GOLD_LT : "#8A7468" }}>
+          Scannez avec votre téléphone
+        </div>
+        <div className="font-serif-display" style={{ fontSize: 40, fontWeight: 600, color: light ? "#F4F0E7" : WINE, marginTop: 4 }}>
+          {qr.label ?? qr.url.replace(/^https?:\/\//, "")}
+        </div>
+      </div>
+    </div>
+  ) : null;
+
 /** Photo + carte crème avec double filet ; la photo à gauche ou à droite. */
 const Split = ({ s, noel }: { s: EditoSlide; noel: boolean }) => {
   const photoLeft = s.side === "left";
@@ -119,6 +142,7 @@ const Split = ({ s, noel }: { s: EditoSlide; noel: boolean }) => {
           </p>
         )}
         <Chips chips={s.chips} />
+        <Qr qr={s.qr} />
       </div>
     </div>
   );
@@ -196,7 +220,7 @@ const Chiffre = ({ s, noel }: { s: EditoSlide; noel: boolean }) => (
       <div className="absolute inset-0" style={{ background: "rgba(20,6,10,0.3)" }} />
       <div className="relative flex flex-col items-center justify-center" style={{ width: 640, height: 640, borderRadius: "50%", background: CREAM, border: `2px solid ${GOLD}`, boxShadow: "0 0 0 14px rgba(246,240,227,0.25), 0 40px 80px -25px rgba(0,0,0,0.8)", ...rise(0.1) }}>
         <div className="mm-eyebrow" style={{ fontSize: 18, color: "#8A7468" }}>
-          Dole · Jura
+          {s.figureLabel ?? "Dole · Jura"}
         </div>
         <div className="font-serif-display" style={{ fontSize: s.figure && s.figure.length > 4 ? 150 : 200, lineHeight: 1, color: WINE, fontWeight: 600, marginTop: 10 }}>
           {s.figure}
@@ -221,6 +245,7 @@ const Chiffre = ({ s, noel }: { s: EditoSlide; noel: boolean }) => (
           {s.footer}
         </div>
       )}
+      <Qr qr={s.qr} light />
     </div>
   </div>
 );

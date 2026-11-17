@@ -37,11 +37,6 @@
         {
           "name": "Chantilly",
           "price": "+1"
-        },
-        {
-          "name": "Grand format",
-          "price": "+1",
-          "desc": "Sur les boissons glacées"
         }
       ]
     }
@@ -165,9 +160,9 @@
               {
                 "name": "Fruity matcha",
                 "price": "8",
-                "desc": "Matcha glacé, purée de fruit au choix",
+                "desc": "Matcha glacé, purée de fruit au choix · large 9",
                 "vedette": true,
-                "pitch": "Matcha glacé et purée de fruit au choix."
+                "pitch": "Matcha glacé et purée de fruit au choix. Version large 9."
               },
               {
                 "name": "Café glacé",
@@ -238,45 +233,55 @@
     ]
   ],
   "ephemeres": {
-    "from": "2026-09-01",
-    "until": "2026-11-30",
-    "badge": "Nouveau",
-    "eyebrow": "Recettes d'automne",
+    "from": "2026-11-17",
+    "until": "2027-01-04",
+    "badge": "Noël",
+    "eyebrow": "Le menu de Noël",
     "title": [
-      "Les",
-      "Éphémères"
+      "Les recettes",
+      "de Noël"
     ],
-    "intro": "Des recettes exclusives, pensées et préparées avec soin par nos baristas.",
-    "footnote": "Servies telles quelles. Le Tiramisu Latte est 100 % végétal.",
+    "intro": "Nos recettes de fête, pensées et préparées par nos baristas.",
+    "footnote": "Servies telles quelles, sans chantilly sur demande.",
     "items": [
       {
-        "name": "Pumpkin Spice Pistachio Latte",
-        "tagline": "La pistache et les épices de l'automne",
-        "desc": "Lait de pistache chaud aux épices pumpkin spice, caramel, crème de pistache. Chantilly, caramel beurre salé, sucre d'érable & pistaches concassées.",
-        "price": "9",
+        "name": "L'Élixir de Santa",
+        "tagline": "Chocolat blanc chaud à la noisette, guimauve, chantilly et vermicelles de fête",
+        "desc": "Chocolat blanc chaud à la noisette, guimauve, chantilly et vermicelles de fête",
+        "price": "8,5",
         "tags": [
           "Chaud",
           "nouveau"
         ],
-        "image": "carte/pumpkin-spice-pistachio-latte.webp",
-        "bg": "#C5C8BF",
-        "vedette": true,
-        "pitch": "La pistache et les épices de l'automne"
-      },
-      {
-        "name": "Tiramisu Latte",
-        "tagline": "Toute l'envie d'un tiramisu, dans un latte",
-        "desc": "Espresso, caramel beurre salé, lait d'avoine. Cold foam à l'avoine & poudre de chocolat.",
-        "price": "9",
-        "tags": [
-          "Glacé",
-          "nouveau"
-        ],
-        "vegan": true,
-        "image": "carte/tiramisu-latte.webp",
         "bg": "#EBD4C4",
         "vedette": true,
-        "pitch": "Toute l'envie d'un tiramisu, dans un latte"
+        "pitch": "Chocolat blanc chaud à la noisette, guimauve, chantilly et vermicelles de fête"
+      },
+      {
+        "name": "La Malice du Lutin",
+        "tagline": "Mochaccino à la menthe : espresso, chocolat, menthe, lait",
+        "desc": "Mochaccino à la menthe : espresso, chocolat, menthe, lait",
+        "price": "7",
+        "tags": [
+          "Chaud",
+          "nouveau"
+        ],
+        "bg": "#D9E2D6",
+        "vedette": true,
+        "pitch": "Mochaccino à la menthe : espresso, chocolat, menthe, lait"
+      },
+      {
+        "name": "Le Petit Bonhomme Vert",
+        "tagline": "Matcha latte au pain d'épices",
+        "desc": "Matcha latte au pain d'épices",
+        "price": "8",
+        "tags": [
+          "Chaud",
+          "nouveau"
+        ],
+        "bg": "#C5C8BF",
+        "vedette": true,
+        "pitch": "Matcha latte au pain d'épices"
       }
     ]
   },

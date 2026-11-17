@@ -1,5 +1,5 @@
 {
-  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side: left/right pour la photo), full (photo plein écran), trio (3 photos sur tartan), chiffre (grand chiffre + texte, sans photo). photos : chemins dans /public. title = début du titre, titleItalic = la fin en italique. Aperçu : ?scene=edito&slide=ID&pause&noel",
+  "_aide": "Slides éditoriales de la TV (scène « edito » dans playlist.json, avec \"slide\": \"id\"). layout : split (photo + carte crème ; side: left/right pour la photo), full (photo plein écran), trio (3 photos sur tartan), chiffre (grand chiffre + texte, sans photo ; figureLabel = petit texte du rond). qr : {\"url\": \"https://…\", \"label\": \"…\"} ajoute un QR code à scanner. photos : chemins dans /public. title = début du titre, titleItalic = la fin en italique. Aperçu : ?scene=edito&slide=ID&pause&noel",
   "slides": [
     {
       "id": "bienvenue",
@@ -46,21 +46,16 @@
     },
     {
       "id": "the",
-      "layout": "split",
-      "side": "left",
+      "layout": "trio",
       "photos": [
-        "/instagram/insta-08.webp"
+        "/products/the-tsars.webp",
+        "/products/the-chat.webp",
+        "/products/eden-floral.webp"
       ],
-      "position": "50% 40%",
       "eyebrow": "Thé des Maitre",
-      "title": "Thés & infusions,",
-      "titleItalic": "à emporter.",
-      "body": "Toute notre gamme se déguste ici en théière ou s'emporte en sachet. Les thés de Noël sont arrivés.",
-      "chips": [
-        "Sur place",
-        "En sachet",
-        "Idées cadeaux"
-      ]
+      "title": "Nos thés,",
+      "titleItalic": "en sachet.",
+      "body": "Toute la gamme se déguste ici en théière et repart avec vous en sachet. Les thés de Noël sont arrivés."
     },
     {
       "id": "cave",
@@ -159,6 +154,83 @@
       "titleItalic": "du vignoble.",
       "body": "Les premières vignes du Jura sont à vingt minutes : savagnin, vin jaune et vins nature.",
       "footer": "Demandez conseil à la cave"
+    },
+    {
+      "id": "chat-heureux",
+      "layout": "split",
+      "side": "right",
+      "photos": [
+        "/products/the-chat.webp"
+      ],
+      "position": "50% 40%",
+      "eyebrow": "Notre légende",
+      "title": "Le Chat Heureux,",
+      "titleItalic": "l'infusion culte.",
+      "body": "Agrumes et plantes : notre infusion la plus demandée, depuis toujours. Goûtez-la en théière, ou emportez-la en sachet.",
+      "chips": [
+        "Best-seller",
+        "Sur place",
+        "En sachet"
+      ]
+    },
+    {
+      "id": "cafe-grains",
+      "layout": "split",
+      "side": "left",
+      "photos": [
+        "/products/cafe-altiplano.webp"
+      ],
+      "position": "50% 50%",
+      "eyebrow": "Café des Maitre",
+      "title": "Le café de chez nous,",
+      "titleItalic": "à la maison.",
+      "body": "Le café de votre tasse existe en grains, à emporter : Altiplano, Sidama, Ataco, Lucero… et pour Noël, le Bourbon.",
+      "chips": [
+        "En grains",
+        "250 g",
+        "Conseils de mouture"
+      ]
+    },
+    {
+      "id": "tout-s-achete",
+      "layout": "trio",
+      "photos": [
+        "/instagram/insta-09.webp",
+        "/instagram/insta-08.webp",
+        "/instagram/insta-14.webp"
+      ],
+      "eyebrow": "Comment ça marche ?",
+      "title": "Ici, tout se goûte,",
+      "titleItalic": "tout s'emporte.",
+      "body": "Le café de votre tasse, le thé de votre théière, le vin de votre verre : demandez-nous, ils repartent avec vous."
+    },
+    {
+      "id": "en-ligne",
+      "layout": "chiffre",
+      "figure": "24 h/24",
+      "figureLabel": "En ligne",
+      "eyebrow": "Boutique en ligne",
+      "title": "Maison Maitre,",
+      "titleItalic": "aussi chez vous.",
+      "body": "Nos cafés en grains et l'abonnement café, livré chez vous : tout est sur maisonmaitre.com.",
+      "qr": {
+        "url": "https://maisonmaitre.com",
+        "label": "maisonmaitre.com"
+      }
+    },
+    {
+      "id": "the-en-ligne",
+      "layout": "chiffre",
+      "figure": "TDM",
+      "figureLabel": "Thé des Maitre",
+      "eyebrow": "Nouveau · En ligne",
+      "title": "Nos thés,",
+      "titleItalic": "en un clic.",
+      "body": "Toute la gamme Thé des Maitre, les thés de Noël et le coffret, à commander depuis chez vous.",
+      "qr": {
+        "url": "https://thedesmaitre.com",
+        "label": "thedesmaitre.com"
+      }
     }
   ]
 }

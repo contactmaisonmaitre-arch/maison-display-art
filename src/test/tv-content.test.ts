@@ -46,10 +46,10 @@ describe("programmation", () => {
 });
 
 describe("carte", () => {
-  it("éphémères d'automne actifs en octobre, plus en décembre", () => {
+  it("éphémères de Noël : les 3 recettes du menu de Noël", () => {
     expect(ephemeresActive(carte as CarteJson)).toBeTypeOf("boolean");
     const c = carte as CarteJson;
-    expect(c.ephemeres?.items.length).toBe(2);
+    expect(c.ephemeres?.items.length).toBe(3);
     expect(c.columns.flat().map((s) => s.title)).toEqual(["Café", "Au chaud", "Glacé", "Glouglou", "Miam"]);
   });
 });

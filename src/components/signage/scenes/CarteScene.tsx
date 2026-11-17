@@ -1,3 +1,4 @@
+import { ephemeresActive } from "@/data/carte";
 import { useMemo } from "react";
 import { useCarte, useDispo } from "@/hooks/useCarte";
 import {
@@ -210,6 +211,17 @@ export const CarteScene = () => {
             </div>
           ))}
         </div>
+        {/* En ce moment : les recettes éphémères (le menu de Noël), comme sur la carte imprimée */}
+        {ephemeresActive(carte) && carte.ephemeres && (
+          <div className="flex flex-col" style={{ gap: 8, marginTop: 26, paddingTop: 18, borderTop: "1px solid rgba(232,201,169,0.35)" }}>
+            <div className="font-serif-display uppercase" style={{ fontSize: 13, letterSpacing: "0.3em", color: BOARD.orange, fontWeight: 700 }}>
+              En ce moment · {carte.ephemeres.eyebrow ?? "Éphémères"}
+            </div>
+            {carte.ephemeres.items.map((it) => (
+              <Item key={it.name} it={{ name: it.name, price: it.price }} dark size={25} />
+            ))}
+          </div>
+        )}
         {/* QR vers la carte mobile */}
         <div className="mt-auto flex items-center gap-4" style={{ paddingTop: 18 }}>
           <div style={{ padding: 8, background: BOARD.cream, borderRadius: 12 }}>
