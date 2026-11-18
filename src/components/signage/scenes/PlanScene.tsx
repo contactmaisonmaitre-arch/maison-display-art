@@ -60,7 +60,7 @@ const STEPS: Step[] = [
     key: "pasteur",
     scale: 0.95,
     ms: 7000,
-    num: "≈ 4 min à pied",
+    num: "≈ 5 min à pied",
     title: "Maison natale de Pasteur",
     text: "Louis Pasteur y est né en 1822, au bord du canal des Tanneurs.",
     en: "Louis Pasteur's birthplace, by the tanners' canal.",
@@ -86,6 +86,30 @@ const STEPS: Step[] = [
 ];
 
 const SPOTS: Key[] = ["collegiale", "pasteur", "halles"];
+
+// Itinéraires à pied réels depuis la boutique (OSRM, profil piéton, sur les données OpenStreetMap)
+const ROUTES: Record<string, number[][]> = {"collegiale": [[265, -34], [263, -32], [238, -12], [236, -10], [205, 15], [175, 38], [171, 41], [170, 44], [170, 47], [171, 50], [173, 53], [181, 62], [185, 65], [188, 68], [188, 70], [156, 95], [161, 100], [169, 94]], "pasteur": [[265, -34], [298, -57], [300, -55], [303, -51], [316, -37], [346, -12], [349, -10], [353, -7], [364, 3], [368, 9], [374, 24], [375, 28], [375, 33], [374, 41], [373, 44], [372, 46], [360, 59], [356, 62], [336, 81], [317, 94], [294, 118], [290, 123], [273, 138], [245, 164], [256, 177], [257, 178]], "halles": [[265, -34], [263, -32], [238, -12], [236, -10], [205, 15], [175, 38], [171, 41], [170, 44], [170, 47], [171, 50], [173, 53], [181, 62], [185, 65], [188, 68], [188, 70], [156, 95], [161, 100], [148, 104], [128, 124], [127, 127], [125, 130], [124, 133], [125, 136], [127, 139], [129, 141], [134, 145], [142, 151], [150, 153], [150, 160], [146, 166], [134, 188], [126, 202]]};
+
+// Points du pointillé, tous les ~16 px de l'image, le long de l'itinéraire
+const dotsOf = (pts: number[][]) => {
+  const out: [number, number][] = [];
+  const pix = pts.map(([x, y]) => [(x - X0) * PX, (y - Y0) * PX]);
+  let carry = 0;
+  for (let n = 1; n < pix.length; n++) {
+    const [ax, ay] = pix[n - 1];
+    const [bx, by] = pix[n];
+    const len = Math.hypot(bx - ax, by - ay);
+    let d = carry;
+    while (d <= len) {
+      out.push([ax + ((bx - ax) * d) / len, ay + ((by - ay) * d) / len]);
+      d += 16;
+    }
+    carry = d - len;
+  }
+  return out;
+};
+const DOTS: Record<string, [number, number][]> = Object.fromEntries(Object.entries(ROUTES).map(([k, v]) => [k, dotsOf(v)]));
+
 
 const img = (k: Key) => [(P[k][0] - X0) * PX, (P[k][1] - Y0) * PX];
 
@@ -116,8 +140,6 @@ export const PlanScene = () => {
 
   const step = STEPS[i];
   const v = view(step);
-  const [bx, by] = img("boutique");
-  const target = step.key === "vue" || step.key === "boutique" ? null : img(step.key);
   const showAll = i === STEPS.length - 1;
 
   // Position écran d'un point de l'image avec la vue courante
@@ -141,27 +163,33 @@ export const PlanScene = () => {
         }}
       >
         <img src={IMG} alt="" width={IMG_W} height={IMG_H} style={{ display: "block" }} />
-        {/* Trajets à pied depuis la boutique */}
-        <svg width={IMG_W} height={IMG_H} className="absolute left-0 top-0" style={{ overflow: "visible" }}>
-          {SPOTS.map((k) => {
-            const [x, y] = img(k);
-            const on = showAll || (target && step.key === k);
-            const mx = (bx + x) / 2 + (y - by) * 0.18;
-            const my = (by + y) / 2 - (x - bx) * 0.18;
-            return (
-              <path
-                key={k}
-                d={`M ${bx} ${by} Q ${mx} ${my} ${x} ${y}`}
-                fill="none"
-                stroke="#7A1424"
-                strokeWidth={7}
-                strokeLinecap="round"
-                strokeDasharray="0.1 18"
-                style={{ opacity: on ? 0.9 : 0, transition: "opacity 0.9s ease 1.6s" }}
-              />
-            );
-          })}
-        </svg>
+        {/* Itinéraires à pied : les points apparaissent un à un depuis la boutique */}
+        {SPOTS.map((k) => {
+          const on = showAll || step.key === k;
+          if (!on) return null;
+          const dots = DOTS[k];
+          const per = Math.min(45, 1500 / dots.length);
+          return (
+            <div key={`${k}-${i}`} className="absolute left-0 top-0">
+              {dots.map(([x, y], n) => (
+                <span
+                  key={n}
+                  className="absolute"
+                  style={{
+                    left: x - 4.5,
+                    top: y - 4.5,
+                    width: 9,
+                    height: 9,
+                    borderRadius: 999,
+                    background: "#7A1424",
+                    boxShadow: "0 0 0 2px rgba(251,246,234,0.85)",
+                    animation: `mm-plan-dot 0.35s ease-out ${(showAll ? 1.4 : 2.0) + (n * per) / 1000}s both`,
+                  }}
+                />
+              ))}
+            </div>
+          );
+        })}
       </div>
 
       {/* Fondu des bords du plan */}
