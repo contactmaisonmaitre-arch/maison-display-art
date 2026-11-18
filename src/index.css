@@ -44,6 +44,8 @@
 @layer base {
   * { @apply border-border; }
   html, body, #root { margin: 0; padding: 0; background: #2E0B14; }
+  /* TV Android : interdit au navigateur de grossir les textes tout seul */
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body { font-family: 'Jost Variable', 'Jost', sans-serif; -webkit-font-smoothing: antialiased; }
 }
 

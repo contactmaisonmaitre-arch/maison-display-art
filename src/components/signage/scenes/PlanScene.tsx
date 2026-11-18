@@ -159,7 +159,6 @@ export const PlanScene = () => {
           transformOrigin: "0 0",
           transform: `translate3d(${v.tx}px, ${v.ty}px, 0) scale(${v.s})`,
           transition: EASE,
-          willChange: "transform",
         }}
       >
         <img src={IMG} alt="" width={IMG_W} height={IMG_H} style={{ display: "block" }} />
@@ -206,7 +205,7 @@ export const PlanScene = () => {
           <div
             key={k}
             className="absolute left-0 top-0"
-            style={{ transform: at(k), transition: EASE, willChange: "transform" }}
+            style={{ transform: at(k), transition: EASE }}
           >
             <div
               style={{
@@ -232,7 +231,7 @@ export const PlanScene = () => {
       })}
 
       {/* Écusson de la boutique */}
-      <div className="absolute left-0 top-0" style={{ transform: at("boutique"), transition: EASE, willChange: "transform" }}>
+      <div className="absolute left-0 top-0" style={{ transform: at("boutique"), transition: EASE }}>
         <div
           className="absolute"
           style={{ left: -60, top: -60, width: 120, height: 120, borderRadius: 999, border: "3px solid #7A1424", animation: "mm-plan-ping 2.2s ease-out infinite" }}

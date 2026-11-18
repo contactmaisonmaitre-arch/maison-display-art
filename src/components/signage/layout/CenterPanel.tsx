@@ -96,13 +96,13 @@ export const CenterPanel = memo(({ weather, onSceneChange }: CenterPanelProps) =
             key={i}
             className="absolute inset-0"
             style={{
+              // Fire TV : uniquement de l'opacité (pas de scale, pas de will-change permanent) et la
+              // scène préchargée reste invisible, sinon la puce graphique sature et l'écran
+              // s'affiche par morceaux.
               opacity: active ? 1 : 0,
-              transform: active
-                ? "translateY(0) scale(1)"
-                : "translateY(14px) scale(0.985)",
-              transition: `opacity ${TRANSITION_MS}ms cubic-bezier(0.22, 1, 0.36, 1), transform ${TRANSITION_MS}ms cubic-bezier(0.22, 1, 0.36, 1)`,
+              visibility: active || i === previousIndex ? "visible" : "hidden",
+              transition: `opacity ${TRANSITION_MS}ms ease-out`,
               pointerEvents: active ? "auto" : "none",
-              willChange: active ? "opacity, transform" : "auto",
               animationPlayState: active ? "running" : "paused",
             }}
             data-scene-active={active ? "true" : "false"}

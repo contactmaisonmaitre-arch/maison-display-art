@@ -91,7 +91,7 @@ const SignageDisplay = () => {
 
   return (
     <div
-      className={`${fire ? "" : "mm-grain-global "}fixed inset-0 overflow-hidden flex items-center justify-center`}
+      className={`fixed inset-0 overflow-hidden flex items-center justify-center`}
       style={{ cursor: showCtrl ? "default" : "none", background: "radial-gradient(ellipse at center, #46121F 0%, #2E0B14 100%)" }}
     >
       <div
