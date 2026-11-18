@@ -64,7 +64,7 @@ export const PRODUCTS_TO_TRY: Product[] = [
     name: "Castillo Semi Lavé",
     notes: "Chocolat · Noisette · Caramel",
     price: "14,50 € / 250g",
-    img: "/products/cafe-colombie-castillo.gif",
+    img: "/products/cafe-colombie-castillo.webp",
   },
   {
     cat: "Thé des Maitre · Noir",

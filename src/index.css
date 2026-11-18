@@ -120,6 +120,8 @@
     isolation: isolate;
   }
   .mm-noise::after {
+    /* Coupé : le grain en mélange « overlay » est trop lourd pour le Fire TV */
+    display: none;
     content: "";
     position: absolute;
     inset: 0;
@@ -189,14 +191,14 @@
   100% { transform: scale(1.08) translate3d(-1.2%, -0.8%, 0); }
 }
 @keyframes mm-region-in {
-  0% { opacity: 0; transform: translateX(28px); filter: blur(4px); }
-  60% { opacity: 1; filter: blur(0); }
-  100% { opacity: 1; transform: translateX(0); filter: blur(0); }
+  0% { opacity: 0; transform: translateX(28px); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: translateX(0); }
 }
 @keyframes mm-review-in {
-  0% { opacity: 0; transform: translateY(24px); filter: blur(6px); }
-  60% { opacity: 1; filter: blur(0); }
-  100% { opacity: 1; transform: translateY(0); filter: blur(0); }
+  0% { opacity: 0; transform: translateY(24px); }
+  60% { opacity: 1; }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* ===== Noël 2026 : animations des slides éditoriales (transform/opacity uniquement : léger pour la TV) ===== */
