@@ -26,14 +26,14 @@
           "text": "Vous choisissez et réglez à la caisse."
         },
         {
-          "icon": "service",
-          "title": "On vous l'apporte",
-          "text": "Installez-vous, votre boisson arrive."
-        },
-        {
           "icon": "etage",
           "title": "Montez à l'étage",
-          "text": "Une trentaine de places assises, au calme."
+          "text": "Installez-vous : une trentaine de places assises, au calme."
+        },
+        {
+          "icon": "service",
+          "title": "On vous l'apporte",
+          "text": "Votre boisson arrive à votre table."
         },
         {
           "icon": "groupe",

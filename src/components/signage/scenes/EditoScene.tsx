@@ -1,4 +1,4 @@
-import type { CSSProperties } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { useRemoteJson } from "@/hooks/useRemoteJson";
 import { useNoelActive } from "@/hooks/useNoel";
 import { DoubleFilet, tartanBg } from "../noel/Tartan";
@@ -352,7 +352,17 @@ const Twinkles = ({ count = 14 }: { count?: number }) => (
 /** Défilé : les packshots passent en continu sur fond tartan, sous un titre. */
 const Defile = ({ s }: { s: EditoSlide }) => {
   const items = s.items ?? [];
-  const loop = [...items, ...items];
+  // Fire TV : pas de long ruban qui défile (trop lourd, l'écran s'affichait par morceaux).
+  // On montre 4 produits à la fois et on passe aux suivants par un fondu.
+  const PER = 4;
+  const pages = Math.max(1, Math.ceil(items.length / PER));
+  const [page, setPage] = useState(0);
+  useEffect(() => {
+    if (pages < 2) return;
+    const id = window.setInterval(() => setPage((p) => (p + 1) % pages), 5000);
+    return () => window.clearInterval(id);
+  }, [pages]);
+  const loop = items.slice(page * PER, page * PER + PER);
   return (
     <div className="absolute inset-0 overflow-hidden" style={tartanBg(488)}>
       <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, rgba(20,6,10,0.15), rgba(20,6,10,0.5))" }} />
@@ -388,13 +398,12 @@ const Defile = ({ s }: { s: EditoSlide }) => {
         )}
       </div>
       <div className="absolute" style={{ left: 0, right: 0, bottom: 70, height: 560 }}>
-        <div className="flex h-full" style={{ width: "max-content", gap: 40, animation: `mm-defile ${Math.max(20, items.length * 5)}s linear infinite` }}>
+        <div key={page} className="flex h-full justify-center" style={{ gap: 40 }}>
           {loop.map((it, i) => (
-            <div key={i} className="relative flex flex-col items-center" style={{ width: 360, background: CREAM, padding: "18px 18px 22px", boxShadow: "0 30px 60px -25px rgba(0,0,0,0.8)" }}>
+            <div key={i} className="relative flex flex-col items-center" style={{ width: 360, background: CREAM, padding: "18px 18px 22px", boxShadow: "0 30px 60px -25px rgba(0,0,0,0.8)", animation: `mm-slide-up 0.9s ease-out ${0.1 + i * 0.12}s both` }}>
               <div aria-hidden className="absolute" style={{ inset: 7, border: `1px solid rgba(201,164,92,0.7)` }} />
               <div className="relative overflow-hidden" style={{ width: "100%", height: 400 }}>
                 <img src={sized(it.img)} alt={it.name ?? ""} className="h-full w-full" style={{ objectFit: "cover" }} />
-                <div aria-hidden className="absolute inset-y-0" style={{ width: "40%", background: "linear-gradient(100deg, transparent, rgba(255,255,255,0.35), transparent)", animation: `mm-sheen-pass 6s ease-in-out ${(i % 5) * 1.1}s infinite` }} />
               </div>
               {it.name && (
                 <div className="font-serif-display text-center" style={{ marginTop: 14, fontSize: 32, fontWeight: 600, color: INK, lineHeight: 1.1 }}>

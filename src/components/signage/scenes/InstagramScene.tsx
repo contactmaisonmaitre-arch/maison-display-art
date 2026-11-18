@@ -161,24 +161,22 @@ export const InstagramScene = ({ active, reelIndex = 0 }: { active: boolean; ree
             background: "#000",
           }}
         >
-          {/* Slideshow : on rend les photos en pile, on bascule l'opacité */}
-          {photos.map((src) => (
-            <img
-              key={src}
-              src={src}
-              alt=""
-              style={{
-                position: "absolute",
-                inset: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                opacity: src === currentSrc ? 1 : 0,
-                transition: "opacity 900ms ease",
-                background: "#000",
-              }}
-            />
-          ))}
+          {/* Une seule photo à la fois (fondu à l'arrivée). Les 25 photos empilées
+              saturaient la puce graphique du Fire TV : plus aucune ne s'affichait. */}
+          <img
+            key={currentSrc}
+            src={currentSrc}
+            alt=""
+            style={{
+              position: "absolute",
+              inset: 0,
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              animation: "mm-fade-in 900ms ease both",
+              background: "#000",
+            }}
+          />
 
           {/* Header post — profil + handle, façon flux IG */}
           <div
