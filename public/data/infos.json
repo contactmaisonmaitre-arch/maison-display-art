@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-18T12:14:24.738Z",
+  "fetchedAt": "2026-11-19T12:08:32.141Z",
   "ephemerides": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "events": [
       {
-        "year": 2013,
-        "text": "la NASA lance avec succès la sonde spatiale MAVEN en direction de Mars.",
+        "year": 1493,
+        "text": "Christophe Colomb découvre Porto Rico lors de son deuxième voyage en Amérique.",
         "kind": "event"
       },
       {
-        "year": 1918,
-        "text": "proclamation de l'indépendance de la Lettonie.",
+        "year": 2020,
+        "text": "la Fondation nationale pour la science annonce la fermeture du radiotélescope d'Arecibo, qui était le plus grand du monde de 1963 à 2016.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "sur la 72e édition du Concours Miss Univers, la gagnante, est Sheynnis Palacios, Miss Nicaragua.",
+        "year": 2017,
+        "text": "première « journée Mondiale des Pauvres ».",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "le Système international d'unités intègre quatre nouveaux préfixes : ronto (10−27), quecto (10−30), ronna (1027) et quetta (1030).",
+        "year": 2011,
+        "text": "Saïf al-Islam Kadhafi est arrêté dans le sud de la Libye.",
         "kind": "event"
       },
       {
-        "year": 2016,
-        "text": "pour la première fois, une juridiction britannique autorise la cryonie d'un être humain.",
+        "year": 2007,
+        "text": "Sortie de l'album live Alive 2007 des Daft Punk, tiré de leur performance au palais omnisports de Paris-Bercy le 14 juin de la même année.",
         "kind": "event"
       },
       {
-        "year": 2013,
-        "text": "la NASA lance avec succès la sonde MAVEN, en direction de Mars.",
+        "year": 2007,
+        "text": "lancement de la première « liseuse », Kindle, par l'entreprise Amazon.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2005,
-        "text": "Mélissa Bethi (ميليسا بتحي), footballeuse franco-algérienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Victor Carles (ro), acteur français.",
+        "year": 2009,
+        "text": "Gaston d'Orléans, fils de Jean d'Orléans.",
         "kind": "birth"
       },
       {
         "year": 1997,
-        "text": "Olivier Boscagli, footballeur français.",
+        "text": "Zach Collins, joueur de basket-ball américain.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Chloé Caulier, grimpeuse belge.",
+        "year": 1997,
+        "text": "Léna Mahfouf, vidéaste web et influenceuse française.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Erina Hashiguchi, actrice, chanteuse et idole japonaise.",
+        "year": 1997,
+        "text": "Premiers septuplés connus dans l'Histoire à avoir tous survécu, des Américains de l'Iowa dont la mère avait suivi un traitement contre la stérilité.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Chonnasorn Sajakul, chanteuse et rappeuse thaïlandaise du groupe CLC.",
+        "year": 1995,
+        "text": "Abella Danger, actrice pornographique américaine.",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Michael Conlan, boxeur irlandais.",
         "kind": "birth"
       }
     ]
