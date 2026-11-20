@@ -1,31 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-19T14:39:09.734Z",
+  "fetchedAt": "2026-11-20T14:17:41.399Z",
   "facts": [
-    {
-      "emoji": "📍",
-      "title": "Salon des voyages 2026",
-      "body": "Jeudi 19 nov. à Tavaux · Aéroport de Dole/Tavaux.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "📍",
-      "title": "Réunion d'information - Escapade Spécial Seniors",
-      "body": "Jeudi 19 nov. à Dole · Hôtel de Ville, Salle Edgar Faure.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "🎉",
-      "title": "Ciné-débat : La Réparation",
-      "body": "Jeudi 19 nov. à Eclans-Nenon · Salle des fêtes d'Éclans-Nenon.",
-      "date": "2026-11-19"
-    },
-    {
-      "emoji": "🎉",
-      "title": "SOIRÉE BEAUJOLAIS NOUVEAU",
-      "body": "Jeudi 19 nov. à Choisey · Salle des Fêtes de Choisey.",
-      "date": "2026-11-19"
-    },
     {
       "emoji": "🎭",
       "title": "Vaslav",
@@ -33,9 +9,15 @@
       "date": "2026-11-20"
     },
     {
-      "emoji": "📍",
-      "title": "STAGE HUMAN BEATBOX",
-      "body": "Samedi 21 nov. à Dole · La Visitation.",
+      "emoji": "🩰",
+      "title": "Stage de danse africaine",
+      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📚",
+      "title": "Bourse aux jouets et livres",
+      "body": "Samedi 21 nov. à Dole · Ancienne école d'Azans.",
       "date": "2026-11-21"
     },
     {
@@ -46,26 +28,8 @@
     },
     {
       "emoji": "📍",
-      "title": "TELETHON 2026 À PESEUX",
-      "body": "Samedi 21 nov. à Peseux · Salle polyvalente.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "🩰",
-      "title": "Stage de danse africaine",
-      "body": "Samedi 21 nov. à Dole · Salle Fitness, Ideal Standard.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "📍",
-      "title": "Découverte de la réserve naturelle",
-      "body": "Samedi 21 nov. à Gevry ·.",
-      "date": "2026-11-21"
-    },
-    {
-      "emoji": "📚",
-      "title": "Bourse aux jouets et livres",
-      "body": "Samedi 21 nov. à Dole · Ancienne école d'Azans.",
+      "title": "STAGE HUMAN BEATBOX",
+      "body": "Samedi 21 nov. à Dole · La Visitation.",
       "date": "2026-11-21"
     },
     {
@@ -75,15 +39,27 @@
       "date": "2026-11-21"
     },
     {
+      "emoji": "🎨",
+      "title": "SALON DOLE ARTS ET LIVRES",
+      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
+      "date": "2026-11-21"
+    },
+    {
+      "emoji": "📍",
+      "title": "TELETHON 2026 À PESEUX",
+      "body": "Samedi 21 nov. à Peseux · Salle polyvalente.",
+      "date": "2026-11-21"
+    },
+    {
       "emoji": "📍",
       "title": "Portes ouvertes à la radio RCF Jura",
       "body": "Samedi 21 nov. à Dole ·.",
       "date": "2026-11-21"
     },
     {
-      "emoji": "🎨",
-      "title": "SALON DOLE ARTS ET LIVRES",
-      "body": "Samedi 21 nov. à Dole · Manège de Brack.",
+      "emoji": "📍",
+      "title": "Découverte de la réserve naturelle",
+      "body": "Samedi 21 nov. à Gevry ·.",
       "date": "2026-11-21"
     },
     {
@@ -93,10 +69,34 @@
       "date": "2026-11-21"
     },
     {
+      "emoji": "🎨",
+      "title": "Visite guidée - Exposition temporaire « Ctrl + Alt + Art - Peindre le jeu vidéo »",
+      "body": "Dimanche 22 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-22"
+    },
+    {
       "emoji": "📍",
       "title": "Sainte Cécile : Les temps suspendus",
       "body": "Dimanche 22 nov. à Dole · La Commanderie.",
       "date": "2026-11-22"
+    },
+    {
+      "emoji": "📍",
+      "title": "KARMA",
+      "body": "Mardi 24 nov. à Saint-Aubin · Foyer rural.",
+      "date": "2026-11-24"
+    },
+    {
+      "emoji": "📍",
+      "title": "Journée internationale de lutte contres les violences faites aux femmes - Ciné débat",
+      "body": "Mercredi 25 nov. à Dole · Mairie.",
+      "date": "2026-11-25"
+    },
+    {
+      "emoji": "📍",
+      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
+      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
+      "date": "2026-11-25"
     }
   ]
 }
