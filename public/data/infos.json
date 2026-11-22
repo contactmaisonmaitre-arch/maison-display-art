@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-21T11:46:17.532Z",
+  "fetchedAt": "2026-11-22T11:58:48.394Z",
   "ephemerides": {
-    "date": "2026-11-21",
+    "date": "2026-11-22",
     "events": [
       {
-        "year": 1946,
-        "text": "parution du roman J'irai cracher sur vos tombes de Boris Vian.",
+        "year": 2005,
+        "text": "Angela Merkel devient chancelière fédérale d'Allemagne.",
         "kind": "event"
       },
       {
-        "year": 1831,
-        "text": "première révolte des canuts à Lyon.",
+        "year": 1977,
+        "text": "première liaison commerciale Paris-New York du Concorde.",
         "kind": "event"
       },
       {
-        "year": 1806,
-        "text": "promulgation par Napoléon Ier du décret de Berlin instaurant le blocus continental contre le Royaume-Uni.",
+        "year": 1974,
+        "text": "l'Assemblée générale des Nations unies accorde le statut d'observateur à l'Organisation de libération de la Palestine.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "l'AMF adopte lors de son 106e congrès le principe de subsidiarité.",
+        "year": 2010,
+        "text": "Kanye West sort l'album My Beautiful Dark Twisted Fantasy.",
         "kind": "event"
       },
       {
-        "year": 2023,
-        "text": "l'Angola quitte l'Organisation des pays exportateurs de pétrole dont elle est membre depuis 2006.",
+        "year": 1977,
+        "text": "première liaison commerciale Paris - New York de l'avion supersonique européen Concorde.",
         "kind": "event"
       },
       {
-        "year": 2021,
-        "text": "sortie de l’épisode 1000 de One piece au cinéma.",
+        "year": 1975,
+        "text": "Juan Carlos Ier est proclamé roi d’Espagne.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2004,
-        "text": "Dashmir Elezi, footballeur macédonien.",
+        "year": 2000,
+        "text": "Mohammed Dawood, footballeur irakien.",
         "kind": "birth"
       },
       {
-        "year": 1998,
-        "text": "Esraa Ahmed, haltérophile égyptienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1998,
-        "text": "Hanna Boubezari, footballeuse algérienne.",
-        "kind": "birth"
-      },
-      {
-        "year": 1994,
-        "text": "Saúl Ñíguez, footballeur espagnol.",
+        "year": 1993,
+        "text": "Adèle Exarchopoulos, actrice française.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "Rino Sashihara, chanteuse japonaise.",
+        "text": "Vladislav Namestnikov, hockeyeur sur glace russo-américain.",
+        "kind": "birth"
+      },
+      {
+        "year": 1991,
+        "text": "Sébastien Bézy, joueur de rugby à XV français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1990,
+        "text": "Jayathma Wickramanayake, militante srilankaise et fonctionnaire des Nations unies.",
         "kind": "birth"
       },
       {
         "year": 1989,
-        "text": "Jimmy Hayes, joueur américain de hockey sur glace.",
+        "text": "Dorian Lévêque, footballeur français.",
         "kind": "birth"
       }
     ]
