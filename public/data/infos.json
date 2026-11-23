@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-22T11:58:48.394Z",
+  "fetchedAt": "2026-11-23T13:39:31.297Z",
   "ephemerides": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "events": [
       {
+        "year": 1944,
+        "text": "la 2e division blindée du général Leclerc libère la ville de Strasbourg, réalisant le serment fait à Koufra le 2 mars 1941.",
+        "kind": "event"
+      },
+      {
+        "year": 1248,
+        "text": "Ferdinand III de Castille (miniature) vainc les Almohades au siège de Séville lors de la Reconquista.",
+        "kind": "event"
+      },
+      {
+        "year": 2020,
+        "text": "lancement réussi de la sonde spatiale chinoise Chang'e 5, visant à prélever des échantillons de la Lune.",
+        "kind": "event"
+      },
+      {
         "year": 2005,
-        "text": "Angela Merkel devient chancelière fédérale d'Allemagne.",
+        "text": "sortie du film parodique français Palais-Royal de Valérie Lemercier et avec elle-même, Catherine Deneuve, Lambert Wilson, Michel Aumont ou Maurane.",
         "kind": "event"
       },
       {
-        "year": 1977,
-        "text": "première liaison commerciale Paris-New York du Concorde.",
+        "year": 1976,
+        "text": "Jacques Mayol atteint 100 mètres de profondeur sous-marine en apnée.",
         "kind": "event"
       },
       {
-        "year": 1974,
-        "text": "l'Assemblée générale des Nations unies accorde le statut d'observateur à l'Organisation de libération de la Palestine.",
-        "kind": "event"
-      },
-      {
-        "year": 2010,
-        "text": "Kanye West sort l'album My Beautiful Dark Twisted Fantasy.",
-        "kind": "event"
-      },
-      {
-        "year": 1977,
-        "text": "première liaison commerciale Paris - New York de l'avion supersonique européen Concorde.",
-        "kind": "event"
-      },
-      {
-        "year": 1975,
-        "text": "Juan Carlos Ier est proclamé roi d’Espagne.",
+        "year": 1970,
+        "text": "parution du premier numéro du journal satirique français Charlie Hebdo.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Mohammed Dawood, footballeur irakien.",
+        "year": 1998,
+        "text": "Bradley Steven Perry, acteur américain.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Adèle Exarchopoulos, actrice française.",
+        "year": 1995,
+        "text": "Christopher Velez Muñoz, chanteur américain du boys band CNCO.",
         "kind": "birth"
       },
       {
         "year": 1992,
-        "text": "Vladislav Namestnikov, hockeyeur sur glace russo-américain.",
+        "text": "Destiny Hope « Miley » Cyrus, chanteuse et actrice américaine.",
         "kind": "birth"
       },
       {
-        "year": 1991,
-        "text": "Sébastien Bézy, joueur de rugby à XV français.",
+        "year": 1992,
+        "text": "Gabriel Landeskog, hockeyeur professionnel suédois.",
         "kind": "birth"
       },
       {
         "year": 1990,
-        "text": "Jayathma Wickramanayake, militante srilankaise et fonctionnaire des Nations unies.",
+        "text": "Maxime Courby, basketteur français.",
         "kind": "birth"
       },
       {
         "year": 1989,
-        "text": "Dorian Lévêque, footballeur français.",
+        "text": "Rachel Moret, joueuse de tennis de table suisse.",
         "kind": "birth"
       }
     ]
