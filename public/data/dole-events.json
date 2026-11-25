@@ -1,23 +1,11 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-24T16:14:36.524Z",
+  "fetchedAt": "2026-11-25T15:58:21.315Z",
   "facts": [
     {
       "emoji": "📍",
-      "title": "KARMA",
-      "body": "Mardi 24 nov. à Saint-Aubin · Foyer rural.",
-      "date": "2026-11-24"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "café des aidants : Troubles du neurodéveloppement",
-      "body": "Mercredi 25 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "📍",
-      "title": "Journée internationale de lutte contres les violences faites aux femmes - Ciné débat",
-      "body": "Mercredi 25 nov. à Dole · Mairie.",
+      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
+      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
       "date": "2026-11-25"
     },
     {
@@ -27,15 +15,21 @@
       "date": "2026-11-25"
     },
     {
-      "emoji": "🎭",
-      "title": "Calogero, un soir dans les théâtres",
-      "body": "Mercredi 25 nov. à Dole · La Commanderie.",
+      "emoji": "📍",
+      "title": "Journée internationale de lutte contres les violences faites aux femmes - Ciné débat",
+      "body": "Mercredi 25 nov. à Dole · Mairie.",
       "date": "2026-11-25"
     },
     {
-      "emoji": "📍",
-      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
-      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
+      "emoji": "👨‍👩‍👧",
+      "title": "café des aidants : Troubles du neurodéveloppement",
+      "body": "Mercredi 25 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-25"
+    },
+    {
+      "emoji": "🎭",
+      "title": "Calogero, un soir dans les théâtres",
+      "body": "Mercredi 25 nov. à Dole · La Commanderie.",
       "date": "2026-11-25"
     },
     {
@@ -58,14 +52,26 @@
     },
     {
       "emoji": "🎨",
-      "title": "L'art face à l'I.A.",
-      "body": "Samedi 28 nov. à Dole · Médiathèque Albert-Camus.",
+      "title": "Visite thématique : Statuaire médiévale et Renaissance",
+      "body": "Samedi 28 nov. à Dole · Musée des Beaux-Arts.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "🥖",
+      "title": "Marché de Noel",
+      "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "🎶",
+      "title": "Téléthon concert",
+      "body": "Samedi 28 nov. à Champvans · Salle des Fêtes de Champvans.",
       "date": "2026-11-28"
     },
     {
       "emoji": "🎨",
-      "title": "Visite thématique : Statuaire médiévale et Renaissance",
-      "body": "Samedi 28 nov. à Dole · Musée des Beaux-Arts.",
+      "title": "L'art face à l'I.A.",
+      "body": "Samedi 28 nov. à Dole · Médiathèque Albert-Camus.",
       "date": "2026-11-28"
     },
     {
@@ -78,12 +84,6 @@
       "emoji": "🎶",
       "title": "Concert Chorale le Tourdion",
       "body": "Samedi 28 nov. à Tavaux · Église Saint-Gervais.",
-      "date": "2026-11-28"
-    },
-    {
-      "emoji": "📍",
-      "title": "STAGE CLOWN",
-      "body": "Samedi 28 nov. à Dole · La Visitation.",
       "date": "2026-11-28"
     },
     {
