@@ -1,37 +1,7 @@
 {
   "source": "https://www.sortiradole.fr/",
-  "fetchedAt": "2026-11-25T15:58:21.315Z",
+  "fetchedAt": "2026-11-26T15:39:59.672Z",
   "facts": [
-    {
-      "emoji": "📍",
-      "title": "Où finissent nos déchets ? Visite du centre de stockage de Courlaoux",
-      "body": "Mercredi 25 nov. à Dole · Avenue de Lahr.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "📚",
-      "title": "Le Bus Micro-Folie ouvre ses portes",
-      "body": "Mercredi 25 nov. à Dole · Médiathèque Albert-Camus.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "📍",
-      "title": "Journée internationale de lutte contres les violences faites aux femmes - Ciné débat",
-      "body": "Mercredi 25 nov. à Dole · Mairie.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "👨‍👩‍👧",
-      "title": "café des aidants : Troubles du neurodéveloppement",
-      "body": "Mercredi 25 nov. à Dole · Maison de la Parentalité.",
-      "date": "2026-11-25"
-    },
-    {
-      "emoji": "🎭",
-      "title": "Calogero, un soir dans les théâtres",
-      "body": "Mercredi 25 nov. à Dole · La Commanderie.",
-      "date": "2026-11-25"
-    },
     {
       "emoji": "🎨",
       "title": "Jeudi de l'exposition - Conférence",
@@ -51,15 +21,39 @@
       "date": "2026-11-27"
     },
     {
-      "emoji": "🎨",
-      "title": "Visite thématique : Statuaire médiévale et Renaissance",
-      "body": "Samedi 28 nov. à Dole · Musée des Beaux-Arts.",
+      "emoji": "📚",
+      "title": "Les secrets du village englouti",
+      "body": "Samedi 28 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
       "date": "2026-11-28"
     },
     {
       "emoji": "🥖",
       "title": "Marché de Noel",
       "body": "Samedi 28 nov. à Dole · Ancienne école d'Azans.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "👨‍👩‍👧",
+      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
+      "body": "Samedi 28 nov. à Dole · Maison de la Parentalité.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "🥖",
+      "title": "Marché solidaire de Noël",
+      "body": "Samedi 28 nov. à Dole · Chapelle des Carmélites.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "🥖",
+      "title": "MARCHÉ DE NOEL DE SAINT AUBIN",
+      "body": "Samedi 28 nov. à Saint-Aubin · Salle des Fêtes de Saint-Aubin.",
+      "date": "2026-11-28"
+    },
+    {
+      "emoji": "🎨",
+      "title": "Visite thématique : Statuaire médiévale et Renaissance",
+      "body": "Samedi 28 nov. à Dole · Musée des Beaux-Arts.",
       "date": "2026-11-28"
     },
     {
@@ -75,9 +69,9 @@
       "date": "2026-11-28"
     },
     {
-      "emoji": "👨‍👩‍👧",
-      "title": "LA PARENDOLE : Lieu d'Accueil Enfant Parent",
-      "body": "Samedi 28 nov. à Dole · Maison de la Parentalité.",
+      "emoji": "📍",
+      "title": "STAGE CLOWN",
+      "body": "Samedi 28 nov. à Dole · La Visitation.",
       "date": "2026-11-28"
     },
     {
@@ -87,16 +81,22 @@
       "date": "2026-11-28"
     },
     {
-      "emoji": "🥖",
-      "title": "Marché solidaire de Noël",
-      "body": "Samedi 28 nov. à Dole · Chapelle des Carmélites.",
+      "emoji": "👨‍👩‍👧",
+      "title": "Café des parents d'ados",
+      "body": "Samedi 28 nov. à Dole · Maison de la Parentalité.",
       "date": "2026-11-28"
     },
     {
-      "emoji": "📚",
-      "title": "Les secrets du village englouti",
-      "body": "Samedi 28 nov. à Dole · Médiathèque de l'Hôtel-Dieu.",
-      "date": "2026-11-28"
+      "emoji": "🥖",
+      "title": "Marché de Noël",
+      "body": "Dimanche 29 nov. à Sampans · Salle des fêtes Jules Machard.",
+      "date": "2026-11-29"
+    },
+    {
+      "emoji": "🥖",
+      "title": "Marché de Noël",
+      "body": "Dimanche 29 nov. à Jouhe · Salle des Fêtes de Jouhe.",
+      "date": "2026-11-29"
     }
   ]
 }
