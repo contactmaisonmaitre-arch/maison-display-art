@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-25T13:29:43.006Z",
+  "fetchedAt": "2026-11-26T13:09:04.548Z",
   "ephemerides": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "events": [
       {
-        "year": 1975,
-        "text": "indépendance de la Guyane néerlandaise qui prend le nom de Suriname.",
+        "year": 2011,
+        "text": "la mission spatiale Mars Science Laboratory décolle de Cap Canaveral pour Mars.",
         "kind": "event"
       },
       {
-        "year": 1915,
-        "text": "Albert Einstein présente sa théorie de la relativité générale à l'Académie royale des sciences de Prusse.",
+        "year": 1974,
+        "text": "en France, Simone Veil prononce le discours défendant son projet de loi dépénalisant l'avortement.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "le Conseil européen extraordinaire de Bruxelles signe l'accord de retrait du Royaume-Uni de l'Union européenne ;",
+        "year": 1966,
+        "text": "en France, la plus grande usine marémotrice au monde est mise en service dans l'estuaire de la Rance, sur la côte d'Émeraude.",
         "kind": "event"
       },
       {
-        "year": 2018,
-        "text": "en Suisse, votations fédérales.",
+        "year": 1949,
+        "text": "le dominion de l'Inde adopte une constitution fédérale, faisant du pays une république souveraine et démocratique, qui accèdera à l'indépendance le 26 janvier suivant.",
         "kind": "event"
       },
       {
-        "year": 1981,
-        "text": "le pape Jean-Paul II nomme le cardinal Joseph Ratzinger (son futur successeur Benoît XVI), comme « préfet de la congrégation pour la doctrine de la foi ».",
+        "year": 1865,
+        "text": "à Londres, Lewis Carroll publie Les Aventures d'Alice au pays des merveilles.",
         "kind": "event"
       },
       {
-        "year": 1975,
-        "text": "au nord-est de l'Amérique du Sud, indépendance du Suriname vis-à-vis des Pays-Bas.",
+        "year": 2025,
+        "text": "en Grèce, la flamme olympique est allumée à Olympie, deux mois avant les XXVes Jeux olympiques d'hiver dans les Alpes italiennes.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2000,
-        "text": "Talen Horton-Tucker, basketteur américain.",
+        "year": 2002,
+        "text": "Gaurika Singh, nageuse népalaise.",
         "kind": "birth"
       },
       {
-        "year": 1997,
-        "text": "Máximo Fjellerup, basketteur argentin.",
+        "year": 1996,
+        "text": "Louane (Emera) (Anne Peichert dite), chanteuse et actrice française.",
         "kind": "birth"
       },
       {
-        "year": 1990,
-        "text": "Ado Pharaon, hypnotiseur français.",
+        "year": 1995,
+        "text": "James Guy, nageur britannique.",
         "kind": "birth"
       },
       {
-        "year": 1987,
-        "text": "Pierre-Alexis Pessonneaux, athlète de sprint français.",
+        "year": 1994,
+        "text": "Azra Hadzic (en), joueuse de tennis australienne.",
         "kind": "birth"
       },
       {
-        "year": 1984,
-        "text": "Gaspard Ulliel, acteur français († 19 janvier 2022).",
+        "year": 1993,
+        "text": "Erena Ono (小野 恵令奈), actrice et chanteuse japonaise.",
         "kind": "birth"
       },
       {
-        "year": 1983,
-        "text": "Hovhannes Davtyan, judoka arménien.",
+        "year": 1991,
+        "text": "Manolo Gabbiadini, footballeur italien.",
         "kind": "birth"
       }
     ]
