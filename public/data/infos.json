@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-26T13:09:04.548Z",
+  "fetchedAt": "2026-11-27T13:06:57.858Z",
   "ephemerides": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "events": [
       {
-        "year": 2011,
-        "text": "la mission spatiale Mars Science Laboratory décolle de Cap Canaveral pour Mars.",
+        "year": 1895,
+        "text": "à Paris, Alfred Nobel prend les dispositions testamentaires permettant de financer ce qui deviendra le prix Nobel.",
         "kind": "event"
       },
       {
-        "year": 1974,
-        "text": "en France, Simone Veil prononce le discours défendant son projet de loi dépénalisant l'avortement.",
+        "year": 1792,
+        "text": "le duché de Savoie est rattaché à la République française.",
         "kind": "event"
       },
       {
-        "year": 1966,
-        "text": "en France, la plus grande usine marémotrice au monde est mise en service dans l'estuaire de la Rance, sur la côte d'Émeraude.",
+        "year": 1790,
+        "text": "en France, l'Assemblée nationale constituante impose aux ecclésiastiques de prêter serment à la Constitution civile du clergé.",
         "kind": "event"
       },
       {
-        "year": 1949,
-        "text": "le dominion de l'Inde adopte une constitution fédérale, faisant du pays une république souveraine et démocratique, qui accèdera à l'indépendance le 26 janvier suivant.",
+        "year": 2024,
+        "text": "entrée en vigueur du cessez-le-feu entre Israël et le Liban.",
         "kind": "event"
       },
       {
-        "year": 1865,
-        "text": "à Londres, Lewis Carroll publie Les Aventures d'Alice au pays des merveilles.",
+        "year": 2022,
+        "text": "sur l'île d'Hawaï, le Mauna Loa (photo) — plus haut volcan actif du monde — entre en éruption pour la première fois depuis 1984.",
         "kind": "event"
       },
       {
-        "year": 2025,
-        "text": "en Grèce, la flamme olympique est allumée à Olympie, deux mois avant les XXVes Jeux olympiques d'hiver dans les Alpes italiennes.",
+        "year": 2005,
+        "text": "le professeur Dubernard transplante, pour la première fois au monde, la face d'une personne décédée sur une femme défigurée.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2002,
-        "text": "Gaurika Singh, nageuse népalaise.",
+        "year": 2001,
+        "text": "Morgana Davies, actrice australienne.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Louane (Emera) (Anne Peichert dite), chanteuse et actrice française.",
+        "text": "Marie-Eve Gahié, judokate française.",
+        "kind": "birth"
+      },
+      {
+        "year": 1996,
+        "text": "Kevin Speer (it), footballeur britannique.",
         "kind": "birth"
       },
       {
         "year": 1995,
-        "text": "James Guy, nageur britannique.",
+        "text": "Ricardo Hoyos, acteur canadien.",
         "kind": "birth"
       },
       {
-        "year": 1994,
-        "text": "Azra Hadzic (en), joueuse de tennis australienne.",
+        "year": 1995,
+        "text": "Noël van Klaveren, gymnaste néerlandaise.",
         "kind": "birth"
       },
       {
-        "year": 1993,
-        "text": "Erena Ono (小野 恵令奈), actrice et chanteuse japonaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1991,
-        "text": "Manolo Gabbiadini, footballeur italien.",
+        "year": 1995,
+        "text": "Andréas Makrís (Ανδρέας Μακρής), footballeur chypriote.",
         "kind": "birth"
       }
     ]
