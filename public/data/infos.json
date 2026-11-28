@@ -25,70 +25,70 @@
       "zone": "Zone A"
     }
   ],
-  "fetchedAt": "2026-11-27T13:06:57.858Z",
+  "fetchedAt": "2026-11-28T12:21:40.597Z",
   "ephemerides": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "events": [
       {
-        "year": 1895,
-        "text": "à Paris, Alfred Nobel prend les dispositions testamentaires permettant de financer ce qui deviendra le prix Nobel.",
+        "year": 1979,
+        "text": "l'écrasement du vol Air New Zealand 901 sur les flancs du mont Erebus, en Antarctique, ne laisse aucun survivant parmi les 257 personnes à bord.",
         "kind": "event"
       },
       {
-        "year": 1792,
-        "text": "le duché de Savoie est rattaché à la République française.",
+        "year": 587,
+        "text": "les deux souverains mérovingiens Gontran, roi de Bourgogne, et son neveu Childebert II, roi d'Austrasie, signent à Andelot un traité de paix perpétuelle et d'union future des deux royaumes.",
         "kind": "event"
       },
       {
-        "year": 1790,
-        "text": "en France, l'Assemblée nationale constituante impose aux ecclésiastiques de prêter serment à la Constitution civile du clergé.",
+        "year": 2023,
+        "text": "en Inde, les sauveteurs parviennent à libérer les 41 travailleurs piégés durant 16 jours dans le chantier d'un tunnel (photo), dans l'Uttarakhand.",
         "kind": "event"
       },
       {
-        "year": 2024,
-        "text": "entrée en vigueur du cessez-le-feu entre Israël et le Liban.",
+        "year": 2020,
+        "text": "au Nigeria, au moins 110 agriculteurs sont massacrés par Boko Haram et par l'État islamique à Koshobe.",
         "kind": "event"
       },
       {
-        "year": 2022,
-        "text": "sur l'île d'Hawaï, le Mauna Loa (photo) — plus haut volcan actif du monde — entre en éruption pour la première fois depuis 1984.",
+        "year": 2018,
+        "text": "le Norvégien Magnus Carlsen conserve son titre de champion du monde d'échecs, face à l'Américain Fabiano Caruana.",
         "kind": "event"
       },
       {
-        "year": 2005,
-        "text": "le professeur Dubernard transplante, pour la première fois au monde, la face d'une personne décédée sur une femme défigurée.",
+        "year": 2013,
+        "text": "la comète C/2012 S1 (ISON) passe au plus proche du soleil (périhélie) et se désintègre.",
         "kind": "event"
       }
     ],
     "births": [
       {
-        "year": 2001,
-        "text": "Morgana Davies, actrice australienne.",
+        "year": 2003,
+        "text": "Florian Lesieur, acteur et rappeur français.",
+        "kind": "birth"
+      },
+      {
+        "year": 1998,
+        "text": "Clara Mateo, footballeuse française.",
         "kind": "birth"
       },
       {
         "year": 1996,
-        "text": "Marie-Eve Gahié, judokate française.",
+        "text": "Isaïa Cordinier, basketteur français.",
         "kind": "birth"
       },
       {
-        "year": 1996,
-        "text": "Kevin Speer (it), footballeur britannique.",
+        "year": 1993,
+        "text": "Shiann Darkangelo, joueuse de hockey américaine.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Ricardo Hoyos, acteur canadien.",
+        "year": 1990,
+        "text": "Dedryck Boyata, footballeur belge.",
         "kind": "birth"
       },
       {
-        "year": 1995,
-        "text": "Noël van Klaveren, gymnaste néerlandaise.",
-        "kind": "birth"
-      },
-      {
-        "year": 1995,
-        "text": "Andréas Makrís (Ανδρέας Μακρής), footballeur chypriote.",
+        "year": 1990,
+        "text": "Edis, chanteur turc.",
         "kind": "birth"
       }
     ]
